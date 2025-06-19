@@ -1,0 +1,852 @@
+fileFormatVersion: 2
+guid: f6bd9060d07bbcb40a0dd83f75aff92d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4734529228375664357
+    second: Goods2_0
+  - first:
+      213: 2163639859290383579
+    second: Goods2_1
+  - first:
+      213: -3253477937205110440
+    second: Goods2_2
+  - first:
+      213: -8123754108560800339
+    second: Goods2_3
+  - first:
+      213: 3386588281695623158
+    second: Goods2_4
+  - first:
+      213: -8750339142556916371
+    second: Goods2_5
+  - first:
+      213: 8300804720717565073
+    second: Goods2_6
+  - first:
+      213: 5362366963874625290
+    second: Goods2_7
+  - first:
+      213: -8678913738314979109
+    second: Goods2_8
+  - first:
+      213: -790521920241321523
+    second: Goods2_9
+  - first:
+      213: 1405202765653264633
+    second: Goods2_10
+  - first:
+      213: -3182098371326157112
+    second: Goods2_11
+  - first:
+      213: 141396041303206198
+    second: Goods2_12
+  - first:
+      213: -6540822753402222959
+    second: Goods2_13
+  - first:
+      213: -2975502107194566484
+    second: Goods2_14
+  - first:
+      213: 3510140354037370214
+    second: Goods2_15
+  - first:
+      213: 3294808270895819371
+    second: Goods2_16
+  - first:
+      213: 4107160277827650330
+    second: Goods2_17
+  - first:
+      213: -2440815956905467635
+    second: Goods2_18
+  - first:
+      213: -195859740018431592
+    second: Goods2_19
+  - first:
+      213: 5367617462499883913
+    second: Goods2_20
+  - first:
+      213: -2480307403388301591
+    second: Goods2_21
+  - first:
+      213: -4123431372172619912
+    second: Goods2_22
+  - first:
+      213: -9171644262460654858
+    second: Goods2_23
+  - first:
+      213: 447034249816906568
+    second: Goods2_24
+  - first:
+      213: 483508383552616060
+    second: Goods2_25
+  - first:
+      213: -5820131546349035788
+    second: Goods2_26
+  - first:
+      213: 3162741619316641838
+    second: Goods2_27
+  - first:
+      213: 7977811607570330948
+    second: Goods2_28
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Goods2_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 442
+        width: 91
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e62904af3d64b140800000000000000
+      internalID: 4734529228375664357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_1
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 444
+        width: 91
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd421e21dfac60e10800000000000000
+      internalID: 2163639859290383579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 369
+        width: 53
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8599154cd0359d2d0800000000000000
+      internalID: -3253477937205110440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_3
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 273
+        width: 71
+        height: 66
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da50d940ea0a24f80800000000000000
+      internalID: -8123754108560800339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_4
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 273
+        width: 71
+        height: 66
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f7d7fa69149ffe20800000000000000
+      internalID: 3386588281695623158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_5
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 189
+        width: 28
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d65e2bf39ec809680800000000000000
+      internalID: -8750339142556916371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_6
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 185
+        width: 29
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c8148f9e1623370800000000000000
+      internalID: 8300804720717565073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_7
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 185
+        width: 26
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a077905b754fa6a40800000000000000
+      internalID: 5362366963874625290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_8
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 184
+        width: 25
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd86a7710fd4e8780800000000000000
+      internalID: -8678913738314979109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 109
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc93bdc70808705f0800000000000000
+      internalID: -790521920241321523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_10
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 110
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f8c8246878408310800000000000000
+      internalID: 1405202765653264633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_11
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 111
+        width: 43
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce51c8046ae6d3d0800000000000000
+      internalID: -3182098371326157112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_12
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 70
+        width: 46
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 639268e43f656f100800000000000000
+      internalID: 141396041303206198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_13
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 68
+        width: 43
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1960bac4c545a35a0800000000000000
+      internalID: -6540822753402222959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_14
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 56
+        width: 51
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca8dd303994e4b6d0800000000000000
+      internalID: -2975502107194566484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_15
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 44
+        width: 147
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66d4922fd0686b030800000000000000
+      internalID: 3510140354037370214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_16
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 45
+        width: 53
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6aa3cd6aa289bd20800000000000000
+      internalID: 3294808270895819371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a13038313809ff830800000000000000
+      internalID: 4107160277827650330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_18
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 454
+        width: 27
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d016b86b1da702ed0800000000000000
+      internalID: -2440815956905467635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_19
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 380
+        width: 35
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899a66aaa9a284df0800000000000000
+      internalID: -195859740018431592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_20
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 334
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b3d7ea4ab9d7a40800000000000000
+      internalID: 5367617462499883913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_21
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 334
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eec44fce8d249dd0800000000000000
+      internalID: -2480307403388301591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_22
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 400
+        width: 47
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f03fd8301a6c6c0800000000000000
+      internalID: -4123431372172619912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_23
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 351
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fa78c10326c7b080800000000000000
+      internalID: -9171644262460654858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_24
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 304
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b15ce184f243600800000000000000
+      internalID: 447034249816906568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_25
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 255
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c76b3972054c5b600800000000000000
+      internalID: 483508383552616060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_26
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 222
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe12d9e13dba3fa0800000000000000
+      internalID: -5820131546349035788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_27
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 175
+        width: 34
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2056bfeeb054eb20800000000000000
+      internalID: 3162741619316641838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goods2_28
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 176
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 445b73a8361e6be60800000000000000
+      internalID: 7977811607570330948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Goods2_0: 4734529228375664357
+      Goods2_1: 2163639859290383579
+      Goods2_10: 1405202765653264633
+      Goods2_11: -3182098371326157112
+      Goods2_12: 141396041303206198
+      Goods2_13: -6540822753402222959
+      Goods2_14: -2975502107194566484
+      Goods2_15: 3510140354037370214
+      Goods2_16: 3294808270895819371
+      Goods2_17: 4107160277827650330
+      Goods2_18: -2440815956905467635
+      Goods2_19: -195859740018431592
+      Goods2_2: -3253477937205110440
+      Goods2_20: 5367617462499883913
+      Goods2_21: -2480307403388301591
+      Goods2_22: -4123431372172619912
+      Goods2_23: -9171644262460654858
+      Goods2_24: 447034249816906568
+      Goods2_25: 483508383552616060
+      Goods2_26: -5820131546349035788
+      Goods2_27: 3162741619316641838
+      Goods2_28: 7977811607570330948
+      Goods2_3: -8123754108560800339
+      Goods2_4: 3386588281695623158
+      Goods2_5: -8750339142556916371
+      Goods2_6: 8300804720717565073
+      Goods2_7: 5362366963874625290
+      Goods2_8: -8678913738314979109
+      Goods2_9: -790521920241321523
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

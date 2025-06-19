@@ -1,0 +1,902 @@
+fileFormatVersion: 2
+guid: e00bc7f339edfc940a3c6066893106d4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7793021656090563844
+    second: Korean_goods_0
+  - first:
+      213: -5877417447788956400
+    second: Korean_goods_1
+  - first:
+      213: 1225896674326463914
+    second: Korean_goods_2
+  - first:
+      213: 7663242052075926883
+    second: Korean_goods_3
+  - first:
+      213: -635683207385155269
+    second: Korean_goods_4
+  - first:
+      213: -2696709945994908582
+    second: Korean_goods_5
+  - first:
+      213: -7439135355632639019
+    second: Korean_goods_6
+  - first:
+      213: 9104355572584058775
+    second: Korean_goods_7
+  - first:
+      213: 4836854748784551245
+    second: Korean_goods_8
+  - first:
+      213: 28025244941976626
+    second: Korean_goods_9
+  - first:
+      213: -2450534370882698560
+    second: Korean_goods_10
+  - first:
+      213: -7384998126137083917
+    second: Korean_goods_11
+  - first:
+      213: 7092421651343720037
+    second: Korean_goods_12
+  - first:
+      213: -2549838935698449533
+    second: Korean_goods_13
+  - first:
+      213: -3956253563668892215
+    second: Korean_goods_14
+  - first:
+      213: -5635424675661153771
+    second: Korean_goods_15
+  - first:
+      213: 7411392199775197616
+    second: Korean_goods_16
+  - first:
+      213: -7266298186198291105
+    second: Korean_goods_17
+  - first:
+      213: 4141059806057322146
+    second: Korean_goods_18
+  - first:
+      213: -3949906481195104928
+    second: Korean_goods_19
+  - first:
+      213: 542873111037740336
+    second: Korean_goods_20
+  - first:
+      213: 125807816768619051
+    second: Korean_goods_21
+  - first:
+      213: 5711667099560191343
+    second: Korean_goods_22
+  - first:
+      213: -6059445199954838822
+    second: Korean_goods_23
+  - first:
+      213: 8923378493948988149
+    second: Korean_goods_24
+  - first:
+      213: -1148605437604689476
+    second: Korean_goods_25
+  - first:
+      213: -1942959093051557996
+    second: Korean_goods_26
+  - first:
+      213: 266065031883609754
+    second: Korean_goods_27
+  - first:
+      213: -8520710557354667126
+    second: Korean_goods_28
+  - first:
+      213: 1073204751725276253
+    second: Korean_goods_29
+  - first:
+      213: 1302858447872146295
+    second: Korean_goods_30
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Korean_goods_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 385
+        width: 101
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfaabcdc710a9d390800000000000000
+      internalID: -7793021656090563844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_1
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 421
+        width: 94
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0153bdb98f73f6ea0800000000000000
+      internalID: -5877417447788956400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_2
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 388
+        width: 87
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa5cf8cb782430110800000000000000
+      internalID: 1225896674326463914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_3
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 326
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36532d57b0e495a60800000000000000
+      internalID: 7663242052075926883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_4
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 313
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39702aad799d27f0800000000000000
+      internalID: -635683207385155269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_5
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 203
+        width: 31
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ce5b6879c539ad0800000000000000
+      internalID: -2696709945994908582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_6
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 208
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d3a77beec1e2c890800000000000000
+      internalID: -7439135355632639019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_7
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 206
+        width: 30
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f88b4082b295e70800000000000000
+      internalID: 9104355572584058775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_8
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 185
+        width: 31
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d45e67b64c5ff1340800000000000000
+      internalID: 4836854748784551245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_9
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 210
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2348281dfc0936000800000000000000
+      internalID: 28025244941976626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_10
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 218
+        width: 27
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c2c6a129f3fdfdd0800000000000000
+      internalID: -2450534370882698560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_11
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 286
+        width: 41
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f77ca8e457338990800000000000000
+      internalID: -7384998126137083917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_12
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 286
+        width: 37
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56eb1a52ae75d6260800000000000000
+      internalID: 7092421651343720037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_13
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 313
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38bdb336ff62d9cd0800000000000000
+      internalID: -2549838935698449533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_14
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 386
+        width: 103
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5742058509819c0800000000000000
+      internalID: -3956253563668892215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_15
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 218
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51afeb08d13fac1b0800000000000000
+      internalID: -5635424675661153771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_16
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 218
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b993be30fd8ad660800000000000000
+      internalID: 7411392199775197616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_17
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 218
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5de5935c4ce82b90800000000000000
+      internalID: -7266298186198291105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_18
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 167
+        width: 41
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a6d1bd04fff77930800000000000000
+      internalID: 4141059806057322146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_19
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 171
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0654a5c9bfc1f29c0800000000000000
+      internalID: -3949906481195104928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_20
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 169
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 035048dd73ca88700800000000000000
+      internalID: 542873111037740336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_21
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 122
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b220674fa85feb100800000000000000
+      internalID: 125807816768619051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_22
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 122
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f65229027fae34f40800000000000000
+      internalID: 5711667099560191343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_23
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 122
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adafeb8e1b688eba0800000000000000
+      internalID: -6059445199954838822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_24
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 74
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa8030567536db70800000000000000
+      internalID: 8923378493948988149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_25
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 74
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb98d78a0755f00f0800000000000000
+      internalID: -1148605437604689476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_26
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 74
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 497fb85cff83905e0800000000000000
+      internalID: -1942959093051557996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_27
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 26
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a965390acb041b300800000000000000
+      internalID: 266065031883609754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_28
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 24
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8354fa84ea50c980800000000000000
+      internalID: -8520710557354667126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_29
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 25
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ca8dd190ac4ee00800000000000000
+      internalID: 1073204751725276253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Korean_goods_30
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 75
+        width: 55
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b39020bdea41210800000000000000
+      internalID: 1302858447872146295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Korean_goods_0: -7793021656090563844
+      Korean_goods_1: -5877417447788956400
+      Korean_goods_10: -2450534370882698560
+      Korean_goods_11: -7384998126137083917
+      Korean_goods_12: 7092421651343720037
+      Korean_goods_13: -2549838935698449533
+      Korean_goods_14: -3956253563668892215
+      Korean_goods_15: -5635424675661153771
+      Korean_goods_16: 7411392199775197616
+      Korean_goods_17: -7266298186198291105
+      Korean_goods_18: 4141059806057322146
+      Korean_goods_19: -3949906481195104928
+      Korean_goods_2: 1225896674326463914
+      Korean_goods_20: 542873111037740336
+      Korean_goods_21: 125807816768619051
+      Korean_goods_22: 5711667099560191343
+      Korean_goods_23: -6059445199954838822
+      Korean_goods_24: 8923378493948988149
+      Korean_goods_25: -1148605437604689476
+      Korean_goods_26: -1942959093051557996
+      Korean_goods_27: 266065031883609754
+      Korean_goods_28: -8520710557354667126
+      Korean_goods_29: 1073204751725276253
+      Korean_goods_3: 7663242052075926883
+      Korean_goods_30: 1302858447872146295
+      Korean_goods_4: -635683207385155269
+      Korean_goods_5: -2696709945994908582
+      Korean_goods_6: -7439135355632639019
+      Korean_goods_7: 9104355572584058775
+      Korean_goods_8: 4836854748784551245
+      Korean_goods_9: 28025244941976626
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

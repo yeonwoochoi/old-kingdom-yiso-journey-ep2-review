@@ -1,0 +1,1177 @@
+fileFormatVersion: 2
+guid: 292f54318f51bbc419378d71878003d7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 546688158667807692
+    second: terrain-v7_0
+  - first:
+      213: 4967057070165308129
+    second: terrain-v7_1
+  - first:
+      213: -7861108705689059209
+    second: terrain-v7_2
+  - first:
+      213: -3475504434138714213
+    second: terrain-v7_3
+  - first:
+      213: 8258399717919042784
+    second: terrain-v7_4
+  - first:
+      213: -1251656716411263141
+    second: terrain-v7_5
+  - first:
+      213: 660542314714326581
+    second: terrain-v7_6
+  - first:
+      213: -8560220918464467332
+    second: terrain-v7_7
+  - first:
+      213: -7789746600062918690
+    second: terrain-v7_8
+  - first:
+      213: 1217881900234849006
+    second: terrain-v7_9
+  - first:
+      213: -4150989803042826669
+    second: terrain-v7_10
+  - first:
+      213: 2374098331668270386
+    second: terrain-v7_11
+  - first:
+      213: -8667501494397535101
+    second: terrain-v7_12
+  - first:
+      213: 3506734969113880329
+    second: terrain-v7_13
+  - first:
+      213: -1956249797975123568
+    second: terrain-v7_14
+  - first:
+      213: -5828127319931189251
+    second: terrain-v7_15
+  - first:
+      213: -4560367954191509980
+    second: terrain-v7_16
+  - first:
+      213: -8634129068215949170
+    second: terrain-v7_17
+  - first:
+      213: 3496122062022799372
+    second: terrain-v7_18
+  - first:
+      213: 4391016809744338544
+    second: terrain-v7_19
+  - first:
+      213: 3455809560569372305
+    second: terrain-v7_20
+  - first:
+      213: -6273223499669289382
+    second: terrain-v7_21
+  - first:
+      213: -8519629473469009956
+    second: terrain-v7_22
+  - first:
+      213: 1503311150461852213
+    second: terrain-v7_23
+  - first:
+      213: 3352270341890240527
+    second: terrain-v7_24
+  - first:
+      213: 4395308835312632453
+    second: terrain-v7_25
+  - first:
+      213: -425337026035280316
+    second: terrain-v7_26
+  - first:
+      213: 8841545058161858055
+    second: terrain-v7_27
+  - first:
+      213: 2176902961198533651
+    second: terrain-v7_28
+  - first:
+      213: 1720555918416573648
+    second: terrain-v7_29
+  - first:
+      213: 3659437790157227325
+    second: terrain-v7_30
+  - first:
+      213: 5852618973792327231
+    second: terrain-v7_31
+  - first:
+      213: -2484338043122878103
+    second: terrain-v7_32
+  - first:
+      213: -6339620064780017832
+    second: terrain-v7_33
+  - first:
+      213: -1171312028871670329
+    second: terrain-v7_34
+  - first:
+      213: -4807152165166218918
+    second: terrain-v7_35
+  - first:
+      213: -5733794927764246261
+    second: terrain-v7_36
+  - first:
+      213: -1203956266355713110
+    second: terrain-v7_37
+  - first:
+      213: -8647886758330066909
+    second: terrain-v7_38
+  - first:
+      213: 8827482858984054619
+    second: terrain-v7_39
+  - first:
+      213: 8682713962017277179
+    second: terrain-v7_40
+  - first:
+      213: -2226240272171392568
+    second: terrain-v7_41
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: terrain-v7_0
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1951
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb9e4cdbf9369700800000000000000
+      internalID: 546688158667807692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1951
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e2bb46b6188ee440800000000000000
+      internalID: 4967057070165308129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1951
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7704ca8384bb7e290800000000000000
+      internalID: -7861108705689059209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1919
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9fedd3912784cfc0800000000000000
+      internalID: -3475504434138714213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1919
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec20cfd9cabb9270800000000000000
+      internalID: 8258399717919042784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_5
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1889
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b57239519d831aee0800000000000000
+      internalID: -1251656716411263141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1889
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53669ab4cb7ba2900800000000000000
+      internalID: 660542314714326581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_7
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1889
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7eae0cbd6cf33980800000000000000
+      internalID: -8560220918464467332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1919
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf51f43db245e390800000000000000
+      internalID: -7789746600062918690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_9
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 2015
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea30e9b229c6e010800000000000000
+      internalID: 1217881900234849006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_10
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 1727
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3561d5b54c8b466c0800000000000000
+      internalID: -4150989803042826669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_11
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1727
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d4fe8aadd72f020800000000000000
+      internalID: 2374098331668270386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_12
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1727
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38c74403059d6b780800000000000000
+      internalID: -8667501494397535101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_13
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 1695
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 907297bffdc6aa030800000000000000
+      internalID: 3506734969113880329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_14
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1695
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09953c36c210ad4e0800000000000000
+      internalID: -1956249797975123568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_15
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 1665
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df780cdc4155e1fa0800000000000000
+      internalID: -5828127319931189251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_16
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1665
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 426175de18156b0c0800000000000000
+      internalID: -4560367954191509980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_17
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1665
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e882d18ab596d2880800000000000000
+      internalID: -8634129068215949170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_18
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1695
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c00764efd78b48030800000000000000
+      internalID: 3496122062022799372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_19
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1791
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e849b168600fc30800000000000000
+      internalID: 4391016809744338544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_20
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ed2255c7085ff20800000000000000
+      internalID: 3455809560569372305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_21
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a564499c67801f8a0800000000000000
+      internalID: -6273223499669289382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_22
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf6eeff12234c980800000000000000
+      internalID: -8519629473469009956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_23
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53a9926c685dcd410800000000000000
+      internalID: 1503311150461852213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_24
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00f1776d18a58e20800000000000000
+      internalID: 3352270341890240527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_25
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 257
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58202fe29164ffc30800000000000000
+      internalID: 4395308835312632453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44698557a36e81af0800000000000000
+      internalID: -425337026035280316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_27
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 287
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7061959c26a73ba70800000000000000
+      internalID: 8841545058161858055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_28
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c0cb0a5b9e53e10800000000000000
+      internalID: 2176902961198533651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_29
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1951
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d47a6ded74a0e710800000000000000
+      internalID: 1720555918416573648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_30
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1951
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3546f7184fe8c230800000000000000
+      internalID: 3659437790157227325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_31
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1951
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f365a9ab2fda83150800000000000000
+      internalID: 5852618973792327231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_32
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1920
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 969fbad56bbd58dd0800000000000000
+      internalID: -2484338043122878103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_33
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1920
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85f19dbc3252508a0800000000000000
+      internalID: -6339620064780017832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_34
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1920
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c546f56ae9aebfe0800000000000000
+      internalID: -1171312028871670329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_35
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1889
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a51840e3390994db0800000000000000
+      internalID: -4807152165166218918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_36
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1889
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b01fca364e77d60b0800000000000000
+      internalID: -5733794927764246261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_37
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1889
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab13c29720ba4fe0800000000000000
+      internalID: -1203956266355713110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_38
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 2015
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3289eefcfc88cf780800000000000000
+      internalID: -8647886758330066909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_39
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 2015
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5f1896e3e4818a70800000000000000
+      internalID: 8827482858984054619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_40
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1985
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf44d5078523f7870800000000000000
+      internalID: 8682713962017277179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain-v7_41
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1985
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c12e80844eca11e0800000000000000
+      internalID: -2226240272171392568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      terrain-v7_0: 546688158667807692
+      terrain-v7_1: 4967057070165308129
+      terrain-v7_10: -4150989803042826669
+      terrain-v7_11: 2374098331668270386
+      terrain-v7_12: -8667501494397535101
+      terrain-v7_13: 3506734969113880329
+      terrain-v7_14: -1956249797975123568
+      terrain-v7_15: -5828127319931189251
+      terrain-v7_16: -4560367954191509980
+      terrain-v7_17: -8634129068215949170
+      terrain-v7_18: 3496122062022799372
+      terrain-v7_19: 4391016809744338544
+      terrain-v7_2: -7861108705689059209
+      terrain-v7_20: 3455809560569372305
+      terrain-v7_21: -6273223499669289382
+      terrain-v7_22: -8519629473469009956
+      terrain-v7_23: 1503311150461852213
+      terrain-v7_24: 3352270341890240527
+      terrain-v7_25: 4395308835312632453
+      terrain-v7_26: -425337026035280316
+      terrain-v7_27: 8841545058161858055
+      terrain-v7_28: 2176902961198533651
+      terrain-v7_29: 1720555918416573648
+      terrain-v7_3: -3475504434138714213
+      terrain-v7_30: 3659437790157227325
+      terrain-v7_31: 5852618973792327231
+      terrain-v7_32: -2484338043122878103
+      terrain-v7_33: -6339620064780017832
+      terrain-v7_34: -1171312028871670329
+      terrain-v7_35: -4807152165166218918
+      terrain-v7_36: -5733794927764246261
+      terrain-v7_37: -1203956266355713110
+      terrain-v7_38: -8647886758330066909
+      terrain-v7_39: 8827482858984054619
+      terrain-v7_4: 8258399717919042784
+      terrain-v7_40: 8682713962017277179
+      terrain-v7_41: -2226240272171392568
+      terrain-v7_5: -1251656716411263141
+      terrain-v7_6: 660542314714326581
+      terrain-v7_7: -8560220918464467332
+      terrain-v7_8: -7789746600062918690
+      terrain-v7_9: 1217881900234849006
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,827 @@
+fileFormatVersion: 2
+guid: 57683ecb8aa95794580a06b96f31170a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1722640519103227961
+    second: autumn_plants-export_0
+  - first:
+      213: 4512917598703327995
+    second: autumn_plants-export_1
+  - first:
+      213: -1085564154237471303
+    second: autumn_plants-export_2
+  - first:
+      213: -2261803094205745578
+    second: autumn_plants-export_3
+  - first:
+      213: -515049684687319284
+    second: autumn_plants-export_4
+  - first:
+      213: 8723031769952082791
+    second: autumn_plants-export_5
+  - first:
+      213: -7212375039143091516
+    second: autumn_plants-export_6
+  - first:
+      213: 8311603253843000077
+    second: autumn_plants-export_7
+  - first:
+      213: 5791568308631644619
+    second: autumn_plants-export_8
+  - first:
+      213: 5891239114051245451
+    second: autumn_plants-export_9
+  - first:
+      213: -4179319296345563576
+    second: autumn_plants-export_10
+  - first:
+      213: 2919818168014972887
+    second: autumn_plants-export_11
+  - first:
+      213: -1005127769798255338
+    second: autumn_plants-export_12
+  - first:
+      213: 389630481438805648
+    second: autumn_plants-export_13
+  - first:
+      213: 1220242575659066730
+    second: autumn_plants-export_14
+  - first:
+      213: 7655432025688710942
+    second: autumn_plants-export_15
+  - first:
+      213: 7808502694046354303
+    second: autumn_plants-export_16
+  - first:
+      213: -2851628036128510814
+    second: autumn_plants-export_17
+  - first:
+      213: 3320239131335934844
+    second: autumn_plants-export_18
+  - first:
+      213: 8543845814949208734
+    second: autumn_plants-export_19
+  - first:
+      213: 4088957487235720840
+    second: autumn_plants-export_20
+  - first:
+      213: 6280382980096108683
+    second: autumn_plants-export_21
+  - first:
+      213: 6531596992220629893
+    second: autumn_plants-export_22
+  - first:
+      213: 489444369261065006
+    second: autumn_plants-export_23
+  - first:
+      213: -239979883760923309
+    second: autumn_plants-export_24
+  - first:
+      213: 6636281020456072312
+    second: autumn_plants-export_25
+  - first:
+      213: -4444141688653134406
+    second: autumn_plants-export_26
+  - first:
+      213: 5284457770438819130
+    second: autumn_plants-export_27
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: autumn_plants-export_0
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 426
+        width: 105
+        height: 140
+      alignment: 9
+      pivot: {x: 0.48998356, y: 0.24458444}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c758272393f718e0800000000000000
+      internalID: -1722640519103227961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 260
+        width: 106
+        height: 146
+      alignment: 9
+      pivot: {x: 0.50992167, y: 0.24067396}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa125345aa11ae30800000000000000
+      internalID: 4512917598703327995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 104
+        width: 98
+        height: 140
+      alignment: 9
+      pivot: {x: 0.49999976, y: 0.2520969}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b537cd372d4fe0f0800000000000000
+      internalID: -1085564154237471303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_3
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 377
+        width: 178
+        height: 189
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 656bcf1c1167c90e0800000000000000
+      internalID: -2261803094205745578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_4
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 186
+        width: 170
+        height: 186
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0f09866a0d2ad8f0800000000000000
+      internalID: -515049684687319284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_5
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 453
+        width: 70
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76bd07c9d2f6e0970800000000000000
+      internalID: 8723031769952082791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_6
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 480
+        width: 52
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c26bfc5d1f78eb90800000000000000
+      internalID: -7212375039143091516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_7
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 485
+        width: 68
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0bfa436f1fb85370800000000000000
+      internalID: 8311603253843000077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_8
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 417
+        width: 66
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc9266011b8cf5050800000000000000
+      internalID: 5791568308631644619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_9
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 415
+        width: 55
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8559e7d2c2e1c150800000000000000
+      internalID: 5891239114051245451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_10
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 417
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e13623e331006c0800000000000000
+      internalID: -4179319296345563576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_11
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 451
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7a3496727458820800000000000000
+      internalID: 2919818168014972887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_12
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 448
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61d5b476e911d02f0800000000000000
+      internalID: -1005127769798255338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_13
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 449
+        width: 59
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09e03d7cbde386500800000000000000
+      internalID: 389630481438805648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_14
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 310
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6567fd482c2fe010800000000000000
+      internalID: 1220242575659066730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_15
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 310
+        width: 28
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f135dfdde8d3a60800000000000000
+      internalID: 7655432025688710942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_16
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 312
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b405a34df5d5c60800000000000000
+      internalID: 7808502694046354303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_17
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 312
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ace303e86bfc68d0800000000000000
+      internalID: -2851628036128510814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_18
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 312
+        width: 30
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7341a806ebd31e20800000000000000
+      internalID: 3320239131335934844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_19
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 311
+        width: 28
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9261cf5086d19670800000000000000
+      internalID: 8543845814949208734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_20
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 255
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 886eb50ab25eeb830800000000000000
+      internalID: 4088957487235720840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_21
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 255
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b88a906ab07682750800000000000000
+      internalID: 6280382980096108683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_22
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 224
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b0259cbd4e4aa50800000000000000
+      internalID: 6531596992220629893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_23
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 223
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23fe178f0bdac600800000000000000
+      internalID: 489444369261065006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_24
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 255
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35dc033319b6bacf0800000000000000
+      internalID: -239979883760923309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_25
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 255
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87473f57d6ec81c50800000000000000
+      internalID: 6636281020456072312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_26
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 223
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab543542eac3352c0800000000000000
+      internalID: -4444141688653134406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_plants-export_27
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 223
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3dfe8d085a265940800000000000000
+      internalID: 5284457770438819130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      autumn_plants-export_0: -1722640519103227961
+      autumn_plants-export_1: 4512917598703327995
+      autumn_plants-export_10: -4179319296345563576
+      autumn_plants-export_11: 2919818168014972887
+      autumn_plants-export_12: -1005127769798255338
+      autumn_plants-export_13: 389630481438805648
+      autumn_plants-export_14: 1220242575659066730
+      autumn_plants-export_15: 7655432025688710942
+      autumn_plants-export_16: 7808502694046354303
+      autumn_plants-export_17: -2851628036128510814
+      autumn_plants-export_18: 3320239131335934844
+      autumn_plants-export_19: 8543845814949208734
+      autumn_plants-export_2: -1085564154237471303
+      autumn_plants-export_20: 4088957487235720840
+      autumn_plants-export_21: 6280382980096108683
+      autumn_plants-export_22: 6531596992220629893
+      autumn_plants-export_23: 489444369261065006
+      autumn_plants-export_24: -239979883760923309
+      autumn_plants-export_25: 6636281020456072312
+      autumn_plants-export_26: -4444141688653134406
+      autumn_plants-export_27: 5284457770438819130
+      autumn_plants-export_3: -2261803094205745578
+      autumn_plants-export_4: -515049684687319284
+      autumn_plants-export_5: 8723031769952082791
+      autumn_plants-export_6: -7212375039143091516
+      autumn_plants-export_7: 8311603253843000077
+      autumn_plants-export_8: 5791568308631644619
+      autumn_plants-export_9: 5891239114051245451
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

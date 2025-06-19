@@ -1,0 +1,677 @@
+fileFormatVersion: 2
+guid: f487a858cc0b81f4e98e2ea7bb5116de
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4168860456643740342
+    second: jumak_inter1_0
+  - first:
+      213: -3654222473204129694
+    second: jumak_inter1_1
+  - first:
+      213: 8235199502052991806
+    second: jumak_inter1_2
+  - first:
+      213: -3681586928053626782
+    second: jumak_inter1_3
+  - first:
+      213: -3915201516943689826
+    second: jumak_inter1_4
+  - first:
+      213: 7866372520692085742
+    second: jumak_inter1_5
+  - first:
+      213: 8717889485171786026
+    second: jumak_inter1_6
+  - first:
+      213: 7448687614892279345
+    second: jumak_inter1_7
+  - first:
+      213: 1596583226538638411
+    second: jumak_inter1_8
+  - first:
+      213: -5239023661103378721
+    second: jumak_inter1_9
+  - first:
+      213: -280651641845241800
+    second: jumak_inter1_10
+  - first:
+      213: 7091990202028973621
+    second: jumak_inter1_11
+  - first:
+      213: -3834612191624778784
+    second: jumak_inter1_12
+  - first:
+      213: 5420493878997004095
+    second: jumak_inter1_13
+  - first:
+      213: 5324715224777748791
+    second: jumak_inter1_14
+  - first:
+      213: -5876373847201408880
+    second: jumak_inter1_15
+  - first:
+      213: 6674471442735518907
+    second: jumak_inter1_16
+  - first:
+      213: 7843914184964871857
+    second: jumak_inter1_17
+  - first:
+      213: 3688329403238126711
+    second: jumak_inter1_18
+  - first:
+      213: -1625956242744456659
+    second: jumak_inter1_19
+  - first:
+      213: -5757242735551462016
+    second: jumak_inter1_20
+  - first:
+      213: 1685482712999598514
+    second: jumak_inter1_21
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: jumak_inter1_0
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 242
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4db393908b3526c0800000000000000
+      internalID: -4168860456643740342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumak_inter1_1
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 242
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2602b628508994dc0800000000000000
+      internalID: -3654222473204129694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumak_inter1_2
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 242
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33a75ea05e494270800000000000000
+      internalID: 8235199502052991806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumak_inter1_3
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 210
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26854afd13068ecc0800000000000000
+      internalID: -3681586928053626782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumak_inter1_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 210
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e973086c6f86aa9c0800000000000000
+      internalID: -3915201516943689826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumak_inter1_5
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 210
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee3feb63128fa2d60800000000000000
+      internalID: 7866372520692085742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumak_inter1_6
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 178
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2107c22c4a2cf870800000000000000
+      internalID: 8717889485171786026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumak_inter1_7
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 178
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1368180cbed0f5760800000000000000
+      internalID: 7448687614892279345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumak_inter1_8
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 178
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4cbe284cf3382610800000000000000
+      internalID: 1596583226538638411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumak_inter1_9
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 182
+        width: 167
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fde011edcbf3b47b0800000000000000
+      internalID: -5239023661103378721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumak_inter1_10
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 370
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8382f2691dcea1cf0800000000000000
+      internalID: -280651641845241800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumak_inter1_11
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 370
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53edc76838fcb6260800000000000000
+      internalID: 7091990202028973621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumak_inter1_12
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 338
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eba2d24788b8cac0800000000000000
+      internalID: -3834612191624778784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumak_inter1_13
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 338
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3fabc4c676793b40800000000000000
+      internalID: 5420493878997004095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumak_inter1_14
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 358
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 731fdfe094035e940800000000000000
+      internalID: 5324715224777748791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumak_inter1_15
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 358
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0981a2ece1de27ea0800000000000000
+      internalID: -5876373847201408880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumak_inter1_16
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 88
+        width: 68
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb45dbf0a6c70ac50800000000000000
+      internalID: 6674471442735518907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumak_inter1_17
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 105
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b69a73746e2bdc60800000000000000
+      internalID: 7843914184964871857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumak_inter1_18
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 99
+        width: 41
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77413a6fc049f2330800000000000000
+      internalID: 3688329403238126711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumak_inter1_19
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 51
+        width: 68
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a43e279617f69e0800000000000000
+      internalID: -1625956242744456659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumak_inter1_20
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 109
+        width: 137
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 085c1c53c3a2a10b0800000000000000
+      internalID: -5757242735551462016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumak_inter1_21
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 35
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b9176fe899046710800000000000000
+      internalID: 1685482712999598514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      jumak_inter1_0: -4168860456643740342
+      jumak_inter1_1: -3654222473204129694
+      jumak_inter1_10: -280651641845241800
+      jumak_inter1_11: 7091990202028973621
+      jumak_inter1_12: -3834612191624778784
+      jumak_inter1_13: 5420493878997004095
+      jumak_inter1_14: 5324715224777748791
+      jumak_inter1_15: -5876373847201408880
+      jumak_inter1_16: 6674471442735518907
+      jumak_inter1_17: 7843914184964871857
+      jumak_inter1_18: 3688329403238126711
+      jumak_inter1_19: -1625956242744456659
+      jumak_inter1_2: 8235199502052991806
+      jumak_inter1_20: -5757242735551462016
+      jumak_inter1_21: 1685482712999598514
+      jumak_inter1_3: -3681586928053626782
+      jumak_inter1_4: -3915201516943689826
+      jumak_inter1_5: 7866372520692085742
+      jumak_inter1_6: 8717889485171786026
+      jumak_inter1_7: 7448687614892279345
+      jumak_inter1_8: 1596583226538638411
+      jumak_inter1_9: -5239023661103378721
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

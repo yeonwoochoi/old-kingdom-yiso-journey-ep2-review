@@ -1,0 +1,638 @@
+fileFormatVersion: 2
+guid: 2fdfddf33e979454899b28f36a791b36
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3918311533203299897
+    second: gaekjan_inwall_0
+  - first:
+      213: -3869568904446192666
+    second: gaekjan_inwall_1
+  - first:
+      213: 4310267791542666778
+    second: gaekjan_inwall_2
+  - first:
+      213: 5830548954902353028
+    second: gaekjan_inwall_3
+  - first:
+      213: -2143018730850570510
+    second: gaekjan_inwall_4
+  - first:
+      213: 6248873186769769320
+    second: gaekjan_inwall_5
+  - first:
+      213: -6834572290438087597
+    second: gaekjan_inwall_6
+  - first:
+      213: -1849130346468110365
+    second: gaekjan_inwall_7
+  - first:
+      213: -3987868590706616984
+    second: gaekjan_inwall_8
+  - first:
+      213: 4042224097304786265
+    second: gaekjan_inwall_9
+  - first:
+      213: 3492956030274254678
+    second: gaekjan_inwall_10
+  - first:
+      213: -2439583427315636699
+    second: gaekjan_inwall_11
+  - first:
+      213: -1501259726933818210
+    second: gaekjan_inwall_12
+  - first:
+      213: -394532256651720094
+    second: gaekjan_inwall_13
+  - first:
+      213: 6453128643335441504
+    second: gaekjan_inwall_14
+  - first:
+      213: 4115612383124261824
+    second: gaekjan_inwall_15
+  - first:
+      213: 4889034222220034787
+    second: gaekjan_inwall_16
+  - first:
+      213: 2301333663298125329
+    second: gaekjan_inwall_17
+  - first:
+      213: 3040602511960465633
+    second: gaekjan_inwall_18
+  - first:
+      213: -3963645460922651402
+    second: gaekjan_inwall_19
+  - first:
+      213: -1522121161173459088
+    second: gaekjan_inwall_20
+  - first:
+      213: 3093786723067065697
+    second: gaekjan_inwall_21
+  - first:
+      213: 1423024509624070386
+    second: gaekjan_inwall_22
+  - first:
+      213: 2333550075500860900
+    second: gaekjan_inwall_23
+  - first:
+      213: -3400491809408240649
+    second: gaekjan_inwall_24
+  - first:
+      213: -707101989021020423
+    second: gaekjan_inwall_25
+  - first:
+      213: -8602180638084556515
+    second: gaekjan_inwall_26
+  - first:
+      213: 7626469974896889554
+    second: gaekjan_inwall_27
+  - first:
+      213: 2297339394987162593
+    second: gaekjan_inwall_28
+  - first:
+      213: -507236799053294862
+    second: gaekjan_inwall_29
+  - first:
+      213: -5624731592813515451
+    second: gaekjan_inwall_30
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gaekjan_inwall_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 432
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e94828c7b347a2be0800000000000000
+      internalID: -1501259726933818210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gaekjan_inwall_13
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 432
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a47ddb007568af0800000000000000
+      internalID: -394532256651720094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gaekjan_inwall_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 432
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c48eb9f4e1e8950800000000000000
+      internalID: 6453128643335441504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gaekjan_inwall_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 400
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb025138a79d1930800000000000000
+      internalID: 4115612383124261824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gaekjan_inwall_16
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 400
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e2472ec8b659d340800000000000000
+      internalID: 4889034222220034787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gaekjan_inwall_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 400
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e788616caffef10800000000000000
+      internalID: 2301333663298125329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gaekjan_inwall_18
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 368
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e06094ffd3623a20800000000000000
+      internalID: 3040602511960465633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gaekjan_inwall_19
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 368
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fcad1e147d4ef8c0800000000000000
+      internalID: -3963645460922651402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gaekjan_inwall_20
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 368
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f96235ed650eae0800000000000000
+      internalID: -1522121161173459088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gaekjan_inwall_21
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 305
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1657b3f02a65fea20800000000000000
+      internalID: 3093786723067065697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gaekjan_inwall_22
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 305
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f031d280499fb310800000000000000
+      internalID: 1423024509624070386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gaekjan_inwall_23
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 271
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e590d31e6f626020800000000000000
+      internalID: 2333550075500860900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gaekjan_inwall_24
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 271
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f3b89647b60fc0d0800000000000000
+      internalID: -3400491809408240649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gaekjan_inwall_25
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 81
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fe0e64cc7edf26f0800000000000000
+      internalID: -707101989021020423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gaekjan_inwall_26
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 81
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d191a35394aee9880800000000000000
+      internalID: -8602180638084556515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gaekjan_inwall_27
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 81
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de49ef090aa6d960800000000000000
+      internalID: 7626469974896889554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gaekjan_inwall_28
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 81
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb78b6020ac1ef10800000000000000
+      internalID: 2297339394987162593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gaekjan_inwall_29
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 49
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f21c6791dee5f8f0800000000000000
+      internalID: -507236799053294862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gaekjan_inwall_30
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 17
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54dee6dda60f0f1b0800000000000000
+      internalID: -5624731592813515451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      gaekjan_inwall_12: -1501259726933818210
+      gaekjan_inwall_13: -394532256651720094
+      gaekjan_inwall_14: 6453128643335441504
+      gaekjan_inwall_15: 4115612383124261824
+      gaekjan_inwall_16: 4889034222220034787
+      gaekjan_inwall_17: 2301333663298125329
+      gaekjan_inwall_18: 3040602511960465633
+      gaekjan_inwall_19: -3963645460922651402
+      gaekjan_inwall_20: -1522121161173459088
+      gaekjan_inwall_21: 3093786723067065697
+      gaekjan_inwall_22: 1423024509624070386
+      gaekjan_inwall_23: 2333550075500860900
+      gaekjan_inwall_24: -3400491809408240649
+      gaekjan_inwall_25: -707101989021020423
+      gaekjan_inwall_26: -8602180638084556515
+      gaekjan_inwall_27: 7626469974896889554
+      gaekjan_inwall_28: 2297339394987162593
+      gaekjan_inwall_29: -507236799053294862
+      gaekjan_inwall_30: -5624731592813515451
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

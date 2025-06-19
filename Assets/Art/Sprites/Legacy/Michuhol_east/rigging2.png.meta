@@ -1,0 +1,402 @@
+fileFormatVersion: 2
+guid: 3d1aa6c228b24cf46bd043d530821a5c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4521247145170237611
+    second: rigging2_0
+  - first:
+      213: -3945813999371186746
+    second: rigging2_1
+  - first:
+      213: -5160168259107195323
+    second: rigging2_2
+  - first:
+      213: 2334676238049261928
+    second: rigging2_3
+  - first:
+      213: 7830235025852517670
+    second: rigging2_4
+  - first:
+      213: 9201121023152553978
+    second: rigging2_5
+  - first:
+      213: -2475621534816662131
+    second: rigging2_6
+  - first:
+      213: -2795656841258416455
+    second: rigging2_7
+  - first:
+      213: -2879798273586002504
+    second: rigging2_8
+  - first:
+      213: -1115747271165420019
+    second: rigging2_9
+  - first:
+      213: 6804210195343714740
+    second: rigging2_10
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rigging2_0
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 625
+        width: 80
+        height: 388
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba8fe9de252bebe30800000000000000
+      internalID: 4521247145170237611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rigging2_1
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 647
+        width: 79
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cd87b9c217ad39c0800000000000000
+      internalID: -3945813999371186746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rigging2_2
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 375
+        width: 82
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5467baede466368b0800000000000000
+      internalID: -5160168259107195323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rigging2_3
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 618
+        width: 97
+        height: 399
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 869b87a3baf666020800000000000000
+      internalID: 2334676238049261928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rigging2_4
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 641
+        width: 81
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62dc2c705459aac60800000000000000
+      internalID: 7830235025852517670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rigging2_5
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 87
+        width: 72
+        height: 776
+      alignment: 9
+      pivot: {x: 0.37027147, y: 0.049832433}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afff26822d2f0bf70800000000000000
+      internalID: 9201121023152553978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rigging2_6
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 83
+        width: 83
+        height: 846
+      alignment: 9
+      pivot: {x: 0.45498547, y: 0.06279098}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d02fa9453d4add0800000000000000
+      internalID: -2475621534816662131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rigging2_7
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 15
+        width: 102
+        height: 439
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b6c6e63ae4d339d0800000000000000
+      internalID: -2795656841258416455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rigging2_8
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 17
+        width: 85
+        height: 334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b58f1e5ab6e808d0800000000000000
+      internalID: -2879798273586002504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rigging2_9
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 765
+        width: 64
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ed213b4c11480f0800000000000000
+      internalID: -1115747271165420019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rigging2_10
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 683
+        width: 87
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9ad865f196d6e50800000000000000
+      internalID: 6804210195343714740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      rigging2_0: 4521247145170237611
+      rigging2_1: -3945813999371186746
+      rigging2_10: 6804210195343714740
+      rigging2_2: -5160168259107195323
+      rigging2_3: 2334676238049261928
+      rigging2_4: 7830235025852517670
+      rigging2_5: 9201121023152553978
+      rigging2_6: -2475621534816662131
+      rigging2_7: -2795656841258416455
+      rigging2_8: -2879798273586002504
+      rigging2_9: -1115747271165420019
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

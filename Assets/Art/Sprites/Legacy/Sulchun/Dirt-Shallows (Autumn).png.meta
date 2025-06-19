@@ -1,0 +1,627 @@
+fileFormatVersion: 2
+guid: bc2a9996aa556234e8712e440d335a32
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9086843870537114393
+    second: Dirt-Shallows (Autumn)_0
+  - first:
+      213: 5944188584519564336
+    second: Dirt-Shallows (Autumn)_1
+  - first:
+      213: -567249285170504004
+    second: Dirt-Shallows (Autumn)_2
+  - first:
+      213: -6388754452294075189
+    second: Dirt-Shallows (Autumn)_3
+  - first:
+      213: 335702986009019876
+    second: Dirt-Shallows (Autumn)_4
+  - first:
+      213: -2138647607947628977
+    second: Dirt-Shallows (Autumn)_5
+  - first:
+      213: 4478550022543709472
+    second: Dirt-Shallows (Autumn)_6
+  - first:
+      213: -980089724007521324
+    second: Dirt-Shallows (Autumn)_7
+  - first:
+      213: -413314624049362666
+    second: Dirt-Shallows (Autumn)_8
+  - first:
+      213: -3830453383338580383
+    second: Dirt-Shallows (Autumn)_9
+  - first:
+      213: -955246390825798682
+    second: Dirt-Shallows (Autumn)_10
+  - first:
+      213: 8751098668770895882
+    second: Dirt-Shallows (Autumn)_11
+  - first:
+      213: -1559281479983473770
+    second: Dirt-Shallows (Autumn)_12
+  - first:
+      213: -3839660097702200899
+    second: Dirt-Shallows (Autumn)_13
+  - first:
+      213: 8578129719956180959
+    second: Dirt-Shallows (Autumn)_14
+  - first:
+      213: 1522338762429938353
+    second: Dirt-Shallows (Autumn)_15
+  - first:
+      213: 6924301732980809537
+    second: Dirt-Shallows (Autumn)_16
+  - first:
+      213: -2261279015491929804
+    second: Dirt-Shallows (Autumn)_17
+  - first:
+      213: 6739018820297311837
+    second: Dirt-Shallows (Autumn)_18
+  - first:
+      213: 7951867428718691518
+    second: Dirt-Shallows (Autumn)_19
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dirt-Shallows (Autumn)_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 351
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec1337d4ab05e180800000000000000
+      internalID: -9086843870537114393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Shallows (Autumn)_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 351
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c783226000e7250800000000000000
+      internalID: 5944188584519564336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Shallows (Autumn)_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 351
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe5152d7c9b028f0800000000000000
+      internalID: -567249285170504004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Shallows (Autumn)_3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 319
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bccf0d9bca59657a0800000000000000
+      internalID: -6388754452294075189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Shallows (Autumn)_4
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 319
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e50b1f4618a8a400800000000000000
+      internalID: 335702986009019876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Shallows (Autumn)_5
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 287
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4eea84e45ff152e0800000000000000
+      internalID: -2138647607947628977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Shallows (Autumn)_6
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 287
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02519826481072e30800000000000000
+      internalID: 4478550022543709472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Shallows (Autumn)_7
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 287
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d36588b6950662f0800000000000000
+      internalID: -980089724007521324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Shallows (Autumn)_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 159
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619401d0a8c934af0800000000000000
+      internalID: -413314624049362666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Shallows (Autumn)_9
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 159
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 166296541fe77dac0800000000000000
+      internalID: -3830453383338580383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Shallows (Autumn)_10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e3bad9f7784eb2f0800000000000000
+      internalID: -955246390825798682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Shallows (Autumn)_11
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a08ab7abfd5227970800000000000000
+      internalID: 8751098668770895882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Shallows (Autumn)_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b5db061c15c5ae0800000000000000
+      internalID: -1559281479983473770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Shallows (Autumn)_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db9f73a0c79c6bac0800000000000000
+      internalID: -3839660097702200899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Shallows (Autumn)_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf853b0883ab0770800000000000000
+      internalID: 8578129719956180959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Shallows (Autumn)_15
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bab17ae90f602510800000000000000
+      internalID: 1522338762429938353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Shallows (Autumn)_16
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f51f75dbf081060800000000000000
+      internalID: 6924301732980809537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Shallows (Autumn)_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439fe8757b25e90e0800000000000000
+      internalID: -2261279015491929804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Shallows (Autumn)_18
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d564e7689edc58d50800000000000000
+      internalID: 6739018820297311837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Shallows (Autumn)_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb4c6cdab45ba5e60800000000000000
+      internalID: 7951867428718691518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Dirt-Shallows (Autumn)_0: -9086843870537114393
+      Dirt-Shallows (Autumn)_1: 5944188584519564336
+      Dirt-Shallows (Autumn)_10: -955246390825798682
+      Dirt-Shallows (Autumn)_11: 8751098668770895882
+      Dirt-Shallows (Autumn)_12: -1559281479983473770
+      Dirt-Shallows (Autumn)_13: -3839660097702200899
+      Dirt-Shallows (Autumn)_14: 8578129719956180959
+      Dirt-Shallows (Autumn)_15: 1522338762429938353
+      Dirt-Shallows (Autumn)_16: 6924301732980809537
+      Dirt-Shallows (Autumn)_17: -2261279015491929804
+      Dirt-Shallows (Autumn)_18: 6739018820297311837
+      Dirt-Shallows (Autumn)_19: 7951867428718691518
+      Dirt-Shallows (Autumn)_2: -567249285170504004
+      Dirt-Shallows (Autumn)_3: -6388754452294075189
+      Dirt-Shallows (Autumn)_4: 335702986009019876
+      Dirt-Shallows (Autumn)_5: -2138647607947628977
+      Dirt-Shallows (Autumn)_6: 4478550022543709472
+      Dirt-Shallows (Autumn)_7: -980089724007521324
+      Dirt-Shallows (Autumn)_8: -413314624049362666
+      Dirt-Shallows (Autumn)_9: -3830453383338580383
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

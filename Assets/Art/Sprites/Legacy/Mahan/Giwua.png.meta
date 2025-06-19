@@ -1,0 +1,599 @@
+fileFormatVersion: 2
+guid: 7ef0e3e3a47f101488a9d6da45d21267
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6690345583391119980
+    second: Giwua_0
+  - first:
+      213: -6871952366992202985
+    second: Giwua_1
+  - first:
+      213: -2608410605340592569
+    second: Giwua_2
+  - first:
+      213: -5656299849680632286
+    second: Giwua_3
+  - first:
+      213: -5174168210694515054
+    second: Giwua_4
+  - first:
+      213: -8782970299709142504
+    second: Giwua_5
+  - first:
+      213: -6637425658359316457
+    second: Giwua_6
+  - first:
+      213: 5244633482311200075
+    second: Giwua_7
+  - first:
+      213: -1302251610646505094
+    second: Giwua_8
+  - first:
+      213: 5796141023344341584
+    second: Giwua_9
+  - first:
+      213: 7002148838804823987
+    second: Giwua_10
+  - first:
+      213: 828615771079901731
+    second: Giwua_11
+  - first:
+      213: 3156512260677293725
+    second: Giwua_12
+  - first:
+      213: 6961271868795774356
+    second: Giwua_13
+  - first:
+      213: 217323693118715227
+    second: Giwua_14
+  - first:
+      213: 2335648601438515718
+    second: Giwua_15
+  - first:
+      213: -1177284213032380984
+    second: Giwua_16
+  - first:
+      213: -9058439130414955867
+    second: Giwua_17
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Giwua_0
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 135
+        width: 391
+        height: 185
+      alignment: 9
+      pivot: {x: 0.4905003, y: 0.2256049}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6a91a27cd1e8dc50800000000000000
+      internalID: 6690345583391119980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Giwua_1
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 29
+        width: 384
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713660c3bbbe1a0a0800000000000000
+      internalID: -6871952366992202985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Giwua_2
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 312
+        width: 159
+        height: 144
+      alignment: 9
+      pivot: {x: 0.52, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 746ff48df501dcbd0800000000000000
+      internalID: -2608410605340592569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Giwua_3
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 383
+        width: 109
+        height: 72
+      alignment: 9
+      pivot: {x: 0.49525172, y: 0.111827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 226c0bc4149c081b0800000000000000
+      internalID: -5656299849680632286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Giwua_4
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 561
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2965f612d69a138b0800000000000000
+      internalID: -5174168210694515054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Giwua_5
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 561
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ac70deb0f9c1680800000000000000
+      internalID: -8782970299709142504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Giwua_6
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 561
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7100e62c78023e3a0800000000000000
+      internalID: -6637425658359316457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Giwua_7
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 529
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4d674a6d5ea8c840800000000000000
+      internalID: 5244633482311200075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Giwua_8
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 529
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a791c3b4f097dede0800000000000000
+      internalID: -1302251610646505094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Giwua_9
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 497
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 052328c2d87007050800000000000000
+      internalID: 5796141023344341584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Giwua_10
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 497
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bf10691541ac2160800000000000000
+      internalID: 7002148838804823987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Giwua_11
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 497
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 322018257a5df7b00800000000000000
+      internalID: 828615771079901731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Giwua_12
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 561
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d96d5da5d2f2ecb20800000000000000
+      internalID: 3156512260677293725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Giwua_13
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 561
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 495ed7cd1e76b9060800000000000000
+      internalID: 6961271868795774356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Giwua_14
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 561
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55fd995fb6140300800000000000000
+      internalID: 217323693118715227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Giwua_15
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 529
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60271e83704e96020800000000000000
+      internalID: 2335648601438515718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Giwua_16
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 529
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c5978aee3279afe0800000000000000
+      internalID: -1177284213032380984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Giwua_17
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 529
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a24e14ca95f94280800000000000000
+      internalID: -9058439130414955867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Giwua_2_open
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 312
+        width: 159
+        height: 144
+      alignment: 9
+      pivot: {x: 0.52, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f2beff86e234e540992c7d3ebb1d728
+      internalID: 1359773244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Giwua_0: 6690345583391119980
+      Giwua_1: -6871952366992202985
+      Giwua_10: 7002148838804823987
+      Giwua_11: 828615771079901731
+      Giwua_12: 3156512260677293725
+      Giwua_13: 6961271868795774356
+      Giwua_14: 217323693118715227
+      Giwua_15: 2335648601438515718
+      Giwua_16: -1177284213032380984
+      Giwua_17: -9058439130414955867
+      Giwua_2: -2608410605340592569
+      Giwua_2_open: 1359773244
+      Giwua_3: -5656299849680632286
+      Giwua_4: -5174168210694515054
+      Giwua_5: -8782970299709142504
+      Giwua_6: -6637425658359316457
+      Giwua_7: 5244633482311200075
+      Giwua_8: -1302251610646505094
+      Giwua_9: 5796141023344341584
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

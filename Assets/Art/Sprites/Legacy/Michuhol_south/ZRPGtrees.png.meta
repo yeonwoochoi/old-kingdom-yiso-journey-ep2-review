@@ -1,0 +1,502 @@
+fileFormatVersion: 2
+guid: 03395b108beb44d4ba6bd1fd158ef338
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3022809940545594955
+    second: ZRPGtrees_0
+  - first:
+      213: 1115000334668074188
+    second: ZRPGtrees_1
+  - first:
+      213: -7810506512644562881
+    second: ZRPGtrees_3
+  - first:
+      213: -8958435110863180486
+    second: ZRPGtrees_4
+  - first:
+      213: 4918536196119528230
+    second: ZRPGtrees_5
+  - first:
+      213: -5210189110203922180
+    second: ZRPGtrees_6
+  - first:
+      213: 637736667351902444
+    second: ZRPGtrees_2
+  - first:
+      213: 8129077600925207118
+    second: ZRPGtrees_7
+  - first:
+      213: 7733032360477349330
+    second: ZRPGtrees_8
+  - first:
+      213: -5565749786329028982
+    second: ZRPGtrees_9
+  - first:
+      213: 4983419184529920847
+    second: ZRPGtrees_10
+  - first:
+      213: -4767894429965383745
+    second: ZRPGtrees_11
+  - first:
+      213: -4431192952029887612
+    second: ZRPGtrees_12
+  - first:
+      213: -8657954824727671306
+    second: ZRPGtrees_13
+  - first:
+      213: -8585982377269438270
+    second: ZRPGtrees_14
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ZRPGtrees_0
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 457
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b466db910ad23f920800000000000000
+      internalID: 3022809940545594955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZRPGtrees_1
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 457
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc055895e6497f00800000000000000
+      internalID: 1115000334668074188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZRPGtrees_3
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 489
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3022f565b18b9390800000000000000
+      internalID: -7810506512644562881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZRPGtrees_4
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 489
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3dec910bbe3da380800000000000000
+      internalID: -8958435110863180486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZRPGtrees_5
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 489
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6230b906c96224440800000000000000
+      internalID: 4918536196119528230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZRPGtrees_6
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 489
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf8cfa9eb90b1b7b0800000000000000
+      internalID: -5210189110203922180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZRPGtrees_2
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 457
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce860cdbe12b9d800800000000000000
+      internalID: 637736667351902444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZRPGtrees_7
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 457
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a4bb2220940d070800000000000000
+      internalID: 8129077600925207118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZRPGtrees_8
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 457
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d55ad2e5ff315b60800000000000000
+      internalID: 7733032360477349330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZRPGtrees_9
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 425
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a86e625de0c72c2b0800000000000000
+      internalID: -5565749786329028982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZRPGtrees_10
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 425
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f43d5c45859a82540800000000000000
+      internalID: 4983419184529920847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZRPGtrees_11
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 425
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb7895ff64905ddb0800000000000000
+      internalID: -4767894429965383745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZRPGtrees_12
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 425
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4834b03dc7d3182c0800000000000000
+      internalID: -4431192952029887612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZRPGtrees_13
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 217
+        width: 272
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fd4abe65f3c8d780800000000000000
+      internalID: -8657954824727671306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZRPGtrees_14
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 388
+        width: 216
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c85713b48678d880800000000000000
+      internalID: -8585982377269438270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ZRPGtrees_0: 3022809940545594955
+      ZRPGtrees_1: 1115000334668074188
+      ZRPGtrees_10: 4983419184529920847
+      ZRPGtrees_11: -4767894429965383745
+      ZRPGtrees_12: -4431192952029887612
+      ZRPGtrees_13: -8657954824727671306
+      ZRPGtrees_14: -8585982377269438270
+      ZRPGtrees_2: 637736667351902444
+      ZRPGtrees_3: -7810506512644562881
+      ZRPGtrees_4: -8958435110863180486
+      ZRPGtrees_5: 4918536196119528230
+      ZRPGtrees_6: -5210189110203922180
+      ZRPGtrees_7: 8129077600925207118
+      ZRPGtrees_8: 7733032360477349330
+      ZRPGtrees_9: -5565749786329028982
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

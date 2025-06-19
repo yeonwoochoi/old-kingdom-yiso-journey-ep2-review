@@ -1,0 +1,833 @@
+fileFormatVersion: 2
+guid: 8165e971c6917c64a8d3badb9b01626c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7187671631506097454
+    second: damjang_new2_4
+  - first:
+      213: 7573671712833259692
+    second: damjang_new2_5
+  - first:
+      213: 1492815964086314442
+    second: damjang_new2_6
+  - first:
+      213: 3044553782400250084
+    second: damjang_new2_7
+  - first:
+      213: -7807582275768563104
+    second: damjang_new2_8
+  - first:
+      213: 7365873134137867095
+    second: damjang_new2_9
+  - first:
+      213: 2862366853454306678
+    second: damjang_new2_0
+  - first:
+      213: 1556168219935562882
+    second: damjang_new2_1
+  - first:
+      213: 7054087338356097413
+    second: damjang_new2_2
+  - first:
+      213: 2877280375462944448
+    second: damjang_new2_3
+  - first:
+      213: -6201973533750548609
+    second: damjang_new2_10
+  - first:
+      213: -8432374524168384224
+    second: damjang_new2_11
+  - first:
+      213: -5306414811905355958
+    second: damjang_new2_12
+  - first:
+      213: -379988400574558556
+    second: damjang_new2_13
+  - first:
+      213: -7709575003028357530
+    second: damjang_new2_14
+  - first:
+      213: -7612126385109909255
+    second: damjang_new2_15
+  - first:
+      213: 1395433499214656963
+    second: damjang_new2_16
+  - first:
+      213: 8641974485184515806
+    second: damjang_new2_17
+  - first:
+      213: 1090882057229174638
+    second: damjang_new2_18
+  - first:
+      213: 5029284329917189077
+    second: damjang_new2_19
+  - first:
+      213: 7669725499001789987
+    second: damjang_new2_20
+  - first:
+      213: 3375170352301109194
+    second: damjang_new2_21
+  - first:
+      213: 8083310568258520947
+    second: damjang_new2_22
+  - first:
+      213: 7295936605416491710
+    second: damjang_new2_23
+  - first:
+      213: -279366482672857947
+    second: damjang_new2_24
+  - first:
+      213: -4194234401668651981
+    second: damjang_new2_25
+  - first:
+      213: 2615435076475011313
+    second: damjang_new2_26
+  - first:
+      213: 4649425535640094257
+    second: damjang_new2_27
+  - first:
+      213: 5609525710993620460
+    second: damjang_new2_28
+  - first:
+      213: 3752088676068046315
+    second: damjang_new2_29
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: damjang_new2_4
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 265
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2da3de9abb2404c90800000000000000
+      internalID: -7187671631506097454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_5
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 265
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca8c9d8bb461b1960800000000000000
+      internalID: 7573671712833259692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_6
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 265
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5a566c53c87b410800000000000000
+      internalID: 1492815964086314442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_7
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 265
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e0f98bc88d604a20800000000000000
+      internalID: 3044553782400250084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_8
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 265
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06acd2a5945e5a390800000000000000
+      internalID: -7807582275768563104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_9
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 265
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75b71e4e696d83660800000000000000
+      internalID: 7365873134137867095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_0
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 233
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d1ffcdc7b29b720800000000000000
+      internalID: 2862366853454306678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_1
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 233
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28cd20840ce989510800000000000000
+      internalID: 1556168219935562882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_2
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 233
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 581cb416f0725e160800000000000000
+      internalID: 7054087338356097413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 233
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cedbaac1472ee720800000000000000
+      internalID: 2877280375462944448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_10
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 233
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f77ac663ee92ee9a0800000000000000
+      internalID: -6201973533750548609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_11
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 233
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021d3e10c003afa80800000000000000
+      internalID: -8432374524168384224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_14
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 73
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e734fb166120590800000000000000
+      internalID: -7709575003028357530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_15
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 41
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f0452e226b4c5690800000000000000
+      internalID: -7612126385109909255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_16
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 73
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c5be5ccf539d5310800000000000000
+      internalID: 1395433499214656963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_17
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 41
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede8963d1067ee770800000000000000
+      internalID: 8641974485184515806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_18
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 73
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e670ef88377932f00800000000000000
+      internalID: 1090882057229174638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_19
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 41
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db0727a37b9bc540800000000000000
+      internalID: 5029284329917189077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_20
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 73
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ed1c494b6507a60800000000000000
+      internalID: 7669725499001789987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_21
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 41
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf66519d8307de20800000000000000
+      internalID: 3375170352301109194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_22
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 73
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377c5367220bd2070800000000000000
+      internalID: 8083310568258520947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_23
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 41
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba8e95efaf504560800000000000000
+      internalID: 7295936605416491710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_24
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 73
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac42260aad7f1cf0800000000000000
+      internalID: -279366482672857947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_25
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 41
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33421df98061bc5c0800000000000000
+      internalID: -4194234401668651981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_26
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 73
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f0c36a4854eb4420800000000000000
+      internalID: 2615435076475011313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_27
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 41
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136457514e3168040800000000000000
+      internalID: 4649425535640094257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_28
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 73
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cedf132e9e909dd40800000000000000
+      internalID: 5609525710993620460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damjang_new2_29
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 41
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be53dce75c8121430800000000000000
+      internalID: 3752088676068046315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      damjang_new2_0: 2862366853454306678
+      damjang_new2_1: 1556168219935562882
+      damjang_new2_10: -6201973533750548609
+      damjang_new2_11: -8432374524168384224
+      damjang_new2_14: -7709575003028357530
+      damjang_new2_15: -7612126385109909255
+      damjang_new2_16: 1395433499214656963
+      damjang_new2_17: 8641974485184515806
+      damjang_new2_18: 1090882057229174638
+      damjang_new2_19: 5029284329917189077
+      damjang_new2_2: 7054087338356097413
+      damjang_new2_20: 7669725499001789987
+      damjang_new2_21: 3375170352301109194
+      damjang_new2_22: 8083310568258520947
+      damjang_new2_23: 7295936605416491710
+      damjang_new2_24: -279366482672857947
+      damjang_new2_25: -4194234401668651981
+      damjang_new2_26: 2615435076475011313
+      damjang_new2_27: 4649425535640094257
+      damjang_new2_28: 5609525710993620460
+      damjang_new2_29: 3752088676068046315
+      damjang_new2_3: 2877280375462944448
+      damjang_new2_4: -7187671631506097454
+      damjang_new2_5: 7573671712833259692
+      damjang_new2_6: 1492815964086314442
+      damjang_new2_7: 3044553782400250084
+      damjang_new2_8: -7807582275768563104
+      damjang_new2_9: 7365873134137867095
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

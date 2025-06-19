@@ -1,0 +1,627 @@
+fileFormatVersion: 2
+guid: 05262e9ad3ab6bf4d95a4dfbf6d30ecd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1023297811341343685
+    second: water_cliff_spring_0
+  - first:
+      213: -7816035402324780580
+    second: water_cliff_spring_1
+  - first:
+      213: 1453821755028610367
+    second: water_cliff_spring_2
+  - first:
+      213: 6960129169669395266
+    second: water_cliff_spring_3
+  - first:
+      213: 2696413316329541371
+    second: water_cliff_spring_4
+  - first:
+      213: 4138026512596747219
+    second: water_cliff_spring_5
+  - first:
+      213: -7183665443631772822
+    second: water_cliff_spring_6
+  - first:
+      213: -2665547828247090313
+    second: water_cliff_spring_7
+  - first:
+      213: -8542327020549799413
+    second: water_cliff_spring_8
+  - first:
+      213: 798598908388858972
+    second: water_cliff_spring_9
+  - first:
+      213: 2870667492691137823
+    second: water_cliff_spring_10
+  - first:
+      213: -6254010525573669992
+    second: water_cliff_spring_11
+  - first:
+      213: -1525338002927397198
+    second: water_cliff_spring_12
+  - first:
+      213: -6632592083720447304
+    second: water_cliff_spring_13
+  - first:
+      213: 4340230489807912044
+    second: water_cliff_spring_14
+  - first:
+      213: 6834753149451592537
+    second: water_cliff_spring_15
+  - first:
+      213: 2174861523929512245
+    second: water_cliff_spring_16
+  - first:
+      213: 8089621653397321819
+    second: water_cliff_spring_17
+  - first:
+      213: -5374017398338537335
+    second: water_cliff_spring_18
+  - first:
+      213: 9058522819794129405
+    second: water_cliff_spring_19
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: water_cliff_spring_0
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 142
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cb7f6010fb733e00800000000000000
+      internalID: 1023297811341343685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_cliff_spring_1
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 142
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9dd84763dd78390800000000000000
+      internalID: -7816035402324780580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_cliff_spring_2
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 142
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3d173bfe230d2410800000000000000
+      internalID: 1453821755028610367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_cliff_spring_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 238
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2439afc7a98579060800000000000000
+      internalID: 6960129169669395266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_cliff_spring_4
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 238
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe847fff959b6520800000000000000
+      internalID: 2696413316329541371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_cliff_spring_5
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 238
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d34a7260393d6930800000000000000
+      internalID: 4138026512596747219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_cliff_spring_6
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 206
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b4417f65e7e4c90800000000000000
+      internalID: -7183665443631772822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_cliff_spring_7
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 206
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77ba4857f52120bd0800000000000000
+      internalID: -2665547828247090313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_cliff_spring_8
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 206
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0288e085de837980800000000000000
+      internalID: -8542327020549799413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_cliff_spring_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 174
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5c588cd971351b00800000000000000
+      internalID: 798598908388858972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_cliff_spring_10
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 174
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f15dd1a00e8a6d720800000000000000
+      internalID: 2870667492691137823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_cliff_spring_11
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 174
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89b90a9ef8a4539a0800000000000000
+      internalID: -6254010525573669992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_cliff_spring_12
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 237
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b6db1dfa29e4dae0800000000000000
+      internalID: -1525338002927397198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_cliff_spring_13
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 237
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba56cd04ac44f3a0800000000000000
+      internalID: -6632592083720447304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_cliff_spring_14
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 207
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6cf15c82a89b3c30800000000000000
+      internalID: 4340230489807912044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_cliff_spring_15
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 207
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9536b8007cbe9de50800000000000000
+      internalID: 6834753149451592537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_cliff_spring_16
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 79
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 539bb797809ae2e10800000000000000
+      internalID: 2174861523929512245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_cliff_spring_17
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 78
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b583e0a780c144070800000000000000
+      internalID: 8089621653397321819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_cliff_spring_18
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 47
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988334326a7ab65b0800000000000000
+      internalID: -5374017398338537335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_cliff_spring_19
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 47
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df1599fa28656bd70800000000000000
+      internalID: 9058522819794129405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      water_cliff_spring_0: 1023297811341343685
+      water_cliff_spring_1: -7816035402324780580
+      water_cliff_spring_10: 2870667492691137823
+      water_cliff_spring_11: -6254010525573669992
+      water_cliff_spring_12: -1525338002927397198
+      water_cliff_spring_13: -6632592083720447304
+      water_cliff_spring_14: 4340230489807912044
+      water_cliff_spring_15: 6834753149451592537
+      water_cliff_spring_16: 2174861523929512245
+      water_cliff_spring_17: 8089621653397321819
+      water_cliff_spring_18: -5374017398338537335
+      water_cliff_spring_19: 9058522819794129405
+      water_cliff_spring_2: 1453821755028610367
+      water_cliff_spring_3: 6960129169669395266
+      water_cliff_spring_4: 2696413316329541371
+      water_cliff_spring_5: 4138026512596747219
+      water_cliff_spring_6: -7183665443631772822
+      water_cliff_spring_7: -2665547828247090313
+      water_cliff_spring_8: -8542327020549799413
+      water_cliff_spring_9: 798598908388858972
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

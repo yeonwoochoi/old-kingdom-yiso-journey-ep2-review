@@ -1,0 +1,727 @@
+fileFormatVersion: 2
+guid: 2118efceffbda12419f558913bbdfcb4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3377574728671394258
+    second: blacksmith_revise1_0
+  - first:
+      213: -1982044215492384535
+    second: blacksmith_revise1_1
+  - first:
+      213: -623674386665209206
+    second: blacksmith_revise1_2
+  - first:
+      213: -5780845165989730946
+    second: blacksmith_revise1_3
+  - first:
+      213: 1374844292374605209
+    second: blacksmith_revise1_4
+  - first:
+      213: -778411349121706341
+    second: blacksmith_revise1_5
+  - first:
+      213: 6437714878367236360
+    second: blacksmith_revise1_6
+  - first:
+      213: -2523791182197728830
+    second: blacksmith_revise1_7
+  - first:
+      213: 8451693671904384764
+    second: blacksmith_revise1_8
+  - first:
+      213: -1318313721765642596
+    second: blacksmith_revise1_9
+  - first:
+      213: 6209695766498223109
+    second: blacksmith_revise1_10
+  - first:
+      213: -3736832175473119397
+    second: blacksmith_revise1_11
+  - first:
+      213: -8680581139985403139
+    second: blacksmith_revise1_12
+  - first:
+      213: -2448475732519185555
+    second: blacksmith_revise1_13
+  - first:
+      213: -1411685351318704271
+    second: blacksmith_revise1_14
+  - first:
+      213: -4988698759324082104
+    second: blacksmith_revise1_15
+  - first:
+      213: -7091326869756340872
+    second: blacksmith_revise1_16
+  - first:
+      213: 9113605567729281525
+    second: blacksmith_revise1_17
+  - first:
+      213: -8206491103778367702
+    second: blacksmith_revise1_18
+  - first:
+      213: -2449355602022014590
+    second: blacksmith_revise1_19
+  - first:
+      213: -753344589174052432
+    second: blacksmith_revise1_20
+  - first:
+      213: 5299399707305628886
+    second: blacksmith_revise1_21
+  - first:
+      213: 7239630472016351598
+    second: blacksmith_revise1_22
+  - first:
+      213: -7938552074828940411
+    second: blacksmith_revise1_23
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blacksmith_revise1_0
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 275
+        width: 128
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e26843feda17021d0800000000000000
+      internalID: -3377574728671394258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_revise1_1
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 275
+        width: 128
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e8657e894d5e74e0800000000000000
+      internalID: -1982044215492384535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_revise1_2
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 275
+        width: 128
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a828f4f13734857f0800000000000000
+      internalID: -623674386665209206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_revise1_3
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 197
+        width: 119
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e75e5a323ff46cfa0800000000000000
+      internalID: -5780845165989730946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_revise1_4
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 198
+        width: 97
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d2674899d641310800000000000000
+      internalID: 1374844292374605209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_revise1_5
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 196
+        width: 74
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b96d77e80078235f0800000000000000
+      internalID: -778411349121706341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_revise1_6
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 199
+        width: 66
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801835ac29b575950800000000000000
+      internalID: 6437714878367236360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_revise1_7
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 121
+        width: 63
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c957d99a41b9fcd0800000000000000
+      internalID: -2523791182197728830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_revise1_8
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 120
+        width: 64
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf617489d927a4570800000000000000
+      internalID: 8451693671904384764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_revise1_9
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 122
+        width: 63
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9eb2af97a864bde0800000000000000
+      internalID: -1318313721765642596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_revise1_10
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 134
+        width: 55
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 504af5536654d2650800000000000000
+      internalID: 6209695766498223109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_revise1_11
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 130
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5facab5fea142cc0800000000000000
+      internalID: -3736832175473119397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_revise1_12
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 113
+        width: 29
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df2f633e171688780800000000000000
+      internalID: -8680581139985403139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_revise1_13
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 145
+        width: 62
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d63970a3b44450ed0800000000000000
+      internalID: -2448475732519185555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_revise1_14
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 111
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17fa60407afa86ce0800000000000000
+      internalID: -1411685351318704271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_revise1_15
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 111
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8406e0fd8e494cab0800000000000000
+      internalID: -4988698759324082104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_revise1_16
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 65
+        width: 48
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8759dfd88cb869d90800000000000000
+      internalID: -7091326869756340872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_revise1_17
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 70
+        width: 37
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f9a6875af70a7e70800000000000000
+      internalID: 9113605567729281525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_revise1_18
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 23
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2713ea22dfac1e80800000000000000
+      internalID: -8206491103778367702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_revise1_19
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 25
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2816dd4ae04220ed0800000000000000
+      internalID: -2449355602022014590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_revise1_20
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 89
+        width: 62
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b961d866159b85f0800000000000000
+      internalID: -753344589174052432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_revise1_21
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 63
+        width: 58
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d4d2c4d4ff3b8940800000000000000
+      internalID: 5299399707305628886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_revise1_22
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 61
+        width: 61
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e61d0ad9e85587460800000000000000
+      internalID: 7239630472016351598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_revise1_23
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 102
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b71ecb2f894d190800000000000000
+      internalID: -7938552074828940411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      blacksmith_revise1_0: -3377574728671394258
+      blacksmith_revise1_1: -1982044215492384535
+      blacksmith_revise1_10: 6209695766498223109
+      blacksmith_revise1_11: -3736832175473119397
+      blacksmith_revise1_12: -8680581139985403139
+      blacksmith_revise1_13: -2448475732519185555
+      blacksmith_revise1_14: -1411685351318704271
+      blacksmith_revise1_15: -4988698759324082104
+      blacksmith_revise1_16: -7091326869756340872
+      blacksmith_revise1_17: 9113605567729281525
+      blacksmith_revise1_18: -8206491103778367702
+      blacksmith_revise1_19: -2449355602022014590
+      blacksmith_revise1_2: -623674386665209206
+      blacksmith_revise1_20: -753344589174052432
+      blacksmith_revise1_21: 5299399707305628886
+      blacksmith_revise1_22: 7239630472016351598
+      blacksmith_revise1_23: -7938552074828940411
+      blacksmith_revise1_3: -5780845165989730946
+      blacksmith_revise1_4: 1374844292374605209
+      blacksmith_revise1_5: -778411349121706341
+      blacksmith_revise1_6: 6437714878367236360
+      blacksmith_revise1_7: -2523791182197728830
+      blacksmith_revise1_8: 8451693671904384764
+      blacksmith_revise1_9: -1318313721765642596
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

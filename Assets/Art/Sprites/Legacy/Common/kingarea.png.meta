@@ -1,0 +1,802 @@
+fileFormatVersion: 2
+guid: c26e5cf0d6c7c7a4aac6d53c8d212bf1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4481154726566715612
+    second: kingarea_0
+  - first:
+      213: 9143678046218963989
+    second: kingarea_1
+  - first:
+      213: -1033050212112049098
+    second: kingarea_2
+  - first:
+      213: 5413914752881702241
+    second: kingarea_3
+  - first:
+      213: -8786653033211746019
+    second: kingarea_4
+  - first:
+      213: 3269180817747665640
+    second: kingarea_5
+  - first:
+      213: 8719779577342963373
+    second: kingarea_6
+  - first:
+      213: 5860192291133721524
+    second: kingarea_7
+  - first:
+      213: 216328497417521583
+    second: kingarea_8
+  - first:
+      213: 3725317383465862139
+    second: kingarea_9
+  - first:
+      213: -3803406393945349848
+    second: kingarea_10
+  - first:
+      213: 4630366829097479275
+    second: kingarea_11
+  - first:
+      213: 1845344061520853163
+    second: kingarea_12
+  - first:
+      213: 139545262636293141
+    second: kingarea_13
+  - first:
+      213: 5663700846518304288
+    second: kingarea_14
+  - first:
+      213: -5567380051414230341
+    second: kingarea_15
+  - first:
+      213: -5627728351288276522
+    second: kingarea_16
+  - first:
+      213: -7708914293005064449
+    second: kingarea_17
+  - first:
+      213: -1286200938508237990
+    second: kingarea_18
+  - first:
+      213: -2632404225368029077
+    second: kingarea_19
+  - first:
+      213: -6596185630864149406
+    second: kingarea_20
+  - first:
+      213: -161077061535023826
+    second: kingarea_21
+  - first:
+      213: -679029812228139779
+    second: kingarea_22
+  - first:
+      213: 5087235858154168282
+    second: kingarea_23
+  - first:
+      213: -437691151639993859
+    second: kingarea_24
+  - first:
+      213: 4763965628088805731
+    second: kingarea_25
+  - first:
+      213: -8539077687149657713
+    second: kingarea_26
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kingarea_0
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 205
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42f9d63b48dbfc1c0800000000000000
+      internalID: -4481154726566715612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_1
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 205
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c4b6ddcbed4ee70800000000000000
+      internalID: 9143678046218963989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_2
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 205
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63c5bef2e4ed9a1f0800000000000000
+      internalID: -1033050212112049098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_3
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 205
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165b2c998c6122b40800000000000000
+      internalID: 5413914752881702241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_4
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 205
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d192ec6be998f0680800000000000000
+      internalID: -8786653033211746019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_5
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 205
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e2ee5402a67e5d20800000000000000
+      internalID: 3269180817747665640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_6
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 173
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daeab338351e20970800000000000000
+      internalID: 8719779577342963373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_7
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 173
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb028417d5935150800000000000000
+      internalID: 5860192291133721524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_8
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 173
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa98d5b4f9d800300800000000000000
+      internalID: 216328497417521583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_9
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 173
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf302153c6cf2b330800000000000000
+      internalID: 3725317383465862139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_10
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 173
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82120783906973bc0800000000000000
+      internalID: -3803406393945349848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_11
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 173
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c6b1c291e524040800000000000000
+      internalID: 4630366829097479275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_12
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 141
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba8b35b95aafb9910800000000000000
+      internalID: 1845344061520853163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_13
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 141
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c56815da3cfe100800000000000000
+      internalID: 139545262636293141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_14
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 141
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e7dce89e1899e40800000000000000
+      internalID: 5663700846518304288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_15
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 141
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbadbd92751bcb2b0800000000000000
+      internalID: -5567380051414230341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_16
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 141
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d94119a1ea46e1b0800000000000000
+      internalID: -5627728351288276522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_17
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 141
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff660894b4f640590800000000000000
+      internalID: -7708914293005064449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_18
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 109
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a53417e9f0f762ee0800000000000000
+      internalID: -1286200938508237990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_19
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 109
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6883b9dd42d77bd0800000000000000
+      internalID: -2632404225368029077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_20
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 109
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2647ec7ed14a574a0800000000000000
+      internalID: -6596185630864149406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_21
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 109
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2dbdb5144db3cdf0800000000000000
+      internalID: -161077061535023826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_22
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 109
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4dd32cbf99396f0800000000000000
+      internalID: -679029812228139779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_23
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 109
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf98e54f0e799640800000000000000
+      internalID: 5087235858154168282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_24
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 77
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df1aa2177320de9f0800000000000000
+      internalID: -437691151639993859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_25
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 77
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36967688f710d1240800000000000000
+      internalID: 4763965628088805731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingarea_26
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 94
+        width: 257
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f810bf3e51a1f7980800000000000000
+      internalID: -8539077687149657713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      kingarea_0: -4481154726566715612
+      kingarea_1: 9143678046218963989
+      kingarea_10: -3803406393945349848
+      kingarea_11: 4630366829097479275
+      kingarea_12: 1845344061520853163
+      kingarea_13: 139545262636293141
+      kingarea_14: 5663700846518304288
+      kingarea_15: -5567380051414230341
+      kingarea_16: -5627728351288276522
+      kingarea_17: -7708914293005064449
+      kingarea_18: -1286200938508237990
+      kingarea_19: -2632404225368029077
+      kingarea_2: -1033050212112049098
+      kingarea_20: -6596185630864149406
+      kingarea_21: -161077061535023826
+      kingarea_22: -679029812228139779
+      kingarea_23: 5087235858154168282
+      kingarea_24: -437691151639993859
+      kingarea_25: 4763965628088805731
+      kingarea_26: -8539077687149657713
+      kingarea_3: 5413914752881702241
+      kingarea_4: -8786653033211746019
+      kingarea_5: 3269180817747665640
+      kingarea_6: 8719779577342963373
+      kingarea_7: 5860192291133721524
+      kingarea_8: 216328497417521583
+      kingarea_9: 3725317383465862139
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

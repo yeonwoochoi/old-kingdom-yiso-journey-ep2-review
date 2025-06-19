@@ -1,0 +1,302 @@
+fileFormatVersion: 2
+guid: 9afaca8acd44dd941b3260569dd485dd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7346702709702432316
+    second: trees-pale_0
+  - first:
+      213: -4137615397773357066
+    second: trees-pale_1
+  - first:
+      213: -4237674451788839219
+    second: trees-pale_2
+  - first:
+      213: 3395421771089407114
+    second: trees-pale_3
+  - first:
+      213: -5059568189013601231
+    second: trees-pale_4
+  - first:
+      213: -4436580488908271549
+    second: trees-pale_5
+  - first:
+      213: -4299960687742921441
+    second: trees-pale_6
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: trees-pale_0
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 535
+        width: 95
+        height: 137
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1663658}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c369632a03bb4f560800000000000000
+      internalID: 7346702709702432316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-pale_1
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 672
+        width: 89
+        height: 128
+      alignment: 9
+      pivot: {x: 0.46459925, y: 0.28462172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff488eb7bc3496c0800000000000000
+      internalID: -4137615397773357066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-pale_2
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 514
+        width: 94
+        height: 158
+      alignment: 9
+      pivot: {x: 0.4668368, y: 0.11558243}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc6c06bc981c035c0800000000000000
+      internalID: -4237674451788839219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-pale_3
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 323
+        width: 131
+        height: 174
+      alignment: 9
+      pivot: {x: 0.4893299, y: 0.25900024}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8c69607c16fe1f20800000000000000
+      internalID: 3395421771089407114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-pale_4
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 313
+        width: 174
+        height: 197
+      alignment: 9
+      pivot: {x: 0.4970156, y: 0.24171394}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1345af0f98dc8c9b0800000000000000
+      internalID: -5059568189013601231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-pale_5
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 1
+        width: 278
+        height: 320
+      alignment: 9
+      pivot: {x: 0.52829504, y: 0.19955997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34091352d891e62c0800000000000000
+      internalID: -4436580488908271549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-pale_6
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 8
+        width: 252
+        height: 298
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1550f269887354c0800000000000000
+      internalID: -4299960687742921441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      trees-pale_0: 7346702709702432316
+      trees-pale_1: -4137615397773357066
+      trees-pale_2: -4237674451788839219
+      trees-pale_3: 3395421771089407114
+      trees-pale_4: -5059568189013601231
+      trees-pale_5: -4436580488908271549
+      trees-pale_6: -4299960687742921441
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
