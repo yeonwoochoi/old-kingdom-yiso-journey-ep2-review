@@ -1,0 +1,28 @@
+name: Send To Telegram
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: send telegram message on push
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          format: markdown
+          message: |
+            🔥*GITHUB NOTIFICATION*🔥
+
+            🙋 Author: *${{ github.actor }}*
+
+            🏁 Status: 😚 *PUSHED on branch* ${{ env.branch_name }}
+
+            🌈 Commit Message: *${{ github.event.commits[0].message }}*
+
+            ❗️*PLEASE PULLING REPOSITORY FOR SYNC PROJECT*❗
