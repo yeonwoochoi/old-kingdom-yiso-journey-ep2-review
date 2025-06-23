@@ -1,0 +1,635 @@
+fileFormatVersion: 2
+guid: 427ad6ba6ca5b094f9fec7f4197c8c59
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3506220392993104105
+    second: Guanchung_deco 2_0
+  - first:
+      213: 2652725463683566367
+    second: Guanchung_deco 2_1
+  - first:
+      213: -7070901133984187444
+    second: Guanchung_deco 2_2
+  - first:
+      213: -3646303037996157118
+    second: Guanchung_deco 2_3
+  - first:
+      213: 7469531734277482616
+    second: Guanchung_deco 2_4
+  - first:
+      213: -3624708007944941244
+    second: Guanchung_deco 2_5
+  - first:
+      213: 1188482015539803401
+    second: Guanchung_deco 2_6
+  - first:
+      213: 4195595502996947405
+    second: Guanchung_deco 2_7
+  - first:
+      213: 7196260848625715812
+    second: Guanchung_deco 2_8
+  - first:
+      213: -8054504514122907742
+    second: Guanchung_deco 2_9
+  - first:
+      213: 6432519648255979127
+    second: Guanchung_deco 2_10
+  - first:
+      213: -6570849723634077096
+    second: Guanchung_deco 2_11
+  - first:
+      213: 6403560701593664718
+    second: Guanchung_deco 2_12
+  - first:
+      213: -2214370640817462766
+    second: Guanchung_deco 2_13
+  - first:
+      213: 1060666734293884180
+    second: Guanchung_deco 2_14
+  - first:
+      213: -134447570070829215
+    second: Guanchung_deco 2_15
+  - first:
+      213: -3439626994467209175
+    second: Guanchung_deco 2_16
+  - first:
+      213: -7738192791785156989
+    second: Guanchung_deco 2_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Guanchung_deco 2_0
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 111
+        width: 68
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e0a594eed898a030800000000000000
+      internalID: 3506220392993104105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guanchung_deco 2_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 205
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1b0e7521cf50d420800000000000000
+      internalID: 2652725463683566367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guanchung_deco 2_2
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 205
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccb37f2c1ec1fdd90800000000000000
+      internalID: -7070901133984187444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guanchung_deco 2_3
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 194
+        width: 98
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 247bfc4b4bab56dc0800000000000000
+      internalID: -3646303037996157118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guanchung_deco 2_4
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 173
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 878ed1c798b19a760800000000000000
+      internalID: 7469531734277482616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guanchung_deco 2_5
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 140
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4419de3754372bdc0800000000000000
+      internalID: -3624708007944941244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guanchung_deco 2_6
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 176
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 905b036a8165e7010800000000000000
+      internalID: 1188482015539803401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guanchung_deco 2_7
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 113
+        width: 45
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc10c5971efb93a30800000000000000
+      internalID: 4195595502996947405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guanchung_deco 2_8
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 115
+        width: 66
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46a03694d114ed360800000000000000
+      internalID: 7196260848625715812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guanchung_deco 2_9
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 110
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2af7ce9a1d6a83090800000000000000
+      internalID: -8054504514122907742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guanchung_deco 2_10
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 109
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77ea4050a86e44950800000000000000
+      internalID: 6432519648255979127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guanchung_deco 2_11
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 60
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 852315e7df6afc4a0800000000000000
+      internalID: -6570849723634077096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guanchung_deco 2_12
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 78
+        width: 66
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecc3424d7840ed850800000000000000
+      internalID: 6403560701593664718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guanchung_deco 2_13
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 57
+        width: 51
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 212650962a9f441e0800000000000000
+      internalID: -2214370640817462766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guanchung_deco 2_14
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 60
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41d19a276ce38be00800000000000000
+      internalID: 1060666734293884180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guanchung_deco 2_15
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 17
+        width: 19
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1678309b5a8522ef0800000000000000
+      internalID: -134447570070829215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guanchung_deco 2_16
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 28
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92000f2f87df340d0800000000000000
+      internalID: -3439626994467209175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guanchung_deco 2_17
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 28
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38e482297aa6c9490800000000000000
+      internalID: -7738192791785156989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Guanchung_deco 2_0: 3506220392993104105
+      Guanchung_deco 2_1: 2652725463683566367
+      Guanchung_deco 2_10: 6432519648255979127
+      Guanchung_deco 2_11: -6570849723634077096
+      Guanchung_deco 2_12: 6403560701593664718
+      Guanchung_deco 2_13: -2214370640817462766
+      Guanchung_deco 2_14: 1060666734293884180
+      Guanchung_deco 2_15: -134447570070829215
+      Guanchung_deco 2_16: -3439626994467209175
+      Guanchung_deco 2_17: -7738192791785156989
+      Guanchung_deco 2_2: -7070901133984187444
+      Guanchung_deco 2_3: -3646303037996157118
+      Guanchung_deco 2_4: 7469531734277482616
+      Guanchung_deco 2_5: -3624708007944941244
+      Guanchung_deco 2_6: 1188482015539803401
+      Guanchung_deco 2_7: 4195595502996947405
+      Guanchung_deco 2_8: 7196260848625715812
+      Guanchung_deco 2_9: -8054504514122907742
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,635 @@
+fileFormatVersion: 2
+guid: 9f1fa6b52daffa54989ec3bf14a76b48
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3817346595601417655
+    second: tent_interior_deco 1_0
+  - first:
+      213: 4539919370101155685
+    second: tent_interior_deco 1_1
+  - first:
+      213: 1977763600258601367
+    second: tent_interior_deco 1_2
+  - first:
+      213: 4605764254423347007
+    second: tent_interior_deco 1_3
+  - first:
+      213: -2482007403983460034
+    second: tent_interior_deco 1_4
+  - first:
+      213: -2553026548091075472
+    second: tent_interior_deco 1_5
+  - first:
+      213: -5507642833460636874
+    second: tent_interior_deco 1_6
+  - first:
+      213: 8287240628100057913
+    second: tent_interior_deco 1_7
+  - first:
+      213: 8266613321743435176
+    second: tent_interior_deco 1_8
+  - first:
+      213: -7162702305367666098
+    second: tent_interior_deco 1_9
+  - first:
+      213: 3084830341815741980
+    second: tent_interior_deco 1_10
+  - first:
+      213: 2615160350183534975
+    second: tent_interior_deco 1_11
+  - first:
+      213: -3545351322575152708
+    second: tent_interior_deco 1_12
+  - first:
+      213: -3968398041279790022
+    second: tent_interior_deco 1_13
+  - first:
+      213: 1923546380654053278
+    second: tent_interior_deco 1_14
+  - first:
+      213: 7011299464011217689
+    second: tent_interior_deco 1_15
+  - first:
+      213: -1729157292639895089
+    second: tent_interior_deco 1_16
+  - first:
+      213: 6201904637084574951
+    second: tent_interior_deco 1_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tent_interior_deco 1_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 219
+        width: 10
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b58e57e080f9f430800000000000000
+      internalID: 3817346595601417655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_interior_deco 1_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 222
+        width: 59
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5676bc31d98010f30800000000000000
+      internalID: 4539919370101155685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_interior_deco 1_2
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 233
+        width: 52
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7919c1b048d627b10800000000000000
+      internalID: 1977763600258601367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_interior_deco 1_3
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 218
+        width: 31
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3f6810ef26faef30800000000000000
+      internalID: 4605764254423347007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_interior_deco 1_4
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 129
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e392da39a632e8dd0800000000000000
+      internalID: -2482007403983460034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_interior_deco 1_5
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 131
+        width: 34
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 074c3ea81e3d19cd0800000000000000
+      internalID: -2553026548091075472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_interior_deco 1_6
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 138
+        width: 65
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6335ad1160ce093b0800000000000000
+      internalID: -5507642833460636874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_interior_deco 1_7
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 143
+        width: 34
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93bc61e8171320370800000000000000
+      internalID: 8287240628100057913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_interior_deco 1_8
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 169
+        width: 56
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a5870a8409e8b270800000000000000
+      internalID: 8266613321743435176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_interior_deco 1_9
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 159
+        width: 46
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4250b0f338f89c90800000000000000
+      internalID: -7162702305367666098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_interior_deco 1_10
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 132
+        width: 31
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1e264c0ad48fca20800000000000000
+      internalID: 3084830341815741980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_interior_deco 1_11
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 50
+        width: 50
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7130679b7aea4420800000000000000
+      internalID: 2615160350183534975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_interior_deco 1_12
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 73
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb952f591c16ccec0800000000000000
+      internalID: -3545351322575152708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_interior_deco 1_13
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 73
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a348926c10b6de8c0800000000000000
+      internalID: -3968398041279790022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_interior_deco 1_14
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 65
+        width: 34
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e978fd7ed3fc1ba10800000000000000
+      internalID: 1923546380654053278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_interior_deco 1_15
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 74
+        width: 51
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91b764e07b32d4160800000000000000
+      internalID: 7011299464011217689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_interior_deco 1_16
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 74
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc14c639a9cc008e0800000000000000
+      internalID: -1729157292639895089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_interior_deco 1_17
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 5
+        width: 101
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e426488867911650800000000000000
+      internalID: 6201904637084574951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      tent_interior_deco 1_0: 3817346595601417655
+      tent_interior_deco 1_1: 4539919370101155685
+      tent_interior_deco 1_10: 3084830341815741980
+      tent_interior_deco 1_11: 2615160350183534975
+      tent_interior_deco 1_12: -3545351322575152708
+      tent_interior_deco 1_13: -3968398041279790022
+      tent_interior_deco 1_14: 1923546380654053278
+      tent_interior_deco 1_15: 7011299464011217689
+      tent_interior_deco 1_16: -1729157292639895089
+      tent_interior_deco 1_17: 6201904637084574951
+      tent_interior_deco 1_2: 1977763600258601367
+      tent_interior_deco 1_3: 4605764254423347007
+      tent_interior_deco 1_4: -2482007403983460034
+      tent_interior_deco 1_5: -2553026548091075472
+      tent_interior_deco 1_6: -5507642833460636874
+      tent_interior_deco 1_7: 8287240628100057913
+      tent_interior_deco 1_8: 8266613321743435176
+      tent_interior_deco 1_9: -7162702305367666098
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
