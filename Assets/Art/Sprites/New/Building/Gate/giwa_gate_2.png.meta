@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: eda3781b8b841604d909dccaad0c5d9c
+guid: aa0fb1ea6819a4f41a85d9408e6cebb0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5734988289702177622
-    second: giwa_prison_0
+      213: -6582352970362342096
+    second: giwa_gate_2_0
+  - first:
+      213: -3978366148131452638
+    second: giwa_gate_2_1
+  - first:
+      213: 8092183463596077379
+    second: giwa_gate_2_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: giwa_prison_0
+      name: giwa_gate_2_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 35
-        width: 322
-        height: 239
+        x: 25
+        y: 235
+        width: 134
+        height: 132
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 65b29b6d675c69f40800000000000000
-      internalID: 5734988289702177622
+      spriteID: 035b05729d8c6a4a0800000000000000
+      internalID: -6582352970362342096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: giwa_gate_2_1
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 235
+        width: 134
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2298f2a01110ac8c0800000000000000
+      internalID: -3978366148131452638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: giwa_gate_2_2
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 13
+        width: 130
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3413fe46cf53d4070800000000000000
+      internalID: 8092183463596077379
       vertices: []
       indices: 
       edges: []
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      giwa_prison_0: 5734988289702177622
+      giwa_gate_2_0: -6582352970362342096
+      giwa_gate_2_1: -3978366148131452638
+      giwa_gate_2_2: 8092183463596077379
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

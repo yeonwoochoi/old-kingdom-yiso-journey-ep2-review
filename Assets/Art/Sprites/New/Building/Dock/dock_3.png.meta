@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: eda3781b8b841604d909dccaad0c5d9c
+guid: 61297c9b16fde18479b172cd4fb94493
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5734988289702177622
-    second: giwa_prison_0
+      213: -8235292184462857460
+    second: dock_3_0
+  - first:
+      213: 1785625594742727004
+    second: dock_3_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: giwa_prison_0
+      name: dock_3_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 35
-        width: 322
-        height: 239
+        x: 6
+        y: 98
+        width: 130
+        height: 89
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 65b29b6d675c69f40800000000000000
-      internalID: 5734988289702177622
+      spriteID: c0b6a83046d56bd80800000000000000
+      internalID: -8235292184462857460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dock_3_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 9
+        width: 72
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c516c7c8401d7c810800000000000000
+      internalID: 1785625594742727004
       vertices: []
       indices: 
       edges: []
@@ -148,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      giwa_prison_0: 5734988289702177622
+      dock_3_0: -8235292184462857460
+      dock_3_1: 1785625594742727004
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
