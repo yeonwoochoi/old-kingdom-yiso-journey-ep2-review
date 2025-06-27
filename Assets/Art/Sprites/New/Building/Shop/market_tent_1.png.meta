@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: eda3781b8b841604d909dccaad0c5d9c
+guid: c74740017a4c7a54db604a4f7c3fea7f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5734988289702177622
-    second: giwa_prison_0
+      213: -7738636406820860790
+    second: market_tent_1_0
+  - first:
+      213: 9206710714487242390
+    second: market_tent_1_1
+  - first:
+      213: -4493770423495898578
+    second: market_tent_1_2
+  - first:
+      213: 7859609185065834785
+    second: market_tent_1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: giwa_prison_0
+      name: market_tent_1_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 35
-        width: 322
-        height: 239
+        x: 25
+        y: 161
+        width: 154
+        height: 127
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 65b29b6d675c69f40800000000000000
-      internalID: 5734988289702177622
+      spriteID: a8c89856037da9490800000000000000
+      internalID: -7738636406820860790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: market_tent_1_1
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 161
+        width: 154
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69e7bc69d9ec4cf70800000000000000
+      internalID: 9206710714487242390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: market_tent_1_2
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 7
+        width: 154
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2ace5ddb9be2a1c0800000000000000
+      internalID: -4493770423495898578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: market_tent_1_3
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 11
+        width: 154
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1291f3d69e0f21d60800000000000000
+      internalID: 7859609185065834785
       vertices: []
       indices: 
       edges: []
@@ -148,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      giwa_prison_0: 5734988289702177622
+      market_tent_1_0: -7738636406820860790
+      market_tent_1_1: 9206710714487242390
+      market_tent_1_2: -4493770423495898578
+      market_tent_1_3: 7859609185065834785
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

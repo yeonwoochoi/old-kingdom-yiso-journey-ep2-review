@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: eda3781b8b841604d909dccaad0c5d9c
+guid: 48f181310fb9f984cb08fc20aad0a1f7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5734988289702177622
-    second: giwa_prison_0
+      213: 3159436320914128253
+    second: boat_2_0
+  - first:
+      213: 399746918238934940
+    second: boat_2_1
+  - first:
+      213: 1952682821991276264
+    second: boat_2_2
+  - first:
+      213: -2681337381751903484
+    second: boat_2_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: giwa_prison_0
+      name: boat_2_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 35
-        width: 322
-        height: 239
+        x: 3
+        y: 71
+        width: 125
+        height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 65b29b6d675c69f40800000000000000
-      internalID: 5734988289702177622
+      spriteID: d7dbd8e289298db20800000000000000
+      internalID: 3159436320914128253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boat_2_1
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 9
+        width: 129
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9750b544bf2c8500800000000000000
+      internalID: 399746918238934940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boat_2_2
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 69
+        width: 125
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ee1ccb4ea2591b10800000000000000
+      internalID: 1952682821991276264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boat_2_3
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 7
+        width: 129
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40ba3bd8bd9f9cad0800000000000000
+      internalID: -2681337381751903484
       vertices: []
       indices: 
       edges: []
@@ -148,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      giwa_prison_0: 5734988289702177622
+      boat_2_0: 3159436320914128253
+      boat_2_1: 399746918238934940
+      boat_2_2: 1952682821991276264
+      boat_2_3: -2681337381751903484
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: b75a5fa71f9e5aa43be0f605162c3f25
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3268357981946473076
+    second: garden_deco_1_0
+  - first:
+      213: 6515709464987831546
+    second: garden_deco_1_1
+  - first:
+      213: 6778151609235653335
+    second: garden_deco_1_2
+  - first:
+      213: 3287652982349694149
+    second: garden_deco_1_3
+  - first:
+      213: -596531995761589935
+    second: garden_deco_1_4
+  - first:
+      213: -5897114227691953818
+    second: garden_deco_1_5
+  - first:
+      213: 5373911525399933527
+    second: garden_deco_1_6
+  - first:
+      213: -6831303135036210713
+    second: garden_deco_1_7
+  - first:
+      213: 2567535788374473633
+    second: garden_deco_1_8
+  - first:
+      213: 7713865051435459090
+    second: garden_deco_1_9
+  - first:
+      213: -3501065734281305984
+    second: garden_deco_1_10
+  - first:
+      213: 8380505639552652597
+    second: garden_deco_1_11
+  - first:
+      213: 6421691108093067985
+    second: garden_deco_1_12
+  - first:
+      213: 5374432105036863554
+    second: garden_deco_1_13
+  - first:
+      213: 3795884697182709110
+    second: garden_deco_1_14
+  - first:
+      213: -7003398582824333524
+    second: garden_deco_1_15
+  - first:
+      213: -8718494211430786925
+    second: garden_deco_1_16
+  - first:
+      213: 7597342542212353620
+    second: garden_deco_1_17
+  - first:
+      213: -4157254139804278016
+    second: garden_deco_1_18
+  - first:
+      213: 992310312717635679
+    second: garden_deco_1_19
+  - first:
+      213: -3458607238952407109
+    second: garden_deco_1_20
+  - first:
+      213: 3040910547806588966
+    second: garden_deco_1_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: garden_deco_1_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 310
+        width: 73
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c85944f5bb574a2d0800000000000000
+      internalID: -3268357981946473076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garden_deco_1_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 307
+        width: 75
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afc00489c337c6a50800000000000000
+      internalID: 6515709464987831546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garden_deco_1_2
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 311
+        width: 75
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d2cb36f9f4d01e50800000000000000
+      internalID: 6778151609235653335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garden_deco_1_3
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 303
+        width: 64
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c405bdf7f610ad20800000000000000
+      internalID: 3287652982349694149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garden_deco_1_4
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 303
+        width: 98
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 151c9777f41b8b7f0800000000000000
+      internalID: -596531995761589935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garden_deco_1_5
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 246
+        width: 73
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 661e48aaadd392ea0800000000000000
+      internalID: -5897114227691953818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garden_deco_1_6
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 246
+        width: 71
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75237d56f08f39a40800000000000000
+      internalID: 5373911525399933527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garden_deco_1_7
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 245
+        width: 74
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e187231ef55231a0800000000000000
+      internalID: -6831303135036210713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garden_deco_1_8
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 176
+        width: 162
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1abb9263238b1a320800000000000000
+      internalID: 2567535788374473633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garden_deco_1_9
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 191
+        width: 75
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2126c1cf4672d0b60800000000000000
+      internalID: 7713865051435459090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garden_deco_1_10
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 190
+        width: 71
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 080eedc9347b96fc0800000000000000
+      internalID: -3501065734281305984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garden_deco_1_11
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 190
+        width: 71
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53591b33a798d4470800000000000000
+      internalID: 8380505639552652597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garden_deco_1_12
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 94
+        width: 33
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d20c2b0a0e6e1950800000000000000
+      internalID: 6421691108093067985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garden_deco_1_13
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 96
+        width: 43
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2485d2a4681d59a40800000000000000
+      internalID: 5374432105036863554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garden_deco_1_14
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 93
+        width: 38
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 675aae74501bda430800000000000000
+      internalID: 3795884697182709110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garden_deco_1_15
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 105
+        width: 53
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2f0842381eeece90800000000000000
+      internalID: -7003398582824333524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garden_deco_1_16
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 106
+        width: 88
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3985e5f05bfa10780800000000000000
+      internalID: -8718494211430786925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garden_deco_1_17
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 10
+        width: 39
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45ec7892ace2f6960800000000000000
+      internalID: 7597342542212353620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garden_deco_1_18
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 10
+        width: 39
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 003a1fbc2677e46c0800000000000000
+      internalID: -4157254139804278016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garden_deco_1_19
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 10
+        width: 39
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f50dd70d8f465cd00800000000000000
+      internalID: 992310312717635679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garden_deco_1_20
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 43
+        width: 63
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbfa5a86a0f8000d0800000000000000
+      internalID: -3458607238952407109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garden_deco_1_21
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 43
+        width: 88
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62010c3280c733a20800000000000000
+      internalID: 3040910547806588966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      garden_deco_1_0: -3268357981946473076
+      garden_deco_1_1: 6515709464987831546
+      garden_deco_1_10: -3501065734281305984
+      garden_deco_1_11: 8380505639552652597
+      garden_deco_1_12: 6421691108093067985
+      garden_deco_1_13: 5374432105036863554
+      garden_deco_1_14: 3795884697182709110
+      garden_deco_1_15: -7003398582824333524
+      garden_deco_1_16: -8718494211430786925
+      garden_deco_1_17: 7597342542212353620
+      garden_deco_1_18: -4157254139804278016
+      garden_deco_1_19: 992310312717635679
+      garden_deco_1_2: 6778151609235653335
+      garden_deco_1_20: -3458607238952407109
+      garden_deco_1_21: 3040910547806588966
+      garden_deco_1_3: 3287652982349694149
+      garden_deco_1_4: -596531995761589935
+      garden_deco_1_5: -5897114227691953818
+      garden_deco_1_6: 5373911525399933527
+      garden_deco_1_7: -6831303135036210713
+      garden_deco_1_8: 2567535788374473633
+      garden_deco_1_9: 7713865051435459090
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
