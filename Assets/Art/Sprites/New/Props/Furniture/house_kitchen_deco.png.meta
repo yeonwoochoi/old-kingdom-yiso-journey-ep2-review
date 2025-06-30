@@ -1,49 +1,43 @@
 fileFormatVersion: 2
-guid: 9cd6d1c26f84df14a9ff62c1c77f0592
+guid: 5f37ff06039d39f4fb3a7ede52f49fe2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4168860456643740342
-    second: jumak_inter1_0
+      213: 5852193552141053839
+    second: house_kitchen_deco_0
   - first:
-      213: -3654222473204129694
-    second: jumak_inter1_1
+      213: -3692510883391925368
+    second: house_kitchen_deco_1
   - first:
-      213: 8235199502052991806
-    second: jumak_inter1_2
+      213: -465973044598868699
+    second: house_kitchen_deco_2
   - first:
-      213: -3681586928053626782
-    second: jumak_inter1_3
+      213: 7972856977305694623
+    second: house_kitchen_deco_3
   - first:
-      213: -3915201516943689826
-    second: jumak_inter1_4
+      213: 8272486759178997613
+    second: house_kitchen_deco_4
   - first:
-      213: 7866372520692085742
-    second: jumak_inter1_5
+      213: -5071311856968418984
+    second: house_kitchen_deco_5
   - first:
-      213: 8717889485171786026
-    second: jumak_inter1_6
+      213: -5307595546423460190
+    second: house_kitchen_deco_6
   - first:
-      213: 7448687614892279345
-    second: jumak_inter1_7
+      213: -4354715106146284860
+    second: house_kitchen_deco_7
   - first:
-      213: 1596583226538638411
-    second: jumak_inter1_8
+      213: 2906881280729184848
+    second: house_kitchen_deco_8
   - first:
-      213: -5239023661103378721
-    second: jumak_inter1_9
+      213: 6562728121519527544
+    second: house_kitchen_deco_9
   - first:
-      213: -280651641845241800
-    second: jumak_inter1_10
+      213: -7607420834085443497
+    second: house_kitchen_deco_10
   - first:
-      213: 7091990202028973621
-    second: jumak_inter1_11
-  - first:
-      213: -3834612191624778784
-    second: jumak_inter1_12
-  - first:
-      213: 5420493878997004095
-    second: jumak_inter1_13
+      213: -4957688831714182987
+    second: house_kitchen_deco_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -76,7 +70,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -90,7 +84,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -111,45 +105,6 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Win64
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -191,187 +146,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jumak_inter1_0
+      name: house_kitchen_deco_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 337
-        width: 66
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a4db393908b3526c0800000000000000
-      internalID: -4168860456643740342
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumak_inter1_1
-      rect:
-        serializedVersion: 2
-        x: 111
-        y: 337
-        width: 98
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2602b628508994dc0800000000000000
-      internalID: -3654222473204129694
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumak_inter1_2
-      rect:
-        serializedVersion: 2
-        x: 239
-        y: 304
-        width: 99
-        height: 99
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e33a75ea05e494270800000000000000
-      internalID: 8235199502052991806
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumak_inter1_3
-      rect:
-        serializedVersion: 2
-        x: 367
-        y: 305
-        width: 98
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 26854afd13068ecc0800000000000000
-      internalID: -3681586928053626782
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumak_inter1_4
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 186
-        width: 161
-        height: 120
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e973086c6f86aa9c0800000000000000
-      internalID: -3915201516943689826
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumak_inter1_5
-      rect:
-        serializedVersion: 2
-        x: 191
-        y: 186
-        width: 34
-        height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ee3feb63128fa2d60800000000000000
-      internalID: 7866372520692085742
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumak_inter1_6
-      rect:
-        serializedVersion: 2
-        x: 239
-        y: 177
-        width: 98
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a2107c22c4a2cf870800000000000000
-      internalID: 8717889485171786026
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumak_inter1_7
-      rect:
-        serializedVersion: 2
-        x: 367
-        y: 177
-        width: 98
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1368180cbed0f5760800000000000000
-      internalID: 7448687614892279345
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumak_inter1_8
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 93
+        x: 27
+        y: 301
         width: 60
         height: 60
       alignment: 0
@@ -382,84 +161,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b4cbe284cf3382610800000000000000
-      internalID: 1596583226538638411
+      spriteID: f8fe238870b273150800000000000000
+      internalID: 5852193552141053839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jumak_inter1_9
+      name: house_kitchen_deco_1
       rect:
         serializedVersion: 2
-        x: 98
-        y: 109
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fde011edcbf3b47b0800000000000000
-      internalID: -5239023661103378721
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumak_inter1_10
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 114
-        width: 130
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8382f2691dcea1cf0800000000000000
-      internalID: -280651641845241800
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumak_inter1_11
-      rect:
-        serializedVersion: 2
-        x: 305
-        y: 103
-        width: 33
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 53edc76838fcb6260800000000000000
-      internalID: 7091990202028973621
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumak_inter1_12
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 54
+        x: 118
+        y: 322
         width: 60
         height: 28
       alignment: 0
@@ -470,20 +183,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0eba2d24788b8cac0800000000000000
-      internalID: -3834612191624778784
+      spriteID: 88319225ae091ccc0800000000000000
+      internalID: -3692510883391925368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jumak_inter1_13
+      name: house_kitchen_deco_2
       rect:
         serializedVersion: 2
-        x: 95
-        y: 17
-        width: 66
-        height: 66
+        x: 256
+        y: 315
+        width: 130
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -492,8 +205,206 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f3fabc4c676793b40800000000000000
-      internalID: 5420493878997004095
+      spriteID: 525f6c91cf78889f0800000000000000
+      internalID: -465973044598868699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: house_kitchen_deco_3
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 142
+        width: 161
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f91fc49cd2745ae60800000000000000
+      internalID: 7972856977305694623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: house_kitchen_deco_4
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 253
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6f8cf1c0e6cdc270800000000000000
+      internalID: 8272486759178997613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: house_kitchen_deco_5
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 257
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 859bb2c2cb41f99b0800000000000000
+      internalID: -5071311856968418984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: house_kitchen_deco_6
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 148
+        width: 129
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aefbfba8f1a756b0800000000000000
+      internalID: -5307595546423460190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: house_kitchen_deco_7
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 13
+        width: 98
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ca8f18eea1f093c0800000000000000
+      internalID: -4354715106146284860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: house_kitchen_deco_8
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 28
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05a781e9f11575820800000000000000
+      internalID: 2906881280729184848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: house_kitchen_deco_9
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 73
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87653a8a47e731b50800000000000000
+      internalID: 6562728121519527544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: house_kitchen_deco_10
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 53
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7586e67ae030d6690800000000000000
+      internalID: -7607420834085443497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: house_kitchen_deco_11
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 33
+        width: 33
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b831c64640c23bb0800000000000000
+      internalID: -4957688831714182987
       vertices: []
       indices: 
       edges: []
@@ -512,20 +423,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      jumak_inter1_0: -4168860456643740342
-      jumak_inter1_1: -3654222473204129694
-      jumak_inter1_10: -280651641845241800
-      jumak_inter1_11: 7091990202028973621
-      jumak_inter1_12: -3834612191624778784
-      jumak_inter1_13: 5420493878997004095
-      jumak_inter1_2: 8235199502052991806
-      jumak_inter1_3: -3681586928053626782
-      jumak_inter1_4: -3915201516943689826
-      jumak_inter1_5: 7866372520692085742
-      jumak_inter1_6: 8717889485171786026
-      jumak_inter1_7: 7448687614892279345
-      jumak_inter1_8: 1596583226538638411
-      jumak_inter1_9: -5239023661103378721
+      house_kitchen_deco_0: 5852193552141053839
+      house_kitchen_deco_1: -3692510883391925368
+      house_kitchen_deco_10: -7607420834085443497
+      house_kitchen_deco_11: -4957688831714182987
+      house_kitchen_deco_2: -465973044598868699
+      house_kitchen_deco_3: 7972856977305694623
+      house_kitchen_deco_4: 8272486759178997613
+      house_kitchen_deco_5: -5071311856968418984
+      house_kitchen_deco_6: -5307595546423460190
+      house_kitchen_deco_7: -4354715106146284860
+      house_kitchen_deco_8: 2906881280729184848
+      house_kitchen_deco_9: 6562728121519527544
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,28 +1,28 @@
 fileFormatVersion: 2
-guid: 24bbd079096641c47a681160ee80bc91
+guid: 39898e7133734c745bd36e0c36d19aa1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2577391739016881487
-    second: interior_deco_0
+      213: 4745067498225729381
+    second: Choga_house_wall_floor_0
   - first:
-      213: -2986698351002511000
-    second: interior_deco_1
+      213: 1249072497829814738
+    second: Choga_house_wall_floor_1
   - first:
-      213: 7496448297324002296
-    second: interior_deco_2
+      213: -7112071583956509134
+    second: Choga_house_wall_floor_2
   - first:
-      213: 2175536832837585316
-    second: interior_deco_3
+      213: 3480711323195877729
+    second: Choga_house_wall_floor_3
   - first:
-      213: 6878399085039673329
-    second: interior_deco_4
+      213: -1219558152425912258
+    second: Choga_house_wall_floor_4
   - first:
-      213: -26278852107800379
-    second: interior_deco_5
+      213: -7103336499263961179
+    second: Choga_house_wall_floor_5
   - first:
-      213: -6972745741727586928
-    second: interior_deco_6
+      213: -8061018821470917832
+    second: Choga_house_wall_floor_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -90,45 +90,6 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Win64
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -170,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: interior_deco_0
+      name: Choga_house_wall_floor_0
       rect:
         serializedVersion: 2
-        x: 38
-        y: 130
-        width: 64
-        height: 47
+        x: 31
+        y: 270
+        width: 66
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,19 +146,85 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ba5fd47ed34b3cd0800000000000000
-      internalID: -2577391739016881487
+      spriteID: 56ffefacfbdd9d140800000000000000
+      internalID: 4745067498225729381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: interior_deco_1
+      name: Choga_house_wall_floor_1
       rect:
         serializedVersion: 2
-        x: 142
-        y: 87
-        width: 34
+        x: 127
+        y: 270
+        width: 98
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d12bd3a1d8955110800000000000000
+      internalID: 1249072497829814738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Choga_house_wall_floor_2
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 271
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23e5f156398dc4d90800000000000000
+      internalID: -7112071583956509134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Choga_house_wall_floor_3
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 144
+        width: 99
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16925c0c188fd4030800000000000000
+      internalID: 3480711323195877729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Choga_house_wall_floor_4
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 144
+        width: 98
         height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -207,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 86910498cad1d86d0800000000000000
-      internalID: -2986698351002511000
+      spriteID: e38c8b56252431fe0800000000000000
+      internalID: -1219558152425912258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: interior_deco_2
+      name: Choga_house_wall_floor_5
       rect:
         serializedVersion: 2
-        x: 221
-        y: 141
-        width: 34
-        height: 21
+        x: 29
+        y: 17
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +256,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8fb341f220cb80860800000000000000
-      internalID: 7496448297324002296
+      spriteID: 5a70e49c611eb6d90800000000000000
+      internalID: -7103336499263961179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: interior_deco_3
+      name: Choga_house_wall_floor_6
       rect:
         serializedVersion: 2
-        x: 314
-        y: 143
-        width: 25
-        height: 27
+        x: 157
+        y: 17
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -251,74 +278,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4a90015193f013e10800000000000000
-      internalID: 2175536832837585316
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: interior_deco_4
-      rect:
-        serializedVersion: 2
-        x: 206
-        y: 73
-        width: 66
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1ff5927468bf47f50800000000000000
-      internalID: 6878399085039673329
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: interior_deco_5
-      rect:
-        serializedVersion: 2
-        x: 30
-        y: 8
-        width: 75
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5c07203f583a2aff0800000000000000
-      internalID: -26278852107800379
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: interior_deco_6
-      rect:
-        serializedVersion: 2
-        x: 142
-        y: 14
-        width: 57
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 095a53be0b4db3f90800000000000000
-      internalID: -6972745741727586928
+      spriteID: 83bec7a4712812090800000000000000
+      internalID: -8061018821470917832
       vertices: []
       indices: 
       edges: []
@@ -337,13 +298,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      interior_deco_0: -2577391739016881487
-      interior_deco_1: -2986698351002511000
-      interior_deco_2: 7496448297324002296
-      interior_deco_3: 2175536832837585316
-      interior_deco_4: 6878399085039673329
-      interior_deco_5: -26278852107800379
-      interior_deco_6: -6972745741727586928
+      Choga_house_wall_floor_0: 4745067498225729381
+      Choga_house_wall_floor_1: 1249072497829814738
+      Choga_house_wall_floor_2: -7112071583956509134
+      Choga_house_wall_floor_3: 3480711323195877729
+      Choga_house_wall_floor_4: -1219558152425912258
+      Choga_house_wall_floor_5: -7103336499263961179
+      Choga_house_wall_floor_6: -8061018821470917832
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

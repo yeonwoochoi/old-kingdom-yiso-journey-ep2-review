@@ -1,28 +1,19 @@
 fileFormatVersion: 2
-guid: 7f506f6442c2a0646ba29340c04ce350
+guid: 446c64c58e35a6a4b9e161b57e17ad0a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7909735968568532897
-    second: gamok_0
+      213: 5644461395409663811
+    second: tent_wooden_0
   - first:
-      213: -455519932113405210
-    second: gamok_1
+      213: -1202613334575840536
+    second: tent_wooden_1
   - first:
-      213: 4337881184237652965
-    second: gamok_2
+      213: 6664986554085521656
+    second: tent_wooden_2
   - first:
-      213: 5918488877960277118
-    second: gamok_3
-  - first:
-      213: -6778500116983467355
-    second: gamok_4
-  - first:
-      213: 7628720941566867327
-    second: gamok_5
-  - first:
-      213: -6151745250226775965
-    second: gamok_6
+      213: -1876007923649569253
+    second: tent_wooden_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -90,45 +81,6 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Win64
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -170,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gamok_0
+      name: tent_wooden_0
       rect:
         serializedVersion: 2
-        x: 30
-        y: 83
-        width: 100
-        height: 98
+        x: 47
+        y: 290
+        width: 130
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1af58a1b4f605cd60800000000000000
-      internalID: 7909735968568532897
+      spriteID: 3477cc5cbb7255e40800000000000000
+      internalID: 5644461395409663811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gamok_1
+      name: tent_wooden_1
       rect:
         serializedVersion: 2
-        x: 159
-        y: 83
-        width: 98
-        height: 98
+        x: 223
+        y: 281
+        width: 130
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6ea3542090bada9f0800000000000000
-      internalID: -455519932113405210
+      spriteID: 8e2857e3b857f4fe0800000000000000
+      internalID: -1202613334575840536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gamok_2
+      name: tent_wooden_2
       rect:
         serializedVersion: 2
-        x: 43
-        y: 15
-        width: 30
-        height: 28
+        x: 34
+        y: 28
+        width: 193
+        height: 214
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5eb065834ff333c30800000000000000
-      internalID: 4337881184237652965
+      spriteID: 8f8b50555f9ce7c50800000000000000
+      internalID: 6664986554085521656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gamok_3
+      name: tent_wooden_3
       rect:
         serializedVersion: 2
-        x: 62
-        y: 12
-        width: 14
-        height: 10
+        x: 270
+        y: 103
+        width: 140
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -251,74 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e7c2ce9e642b22250800000000000000
-      internalID: 5918488877960277118
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamok_4
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 12
-        width: 19
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5a2b141ce0eede1a0800000000000000
-      internalID: -6778500116983467355
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamok_5
-      rect:
-        serializedVersion: 2
-        x: 107
-        y: 13
-        width: 34
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f773da41749aed960800000000000000
-      internalID: 7628720941566867327
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamok_6
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 18
-        width: 26
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 368598bc94c90aaa0800000000000000
-      internalID: -6151745250226775965
+      spriteID: b1e9c03abb417f5e0800000000000000
+      internalID: -1876007923649569253
       vertices: []
       indices: 
       edges: []
@@ -337,13 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      gamok_0: 7909735968568532897
-      gamok_1: -455519932113405210
-      gamok_2: 4337881184237652965
-      gamok_3: 5918488877960277118
-      gamok_4: -6778500116983467355
-      gamok_5: 7628720941566867327
-      gamok_6: -6151745250226775965
+      tent_wooden_0: 5644461395409663811
+      tent_wooden_1: -1202613334575840536
+      tent_wooden_2: 6664986554085521656
+      tent_wooden_3: -1876007923649569253
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

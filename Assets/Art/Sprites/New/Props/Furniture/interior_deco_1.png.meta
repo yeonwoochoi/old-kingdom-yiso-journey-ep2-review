@@ -1,46 +1,58 @@
 fileFormatVersion: 2
-guid: 6e4bff03103d71145aaeedf68538b0a1
+guid: a861f24099b069d479b32e44132a408a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 897312634790054023
-    second: jumak_inter2_0
+      213: 1289161782375510734
+    second: interior_deco_1_0
   - first:
-      213: -8797814650129811715
-    second: jumak_inter2_1
+      213: -444919162454414835
+    second: interior_deco_1_1
   - first:
-      213: 8370325589790400643
-    second: jumak_inter2_2
+      213: -6723629099199283402
+    second: interior_deco_1_2
   - first:
-      213: 8810301155610084753
-    second: jumak_inter2_3
+      213: -311957102038414972
+    second: interior_deco_1_3
   - first:
-      213: 4234170973696304518
-    second: jumak_inter2_4
+      213: 3448749036020417563
+    second: interior_deco_1_4
   - first:
-      213: 1420705877658026750
-    second: jumak_inter2_5
+      213: -2937947840530168876
+    second: interior_deco_1_5
   - first:
-      213: -5471603679277948919
-    second: jumak_inter2_6
+      213: 2147465399074717220
+    second: interior_deco_1_6
   - first:
-      213: 6965126494076923261
-    second: jumak_inter2_7
+      213: 5289547626143696051
+    second: interior_deco_1_7
   - first:
-      213: 2666598419095281195
-    second: jumak_inter2_8
+      213: -8256778802831314699
+    second: interior_deco_1_8
   - first:
-      213: -2581130810272139254
-    second: jumak_inter2_9
+      213: 7769215558089784928
+    second: interior_deco_1_9
   - first:
-      213: 4426295967385184985
-    second: jumak_inter2_10
+      213: -7938859477700188238
+    second: interior_deco_1_10
   - first:
-      213: -4198829110696651652
-    second: jumak_inter2_11
+      213: -7640219229006198750
+    second: interior_deco_1_11
   - first:
-      213: 2246070716824847131
-    second: jumak_inter2_12
+      213: -1648760251537353773
+    second: interior_deco_1_12
+  - first:
+      213: 8120210493089236499
+    second: interior_deco_1_13
+  - first:
+      213: 7669175968559496275
+    second: interior_deco_1_14
+  - first:
+      213: -3380049704226020043
+    second: interior_deco_1_15
+  - first:
+      213: -7974521801466820975
+    second: interior_deco_1_16
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -73,7 +85,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -87,7 +99,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,45 +120,6 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Win64
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -188,56 +161,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jumak_inter2_0
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 221
-        width: 138
-        height: 73
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 78881215615e37c00800000000000000
-      internalID: 897312634790054023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumak_inter2_1
-      rect:
-        serializedVersion: 2
-        x: 175
-        y: 219
-        width: 64
-        height: 79
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: df6f8434032e7e580800000000000000
-      internalID: -8797814650129811715
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumak_inter2_2
+      name: interior_deco_1_0
       rect:
         serializedVersion: 2
         x: 15
-        y: 89
-        width: 98
+        y: 207
+        width: 34
         height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -247,20 +176,130 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 380a1d9a6ce592470800000000000000
-      internalID: 8370325589790400643
+      spriteID: ec270809fc504e110800000000000000
+      internalID: 1289161782375510734
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jumak_inter2_3
+      name: interior_deco_1_1
       rect:
         serializedVersion: 2
-        x: 146
-        y: 152
+        x: 79
+        y: 256
+        width: 66
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0ae328016453d9f0800000000000000
+      internalID: -444919162454414835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: interior_deco_1_2
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 242
+        width: 45
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63f3fb425fed0b2a0800000000000000
+      internalID: -6723629099199283402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: interior_deco_1_3
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 244
+        width: 66
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48907d32ba4bbabf0800000000000000
+      internalID: -311957102038414972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: interior_deco_1_4
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 206
+        width: 66
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b14c77bd9fa6cdf20800000000000000
+      internalID: 3448749036020417563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: interior_deco_1_5
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 142
+        width: 64
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d3c29441005a37d0800000000000000
+      internalID: -2937947840530168876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: interior_deco_1_6
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 158
         width: 34
-        height: 33
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,20 +308,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1954a58d83a744a70800000000000000
-      internalID: 8810301155610084753
+      spriteID: 42e7a4717645dcd10800000000000000
+      internalID: 2147465399074717220
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jumak_inter2_4
+      name: interior_deco_1_7
       rect:
         serializedVersion: 2
-        x: 208
-        y: 154
-        width: 33
-        height: 29
+        x: 193
+        y: 158
+        width: 25
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,20 +330,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6852075211cc2ca30800000000000000
-      internalID: 4234170973696304518
+      spriteID: 3b44ece6a8f386940800000000000000
+      internalID: 5289547626143696051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jumak_inter2_5
+      name: interior_deco_1_8
       rect:
         serializedVersion: 2
-        x: 147
-        y: 107
-        width: 33
-        height: 32
+        x: 248
+        y: 158
+        width: 13
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,20 +352,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ef2cd10f77c57b310800000000000000
-      internalID: 1420705877658026750
+      spriteID: 5f0b344dc670a6d80800000000000000
+      internalID: -8256778802831314699
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jumak_inter2_6
+      name: interior_deco_1_9
       rect:
         serializedVersion: 2
-        x: 216
-        y: 95
-        width: 50
-        height: 55
+        x: 68
+        y: 90
+        width: 20
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -335,85 +374,107 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 900eae88175f014b0800000000000000
-      internalID: -5471603679277948919
+      spriteID: 06e3163136cc1db60800000000000000
+      internalID: 7769215558089784928
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jumak_inter2_7
+      name: interior_deco_1_10
       rect:
         serializedVersion: 2
-        x: 15
-        y: 46
+        x: 100
+        y: 90
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b7efeded5183d190800000000000000
+      internalID: -7938859477700188238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: interior_deco_1_11
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 85
+        width: 51
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2280af0471d78f590800000000000000
+      internalID: -7640219229006198750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: interior_deco_1_12
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 91
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d31557694d6e19e0800000000000000
+      internalID: -1648760251537353773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: interior_deco_1_13
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 94
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 316cbf5bb68c0b070800000000000000
+      internalID: 8120210493089236499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: interior_deco_1_14
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 19
         width: 34
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d7ded1fb4a919a060800000000000000
-      internalID: 6965126494076923261
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumak_inter2_8
-      rect:
-        serializedVersion: 2
-        x: 63
-        y: 26
-        width: 50
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b2edac84229a10520800000000000000
-      internalID: 2666598419095281195
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumak_inter2_9
-      rect:
-        serializedVersion: 2
-        x: 148
-        y: 57
-        width: 34
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a08b9e6143bfd2cd0800000000000000
-      internalID: -2581130810272139254
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumak_inter2_10
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 33
-        width: 50
         height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -423,20 +484,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9daecb61bbc5d6d30800000000000000
-      internalID: 4426295967385184985
+      spriteID: 35c73fd09e26e6a60800000000000000
+      internalID: 7669175968559496275
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jumak_inter2_11
+      name: interior_deco_1_15
       rect:
         serializedVersion: 2
-        x: 15
-        y: 6
-        width: 33
-        height: 29
+        x: 125
+        y: 18
+        width: 32
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -445,20 +506,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c745b509b23cab5c0800000000000000
-      internalID: -4198829110696651652
+      spriteID: 535a178c3b6a711d0800000000000000
+      internalID: -3380049704226020043
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jumak_inter2_12
+      name: interior_deco_1_16
       rect:
         serializedVersion: 2
-        x: 149
-        y: 14
-        width: 34
-        height: 30
+        x: 174
+        y: 21
+        width: 27
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -467,8 +528,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b1380c0ba65ab2f10800000000000000
-      internalID: 2246070716824847131
+      spriteID: 19646f12caec45190800000000000000
+      internalID: -7974521801466820975
       vertices: []
       indices: 
       edges: []
@@ -487,19 +548,23 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      jumak_inter2_0: 897312634790054023
-      jumak_inter2_1: -8797814650129811715
-      jumak_inter2_10: 4426295967385184985
-      jumak_inter2_11: -4198829110696651652
-      jumak_inter2_12: 2246070716824847131
-      jumak_inter2_2: 8370325589790400643
-      jumak_inter2_3: 8810301155610084753
-      jumak_inter2_4: 4234170973696304518
-      jumak_inter2_5: 1420705877658026750
-      jumak_inter2_6: -5471603679277948919
-      jumak_inter2_7: 6965126494076923261
-      jumak_inter2_8: 2666598419095281195
-      jumak_inter2_9: -2581130810272139254
+      interior_deco_1_0: 1289161782375510734
+      interior_deco_1_1: -444919162454414835
+      interior_deco_1_10: -7938859477700188238
+      interior_deco_1_11: -7640219229006198750
+      interior_deco_1_12: -1648760251537353773
+      interior_deco_1_13: 8120210493089236499
+      interior_deco_1_14: 7669175968559496275
+      interior_deco_1_15: -3380049704226020043
+      interior_deco_1_16: -7974521801466820975
+      interior_deco_1_2: -6723629099199283402
+      interior_deco_1_3: -311957102038414972
+      interior_deco_1_4: 3448749036020417563
+      interior_deco_1_5: -2937947840530168876
+      interior_deco_1_6: 2147465399074717220
+      interior_deco_1_7: 5289547626143696051
+      interior_deco_1_8: -8256778802831314699
+      interior_deco_1_9: 7769215558089784928
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
