@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 5cd3ca4c65c17be46873a1664fc5e60d
+guid: 02b23bbc5fa606e499bc31af13f75a47
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5459420540550089609
-    second: Harbor_0
+      213: 1358164414343683571
+    second: bridge_3_0
+  - first:
+      213: 5074473947068097823
+    second: bridge_3_1
+  - first:
+      213: 3262462469590488464
+    second: bridge_3_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Harbor_0
+      name: bridge_3_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 22
-        width: 768
-        height: 266
+        x: 15
+        y: 18
+        width: 84
+        height: 178
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 98b85fe6e02c3cb40800000000000000
-      internalID: 5459420540550089609
+      spriteID: 3fd1887c65b29d210800000000000000
+      internalID: 1358164414343683571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge_3_1
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 80
+        width: 178
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f15e7fc4b272c6640800000000000000
+      internalID: 5074473947068097823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge_3_2
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 19
+        width: 66
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0951cf0b458964d20800000000000000
+      internalID: 3262462469590488464
       vertices: []
       indices: 
       edges: []
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Harbor_0: 5459420540550089609
+      bridge_3_0: 1358164414343683571
+      bridge_3_1: 5074473947068097823
+      bridge_3_2: 3262462469590488464
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

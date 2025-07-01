@@ -1,0 +1,1768 @@
+fileFormatVersion: 2
+guid: 0b11b98dffc473f4ca2933d390365a32
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 254723732392508142
+    second: ship_deco_0
+  - first:
+      213: 3670888244297550266
+    second: ship_deco_1
+  - first:
+      213: 4344872442692166666
+    second: ship_deco_2
+  - first:
+      213: 9127598699229052473
+    second: ship_deco_3
+  - first:
+      213: -5879962408228553490
+    second: ship_deco_4
+  - first:
+      213: 3938157484698833725
+    second: ship_deco_5
+  - first:
+      213: 1575408940282448840
+    second: ship_deco_6
+  - first:
+      213: 4693892847637390295
+    second: ship_deco_7
+  - first:
+      213: 7178699833817715871
+    second: ship_deco_8
+  - first:
+      213: -4932876654669996331
+    second: ship_deco_9
+  - first:
+      213: 5993049161340871743
+    second: ship_deco_10
+  - first:
+      213: -3273742969674803974
+    second: ship_deco_11
+  - first:
+      213: 5465555496226250890
+    second: ship_deco_12
+  - first:
+      213: 4434327240723362490
+    second: ship_deco_13
+  - first:
+      213: -5799203371810406602
+    second: ship_deco_14
+  - first:
+      213: -2590685867871592301
+    second: ship_deco_15
+  - first:
+      213: 1131346899969150826
+    second: ship_deco_16
+  - first:
+      213: 4435383294678654357
+    second: ship_deco_17
+  - first:
+      213: -4174961839240494998
+    second: ship_deco_18
+  - first:
+      213: 5450510681774269637
+    second: ship_deco_19
+  - first:
+      213: 3917681670382724728
+    second: ship_deco_20
+  - first:
+      213: -8299966302328788973
+    second: ship_deco_21
+  - first:
+      213: 1526580536750335455
+    second: ship_deco_22
+  - first:
+      213: -5515240151096016734
+    second: ship_deco_23
+  - first:
+      213: -3091741878187982305
+    second: ship_deco_24
+  - first:
+      213: -5301992857832602550
+    second: ship_deco_25
+  - first:
+      213: -5956510922799723958
+    second: ship_deco_26
+  - first:
+      213: 4285393297846052462
+    second: ship_deco_27
+  - first:
+      213: -5994692503113415192
+    second: ship_deco_28
+  - first:
+      213: -3806955716648578957
+    second: ship_deco_29
+  - first:
+      213: -4905509084842836459
+    second: ship_deco_30
+  - first:
+      213: 5415737535673492214
+    second: ship_deco_31
+  - first:
+      213: 8776284605046659053
+    second: ship_deco_32
+  - first:
+      213: -4617710202982183470
+    second: ship_deco_33
+  - first:
+      213: 5749597171821260692
+    second: ship_deco_34
+  - first:
+      213: 4563764004782667346
+    second: ship_deco_35
+  - first:
+      213: -8999496316156255724
+    second: ship_deco_36
+  - first:
+      213: -586072671061350083
+    second: ship_deco_37
+  - first:
+      213: -6433993618692643827
+    second: ship_deco_38
+  - first:
+      213: -8360681005772353354
+    second: ship_deco_39
+  - first:
+      213: 8580107187570904711
+    second: ship_deco_40
+  - first:
+      213: 9083089292053088578
+    second: ship_deco_41
+  - first:
+      213: -6985445247290657778
+    second: ship_deco_42
+  - first:
+      213: -7402131632250303366
+    second: ship_deco_43
+  - first:
+      213: -6036959053720392380
+    second: ship_deco_44
+  - first:
+      213: -8070984870547815616
+    second: ship_deco_45
+  - first:
+      213: -8574267275450548730
+    second: ship_deco_46
+  - first:
+      213: -5328141835310206689
+    second: ship_deco_47
+  - first:
+      213: -6885898797209031292
+    second: ship_deco_48
+  - first:
+      213: -1174963282733814449
+    second: ship_deco_49
+  - first:
+      213: -663364156865794115
+    second: ship_deco_50
+  - first:
+      213: -3997261015398551868
+    second: ship_deco_51
+  - first:
+      213: -1223920752603524653
+    second: ship_deco_52
+  - first:
+      213: -9218375281340859635
+    second: ship_deco_53
+  - first:
+      213: 239344892298396217
+    second: ship_deco_54
+  - first:
+      213: -4877842553521207588
+    second: ship_deco_55
+  - first:
+      213: 2873161375111707265
+    second: ship_deco_56
+  - first:
+      213: -1459300680691324556
+    second: ship_deco_57
+  - first:
+      213: 3891065033922275102
+    second: ship_deco_58
+  - first:
+      213: -484443857641646185
+    second: ship_deco_59
+  - first:
+      213: 4381552924735844573
+    second: ship_deco_60
+  - first:
+      213: 6215392192190375764
+    second: ship_deco_61
+  - first:
+      213: -8273982946224742873
+    second: ship_deco_62
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ship_deco_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 767
+        width: 53
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeafd1192e5f88300800000000000000
+      internalID: 254723732392508142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 679
+        width: 109
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab94383b86d91f230800000000000000
+      internalID: 3670888244297550266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_2
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 646
+        width: 67
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a04ec0d67761c4c30800000000000000
+      internalID: 4344872442692166666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_3
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 624
+        width: 72
+        height: 389
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93e7dd728aebbae70800000000000000
+      internalID: 9127598699229052473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_4
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 624
+        width: 72
+        height: 389
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eecf2e4d75d266ea0800000000000000
+      internalID: -5879962408228553490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_5
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 646
+        width: 67
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d331509fd5527a630800000000000000
+      internalID: 3938157484698833725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_6
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 686
+        width: 64
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cb8285951afcd510800000000000000
+      internalID: 1575408940282448840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_7
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 767
+        width: 53
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d36c25fcae042140800000000000000
+      internalID: 4693892847637390295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_8
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 991
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f945cd7e67ddf9360800000000000000
+      internalID: 7178699833817715871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_9
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 937
+        width: 18
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ded39d61d6ea8bb0800000000000000
+      internalID: -4932876654669996331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_10
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 939
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f34ec2fa5769b2350800000000000000
+      internalID: 5993049161340871743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_11
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 903
+        width: 8
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af4d9963d145192d0800000000000000
+      internalID: -3273742969674803974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_12
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 872
+        width: 47
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a80efbc14cd89db40800000000000000
+      internalID: 5465555496226250890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_13
+      rect:
+        serializedVersion: 2
+        x: 1519
+        y: 872
+        width: 20
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab27721a125e98d30800000000000000
+      internalID: 4434327240723362490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_14
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 93
+        width: 42
+        height: 831
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63f3ef24247158fa0800000000000000
+      internalID: -5799203371810406602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_15
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 906
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 390a3e0ede80c0cd0800000000000000
+      internalID: -2590685867871592301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_16
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 907
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6f866ae20a53bf00800000000000000
+      internalID: 1131346899969150826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_17
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 879
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59dd50a5b95ad8d30800000000000000
+      internalID: 4435383294678654357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_18
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 745
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a60424db35e8f06c0800000000000000
+      internalID: -4174961839240494998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_19
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 96
+        width: 42
+        height: 757
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c4a0a7469a14ab40800000000000000
+      internalID: 5450510681774269637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_20
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 760
+        width: 17
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 876a832f8b66e5630800000000000000
+      internalID: 3917681670382724728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_21
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 750
+        width: 9
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 318eaf58f9890dc80800000000000000
+      internalID: -8299966302328788973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_22
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 760
+        width: 17
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd56706f8e08f2510800000000000000
+      internalID: 1526580536750335455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_23
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 760
+        width: 17
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a043f6bd4ee573b0800000000000000
+      internalID: -5515240151096016734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_24
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 750
+        width: 9
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f12086d742de715d0800000000000000
+      internalID: -3091741878187982305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_25
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 760
+        width: 17
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a44ca3346998b66b0800000000000000
+      internalID: -5301992857832602550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_26
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 674
+        width: 28
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4ac9c9efd8365da0800000000000000
+      internalID: -5956510922799723958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_27
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 591
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6624f8df76c87b30800000000000000
+      internalID: 4285393297846052462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_28
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 591
+        width: 34
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e54a3efde29ecca0800000000000000
+      internalID: -5994692503113415192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_29
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 655
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 370d48122f9fa2bc0800000000000000
+      internalID: -3806955716648578957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_30
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 464
+        width: 47
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51ebd735a712cebb0800000000000000
+      internalID: -4905509084842836459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_31
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 422
+        width: 56
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f2619a4890982b40800000000000000
+      internalID: 5415737535673492214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_32
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 401
+        width: 58
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de7198b7950abc970800000000000000
+      internalID: 8776284605046659053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_33
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 374
+        width: 62
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ddcc8b39099aefb0800000000000000
+      internalID: -4617710202982183470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_34
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 613
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49f2ff34a2caacf40800000000000000
+      internalID: 5749597171821260692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_35
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 591
+        width: 34
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 256f8c7be2fb55f30800000000000000
+      internalID: 4563764004782667346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_36
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 551
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 412e11628cd5b1380800000000000000
+      internalID: -8999496316156255724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_37
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 487
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d39e2d4c20addd7f0800000000000000
+      internalID: -586072671061350083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_38
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 407
+        width: 61
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d04e1be74ecd5b6a0800000000000000
+      internalID: -6433993618692643827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_39
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 472
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b0559a0ce4e8fb80800000000000000
+      internalID: -8360681005772353354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_40
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 472
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78e80f9170aa21770800000000000000
+      internalID: 8580107187570904711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_41
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 503
+        width: 66
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2498afb369d9d0e70800000000000000
+      internalID: 9083089292053088578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_42
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 471
+        width: 66
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e04bc4dde86be0f90800000000000000
+      internalID: -6985445247290657778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_43
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 23
+        width: 82
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7cc907af78564990800000000000000
+      internalID: -7402131632250303366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_44
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 423
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44dea6fc9b9683ca0800000000000000
+      internalID: -6036959053720392380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_45
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 439
+        width: 58
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 043027ba50a1eff80800000000000000
+      internalID: -8070984870547815616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_46
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 439
+        width: 58
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60e73856755120980800000000000000
+      internalID: -8574267275450548730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_47
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 359
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f11ff610b33ae06b0800000000000000
+      internalID: -5328141835310206689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_48
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 290
+        width: 130
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48de019e68f5070a0800000000000000
+      internalID: -6885898797209031292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_49
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 261
+        width: 50
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4d268c9e11b1bfe0800000000000000
+      internalID: -1174963282733814449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_50
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 237
+        width: 130
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbfa94160d14bc6f0800000000000000
+      internalID: -663364156865794115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_51
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 21
+        width: 82
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cee6aee840e688c0800000000000000
+      internalID: -3997261015398551868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_52
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 263
+        width: 40
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d196d36f82c30fe0800000000000000
+      internalID: -1223920752603524653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_53
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 229
+        width: 56
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0bbf6dc580c11080800000000000000
+      internalID: -9218375281340859635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_54
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 197
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 932004459e2525300800000000000000
+      internalID: 239344892298396217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_55
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 127
+        width: 130
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd6851f9a0c6e4cb0800000000000000
+      internalID: -4877842553521207588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_56
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 165
+        width: 66
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18af7e94c058fd720800000000000000
+      internalID: 2873161375111707265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_57
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 133
+        width: 71
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47968ea33c58fbbe0800000000000000
+      internalID: -1459300680691324556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_58
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 101
+        width: 76
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1761e85807dff530800000000000000
+      internalID: 3891065033922275102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_59
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 6
+        width: 130
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79756afc0e8e649f0800000000000000
+      internalID: -484443857641646185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_60
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 37
+        width: 86
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd0347bab276ecc30800000000000000
+      internalID: 4381552924735844573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_61
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 0
+        width: 130
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4576e3ba442814650800000000000000
+      internalID: 6215392192190375764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_deco_62
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 4
+        width: 90
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72e52ac0958ec2d80800000000000000
+      internalID: -8273982946224742873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ship_deco_0: 254723732392508142
+      ship_deco_1: 3670888244297550266
+      ship_deco_10: 5993049161340871743
+      ship_deco_11: -3273742969674803974
+      ship_deco_12: 5465555496226250890
+      ship_deco_13: 4434327240723362490
+      ship_deco_14: -5799203371810406602
+      ship_deco_15: -2590685867871592301
+      ship_deco_16: 1131346899969150826
+      ship_deco_17: 4435383294678654357
+      ship_deco_18: -4174961839240494998
+      ship_deco_19: 5450510681774269637
+      ship_deco_2: 4344872442692166666
+      ship_deco_20: 3917681670382724728
+      ship_deco_21: -8299966302328788973
+      ship_deco_22: 1526580536750335455
+      ship_deco_23: -5515240151096016734
+      ship_deco_24: -3091741878187982305
+      ship_deco_25: -5301992857832602550
+      ship_deco_26: -5956510922799723958
+      ship_deco_27: 4285393297846052462
+      ship_deco_28: -5994692503113415192
+      ship_deco_29: -3806955716648578957
+      ship_deco_3: 9127598699229052473
+      ship_deco_30: -4905509084842836459
+      ship_deco_31: 5415737535673492214
+      ship_deco_32: 8776284605046659053
+      ship_deco_33: -4617710202982183470
+      ship_deco_34: 5749597171821260692
+      ship_deco_35: 4563764004782667346
+      ship_deco_36: -8999496316156255724
+      ship_deco_37: -586072671061350083
+      ship_deco_38: -6433993618692643827
+      ship_deco_39: -8360681005772353354
+      ship_deco_4: -5879962408228553490
+      ship_deco_40: 8580107187570904711
+      ship_deco_41: 9083089292053088578
+      ship_deco_42: -6985445247290657778
+      ship_deco_43: -7402131632250303366
+      ship_deco_44: -6036959053720392380
+      ship_deco_45: -8070984870547815616
+      ship_deco_46: -8574267275450548730
+      ship_deco_47: -5328141835310206689
+      ship_deco_48: -6885898797209031292
+      ship_deco_49: -1174963282733814449
+      ship_deco_5: 3938157484698833725
+      ship_deco_50: -663364156865794115
+      ship_deco_51: -3997261015398551868
+      ship_deco_52: -1223920752603524653
+      ship_deco_53: -9218375281340859635
+      ship_deco_54: 239344892298396217
+      ship_deco_55: -4877842553521207588
+      ship_deco_56: 2873161375111707265
+      ship_deco_57: -1459300680691324556
+      ship_deco_58: 3891065033922275102
+      ship_deco_59: -484443857641646185
+      ship_deco_6: 1575408940282448840
+      ship_deco_60: 4381552924735844573
+      ship_deco_61: 6215392192190375764
+      ship_deco_62: -8273982946224742873
+      ship_deco_7: 4693892847637390295
+      ship_deco_8: 7178699833817715871
+      ship_deco_9: -4932876654669996331
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

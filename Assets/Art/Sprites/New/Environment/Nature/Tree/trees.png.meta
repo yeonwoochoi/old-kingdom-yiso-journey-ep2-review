@@ -1,97 +1,91 @@
 fileFormatVersion: 2
-guid: 07a4b6803c3820d46ba6200846f48591
+guid: 7cb71af9a4e928141bf883506d6c940a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5310332890109271472
-    second: bedding_0
+      213: -1673732733077124514
+    second: trees_0
   - first:
-      213: 6837421136358493541
-    second: bedding_1
+      213: 3611188691014843535
+    second: trees_1
   - first:
-      213: -3313810216734177950
-    second: bedding_2
+      213: 2249915519335348110
+    second: trees_2
   - first:
-      213: 4387625156437796949
-    second: bedding_3
+      213: 5223556475179290604
+    second: trees_3
   - first:
-      213: 8646779616315711171
-    second: bedding_4
+      213: 384058854656272681
+    second: trees_4
   - first:
-      213: -3967854396313852508
-    second: bedding_5
+      213: 3818217323743452925
+    second: trees_5
   - first:
-      213: 6543732225179911024
-    second: bedding_6
+      213: -7523560045513598774
+    second: trees_6
   - first:
-      213: -8387533441345889972
-    second: bedding_7
+      213: -271311362049036883
+    second: trees_7
   - first:
-      213: 1991759141175467069
-    second: bedding_8
+      213: -497406288967409369
+    second: trees_8
   - first:
-      213: -7926798077769549567
-    second: bedding_9
+      213: 7915683653226457324
+    second: trees_9
   - first:
-      213: 8957972231893241382
-    second: bedding_10
+      213: -8841855405480785529
+    second: trees_10
   - first:
-      213: 8391360946771725500
-    second: bedding_11
+      213: 6531415816565926178
+    second: trees_11
   - first:
-      213: -913732293392622578
-    second: bedding_12
+      213: 2802346070031776116
+    second: trees_12
   - first:
-      213: 5505775823900399200
-    second: bedding_13
+      213: 3116032067696762471
+    second: trees_13
   - first:
-      213: -5584808933195859333
-    second: bedding_14
+      213: -8539622112099020976
+    second: trees_14
   - first:
-      213: 6294940539036857383
-    second: bedding_15
+      213: -1537803357559071896
+    second: trees_15
   - first:
-      213: 474313563778786438
-    second: bedding_16
+      213: -3876429424177951372
+    second: trees_16
   - first:
-      213: -3167612335209907890
-    second: bedding_17
+      213: 9046655360673312808
+    second: trees_17
   - first:
-      213: 813671516407043320
-    second: bedding_18
+      213: 1114657928566864944
+    second: trees_18
   - first:
-      213: 7324085324918639032
-    second: bedding_19
+      213: 381843284206519744
+    second: trees_19
   - first:
-      213: 6152505252563321753
-    second: bedding_20
+      213: 3027295232775142562
+    second: trees_20
   - first:
-      213: 8246534207054547186
-    second: bedding_21
+      213: 5487042185335195102
+    second: trees_21
   - first:
-      213: -5792785748775594444
-    second: bedding_22
+      213: 7588890171676177223
+    second: trees_22
   - first:
-      213: -6079484515791240815
-    second: bedding_23
+      213: -7100747956489266585
+    second: trees_23
   - first:
-      213: -4233337436449439307
-    second: bedding_24
+      213: 1574713697239743433
+    second: trees_24
   - first:
-      213: -8736956161922536741
-    second: bedding_25
+      213: 2276063022627186540
+    second: trees_25
   - first:
-      213: -5713318690033003959
-    second: bedding_26
+      213: 9170239918798356355
+    second: trees_26
   - first:
-      213: -7539652565553582196
-    second: bedding_27
-  - first:
-      213: -714819910085491218
-    second: bedding_28
-  - first:
-      213: 255380551983218467
-    second: bedding_29
+      213: 2767215598838526711
+    second: trees_27
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -200,13 +194,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bedding_0
+      name: trees_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 313
-        width: 47
-        height: 64
+        x: 10
+        y: 223
+        width: 137
+        height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +209,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 052a6fd2f58ed46b0800000000000000
-      internalID: -5310332890109271472
+      spriteID: e5a8ef372f4b5c8e0800000000000000
+      internalID: -1673732733077124514
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_1
+      name: trees_1
       rect:
         serializedVersion: 2
-        x: 90
-        y: 314
-        width: 47
-        height: 64
+        x: 140
+        y: 191
+        width: 41
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +231,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 56d456c1c4663ee50800000000000000
-      internalID: 6837421136358493541
+      spriteID: f8cf8d84bf48d1230800000000000000
+      internalID: 3611188691014843535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_2
+      name: trees_2
       rect:
         serializedVersion: 2
-        x: 152
-        y: 314
-        width: 47
-        height: 64
+        x: 162
+        y: 223
+        width: 119
+        height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,20 +253,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 265cf7a4a2bf202d0800000000000000
-      internalID: -3313810216734177950
+      spriteID: e873f988e3e493f10800000000000000
+      internalID: 2249915519335348110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_3
+      name: trees_3
       rect:
         serializedVersion: 2
-        x: 228
-        y: 310
-        width: 48
-        height: 67
+        x: 278
+        y: 223
+        width: 140
+        height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,20 +275,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 558ea0945d9f3ec30800000000000000
-      internalID: 4387625156437796949
+      spriteID: cefc04740fccd7840800000000000000
+      internalID: 5223556475179290604
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_4
+      name: trees_4
       rect:
         serializedVersion: 2
-        x: 294
-        y: 311
-        width: 48
-        height: 68
+        x: 428
+        y: 223
+        width: 137
+        height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,20 +297,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ce16999f388ff770800000000000000
-      internalID: 8646779616315711171
+      spriteID: 92961a45e73745500800000000000000
+      internalID: 384058854656272681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_5
+      name: trees_5
       rect:
         serializedVersion: 2
-        x: 361
-        y: 311
-        width: 48
-        height: 67
+        x: 556
+        y: 191
+        width: 41
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,20 +319,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4a5ad3bf2795fe8c0800000000000000
-      internalID: -3967854396313852508
+      spriteID: dfe98f81d680df430800000000000000
+      internalID: 3818217323743452925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_6
+      name: trees_6
       rect:
         serializedVersion: 2
-        x: 16
-        y: 239
-        width: 65
-        height: 46
+        x: 580
+        y: 223
+        width: 119
+        height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -347,20 +341,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0730023e9c100da50800000000000000
-      internalID: 6543732225179911024
+      spriteID: ac817d80002f69790800000000000000
+      internalID: -7523560045513598774
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_7
+      name: trees_7
       rect:
         serializedVersion: 2
-        x: 112
-        y: 239
-        width: 65
-        height: 46
+        x: 708
+        y: 223
+        width: 119
+        height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -369,20 +363,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c495ede26ce799b80800000000000000
-      internalID: -8387533441345889972
+      spriteID: dad2a81f0cb1c3cf0800000000000000
+      internalID: -271311362049036883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_8
+      name: trees_8
       rect:
         serializedVersion: 2
-        x: 196
-        y: 236
-        width: 75
-        height: 49
+        x: 11
+        y: 31
+        width: 137
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,20 +385,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d3c96e7d26624ab10800000000000000
-      internalID: 1991759141175467069
+      spriteID: 7216d059d9bd819f0800000000000000
+      internalID: -497406288967409369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_9
+      name: trees_9
       rect:
         serializedVersion: 2
-        x: 286
-        y: 235
-        width: 75
-        height: 49
+        x: 191
+        y: 191
+        width: 33
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -413,20 +407,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 109fb40752b5ef190800000000000000
-      internalID: -7926798077769549567
+      spriteID: ce8ede0f7582add60800000000000000
+      internalID: 7915683653226457324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_10
+      name: trees_10
       rect:
         serializedVersion: 2
-        x: 376
-        y: 235
-        width: 75
-        height: 49
+        x: 236
+        y: 191
+        width: 40
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -435,20 +429,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 62e4fc5984c115c70800000000000000
-      internalID: 8957972231893241382
+      spriteID: 78943f8da5b6b4580800000000000000
+      internalID: -8841855405480785529
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_11
+      name: trees_11
       rect:
         serializedVersion: 2
-        x: 15
-        y: 149
-        width: 64
-        height: 74
+        x: 291
+        y: 31
+        width: 119
+        height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -457,20 +451,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cbc0a6e525a147470800000000000000
-      internalID: 8391360946771725500
+      spriteID: 229a7ca841044aa50800000000000000
+      internalID: 6531415816565926178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_12
+      name: trees_12
       rect:
         serializedVersion: 2
-        x: 104
-        y: 149
-        width: 64
-        height: 74
+        x: 293
+        y: 191
+        width: 23
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -479,20 +473,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e0c97800255c153f0800000000000000
-      internalID: -913732293392622578
+      spriteID: 479b4f937eee3e620800000000000000
+      internalID: 2802346070031776116
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_13
+      name: trees_13
       rect:
         serializedVersion: 2
-        x: 184
-        y: 148
-        width: 64
-        height: 74
+        x: 428
+        y: 31
+        width: 137
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -501,20 +495,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0665484e0f1786c40800000000000000
-      internalID: 5505775823900399200
+      spriteID: 76e9ac7f7ae5e3b20800000000000000
+      internalID: 3116032067696762471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_14
+      name: trees_14
       rect:
         serializedVersion: 2
-        x: 270
-        y: 148
-        width: 64
-        height: 75
+        x: 607
+        y: 191
+        width: 33
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -523,20 +517,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b7abe666dd5ce72b0800000000000000
-      internalID: -5584808933195859333
+      spriteID: 05f44441fea2d7980800000000000000
+      internalID: -8539622112099020976
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_15
+      name: trees_15
       rect:
         serializedVersion: 2
-        x: 352
-        y: 149
-        width: 64
-        height: 74
+        x: 652
+        y: 191
+        width: 40
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -545,20 +539,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7247f77711f1c5750800000000000000
-      internalID: 6294940539036857383
+      spriteID: 86bd9427eff98aae0800000000000000
+      internalID: -1537803357559071896
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_16
+      name: trees_16
       rect:
         serializedVersion: 2
-        x: 433
-        y: 149
-        width: 64
-        height: 74
+        x: 708
+        y: 31
+        width: 119
+        height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -567,20 +561,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6842f295ca9159600800000000000000
-      internalID: 474313563778786438
+      spriteID: 47d40071af7243ac0800000000000000
+      internalID: -3876429424177951372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_17
+      name: trees_17
       rect:
         serializedVersion: 2
-        x: 510
-        y: 149
-        width: 64
-        height: 74
+        x: 709
+        y: 191
+        width: 23
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -589,20 +583,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e49faa52d516a04d0800000000000000
-      internalID: -3167612335209907890
+      spriteID: 820f05a8e1d2c8d70800000000000000
+      internalID: 9046655360673312808
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_18
+      name: trees_18
       rect:
         serializedVersion: 2
-        x: 15
-        y: 76
-        width: 76
-        height: 66
+        x: 140
+        y: 0
+        width: 41
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -611,20 +605,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8f49b43eeedba4b00800000000000000
-      internalID: 813671516407043320
+      spriteID: 03cfc46fa7f087f00800000000000000
+      internalID: 1114657928566864944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_19
+      name: trees_19
       rect:
         serializedVersion: 2
-        x: 101
-        y: 77
-        width: 76
-        height: 66
+        x: 163
+        y: 31
+        width: 119
+        height: 151
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -633,20 +627,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b94d606cc064a560800000000000000
-      internalID: 7324085324918639032
+      spriteID: 0c58ff2a1749c4500800000000000000
+      internalID: 381843284206519744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_20
+      name: trees_20
       rect:
         serializedVersion: 2
-        x: 183
-        y: 76
-        width: 76
-        height: 66
+        x: 556
+        y: 0
+        width: 41
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -655,20 +649,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 99303c90ee6126550800000000000000
-      internalID: 6152505252563321753
+      spriteID: 2acbbc399fc130a20800000000000000
+      internalID: 3027295232775142562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_21
+      name: trees_21
       rect:
         serializedVersion: 2
-        x: 287
-        y: 78
-        width: 76
-        height: 65
+        x: 580
+        y: 31
+        width: 119
+        height: 151
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -677,20 +671,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2f808975b23917270800000000000000
-      internalID: 8246534207054547186
+      spriteID: ed5cc74cbc3e52c40800000000000000
+      internalID: 5487042185335195102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_22
+      name: trees_22
       rect:
         serializedVersion: 2
-        x: 383
-        y: 78
-        width: 76
-        height: 65
+        x: 191
+        y: 0
+        width: 33
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -699,20 +693,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 43619409d04eb9fa0800000000000000
-      internalID: -5792785748775594444
+      spriteID: 743363a4767215960800000000000000
+      internalID: 7588890171676177223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_23
+      name: trees_23
       rect:
         serializedVersion: 2
-        x: 481
-        y: 78
-        width: 76
-        height: 65
+        x: 236
+        y: 0
+        width: 40
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -721,20 +715,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 19186ca1b0551aba0800000000000000
-      internalID: -6079484515791240815
+      spriteID: 76a50edda53157d90800000000000000
+      internalID: -7100747956489266585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_24
+      name: trees_24
       rect:
         serializedVersion: 2
-        x: 15
-        y: 4
-        width: 76
-        height: 66
+        x: 293
+        y: 0
+        width: 23
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -743,20 +737,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5b1811ed70a2045c0800000000000000
-      internalID: -4233337436449439307
+      spriteID: 9cbbae2b3c18ad510800000000000000
+      internalID: 1574713697239743433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_25
+      name: trees_25
       rect:
         serializedVersion: 2
-        x: 101
-        y: 3
-        width: 76
-        height: 66
+        x: 607
+        y: 0
+        width: 33
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -765,20 +759,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bda627e39a810c680800000000000000
-      internalID: -8736956161922536741
+      spriteID: c67681e8243369f10800000000000000
+      internalID: 2276063022627186540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_26
+      name: trees_26
       rect:
         serializedVersion: 2
-        x: 184
-        y: 4
-        width: 76
-        height: 66
+        x: 652
+        y: 0
+        width: 40
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -787,20 +781,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9429bfffbe636b0b0800000000000000
-      internalID: -5713318690033003959
+      spriteID: 38f3511ce9c334f70800000000000000
+      internalID: 9170239918798356355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_27
+      name: trees_27
       rect:
         serializedVersion: 2
-        x: 287
-        y: 8
-        width: 76
-        height: 66
+        x: 709
+        y: 0
+        width: 23
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -809,52 +803,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c8fe05c30f5cd5790800000000000000
-      internalID: -7539652565553582196
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bedding_28
-      rect:
-        serializedVersion: 2
-        x: 383
-        y: 6
-        width: 76
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ee54afc34137416f0800000000000000
-      internalID: -714819910085491218
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bedding_29
-      rect:
-        serializedVersion: 2
-        x: 479
-        y: 5
-        width: 76
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 32fb08b424b4b8300800000000000000
-      internalID: 255380551983218467
+      spriteID: 7f2b0b10def176620800000000000000
+      internalID: 2767215598838526711
       vertices: []
       indices: 
       edges: []
@@ -873,36 +823,34 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bedding_0: -5310332890109271472
-      bedding_1: 6837421136358493541
-      bedding_10: 8957972231893241382
-      bedding_11: 8391360946771725500
-      bedding_12: -913732293392622578
-      bedding_13: 5505775823900399200
-      bedding_14: -5584808933195859333
-      bedding_15: 6294940539036857383
-      bedding_16: 474313563778786438
-      bedding_17: -3167612335209907890
-      bedding_18: 813671516407043320
-      bedding_19: 7324085324918639032
-      bedding_2: -3313810216734177950
-      bedding_20: 6152505252563321753
-      bedding_21: 8246534207054547186
-      bedding_22: -5792785748775594444
-      bedding_23: -6079484515791240815
-      bedding_24: -4233337436449439307
-      bedding_25: -8736956161922536741
-      bedding_26: -5713318690033003959
-      bedding_27: -7539652565553582196
-      bedding_28: -714819910085491218
-      bedding_29: 255380551983218467
-      bedding_3: 4387625156437796949
-      bedding_4: 8646779616315711171
-      bedding_5: -3967854396313852508
-      bedding_6: 6543732225179911024
-      bedding_7: -8387533441345889972
-      bedding_8: 1991759141175467069
-      bedding_9: -7926798077769549567
+      trees_0: -1673732733077124514
+      trees_1: 3611188691014843535
+      trees_10: -8841855405480785529
+      trees_11: 6531415816565926178
+      trees_12: 2802346070031776116
+      trees_13: 3116032067696762471
+      trees_14: -8539622112099020976
+      trees_15: -1537803357559071896
+      trees_16: -3876429424177951372
+      trees_17: 9046655360673312808
+      trees_18: 1114657928566864944
+      trees_19: 381843284206519744
+      trees_2: 2249915519335348110
+      trees_20: 3027295232775142562
+      trees_21: 5487042185335195102
+      trees_22: 7588890171676177223
+      trees_23: -7100747956489266585
+      trees_24: 1574713697239743433
+      trees_25: 2276063022627186540
+      trees_26: 9170239918798356355
+      trees_27: 2767215598838526711
+      trees_3: 5223556475179290604
+      trees_4: 384058854656272681
+      trees_5: 3818217323743452925
+      trees_6: -7523560045513598774
+      trees_7: -271311362049036883
+      trees_8: -497406288967409369
+      trees_9: 7915683653226457324
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

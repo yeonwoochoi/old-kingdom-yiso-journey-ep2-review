@@ -1,97 +1,85 @@
 fileFormatVersion: 2
-guid: 07a4b6803c3820d46ba6200846f48591
+guid: e09c6d9331b54bd4183e4f297e18af67
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5310332890109271472
-    second: bedding_0
+      213: 5259833938379837588
+    second: harbor_object_0
   - first:
-      213: 6837421136358493541
-    second: bedding_1
+      213: 2737499494595058528
+    second: harbor_object_1
   - first:
-      213: -3313810216734177950
-    second: bedding_2
+      213: -5995016207152526282
+    second: harbor_object_2
   - first:
-      213: 4387625156437796949
-    second: bedding_3
+      213: -9105364787903517288
+    second: harbor_object_3
   - first:
-      213: 8646779616315711171
-    second: bedding_4
+      213: 7803007787307967999
+    second: harbor_object_4
   - first:
-      213: -3967854396313852508
-    second: bedding_5
+      213: -5452353597471919961
+    second: harbor_object_5
   - first:
-      213: 6543732225179911024
-    second: bedding_6
+      213: -2534542941377750417
+    second: harbor_object_6
   - first:
-      213: -8387533441345889972
-    second: bedding_7
+      213: -9026727001203581075
+    second: harbor_object_7
   - first:
-      213: 1991759141175467069
-    second: bedding_8
+      213: -8636604748622021142
+    second: harbor_object_8
   - first:
-      213: -7926798077769549567
-    second: bedding_9
+      213: 1180445674792519376
+    second: harbor_object_9
   - first:
-      213: 8957972231893241382
-    second: bedding_10
+      213: -5215436549727074632
+    second: harbor_object_10
   - first:
-      213: 8391360946771725500
-    second: bedding_11
+      213: -1291946524318966436
+    second: harbor_object_11
   - first:
-      213: -913732293392622578
-    second: bedding_12
+      213: -2919454441813258689
+    second: harbor_object_12
   - first:
-      213: 5505775823900399200
-    second: bedding_13
+      213: -7149023280799830876
+    second: harbor_object_13
   - first:
-      213: -5584808933195859333
-    second: bedding_14
+      213: 1006158523851598982
+    second: harbor_object_14
   - first:
-      213: 6294940539036857383
-    second: bedding_15
+      213: 3789866270362176433
+    second: harbor_object_15
   - first:
-      213: 474313563778786438
-    second: bedding_16
+      213: -896240066522041931
+    second: harbor_object_16
   - first:
-      213: -3167612335209907890
-    second: bedding_17
+      213: 6653753103171564331
+    second: harbor_object_17
   - first:
-      213: 813671516407043320
-    second: bedding_18
+      213: -2726225589710705093
+    second: harbor_object_18
   - first:
-      213: 7324085324918639032
-    second: bedding_19
+      213: 8465414242143522344
+    second: harbor_object_19
   - first:
-      213: 6152505252563321753
-    second: bedding_20
+      213: -8679023137497257752
+    second: harbor_object_20
   - first:
-      213: 8246534207054547186
-    second: bedding_21
+      213: -1104051917818806478
+    second: harbor_object_21
   - first:
-      213: -5792785748775594444
-    second: bedding_22
+      213: 2410854141562366784
+    second: harbor_object_22
   - first:
-      213: -6079484515791240815
-    second: bedding_23
+      213: 1235640828954012057
+    second: harbor_object_23
   - first:
-      213: -4233337436449439307
-    second: bedding_24
+      213: 5922048140419273420
+    second: harbor_object_24
   - first:
-      213: -8736956161922536741
-    second: bedding_25
-  - first:
-      213: -5713318690033003959
-    second: bedding_26
-  - first:
-      213: -7539652565553582196
-    second: bedding_27
-  - first:
-      213: -714819910085491218
-    second: bedding_28
-  - first:
-      213: 255380551983218467
-    second: bedding_29
+      213: 1022425913244417338
+    second: harbor_object_25
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -200,100 +188,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bedding_0
+      name: harbor_object_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 313
-        width: 47
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 052a6fd2f58ed46b0800000000000000
-      internalID: -5310332890109271472
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bedding_1
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 314
-        width: 47
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 56d456c1c4663ee50800000000000000
-      internalID: 6837421136358493541
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bedding_2
-      rect:
-        serializedVersion: 2
-        x: 152
-        y: 314
-        width: 47
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 265cf7a4a2bf202d0800000000000000
-      internalID: -3313810216734177950
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bedding_3
-      rect:
-        serializedVersion: 2
-        x: 228
-        y: 310
-        width: 48
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 558ea0945d9f3ec30800000000000000
-      internalID: 4387625156437796949
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bedding_4
-      rect:
-        serializedVersion: 2
-        x: 294
-        y: 311
-        width: 48
+        x: 27
+        y: 343
+        width: 68
         height: 68
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -303,20 +203,86 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ce16999f388ff770800000000000000
-      internalID: 8646779616315711171
+      spriteID: 4909ca2691faef840800000000000000
+      internalID: 5259833938379837588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_5
+      name: harbor_object_1
       rect:
         serializedVersion: 2
-        x: 361
-        y: 311
+        x: 118
+        y: 327
+        width: 51
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06b5624594d8df520800000000000000
+      internalID: 2737499494595058528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harbor_object_2
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 327
+        width: 51
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63cc6f5c58c6dcca0800000000000000
+      internalID: -5995016207152526282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harbor_object_3
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 335
+        width: 42
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89d29aab7fe33a180800000000000000
+      internalID: -9105364787903517288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harbor_object_4
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 324
         width: 48
-        height: 67
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,283 +291,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4a5ad3bf2795fe8c0800000000000000
-      internalID: -3967854396313852508
+      spriteID: ff5291e8d3ad94c60800000000000000
+      internalID: 7803007787307967999
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_6
+      name: harbor_object_5
       rect:
         serializedVersion: 2
-        x: 16
-        y: 239
-        width: 65
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0730023e9c100da50800000000000000
-      internalID: 6543732225179911024
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bedding_7
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 239
-        width: 65
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c495ede26ce799b80800000000000000
-      internalID: -8387533441345889972
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bedding_8
-      rect:
-        serializedVersion: 2
-        x: 196
-        y: 236
-        width: 75
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d3c96e7d26624ab10800000000000000
-      internalID: 1991759141175467069
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bedding_9
-      rect:
-        serializedVersion: 2
-        x: 286
-        y: 235
-        width: 75
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 109fb40752b5ef190800000000000000
-      internalID: -7926798077769549567
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bedding_10
-      rect:
-        serializedVersion: 2
-        x: 376
-        y: 235
-        width: 75
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 62e4fc5984c115c70800000000000000
-      internalID: 8957972231893241382
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bedding_11
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 149
-        width: 64
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cbc0a6e525a147470800000000000000
-      internalID: 8391360946771725500
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bedding_12
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 149
-        width: 64
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e0c97800255c153f0800000000000000
-      internalID: -913732293392622578
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bedding_13
-      rect:
-        serializedVersion: 2
-        x: 184
-        y: 148
-        width: 64
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0665484e0f1786c40800000000000000
-      internalID: 5505775823900399200
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bedding_14
-      rect:
-        serializedVersion: 2
-        x: 270
-        y: 148
-        width: 64
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b7abe666dd5ce72b0800000000000000
-      internalID: -5584808933195859333
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bedding_15
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 149
-        width: 64
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7247f77711f1c5750800000000000000
-      internalID: 6294940539036857383
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bedding_16
-      rect:
-        serializedVersion: 2
-        x: 433
-        y: 149
-        width: 64
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6842f295ca9159600800000000000000
-      internalID: 474313563778786438
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bedding_17
-      rect:
-        serializedVersion: 2
-        x: 510
-        y: 149
-        width: 64
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e49faa52d516a04d0800000000000000
-      internalID: -3167612335209907890
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bedding_18
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 76
-        width: 76
+        x: 395
+        y: 335
+        width: 42
         height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -611,20 +313,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8f49b43eeedba4b00800000000000000
-      internalID: 813671516407043320
+      spriteID: 7a0fcd87a495554b0800000000000000
+      internalID: -5452353597471919961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_19
+      name: harbor_object_6
       rect:
         serializedVersion: 2
-        x: 101
-        y: 77
-        width: 76
-        height: 66
+        x: 27
+        y: 247
+        width: 68
+        height: 68
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -633,20 +335,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b94d606cc064a560800000000000000
-      internalID: 7324085324918639032
+      spriteID: f6a94379f9e73dcd0800000000000000
+      internalID: -2534542941377750417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_20
+      name: harbor_object_7
       rect:
         serializedVersion: 2
-        x: 183
-        y: 76
-        width: 76
-        height: 66
+        x: 115
+        y: 243
+        width: 50
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -655,19 +357,129 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 99303c90ee6126550800000000000000
-      internalID: 6152505252563321753
+      spriteID: d6f55d83e9f9ab280800000000000000
+      internalID: -9026727001203581075
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_21
+      name: harbor_object_8
       rect:
         serializedVersion: 2
-        x: 287
-        y: 78
-        width: 76
+        x: 180
+        y: 243
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aedbee46dbd942880800000000000000
+      internalID: -8636604748622021142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harbor_object_9
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 253
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d687a24619c16010800000000000000
+      internalID: 1180445674792519376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harbor_object_10
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 256
+        width: 40
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b6cde0371c0f97b0800000000000000
+      internalID: -5215436549727074632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harbor_object_11
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 271
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5dda2d2b75121ee0800000000000000
+      internalID: -1291946524318966436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harbor_object_12
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 246
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3ec8c137a30c77d0800000000000000
+      internalID: -2919454441813258689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harbor_object_13
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 146
+        width: 48
         height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -677,19 +489,85 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2f808975b23917270800000000000000
-      internalID: 8246534207054547186
+      spriteID: 4acade8043199cc90800000000000000
+      internalID: -7149023280799830876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_22
+      name: harbor_object_14
       rect:
         serializedVersion: 2
-        x: 383
-        y: 78
-        width: 76
+        x: 82
+        y: 156
+        width: 130
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68ce7e9b8d796fd00800000000000000
+      internalID: 1006158523851598982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harbor_object_15
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 154
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bb0c271b4f489430800000000000000
+      internalID: 3789866270362176433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harbor_object_16
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 46
+        width: 40
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b13b71786aef83f0800000000000000
+      internalID: -896240066522041931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harbor_object_17
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 82
+        width: 48
         height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -699,19 +577,151 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 43619409d04eb9fa0800000000000000
-      internalID: -5792785748775594444
+      spriteID: b23b1b9b131e65c50800000000000000
+      internalID: 6653753103171564331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_23
+      name: harbor_object_18
       rect:
         serializedVersion: 2
-        x: 481
-        y: 78
-        width: 76
+        x: 93
+        y: 87
+        width: 41
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3ea6b335408a2ad0800000000000000
+      internalID: -2726225589710705093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harbor_object_19
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 87
+        width: 41
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e4f7bc6613b7570800000000000000
+      internalID: 8465414242143522344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harbor_object_20
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 117
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e8641c907aed8780800000000000000
+      internalID: -8679023137497257752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harbor_object_21
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 50
+        width: 40
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23f32d851ae9da0f0800000000000000
+      internalID: -1104051917818806478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harbor_object_22
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 32
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04baa198113157120800000000000000
+      internalID: 2410854141562366784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harbor_object_23
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 32
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 999e5c789c0e52110800000000000000
+      internalID: 1235640828954012057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harbor_object_24
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 32
+        width: 85
         height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -721,20 +731,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 19186ca1b0551aba0800000000000000
-      internalID: -6079484515791240815
+      spriteID: cc2147848675f2250800000000000000
+      internalID: 5922048140419273420
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedding_24
+      name: harbor_object_25
       rect:
         serializedVersion: 2
-        x: 15
-        y: 4
-        width: 76
-        height: 66
+        x: 210
+        y: 21
+        width: 21
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -743,118 +753,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5b1811ed70a2045c0800000000000000
-      internalID: -4233337436449439307
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bedding_25
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 3
-        width: 76
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bda627e39a810c680800000000000000
-      internalID: -8736956161922536741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bedding_26
-      rect:
-        serializedVersion: 2
-        x: 184
-        y: 4
-        width: 76
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9429bfffbe636b0b0800000000000000
-      internalID: -5713318690033003959
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bedding_27
-      rect:
-        serializedVersion: 2
-        x: 287
-        y: 8
-        width: 76
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c8fe05c30f5cd5790800000000000000
-      internalID: -7539652565553582196
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bedding_28
-      rect:
-        serializedVersion: 2
-        x: 383
-        y: 6
-        width: 76
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ee54afc34137416f0800000000000000
-      internalID: -714819910085491218
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bedding_29
-      rect:
-        serializedVersion: 2
-        x: 479
-        y: 5
-        width: 76
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 32fb08b424b4b8300800000000000000
-      internalID: 255380551983218467
+      spriteID: a3d761873f2603e00800000000000000
+      internalID: 1022425913244417338
       vertices: []
       indices: 
       edges: []
@@ -873,36 +773,32 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bedding_0: -5310332890109271472
-      bedding_1: 6837421136358493541
-      bedding_10: 8957972231893241382
-      bedding_11: 8391360946771725500
-      bedding_12: -913732293392622578
-      bedding_13: 5505775823900399200
-      bedding_14: -5584808933195859333
-      bedding_15: 6294940539036857383
-      bedding_16: 474313563778786438
-      bedding_17: -3167612335209907890
-      bedding_18: 813671516407043320
-      bedding_19: 7324085324918639032
-      bedding_2: -3313810216734177950
-      bedding_20: 6152505252563321753
-      bedding_21: 8246534207054547186
-      bedding_22: -5792785748775594444
-      bedding_23: -6079484515791240815
-      bedding_24: -4233337436449439307
-      bedding_25: -8736956161922536741
-      bedding_26: -5713318690033003959
-      bedding_27: -7539652565553582196
-      bedding_28: -714819910085491218
-      bedding_29: 255380551983218467
-      bedding_3: 4387625156437796949
-      bedding_4: 8646779616315711171
-      bedding_5: -3967854396313852508
-      bedding_6: 6543732225179911024
-      bedding_7: -8387533441345889972
-      bedding_8: 1991759141175467069
-      bedding_9: -7926798077769549567
+      harbor_object_0: 5259833938379837588
+      harbor_object_1: 2737499494595058528
+      harbor_object_10: -5215436549727074632
+      harbor_object_11: -1291946524318966436
+      harbor_object_12: -2919454441813258689
+      harbor_object_13: -7149023280799830876
+      harbor_object_14: 1006158523851598982
+      harbor_object_15: 3789866270362176433
+      harbor_object_16: -896240066522041931
+      harbor_object_17: 6653753103171564331
+      harbor_object_18: -2726225589710705093
+      harbor_object_19: 8465414242143522344
+      harbor_object_2: -5995016207152526282
+      harbor_object_20: -8679023137497257752
+      harbor_object_21: -1104051917818806478
+      harbor_object_22: 2410854141562366784
+      harbor_object_23: 1235640828954012057
+      harbor_object_24: 5922048140419273420
+      harbor_object_25: 1022425913244417338
+      harbor_object_3: -9105364787903517288
+      harbor_object_4: 7803007787307967999
+      harbor_object_5: -5452353597471919961
+      harbor_object_6: -2534542941377750417
+      harbor_object_7: -9026727001203581075
+      harbor_object_8: -8636604748622021142
+      harbor_object_9: 1180445674792519376
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

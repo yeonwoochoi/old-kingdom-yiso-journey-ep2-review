@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 5cd3ca4c65c17be46873a1664fc5e60d
+guid: 5a9425b9e379a534b995b16b78acc84a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5459420540550089609
-    second: Harbor_0
+      213: 2196373436120106360
+    second: sign_unknown_0
+  - first:
+      213: -8837678545660640133
+    second: sign_unknown_1
+  - first:
+      213: -4491551162206391244
+    second: sign_unknown_2
+  - first:
+      213: 2289138328483345207
+    second: sign_unknown_3
+  - first:
+      213: -1339911857165972252
+    second: sign_unknown_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Harbor_0
+      name: sign_unknown_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 22
-        width: 768
-        height: 266
+        x: 4
+        y: 15
+        width: 14
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +140,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 98b85fe6e02c3cb40800000000000000
-      internalID: 5459420540550089609
+      spriteID: 8750b06d0061b7e10800000000000000
+      internalID: 2196373436120106360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sign_unknown_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 15
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b748ececf224a5580800000000000000
+      internalID: -8837678545660640133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sign_unknown_2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 15
+        width: 14
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 434f136e30ecaa1c0800000000000000
+      internalID: -4491551162206391244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sign_unknown_3
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 15
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7333bfe6e27a4cf10800000000000000
+      internalID: 2289138328483345207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sign_unknown_4
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 15
+        width: 14
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ecc94bd34da76de0800000000000000
+      internalID: -1339911857165972252
       vertices: []
       indices: 
       edges: []
@@ -148,7 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Harbor_0: 5459420540550089609
+      sign_unknown_0: 2196373436120106360
+      sign_unknown_1: -8837678545660640133
+      sign_unknown_2: -4491551162206391244
+      sign_unknown_3: 2289138328483345207
+      sign_unknown_4: -1339911857165972252
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
