@@ -1,40 +1,52 @@
 fileFormatVersion: 2
-guid: bf9d8eced65b7194c9c697525b141554
+guid: 9c72f69d75de5d043aa351d0d9b1e438
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2115971937997835783
-    second: LPC_cliffs_grass (1)_0
+      213: 1594679404908565448
+    second: mountain_3_0
   - first:
-      213: -6564160203528758467
-    second: LPC_cliffs_grass (1)_1
+      213: -7067828259262960965
+    second: mountain_3_1
   - first:
-      213: -6078440325584022560
-    second: LPC_cliffs_grass (1)_2
+      213: -1339393705112730571
+    second: mountain_3_2
   - first:
-      213: -6469549867513315486
-    second: LPC_cliffs_grass (1)_3
+      213: -1234327501237590553
+    second: mountain_3_3
   - first:
-      213: -4524374594537997696
-    second: LPC_cliffs_grass (1)_4
+      213: -1218430689138927071
+    second: mountain_3_4
   - first:
-      213: 3001548439329498459
-    second: LPC_cliffs_grass (1)_5
+      213: 3387895747524802142
+    second: mountain_3_5
   - first:
-      213: 6874616371331574048
-    second: LPC_cliffs_grass (1)_6
+      213: -199831059938145690
+    second: mountain_3_6
   - first:
-      213: -2765298070972558673
-    second: LPC_cliffs_grass (1)_7
+      213: -4244730841822531657
+    second: mountain_3_7
   - first:
-      213: 7104072788919239867
-    second: LPC_cliffs_grass (1)_8
+      213: -2451662524396578561
+    second: mountain_3_8
   - first:
-      213: 4281922018341419112
-    second: LPC_cliffs_grass (1)_9
+      213: -7264454592156825357
+    second: mountain_3_9
   - first:
-      213: 8225687745597079586
-    second: LPC_cliffs_grass (1)_10
+      213: -5888567965724877645
+    second: mountain_3_10
+  - first:
+      213: 4929772934655303594
+    second: mountain_3_11
+  - first:
+      213: 2706113928724449700
+    second: mountain_3_12
+  - first:
+      213: 2208202303522892327
+    second: mountain_3_13
+  - first:
+      213: -4563362434798320204
+    second: mountain_3_14
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -67,7 +79,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -81,7 +93,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,45 +114,6 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Win64
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -182,12 +155,166 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LPC_cliffs_grass (1)_0
+      name: mountain_3_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 147
-        width: 67
+        x: 25
+        y: 1463
+        width: 160
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c3d4344870712610800000000000000
+      internalID: 1594679404908565448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountain_3_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1465
+        width: 226
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbae92925a70aed90800000000000000
+      internalID: -7067828259262960965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountain_3_2
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 1431
+        width: 224
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5348c588584896de0800000000000000
+      internalID: -1339393705112730571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountain_3_3
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 1407
+        width: 34
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e5ec386da9cedee0800000000000000
+      internalID: -1234327501237590553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountain_3_4
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1274
+        width: 193
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12a90766eb3471fe0800000000000000
+      internalID: -1218430689138927071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountain_3_5
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 1503
+        width: 34
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e56b5478b39340f20800000000000000
+      internalID: 3387895747524802142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountain_3_6
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1402
+        width: 193
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66a0c41b5be0a3df0800000000000000
+      internalID: -199831059938145690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountain_3_7
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1402
+        width: 98
         height: 127
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -197,196 +324,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9f1b1f8bbbe82a2e0800000000000000
-      internalID: -2115971937997835783
+      spriteID: 7bfe506f9cfa715c0800000000000000
+      internalID: -4244730841822531657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LPC_cliffs_grass (1)_1
+      name: mountain_3_8
       rect:
         serializedVersion: 2
-        x: 95
-        y: 159
-        width: 66
-        height: 129
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d3b99e3c21b67e4a0800000000000000
-      internalID: -6564160203528758467
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LPC_cliffs_grass (1)_2
-      rect:
-        serializedVersion: 2
-        x: 170
-        y: 147
-        width: 77
-        height: 132
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0e397259aba05aba0800000000000000
-      internalID: -6078440325584022560
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LPC_cliffs_grass (1)_3
-      rect:
-        serializedVersion: 2
-        x: 255
-        y: 159
-        width: 88
-        height: 129
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 26f71323caa8736a0800000000000000
-      internalID: -6469549867513315486
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LPC_cliffs_grass (1)_4
-      rect:
-        serializedVersion: 2
-        x: 362
-        y: 180
-        width: 22
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 08ab2c507413631c0800000000000000
-      internalID: -4524374594537997696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LPC_cliffs_grass (1)_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 18
-        width: 281
-        height: 133
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b55ec561764a7a920800000000000000
-      internalID: 3001548439329498459
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LPC_cliffs_grass (1)_6
-      rect:
-        serializedVersion: 2
-        x: 290
-        y: 70
-        width: 28
-        height: 85
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 029ad4c9a2b876f50800000000000000
-      internalID: 6874616371331574048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LPC_cliffs_grass (1)_7
-      rect:
-        serializedVersion: 2
-        x: 327
-        y: 70
-        width: 50
-        height: 85
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fa29b9d3e00bf99d0800000000000000
-      internalID: -2765298070972558673
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LPC_cliffs_grass (1)_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 33
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bb4cc02009cb69260800000000000000
-      internalID: 7104072788919239867
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LPC_cliffs_grass (1)_9
-      rect:
-        serializedVersion: 2
-        x: 31
-        y: 0
+        x: 888
+        y: 1439
         width: 34
-        height: 33
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -395,20 +346,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 868f92b93617c6b30800000000000000
-      internalID: 4281922018341419112
+      spriteID: ff8543c6ce1f9fdd0800000000000000
+      internalID: -2451662524396578561
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LPC_cliffs_grass (1)_10
+      name: mountain_3_9
       rect:
         serializedVersion: 2
-        x: 63
-        y: 0
-        width: 34
-        height: 33
+        x: 24
+        y: 1033
+        width: 386
+        height: 368
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -417,8 +368,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 220099d4c63872270800000000000000
-      internalID: 8225687745597079586
+      spriteID: 3f8898389097f2b90800000000000000
+      internalID: -7264454592156825357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountain_3_10
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 1208
+        width: 186
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bc593752aa974ea0800000000000000
+      internalID: -5888567965724877645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountain_3_11
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 1311
+        width: 34
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aafd6717d521a6440800000000000000
+      internalID: 4929772934655303594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountain_3_12
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 1274
+        width: 98
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a98b53d74c0e8520800000000000000
+      internalID: 2706113928724449700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountain_3_13
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1037
+        width: 162
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72a6ea5ab4c15ae10800000000000000
+      internalID: 2208202303522892327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountain_3_14
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 158
+        width: 1410
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b50c741b0eaba0c0800000000000000
+      internalID: -4563362434798320204
       vertices: []
       indices: 
       edges: []
@@ -437,17 +498,21 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LPC_cliffs_grass (1)_0: -2115971937997835783
-      LPC_cliffs_grass (1)_1: -6564160203528758467
-      LPC_cliffs_grass (1)_10: 8225687745597079586
-      LPC_cliffs_grass (1)_2: -6078440325584022560
-      LPC_cliffs_grass (1)_3: -6469549867513315486
-      LPC_cliffs_grass (1)_4: -4524374594537997696
-      LPC_cliffs_grass (1)_5: 3001548439329498459
-      LPC_cliffs_grass (1)_6: 6874616371331574048
-      LPC_cliffs_grass (1)_7: -2765298070972558673
-      LPC_cliffs_grass (1)_8: 7104072788919239867
-      LPC_cliffs_grass (1)_9: 4281922018341419112
+      mountain_3_0: 1594679404908565448
+      mountain_3_1: -7067828259262960965
+      mountain_3_10: -5888567965724877645
+      mountain_3_11: 4929772934655303594
+      mountain_3_12: 2706113928724449700
+      mountain_3_13: 2208202303522892327
+      mountain_3_14: -4563362434798320204
+      mountain_3_2: -1339393705112730571
+      mountain_3_3: -1234327501237590553
+      mountain_3_4: -1218430689138927071
+      mountain_3_5: 3387895747524802142
+      mountain_3_6: -199831059938145690
+      mountain_3_7: -4244730841822531657
+      mountain_3_8: -2451662524396578561
+      mountain_3_9: -7264454592156825357
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

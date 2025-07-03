@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 061ccd7d217326d4fba84d0ec59eadb4
+guid: a4cd9c08912e9dd4298722ffcf0d8c93
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2955286255927101427
-    second: Well_0
+      213: 9015613018204230982
+    second: wells_0
+  - first:
+      213: 3440803131028774214
+    second: wells_1
+  - first:
+      213: -827622348509353570
+    second: wells_2
+  - first:
+      213: -8419614249362058348
+    second: wells_3
+  - first:
+      213: -5041624111953920556
+    second: wells_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,45 +84,6 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Win64
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -152,11 +125,77 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Well_0
+      name: wells_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 29
+        x: 29
+        y: 126
+        width: 66
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6455376f544ed1d70800000000000000
+      internalID: 9015613018204230982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wells_1
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 127
+        width: 74
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64d950fa73030cf20800000000000000
+      internalID: 3440803131028774214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wells_2
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 119
+        width: 77
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e99ece4ebd1b384f0800000000000000
+      internalID: -827622348509353570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wells_3
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 23
         width: 103
         height: 79
       alignment: 0
@@ -167,8 +206,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3f701262139430920800000000000000
-      internalID: 2955286255927101427
+      spriteID: 49315f00375872b80800000000000000
+      internalID: -8419614249362058348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wells_4
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 22
+        width: 89
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dd31f3f49d880ab0800000000000000
+      internalID: -5041624111953920556
       vertices: []
       indices: 
       edges: []
@@ -187,7 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Well_0: 2955286255927101427
+      wells_0: 9015613018204230982
+      wells_1: 3440803131028774214
+      wells_2: -827622348509353570
+      wells_3: -8419614249362058348
+      wells_4: -5041624111953920556
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
