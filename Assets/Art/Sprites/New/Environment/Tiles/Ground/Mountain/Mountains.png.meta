@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 0295400b5caf0f84b8f026cc7c1e35d4
+guid: 8a78eb39ebb58544f9be6c67c2e7c2a8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5823523800082370726
-    second: guanchung_bottom_0
+      213: -8273445311213168830
+    second: Mountains_0
   - first:
-      213: -3838835359568985873
-    second: guanchung_bottom_1
+      213: -6412839584301119111
+    second: Mountains_1
   - first:
-      213: -1790312760965210206
-    second: guanchung_bottom_2
+      213: -2356222452529995996
+    second: Mountains_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -78,45 +78,6 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Win64
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -158,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: guanchung_bottom_0
+      name: Mountains_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 47
-        width: 99
-        height: 140
+        x: 0
+        y: 0
+        width: 225
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6a051f4ba0051d050800000000000000
-      internalID: 5823523800082370726
+      spriteID: 2479484f251de2d80800000000000000
+      internalID: -8273445311213168830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guanchung_bottom_1
+      name: Mountains_1
       rect:
         serializedVersion: 2
-        x: 73
-        y: 175
-        width: 18
-        height: 22
+        x: 255
+        y: 0
+        width: 226
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fe08ea95497b9bac0800000000000000
-      internalID: -3838835359568985873
+      spriteID: 9790b20ff540107a0800000000000000
+      internalID: -6412839584301119111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guanchung_bottom_2
+      name: Mountains_2
       rect:
         serializedVersion: 2
-        x: 146
-        y: 25
-        width: 98
-        height: 164
+        x: 511
+        y: 0
+        width: 226
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,8 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2afd1d587088727e0800000000000000
-      internalID: -1790312760965210206
+      spriteID: 42f5629c9240d4fd0800000000000000
+      internalID: -2356222452529995996
       vertices: []
       indices: 
       edges: []
@@ -237,9 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      guanchung_bottom_0: 5823523800082370726
-      guanchung_bottom_1: -3838835359568985873
-      guanchung_bottom_2: -1790312760965210206
+      Mountains_0: -8273445311213168830
+      Mountains_1: -6412839584301119111
+      Mountains_2: -2356222452529995996
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

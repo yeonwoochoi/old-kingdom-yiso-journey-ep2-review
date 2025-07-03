@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 99775e91505a610458fc935044f2b7db
+guid: 70d9dbece42ff17458c5ef3fdc9c90d1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8709422520393624074
-    second: Mountain, Animated Water (Autumn)_0
+      213: 200959104883866184
+    second: Mountains_animated_water_0
+  - first:
+      213: 1120177123426290131
+    second: Mountains_animated_water_1
+  - first:
+      213: -4202386708170567592
+    second: Mountains_animated_water_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,45 +78,6 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Win64
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -152,12 +119,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mountain, Animated Water (Autumn)_0
+      name: Mountains_animated_water_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 192
+        width: 193
         height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -167,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6f59629bc5ae12780800000000000000
-      internalID: -8709422520393624074
+      spriteID: 84abbfcbd33f9c200800000000000000
+      internalID: 200959104883866184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mountains_animated_water_1
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 0
+        width: 194
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d9c757a82bab8f00800000000000000
+      internalID: 1120177123426290131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mountains_animated_water_2
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 0
+        width: 194
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8509baadd8f1ea5c0800000000000000
+      internalID: -4202386708170567592
       vertices: []
       indices: 
       edges: []
@@ -187,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Mountain, Animated Water (Autumn)_0: -8709422520393624074
+      Mountains_animated_water_0: 200959104883866184
+      Mountains_animated_water_1: 1120177123426290131
+      Mountains_animated_water_2: -4202386708170567592
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
