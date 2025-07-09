@@ -68,6 +68,12 @@ TextureImporter:
   - first:
       213: 3040910547806588966
     second: garden_deco_1_21
+  - first:
+      213: -5243229055399386395
+    second: garden_deco_1_22
+  - first:
+      213: -1960741566779656527
+    second: garden_deco_1_23
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +106,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -138,7 +144,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -161,19 +167,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -456,10 +449,10 @@ TextureImporter:
       name: garden_deco_1_12
       rect:
         serializedVersion: 2
-        x: 116
-        y: 94
-        width: 33
-        height: 63
+        x: 26
+        y: 101
+        width: 28
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -478,10 +471,10 @@ TextureImporter:
       name: garden_deco_1_13
       rect:
         serializedVersion: 2
-        x: 175
-        y: 96
-        width: 43
-        height: 59
+        x: 56
+        y: 101
+        width: 32
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -500,10 +493,10 @@ TextureImporter:
       name: garden_deco_1_14
       rect:
         serializedVersion: 2
-        x: 242
-        y: 93
-        width: 38
-        height: 67
+        x: 116
+        y: 94
+        width: 33
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -522,10 +515,10 @@ TextureImporter:
       name: garden_deco_1_15
       rect:
         serializedVersion: 2
-        x: 323
-        y: 105
-        width: 53
-        height: 48
+        x: 175
+        y: 96
+        width: 43
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -544,10 +537,10 @@ TextureImporter:
       name: garden_deco_1_16
       rect:
         serializedVersion: 2
-        x: 384
-        y: 106
-        width: 88
-        height: 47
+        x: 242
+        y: 93
+        width: 38
+        height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -566,10 +559,10 @@ TextureImporter:
       name: garden_deco_1_17
       rect:
         serializedVersion: 2
-        x: 51
-        y: 10
-        width: 39
-        height: 76
+        x: 323
+        y: 105
+        width: 53
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -588,10 +581,10 @@ TextureImporter:
       name: garden_deco_1_18
       rect:
         serializedVersion: 2
-        x: 115
-        y: 10
-        width: 39
-        height: 77
+        x: 384
+        y: 106
+        width: 88
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -610,10 +603,10 @@ TextureImporter:
       name: garden_deco_1_19
       rect:
         serializedVersion: 2
-        x: 179
+        x: 51
         y: 10
         width: 39
-        height: 77
+        height: 76
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -632,10 +625,10 @@ TextureImporter:
       name: garden_deco_1_20
       rect:
         serializedVersion: 2
-        x: 315
-        y: 43
-        width: 63
-        height: 53
+        x: 115
+        y: 10
+        width: 39
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -654,6 +647,50 @@ TextureImporter:
       name: garden_deco_1_21
       rect:
         serializedVersion: 2
+        x: 179
+        y: 10
+        width: 39
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62010c3280c733a20800000000000000
+      internalID: 3040910547806588966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garden_deco_1_22
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 43
+        width: 63
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e2a9e434fe4c37b0800000000000000
+      internalID: -5243229055399386395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garden_deco_1_23
+      rect:
+        serializedVersion: 2
         x: 384
         y: 43
         width: 88
@@ -666,8 +703,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 62010c3280c733a20800000000000000
-      internalID: 3040910547806588966
+      spriteID: 1b671c7feeb0ac4e0800000000000000
+      internalID: -1960741566779656527
       vertices: []
       indices: 
       edges: []
@@ -701,6 +738,8 @@ TextureImporter:
       garden_deco_1_2: 6778151609235653335
       garden_deco_1_20: -3458607238952407109
       garden_deco_1_21: 3040910547806588966
+      garden_deco_1_22: -5243229055399386395
+      garden_deco_1_23: -1960741566779656527
       garden_deco_1_3: 3287652982349694149
       garden_deco_1_4: -596531995761589935
       garden_deco_1_5: -5897114227691953818
