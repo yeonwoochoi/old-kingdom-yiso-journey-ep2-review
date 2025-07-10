@@ -1,22 +1,34 @@
 fileFormatVersion: 2
-guid: 560e9f12ec1c9b44db82a10bfc47daba
+guid: d92776d2504e2b248bf2305a90dbdc8d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6850876848793546363
-    second: 1floorguanchung_0
+      213: 951154933441573540
+    second: buildings_palaces_0
   - first:
-      213: 8006223619644675435
-    second: 1floorguanchung_1
+      213: 774140039666955029
+    second: buildings_palaces_1
   - first:
-      213: -8517911155982868409
-    second: 1floorguanchung_2
+      213: -4225084144126310551
+    second: buildings_palaces_2
   - first:
-      213: -2462280468841208082
-    second: 1floorguanchung_3
+      213: 3888147725932705278
+    second: buildings_palaces_3
   - first:
-      213: -5432560116941300126
-    second: 1floorguanchung_4
+      213: 8299840347816508090
+    second: buildings_palaces_4
+  - first:
+      213: -3521346555810098018
+    second: buildings_palaces_5
+  - first:
+      213: -8972818173313495860
+    second: buildings_palaces_6
+  - first:
+      213: 3947160413537322324
+    second: buildings_palaces_7
+  - first:
+      213: 4394503998095894051
+    second: buildings_palaces_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +61,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -63,7 +75,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,45 +96,6 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Win64
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -164,11 +137,121 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 1floorguanchung_0
+      name: buildings_palaces_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 350
+        x: 27
+        y: 885
+        width: 464
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a2352e5f5e233d00800000000000000
+      internalID: 951154933441573540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildings_palaces_1
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 838
+        width: 124
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51371c6b34c4eba00800000000000000
+      internalID: 774140039666955029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildings_palaces_2
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 816
+        width: 535
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 967473b3b5c7d55c0800000000000000
+      internalID: -4225084144126310551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildings_palaces_3
+      rect:
+        serializedVersion: 2
+        x: 1929
+        y: 712
+        width: 604
+        height: 505
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef53676a1c975f530800000000000000
+      internalID: 3888147725932705278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildings_palaces_4
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 528
+        width: 528
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ababe0862d4fe2370800000000000000
+      internalID: 8299840347816508090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildings_palaces_5
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 147
         width: 170
         height: 457
       alignment: 0
@@ -179,18 +262,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 58196b3bdcbcce0a0800000000000000
-      internalID: -6850876848793546363
+      spriteID: e94d4e1e6f9a12fc0800000000000000
+      internalID: -3521346555810098018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1floorguanchung_1
+      name: buildings_palaces_6
       rect:
         serializedVersion: 2
-        x: 194
-        y: 741
+        x: 1115
+        y: 359
         width: 388
         height: 250
       alignment: 0
@@ -201,20 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b65534996f1db1f60800000000000000
-      internalID: 8006223619644675435
+      spriteID: cccca7159652a7380800000000000000
+      internalID: -8972818173313495860
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1floorguanchung_2
+      name: buildings_palaces_7
       rect:
         serializedVersion: 2
-        x: 605
-        y: 372
+        x: 1696
+        y: 155
         width: 170
-        height: 457
+        height: 456
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +306,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 740ed47feec4ac980800000000000000
-      internalID: -8517911155982868409
+      spriteID: 4554060bb7127c630800000000000000
+      internalID: 3947160413537322324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1floorguanchung_3
+      name: buildings_palaces_8
       rect:
         serializedVersion: 2
-        x: 303
-        y: 332
-        width: 170
-        height: 380
+        x: 2142
+        y: 267
+        width: 289
+        height: 231
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,30 +328,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee6665595f834ddd0800000000000000
-      internalID: -2462280468841208082
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1floorguanchung_4
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 77
-        width: 316
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 26e52c84b5bab94b0800000000000000
-      internalID: -5432560116941300126
+      spriteID: 3262a8a6a1a6cfc30800000000000000
+      internalID: 4394503998095894051
       vertices: []
       indices: 
       edges: []
@@ -287,11 +348,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      1floorguanchung_0: -6850876848793546363
-      1floorguanchung_1: 8006223619644675435
-      1floorguanchung_2: -8517911155982868409
-      1floorguanchung_3: -2462280468841208082
-      1floorguanchung_4: -5432560116941300126
+      buildings_palaces_0: 951154933441573540
+      buildings_palaces_1: 774140039666955029
+      buildings_palaces_2: -4225084144126310551
+      buildings_palaces_3: 3888147725932705278
+      buildings_palaces_4: 8299840347816508090
+      buildings_palaces_5: -3521346555810098018
+      buildings_palaces_6: -8972818173313495860
+      buildings_palaces_7: 3947160413537322324
+      buildings_palaces_8: 4394503998095894051
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
