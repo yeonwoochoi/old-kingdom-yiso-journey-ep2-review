@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: 9f1bbad671ca1a34f9498d28ff6f4948
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8261827990653321011
+    second: Tile_Plain_Environment_Floor_Dirt_01_0
+  - first:
+      213: -7802746424789608247
+    second: Tile_Plain_Environment_Floor_Dirt_01_1
+  - first:
+      213: 4044189610487325941
+    second: Tile_Plain_Environment_Floor_Dirt_01_2
+  - first:
+      213: 6365895555580946503
+    second: Tile_Plain_Environment_Floor_Dirt_01_3
+  - first:
+      213: -4798705509184549751
+    second: Tile_Plain_Environment_Floor_Dirt_01_4
+  - first:
+      213: 2773513310712944010
+    second: Tile_Plain_Environment_Floor_Dirt_01_5
+  - first:
+      213: -5015608071635562906
+    second: Tile_Plain_Environment_Floor_Dirt_01_6
+  - first:
+      213: 4777574001339448564
+    second: Tile_Plain_Environment_Floor_Dirt_01_7
+  - first:
+      213: 7081878389501215977
+    second: Tile_Plain_Environment_Floor_Dirt_01_8
+  - first:
+      213: 7693043668426527507
+    second: Tile_Plain_Environment_Floor_Dirt_01_9
+  - first:
+      213: -1141157752878836659
+    second: Tile_Plain_Environment_Floor_Dirt_01_10
+  - first:
+      213: 6179707029368979583
+    second: Tile_Plain_Environment_Floor_Dirt_01_11
+  - first:
+      213: -8883338193564867376
+    second: Tile_Plain_Environment_Floor_Dirt_01_12
+  - first:
+      213: -8947546684397614027
+    second: Tile_Plain_Environment_Floor_Dirt_01_13
+  - first:
+      213: -3242644523497911409
+    second: Tile_Plain_Environment_Floor_Dirt_01_14
+  - first:
+      213: -8648331034071628251
+    second: Tile_Plain_Environment_Floor_Dirt_01_15
+  - first:
+      213: -7900308931850125053
+    second: Tile_Plain_Environment_Floor_Dirt_01_16
+  - first:
+      213: -3992159252962487835
+    second: Tile_Plain_Environment_Floor_Dirt_01_17
+  - first:
+      213: -7286512970032212621
+    second: Tile_Plain_Environment_Floor_Dirt_01_18
+  - first:
+      213: -2610187758726249645
+    second: Tile_Plain_Environment_Floor_Dirt_01_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tile_Plain_Environment_Floor_Dirt_01_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 218
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc0cabd2737185d80800000000000000
+      internalID: -8261827990653321011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Plain_Environment_Floor_Dirt_01_1
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 211
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c857f5a77317b390800000000000000
+      internalID: -7802746424789608247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Plain_Environment_Floor_Dirt_01_2
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 159
+        width: 75
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f42c611609df1830800000000000000
+      internalID: 4044189610487325941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Plain_Environment_Floor_Dirt_01_3
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 207
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 748e3a3a744385850800000000000000
+      internalID: 6365895555580946503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Plain_Environment_Floor_Dirt_01_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 194
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98c485793c2976db0800000000000000
+      internalID: -4798705509184549751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Plain_Environment_Floor_Dirt_01_5
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 167
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a85dcd059af7d7620800000000000000
+      internalID: 2773513310712944010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Plain_Environment_Floor_Dirt_01_6
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 173
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66e849d580bf46ab0800000000000000
+      internalID: -5015608071635562906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Plain_Environment_Floor_Dirt_01_7
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 65
+        width: 94
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fcbaf5dd3a5d4240800000000000000
+      internalID: 4777574001339448564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Plain_Environment_Floor_Dirt_01_8
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 150
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e44cb4bfd2e74260800000000000000
+      internalID: 7081878389501215977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Plain_Environment_Floor_Dirt_01_9
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 149
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 313912af47e23ca60800000000000000
+      internalID: 7693043668426527507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Plain_Environment_Floor_Dirt_01_10
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 150
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4459f2e11bc920f0800000000000000
+      internalID: -1141157752878836659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Plain_Environment_Floor_Dirt_01_11
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 149
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f70c58d3dcab2c550800000000000000
+      internalID: 6179707029368979583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Plain_Environment_Floor_Dirt_01_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 130
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d4e7e89afa08b480800000000000000
+      internalID: -8883338193564867376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Plain_Environment_Floor_Dirt_01_13
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 135
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53c814952bde3d380800000000000000
+      internalID: -8947546684397614027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Plain_Environment_Floor_Dirt_01_14
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 117
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8b8a047cffcff2d0800000000000000
+      internalID: -3242644523497911409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Plain_Environment_Floor_Dirt_01_15
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 98
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5268c2eceb4faf780800000000000000
+      internalID: -8648331034071628251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Plain_Environment_Floor_Dirt_01_16
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 85
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3014a3552e67c5290800000000000000
+      internalID: -7900308931850125053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Plain_Environment_Floor_Dirt_01_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 96
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e1d1609f400998c0800000000000000
+      internalID: -3992159252962487835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Plain_Environment_Floor_Dirt_01_18
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 64
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37514f13f0b11ea90800000000000000
+      internalID: -7286512970032212621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Plain_Environment_Floor_Dirt_01_19
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 64
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3538c041010c6cbd0800000000000000
+      internalID: -2610187758726249645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Tile_Plain_Environment_Floor_Dirt_01_0: -8261827990653321011
+      Tile_Plain_Environment_Floor_Dirt_01_1: -7802746424789608247
+      Tile_Plain_Environment_Floor_Dirt_01_10: -1141157752878836659
+      Tile_Plain_Environment_Floor_Dirt_01_11: 6179707029368979583
+      Tile_Plain_Environment_Floor_Dirt_01_12: -8883338193564867376
+      Tile_Plain_Environment_Floor_Dirt_01_13: -8947546684397614027
+      Tile_Plain_Environment_Floor_Dirt_01_14: -3242644523497911409
+      Tile_Plain_Environment_Floor_Dirt_01_15: -8648331034071628251
+      Tile_Plain_Environment_Floor_Dirt_01_16: -7900308931850125053
+      Tile_Plain_Environment_Floor_Dirt_01_17: -3992159252962487835
+      Tile_Plain_Environment_Floor_Dirt_01_18: -7286512970032212621
+      Tile_Plain_Environment_Floor_Dirt_01_19: -2610187758726249645
+      Tile_Plain_Environment_Floor_Dirt_01_2: 4044189610487325941
+      Tile_Plain_Environment_Floor_Dirt_01_3: 6365895555580946503
+      Tile_Plain_Environment_Floor_Dirt_01_4: -4798705509184549751
+      Tile_Plain_Environment_Floor_Dirt_01_5: 2773513310712944010
+      Tile_Plain_Environment_Floor_Dirt_01_6: -5015608071635562906
+      Tile_Plain_Environment_Floor_Dirt_01_7: 4777574001339448564
+      Tile_Plain_Environment_Floor_Dirt_01_8: 7081878389501215977
+      Tile_Plain_Environment_Floor_Dirt_01_9: 7693043668426527507
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
