@@ -1,82 +1,79 @@
 fileFormatVersion: 2
-guid: b3df9777069e0e04cbbbdb1b2f305938
+guid: eac275aab83ef344b8201afa89fe38c9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4660326871412307232
-    second: wateranimate2_0
+      213: -8134261108468656236
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_0
   - first:
-      213: -5028735085927674757
-    second: wateranimate2_1
+      213: -7990127027949780600
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_1
   - first:
-      213: 4627263737319935990
-    second: wateranimate2_2
+      213: 3966297211283299660
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_2
   - first:
-      213: -4433134094065279978
-    second: wateranimate2_3
+      213: -3462125218527330678
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_3
   - first:
-      213: 3957897305364559283
-    second: wateranimate2_4
+      213: 982523233942740191
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_4
   - first:
-      213: 4945445440344672560
-    second: wateranimate2_5
+      213: -5183875377555869891
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_5
   - first:
-      213: -8486578234288435961
-    second: wateranimate2_6
+      213: -3659892235018237689
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_6
   - first:
-      213: -8169212467716264608
-    second: wateranimate2_7
+      213: 6487396128028837408
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_7
   - first:
-      213: 2729897700197760712
-    second: wateranimate2_8
+      213: 7782265278927147045
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_8
   - first:
-      213: 4811979939060736480
-    second: wateranimate2_9
+      213: 7953809700514225536
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_9
   - first:
-      213: -8874608426669827669
-    second: wateranimate2_10
+      213: -1364022175558441177
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_10
   - first:
-      213: -8845748944685026624
-    second: wateranimate2_11
+      213: -7475397510210715885
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_11
   - first:
-      213: 5283492042984181972
-    second: wateranimate2_12
+      213: 2450901413605871712
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_12
   - first:
-      213: 2514113059489646215
-    second: wateranimate2_13
+      213: 8840002415248722181
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_13
   - first:
-      213: 9000964505904880571
-    second: wateranimate2_14
+      213: -4600166723208882899
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_14
   - first:
-      213: 3668569868804341730
-    second: wateranimate2_15
+      213: -1207094154048567438
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_15
   - first:
-      213: -5996688958258520226
-    second: wateranimate2_16
+      213: -1909285502701438253
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_16
   - first:
-      213: -8348273880650663820
-    second: wateranimate2_17
+      213: 5022628357009080899
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_17
   - first:
-      213: 1563545944588346222
-    second: wateranimate2_18
+      213: -8514850013493539359
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_18
   - first:
-      213: 2173027826943597178
-    second: wateranimate2_19
+      213: -8932165015591903057
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_19
   - first:
-      213: 7401822933940669848
-    second: wateranimate2_20
+      213: -3885121515257504127
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_20
   - first:
-      213: 7501218615165919225
-    second: wateranimate2_21
+      213: -3538543234591035071
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_21
   - first:
-      213: -1051522782847444663
-    second: wateranimate2_22
+      213: 5807110176831599168
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_22
   - first:
-      213: -6603047146913401124
-    second: wateranimate2_23
-  - first:
-      213: 2815307693761100806
-    second: wateranimate2_24
+      213: -7711704578124540473
+    second: Sprite_Environment_Water_WaterFall_01_Anim 1_23
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,7 +106,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -123,7 +120,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -144,45 +141,6 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Win64
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -224,7 +182,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wateranimate2_0
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_0
       rect:
         serializedVersion: 2
         x: 6
@@ -239,14 +197,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0ea0344e661335fb0800000000000000
-      internalID: -4660326871412307232
+      spriteID: 49753777e9c4d1f80800000000000000
+      internalID: -8134261108468656236
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wateranimate2_1
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_1
       rect:
         serializedVersion: 2
         x: 10
@@ -261,14 +219,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b7cccbd2518563ab0800000000000000
-      internalID: -5028735085927674757
+      spriteID: 8814ec43dcd5d1190800000000000000
+      internalID: -7990127027949780600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wateranimate2_2
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_2
       rect:
         serializedVersion: 2
         x: 77
@@ -283,14 +241,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6ff40015ad7573040800000000000000
-      internalID: 4627263737319935990
+      spriteID: c4dd920ac4e1b0730800000000000000
+      internalID: 3966297211283299660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wateranimate2_3
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_3
       rect:
         serializedVersion: 2
         x: 86
@@ -305,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 61cd09977085a72c0800000000000000
-      internalID: -4433134094065279978
+      spriteID: a8eb1c5f47f04ffc0800000000000000
+      internalID: -3462125218527330678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wateranimate2_4
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_4
       rect:
         serializedVersion: 2
         x: 98
@@ -327,14 +285,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3b5fabf11a64de630800000000000000
-      internalID: 3957897305364559283
+      spriteID: fdc99b6fcaf92ad00800000000000000
+      internalID: 982523233942740191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wateranimate2_5
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_5
       rect:
         serializedVersion: 2
         x: 103
@@ -349,14 +307,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 039c1d70d60c1a440800000000000000
-      internalID: 4945445440344672560
+      spriteID: d3f63e83fcc2f08b0800000000000000
+      internalID: -5183875377555869891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wateranimate2_6
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_6
       rect:
         serializedVersion: 2
         x: 179
@@ -371,14 +329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 70d0daa4f0e993a80800000000000000
-      internalID: -8486578234288435961
+      spriteID: 70907873763753dc0800000000000000
+      internalID: -3659892235018237689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wateranimate2_7
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_7
       rect:
         serializedVersion: 2
         x: 195
@@ -393,14 +351,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 06d641ffa8021ae80800000000000000
-      internalID: -8169212467716264608
+      spriteID: 0264760286cd70a50800000000000000
+      internalID: 6487396128028837408
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wateranimate2_8
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_8
       rect:
         serializedVersion: 2
         x: 199
@@ -415,14 +373,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8ce7175ae7b82e520800000000000000
-      internalID: 2729897700197760712
+      spriteID: 5201f4af909200c60800000000000000
+      internalID: 7782265278927147045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wateranimate2_9
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_9
       rect:
         serializedVersion: 2
         x: 217
@@ -437,14 +395,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0e16506724697c240800000000000000
-      internalID: 4811979939060736480
+      spriteID: 08dd43218cb916e60800000000000000
+      internalID: 7953809700514225536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wateranimate2_10
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_10
       rect:
         serializedVersion: 2
         x: 294
@@ -459,36 +417,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ba918a7d7ae07d480800000000000000
-      internalID: -8874608426669827669
+      spriteID: 7276518ee05021de0800000000000000
+      internalID: -1364022175558441177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wateranimate2_11
-      rect:
-        serializedVersion: 2
-        x: 383
-        y: 0
-        width: 193
-        height: 353
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0c233cb93369d3580800000000000000
-      internalID: -8845748944685026624
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wateranimate2_12
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_11
       rect:
         serializedVersion: 2
         x: 361
@@ -503,14 +439,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4d0dcab150cb25940800000000000000
-      internalID: 5283492042984181972
+      spriteID: 31ffc01229d024890800000000000000
+      internalID: -7475397510210715885
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wateranimate2_13
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_12
       rect:
         serializedVersion: 2
         x: 6
@@ -525,14 +461,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7860d0cd18ce3e220800000000000000
-      internalID: 2514113059489646215
+      spriteID: 0601b79a9d9530220800000000000000
+      internalID: 2450901413605871712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wateranimate2_14
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_13
       rect:
         serializedVersion: 2
         x: 10
@@ -547,14 +483,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bbb1c5a6789d9ec70800000000000000
-      internalID: 9000964505904880571
+      spriteID: 509ce7e3c5ffdaa70800000000000000
+      internalID: 8840002415248722181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wateranimate2_15
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_14
       rect:
         serializedVersion: 2
         x: 77
@@ -569,14 +505,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2efb8c7dbd069e230800000000000000
-      internalID: 3668569868804341730
+      spriteID: d25df8becbce820c0800000000000000
+      internalID: -4600166723208882899
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wateranimate2_16
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_15
       rect:
         serializedVersion: 2
         x: 86
@@ -591,14 +527,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e5f5e7e0a2b77cca0800000000000000
-      internalID: -5996688958258520226
+      spriteID: 2770c79234a8f3fe0800000000000000
+      internalID: -1207094154048567438
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wateranimate2_17
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_16
       rect:
         serializedVersion: 2
         x: 98
@@ -613,14 +549,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4783528f229f42c80800000000000000
-      internalID: -8348273880650663820
+      spriteID: 3da7dac73fad085e0800000000000000
+      internalID: -1909285502701438253
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wateranimate2_18
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_17
       rect:
         serializedVersion: 2
         x: 103
@@ -635,14 +571,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e63e039a0c4d2b510800000000000000
-      internalID: 1563545944588346222
+      spriteID: 342845231e5f3b540800000000000000
+      internalID: 5022628357009080899
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wateranimate2_19
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_18
       rect:
         serializedVersion: 2
         x: 179
@@ -657,14 +593,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a7a1300ab45282e10800000000000000
-      internalID: 2173027826943597178
+      spriteID: 1edccfdb60d25d980800000000000000
+      internalID: -8514850013493539359
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wateranimate2_20
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_19
       rect:
         serializedVersion: 2
         x: 195
@@ -679,14 +615,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 89d8fdbedbe88b660800000000000000
-      internalID: 7401822933940669848
+      spriteID: fa029723e339a0480800000000000000
+      internalID: -8932165015591903057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wateranimate2_21
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_20
       rect:
         serializedVersion: 2
         x: 199
@@ -701,14 +637,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9ff138b569ea91860800000000000000
-      internalID: 7501218615165919225
+      spriteID: 18e59dde096451ac0800000000000000
+      internalID: -3885121515257504127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wateranimate2_22
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_21
       rect:
         serializedVersion: 2
         x: 217
@@ -723,14 +659,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 949d527a99d3861f0800000000000000
-      internalID: -1051522782847444663
+      spriteID: 141f6d71da194eec0800000000000000
+      internalID: -3538543234591035071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wateranimate2_23
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_22
       rect:
         serializedVersion: 2
         x: 294
@@ -745,14 +681,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cd6f115ba934d54a0800000000000000
-      internalID: -6603047146913401124
+      spriteID: 0427a9d30fff69050800000000000000
+      internalID: 5807110176831599168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wateranimate2_24
+      name: Sprite_Environment_Water_WaterFall_01_Anim 1_23
       rect:
         serializedVersion: 2
         x: 361
@@ -767,8 +703,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60cfd0c6e6bf11720800000000000000
-      internalID: 2815307693761100806
+      spriteID: 7c512286b858af490800000000000000
+      internalID: -7711704578124540473
       vertices: []
       indices: 
       edges: []
@@ -787,31 +723,30 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      wateranimate2_0: -4660326871412307232
-      wateranimate2_1: -5028735085927674757
-      wateranimate2_10: -8874608426669827669
-      wateranimate2_11: -8845748944685026624
-      wateranimate2_12: 5283492042984181972
-      wateranimate2_13: 2514113059489646215
-      wateranimate2_14: 9000964505904880571
-      wateranimate2_15: 3668569868804341730
-      wateranimate2_16: -5996688958258520226
-      wateranimate2_17: -8348273880650663820
-      wateranimate2_18: 1563545944588346222
-      wateranimate2_19: 2173027826943597178
-      wateranimate2_2: 4627263737319935990
-      wateranimate2_20: 7401822933940669848
-      wateranimate2_21: 7501218615165919225
-      wateranimate2_22: -1051522782847444663
-      wateranimate2_23: -6603047146913401124
-      wateranimate2_24: 2815307693761100806
-      wateranimate2_3: -4433134094065279978
-      wateranimate2_4: 3957897305364559283
-      wateranimate2_5: 4945445440344672560
-      wateranimate2_6: -8486578234288435961
-      wateranimate2_7: -8169212467716264608
-      wateranimate2_8: 2729897700197760712
-      wateranimate2_9: 4811979939060736480
+      Sprite_Environment_Water_WaterFall_01_Anim 1_0: -8134261108468656236
+      Sprite_Environment_Water_WaterFall_01_Anim 1_1: -7990127027949780600
+      Sprite_Environment_Water_WaterFall_01_Anim 1_10: -1364022175558441177
+      Sprite_Environment_Water_WaterFall_01_Anim 1_11: -7475397510210715885
+      Sprite_Environment_Water_WaterFall_01_Anim 1_12: 2450901413605871712
+      Sprite_Environment_Water_WaterFall_01_Anim 1_13: 8840002415248722181
+      Sprite_Environment_Water_WaterFall_01_Anim 1_14: -4600166723208882899
+      Sprite_Environment_Water_WaterFall_01_Anim 1_15: -1207094154048567438
+      Sprite_Environment_Water_WaterFall_01_Anim 1_16: -1909285502701438253
+      Sprite_Environment_Water_WaterFall_01_Anim 1_17: 5022628357009080899
+      Sprite_Environment_Water_WaterFall_01_Anim 1_18: -8514850013493539359
+      Sprite_Environment_Water_WaterFall_01_Anim 1_19: -8932165015591903057
+      Sprite_Environment_Water_WaterFall_01_Anim 1_2: 3966297211283299660
+      Sprite_Environment_Water_WaterFall_01_Anim 1_20: -3885121515257504127
+      Sprite_Environment_Water_WaterFall_01_Anim 1_21: -3538543234591035071
+      Sprite_Environment_Water_WaterFall_01_Anim 1_22: 5807110176831599168
+      Sprite_Environment_Water_WaterFall_01_Anim 1_23: -7711704578124540473
+      Sprite_Environment_Water_WaterFall_01_Anim 1_3: -3462125218527330678
+      Sprite_Environment_Water_WaterFall_01_Anim 1_4: 982523233942740191
+      Sprite_Environment_Water_WaterFall_01_Anim 1_5: -5183875377555869891
+      Sprite_Environment_Water_WaterFall_01_Anim 1_6: -3659892235018237689
+      Sprite_Environment_Water_WaterFall_01_Anim 1_7: 6487396128028837408
+      Sprite_Environment_Water_WaterFall_01_Anim 1_8: 7782265278927147045
+      Sprite_Environment_Water_WaterFall_01_Anim 1_9: 7953809700514225536
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
