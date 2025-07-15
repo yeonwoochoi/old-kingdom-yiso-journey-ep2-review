@@ -1,79 +1,103 @@
 fileFormatVersion: 2
-guid: 5d831095e6c0f6f478c36bf69bc15d90
+guid: 79688c43b6d4ed541bc15df22a0938b6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6589335227353124087
-    second: Yiso_jump_0
+      213: 4209301129779374076
+    second: sp_yiso_run_0
   - first:
-      213: 5673826573749295907
-    second: Yiso_jump_1
+      213: -5377878690884137819
+    second: sp_yiso_run_1
   - first:
-      213: -904151613005874928
-    second: Yiso_jump_2
+      213: 4850713004294451817
+    second: sp_yiso_run_2
   - first:
-      213: 3581866850935137410
-    second: Yiso_jump_3
+      213: 797105519052405371
+    second: sp_yiso_run_3
   - first:
-      213: -1367429231625021696
-    second: Yiso_jump_4
+      213: 6861012410840544993
+    second: sp_yiso_run_4
   - first:
-      213: -5530052198038940937
-    second: Yiso_jump_5
+      213: 9110794131100045909
+    second: sp_yiso_run_5
   - first:
-      213: -3027380466762179712
-    second: Yiso_jump_6
+      213: -4427284652270033837
+    second: sp_yiso_run_6
   - first:
-      213: 1769040457339929183
-    second: Yiso_jump_7
+      213: 81684220780649617
+    second: sp_yiso_run_7
   - first:
-      213: -3875879901854126202
-    second: Yiso_jump_8
+      213: 6358621839958364216
+    second: sp_yiso_run_8
   - first:
-      213: -3930431879900556573
-    second: Yiso_jump_9
+      213: -415929344385956796
+    second: sp_yiso_run_9
   - first:
-      213: 1896699253770174956
-    second: Yiso_jump_10
+      213: -151365052039236024
+    second: sp_yiso_run_10
   - first:
-      213: 5170304670661425279
-    second: Yiso_jump_11
+      213: 6613642415721002926
+    second: sp_yiso_run_11
   - first:
-      213: -3288421467806806327
-    second: Yiso_jump_12
+      213: -5163596624080211230
+    second: sp_yiso_run_12
   - first:
-      213: 2290385005415682760
-    second: Yiso_jump_13
+      213: 2885040600664625717
+    second: sp_yiso_run_13
   - first:
-      213: 3399023602478532537
-    second: Yiso_jump_14
+      213: -8910359487754410747
+    second: sp_yiso_run_14
   - first:
-      213: 3664932412100036477
-    second: Yiso_jump_15
+      213: -3060146943103806804
+    second: sp_yiso_run_15
   - first:
-      213: 4368582646942123753
-    second: Yiso_jump_16
+      213: -7972226659044241371
+    second: sp_yiso_run_16
   - first:
-      213: 1724014019715378934
-    second: Yiso_jump_17
+      213: -5892959945524306528
+    second: sp_yiso_run_17
   - first:
-      213: 8097419605087953755
-    second: Yiso_jump_18
+      213: 6369297255174519760
+    second: sp_yiso_run_18
   - first:
-      213: 3237257770084917320
-    second: Yiso_jump_19
+      213: 9045290707521260611
+    second: sp_yiso_run_19
   - first:
-      213: 2551490996028122929
-    second: Yiso_jump_20
+      213: 4319010095319656596
+    second: sp_yiso_run_20
   - first:
-      213: 2109239336235574373
-    second: Yiso_jump_21
+      213: -4399486438787691046
+    second: sp_yiso_run_21
   - first:
-      213: -2354079876181321118
-    second: Yiso_jump_22
+      213: -4916967405363455160
+    second: sp_yiso_run_22
   - first:
-      213: 5515672181955512847
-    second: Yiso_jump_23
+      213: -5730640657978488027
+    second: sp_yiso_run_23
+  - first:
+      213: -8620473496124338524
+    second: sp_yiso_run_24
+  - first:
+      213: 2850620983842447856
+    second: sp_yiso_run_25
+  - first:
+      213: -6921564323550152261
+    second: sp_yiso_run_26
+  - first:
+      213: -7155676273446732796
+    second: sp_yiso_run_27
+  - first:
+      213: 293481435003936260
+    second: sp_yiso_run_28
+  - first:
+      213: -5375207185143587261
+    second: sp_yiso_run_29
+  - first:
+      213: 5126618697136464516
+    second: sp_yiso_run_30
+  - first:
+      213: -1002570127842135131
+    second: sp_yiso_run_31
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,12 +163,12 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 1
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -152,7 +176,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -165,7 +189,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -178,8 +202,8 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
+  - serializedVersion: 4
+    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -191,20 +215,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -221,7 +232,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Yiso_jump_0
+      name: sp_yiso_run_0
       rect:
         serializedVersion: 2
         x: 0
@@ -231,18 +242,19 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 90336a3c58afd84a0800000000000000
-      internalID: -6589335227353124087
+      spriteID: cf7662163117a6a30800000000000000
+      internalID: 4209301129779374076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yiso_jump_1
+      name: sp_yiso_run_1
       rect:
         serializedVersion: 2
         x: 64
@@ -252,18 +264,19 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 32b9f75253b7dbe40800000000000000
-      internalID: 5673826573749295907
+      spriteID: 5ac45b8e2dfed55b0800000000000000
+      internalID: -5377878690884137819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yiso_jump_2
+      name: sp_yiso_run_2
       rect:
         serializedVersion: 2
         x: 128
@@ -273,18 +286,19 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 01930bbf5eec373f0800000000000000
-      internalID: -904151613005874928
+      spriteID: 962b658f6c1315340800000000000000
+      internalID: 4850713004294451817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yiso_jump_3
+      name: sp_yiso_run_3
       rect:
         serializedVersion: 2
         x: 192
@@ -294,18 +308,19 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2846cb26ce855b130800000000000000
-      internalID: 3581866850935137410
+      spriteID: b7a3f9f0f33ef0b00800000000000000
+      internalID: 797105519052405371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yiso_jump_4
+      name: sp_yiso_run_4
       rect:
         serializedVersion: 2
         x: 256
@@ -315,18 +330,19 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0075189db5ae50de0800000000000000
-      internalID: -1367429231625021696
+      spriteID: 1e672bbbf66373f50800000000000000
+      internalID: 6861012410840544993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yiso_jump_5
+      name: sp_yiso_run_5
       rect:
         serializedVersion: 2
         x: 320
@@ -336,18 +352,63 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7f2558a43de4143b0800000000000000
-      internalID: -5530052198038940937
+      spriteID: 5529eedbdfa007e70800000000000000
+      internalID: 9110794131100045909
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yiso_jump_6
+      name: sp_yiso_run_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 354e7e5c0102f82c0800000000000000
+      internalID: -4427284652270033837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sp_yiso_run_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19c9263bd53322100800000000000000
+      internalID: 81684220780649617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sp_yiso_run_8
       rect:
         serializedVersion: 2
         x: 0
@@ -357,18 +418,19 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 08b1fa651859cf5d0800000000000000
-      internalID: -3027380466762179712
+      spriteID: 83052cfbfdc5e3850800000000000000
+      internalID: 6358621839958364216
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yiso_jump_7
+      name: sp_yiso_run_9
       rect:
         serializedVersion: 2
         x: 64
@@ -378,18 +440,19 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f528a055ce4ec8810800000000000000
-      internalID: 1769040457339929183
+      spriteID: 444c63807725a3af0800000000000000
+      internalID: -415929344385956796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yiso_jump_8
+      name: sp_yiso_run_10
       rect:
         serializedVersion: 2
         x: 128
@@ -399,18 +462,19 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 68fa8e9b3cb163ac0800000000000000
-      internalID: -3875879901854126202
+      spriteID: 846fac1894e36edf0800000000000000
+      internalID: -151365052039236024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yiso_jump_9
+      name: sp_yiso_run_11
       rect:
         serializedVersion: 2
         x: 192
@@ -420,18 +484,19 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3e218a0970d4479c0800000000000000
-      internalID: -3930431879900556573
+      spriteID: ea7b18c8cb068cb50800000000000000
+      internalID: 6613642415721002926
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yiso_jump_10
+      name: sp_yiso_run_12
       rect:
         serializedVersion: 2
         x: 256
@@ -441,18 +506,19 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ce148b21ced625a10800000000000000
-      internalID: 1896699253770174956
+      spriteID: 2e2fa427a383758b0800000000000000
+      internalID: -5163596624080211230
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yiso_jump_11
+      name: sp_yiso_run_13
       rect:
         serializedVersion: 2
         x: 320
@@ -462,18 +528,63 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f78315b54bc90c740800000000000000
-      internalID: 5170304670661425279
+      spriteID: 532d1350429b90820800000000000000
+      internalID: 2885040600664625717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yiso_jump_12
+      name: sp_yiso_run_14
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 505ed57414b085480800000000000000
+      internalID: -8910359487754410747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sp_yiso_run_15
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca2dccf819c2885d0800000000000000
+      internalID: -3060146943103806804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sp_yiso_run_16
       rect:
         serializedVersion: 2
         x: 0
@@ -483,18 +594,19 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9ce4b9b091e2d52d0800000000000000
-      internalID: -3288421467806806327
+      spriteID: 520d4ce9716fc5190800000000000000
+      internalID: -7972226659044241371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yiso_jump_13
+      name: sp_yiso_run_17
       rect:
         serializedVersion: 2
         x: 64
@@ -504,18 +616,19 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c2dea6070519cf10800000000000000
-      internalID: 2290385005415682760
+      spriteID: 0ad1b6bd620083ea0800000000000000
+      internalID: -5892959945524306528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yiso_jump_14
+      name: sp_yiso_run_18
       rect:
         serializedVersion: 2
         x: 128
@@ -525,18 +638,19 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b7c6e825f1cb2f20800000000000000
-      internalID: 3399023602478532537
+      spriteID: 0db3c8b8b1a446850800000000000000
+      internalID: 6369297255174519760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yiso_jump_15
+      name: sp_yiso_run_19
       rect:
         serializedVersion: 2
         x: 192
@@ -546,18 +660,19 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d77c9057c947cd230800000000000000
-      internalID: 3664932412100036477
+      spriteID: 34c42f779f3578d70800000000000000
+      internalID: 9045290707521260611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yiso_jump_16
+      name: sp_yiso_run_20
       rect:
         serializedVersion: 2
         x: 256
@@ -567,18 +682,19 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9e6cbea85c250ac30800000000000000
-      internalID: 4368582646942123753
+      spriteID: 498aad07cc430fb30800000000000000
+      internalID: 4319010095319656596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yiso_jump_17
+      name: sp_yiso_run_21
       rect:
         serializedVersion: 2
         x: 320
@@ -588,18 +704,63 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6feade0ed9dece710800000000000000
-      internalID: 1724014019715378934
+      spriteID: add49e5b462e1f2c0800000000000000
+      internalID: -4399486438787691046
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yiso_jump_18
+      name: sp_yiso_run_22
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84b132f223c63cbb0800000000000000
+      internalID: -4916967405363455160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sp_yiso_run_23
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52b08cd0faca870b0800000000000000
+      internalID: -5730640657978488027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sp_yiso_run_24
       rect:
         serializedVersion: 2
         x: 0
@@ -609,18 +770,19 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b532d869a30df5070800000000000000
-      internalID: 8097419605087953755
+      spriteID: 4aec6db470ded5880800000000000000
+      internalID: -8620473496124338524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yiso_jump_19
+      name: sp_yiso_run_25
       rect:
         serializedVersion: 2
         x: 64
@@ -630,18 +792,19 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 840e8484acc0dec20800000000000000
-      internalID: 3237257770084917320
+      spriteID: 0f1243b7ea07f8720800000000000000
+      internalID: 2850620983842447856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yiso_jump_20
+      name: sp_yiso_run_26
       rect:
         serializedVersion: 2
         x: 128
@@ -651,18 +814,19 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1372dd1ea87b86320800000000000000
-      internalID: 2551490996028122929
+      spriteID: bb9b6c47be9a1ff90800000000000000
+      internalID: -6921564323550152261
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yiso_jump_21
+      name: sp_yiso_run_27
       rect:
         serializedVersion: 2
         x: 192
@@ -672,18 +836,19 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5642a964006854d10800000000000000
-      internalID: 2109239336235574373
+      spriteID: 40c3489775ee1bc90800000000000000
+      internalID: -7155676273446732796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yiso_jump_22
+      name: sp_yiso_run_28
       rect:
         serializedVersion: 2
         x: 256
@@ -693,18 +858,19 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 26a115733d0a45fd0800000000000000
-      internalID: -2354079876181321118
+      spriteID: 40ed4996fc7a21400800000000000000
+      internalID: 293481435003936260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yiso_jump_23
+      name: sp_yiso_run_29
       rect:
         serializedVersion: 2
         x: 320
@@ -714,17 +880,63 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f0a46fe40aa9b8c40800000000000000
-      internalID: 5515672181955512847
+      spriteID: 34e936f4b8d6765b0800000000000000
+      internalID: -5375207185143587261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sp_yiso_run_30
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 482e1b50b88652740800000000000000
+      internalID: 5126618697136464516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sp_yiso_run_31
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a33d83d7c72612f0800000000000000
+      internalID: -1002570127842135131
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
@@ -734,31 +946,41 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
     nameFileIdTable:
-      Yiso_jump_0: -6589335227353124087
-      Yiso_jump_1: 5673826573749295907
-      Yiso_jump_10: 1896699253770174956
-      Yiso_jump_11: 5170304670661425279
-      Yiso_jump_12: -3288421467806806327
-      Yiso_jump_13: 2290385005415682760
-      Yiso_jump_14: 3399023602478532537
-      Yiso_jump_15: 3664932412100036477
-      Yiso_jump_16: 4368582646942123753
-      Yiso_jump_17: 1724014019715378934
-      Yiso_jump_18: 8097419605087953755
-      Yiso_jump_19: 3237257770084917320
-      Yiso_jump_2: -904151613005874928
-      Yiso_jump_20: 2551490996028122929
-      Yiso_jump_21: 2109239336235574373
-      Yiso_jump_22: -2354079876181321118
-      Yiso_jump_23: 5515672181955512847
-      Yiso_jump_3: 3581866850935137410
-      Yiso_jump_4: -1367429231625021696
-      Yiso_jump_5: -5530052198038940937
-      Yiso_jump_6: -3027380466762179712
-      Yiso_jump_7: 1769040457339929183
-      Yiso_jump_8: -3875879901854126202
-      Yiso_jump_9: -3930431879900556573
+      sp_yiso_run_0: 4209301129779374076
+      sp_yiso_run_1: -5377878690884137819
+      sp_yiso_run_10: -151365052039236024
+      sp_yiso_run_11: 6613642415721002926
+      sp_yiso_run_12: -5163596624080211230
+      sp_yiso_run_13: 2885040600664625717
+      sp_yiso_run_14: -8910359487754410747
+      sp_yiso_run_15: -3060146943103806804
+      sp_yiso_run_16: -7972226659044241371
+      sp_yiso_run_17: -5892959945524306528
+      sp_yiso_run_18: 6369297255174519760
+      sp_yiso_run_19: 9045290707521260611
+      sp_yiso_run_2: 4850713004294451817
+      sp_yiso_run_20: 4319010095319656596
+      sp_yiso_run_21: -4399486438787691046
+      sp_yiso_run_22: -4916967405363455160
+      sp_yiso_run_23: -5730640657978488027
+      sp_yiso_run_24: -8620473496124338524
+      sp_yiso_run_25: 2850620983842447856
+      sp_yiso_run_26: -6921564323550152261
+      sp_yiso_run_27: -7155676273446732796
+      sp_yiso_run_28: 293481435003936260
+      sp_yiso_run_29: -5375207185143587261
+      sp_yiso_run_3: 797105519052405371
+      sp_yiso_run_30: 5126618697136464516
+      sp_yiso_run_31: -1002570127842135131
+      sp_yiso_run_4: 6861012410840544993
+      sp_yiso_run_5: 9110794131100045909
+      sp_yiso_run_6: -4427284652270033837
+      sp_yiso_run_7: 81684220780649617
+      sp_yiso_run_8: 6358621839958364216
+      sp_yiso_run_9: -415929344385956796
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
