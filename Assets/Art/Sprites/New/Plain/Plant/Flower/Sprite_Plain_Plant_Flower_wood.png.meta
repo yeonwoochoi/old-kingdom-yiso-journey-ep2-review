@@ -1,0 +1,468 @@
+fileFormatVersion: 2
+guid: 2b8cb803167087940bb7527cf030638d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5715572308168644385
+    second: Sprite_Plain_Plant_Flower_wood_0
+  - first:
+      213: 4131724174995584694
+    second: Sprite_Plain_Plant_Flower_wood_1
+  - first:
+      213: 4070687804397281726
+    second: Sprite_Plain_Plant_Flower_wood_2
+  - first:
+      213: -4073846644804222708
+    second: Sprite_Plain_Plant_Flower_wood_3
+  - first:
+      213: 6659202489142879847
+    second: Sprite_Plain_Plant_Flower_wood_4
+  - first:
+      213: -474818601236157358
+    second: Sprite_Plain_Plant_Flower_wood_5
+  - first:
+      213: -5609305155201911188
+    second: Sprite_Plain_Plant_Flower_wood_6
+  - first:
+      213: -5922720997342569871
+    second: Sprite_Plain_Plant_Flower_wood_7
+  - first:
+      213: 769881857815249631
+    second: Sprite_Plain_Plant_Flower_wood_8
+  - first:
+      213: 8472507270814902153
+    second: Sprite_Plain_Plant_Flower_wood_9
+  - first:
+      213: -6798677840635249458
+    second: Sprite_Plain_Plant_Flower_wood_10
+  - first:
+      213: 2498952680504236370
+    second: Sprite_Plain_Plant_Flower_wood_11
+  - first:
+      213: 4299053624736884554
+    second: Sprite_Plain_Plant_Flower_wood_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Flower_wood_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 71
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 127937c5bbac15f40800000000000000
+      internalID: 5715572308168644385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Flower_wood_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 77
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b671801f35d65930800000000000000
+      internalID: 4131724174995584694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Flower_wood_2
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 79
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb16d9c9dfcfd7830800000000000000
+      internalID: 4070687804397281726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Flower_wood_3
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 63
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c01070b8f0ac677c0800000000000000
+      internalID: -4073846644804222708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Flower_wood_4
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 65
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76622c4c16d3a6c50800000000000000
+      internalID: 6659202489142879847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Flower_wood_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 33
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25c22947ffa1969f0800000000000000
+      internalID: -474818601236157358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Flower_wood_6
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 36
+        width: 34
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c663c634eaeb722b0800000000000000
+      internalID: -5609305155201911188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Flower_wood_7
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 36
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17a16a102a44ecda0800000000000000
+      internalID: -5922720997342569871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Flower_wood_8
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 31
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd2881e787b2faa00800000000000000
+      internalID: 769881857815249631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Flower_wood_9
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 6
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98726d93974649570800000000000000
+      internalID: 8472507270814902153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Flower_wood_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eccbd9e568e36a1a0800000000000000
+      internalID: -6798677840635249458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Flower_wood_11
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25917ff09301ea220800000000000000
+      internalID: 2498952680504236370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Flower_wood_12
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a472ccc8e7e49ab30800000000000000
+      internalID: 4299053624736884554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Sprite_Plain_Plant_Flower_wood_0: 5715572308168644385
+      Sprite_Plain_Plant_Flower_wood_1: 4131724174995584694
+      Sprite_Plain_Plant_Flower_wood_10: -6798677840635249458
+      Sprite_Plain_Plant_Flower_wood_11: 2498952680504236370
+      Sprite_Plain_Plant_Flower_wood_12: 4299053624736884554
+      Sprite_Plain_Plant_Flower_wood_2: 4070687804397281726
+      Sprite_Plain_Plant_Flower_wood_3: -4073846644804222708
+      Sprite_Plain_Plant_Flower_wood_4: 6659202489142879847
+      Sprite_Plain_Plant_Flower_wood_5: -474818601236157358
+      Sprite_Plain_Plant_Flower_wood_6: -5609305155201911188
+      Sprite_Plain_Plant_Flower_wood_7: -5922720997342569871
+      Sprite_Plain_Plant_Flower_wood_8: 769881857815249631
+      Sprite_Plain_Plant_Flower_wood_9: 8472507270814902153
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

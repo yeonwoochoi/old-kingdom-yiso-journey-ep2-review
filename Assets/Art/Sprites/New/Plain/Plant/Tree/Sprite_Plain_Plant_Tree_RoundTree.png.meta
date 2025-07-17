@@ -1,0 +1,364 @@
+fileFormatVersion: 2
+guid: 24e1291fb90e57c4882e29bce09d8382
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 700675556276681899
+    second: Sprite_Plain_Plant_Tree_RoundTreet_0
+  - first:
+      213: 1953187377340312628
+    second: Sprite_Plain_Plant_Tree_RoundTreet_1
+  - first:
+      213: -2772350129763739571
+    second: Sprite_Plain_Plant_Tree_RoundTreet_2
+  - first:
+      213: -7902970933232564205
+    second: Sprite_Plain_Plant_Tree_RoundTreet_3
+  - first:
+      213: -2117637561924365915
+    second: Sprite_Plain_Plant_Tree_RoundTreet_4
+  - first:
+      213: 598152011523899857
+    second: Sprite_Plain_Plant_Tree_RoundTreet_5
+  - first:
+      213: 1346568255347573360
+    second: Sprite_Plain_Plant_Tree_RoundTreet_6
+  - first:
+      213: -6041260256417311307
+    second: Sprite_Plain_Plant_Tree_RoundTreet_7
+  - first:
+      213: -533429037467493466
+    second: Sprite_Plain_Plant_Tree_RoundTreet_8
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Tree_RoundTreet_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 319
+        width: 96
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bacbba2c4bc49b900800000000000000
+      internalID: 700675556276681899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Tree_RoundTreet_1
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 321
+        width: 130
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43c652e329d1b1b10800000000000000
+      internalID: 1953187377340312628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Tree_RoundTreet_2
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 321
+        width: 115
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d489c6ade32a689d0800000000000000
+      internalID: -2772350129763739571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Tree_RoundTreet_3
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 321
+        width: 96
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3188f66dec1035290800000000000000
+      internalID: -7902970933232564205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Tree_RoundTreet_4
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 320
+        width: 130
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a1597e6bd3ac92e0800000000000000
+      internalID: -2117637561924365915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Tree_RoundTreet_5
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 320
+        width: 115
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d14198d5101d4800800000000000000
+      internalID: 598152011523899857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Tree_RoundTreet_6
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 96
+        width: 96
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0724fcd91b8ffa210800000000000000
+      internalID: 1346568255347573360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Tree_RoundTreet_7
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 100
+        width: 130
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b59f840ec1292ca0800000000000000
+      internalID: -6041260256417311307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Tree_RoundTreet_8
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 100
+        width: 115
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ab1fdcdd11e898f0800000000000000
+      internalID: -533429037467493466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Sprite_Plain_Plant_Tree_RoundTreet_0: 700675556276681899
+      Sprite_Plain_Plant_Tree_RoundTreet_1: 1953187377340312628
+      Sprite_Plain_Plant_Tree_RoundTreet_2: -2772350129763739571
+      Sprite_Plain_Plant_Tree_RoundTreet_3: -7902970933232564205
+      Sprite_Plain_Plant_Tree_RoundTreet_4: -2117637561924365915
+      Sprite_Plain_Plant_Tree_RoundTreet_5: 598152011523899857
+      Sprite_Plain_Plant_Tree_RoundTreet_6: 1346568255347573360
+      Sprite_Plain_Plant_Tree_RoundTreet_7: -6041260256417311307
+      Sprite_Plain_Plant_Tree_RoundTreet_8: -533429037467493466
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
