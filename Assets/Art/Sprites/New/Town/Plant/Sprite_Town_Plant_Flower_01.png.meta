@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 6f6654334b142d74cb994d490f08dc57
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3768178095564838133
+    second: Sprite_Town_Plant_Flower_01_0
+  - first:
+      213: 2813738370106019544
+    second: Sprite_Town_Plant_Flower_01_1
+  - first:
+      213: -8403659980019527667
+    second: Sprite_Town_Plant_Flower_01_2
+  - first:
+      213: 4148211952055692511
+    second: Sprite_Town_Plant_Flower_01_3
+  - first:
+      213: 7476600099838089707
+    second: Sprite_Town_Plant_Flower_01_4
+  - first:
+      213: -7545399655994088189
+    second: Sprite_Town_Plant_Flower_01_5
+  - first:
+      213: -4279410792026047968
+    second: Sprite_Town_Plant_Flower_01_6
+  - first:
+      213: 4585560949030301746
+    second: Sprite_Town_Plant_Flower_01_7
+  - first:
+      213: -8300793648509292662
+    second: Sprite_Town_Plant_Flower_01_8
+  - first:
+      213: -1638184448100791468
+    second: Sprite_Town_Plant_Flower_01_9
+  - first:
+      213: -5571025345810215068
+    second: Sprite_Town_Plant_Flower_01_10
+  - first:
+      213: 108161226770661162
+    second: Sprite_Town_Plant_Flower_01_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Flower_01_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 208
+        width: 73
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f4dc8463024b4430800000000000000
+      internalID: 3768178095564838133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Flower_01_1
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 205
+        width: 75
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8de4e09c3286c0720800000000000000
+      internalID: 2813738370106019544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Flower_01_2
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 209
+        width: 75
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0015cdc5c3306b80800000000000000
+      internalID: -8403659980019527667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Flower_01_3
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 155
+        width: 73
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdc2f4fcac8619930800000000000000
+      internalID: 4148211952055692511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Flower_01_4
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 155
+        width: 71
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be9df769d2832c760800000000000000
+      internalID: 7476600099838089707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Flower_01_5
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 154
+        width: 74
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3052e187dfa594790800000000000000
+      internalID: -7545399655994088189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Flower_01_6
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 97
+        width: 75
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02a7055de8a7c94c0800000000000000
+      internalID: -4279410792026047968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Flower_01_7
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 96
+        width: 71
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 230bad6436f23af30800000000000000
+      internalID: 4585560949030301746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Flower_01_8
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 96
+        width: 71
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8fe8caf728adcc80800000000000000
+      internalID: -8300793648509292662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Flower_01_9
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 9
+        width: 102
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45b02668ceff349e0800000000000000
+      internalID: -1638184448100791468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Flower_01_10
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 13
+        width: 43
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46fc84ce6fdbfa2b0800000000000000
+      internalID: -5571025345810215068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Flower_01_11
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 10
+        width: 36
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2fb22c0014408100800000000000000
+      internalID: 108161226770661162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Sprite_Town_Plant_Flower_01_0: 3768178095564838133
+      Sprite_Town_Plant_Flower_01_1: 2813738370106019544
+      Sprite_Town_Plant_Flower_01_10: -5571025345810215068
+      Sprite_Town_Plant_Flower_01_11: 108161226770661162
+      Sprite_Town_Plant_Flower_01_2: -8403659980019527667
+      Sprite_Town_Plant_Flower_01_3: 4148211952055692511
+      Sprite_Town_Plant_Flower_01_4: 7476600099838089707
+      Sprite_Town_Plant_Flower_01_5: -7545399655994088189
+      Sprite_Town_Plant_Flower_01_6: -4279410792026047968
+      Sprite_Town_Plant_Flower_01_7: 4585560949030301746
+      Sprite_Town_Plant_Flower_01_8: -8300793648509292662
+      Sprite_Town_Plant_Flower_01_9: -1638184448100791468
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
