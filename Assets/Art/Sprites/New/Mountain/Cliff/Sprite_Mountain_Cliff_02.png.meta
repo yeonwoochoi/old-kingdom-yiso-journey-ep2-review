@@ -1,13 +1,25 @@
 fileFormatVersion: 2
-guid: 5d4861611c7765f4fb8ccbddd2ec6542
+guid: 55fbcdcf58ae00b47b0628c3e96d2de3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7638732526634692385
-    second: Sprite_Town_BlackSmith_Forge_01_Anim_0
+      213: 7259581540865894799
+    second: Sprite_Mountain_Cliff_02_0
   - first:
-      213: 54007949349331104
-    second: Sprite_Town_BlackSmith_Forge_01_Anim_1
+      213: 296900173704591370
+    second: Sprite_Mountain_Cliff_02_1
+  - first:
+      213: 4413233126151835668
+    second: Sprite_Mountain_Cliff_02_2
+  - first:
+      213: 7746075141829953206
+    second: Sprite_Mountain_Cliff_02_3
+  - first:
+      213: -6941080217622779272
+    second: Sprite_Mountain_Cliff_02_4
+  - first:
+      213: 7266061444165780235
+    second: Sprite_Mountain_Cliff_02_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Town_BlackSmith_Forge_01_Anim_0
+      name: Sprite_Mountain_Cliff_02_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 54
-        width: 256
-        height: 138
+        x: 14
+        y: 147
+        width: 67
+        height: 127
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd097bf1d35cdf590800000000000000
-      internalID: -7638732526634692385
+      spriteID: f896b41d2f63fb460800000000000000
+      internalID: 7259581540865894799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Town_BlackSmith_Forge_01_Anim_1
+      name: Sprite_Mountain_Cliff_02_1
       rect:
         serializedVersion: 2
-        x: 220
-        y: 184
-        width: 9
-        height: 9
+        x: 95
+        y: 159
+        width: 66
+        height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +165,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a0a30c91ffdfb000800000000000000
-      internalID: 54007949349331104
+      spriteID: a08f96b822dce1400800000000000000
+      internalID: 296900173704591370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Mountain_Cliff_02_2
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 147
+        width: 77
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 410544b5524fe3d30800000000000000
+      internalID: 4413233126151835668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Mountain_Cliff_02_3
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 159
+        width: 88
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b602401d469f7b60800000000000000
+      internalID: 7746075141829953206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Mountain_Cliff_02_4
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 180
+        width: 22
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87a6a1741545caf90800000000000000
+      internalID: -6941080217622779272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Mountain_Cliff_02_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 18
+        width: 281
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b03c9afd26c36d460800000000000000
+      internalID: 7266061444165780235
       vertices: []
       indices: 
       edges: []
@@ -173,8 +273,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprite_Town_BlackSmith_Forge_01_Anim_0: -7638732526634692385
-      Sprite_Town_BlackSmith_Forge_01_Anim_1: 54007949349331104
+      Sprite_Mountain_Cliff_02_0: 7259581540865894799
+      Sprite_Mountain_Cliff_02_1: 296900173704591370
+      Sprite_Mountain_Cliff_02_2: 4413233126151835668
+      Sprite_Mountain_Cliff_02_3: 7746075141829953206
+      Sprite_Mountain_Cliff_02_4: -6941080217622779272
+      Sprite_Mountain_Cliff_02_5: 7266061444165780235
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

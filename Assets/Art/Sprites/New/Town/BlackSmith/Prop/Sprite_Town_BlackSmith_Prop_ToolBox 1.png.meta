@@ -1,13 +1,25 @@
 fileFormatVersion: 2
-guid: 5d4861611c7765f4fb8ccbddd2ec6542
+guid: 97718bb65fc83f54b8ac4a04af790f1a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7638732526634692385
-    second: Sprite_Town_BlackSmith_Forge_01_Anim_0
+      213: -6870990826897202827
+    second: Sprite_Town_BlackSmith_Prop_ToolBox 1_0
   - first:
-      213: 54007949349331104
-    second: Sprite_Town_BlackSmith_Forge_01_Anim_1
+      213: 4495554115735671490
+    second: Sprite_Town_BlackSmith_Prop_ToolBox 1_1
+  - first:
+      213: 6227192398552888679
+    second: Sprite_Town_BlackSmith_Prop_ToolBox 1_2
+  - first:
+      213: 7294948801635646270
+    second: Sprite_Town_BlackSmith_Prop_ToolBox 1_3
+  - first:
+      213: -6337293725259174406
+    second: Sprite_Town_BlackSmith_Prop_ToolBox 1_4
+  - first:
+      213: 1081245304166597657
+    second: Sprite_Town_BlackSmith_Prop_ToolBox 1_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Town_BlackSmith_Forge_01_Anim_0
+      name: Sprite_Town_BlackSmith_Prop_ToolBox 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 54
-        width: 256
-        height: 138
+        x: 1
+        y: 0
+        width: 63
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd097bf1d35cdf590800000000000000
-      internalID: -7638732526634692385
+      spriteID: 57123db3f3655a0a0800000000000000
+      internalID: -6870990826897202827
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Town_BlackSmith_Forge_01_Anim_1
+      name: Sprite_Town_BlackSmith_Prop_ToolBox 1_1
       rect:
         serializedVersion: 2
-        x: 220
-        y: 184
-        width: 9
-        height: 9
+        x: 65
+        y: 0
+        width: 63
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +165,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a0a30c91ffdfb000800000000000000
-      internalID: 54007949349331104
+      spriteID: 2c258f856aa636e30800000000000000
+      internalID: 4495554115735671490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_BlackSmith_Prop_ToolBox 1_2
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 0
+        width: 65
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 765f1cf4e7e6b6650800000000000000
+      internalID: 6227192398552888679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_BlackSmith_Prop_ToolBox 1_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 65
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3b7728e84ddc3560800000000000000
+      internalID: 7294948801635646270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_BlackSmith_Prop_ToolBox 1_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1
+        width: 62
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afd6d9ceee86d08a0800000000000000
+      internalID: -6337293725259174406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_BlackSmith_Prop_ToolBox 1_5
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1
+        width: 60
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 914c8ed10ea510f00800000000000000
+      internalID: 1081245304166597657
       vertices: []
       indices: 
       edges: []
@@ -173,8 +273,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprite_Town_BlackSmith_Forge_01_Anim_0: -7638732526634692385
-      Sprite_Town_BlackSmith_Forge_01_Anim_1: 54007949349331104
+      Sprite_Town_BlackSmith_Prop_ToolBox 1_0: -6870990826897202827
+      Sprite_Town_BlackSmith_Prop_ToolBox 1_1: 4495554115735671490
+      Sprite_Town_BlackSmith_Prop_ToolBox 1_2: 6227192398552888679
+      Sprite_Town_BlackSmith_Prop_ToolBox 1_3: 7294948801635646270
+      Sprite_Town_BlackSmith_Prop_ToolBox 1_4: -6337293725259174406
+      Sprite_Town_BlackSmith_Prop_ToolBox 1_5: 1081245304166597657
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,13 +1,22 @@
 fileFormatVersion: 2
-guid: 5d4861611c7765f4fb8ccbddd2ec6542
+guid: 2c229e33124b3314ab2063f359ce0e46
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7638732526634692385
-    second: Sprite_Town_BlackSmith_Forge_01_Anim_0
+      213: 1405061972484783826
+    second: Sprite_Town_BlackSmith_Prop_Anvil_0
   - first:
-      213: 54007949349331104
-    second: Sprite_Town_BlackSmith_Forge_01_Anim_1
+      213: 7255813037876432912
+    second: Sprite_Town_BlackSmith_Prop_Anvil_1
+  - first:
+      213: -4122479408427632834
+    second: Sprite_Town_BlackSmith_Prop_Anvil_2
+  - first:
+      213: -7576739807924738669
+    second: Sprite_Town_BlackSmith_Prop_Anvil_3
+  - first:
+      213: -4367507065330191646
+    second: Sprite_Town_BlackSmith_Prop_Anvil_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Town_BlackSmith_Forge_01_Anim_0
+      name: Sprite_Town_BlackSmith_Prop_Anvil_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 54
-        width: 256
-        height: 138
+        x: 7
+        y: 7
+        width: 51
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd097bf1d35cdf590800000000000000
-      internalID: -7638732526634692385
+      spriteID: 2de7d5d6b68cf7310800000000000000
+      internalID: 1405061972484783826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Town_BlackSmith_Forge_01_Anim_1
+      name: Sprite_Town_BlackSmith_Prop_Anvil_1
       rect:
         serializedVersion: 2
-        x: 220
-        y: 184
-        width: 9
-        height: 9
+        x: 70
+        y: 8
+        width: 35
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +162,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a0a30c91ffdfb000800000000000000
-      internalID: 54007949349331104
+      spriteID: 010d547d383d1b460800000000000000
+      internalID: 7255813037876432912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_BlackSmith_Prop_Anvil_2
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 8
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e37fec2e1d20ac6c0800000000000000
+      internalID: -4122479408427632834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_BlackSmith_Prop_Anvil_3
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 8
+        width: 36
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 395a519b9430ad690800000000000000
+      internalID: -7576739807924738669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_BlackSmith_Prop_Anvil_4
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 8
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e23cf0d67f7363c0800000000000000
+      internalID: -4367507065330191646
       vertices: []
       indices: 
       edges: []
@@ -173,8 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprite_Town_BlackSmith_Forge_01_Anim_0: -7638732526634692385
-      Sprite_Town_BlackSmith_Forge_01_Anim_1: 54007949349331104
+      Sprite_Town_BlackSmith_Prop_Anvil_0: 1405061972484783826
+      Sprite_Town_BlackSmith_Prop_Anvil_1: 7255813037876432912
+      Sprite_Town_BlackSmith_Prop_Anvil_2: -4122479408427632834
+      Sprite_Town_BlackSmith_Prop_Anvil_3: -7576739807924738669
+      Sprite_Town_BlackSmith_Prop_Anvil_4: -4367507065330191646
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
