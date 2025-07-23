@@ -62,7 +62,7 @@ namespace Gameplay.Tools.StateMachine {
         public virtual void RestorePreviousState() {
             CurrentState = PreviousState;
 
-            OnStateChange?.Invoke();
+            OnStateChange?.Invoke(PreviousState, CurrentState);
 
             if (TriggerEvents) {
                 YisoEventManager.TriggerEvent(new YisoStateChangeEvent<T>(this));
