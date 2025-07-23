@@ -16,12 +16,12 @@ namespace Gameplay.Character.Core {
     public class YisoCharacter : RunIBehaviour {
         [SerializeField] private CharacterTypes characterType = CharacterTypes.AI;
         [SerializeField] private string characterID = "";
-        [SerializeField] private Animator characterAnimator;
+        [SerializeField] private Animator animator;
         [SerializeField] private GameObject characterModel;
         [SerializeField] private YisoHealth characterHealth;
         [SerializeField] private YisoAIBrain characterBrain;
 
-        public Animator CharacterAnimator => characterAnimator;
+        public Animator Animator => animator;
         
         private Dictionary<Type, IYisoCharacterModule> _modules;
 
@@ -47,7 +47,11 @@ namespace Gameplay.Character.Core {
         }
 
         private void RegisterModule(IYisoCharacterModule module, bool forceSet = false) {
-            if (_modules.ContainsKey(module.GetType()) && !forceSet) return;
+            var type = module.GetType();
+            if (_modules.ContainsKey(type)) {
+                if (forceSet) _modules[type] = module;
+                return;
+            }
             _modules.Add(module.GetType(), module);
         }
 

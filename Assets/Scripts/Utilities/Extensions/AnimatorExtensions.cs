@@ -17,86 +17,54 @@ namespace Utilities.Extensions {
             return parameters.Any(param => param.type == type && param.name == name);
         }
 
-        /// <summary>
-        /// parameterName을 hash값으로 바꾼다음 parameterList에 넣어주고 out parameter로 빼줌
-        /// </summary>
-        /// <param name="animator"></param>
-        /// <param name="parameterName"></param>
-        /// <param name="parameter"></param>
-        /// <param name="type"></param>
-        /// <param name="parameterList"></param>
-        public static void AddAnimatorParameterIfExists(Animator animator, string parameterName, out int parameter,
+        public static bool TryAddAnimatorParameter(this Animator animator, string parameterName,
             AnimatorControllerParameterType type, HashSet<int> parameterList) {
-            if (string.IsNullOrEmpty(parameterName)) {
-                parameter = -1;
-                return;
-            }
+            if (string.IsNullOrEmpty(parameterName)) return false;
+            if (!animator.HasParameterOfType(parameterName, type)) return false;
 
-            parameter = Animator.StringToHash(parameterName);
-
-            if (animator.HasParameterOfType(parameterName, type)) {
-                parameterList.Add(parameter);
-            }
-        }
-
-        public static void UpdateAnimatorBool(Animator animator, string parameterName, bool value) {
-            animator.SetBool(parameterName, value);
-        }
-
-        public static void UpdateAnimatorTrigger(Animator animator, string parameterName) {
-            animator.SetTrigger(parameterName);
-        }
-
-        public static void UpdateAnimatorInteger(Animator animator, string parameterName, int value) {
-            animator.SetInteger(parameterName, value);
-        }
-
-        public static void UpdateAnimatorFloat(Animator animator, string parameterName, float value) {
-            animator.SetFloat(parameterName, value);
-        }
-
-        public static void UpdateAnimatorBool(Animator animator, int parameter, bool value) {
-            animator.SetBool(parameter, value);
-        }
-
-        public static void UpdateAnimatorTrigger(Animator animator, int parameter) {
-            animator.SetTrigger(parameter);
-        }
-
-        public static void UpdateAnimatorInteger(Animator animator, int parameter, int value) {
-            animator.SetInteger(parameter, value);
-        }
-
-        public static void UpdateAnimatorFloat(Animator animator, int parameter, float value) {
-            animator.SetFloat(parameter, value);
-        }
-
-        public static bool UpdateAnimatorBool(Animator animator, int parameter, bool value, HashSet<int> parameterList,
-            bool performSanityCheck = true) {
-            if (performSanityCheck && !parameterList.Contains(parameter)) return false;
-            animator.SetBool(parameter, value);
+            var hash = Animator.StringToHash(parameterName);
+            parameterList.Add(hash);
             return true;
         }
 
-        public static bool UpdateAnimatorTrigger(Animator animator, int parameter, HashSet<int> parameterList,
-            bool performSanityCheck = true) {
-            if (performSanityCheck && !parameterList.Contains(parameter)) return false;
-            animator.SetTrigger(parameter);
+        public static bool TrySetBool(this Animator animator, int hash, bool value, HashSet<int> parameterList) {
+            if (!parameterList.Contains(hash)) return false;
+            animator.SetBool(hash, value);
             return true;
         }
 
-        public static bool UpdateAnimatorFloat(Animator animator, int parameter, float value,
-            HashSet<int> parameterList, bool performSanityCheck = true) {
-            if (performSanityCheck && !parameterList.Contains(parameter)) return false;
-            animator.SetFloat(parameter, value);
+        public static bool TrySetFloat(this Animator animator, int hash, float value, HashSet<int> parameterList) {
+            if (!parameterList.Contains(hash)) return false;
+            animator.SetFloat(hash, value);
             return true;
         }
 
-        public static bool UpdateAnimatorInteger(Animator animator, int parameter, int value,
-            HashSet<int> parameterList, bool performSanityCheck = true) {
-            if (performSanityCheck && !parameterList.Contains(parameter)) return false;
-            animator.SetInteger(parameter, value);
+        public static bool TrySetInteger(this Animator animator, int hash, int value, HashSet<int> parameterList) {
+            if (!parameterList.Contains(hash)) return false;
+            animator.SetInteger(hash, value);
             return true;
+        }
+
+        public static bool TrySetTrigger(this Animator animator, int hash, HashSet<int> parameterList) {
+            if (!parameterList.Contains(hash)) return false;
+            animator.SetTrigger(hash);
+            return true;
+        }
+
+        public static void SetBool(this Animator animator, int hash, bool value) {
+            animator.SetBool(hash, value);
+        }
+
+        public static void SetFloat(this Animator animator, int hash, float value) {
+            animator.SetFloat(hash, value);
+        }
+
+        public static void SetInteger(this Animator animator, int hash, int value) {
+            animator.SetInteger(hash, value);
+        }
+
+        public static void SetTrigger(this Animator animator, int hash) {
+            animator.SetTrigger(hash);
         }
     }
 }

@@ -3,51 +3,49 @@ using UnityEngine;
 using Utilities.Extensions;
 
 namespace Gameplay.Character.Core.Modules {
+    public static class YisoAnimatorParams {
+        public const string MoveSpeed = "MoveSpeed";
+        public const string AttackSpeed = "AttackSpeed";
+        public const string Horizontal = "X";
+        public const string Vertical = "Y";
+        public const string IsIdle = "IsIdle";
+        public const string IsMoving = "IsMoving";
+        public const string IsAttacking = "IsAttacking";
+        public const string IsMoveAttacking = "IsMoveAttack";
+        public const string IsDead = "IsDeath";
+        public const string IsSpellCasting = "IsSpellCasting";
+        public const string IsSkillCasting = "IsSkillCasting";
+        public const string IsSpawning = "IsSpawn";
+        public const string SkillNumber = "SkillNumber";
+        public const string Combo = "Combo";
+        public const string DeathType = "DeathType";
+    }
+    
+    public static class YisoAnimatorHashes {
+        public static readonly int MoveSpeed = Animator.StringToHash(YisoAnimatorParams.MoveSpeed);
+        public static readonly int AttackSpeed = Animator.StringToHash(YisoAnimatorParams.AttackSpeed);
+        public static readonly int Horizontal = Animator.StringToHash(YisoAnimatorParams.Horizontal);
+        public static readonly int Vertical = Animator.StringToHash(YisoAnimatorParams.Vertical);
+        public static readonly int IsIdle = Animator.StringToHash(YisoAnimatorParams.IsIdle);
+        public static readonly int IsMoving = Animator.StringToHash(YisoAnimatorParams.IsMoving);
+        public static readonly int IsAttacking = Animator.StringToHash(YisoAnimatorParams.IsAttacking);
+        public static readonly int IsMoveAttacking = Animator.StringToHash(YisoAnimatorParams.IsMoveAttacking);
+        public static readonly int IsDead = Animator.StringToHash(YisoAnimatorParams.IsDead);
+        public static readonly int IsSpellCasting = Animator.StringToHash(YisoAnimatorParams.IsSpellCasting);
+        public static readonly int IsSkillCasting = Animator.StringToHash(YisoAnimatorParams.IsSkillCasting);
+        public static readonly int IsSpawning = Animator.StringToHash(YisoAnimatorParams.IsSpawning);
+        public static readonly int SkillNumber = Animator.StringToHash(YisoAnimatorParams.SkillNumber);
+        public static readonly int Combo = Animator.StringToHash(YisoAnimatorParams.Combo);
+        public static readonly int DeathType = Animator.StringToHash(YisoAnimatorParams.DeathType);
+    }
+    
     public sealed class YisoCharacterAnimationModule : YisoCharacterModuleBase {
         private Animator _animator;
         private HashSet<int> _animatorParameters;
 
-        #region Animator Parameters
-
-        // Animator Parameter Names
-        private const string k_MoveSpeedParam = "MoveSpeed";
-        private const string k_AtkSpeedParam = "AttackSpeed";
-        private const string k_HorizontalParam = "X";
-        private const string k_VerticalParam = "Y";
-        private const string k_IsIdleParam = "IsIdle";
-        private const string k_IsMovingParam = "IsMoving";
-        private const string k_IsAttackingParam = "IsAttacking";
-        private const string k_IsMoveAttackingParam = "IsMoveAttack";
-        private const string k_IsDeadParam = "IsDeath";
-        private const string k_IsSpellCastingParam = "IsSpellCasting";
-        private const string k_IsSkillCastingParam = "IsSkillCasting";
-        private const string k_IsSpawningParam = "IsSpawn";
-        private const string k_SkillNumberParam = "SkillNumber";
-        private const string k_ComboParam = "Combo";
-        private const string k_DeathTypeParam = "DeathType";
-
-        // Hashed Parameter IDs
-        private int _horizontalHash;
-        private int _verticalHash;
-        private int _isIdleHash;
-        private int _isMovingHash;
-        private int _isAttackingHash;
-        private int _isMoveAttackingHash;
-        private int _isDeadHash;
-        private int _isSpellCastingHash;
-        private int _isSkillCastingHash;
-        private int _isSpawningHash;
-        private int _skillNumberHash;
-        private int _comboHash;
-        private int _deathTypeHash;
-        private int _moveSpeedHash;
-        private int _attackSpeedHash;
-
-        #endregion
-
         public override void Initialize(YisoCharacter character) {
             base.Initialize(character);
-            _animator = character.CharacterAnimator;
+            _animator = character.Animator;
             _animatorParameters = new HashSet<int>();
             InitializeParameters();
         }
@@ -55,36 +53,22 @@ namespace Gameplay.Character.Core.Modules {
         private void InitializeParameters() {
             if (_animator == null) return;
 
-            AnimatorExtensions.AddAnimatorParameterIfExists(_animator, k_HorizontalParam, out _horizontalHash,
-                AnimatorControllerParameterType.Float, _animatorParameters);
-            AnimatorExtensions.AddAnimatorParameterIfExists(_animator, k_VerticalParam, out _verticalHash,
-                AnimatorControllerParameterType.Float, _animatorParameters);
-            AnimatorExtensions.AddAnimatorParameterIfExists(_animator, k_IsIdleParam, out _isIdleHash,
-                AnimatorControllerParameterType.Bool, _animatorParameters);
-            AnimatorExtensions.AddAnimatorParameterIfExists(_animator, k_IsMovingParam, out _isMovingHash,
-                AnimatorControllerParameterType.Bool, _animatorParameters);
-            AnimatorExtensions.AddAnimatorParameterIfExists(_animator, k_IsAttackingParam, out _isAttackingHash,
-                AnimatorControllerParameterType.Bool, _animatorParameters);
-            AnimatorExtensions.AddAnimatorParameterIfExists(_animator, k_IsMoveAttackingParam, out _isMoveAttackingHash,
-                AnimatorControllerParameterType.Bool, _animatorParameters);
-            AnimatorExtensions.AddAnimatorParameterIfExists(_animator, k_IsDeadParam, out _isDeadHash,
-                AnimatorControllerParameterType.Bool, _animatorParameters);
-            AnimatorExtensions.AddAnimatorParameterIfExists(_animator, k_IsSpellCastingParam, out _isSpellCastingHash,
-                AnimatorControllerParameterType.Bool, _animatorParameters);
-            AnimatorExtensions.AddAnimatorParameterIfExists(_animator, k_IsSkillCastingParam, out _isSkillCastingHash,
-                AnimatorControllerParameterType.Bool, _animatorParameters);
-            AnimatorExtensions.AddAnimatorParameterIfExists(_animator, k_IsSpawningParam, out _isSpawningHash,
-                AnimatorControllerParameterType.Trigger, _animatorParameters);
-            AnimatorExtensions.AddAnimatorParameterIfExists(_animator, k_SkillNumberParam, out _skillNumberHash,
-                AnimatorControllerParameterType.Int, _animatorParameters);
-            AnimatorExtensions.AddAnimatorParameterIfExists(_animator, k_ComboParam, out _comboHash,
-                AnimatorControllerParameterType.Int, _animatorParameters);
-            AnimatorExtensions.AddAnimatorParameterIfExists(_animator, k_DeathTypeParam, out _deathTypeHash,
-                AnimatorControllerParameterType.Int, _animatorParameters);
-            AnimatorExtensions.AddAnimatorParameterIfExists(_animator, k_MoveSpeedParam, out _moveSpeedHash,
-                AnimatorControllerParameterType.Float, _animatorParameters);
-            AnimatorExtensions.AddAnimatorParameterIfExists(_animator, k_AtkSpeedParam, out _attackSpeedHash,
-                AnimatorControllerParameterType.Float, _animatorParameters);
+            // 모든 파라미터 해시를 등록 (Animator에 실제로 있는 것만)
+            _animator.TryAddAnimatorParameter(YisoAnimatorParams.Horizontal, AnimatorControllerParameterType.Float, _animatorParameters);
+            _animator.TryAddAnimatorParameter(YisoAnimatorParams.Vertical, AnimatorControllerParameterType.Float, _animatorParameters);
+            _animator.TryAddAnimatorParameter(YisoAnimatorParams.MoveSpeed, AnimatorControllerParameterType.Float, _animatorParameters);
+            _animator.TryAddAnimatorParameter(YisoAnimatorParams.AttackSpeed, AnimatorControllerParameterType.Float, _animatorParameters);
+            _animator.TryAddAnimatorParameter(YisoAnimatorParams.IsIdle, AnimatorControllerParameterType.Bool, _animatorParameters);
+            _animator.TryAddAnimatorParameter(YisoAnimatorParams.IsMoving, AnimatorControllerParameterType.Bool, _animatorParameters);
+            _animator.TryAddAnimatorParameter(YisoAnimatorParams.IsAttacking, AnimatorControllerParameterType.Bool, _animatorParameters);
+            _animator.TryAddAnimatorParameter(YisoAnimatorParams.IsMoveAttacking, AnimatorControllerParameterType.Bool, _animatorParameters);
+            _animator.TryAddAnimatorParameter(YisoAnimatorParams.IsDead, AnimatorControllerParameterType.Bool, _animatorParameters);
+            _animator.TryAddAnimatorParameter(YisoAnimatorParams.IsSpellCasting, AnimatorControllerParameterType.Bool, _animatorParameters);
+            _animator.TryAddAnimatorParameter(YisoAnimatorParams.IsSkillCasting, AnimatorControllerParameterType.Bool, _animatorParameters);
+            _animator.TryAddAnimatorParameter(YisoAnimatorParams.IsSpawning, AnimatorControllerParameterType.Trigger, _animatorParameters);
+            _animator.TryAddAnimatorParameter(YisoAnimatorParams.SkillNumber, AnimatorControllerParameterType.Int, _animatorParameters);
+            _animator.TryAddAnimatorParameter(YisoAnimatorParams.Combo, AnimatorControllerParameterType.Int, _animatorParameters);
+            _animator.TryAddAnimatorParameter(YisoAnimatorParams.DeathType, AnimatorControllerParameterType.Int, _animatorParameters);
         }
 
         public override void OnUpdate() {
