@@ -4,8 +4,6 @@ using Gameplay.Tools.Event;
 using UnityEngine;
 
 namespace Gameplay.Tools.StateMachine {
-    // T : Enum
-    // State Change시 Event 발생시키고 싶으면 
     public struct YisoStateChangeEvent<T> where T : struct, IComparable, IConvertible, IFormattable {
         public GameObject target;
         public YisoStateMachine<T> targetStateMachine;
