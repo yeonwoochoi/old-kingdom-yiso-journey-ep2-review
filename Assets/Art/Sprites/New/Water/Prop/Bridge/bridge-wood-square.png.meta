@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 70d6b6edfefa1584981c0b3eca3b205b
+guid: 8d8e7021d13124442aa7d303aafcd6da
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2176145058017881278
-    second: Grass-Shallows (Summer)_0
+      213: -4838263107167730055
+    second: bridge-wood-square_0
+  - first:
+      213: 1123405158303448592
+    second: bridge-wood-square_1
+  - first:
+      213: -615434051350830928
+    second: bridge-wood-square_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grass-Shallows (Summer)_0
+      name: bridge-wood-square_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 192
-        height: 384
+        x: 7
+        y: 57
+        width: 82
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2435f157997ccc1e0800000000000000
-      internalID: -2176145058017881278
+      spriteID: 976c36796590bdcb0800000000000000
+      internalID: -4838263107167730055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge-wood-square_1
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 0
+        width: 161
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01eb4871a03279f00800000000000000
+      internalID: 1123405158303448592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge-wood-square_2
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 5
+        width: 82
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b0ed82bdf98577f0800000000000000
+      internalID: -615434051350830928
       vertices: []
       indices: 
       edges: []
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Grass-Shallows (Summer)_0: -2176145058017881278
+      bridge-wood-square_0: -4838263107167730055
+      bridge-wood-square_1: 1123405158303448592
+      bridge-wood-square_2: -615434051350830928
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

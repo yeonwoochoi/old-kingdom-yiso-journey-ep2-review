@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 70d6b6edfefa1584981c0b3eca3b205b
+guid: bd42f5d0a7599e34dac7e34f8de4bbdd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2176145058017881278
-    second: Grass-Shallows (Summer)_0
+      213: 3178264987875064236
+    second: Mountain, Animated Water_01 (Autumn)_0
+  - first:
+      213: 2622851052815860352
+    second: Mountain, Animated Water_01 (Autumn)_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grass-Shallows (Summer)_0
+      name: Mountain, Animated Water_01 (Autumn)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 192
-        height: 384
+        y: 31
+        width: 65
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2435f157997ccc1e0800000000000000
-      internalID: -2176145058017881278
+      spriteID: ca9ba54da277b1c20800000000000000
+      internalID: 3178264987875064236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mountain, Animated Water_01 (Autumn)_1
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 31
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08249d5d22d366420800000000000000
+      internalID: 2622851052815860352
       vertices: []
       indices: 
       edges: []
@@ -148,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Grass-Shallows (Summer)_0: -2176145058017881278
+      Mountain, Animated Water_01 (Autumn)_0: 3178264987875064236
+      Mountain, Animated Water_01 (Autumn)_1: 2622851052815860352
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

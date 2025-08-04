@@ -1,0 +1,624 @@
+fileFormatVersion: 2
+guid: c2b1bd1f830d40742acfc1fcb3d78fe1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5642009134414649775
+    second: bridge-wood-angled_0
+  - first:
+      213: 4059391908934330994
+    second: bridge-wood-angled_1
+  - first:
+      213: -4513395262428477324
+    second: bridge-wood-angled_2
+  - first:
+      213: 6806787914699379123
+    second: bridge-wood-angled_3
+  - first:
+      213: 8454470480592080193
+    second: bridge-wood-angled_4
+  - first:
+      213: 2916950718331990479
+    second: bridge-wood-angled_5
+  - first:
+      213: 4809809783848281911
+    second: bridge-wood-angled_6
+  - first:
+      213: -3915193954483279399
+    second: bridge-wood-angled_7
+  - first:
+      213: -4837823927165653558
+    second: bridge-wood-angled_8
+  - first:
+      213: -5977846166126472034
+    second: bridge-wood-angled_9
+  - first:
+      213: -1319502336428442737
+    second: bridge-wood-angled_10
+  - first:
+      213: 4396614401623196884
+    second: bridge-wood-angled_11
+  - first:
+      213: -5640171864042908796
+    second: bridge-wood-angled_12
+  - first:
+      213: 5169446145013385939
+    second: bridge-wood-angled_13
+  - first:
+      213: -336075267973597619
+    second: bridge-wood-angled_14
+  - first:
+      213: -3575617923095252111
+    second: bridge-wood-angled_15
+  - first:
+      213: -2238937102825854308
+    second: bridge-wood-angled_16
+  - first:
+      213: -8367907286275734184
+    second: bridge-wood-angled_17
+  - first:
+      213: 5127611931980928177
+    second: bridge-wood-angled_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bridge-wood-angled_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 225
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa95b444a617c4e40800000000000000
+      internalID: 5642009134414649775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge-wood-angled_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 223
+        width: 66
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27a20200f6bd55830800000000000000
+      internalID: 4059391908934330994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge-wood-angled_2
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 242
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 478050cfbe23d51c0800000000000000
+      internalID: -4513395262428477324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge-wood-angled_3
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 192
+        width: 143
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b114156b81967e50800000000000000
+      internalID: 6806787914699379123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge-wood-angled_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 193
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14d87bfbb10545570800000000000000
+      internalID: 8454470480592080193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge-wood-angled_5
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 184
+        width: 98
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc1bf7149371b7820800000000000000
+      internalID: 2916950718331990479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge-wood-angled_6
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 96
+        width: 156
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 737a973d380efb240800000000000000
+      internalID: 4809809783848281911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge-wood-angled_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 65
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d9644c87df6aa9c0800000000000000
+      internalID: -3915193954483279399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge-wood-angled_8
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 127
+        width: 66
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acde76725c89cdcb0800000000000000
+      internalID: -4837823927165653558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge-wood-angled_9
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 146
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e94d91a759c6a0da0800000000000000
+      internalID: -5977846166126472034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge-wood-angled_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 129
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8b72e4bd9f20bde0800000000000000
+      internalID: -1319502336428442737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge-wood-angled_11
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 88
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d40e170189e30d30800000000000000
+      internalID: 4396614401623196884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge-wood-angled_12
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 130
+        width: 33
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 483d19392951ab1b0800000000000000
+      internalID: -5640171864042908796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge-wood-angled_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 97
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3da090741ef8db740800000000000000
+      internalID: 5169446145013385939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge-wood-angled_14
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 95
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d46b3aa0355065bf0800000000000000
+      internalID: -336075267973597619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge-wood-angled_15
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 63
+        width: 91
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1733361817ad06ec0800000000000000
+      internalID: -3575617923095252111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge-wood-angled_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 66
+        width: 33
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a6f9f3192bde0e0800000000000000
+      internalID: -2238937102825854308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge-wood-angled_17
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 64
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 855c12088a83fdb80800000000000000
+      internalID: -8367907286275734184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge-wood-angled_18
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 63
+        width: 28
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b417c782efe82740800000000000000
+      internalID: 5127611931980928177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bridge-wood-angled_0: 5642009134414649775
+      bridge-wood-angled_1: 4059391908934330994
+      bridge-wood-angled_10: -1319502336428442737
+      bridge-wood-angled_11: 4396614401623196884
+      bridge-wood-angled_12: -5640171864042908796
+      bridge-wood-angled_13: 5169446145013385939
+      bridge-wood-angled_14: -336075267973597619
+      bridge-wood-angled_15: -3575617923095252111
+      bridge-wood-angled_16: -2238937102825854308
+      bridge-wood-angled_17: -8367907286275734184
+      bridge-wood-angled_18: 5127611931980928177
+      bridge-wood-angled_2: -4513395262428477324
+      bridge-wood-angled_3: 6806787914699379123
+      bridge-wood-angled_4: 8454470480592080193
+      bridge-wood-angled_5: 2916950718331990479
+      bridge-wood-angled_6: 4809809783848281911
+      bridge-wood-angled_7: -3915193954483279399
+      bridge-wood-angled_8: -4837823927165653558
+      bridge-wood-angled_9: -5977846166126472034
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

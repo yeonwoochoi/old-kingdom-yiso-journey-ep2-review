@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 70d6b6edfefa1584981c0b3eca3b205b
+guid: f40686035218ef54381ac639fe626c8c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2176145058017881278
-    second: Grass-Shallows (Summer)_0
+      213: 2463379190223539353
+    second: Grass-Dirt (Autumn)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grass-Shallows (Summer)_0
+      name: Grass-Dirt (Autumn)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 192
-        height: 384
+        width: 96
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2435f157997ccc1e0800000000000000
-      internalID: -2176145058017881278
+      spriteID: 99c0d5c625eaf2220800000000000000
+      internalID: 2463379190223539353
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Grass-Shallows (Summer)_0: -2176145058017881278
+      Grass-Dirt (Autumn)_0: 2463379190223539353
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

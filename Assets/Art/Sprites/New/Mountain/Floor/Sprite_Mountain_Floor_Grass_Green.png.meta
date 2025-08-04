@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 70d6b6edfefa1584981c0b3eca3b205b
+guid: 647277ef09d851a46a297aaafb0a9dd9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2176145058017881278
-    second: Grass-Shallows (Summer)_0
+      213: 5025780712583835603
+    second: Grass (Summer)_0
+  - first:
+      213: -8930374483620772334
+    second: Grass (Summer)_1
+  - first:
+      213: -7255558905872065040
+    second: Grass (Summer)_2
+  - first:
+      213: 4006563744106607050
+    second: Grass (Summer)_3
+  - first:
+      213: 616171943716113905
+    second: Grass (Summer)_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grass-Shallows (Summer)_0
+      name: Grass (Summer)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 192
-        height: 384
+        x: 10
+        y: 238
+        width: 77
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +140,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2435f157997ccc1e0800000000000000
-      internalID: -2176145058017881278
+      spriteID: 3dfa19c2ee82fb540800000000000000
+      internalID: 5025780712583835603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass (Summer)_1
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 137
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2164298e8bfe01480800000000000000
+      internalID: -8930374483620772334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass (Summer)_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 65
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fdd290ed931f4b90800000000000000
+      internalID: -7255558905872065040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass (Summer)_3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 95
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac1fe616f7c2a9730800000000000000
+      internalID: 4006563744106607050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass (Summer)_4
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 72
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fdc2c14e151d8800800000000000000
+      internalID: 616171943716113905
       vertices: []
       indices: 
       edges: []
@@ -148,7 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Grass-Shallows (Summer)_0: -2176145058017881278
+      Grass (Summer)_0: 5025780712583835603
+      Grass (Summer)_1: -8930374483620772334
+      Grass (Summer)_2: -7255558905872065040
+      Grass (Summer)_3: 4006563744106607050
+      Grass (Summer)_4: 616171943716113905
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

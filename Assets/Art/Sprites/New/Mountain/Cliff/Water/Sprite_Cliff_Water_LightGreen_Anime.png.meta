@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 70d6b6edfefa1584981c0b3eca3b205b
+guid: 19fc1db78936d014f94b86922c149120
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2176145058017881278
-    second: Grass-Shallows (Summer)_0
+      213: -6755485930061239413
+    second: Mountain, Animated Water_01 (Spring)_0
+  - first:
+      213: -5635656692518669436
+    second: Mountain, Animated Water_01 (Spring)_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grass-Shallows (Summer)_0
+      name: Mountain, Animated Water_01 (Spring)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 192
-        height: 384
+        y: 31
+        width: 65
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2435f157997ccc1e0800000000000000
-      internalID: -2176145058017881278
+      spriteID: b8bec85b651bf32a0800000000000000
+      internalID: -6755485930061239413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mountain, Animated Water_01 (Spring)_1
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 31
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4833f5ed8102ac1b0800000000000000
+      internalID: -5635656692518669436
       vertices: []
       indices: 
       edges: []
@@ -148,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Grass-Shallows (Summer)_0: -2176145058017881278
+      Mountain, Animated Water_01 (Spring)_0: -6755485930061239413
+      Mountain, Animated Water_01 (Spring)_1: -5635656692518669436
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 70d6b6edfefa1584981c0b3eca3b205b
+guid: 4cb9f52c41b172c4f8ebab05f02b1fc1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2176145058017881278
-    second: Grass-Shallows (Summer)_0
+      213: 2205924817342570766
+    second: Mountain, Waterfall Transitions (Summer)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grass-Shallows (Summer)_0
+      name: Mountain, Waterfall Transitions (Summer)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 192
-        height: 384
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2435f157997ccc1e0800000000000000
-      internalID: -2176145058017881278
+      spriteID: e012ce21fe40d9e10800000000000000
+      internalID: 2205924817342570766
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Grass-Shallows (Summer)_0: -2176145058017881278
+      Mountain, Waterfall Transitions (Summer)_0: 2205924817342570766
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
