@@ -1,0 +1,494 @@
+fileFormatVersion: 2
+guid: 07b0156bf6bc4454bb20c14a7d24a1ca
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6341135244033860862
+    second: Sprite_Water_Ship_Ships 1_0
+  - first:
+      213: -4767969350576651069
+    second: Sprite_Water_Ship_Ships 1_1
+  - first:
+      213: 6415901327325040839
+    second: Sprite_Water_Ship_Ships 1_2
+  - first:
+      213: -270579540513866441
+    second: Sprite_Water_Ship_Ships 1_3
+  - first:
+      213: 7283719649352820754
+    second: Sprite_Water_Ship_Ships 1_4
+  - first:
+      213: -5770815463427440662
+    second: Sprite_Water_Ship_Ships 1_5
+  - first:
+      213: -8451119269180904565
+    second: Sprite_Water_Ship_Ships 1_6
+  - first:
+      213: -939705319642025937
+    second: Sprite_Water_Ship_Ships 1_7
+  - first:
+      213: 1140999566824364339
+    second: Sprite_Water_Ship_Ships 1_8
+  - first:
+      213: -4556366555534178888
+    second: Sprite_Water_Ship_Ships 1_9
+  - first:
+      213: -16458286894947830
+    second: Sprite_Water_Ship_Ships 1_10
+  - first:
+      213: -8826798694935664625
+    second: Sprite_Water_Ship_Ships 1_11
+  - first:
+      213: -3525434145630280598
+    second: Sprite_Water_Ship_Ships 1_12
+  - first:
+      213: 7981790985265891392
+    second: Sprite_Water_Ship_Ships 1_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprite_Water_Ship_Ships 1_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 671
+        width: 396
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef4295d58ec300850800000000000000
+      internalID: 6341135244033860862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Ship_Ships 1_1
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 703
+        width: 405
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c4cdee2325c4ddb0800000000000000
+      internalID: -4767969350576651069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Ship_Ships 1_2
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 383
+        width: 396
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c09a29a34cd90950800000000000000
+      internalID: 6415901327325040839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Ship_Ships 1_3
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 703
+        width: 361
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73dbe2c6755be3cf0800000000000000
+      internalID: -270579540513866441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Ship_Ships 1_4
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 383
+        width: 405
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21825372e68f41560800000000000000
+      internalID: 7283719649352820754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Ship_Ships 1_5
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 415
+        width: 361
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aef731e39e1f9efa0800000000000000
+      internalID: -5770815463427440662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Ship_Ships 1_6
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 191
+        width: 212
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8b6306fcc797ba80800000000000000
+      internalID: -8451119269180904565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Ship_Ships 1_7
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 191
+        width: 208
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2031359dfe75f2f0800000000000000
+      internalID: -939705319642025937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Ship_Ships 1_8
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 191
+        width: 208
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 339d07d8f05a5df00800000000000000
+      internalID: 1140999566824364339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Ship_Ships 1_9
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 191
+        width: 212
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b54ae622c884c0c0800000000000000
+      internalID: -4556366555534178888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Ship_Ships 1_10
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 212
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a02e308764785cff0800000000000000
+      internalID: -16458286894947830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Ship_Ships 1_11
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 0
+        width: 208
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f086a747a59e08580800000000000000
+      internalID: -8826798694935664625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Ship_Ships 1_12
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 0
+        width: 208
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a64aca6b254231fc0800000000000000
+      internalID: -3525434145630280598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Ship_Ships 1_13
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 0
+        width: 212
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 048403c9c9405ce60800000000000000
+      internalID: 7981790985265891392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Sprite_Water_Ship_Ships 1_0: 6341135244033860862
+      Sprite_Water_Ship_Ships 1_1: -4767969350576651069
+      Sprite_Water_Ship_Ships 1_10: -16458286894947830
+      Sprite_Water_Ship_Ships 1_11: -8826798694935664625
+      Sprite_Water_Ship_Ships 1_12: -3525434145630280598
+      Sprite_Water_Ship_Ships 1_13: 7981790985265891392
+      Sprite_Water_Ship_Ships 1_2: 6415901327325040839
+      Sprite_Water_Ship_Ships 1_3: -270579540513866441
+      Sprite_Water_Ship_Ships 1_4: 7283719649352820754
+      Sprite_Water_Ship_Ships 1_5: -5770815463427440662
+      Sprite_Water_Ship_Ships 1_6: -8451119269180904565
+      Sprite_Water_Ship_Ships 1_7: -939705319642025937
+      Sprite_Water_Ship_Ships 1_8: 1140999566824364339
+      Sprite_Water_Ship_Ships 1_9: -4556366555534178888
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
