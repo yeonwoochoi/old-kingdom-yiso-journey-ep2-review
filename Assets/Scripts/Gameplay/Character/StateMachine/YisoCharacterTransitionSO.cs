@@ -49,10 +49,10 @@ namespace Gameplay.Character.StateMachine {
         /// <param name="nextState">전환이 결정될 경우, 다음 상태가 담길 out 파라미터.</param>
         /// <returns>상태 전환이 필요한 경우 true를 반환합니다.</returns>
         public bool CheckTransition(IYisoCharacterContext context, out YisoCharacterStateSO nextState) {
-            // Decision의 평가 결과를 먼저 가져옵니다.
+            // Decision의 평가 결과를 먼저 가져옴
             var decisionResult = _decision.Decide(context);
             
-            // 평가 결과에 따라 다음 상태를 결정합니다.
+            // 평가 결과에 따라 다음 상태를 결정
             if (decisionResult) {
                 // TRUE 경로
                 nextState = _isTrueStateRandom ? GetRandomStateFrom(_trueStates) : _trueState;
@@ -62,20 +62,20 @@ namespace Gameplay.Character.StateMachine {
                 nextState = _isFalseStateRandom ? GetRandomStateFrom(_falseStates) : _falseState;
             }
             
-            // 다음 상태가 유효할 경우(null이 아닐 경우)에만 전환이 필요하다고 판단합니다.
+            // 다음 상태가 유효할 경우(null이 아닐 경우)에만 전환이 필요하다고 판단
             return nextState != null;
         }
 
         /// <summary>
-        /// 제공된 목록에서 무작위로 상태 하나를 선택하여 반환합니다.
+        /// 제공된 목록에서 무작위로 상태 하나를 선택하여 반환
         /// </summary>
         private YisoCharacterStateSO GetRandomStateFrom(IReadOnlyList<YisoCharacterStateSO> stateList) {
             if (stateList == null || stateList.Count == 0) {
-                // 목록이 비어있으면 전환할 수 없으므로 null을 반환합니다.
+                // 목록이 비어있으면 전환할 수 없으므로 null을 반환
                 return null;
             }
             
-            // 목록에서 랜덤 인덱스를 뽑아 해당 상태를 반환합니다.
+            // 목록에서 랜덤 인덱스를 뽑아 해당 상태를 반환
             return stateList[Random.Range(0, stateList.Count)];
         }
     }

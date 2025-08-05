@@ -18,6 +18,7 @@ namespace Gameplay.Character.Core {
         GameObject Model { get; }
         Animator Animator { get; }
         T GetModule<T>() where T : class, IYisoCharacterModule;
+        YisoCharacterStateSO GetCurrentState();
         void RequestStateChange(YisoCharacterStateSO newStateSO);
         void RequestStateChange(string newStateName);
         void Move(Vector3 direction, float speedMultiplier = 1f);
@@ -147,7 +148,11 @@ namespace Gameplay.Character.Core {
             _modules.TryGetValue(typeof(T), out var module);
             return module as T;
         }
-        
+
+        public YisoCharacterStateSO GetCurrentState() {
+            return GetModule<YisoCharacterStateModule>().CurrentState;
+        }
+
         // --- 기능 위임 메소드 (Facade Pattern): 복잡한 내부 구조를 숨기고 간단한 사용법 제공. ---
         
         public void RequestStateChange(YisoCharacterStateSO newState) => GetModule<YisoCharacterStateModule>().RequestStateChange(newState);
