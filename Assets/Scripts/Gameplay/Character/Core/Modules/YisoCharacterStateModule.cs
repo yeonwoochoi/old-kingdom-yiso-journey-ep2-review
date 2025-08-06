@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Gameplay.Character.StateMachine;
+using Sirenix.OdinInspector;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Gameplay.Character.Core.Modules {
     public sealed class YisoCharacterStateModule : YisoCharacterModuleBase {
@@ -19,6 +21,13 @@ namespace Gameplay.Character.Core.Modules {
         private Dictionary<string, YisoCharacterStateSO> _stateCache;
 
         public override void Initialize() {
+            if (_settings.randomizeFrequencies) {
+                // Settings에 저장된 값을 랜덤 범위 내의 새로운 값으로 덮어쓴다.
+                // 이렇게 하면 이 모듈 인스턴스는 자신만의 랜덤한 주기를 갖게 됨.
+                _settings.decisionCheckFrequency = Random.Range(_settings.randomDecisionFrequency.x, _settings.randomDecisionFrequency.y);
+                _settings.actionExecuteFrequency = Random.Range(_settings.randomActionFrequency.x, _settings.randomActionFrequency.y);
+            }
+            
             if (_settings.stateMachine == null) {
                 Debug.LogError($"[StateModule] '{Context.GameObject.name}' is not assigned!");
                 return;
@@ -104,6 +113,17 @@ namespace Gameplay.Character.Core.Modules {
             
             [Tooltip("현재 상태의 Update 액션을 얼마나 자주 실행할지 결정한다 (초 단위).")]
             public float actionExecuteFrequency = 0f;
+            
+            [Tooltip("활성화 시, 실행 주기를 지정된 범위 내에서 랜덤으로 설정한다.")]
+            public bool randomizeFrequencies = false;
+    
+            [Tooltip("decisionCheckFrequency의 랜덤 범위.")]
+            [ShowIf("randomizeFrequencies")]
+            public Vector2 randomDecisionFrequency = new(0.1f, 0.3f);
+
+            [Tooltip("ActionExecuteFrequency의 랜덤 범위.")]
+            [ShowIf("randomizeFrequencies")]
+            public Vector2 randomActionFrequency = new(0f, 0.1f);
         }
     }
 }
