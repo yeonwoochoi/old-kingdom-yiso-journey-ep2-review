@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: c345f2b5b45ab184d843be7c9cdff88d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5697301733532547374
+    second: Sprite_Town_Prop_Interior_Deco_0
+  - first:
+      213: -2717730226791443188
+    second: Sprite_Town_Prop_Interior_Deco_1
+  - first:
+      213: -2219596280429615350
+    second: Sprite_Town_Prop_Interior_Deco_2
+  - first:
+      213: 5201443558639681573
+    second: Sprite_Town_Prop_Interior_Deco_3
+  - first:
+      213: 4126006612743950603
+    second: Sprite_Town_Prop_Interior_Deco_4
+  - first:
+      213: -4071917654950497943
+    second: Sprite_Town_Prop_Interior_Deco_5
+  - first:
+      213: -6327511544370768120
+    second: Sprite_Town_Prop_Interior_Deco_6
+  - first:
+      213: 6367691985609919576
+    second: Sprite_Town_Prop_Interior_Deco_7
+  - first:
+      213: 8850463182778320654
+    second: Sprite_Town_Prop_Interior_Deco_8
+  - first:
+      213: -653666217030895643
+    second: Sprite_Town_Prop_Interior_Deco_9
+  - first:
+      213: -7923532991538579784
+    second: Sprite_Town_Prop_Interior_Deco_10
+  - first:
+      213: -7004858384565001737
+    second: Sprite_Town_Prop_Interior_Deco_11
+  - first:
+      213: -4948360371740633791
+    second: Sprite_Town_Prop_Interior_Deco_12
+  - first:
+      213: 1908970310908970630
+    second: Sprite_Town_Prop_Interior_Deco_13
+  - first:
+      213: -7767436740677519858
+    second: Sprite_Town_Prop_Interior_Deco_14
+  - first:
+      213: 7292946023861470705
+    second: Sprite_Town_Prop_Interior_Deco_15
+  - first:
+      213: 5206370477298021937
+    second: Sprite_Town_Prop_Interior_Deco_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 174
+        width: 67
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d6439a424e1fe0b0800000000000000
+      internalID: -5697301733532547374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 174
+        width: 67
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0511c402cea84ad0800000000000000
+      internalID: -2717730226791443188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_2
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 207
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a07e63061f86231e0800000000000000
+      internalID: -2219596280429615350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_3
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 191
+        width: 51
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52046ffab5d3f2840800000000000000
+      internalID: 5201443558639681573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_4
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 192
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b01148d5725824930800000000000000
+      internalID: 4126006612743950603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_5
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 160
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 961b80e7774ad77c0800000000000000
+      internalID: -4071917654950497943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_6
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 97
+        width: 66
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 807d89566c92038a0800000000000000
+      internalID: -6327511544370768120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_7
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 83
+        width: 45
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85c81699f169e5850800000000000000
+      internalID: 6367691985609919576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_8
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 95
+        width: 66
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e07cc2b7f5923da70800000000000000
+      internalID: 8850463182778320654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_9
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 101
+        width: 50
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e73334f906bde6f0800000000000000
+      internalID: -653666217030895643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 47
+        width: 34
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b6314199b4f90290800000000000000
+      internalID: -7923532991538579784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_11
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 33
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f1261e996eb9ce90800000000000000
+      internalID: -7004858384565001737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_12
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 32
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14597cd9574e35bb0800000000000000
+      internalID: -4948360371740633791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_13
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 35
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6860f7432660e7a10800000000000000
+      internalID: 1908970310908970630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 31
+        width: 46
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0639902075843490800000000000000
+      internalID: -7767436740677519858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_15
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 26
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f54c5ed4cfb53560800000000000000
+      internalID: 7292946023861470705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 25
+        width: 40
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 136fd645d5eb04840800000000000000
+      internalID: 5206370477298021937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Sprite_Town_Prop_Interior_Deco_0: -5697301733532547374
+      Sprite_Town_Prop_Interior_Deco_1: -2717730226791443188
+      Sprite_Town_Prop_Interior_Deco_10: -7923532991538579784
+      Sprite_Town_Prop_Interior_Deco_11: -7004858384565001737
+      Sprite_Town_Prop_Interior_Deco_12: -4948360371740633791
+      Sprite_Town_Prop_Interior_Deco_13: 1908970310908970630
+      Sprite_Town_Prop_Interior_Deco_14: -7767436740677519858
+      Sprite_Town_Prop_Interior_Deco_15: 7292946023861470705
+      Sprite_Town_Prop_Interior_Deco_16: 5206370477298021937
+      Sprite_Town_Prop_Interior_Deco_2: -2219596280429615350
+      Sprite_Town_Prop_Interior_Deco_3: 5201443558639681573
+      Sprite_Town_Prop_Interior_Deco_4: 4126006612743950603
+      Sprite_Town_Prop_Interior_Deco_5: -4071917654950497943
+      Sprite_Town_Prop_Interior_Deco_6: -6327511544370768120
+      Sprite_Town_Prop_Interior_Deco_7: 6367691985609919576
+      Sprite_Town_Prop_Interior_Deco_8: 8850463182778320654
+      Sprite_Town_Prop_Interior_Deco_9: -653666217030895643
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
