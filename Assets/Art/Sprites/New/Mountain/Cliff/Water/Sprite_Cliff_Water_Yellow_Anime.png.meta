@@ -3,11 +3,11 @@ guid: bd42f5d0a7599e34dac7e34f8de4bbdd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3178264987875064236
-    second: Mountain, Animated Water_01 (Autumn)_0
+      213: -3079062065309098592
+    second: Sprite_Cliff_Water_Yellow_Anime_0
   - first:
-      213: 2622851052815860352
-    second: Mountain, Animated Water_01 (Autumn)_1
+      213: 8592781428965515341
+    second: Sprite_Cliff_Water_Yellow_Anime_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mountain, Animated Water_01 (Autumn)_0
+      name: Sprite_Cliff_Water_Yellow_Anime_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 31
-        width: 65
-        height: 66
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ca9ba54da277b1c20800000000000000
-      internalID: 3178264987875064236
+      spriteID: 0addedb7d59f445d0800000000000000
+      internalID: -3079062065309098592
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mountain, Animated Water_01 (Autumn)_1
+      name: Sprite_Cliff_Water_Yellow_Anime_1
       rect:
         serializedVersion: 2
-        x: 95
-        y: 31
-        width: 66
-        height: 66
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +153,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 08249d5d22d366420800000000000000
-      internalID: 2622851052815860352
+      spriteID: d402012ee21bf3770800000000000000
+      internalID: 8592781428965515341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Cliff_Water_Yellow_Anime_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d978a12cce906634394b7b7afc2de963
+      internalID: 1730139477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Cliff_Water_Yellow_Anime_3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 699ff3d86ccf3614e86f7bd945e9dacf
+      internalID: 820677162
       vertices: []
       indices: 
       edges: []
@@ -163,7 +207,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4d615b4fda7dc7a499c93611b1337608
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +217,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Mountain, Animated Water_01 (Autumn)_0: 3178264987875064236
-      Mountain, Animated Water_01 (Autumn)_1: 2622851052815860352
+      Sprite_Cliff_Water_Yellow_Anime_0: -3079062065309098592
+      Sprite_Cliff_Water_Yellow_Anime_1: 8592781428965515341
+      Sprite_Cliff_Water_Yellow_Anime_2: 1730139477
+      Sprite_Cliff_Water_Yellow_Anime_3: 820677162
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

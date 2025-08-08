@@ -113,23 +113,221 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Castle_wall_031_0
+      name: Sprite_Castle_Wall_Outdoor_Wall_Gate_No_Door_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 128
-        height: 96
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4fb1ce528f223c010800000000000000
-      internalID: 1207847574248889332
+      spriteID: 89668941807e9c245aa77aebc4a5cbc6
+      internalID: -1869036131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Wall_Outdoor_Wall_Gate_No_Door_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7cf3d09cfd28d4469995530bd5b1e23
+      internalID: 11856522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Wall_Outdoor_Wall_Gate_No_Door_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00f70faab3f50c14987fb484350c821e
+      internalID: -1479008979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Wall_Outdoor_Wall_Gate_No_Door_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2262e10887a0c1c41a20022cdb3a8125
+      internalID: 1800724226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Wall_Outdoor_Wall_Gate_No_Door_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eadecdb801f1644b9bc8b6d9eeb8a89
+      internalID: -229760522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Wall_Outdoor_Wall_Gate_No_Door_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a20a35b2c0d804c96b0d72ec59e03a
+      internalID: 1893236080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Wall_Outdoor_Wall_Gate_No_Door_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54751a46876bcd94fa6bc1495c2d561c
+      internalID: -427718073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Wall_Outdoor_Wall_Gate_No_Door_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b1fda2a49145c48ac30ed25ae6f73d
+      internalID: -728302740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Wall_Outdoor_Wall_Gate_No_Door_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd123349b40fe74ca3f3ce73ca61232
+      internalID: -103112784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Wall_Outdoor_Wall_Gate_No_Door_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a179cb6a3c8106740a40847c51d396fe
+      internalID: -1735701044
       vertices: []
       indices: 
       edges: []
@@ -138,7 +336,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f5b45186714f1b942ba99fdbc3fa0a3f
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +346,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprite_Castle_wall_031_0: 1207847574248889332
+      Sprite_Castle_Wall_Outdoor_Wall_Gate_No_Door_0: -1869036131
+      Sprite_Castle_Wall_Outdoor_Wall_Gate_No_Door_1: 11856522
+      Sprite_Castle_Wall_Outdoor_Wall_Gate_No_Door_2: -1479008979
+      Sprite_Castle_Wall_Outdoor_Wall_Gate_No_Door_3: 1800724226
+      Sprite_Castle_Wall_Outdoor_Wall_Gate_No_Door_4: -229760522
+      Sprite_Castle_Wall_Outdoor_Wall_Gate_No_Door_5: 1893236080
+      Sprite_Castle_Wall_Outdoor_Wall_Gate_No_Door_6: -427718073
+      Sprite_Castle_Wall_Outdoor_Wall_Gate_No_Door_7: -728302740
+      Sprite_Castle_Wall_Outdoor_Wall_Gate_No_Door_8: -103112784
+      Sprite_Castle_Wall_Outdoor_Wall_Gate_No_Door_9: -1735701044
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

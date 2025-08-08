@@ -113,23 +113,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Castle_wall_02_0
+      name: Sprite_Castle_Wall_Outdoor_Wall_02_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 96
-        height: 57
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 073469ad4ba97fa10800000000000000
-      internalID: 1943191865785729904
+      spriteID: 1f6384b8232cd2c4a81c22c6b8b2d070
+      internalID: -177423426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Wall_Outdoor_Wall_02_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6bd4c8982737a4e912b3a6301cedd9
+      internalID: 925547540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Wall_Outdoor_Wall_02_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b0a29b6d9191e4bb0b8a9bce849108
+      internalID: -961888134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Wall_Outdoor_Wall_02_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5eda4b50f72bc469943450cf232b3f
+      internalID: -937824667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Wall_Outdoor_Wall_02_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65ccad5209a98e844bfe62f8c50de9ce
+      internalID: 850680198
       vertices: []
       indices: 
       edges: []
@@ -138,7 +226,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 873f09ed31167c94588a1361e81b6fcc
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +236,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprite_Castle_wall_02_0: 1943191865785729904
+      Sprite_Castle_Wall_Outdoor_Wall_02_0: -177423426
+      Sprite_Castle_Wall_Outdoor_Wall_02_1: 925547540
+      Sprite_Castle_Wall_Outdoor_Wall_02_2: -961888134
+      Sprite_Castle_Wall_Outdoor_Wall_02_3: -937824667
+      Sprite_Castle_Wall_Outdoor_Wall_02_4: 850680198
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

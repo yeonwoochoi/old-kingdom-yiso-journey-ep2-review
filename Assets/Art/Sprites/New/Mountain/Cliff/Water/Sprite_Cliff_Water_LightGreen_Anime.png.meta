@@ -116,45 +116,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mountain, Animated Water_01 (Spring)_0
+      name: Sprite_Cliff_Water_LightGreen_Anime_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 31
-        width: 65
-        height: 66
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b8bec85b651bf32a0800000000000000
-      internalID: -6755485930061239413
+      spriteID: 4fe38bd1baef59c48a88c42cba8a9e83
+      internalID: -387160956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mountain, Animated Water_01 (Spring)_1
+      name: Sprite_Cliff_Water_LightGreen_Anime_1
       rect:
         serializedVersion: 2
-        x: 95
-        y: 31
-        width: 66
-        height: 66
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4833f5ed8102ac1b0800000000000000
-      internalID: -5635656692518669436
+      spriteID: b526d3b91a9ffe548a92cef7bfc8c537
+      internalID: -739149235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Cliff_Water_LightGreen_Anime_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa5cf6f04669a764eb2154766659d33c
+      internalID: 617130646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Cliff_Water_LightGreen_Anime_3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 957c0c1df5b953347b1392d9c7ec8bcb
+      internalID: 449771293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Cliff_Water_LightGreen_Anime_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4d1e2d6253c21448afdebf5def9be8
+      internalID: -2057612962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Cliff_Water_LightGreen_Anime_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54625262713689642bd8f113db86fe38
+      internalID: -1205590271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Cliff_Water_LightGreen_Anime_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a94686bbbcd1eea49999226e1b5269a8
+      internalID: 31361821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Cliff_Water_LightGreen_Anime_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111605785202cd84e8221be330e15037
+      internalID: -2087055971
       vertices: []
       indices: 
       edges: []
@@ -163,7 +295,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 27478768de9375a4aa602f2c783fc63a
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +305,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Mountain, Animated Water_01 (Spring)_0: -6755485930061239413
-      Mountain, Animated Water_01 (Spring)_1: -5635656692518669436
+      Sprite_Cliff_Water_LightGreen_Anime_0: -387160956
+      Sprite_Cliff_Water_LightGreen_Anime_1: -739149235
+      Sprite_Cliff_Water_LightGreen_Anime_2: 617130646
+      Sprite_Cliff_Water_LightGreen_Anime_3: 449771293
+      Sprite_Cliff_Water_LightGreen_Anime_4: -2057612962
+      Sprite_Cliff_Water_LightGreen_Anime_5: -1205590271
+      Sprite_Cliff_Water_LightGreen_Anime_6: 31361821
+      Sprite_Cliff_Water_LightGreen_Anime_7: -2087055971
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
