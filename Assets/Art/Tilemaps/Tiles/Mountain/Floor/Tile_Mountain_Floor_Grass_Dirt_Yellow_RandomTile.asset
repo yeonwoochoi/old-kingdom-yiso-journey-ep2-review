@@ -12,13 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
   m_Name: Tile_Mountain_Floor_Grass_Dirt_Yellow_RandomTile
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 0}
+  m_DefaultSprite: {fileID: -1602254370, guid: f40686035218ef54381ac639fe626c8c, type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 1
   m_TilingRules:
   - m_Id: 0
     m_Sprites:
-    - {fileID: 0}
+    - {fileID: 1477927986, guid: f40686035218ef54381ac639fe626c8c, type: 3}
+    - {fileID: -1602254370, guid: f40686035218ef54381ac639fe626c8c, type: 3}
+    - {fileID: -531092200, guid: f40686035218ef54381ac639fe626c8c, type: 3}
+    - {fileID: -1894261804, guid: f40686035218ef54381ac639fe626c8c, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1

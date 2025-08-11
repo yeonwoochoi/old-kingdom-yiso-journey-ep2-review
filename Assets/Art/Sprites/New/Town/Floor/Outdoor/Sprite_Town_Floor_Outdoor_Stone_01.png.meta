@@ -156,7 +156,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -218,793 +218,221 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_0
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 178
-        width: 11
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dfecac8cc338393b0800000000000000
-      internalID: -5506913622253973763
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 179
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cc88e9431f05b85e0800000000000000
-      internalID: -1906341020361127732
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_2
-      rect:
-        serializedVersion: 2
-        x: 29
-        y: 127
-        width: 67
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 13d3854c0d0213530800000000000000
-      internalID: 3832880838888406321
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_3
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 170
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 92de158c7eb94c3d0800000000000000
-      internalID: -3187251216470905559
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_4
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 163
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 89fe4e736457d86b0800000000000000
-      internalID: -5292445042644553832
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_5
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 160
-        width: 9
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dec1eda671efdb210800000000000000
-      internalID: 1350514839811661037
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_6
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 170
-        width: 9
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 922751c1a64371440800000000000000
-      internalID: 4906447949385789993
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_7
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 139
-        width: 9
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5ac1829791fa25de0800000000000000
-      internalID: -1345820814688641883
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_8
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 146
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f3cfccc543c2715c0800000000000000
-      internalID: -4244875520366543809
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_9
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 146
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 64aea5e04f614fc40800000000000000
-      internalID: 5545082278668593734
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_10
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 146
-        width: 8
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c452b4c3c61a62980800000000000000
-      internalID: -8563980155158321844
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_11
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 129
-        width: 9
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 49cf14d0c541ec1e0800000000000000
-      internalID: -2175779184381395820
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_12
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 35
-        width: 84
-        height: 87
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7673e55375fcc9480800000000000000
-      internalID: -8891003590871730329
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_13
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 114
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a8157f006f06727f0800000000000000
-      internalID: -637434212555206262
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_14
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 114
-        width: 8
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4a9a5657d65bf2b10800000000000000
-      internalID: 1958983844655114660
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_15
-      rect:
-        serializedVersion: 2
-        x: 29
-        y: 115
-        width: 9
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c887868c520ce1a90800000000000000
-      internalID: -7341219074058717044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_16
-      rect:
-        serializedVersion: 2
-        x: 38
-        y: 116
-        width: 11
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a29e9856b03ada4d0800000000000000
-      internalID: -3121659697354381014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_17
-      rect:
-        serializedVersion: 2
-        x: 59
-        y: 115
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 10fe5d28a2eb3e830800000000000000
-      internalID: 4099329175630245633
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_18
-      rect:
-        serializedVersion: 2
-        x: 71
-        y: 116
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e1f93e3ff908f3040800000000000000
-      internalID: 4629560366440095518
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_19
-      rect:
-        serializedVersion: 2
-        x: 85
-        y: 100
-        width: 8
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cd2c73be59460dfe0800000000000000
-      internalID: -1166321708429753636
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_20
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 83
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 82afcbf2060d2ef20800000000000000
-      internalID: 3450549376055573032
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_21
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 92
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0e6a05c6fa64fb100800000000000000
-      internalID: 125897033840109280
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_22
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 82
-        width: 11
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e6b95c92ccd4e0560800000000000000
-      internalID: 7281843186774154094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_23
-      rect:
-        serializedVersion: 2
-        x: 85
-        y: 74
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a7bc224323c406a00800000000000000
-      internalID: 747681316650273658
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_24
-      rect:
-        serializedVersion: 2
-        x: 85
-        y: 67
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 90e50804b68e460e0800000000000000
-      internalID: -2277439964201329143
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_25
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 56
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e927ac7bfbacd83e0800000000000000
-      internalID: -2049759330612645218
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_26
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 59
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 606a44541d15613d0800000000000000
-      internalID: -3236309322966981114
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_27
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 47
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a5eddfdfb1e0038c0800000000000000
-      internalID: -4021698953853673894
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_28
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 34
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9819c66e6eb6a0080800000000000000
-      internalID: -9220438647635144311
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_29
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 32
-        width: 10
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f52758e7995e45680800000000000000
-      internalID: -8767130127168081313
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_30
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 48
-        width: 12
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d21514d09089a83e0800000000000000
-      internalID: -2050659515669327571
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_31
-      rect:
-        serializedVersion: 2
-        x: 85
-        y: 39
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4d33b03abc86f0d50800000000000000
-      internalID: 6705693594001028052
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_32
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 65
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6fa5b5b9c821b33f0800000000000000
-      internalID: -920121303755957514
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_33
+      name: Sprite_Town_Floor_Outdoor_Stone_01_1
       rect:
         serializedVersion: 2
         x: 32
-        y: 33
-        width: 10
-        height: 11
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: edbc90be015098650800000000000000
-      internalID: 6235520729292065758
+      spriteID: 05ea6fe3f533c4848a58f10865eb4bb7
+      internalID: -1535540487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_34
+      name: Sprite_Town_Floor_Outdoor_Stone_01_6
       rect:
         serializedVersion: 2
-        x: 41
-        y: 32
-        width: 10
-        height: 10
+        x: 0
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 46074c567f9c19c90800000000000000
-      internalID: -7164723467768270748
+      spriteID: 5fd947987a3b57e4f8c2a80ca1ca940e
+      internalID: -633680889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Plain_Environment_Path_Stone_02_35
+      name: Sprite_Town_Floor_Outdoor_Stone_01_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e590fe260d795488ab462f791b0b5b
+      internalID: 246951858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Floor_Outdoor_Stone_01_8
       rect:
         serializedVersion: 2
         x: 64
-        y: 33
-        width: 11
-        height: 11
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 44a1c03c00698d140800000000000000
-      internalID: 4744707137451334212
+      spriteID: 60fb113c9f5f36a4a80efd68f3e3900e
+      internalID: -2019104014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Floor_Outdoor_Stone_01_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 339f0d7aa5b49e4418e1bed631df8b25
+      internalID: 1521284827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Floor_Outdoor_Stone_01_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f188e4d9ea7bbdb4a801945a7aee209d
+      internalID: -1283361456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Floor_Outdoor_Stone_01_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66cb3b517436bfc4cb5e831aba78ddb1
+      internalID: 807316350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Floor_Outdoor_Stone_01_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bfd50251f415814fbf3a2523cc6da5d
+      internalID: -237839074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Floor_Outdoor_Stone_01_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18291ba649f51a64ea66e0d300676b4d
+      internalID: -1597060497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Floor_Outdoor_Stone_01_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fe3bff864616ca4da712eb684e47488
+      internalID: 666441062
       vertices: []
       indices: 
       edges: []
@@ -1013,7 +441,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a79082017b4be5a40a646a57596a26aa
     internalID: 0
     vertices: []
     indices: 
@@ -1023,42 +451,23 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprite_Plain_Environment_Path_Stone_02_0: -5506913622253973763
-      Sprite_Plain_Environment_Path_Stone_02_1: -1906341020361127732
-      Sprite_Plain_Environment_Path_Stone_02_10: -8563980155158321844
-      Sprite_Plain_Environment_Path_Stone_02_11: -2175779184381395820
-      Sprite_Plain_Environment_Path_Stone_02_12: -8891003590871730329
-      Sprite_Plain_Environment_Path_Stone_02_13: -637434212555206262
-      Sprite_Plain_Environment_Path_Stone_02_14: 1958983844655114660
-      Sprite_Plain_Environment_Path_Stone_02_15: -7341219074058717044
-      Sprite_Plain_Environment_Path_Stone_02_16: -3121659697354381014
-      Sprite_Plain_Environment_Path_Stone_02_17: 4099329175630245633
-      Sprite_Plain_Environment_Path_Stone_02_18: 4629560366440095518
-      Sprite_Plain_Environment_Path_Stone_02_19: -1166321708429753636
-      Sprite_Plain_Environment_Path_Stone_02_2: 3832880838888406321
-      Sprite_Plain_Environment_Path_Stone_02_20: 3450549376055573032
-      Sprite_Plain_Environment_Path_Stone_02_21: 125897033840109280
-      Sprite_Plain_Environment_Path_Stone_02_22: 7281843186774154094
-      Sprite_Plain_Environment_Path_Stone_02_23: 747681316650273658
-      Sprite_Plain_Environment_Path_Stone_02_24: -2277439964201329143
-      Sprite_Plain_Environment_Path_Stone_02_25: -2049759330612645218
-      Sprite_Plain_Environment_Path_Stone_02_26: -3236309322966981114
-      Sprite_Plain_Environment_Path_Stone_02_27: -4021698953853673894
-      Sprite_Plain_Environment_Path_Stone_02_28: -9220438647635144311
-      Sprite_Plain_Environment_Path_Stone_02_29: -8767130127168081313
-      Sprite_Plain_Environment_Path_Stone_02_3: -3187251216470905559
-      Sprite_Plain_Environment_Path_Stone_02_30: -2050659515669327571
-      Sprite_Plain_Environment_Path_Stone_02_31: 6705693594001028052
-      Sprite_Plain_Environment_Path_Stone_02_32: -920121303755957514
-      Sprite_Plain_Environment_Path_Stone_02_33: 6235520729292065758
-      Sprite_Plain_Environment_Path_Stone_02_34: -7164723467768270748
-      Sprite_Plain_Environment_Path_Stone_02_35: 4744707137451334212
-      Sprite_Plain_Environment_Path_Stone_02_4: -5292445042644553832
-      Sprite_Plain_Environment_Path_Stone_02_5: 1350514839811661037
-      Sprite_Plain_Environment_Path_Stone_02_6: 4906447949385789993
-      Sprite_Plain_Environment_Path_Stone_02_7: -1345820814688641883
-      Sprite_Plain_Environment_Path_Stone_02_8: -4244875520366543809
-      Sprite_Plain_Environment_Path_Stone_02_9: 5545082278668593734
+      Sprite_Town_Floor_Outdoor_Stone_01_0: 1436238461
+      Sprite_Town_Floor_Outdoor_Stone_01_1: -1535540487
+      Sprite_Town_Floor_Outdoor_Stone_01_10: -1283361456
+      Sprite_Town_Floor_Outdoor_Stone_01_11: 807316350
+      Sprite_Town_Floor_Outdoor_Stone_01_12: -237839074
+      Sprite_Town_Floor_Outdoor_Stone_01_13: -1597060497
+      Sprite_Town_Floor_Outdoor_Stone_01_14: 666441062
+      Sprite_Town_Floor_Outdoor_Stone_01_15: 747230125
+      Sprite_Town_Floor_Outdoor_Stone_01_16: -1632009919
+      Sprite_Town_Floor_Outdoor_Stone_01_2: -1313936517
+      Sprite_Town_Floor_Outdoor_Stone_01_3: -1670624187
+      Sprite_Town_Floor_Outdoor_Stone_01_4: -801426637
+      Sprite_Town_Floor_Outdoor_Stone_01_5: -1522812953
+      Sprite_Town_Floor_Outdoor_Stone_01_6: -633680889
+      Sprite_Town_Floor_Outdoor_Stone_01_7: 246951858
+      Sprite_Town_Floor_Outdoor_Stone_01_8: -2019104014
+      Sprite_Town_Floor_Outdoor_Stone_01_9: 1521284827
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

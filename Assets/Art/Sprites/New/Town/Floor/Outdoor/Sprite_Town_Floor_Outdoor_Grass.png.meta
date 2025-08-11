@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -119,67 +119,221 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tile_Plain_Environment_Grass_03_0
+      name: Sprite_Town_Floor_Outdoor_Grass_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 159
-        width: 96
-        height: 65
+        x: 32
+        y: 192
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5c0c1f1c573908980800000000000000
-      internalID: -8538662759520157499
+      spriteID: ca34bda096a679d4ca1c8f104f8867a5
+      internalID: 535910573
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile_Plain_Environment_Grass_03_1
+      name: Sprite_Town_Floor_Outdoor_Grass_6
       rect:
         serializedVersion: 2
-        x: 10
-        y: 78
-        width: 77
-        height: 73
+        x: 0
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a087395dba846f8d0800000000000000
-      internalID: -2812981014386477046
+      spriteID: 619a1dd00a4072b42b42f90c33d8ecd3
+      internalID: 415983927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile_Plain_Environment_Grass_03_2
+      name: Sprite_Town_Floor_Outdoor_Grass_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 96
-        height: 65
+        x: 32
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6ce96a21d15edaf10800000000000000
-      internalID: 2282732499176431302
+      spriteID: 02ef1716c2af538448854a38a454ef0f
+      internalID: -2145478414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Floor_Outdoor_Grass_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adcf1bd69c5eae34e8cd3bb6db542355
+      internalID: -646359584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Floor_Outdoor_Grass_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba46a015779a04a46964f4c7840974eb
+      internalID: -560872610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Floor_Outdoor_Grass_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137551896274fd445954dfa3c360e7fc
+      internalID: 1358325438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Floor_Outdoor_Grass_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899ae70b7bf8cc441ba52ba6ccdd6008
+      internalID: 395913862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Floor_Outdoor_Grass_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 435d555b622c0d746a450567fe7ea31e
+      internalID: -279873821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Floor_Outdoor_Grass_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bf1b2ec1dfdd8342b6f761a0a98c279
+      internalID: -1635337078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Floor_Outdoor_Grass_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a976dd44f54444397d26f42e805446
+      internalID: -1118312270
       vertices: []
       indices: 
       edges: []
@@ -188,7 +342,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 11888b6604bf04f418ef98c6c87b0f3e
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +352,27 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Tile_Plain_Environment_Grass_03_0: -8538662759520157499
-      Tile_Plain_Environment_Grass_03_1: -2812981014386477046
-      Tile_Plain_Environment_Grass_03_2: 2282732499176431302
+      Sprite_Town_Floor_Outdoor_Grass_0: -461974527
+      Sprite_Town_Floor_Outdoor_Grass_1: 535910573
+      Sprite_Town_Floor_Outdoor_Grass_10: 1358325438
+      Sprite_Town_Floor_Outdoor_Grass_11: 395913862
+      Sprite_Town_Floor_Outdoor_Grass_12: -279873821
+      Sprite_Town_Floor_Outdoor_Grass_13: -1635337078
+      Sprite_Town_Floor_Outdoor_Grass_14: -1118312270
+      Sprite_Town_Floor_Outdoor_Grass_15: 256033135
+      Sprite_Town_Floor_Outdoor_Grass_16: -1612267264
+      Sprite_Town_Floor_Outdoor_Grass_17: -1772463173
+      Sprite_Town_Floor_Outdoor_Grass_18: 1973949124
+      Sprite_Town_Floor_Outdoor_Grass_19: -825558468
+      Sprite_Town_Floor_Outdoor_Grass_2: -6316603
+      Sprite_Town_Floor_Outdoor_Grass_20: 1225832815
+      Sprite_Town_Floor_Outdoor_Grass_3: -1350104653
+      Sprite_Town_Floor_Outdoor_Grass_4: -549296630
+      Sprite_Town_Floor_Outdoor_Grass_5: -516758085
+      Sprite_Town_Floor_Outdoor_Grass_6: 415983927
+      Sprite_Town_Floor_Outdoor_Grass_7: -2145478414
+      Sprite_Town_Floor_Outdoor_Grass_8: -646359584
+      Sprite_Town_Floor_Outdoor_Grass_9: -560872610
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

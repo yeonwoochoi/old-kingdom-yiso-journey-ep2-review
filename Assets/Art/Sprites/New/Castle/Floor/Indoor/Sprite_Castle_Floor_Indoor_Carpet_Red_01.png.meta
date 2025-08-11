@@ -113,23 +113,331 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tile_Castle_Environment_Carpet_Red_01_0
+      name: Sprite_Castle_Floor_Indoor_Carpet_Red_01_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 96
-        height: 160
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a60e704dab5ccf990800000000000000
-      internalID: -7350783085563617174
+      spriteID: 1e5e0874cca71e2418bf0147e2070944
+      internalID: 1228442514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Indoor_Carpet_Red_01_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d70537a7af2b35f45952542e52cdf593
+      internalID: -1429790321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Indoor_Carpet_Red_01_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 127d88c2e89f58449a1bc302d28f8663
+      internalID: 1303183547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Indoor_Carpet_Red_01_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97272c68271a9d642a62fe12b4c4f84e
+      internalID: 1520918270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Indoor_Carpet_Red_01_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e18d995a9e7134fbef31114994cd9c
+      internalID: 730958455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Indoor_Carpet_Red_01_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b920fccdab8ef42b950c60de606f82
+      internalID: 1088815085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Indoor_Carpet_Red_01_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 950eb65a1068d48479cc36215c0ffc8e
+      internalID: 178848258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Indoor_Carpet_Red_01_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa0bebf2fa0573c49968bad9118f2a47
+      internalID: 310345185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Indoor_Carpet_Red_01_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a452328b2d24d548a529edb56459cb0
+      internalID: -1058262150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Indoor_Carpet_Red_01_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6794775443eba0c43a2228c434ee9044
+      internalID: 1262848686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Indoor_Carpet_Red_01_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8298f7fb0c4d8644780270f6a789da84
+      internalID: -1764445159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Indoor_Carpet_Red_01_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 951e9fe6657e4b74e950a667df4b81b9
+      internalID: 1733108840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Indoor_Carpet_Red_01_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c09cb876c9102404ba27ecadd008048e
+      internalID: 1846990114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Indoor_Carpet_Red_01_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671254c4e47bc4743a14e5fe7638a1b0
+      internalID: 163091152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Indoor_Carpet_Red_01_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b648b9f4f8884eb49a1ad5bd9e70d0bd
+      internalID: -1843706148
       vertices: []
       indices: 
       edges: []
@@ -138,7 +446,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b1cdafa5fc762dd4c949ea1ba0f8e7be
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +456,21 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Tile_Castle_Environment_Carpet_Red_01_0: -7350783085563617174
+      Sprite_Castle_Floor_Indoor_Carpet_Red_01_0: 1228442514
+      Sprite_Castle_Floor_Indoor_Carpet_Red_01_1: -1429790321
+      Sprite_Castle_Floor_Indoor_Carpet_Red_01_10: -1764445159
+      Sprite_Castle_Floor_Indoor_Carpet_Red_01_11: 1733108840
+      Sprite_Castle_Floor_Indoor_Carpet_Red_01_12: 1846990114
+      Sprite_Castle_Floor_Indoor_Carpet_Red_01_13: 163091152
+      Sprite_Castle_Floor_Indoor_Carpet_Red_01_14: -1843706148
+      Sprite_Castle_Floor_Indoor_Carpet_Red_01_2: 1303183547
+      Sprite_Castle_Floor_Indoor_Carpet_Red_01_3: 1520918270
+      Sprite_Castle_Floor_Indoor_Carpet_Red_01_4: 730958455
+      Sprite_Castle_Floor_Indoor_Carpet_Red_01_5: 1088815085
+      Sprite_Castle_Floor_Indoor_Carpet_Red_01_6: 178848258
+      Sprite_Castle_Floor_Indoor_Carpet_Red_01_7: 310345185
+      Sprite_Castle_Floor_Indoor_Carpet_Red_01_8: -1058262150
+      Sprite_Castle_Floor_Indoor_Carpet_Red_01_9: 1262848686
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

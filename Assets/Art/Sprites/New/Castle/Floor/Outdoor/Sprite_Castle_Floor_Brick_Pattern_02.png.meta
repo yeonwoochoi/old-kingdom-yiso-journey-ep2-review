@@ -119,67 +119,397 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tile_Castle_Environment_Floor_Pattern_02_0
+      name: Sprite_Castle_Floor_Brick_Pattern_02_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 127
-        width: 96
-        height: 65
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 733aa605970c24450800000000000000
-      internalID: 6071626874921591607
+      spriteID: ea81d7ce34432dc488f861d2c537b783
+      internalID: 995520281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile_Castle_Environment_Floor_Pattern_02_1
+      name: Sprite_Castle_Floor_Brick_Pattern_02_1
       rect:
         serializedVersion: 2
-        x: 4
-        y: 36
-        width: 88
-        height: 88
+        x: 32
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 15e10900b14ffa6d0800000000000000
-      internalID: -2976892431857869231
+      spriteID: 75327d58abcc4754aa9da34e34d5541a
+      internalID: 1549390088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile_Castle_Environment_Floor_Pattern_02_2
+      name: Sprite_Castle_Floor_Brick_Pattern_02_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e91f992c213dd5640a44a2ba8c339f1e
+      internalID: -97249892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Brick_Pattern_02_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8765cf3b228efaf459bc9175c3682c7b
+      internalID: 837320583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Brick_Pattern_02_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f572babfb4712e42bde7c2128352a9b
+      internalID: -478187018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Brick_Pattern_02_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c57b5ffb86249d04aa206e4416d63968
+      internalID: -1667546969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Brick_Pattern_02_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb7175e3fa5fc3479e4dae8ed089d49
+      internalID: 573800722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Brick_Pattern_02_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f345264c5771b459cd119589132628
+      internalID: 295272294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Brick_Pattern_02_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 840d58729684578479ebbe46acc4c51e
+      internalID: -1695435048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Brick_Pattern_02_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c132b53135e2347855a36f1777ed2f
+      internalID: -1155284975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Brick_Pattern_02_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292f05b6c96f6df498319a9f5a4408ad
+      internalID: -2107428946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Brick_Pattern_02_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7188c7781625e1441a65a42b2d161e9c
+      internalID: 1848494549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Brick_Pattern_02_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1106f4f45e80574290cf2c14d2a7835
+      internalID: 26139723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Brick_Pattern_02_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dde00909db155e4585f2c39f36e6720
+      internalID: 523281404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Brick_Pattern_02_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e966278cadbe94ab90d45cf1bdf29c
+      internalID: -386684497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Brick_Pattern_02_15
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 96
-        height: 33
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e3b3ce5f4943e0c70800000000000000
-      internalID: 8939140124762716990
+      spriteID: b9c2c98793bee404682e786765e0341a
+      internalID: 1475653086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Brick_Pattern_02_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa5d227699351eb4e9ab040c71347d9d
+      internalID: -1403869397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Floor_Brick_Pattern_02_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9680d472d43bd2f43ab463752c9e8363
+      internalID: 190865693
       vertices: []
       indices: 
       edges: []
@@ -188,7 +518,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d7f57bb22f6365246a67fbcc4fe9dad4
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +528,24 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Tile_Castle_Environment_Floor_Pattern_02_0: 6071626874921591607
-      Tile_Castle_Environment_Floor_Pattern_02_1: -2976892431857869231
-      Tile_Castle_Environment_Floor_Pattern_02_2: 8939140124762716990
+      Sprite_Castle_Floor_Brick_Pattern_02_0: 995520281
+      Sprite_Castle_Floor_Brick_Pattern_02_1: 1549390088
+      Sprite_Castle_Floor_Brick_Pattern_02_10: -2107428946
+      Sprite_Castle_Floor_Brick_Pattern_02_11: 1848494549
+      Sprite_Castle_Floor_Brick_Pattern_02_12: 26139723
+      Sprite_Castle_Floor_Brick_Pattern_02_13: 523281404
+      Sprite_Castle_Floor_Brick_Pattern_02_14: -386684497
+      Sprite_Castle_Floor_Brick_Pattern_02_15: 1475653086
+      Sprite_Castle_Floor_Brick_Pattern_02_16: -1403869397
+      Sprite_Castle_Floor_Brick_Pattern_02_17: 190865693
+      Sprite_Castle_Floor_Brick_Pattern_02_2: -97249892
+      Sprite_Castle_Floor_Brick_Pattern_02_3: 837320583
+      Sprite_Castle_Floor_Brick_Pattern_02_4: -478187018
+      Sprite_Castle_Floor_Brick_Pattern_02_5: -1667546969
+      Sprite_Castle_Floor_Brick_Pattern_02_6: 573800722
+      Sprite_Castle_Floor_Brick_Pattern_02_7: 295272294
+      Sprite_Castle_Floor_Brick_Pattern_02_8: -1695435048
+      Sprite_Castle_Floor_Brick_Pattern_02_9: -1155284975
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

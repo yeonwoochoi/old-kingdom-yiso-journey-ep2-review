@@ -66,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -131,10 +131,10 @@ TextureImporter:
       name: Sprite_Town_Wall_Fence_Wooden_02_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 165
-        width: 74
-        height: 25
+        x: 0
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +153,10 @@ TextureImporter:
       name: Sprite_Town_Wall_Fence_Wooden_02_1
       rect:
         serializedVersion: 2
-        x: 11
-        y: 133
-        width: 10
-        height: 28
+        x: 32
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,10 +175,10 @@ TextureImporter:
       name: Sprite_Town_Wall_Fence_Wooden_02_2
       rect:
         serializedVersion: 2
-        x: 43
-        y: 127
-        width: 10
-        height: 34
+        x: 64
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,10 +197,10 @@ TextureImporter:
       name: Sprite_Town_Wall_Fence_Wooden_02_3
       rect:
         serializedVersion: 2
-        x: 75
-        y: 127
-        width: 10
-        height: 31
+        x: 0
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,10 +219,10 @@ TextureImporter:
       name: Sprite_Town_Wall_Fence_Wooden_02_4
       rect:
         serializedVersion: 2
-        x: 11
-        y: 37
-        width: 74
-        height: 89
+        x: 32
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,10 +241,10 @@ TextureImporter:
       name: Sprite_Town_Wall_Fence_Wooden_02_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 5
-        width: 96
-        height: 26
+        x: 64
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,11 +259,275 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Wall_Fence_Wooden_02_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579eda880db58c3489bc6b7ffe3fb5f3
+      internalID: 1698986206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Wall_Fence_Wooden_02_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 822713fc381590646adc989e7951af64
+      internalID: 692881666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Wall_Fence_Wooden_02_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c46cde53aa193144da986ff8e383b3fe
+      internalID: -393335415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Wall_Fence_Wooden_02_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138137e3638795c43a3b7ffaacee9905
+      internalID: 663750582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Wall_Fence_Wooden_02_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c17b64496a4bfe47b2935b555f916e4
+      internalID: 1478574951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Wall_Fence_Wooden_02_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 059de079a262767409ff80277b1bf3c1
+      internalID: -277285043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Wall_Fence_Wooden_02_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd246a25d0fdf1248be2562620c7cf28
+      internalID: -790787602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Wall_Fence_Wooden_02_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f950893ef34c3e045a471fbdd09b16a4
+      internalID: 978194120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Wall_Fence_Wooden_02_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc9d304103ef0c4facc9d5d1edc2886
+      internalID: -1839675002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Wall_Fence_Wooden_02_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f885c7f5a2c11c4897aa876d96ebab4
+      internalID: 1774443441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Wall_Fence_Wooden_02_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 188546d817e9bcb47bb895441003763f
+      internalID: -376103362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Wall_Fence_Wooden_02_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd97076ccd4927418e461ede2eea9b1
+      internalID: 1892998186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ed3488528c4134c4cb229c8c10150e76
     internalID: 0
     vertices: []
     indices: 
@@ -275,10 +539,22 @@ TextureImporter:
     nameFileIdTable:
       Sprite_Town_Wall_Fence_Wooden_02_0: -8297544282358854055
       Sprite_Town_Wall_Fence_Wooden_02_1: 2791090101067678887
+      Sprite_Town_Wall_Fence_Wooden_02_10: 1478574951
+      Sprite_Town_Wall_Fence_Wooden_02_11: -277285043
+      Sprite_Town_Wall_Fence_Wooden_02_12: -790787602
+      Sprite_Town_Wall_Fence_Wooden_02_13: 978194120
+      Sprite_Town_Wall_Fence_Wooden_02_14: -1839675002
+      Sprite_Town_Wall_Fence_Wooden_02_15: 1774443441
+      Sprite_Town_Wall_Fence_Wooden_02_16: -376103362
+      Sprite_Town_Wall_Fence_Wooden_02_17: 1892998186
       Sprite_Town_Wall_Fence_Wooden_02_2: 3488776395435518124
       Sprite_Town_Wall_Fence_Wooden_02_3: -2039630139685847683
       Sprite_Town_Wall_Fence_Wooden_02_4: 1727923943433792523
       Sprite_Town_Wall_Fence_Wooden_02_5: -3623688990372966585
+      Sprite_Town_Wall_Fence_Wooden_02_6: 1698986206
+      Sprite_Town_Wall_Fence_Wooden_02_7: 692881666
+      Sprite_Town_Wall_Fence_Wooden_02_8: -393335415
+      Sprite_Town_Wall_Fence_Wooden_02_9: 663750582
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
