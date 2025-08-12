@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,23 +113,287 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Environment_Water_Sand_01_0
+      name: Sprite_Water_Environment_WaterSand_02_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 96
-        height: 192
+        x: 32
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cf7011caa620c2f10800000000000000
-      internalID: 2246172971327621116
+      spriteID: 24c90e9d5ce196d4ba111dbac2c5a484
+      internalID: -1924603404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Environment_WaterSand_02_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14590808da8c67c43a4785c96ce2d699
+      internalID: 135250465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Environment_WaterSand_02_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6e3ce8feb2bfa48ae7aeb27eea97bb
+      internalID: -1671719879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Environment_WaterSand_02_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05c28a97b5031e246a60839f53c72879
+      internalID: 1298302816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Environment_WaterSand_02_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b667a01694baf0f48880ae6c86d76983
+      internalID: 710061254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Environment_WaterSand_02_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f307d1ec0fd94f04da1e3fd4b5c2fefc
+      internalID: -722452327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Environment_WaterSand_02_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 271aa7f6a2d083c4783b0df3d7a5d0fa
+      internalID: -958397370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Environment_WaterSand_02_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78be6bf9208d12a49a49b33493a5f349
+      internalID: 1956819589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Environment_WaterSand_02_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f715c23065e413149a033e734f51d857
+      internalID: 659033180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Environment_WaterSand_02_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f61c8160b7ea145a227108f52affc7
+      internalID: -1510202871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Environment_WaterSand_02_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe1498d2b2d7a2459d91e66106b9a67
+      internalID: -732297295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Environment_WaterSand_02_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5daba010251a5643814c64877984e7b
+      internalID: -523764478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Environment_WaterSand_02_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4715efbcbc4997740ae0318c4bcd2e1b
+      internalID: 400371027
       vertices: []
       indices: 
       edges: []
@@ -138,7 +402,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 94b3ea40b046ce747a83005d1edbe288
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +412,23 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprite_Environment_Water_Sand_01_0: 2246172971327621116
+      Sprite_Water_Environment_WaterSand_02_0: -1442764876
+      Sprite_Water_Environment_WaterSand_02_1: -1924603404
+      Sprite_Water_Environment_WaterSand_02_10: 659033180
+      Sprite_Water_Environment_WaterSand_02_11: -1510202871
+      Sprite_Water_Environment_WaterSand_02_12: -732297295
+      Sprite_Water_Environment_WaterSand_02_13: -523764478
+      Sprite_Water_Environment_WaterSand_02_14: 400371027
+      Sprite_Water_Environment_WaterSand_02_15: 504484133
+      Sprite_Water_Environment_WaterSand_02_16: -253914120
+      Sprite_Water_Environment_WaterSand_02_2: 135250465
+      Sprite_Water_Environment_WaterSand_02_3: 2125477200
+      Sprite_Water_Environment_WaterSand_02_4: -1671719879
+      Sprite_Water_Environment_WaterSand_02_5: 1298302816
+      Sprite_Water_Environment_WaterSand_02_6: 710061254
+      Sprite_Water_Environment_WaterSand_02_7: -722452327
+      Sprite_Water_Environment_WaterSand_02_8: -958397370
+      Sprite_Water_Environment_WaterSand_02_9: 1956819589
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

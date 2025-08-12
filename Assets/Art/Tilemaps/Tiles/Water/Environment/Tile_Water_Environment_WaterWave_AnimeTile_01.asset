@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Tile_Water_Environment_WaterWave_AnimeTile_01
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 2073323809, guid: d4099d84e633ebd48b0aa6cc0658bff9, type: 3}
+  - {fileID: -1541890898, guid: d4099d84e633ebd48b0aa6cc0658bff9, type: 3}
+  - {fileID: 454634025, guid: d4099d84e633ebd48b0aa6cc0658bff9, type: 3}
+  - {fileID: 1482017602, guid: d4099d84e633ebd48b0aa6cc0658bff9, type: 3}
+  - {fileID: -394821904, guid: d4099d84e633ebd48b0aa6cc0658bff9, type: 3}
+  m_MinSpeed: 1
+  m_MaxSpeed: 1
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0

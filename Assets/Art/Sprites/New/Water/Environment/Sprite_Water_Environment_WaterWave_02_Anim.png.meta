@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: _preview_only_water_0
+      name: Sprite_Water_Environment_WaterWave_02_Anim_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -126,10 +126,76 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 23a85d84bdd320090800000000000000
-      internalID: -8069819570265421262
+      spriteID: 78cf03566c085034c91c883b59e69cb1
+      internalID: 2071151284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Environment_WaterWave_02_Anim_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d5ac2abbfbbc604e8160d9aa2f524bb
+      internalID: -1680749633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Environment_WaterWave_02_Anim_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6351ea6f60e0ae14791242d48739bf5e
+      internalID: 617288827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Environment_WaterWave_02_Anim_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d34fed95660a21948b132673b1fa9068
+      internalID: -1001590316
       vertices: []
       indices: 
       edges: []
@@ -138,7 +204,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 555d8479c4e4a8d4c9da59bdc3421c1c
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +214,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      _preview_only_water_0: -8069819570265421262
+      Sprite_Water_Environment_WaterWave_02_Anim_0: 2071151284
+      Sprite_Water_Environment_WaterWave_02_Anim_1: -1680749633
+      Sprite_Water_Environment_WaterWave_02_Anim_2: 617288827
+      Sprite_Water_Environment_WaterWave_02_Anim_3: -1001590316
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

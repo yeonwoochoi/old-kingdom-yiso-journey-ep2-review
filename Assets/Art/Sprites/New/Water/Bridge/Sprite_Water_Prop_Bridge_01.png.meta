@@ -69,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -131,155 +131,485 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bridge 1_0
+      name: Sprite_Water_Prop_Bridge_01_0
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f72fa9f2cfa740248adb6a9ff2cb2dc2
+      internalID: 1449281088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Prop_Bridge_01_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5e85d72f77dc3346a557fbf83820a82
+      internalID: -808320464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Prop_Bridge_01_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aee8e67a885e1cf4da0dbbf6670dc159
+      internalID: 456155765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Prop_Bridge_01_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a22b390241f0ba47b12877c4ff2e9c1
+      internalID: -346522217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Prop_Bridge_01_4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec6fa8cf3b091d4e8529f4960dcca25
+      internalID: 48745037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Prop_Bridge_01_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 301743f5303dac34b9c7d0fbac3bd093
+      internalID: -292751671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Prop_Bridge_01_6
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d871f3eaea48848ae9ae8fd1313167
+      internalID: -333198474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Prop_Bridge_01_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e17c8ebb1052ea0428e59ae58d31ec71
+      internalID: 975983709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Prop_Bridge_01_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc457cf95b314ef4492decc52ae5250d
+      internalID: 1648913391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Prop_Bridge_01_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd6d2f87ba457124d8d630075ff41050
+      internalID: -1157340064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Prop_Bridge_01_10
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5165891bee547244d83b4863f5914a07
+      internalID: -1389172167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Prop_Bridge_01_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc57c9b6e664af4e870eca7eee0f76c
+      internalID: -403733232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Prop_Bridge_01_12
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a89461705d684945bddcf400e271f61
+      internalID: 428263305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Prop_Bridge_01_13
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac5e748b9df5594c8f2006bd85a9c65
+      internalID: -545886421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Prop_Bridge_01_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4445ba057f2309e4a8755887b4b3bd7b
+      internalID: 57096706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Prop_Bridge_01_15
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db54fc6b6d0ac5488c2edf307a46d5f
+      internalID: -596066238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Prop_Bridge_01_16
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ffec73c39fc0b04e969dbeb48204945
+      internalID: 2005259567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Prop_Bridge_01_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 341715568c0872a42b79897297662692
+      internalID: 275344100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Prop_Bridge_01_18
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96af391e5fe2a3c44bce8400d7e3a125
+      internalID: 1320017017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Prop_Bridge_01_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e13512bfbff6dd4e86f7de1b356aca5
+      internalID: 1513139970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Prop_Bridge_01_20
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 103
-        height: 97
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a4865fb0df9abaf20800000000000000
-      internalID: 3435026045092587594
+      spriteID: 1b16735b75649714aae3b06481e3427c
+      internalID: 1247589616
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bridge 1_1
+      name: Sprite_Water_Prop_Bridge_01_21
       rect:
         serializedVersion: 2
-        x: 95
-        y: 95
-        width: 75
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f6e4cf267494fce20800000000000000
-      internalID: 3372995216875998831
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bridge 1_2
-      rect:
-        serializedVersion: 2
-        x: 183
-        y: 95
-        width: 41
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 049d8fb4c4fae3cf0800000000000000
-      internalID: -270586185368676032
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bridge 1_3
-      rect:
-        serializedVersion: 2
-        x: 95
-        y: 31
-        width: 75
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 132d4e7a0c7cbf7a0800000000000000
-      internalID: -6342256019956772303
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bridge 1_4
-      rect:
-        serializedVersion: 2
-        x: 183
-        y: 31
-        width: 41
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a7bae5069bbd2a4b0800000000000000
-      internalID: -5430536611423147142
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bridge 1_5
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 9
-        width: 40
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 46ccc56334ac255c0800000000000000
-      internalID: -4228094710123803548
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bridge 1_6
-      rect:
-        serializedVersion: 2
-        x: 186
+        x: 32
         y: 0
-        width: 38
-        height: 29
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dc102afdafffd4730800000000000000
-      internalID: 3985122698251600333
+      spriteID: 5e4fa77d28e395740bf253cddda0d010
+      internalID: 801989718
       vertices: []
       indices: 
       edges: []
@@ -288,7 +618,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e287d15629c1925439856c0a241a650a
     internalID: 0
     vertices: []
     indices: 
@@ -298,13 +628,33 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bridge 1_0: 3435026045092587594
-      Bridge 1_1: 3372995216875998831
-      Bridge 1_2: -270586185368676032
-      Bridge 1_3: -6342256019956772303
-      Bridge 1_4: -5430536611423147142
-      Bridge 1_5: -4228094710123803548
-      Bridge 1_6: 3985122698251600333
+      Sprite_Water_Prop_Bridge_01_0: 1449281088
+      Sprite_Water_Prop_Bridge_01_1: -808320464
+      Sprite_Water_Prop_Bridge_01_10: -1389172167
+      Sprite_Water_Prop_Bridge_01_11: -403733232
+      Sprite_Water_Prop_Bridge_01_12: 428263305
+      Sprite_Water_Prop_Bridge_01_13: -545886421
+      Sprite_Water_Prop_Bridge_01_14: 57096706
+      Sprite_Water_Prop_Bridge_01_15: -596066238
+      Sprite_Water_Prop_Bridge_01_16: 2005259567
+      Sprite_Water_Prop_Bridge_01_17: 275344100
+      Sprite_Water_Prop_Bridge_01_18: 1320017017
+      Sprite_Water_Prop_Bridge_01_19: 1513139970
+      Sprite_Water_Prop_Bridge_01_2: 456155765
+      Sprite_Water_Prop_Bridge_01_20: 1247589616
+      Sprite_Water_Prop_Bridge_01_21: 801989718
+      Sprite_Water_Prop_Bridge_01_22: 1282984956
+      Sprite_Water_Prop_Bridge_01_23: 1357328540
+      Sprite_Water_Prop_Bridge_01_24: 1059743045
+      Sprite_Water_Prop_Bridge_01_25: -2138316311
+      Sprite_Water_Prop_Bridge_01_26: -1162402158
+      Sprite_Water_Prop_Bridge_01_3: -346522217
+      Sprite_Water_Prop_Bridge_01_4: 48745037
+      Sprite_Water_Prop_Bridge_01_5: -292751671
+      Sprite_Water_Prop_Bridge_01_6: -333198474
+      Sprite_Water_Prop_Bridge_01_7: 975983709
+      Sprite_Water_Prop_Bridge_01_8: 1648913391
+      Sprite_Water_Prop_Bridge_01_9: -1157340064
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
