@@ -1,10 +1,16 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Gameplay.Character.Core;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Gameplay.Character.StateMachine {
     [CreateAssetMenu(fileName = "NewCharacterState", menuName = "Yiso/Gameplay/Character/State Machine/Character State")]
     public class YisoCharacterStateSO: ScriptableObject {
+        [Header("Settings")]
+        [Tooltip("단일 상태로 볼 것인지 여러 상태가 합쳐져 있는 다중 상태로 볼건지 여부")]
+        [SerializeField] private bool hasChildState = false;
+        
         [Header("Actions")]
         [Tooltip("이 상태에 진입할 때 한 번 실행될 액션들의 목록이다.")]
         [SerializeField] private List<YisoCharacterActionSO> onEnterActions;
@@ -19,28 +25,77 @@ namespace Gameplay.Character.StateMachine {
         [Tooltip("이 상태에서 다른 상태로 전환될 수 있는 모든 규칙(Transition)들의 목록이다. 목록의 순서가 곧 우선순위가 된다.")]
         [SerializeField] private List<YisoCharacterTransitionSO> transitions;
 
+        [Header("Child States"), ShowIf("hasChildState")]
+        [Tooltip("자식 상태 목록이다.")]
+        [SerializeField, ShowIf("hasChildState")] private List<YisoCharacterStateSO> childStates;
+
         public virtual void OnEnter(IYisoCharacterContext context) {
             ExecuteActions(onEnterActions, context);
+            if (hasChildState) {
+                foreach (var childState in childStates) {
+                    if (childState == this) continue;
+                    childState.OnEnter(context);
+                }
+            }
         }
 
         public virtual void OnExit(IYisoCharacterContext context) {
             ExecuteActions(onExitActions, context);
+            if (hasChildState) {
+                foreach (var childState in childStates) {
+                    if (childState == this) continue;
+                    childState.OnExit(context);
+                }
+            }
         }
 
         public virtual void OnUpdate(IYisoCharacterContext context) {
             ExecuteActions(onUpdateActions, context);
+            if (hasChildState) {
+                foreach (var childState in childStates) {
+                    if (childState == this) continue;
+                    childState.OnUpdate(context);
+                }
+            }
         }
-
+        
         public bool CheckTransitions(IYisoCharacterContext context, out YisoCharacterStateSO nextState) {
+            var availableStates = new HashSet<YisoCharacterStateSO>();
+            var canTransition = false;
+            
             foreach (var transition in transitions) {
                 // 각 Transition 규칙이 충족되는지 확인
-                if (transition.CheckTransition(context, out nextState)) {
-                    // 하나라도 충족되면 즉시 true를 반환하여 전환을 시작 (우선순위)
+                if (transition.CheckTransition(context, out var candidateState)) {
+                    availableStates.Add(candidateState);
+                    canTransition = true;
+                }
+            }
+
+            if (!hasChildState) {
+                nextState = canTransition ? availableStates.FirstOrDefault() : null;
+                return canTransition;
+            }
+
+            var childStateCandidates = new Dictionary<YisoCharacterStateSO, int>();
+            
+            foreach (var childState in childStates) {
+                if (childState.CheckTransitions(context, out var childCandidate)) {
+                    if (childCandidate != null) {
+                        if (!childStateCandidates.ContainsKey(childCandidate)) {
+                            childStateCandidates[childCandidate] = 0;
+                        }
+                        childStateCandidates[childCandidate]++;
+                    }
+                }
+            }
+
+            foreach (var (candidateState, count) in childStateCandidates) {
+                if (count == childStates.Count && availableStates.Contains(candidateState)) {
+                    nextState = candidateState;
                     return true;
                 }
             }
-            
-            // 모든 Transition 규칙을 확인했지만 충족되는 것이 없으면, 전환하지 않음
+
             nextState = null;
             return false;
         }

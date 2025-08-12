@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Gameplay.Character.Core;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -8,14 +9,14 @@ namespace Gameplay.Character.StateMachine {
     /// 하나의 상태에서 다른 상태로 전환되는 규칙과 대상을 정의하는 ScriptableObject.
     /// 조건에 따라 단일 상태 또는 목록 중 하나를 랜덤으로 선택하여 전환할 수 있습니다.
     /// </summary>
-    [CreateAssetMenu(fileName = "New Transition", menuName = "Yiso/State Machine/Transition")]
+    [CreateAssetMenu(fileName = "NewCharacterTransition", menuName = "Yiso/Gameplay/Character/State Machine/Transition")]
     public class YisoCharacterTransitionSO : ScriptableObject {
         
-        [Header("조건")]
+        [Header("Condition")]
         [SerializeField]
-        private YisoCharacterDecisionSO _decision;
+        private List<YisoCharacterDecisionSO> _decisions;
 
-        [Header("조건이 TRUE일 경우")]
+        [Header("IF TRUE")]
         [Tooltip("True일 때, 목록에서 랜덤으로 상태를 고를지 여부입니다.")]
         [SerializeField]
         private bool _isTrueStateRandom = false;
@@ -28,7 +29,7 @@ namespace Gameplay.Character.StateMachine {
         [SerializeField, ShowIf("_isTrueStateRandom")]
         private List<YisoCharacterStateSO> _trueStates;
         
-        [Header("조건이 FALSE일 경우")]
+        [Header("IF FALSE")]
         [Tooltip("False일 때, 목록에서 랜덤으로 상태를 고를지 여부입니다.")]
         [SerializeField]
         private bool _isFalseStateRandom = false;
@@ -50,8 +51,8 @@ namespace Gameplay.Character.StateMachine {
         /// <returns>상태 전환이 필요한 경우 true를 반환합니다.</returns>
         public bool CheckTransition(IYisoCharacterContext context, out YisoCharacterStateSO nextState) {
             // Decision의 평가 결과를 먼저 가져옴
-            var decisionResult = _decision.Decide(context);
-            
+            var decisionResult = _decisions.All(decision => decision);
+
             // 평가 결과에 따라 다음 상태를 결정
             if (decisionResult) {
                 // TRUE 경로

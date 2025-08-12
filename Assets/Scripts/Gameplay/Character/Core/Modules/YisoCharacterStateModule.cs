@@ -57,13 +57,17 @@ namespace Gameplay.Character.Core.Modules {
             TimeInCurrentState += Time.deltaTime;
 
             // 1. 전이(Transition) 확인 주기
-            if (Time.time - _lastDecisionCheckTime > _settings.decisionCheckFrequency) {
-                if (CurrentState.CheckTransitions(Context, out var nextState)) {
-                    RequestStateChange(nextState);
-                }
-                _lastDecisionCheckTime = Time.time;
+            // Player는 Input 값에 맞게 직접 RequestStateChange 호출
+            // AI만 체크해서 상태 전이
+            if (Context.Type == CharacterTypes.AI) {
+                if (Time.time - _lastDecisionCheckTime > _settings.decisionCheckFrequency) {
+                    if (CurrentState.CheckTransitions(Context, out var nextState)) {
+                        RequestStateChange(nextState);
+                    }
+                    _lastDecisionCheckTime = Time.time;
+                }  
             }
-
+            
             // 2. 상태 업데이트 액션(Action) 실행 주기
             if (Time.time - _lastActionExecuteTime > _settings.actionExecuteFrequency) {
                 CurrentState.OnUpdate(Context);
