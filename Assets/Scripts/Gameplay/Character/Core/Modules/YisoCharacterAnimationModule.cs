@@ -149,7 +149,7 @@ namespace Gameplay.Character.Core.Modules {
         /// </summary>
         /// <param name="state"></param>
         /// <param name="crossFadeDuration"></param>
-        public void PlayAnimation(YisoCharacterAnimationState state, float crossFadeDuration = 0.2f) {
+        public void PlayAnimationForce(YisoCharacterAnimationState state, float crossFadeDuration = 0.2f) {
             if (_animator != null) {
                 _animator.CrossFade(state.ToString(), crossFadeDuration);
             } else {

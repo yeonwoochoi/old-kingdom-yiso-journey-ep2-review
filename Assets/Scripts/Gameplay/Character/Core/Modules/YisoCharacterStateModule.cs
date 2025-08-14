@@ -59,7 +59,7 @@ namespace Gameplay.Character.Core.Modules {
             // 1. 전이(Transition) 확인 주기
             // Player는 Input 값에 맞게 직접 RequestStateChange 호출
             // AI만 체크해서 상태 전이
-            if (Context.Type == CharacterTypes.AI) {
+            if (Context.IsAIControlled) {
                 if (Time.time - _lastDecisionCheckTime > _settings.decisionCheckFrequency) {
                     if (CurrentState.CheckTransitions(Context, out var nextState)) {
                         RequestStateChange(nextState);

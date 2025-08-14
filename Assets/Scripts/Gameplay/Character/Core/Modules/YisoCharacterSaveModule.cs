@@ -9,7 +9,8 @@ namespace Gameplay.Character.Core.Modules {
         }
 
         private void SavePlayerData() {
-            // TODO [YisoCharacterSaveModule.SavePlayerData] Save System 구현되면 연동
+            if (!Context.IsPlayer) return;
+            // TODO: Save Service 연동
         }
 
         [Serializable] 

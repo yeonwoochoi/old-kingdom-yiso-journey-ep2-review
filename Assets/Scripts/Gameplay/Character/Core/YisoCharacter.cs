@@ -3,39 +3,10 @@ using System.Collections.Generic;
 using Core.Behaviour;
 using Gameplay.Character.Core.Modules;
 using Gameplay.Character.StateMachine;
+using Gameplay.Character.Types;
 using UnityEngine;
 
 namespace Gameplay.Character.Core {
-    /// <summary>
-    /// 캐릭터의 핵심 데이터와 기능에 접근하기 위한 통로(인터페이스).
-    /// 모듈은 이 컨텍스트를 통해 다른 모듈이나 캐릭터 정보와 상호작용.
-    /// </summary>
-    public interface IYisoCharacterContext {
-        GameObject GameObject { get; }
-        Transform Transform { get; }
-        CharacterTypes Type { get; }
-        string ID { get; }
-        GameObject Model { get; }
-        Animator Animator { get; }
-        T GetModule<T>() where T : class, IYisoCharacterModule;
-        YisoCharacterStateSO GetCurrentState();
-        void RequestStateChange(YisoCharacterStateSO newStateSO);
-        void RequestStateChange(string newStateName);
-        void Move(Vector3 direction, float speedMultiplier = 1f);
-        void PlayAnimation(YisoCharacterAnimationState state, bool value);
-        void PlayAnimation(YisoCharacterAnimationState state, float value);
-        void PlayAnimation(YisoCharacterAnimationState state, int value);
-        void PlayAnimation(YisoCharacterAnimationState state);
-        float GetCurrentHealth();
-        bool IsDead();
-        void TakeDamage(float damage);
-    }
-    
-    public enum CharacterTypes {
-        Player,
-        AI
-    }
-
     /// <summary>
     /// 캐릭터 모든 기능을 관리하는 중앙 허브 역할의 MonoBehaviour.
     /// 실제 로직은 각 IYisoCharacterModule에 위임, 이 클래스는 모듈 생명주기 관리 및 조율 담당.
@@ -43,7 +14,7 @@ namespace Gameplay.Character.Core {
     [AddComponentMenu("Yiso/Gameplay/Character/Core/Character")]
     public class YisoCharacter : RunIBehaviour, IYisoCharacterContext {
         [Header("Base Settings")]
-        [SerializeField] private CharacterTypes characterType = CharacterTypes.AI;
+        [SerializeField] private YisoCharacterConstants.CharacterType characterType;
         [SerializeField] private string characterID = "";
         [SerializeField] private GameObject characterModel;
         [SerializeField] private Animator animator;
@@ -60,7 +31,9 @@ namespace Gameplay.Character.Core {
 
         public GameObject GameObject => gameObject;
         public Transform Transform => transform;
-        public CharacterTypes Type => characterType;
+        public YisoCharacterConstants.CharacterType Type => characterType;
+        public bool IsPlayer => Type == YisoCharacterConstants.CharacterType.Player; // 추가 조건이 있으면 여기다.
+        public bool IsAIControlled => characterType != YisoCharacterConstants.CharacterType.Player;
         public string ID => characterID;
 
         /// <summary>
@@ -99,6 +72,11 @@ namespace Gameplay.Character.Core {
             Initialize();
         }
 
+        protected override void Start() {
+            base.Start();
+            LateInitialize();
+        }
+
         /// <summary>
         /// 캐릭터와 모든 모듈 초기화.
         /// </summary>
@@ -114,7 +92,7 @@ namespace Gameplay.Character.Core {
             RegisterModule(new YisoCharacterStateModule(this, _stateSettings));
 
             // 플레이어 타입일 경우, 입력 모듈 추가.
-            if (characterType == CharacterTypes.Player) {
+            if (IsPlayer) {
                 RegisterModule(new YisoCharacterInputModule(this, _inputSettings));
             }
 
@@ -122,7 +100,9 @@ namespace Gameplay.Character.Core {
             foreach (var module in _modules.Values) {
                 module.Initialize();
             }
+        }
 
+        private void LateInitialize() {
             // 2단계: 모듈 연결 초기화. (다른 모듈 참조 가능)
             foreach (var module in _modules.Values) {
                 module.LateInitialize();
@@ -175,15 +155,6 @@ namespace Gameplay.Character.Core {
             }
         }
 
-        /// <summary>
-        /// 모든 모듈에 파괴 신호 전파. 리소스 정리 유도.
-        /// </summary>
-        protected override void OnDestroy() {
-            foreach (var module in _modules.Values) {
-                module.OnDestroy();
-            }
-        }
-        
         protected override void OnEnable() {
             base.OnEnable();
             foreach (var module in _modules.Values) {
@@ -195,6 +166,15 @@ namespace Gameplay.Character.Core {
             base.OnDisable();
             foreach (var module in _modules.Values) {
                 module.OnDisable();
+            }
+        }
+
+        /// <summary>
+        /// 모든 모듈에 파괴 신호 전파. 리소스 정리 유도.
+        /// </summary>
+        protected override void OnDestroy() {
+            foreach (var module in _modules.Values) {
+                module.OnDestroy();
             }
         }
     }
