@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
   m_Name: Tile_Water_Environment_WaterFall_01_Anim
   m_EditorClassIdentifier: 
-  m_AnimatedSprites: []
-  m_MinSpeed: 1
-  m_MaxSpeed: 1
+  m_AnimatedSprites:
+  - {fileID: -7990127027949780600, guid: eac275aab83ef344b8201afa89fe38c9, type: 3}
+  - {fileID: -5183875377555869891, guid: eac275aab83ef344b8201afa89fe38c9, type: 3}
+  - {fileID: 7782265278927147045, guid: eac275aab83ef344b8201afa89fe38c9, type: 3}
+  - {fileID: -1364022175558441177, guid: eac275aab83ef344b8201afa89fe38c9, type: 3}
+  m_MinSpeed: 8
+  m_MaxSpeed: 8
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
   m_TileColliderType: 0

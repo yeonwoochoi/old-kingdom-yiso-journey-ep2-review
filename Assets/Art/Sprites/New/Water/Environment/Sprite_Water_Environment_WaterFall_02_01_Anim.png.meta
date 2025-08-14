@@ -1,0 +1,306 @@
+fileFormatVersion: 2
+guid: 2ed10e8c72a72d9479cc422daae84015
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1970997502012649864
+    second: Sprite_Water_Waterfall_01_0
+  - first:
+      213: -6327646514045256930
+    second: Sprite_Water_Waterfall_01_1
+  - first:
+      213: 4263022774877888904
+    second: Sprite_Water_Waterfall_01_2
+  - first:
+      213: -5852677996259929440
+    second: Sprite_Water_Waterfall_01_3
+  - first:
+      213: 3861610096009943738
+    second: Sprite_Water_Waterfall_01_4
+  - first:
+      213: 8708409806307574960
+    second: Sprite_Water_Waterfall_01_5
+  - first:
+      213: 5870570509967628664
+    second: Sprite_Water_Waterfall_01_6
+  - first:
+      213: -4398460747525196380
+    second: Sprite_Water_Waterfall_01_7
+  - first:
+      213: 5754595129152751471
+    second: Sprite_Water_Waterfall_01_8
+  - first:
+      213: -7487827006776793058
+    second: Sprite_Water_Waterfall_01_9
+  - first:
+      213: -6239826254248135061
+    second: Sprite_Water_Waterfall_01_10
+  - first:
+      213: 824989759025773350
+    second: Sprite_Water_Waterfall_01_11
+  - first:
+      213: 5643055090972990141
+    second: Sprite_Water_Waterfall_01_12
+  - first:
+      213: -7135950907371451595
+    second: Sprite_Water_Waterfall_01_13
+  - first:
+      213: -8186235653580728381
+    second: Sprite_Water_Waterfall_01_14
+  - first:
+      213: -2020532011758035641
+    second: Sprite_Water_Waterfall_01_15
+  - first:
+      213: -7999459671106849963
+    second: Sprite_Water_Waterfall_01_16
+  - first:
+      213: -6905312931836516067
+    second: Sprite_Water_Waterfall_01_17
+  - first:
+      213: -6223728875180582869
+    second: Sprite_Water_Waterfall_01_18
+  - first:
+      213: -4938359098050211733
+    second: Sprite_Water_Waterfall_01_19
+  - first:
+      213: 4686606329501318676
+    second: Sprite_Water_Waterfall_01_20
+  - first:
+      213: -1722787808505461512
+    second: Sprite_Water_Waterfall_01_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprite_Water_Waterfall_01_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 96
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88175a809c36a5b10800000000000000
+      internalID: 1970997502012649864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Waterfall_01_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 16
+        width: 96
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e182e717205e51890800000000000000
+      internalID: -7487827006776793058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Waterfall_01_13
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 16
+        width: 96
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53b8f77257208fc90800000000000000
+      internalID: -7135950907371451595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Waterfall_01_16
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 16
+        width: 96
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 553fc94efc53cf090800000000000000
+      internalID: -7999459671106849963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: aa9b8dc9335e2ab44a50d807f2a16a51
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Sprite_Water_Waterfall_01_0: 1970997502012649864
+      Sprite_Water_Waterfall_01_1: -6327646514045256930
+      Sprite_Water_Waterfall_01_10: -6239826254248135061
+      Sprite_Water_Waterfall_01_11: 824989759025773350
+      Sprite_Water_Waterfall_01_12: 5643055090972990141
+      Sprite_Water_Waterfall_01_13: -7135950907371451595
+      Sprite_Water_Waterfall_01_14: -8186235653580728381
+      Sprite_Water_Waterfall_01_15: -2020532011758035641
+      Sprite_Water_Waterfall_01_16: -7999459671106849963
+      Sprite_Water_Waterfall_01_17: -6905312931836516067
+      Sprite_Water_Waterfall_01_18: -6223728875180582869
+      Sprite_Water_Waterfall_01_19: -4938359098050211733
+      Sprite_Water_Waterfall_01_2: 4263022774877888904
+      Sprite_Water_Waterfall_01_20: 4686606329501318676
+      Sprite_Water_Waterfall_01_21: -1722787808505461512
+      Sprite_Water_Waterfall_01_3: -5852677996259929440
+      Sprite_Water_Waterfall_01_4: 3861610096009943738
+      Sprite_Water_Waterfall_01_5: 8708409806307574960
+      Sprite_Water_Waterfall_01_6: 5870570509967628664
+      Sprite_Water_Waterfall_01_7: -4398460747525196380
+      Sprite_Water_Waterfall_01_8: 5754595129152751471
+      Sprite_Water_Waterfall_01_9: -7487827006776793058
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

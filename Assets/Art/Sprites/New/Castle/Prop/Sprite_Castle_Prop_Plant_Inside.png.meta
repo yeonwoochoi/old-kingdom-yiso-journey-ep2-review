@@ -3,17 +3,26 @@ guid: c78bdaf998569914885ca7cd5effc04e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4120502745591785976
-    second: Planters_0
+      213: -1513997006816833663
+    second: Sprite_Castle_Prop_Plant_Inside_0
   - first:
-      213: -8269117867946475853
-    second: Planters_1
+      213: -6883479178070636737
+    second: Sprite_Castle_Prop_Plant_Inside_1
   - first:
-      213: -6873406329573126339
-    second: Planters_2
+      213: -7790058356809611417
+    second: Sprite_Castle_Prop_Plant_Inside_2
   - first:
-      213: -5301238191455848420
-    second: Planters_3
+      213: 8896473716796051752
+    second: Sprite_Castle_Prop_Plant_Inside_3
+  - first:
+      213: 6184144138176320042
+    second: Sprite_Castle_Prop_Plant_Inside_4
+  - first:
+      213: -5208495126289560142
+    second: Sprite_Castle_Prop_Plant_Inside_5
+  - first:
+      213: 4792858978278245354
+    second: Sprite_Castle_Prop_Plant_Inside_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -84,45 +93,6 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Win64
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -161,35 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Planters_0
+      name: Sprite_Castle_Prop_Plant_Inside_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 11
-        width: 97
-        height: 83
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 806daf0959801d6c0800000000000000
-      internalID: -4120502745591785976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Planters_1
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 63
+        x: 1
+        y: 12
         width: 32
-        height: 33
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3bef63b5c113e3d80800000000000000
-      internalID: -8269117867946475853
+      spriteID: 18f8da96eb33dfae0800000000000000
+      internalID: -1513997006816833663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Planters_2
+      name: Sprite_Castle_Prop_Plant_Inside_1
       rect:
         serializedVersion: 2
-        x: 127
-        y: 11
-        width: 33
-        height: 76
+        x: 41
+        y: 12
+        width: 32
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,20 +168,108 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d3f4fd03c51cc90a0800000000000000
-      internalID: -6873406329573126339
+      spriteID: f374d446828f870a0800000000000000
+      internalID: -6883479178070636737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Planters_3
+      name: Sprite_Castle_Prop_Plant_Inside_2
       rect:
         serializedVersion: 2
-        x: 97
-        y: 11
+        x: 77
+        y: 12
+        width: 32
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 767cccea23724e390800000000000000
+      internalID: -7790058356809611417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Prop_Plant_Inside_3
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 12
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8215a3bb5bf967b70800000000000000
+      internalID: 8896473716796051752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Prop_Plant_Inside_4
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 12
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2250d3245e72d550800000000000000
+      internalID: 6184144138176320042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Prop_Plant_Inside_5
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 13
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bd48274745b7b7b0800000000000000
+      internalID: -5208495126289560142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Prop_Plant_Inside_6
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 12
         width: 30
-        height: 38
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,8 +278,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c183a88b3f73e66b0800000000000000
-      internalID: -5301238191455848420
+      spriteID: ae301dad8d7a38240800000000000000
+      internalID: 4792858978278245354
       vertices: []
       indices: 
       edges: []
@@ -252,7 +288,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d66d3268ca6f27f4bad58dea5f9540cb
     internalID: 0
     vertices: []
     indices: 
@@ -262,10 +298,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Planters_0: -4120502745591785976
-      Planters_1: -8269117867946475853
-      Planters_2: -6873406329573126339
-      Planters_3: -5301238191455848420
+      Sprite_Castle_Prop_Plant_Inside_0: -1513997006816833663
+      Sprite_Castle_Prop_Plant_Inside_1: -6883479178070636737
+      Sprite_Castle_Prop_Plant_Inside_2: -7790058356809611417
+      Sprite_Castle_Prop_Plant_Inside_3: 8896473716796051752
+      Sprite_Castle_Prop_Plant_Inside_4: 6184144138176320042
+      Sprite_Castle_Prop_Plant_Inside_5: -5208495126289560142
+      Sprite_Castle_Prop_Plant_Inside_6: 4792858978278245354
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

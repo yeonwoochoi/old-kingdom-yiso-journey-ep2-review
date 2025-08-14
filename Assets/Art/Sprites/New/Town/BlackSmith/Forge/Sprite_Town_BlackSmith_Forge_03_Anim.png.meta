@@ -8,6 +8,12 @@ TextureImporter:
   - first:
       213: -8567537471167780812
     second: Sprite_Town_BlackSmith_Forge_03_Anim_1
+  - first:
+      213: -2029195512936388124
+    second: Sprite_Town_BlackSmith_Forge_03_Anim_2
+  - first:
+      213: 5145012740082137788
+    second: Sprite_Town_BlackSmith_Forge_03_Anim_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -54,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -119,12 +125,12 @@ TextureImporter:
       name: Sprite_Town_BlackSmith_Forge_03_Anim_0
       rect:
         serializedVersion: 2
-        x: 31
-        y: 28
-        width: 194
-        height: 97
+        x: 15
+        y: 15
+        width: 66
+        height: 98
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -141,12 +147,12 @@ TextureImporter:
       name: Sprite_Town_BlackSmith_Forge_03_Anim_1
       rect:
         serializedVersion: 2
-        x: 172
-        y: 117
-        width: 9
-        height: 9
+        x: 95
+        y: 15
+        width: 66
+        height: 98
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -159,11 +165,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_BlackSmith_Forge_03_Anim_2
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 15
+        width: 66
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e92c9f9e69d6d3e0800000000000000
+      internalID: -2029195512936388124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 29a592b5b66371040ad2c50ce23f37e4
     internalID: 0
     vertices: []
     indices: 
@@ -175,6 +203,8 @@ TextureImporter:
     nameFileIdTable:
       Sprite_Town_BlackSmith_Forge_03_Anim_0: 4795178975244908077
       Sprite_Town_BlackSmith_Forge_03_Anim_1: -8567537471167780812
+      Sprite_Town_BlackSmith_Forge_03_Anim_2: -2029195512936388124
+      Sprite_Town_BlackSmith_Forge_03_Anim_3: 5145012740082137788
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

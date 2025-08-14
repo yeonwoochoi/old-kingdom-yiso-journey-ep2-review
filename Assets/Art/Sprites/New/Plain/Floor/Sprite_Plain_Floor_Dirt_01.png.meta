@@ -94,7 +94,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -108,7 +108,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -170,441 +170,287 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tile_Plain_Environment_Floor_Dirt_02_0
+      name: Sprite_Plain_Floor_Dirt_01_1
       rect:
         serializedVersion: 2
-        x: 1
-        y: 218
-        width: 12
-        height: 6
+        x: 32
+        y: 192
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ccd28622ab3dfa300800000000000000
-      internalID: 265663699432779212
+      spriteID: 5137033fc9cf98a48a4adcb47dd738e8
+      internalID: 1901715162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile_Plain_Environment_Floor_Dirt_02_1
+      name: Sprite_Plain_Floor_Dirt_01_2
       rect:
         serializedVersion: 2
-        x: 12
-        y: 211
-        width: 19
-        height: 11
+        x: 64
+        y: 192
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d14f51f6bf632ec50800000000000000
-      internalID: 6692972449754379293
+      spriteID: 4eb8f8c0f07e0614b87c6e8194369cf4
+      internalID: 1964611469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile_Plain_Environment_Floor_Dirt_02_2
+      name: Sprite_Plain_Floor_Dirt_01_4
       rect:
         serializedVersion: 2
-        x: 21
-        y: 159
-        width: 75
-        height: 65
+        x: 32
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 188c7cf093728c090800000000000000
-      internalID: -8014112410874427263
+      spriteID: 5ca5e8c9fde407648a01659ceb5ad894
+      internalID: 1968531752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile_Plain_Environment_Floor_Dirt_02_3
+      name: Sprite_Plain_Floor_Dirt_01_5
       rect:
         serializedVersion: 2
-        x: 6
-        y: 207
-        width: 13
-        height: 6
+        x: 64
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 518a7c86dc4879db0800000000000000
-      internalID: -4785210061296785387
+      spriteID: aa1473fe5a51e08419914acb489ec490
+      internalID: -307855034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile_Plain_Environment_Floor_Dirt_02_4
+      name: Sprite_Plain_Floor_Dirt_01_6
       rect:
         serializedVersion: 2
         x: 0
-        y: 194
-        width: 24
-        height: 12
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 80c1b5a90b8552770800000000000000
-      internalID: 8585365780178869256
+      spriteID: a530fb83980f7fb4cac26aea9aaf43e8
+      internalID: 366178302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile_Plain_Environment_Floor_Dirt_02_5
+      name: Sprite_Plain_Floor_Dirt_01_7
       rect:
         serializedVersion: 2
-        x: 7
-        y: 167
-        width: 11
-        height: 6
+        x: 32
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 94199e1a93d02bcd0800000000000000
-      internalID: -2543956298330173111
+      spriteID: bba14de706d27794ca42ac1822ed7d50
+      internalID: 940951441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile_Plain_Environment_Floor_Dirt_02_6
+      name: Sprite_Plain_Floor_Dirt_01_8
       rect:
         serializedVersion: 2
-        x: 8
-        y: 173
-        width: 21
-        height: 11
+        x: 64
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f624548f1acfdab80800000000000000
-      internalID: -8381765558881402257
+      spriteID: 71b13ae7ef84469498eac1333051d79a
+      internalID: 1733943931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile_Plain_Environment_Floor_Dirt_02_7
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 65
-        width: 94
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 800bb66b046ab82d0800000000000000
-      internalID: -3275341507113275384
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile_Plain_Environment_Floor_Dirt_02_8
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 150
-        width: 13
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dbad48ab4f9f30370800000000000000
-      internalID: 8287742568788449981
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile_Plain_Environment_Floor_Dirt_02_9
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 149
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 305bfc21e70440510800000000000000
-      internalID: 1514406284928988419
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile_Plain_Environment_Floor_Dirt_02_10
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 150
-        width: 13
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: af07c22d5cd4d22d0800000000000000
-      internalID: -3301897439762681606
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile_Plain_Environment_Floor_Dirt_02_11
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 149
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 72d98d5172c951480800000000000000
-      internalID: -8929058994507965145
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile_Plain_Environment_Floor_Dirt_02_12
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 130
-        width: 10
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a3caf03d05d36adb0800000000000000
-      internalID: -4781066537059505094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile_Plain_Environment_Floor_Dirt_02_13
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 135
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 98609272050748710800000000000000
-      internalID: 1694602849354843785
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile_Plain_Environment_Floor_Dirt_02_14
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 117
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 01b5cc4d1d01e0060800000000000000
-      internalID: 6921488170719402768
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile_Plain_Environment_Floor_Dirt_02_15
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 98
-        width: 10
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bd064aba10d99a0e0800000000000000
-      internalID: -2258101107649388325
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile_Plain_Environment_Floor_Dirt_02_16
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 85
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1aaad4030986a6f10800000000000000
-      internalID: 2263736731202071201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile_Plain_Environment_Floor_Dirt_02_17
+      name: Sprite_Plain_Floor_Dirt_01_9
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 96
-        height: 65
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2305ab7bf80f97c50800000000000000
-      internalID: 6663621623724789810
+      spriteID: eadf4d281290be946af1ace403c856c9
+      internalID: -1708742279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile_Plain_Environment_Floor_Dirt_02_18
+      name: Sprite_Plain_Floor_Dirt_01_10
       rect:
         serializedVersion: 2
-        x: 21
-        y: 64
-        width: 10
-        height: 10
+        x: 32
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ca3f375ecc3ceed00800000000000000
-      internalID: 1003955051740525484
+      spriteID: 9e456caa3d2f1eb489b68ec3eedfb895
+      internalID: -1431943248
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile_Plain_Environment_Floor_Dirt_02_19
+      name: Sprite_Plain_Floor_Dirt_01_11
       rect:
         serializedVersion: 2
-        x: 54
-        y: 64
-        width: 9
-        height: 7
+        x: 64
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1c60420ec8f815ef0800000000000000
-      internalID: -121157879743641919
+      spriteID: 45d4590d655ad1c4494acca9944ee8fd
+      internalID: -433483729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Floor_Dirt_01_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78be28ebbb301034a8233d5b76818db8
+      internalID: 35324549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Floor_Dirt_01_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb19d5b309176047a4c35fb57d33f2a
+      internalID: 2098347619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Floor_Dirt_01_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4e69c427b87fb4287faf18da169e8f
+      internalID: -885060225
       vertices: []
       indices: 
       edges: []
@@ -613,7 +459,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cddf81945dc8f5f46b28d4b2e4712c70
     internalID: 0
     vertices: []
     indices: 
@@ -623,26 +469,26 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Tile_Plain_Environment_Floor_Dirt_02_0: 265663699432779212
-      Tile_Plain_Environment_Floor_Dirt_02_1: 6692972449754379293
-      Tile_Plain_Environment_Floor_Dirt_02_10: -3301897439762681606
-      Tile_Plain_Environment_Floor_Dirt_02_11: -8929058994507965145
-      Tile_Plain_Environment_Floor_Dirt_02_12: -4781066537059505094
-      Tile_Plain_Environment_Floor_Dirt_02_13: 1694602849354843785
-      Tile_Plain_Environment_Floor_Dirt_02_14: 6921488170719402768
-      Tile_Plain_Environment_Floor_Dirt_02_15: -2258101107649388325
-      Tile_Plain_Environment_Floor_Dirt_02_16: 2263736731202071201
-      Tile_Plain_Environment_Floor_Dirt_02_17: 6663621623724789810
-      Tile_Plain_Environment_Floor_Dirt_02_18: 1003955051740525484
-      Tile_Plain_Environment_Floor_Dirt_02_19: -121157879743641919
-      Tile_Plain_Environment_Floor_Dirt_02_2: -8014112410874427263
-      Tile_Plain_Environment_Floor_Dirt_02_3: -4785210061296785387
-      Tile_Plain_Environment_Floor_Dirt_02_4: 8585365780178869256
-      Tile_Plain_Environment_Floor_Dirt_02_5: -2543956298330173111
-      Tile_Plain_Environment_Floor_Dirt_02_6: -8381765558881402257
-      Tile_Plain_Environment_Floor_Dirt_02_7: -3275341507113275384
-      Tile_Plain_Environment_Floor_Dirt_02_8: 8287742568788449981
-      Tile_Plain_Environment_Floor_Dirt_02_9: 1514406284928988419
+      Sprite_Plain_Floor_Dirt_01_0: 1416753374
+      Sprite_Plain_Floor_Dirt_01_1: 1901715162
+      Sprite_Plain_Floor_Dirt_01_10: -1431943248
+      Sprite_Plain_Floor_Dirt_01_11: -433483729
+      Sprite_Plain_Floor_Dirt_01_12: 35324549
+      Sprite_Plain_Floor_Dirt_01_13: 2098347619
+      Sprite_Plain_Floor_Dirt_01_14: -885060225
+      Sprite_Plain_Floor_Dirt_01_15: 37168825
+      Sprite_Plain_Floor_Dirt_01_16: 490612237
+      Sprite_Plain_Floor_Dirt_01_17: -323605389
+      Sprite_Plain_Floor_Dirt_01_18: 1363935593
+      Sprite_Plain_Floor_Dirt_01_19: -92229799
+      Sprite_Plain_Floor_Dirt_01_2: 1964611469
+      Sprite_Plain_Floor_Dirt_01_3: 763002039
+      Sprite_Plain_Floor_Dirt_01_4: 1968531752
+      Sprite_Plain_Floor_Dirt_01_5: -307855034
+      Sprite_Plain_Floor_Dirt_01_6: 366178302
+      Sprite_Plain_Floor_Dirt_01_7: 940951441
+      Sprite_Plain_Floor_Dirt_01_8: 1733943931
+      Sprite_Plain_Floor_Dirt_01_9: -1708742279
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

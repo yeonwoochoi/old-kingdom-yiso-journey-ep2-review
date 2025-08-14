@@ -70,7 +70,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -84,7 +84,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -146,265 +146,265 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: statue_0
+      name: Sprite_Castle_Prop_Statue_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 345
+        width: 140
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c12dc4a3013439f449d24b8f03b8ee09
+      internalID: -1340068152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Prop_Statue_1
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 345
+        width: 140
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023ab45de765a0c4db444068b72cfb7b
+      internalID: -1960696508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Prop_Statue_2
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 384
+        width: 138
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 881ddf05623845a45af1cab0d372207f
+      internalID: 2109651978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Prop_Statue_3
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 384
+        width: 138
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4929aec27aa579943b2433062396a13d
+      internalID: 2121192022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Prop_Statue_4
       rect:
         serializedVersion: 2
         x: 16
-        y: 344
-        width: 142
-        height: 196
+        y: 226
+        width: 48
+        height: 88
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6ba8ecb36188f6e50800000000000000
-      internalID: 6804807191054158518
+      spriteID: d8b5c7f689665d14191793550670b8bd
+      internalID: -1716253412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: statue_1
+      name: Sprite_Castle_Prop_Statue_5
       rect:
         serializedVersion: 2
-        x: 176
-        y: 344
-        width: 142
-        height: 196
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 38da55c32136ea440800000000000000
-      internalID: 4949001970499562883
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: statue_2
-      rect:
-        serializedVersion: 2
-        x: 332
-        y: 383
-        width: 140
-        height: 146
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f3388400d1eb47f60800000000000000
-      internalID: 8031253067276518207
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: statue_3
-      rect:
-        serializedVersion: 2
-        x: 508
-        y: 383
-        width: 140
-        height: 146
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 227160140a6b2b530800000000000000
-      internalID: 3869355829266618146
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: statue_4
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 225
-        width: 50
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c8ed9224b7b2bae20800000000000000
-      internalID: 3362829355153219212
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: statue_5
-      rect:
-        serializedVersion: 2
-        x: 91
-        y: 234
-        width: 32
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 64ba2dc80022b6860800000000000000
-      internalID: 7524144988210506566
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: statue_6
-      rect:
-        serializedVersion: 2
-        x: 122
-        y: 236
-        width: 33
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cf2dcb250e6401d40800000000000000
-      internalID: 5553016269822546684
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: statue_7
-      rect:
-        serializedVersion: 2
-        x: 179
+        x: 92
         y: 235
         width: 30
-        height: 61
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d655f0fc1920e2df0800000000000000
-      internalID: -203222107917691539
+      spriteID: 5b34652b1db0ef443882fa05e18b8efc
+      internalID: -613117543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: statue_8
+      name: Sprite_Castle_Prop_Statue_6
       rect:
         serializedVersion: 2
-        x: 338
-        y: 223
-        width: 122
-        height: 143
+        x: 123
+        y: 237
+        width: 31
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 270d2d3901131c5b0800000000000000
-      internalID: -5349940935070134158
+      spriteID: b2848e6c7c1ef214f967e84c1b9f1610
+      internalID: 1487839962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: statue_9
+      name: Sprite_Castle_Prop_Statue_7
       rect:
         serializedVersion: 2
-        x: 504
-        y: 223
-        width: 122
-        height: 143
+        x: 180
+        y: 236
+        width: 28
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a407949b8825c6fd0800000000000000
-      internalID: -2347410558589243318
+      spriteID: b694b391da50ff84ebfaaeda93e42c05
+      internalID: -222907987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: statue_10
+      name: Sprite_Castle_Prop_Statue_8
       rect:
         serializedVersion: 2
-        x: 322
-        y: 63
-        width: 122
-        height: 143
+        x: 339
+        y: 224
+        width: 120
+        height: 141
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4428c09343668b0b0800000000000000
-      internalID: -5712703752838020540
+      spriteID: 3f1f9ea5494d9d74da65cee5b97313d5
+      internalID: 875346777
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: statue_11
+      name: Sprite_Castle_Prop_Statue_9
       rect:
         serializedVersion: 2
-        x: 456
-        y: 63
-        width: 122
-        height: 143
+        x: 505
+        y: 224
+        width: 120
+        height: 141
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 08f1ace0a30a9d3d0800000000000000
-      internalID: -3181335490543870080
+      spriteID: d88434d3702a72d499f2f1ad2e4c88a7
+      internalID: 984338529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Prop_Statue_10
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 64
+        width: 120
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39465f4165d74de4a8dcd872b81bb7f8
+      internalID: -1446949904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Prop_Statue_11
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 64
+        width: 120
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54ff28350971430488b56e40ddf074fc
+      internalID: -1076759028
       vertices: []
       indices: 
       edges: []
@@ -413,7 +413,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d437f833ee247234c97f80e536332ac1
     internalID: 0
     vertices: []
     indices: 
@@ -423,18 +423,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      statue_0: 6804807191054158518
-      statue_1: 4949001970499562883
-      statue_10: -5712703752838020540
-      statue_11: -3181335490543870080
-      statue_2: 8031253067276518207
-      statue_3: 3869355829266618146
-      statue_4: 3362829355153219212
-      statue_5: 7524144988210506566
-      statue_6: 5553016269822546684
-      statue_7: -203222107917691539
-      statue_8: -5349940935070134158
-      statue_9: -2347410558589243318
+      Sprite_Castle_Prop_Statue_0: -1340068152
+      Sprite_Castle_Prop_Statue_1: -1960696508
+      Sprite_Castle_Prop_Statue_10: -1446949904
+      Sprite_Castle_Prop_Statue_11: -1076759028
+      Sprite_Castle_Prop_Statue_2: 2109651978
+      Sprite_Castle_Prop_Statue_3: 2121192022
+      Sprite_Castle_Prop_Statue_4: -1716253412
+      Sprite_Castle_Prop_Statue_5: -613117543
+      Sprite_Castle_Prop_Statue_6: 1487839962
+      Sprite_Castle_Prop_Statue_7: -222907987
+      Sprite_Castle_Prop_Statue_8: 875346777
+      Sprite_Castle_Prop_Statue_9: 984338529
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
