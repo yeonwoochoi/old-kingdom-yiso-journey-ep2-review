@@ -58,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -134,177 +134,287 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tallgrass_0
+      name: Sprite_Town_Plant_Wheat_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24fe6b70ea733564b938c02da9017f22
+      internalID: 458605289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Wheat_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbdd5b28e110d924f845eb1155fa9a8c
+      internalID: 445220571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Wheat_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e5c01685c8f554ead90767038b9bee
+      internalID: 1059119112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Wheat_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e536a7cf195b32d46b4f928c07a62850
+      internalID: 917005641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Wheat_6
       rect:
         serializedVersion: 2
         x: 0
-        y: 127
-        width: 96
-        height: 65
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0c58198213b8adb20800000000000000
-      internalID: 3159991131804108224
+      spriteID: 20c5679433511d149aadda70f5b93b0d
+      internalID: -457582765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tallgrass_1
+      name: Sprite_Town_Plant_Wheat_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d1ceaf02d304494e983d307c9858671
+      internalID: -1881409176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Wheat_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5fd6e9a1dd58b24999ac1ecf710a02b
+      internalID: 1681028671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Wheat_9
       rect:
         serializedVersion: 2
         x: 0
-        y: 31
-        width: 96
-        height: 86
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 70d70d1548087d160800000000000000
-      internalID: 7050245047468457223
+      spriteID: 3ebba6699cbe95041a7688ebb81e3c51
+      internalID: 916480224
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tallgrass_2
+      name: Sprite_Town_Plant_Wheat_10
       rect:
         serializedVersion: 2
-        x: 26
-        y: 0
-        width: 70
-        height: 33
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 95470bb6f462eab40800000000000000
-      internalID: 5453338321343247449
+      spriteID: a5ac049ac4a9b7c41b2deb1c6b3fa8dc
+      internalID: -792416323
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tallgrass_3
+      name: Sprite_Town_Plant_Wheat_11
       rect:
         serializedVersion: 2
-        x: 2
-        y: 3
-        width: 14
-        height: 26
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ac5aac2bd3a5d9660800000000000000
-      internalID: 7394165384251352522
+      spriteID: 8fe0fe40154770c48a0a8f07b55d79bb
+      internalID: -17564510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tallgrass_4
+      name: Sprite_Town_Plant_Wheat_12
       rect:
         serializedVersion: 2
-        x: 15
-        y: 13
-        width: 6
-        height: 8
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 20583e91803f556a0800000000000000
-      internalID: -6460990874273479422
+      spriteID: f130429d0deb30c4e8a56888684ae311
+      internalID: -550319405
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tallgrass_5
+      name: Sprite_Town_Plant_Wheat_13
       rect:
         serializedVersion: 2
-        x: 16
-        y: 5
-        width: 6
-        height: 7
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4999d0f37662a15f0800000000000000
-      internalID: -785272960141387372
+      spriteID: 362b2b61f7b7aa648aa9a4f2dfec67c6
+      internalID: -1544418675
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tallgrass_6
+      name: Sprite_Town_Plant_Wheat_14
       rect:
         serializedVersion: 2
-        x: 17
-        y: 15
-        width: 11
-        height: 14
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 462513b7ca6a3aab0800000000000000
-      internalID: -4997967901719702940
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tallgrass_7
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 7
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 895d3cee1abc46100800000000000000
-      internalID: 100428988064978328
+      spriteID: 5abaa81b75048c04da1832487f0ad204
+      internalID: 1408581632
       vertices: []
       indices: 
       edges: []
@@ -313,7 +423,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6c6aa083af3a6e140b779ffe2c9e3da2
     internalID: 0
     vertices: []
     indices: 
@@ -323,14 +433,24 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tallgrass_0: 3159991131804108224
-      tallgrass_1: 7050245047468457223
-      tallgrass_2: 5453338321343247449
-      tallgrass_3: 7394165384251352522
-      tallgrass_4: -6460990874273479422
-      tallgrass_5: -785272960141387372
-      tallgrass_6: -4997967901719702940
-      tallgrass_7: 100428988064978328
+      Sprite_Town_Plant_Wheat_0: -1990196694
+      Sprite_Town_Plant_Wheat_1: 458605289
+      Sprite_Town_Plant_Wheat_10: -792416323
+      Sprite_Town_Plant_Wheat_11: -17564510
+      Sprite_Town_Plant_Wheat_12: -550319405
+      Sprite_Town_Plant_Wheat_13: -1544418675
+      Sprite_Town_Plant_Wheat_14: 1408581632
+      Sprite_Town_Plant_Wheat_15: -1481392458
+      Sprite_Town_Plant_Wheat_16: 1387103030
+      Sprite_Town_Plant_Wheat_17: -1554171765
+      Sprite_Town_Plant_Wheat_2: 445220571
+      Sprite_Town_Plant_Wheat_3: 1315132113
+      Sprite_Town_Plant_Wheat_4: 1059119112
+      Sprite_Town_Plant_Wheat_5: 917005641
+      Sprite_Town_Plant_Wheat_6: -457582765
+      Sprite_Town_Plant_Wheat_7: -1881409176
+      Sprite_Town_Plant_Wheat_8: 1681028671
+      Sprite_Town_Plant_Wheat_9: 916480224
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

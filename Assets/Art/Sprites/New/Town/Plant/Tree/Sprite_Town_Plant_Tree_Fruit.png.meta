@@ -137,144 +137,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Plain_Plant_Tree_Fruit_0
+      name: Sprite_Town_Plant_Tree_Fruit_0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 288
-        width: 68
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bc621cf41e2a187b0800000000000000
-      internalID: -5223715004183664949
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Plant_Tree_Fruit_1
-      rect:
-        serializedVersion: 2
-        x: 129
-        y: 288
-        width: 68
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 409bd92e49a97eba0800000000000000
-      internalID: -6059704809355888380
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Plant_Tree_Fruit_2
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 288
-        width: 68
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0dbb2b1808994ec10800000000000000
-      internalID: 2081957704962849744
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Plant_Tree_Fruit_3
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 147
-        width: 85
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 86eecabc38de783b0800000000000000
-      internalID: -5510174468750905752
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Plant_Tree_Fruit_4
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 147
-        width: 85
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2c0c6fb28a2c166d0800000000000000
-      internalID: -2998901849304153918
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Plant_Tree_Fruit_5
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 147
-        width: 85
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bd153822e638b35c0800000000000000
-      internalID: -4234646515563146789
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Plant_Tree_Fruit_6
-      rect:
-        serializedVersion: 2
-        x: 31
-        y: 18
-        width: 81
+        x: 34
+        y: 289
+        width: 66
         height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -282,21 +150,21 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 12be755a25867b980800000000000000
-      internalID: -8523229065604764895
+      spriteID: 9e3d238ac96e2d24ab4ae0f15ef9a1d6
+      internalID: -1811473498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Plain_Plant_Tree_Fruit_7
+      name: Sprite_Town_Plant_Tree_Fruit_1
       rect:
         serializedVersion: 2
-        x: 127
-        y: 18
-        width: 81
+        x: 130
+        y: 289
+        width: 66
         height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -304,21 +172,21 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f2687583a15fbc190800000000000000
-      internalID: -7940984024974522833
+      spriteID: 0652c6500a3de6c4ca6cb5359dfb998d
+      internalID: 1952524069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Plain_Plant_Tree_Fruit_8
+      name: Sprite_Town_Plant_Tree_Fruit_2
       rect:
         serializedVersion: 2
-        x: 223
-        y: 18
-        width: 81
+        x: 226
+        y: 289
+        width: 66
         height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -326,10 +194,142 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cb9a80067c3121240800000000000000
-      internalID: 4760889503114635708
+      spriteID: 163e246fd2eb9be43b331e1ad2f3ef7d
+      internalID: 268731130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Tree_Fruit_3
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 148
+        width: 83
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a35af43cece964b9c10f2b056039ae
+      internalID: -1661993012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Tree_Fruit_4
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 148
+        width: 83
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 648deb194797b6e44b1aa8eef31de0f9
+      internalID: -1275980943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Tree_Fruit_5
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 148
+        width: 83
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb67ea63b1de5e42bee8a8590f3bc08
+      internalID: 1682997399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Tree_Fruit_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 19
+        width: 79
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af0c9fcca3bb8b419040ff7745cc742
+      internalID: -908473678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Tree_Fruit_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 19
+        width: 79
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeb5717238be40947893f11916c64574
+      internalID: 1124668291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Tree_Fruit_8
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 19
+        width: 79
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f273963d9556c9f47b74f7df1c10a144
+      internalID: 144881472
       vertices: []
       indices: 
       edges: []
@@ -338,7 +338,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2b790c8f1b1695c4590d679176623b02
     internalID: 0
     vertices: []
     indices: 
@@ -348,15 +348,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprite_Plain_Plant_Tree_Fruit_0: -5223715004183664949
-      Sprite_Plain_Plant_Tree_Fruit_1: -6059704809355888380
-      Sprite_Plain_Plant_Tree_Fruit_2: 2081957704962849744
-      Sprite_Plain_Plant_Tree_Fruit_3: -5510174468750905752
-      Sprite_Plain_Plant_Tree_Fruit_4: -2998901849304153918
-      Sprite_Plain_Plant_Tree_Fruit_5: -4234646515563146789
-      Sprite_Plain_Plant_Tree_Fruit_6: -8523229065604764895
-      Sprite_Plain_Plant_Tree_Fruit_7: -7940984024974522833
-      Sprite_Plain_Plant_Tree_Fruit_8: 4760889503114635708
+      Sprite_Town_Plant_Tree_Fruit_0: -1811473498
+      Sprite_Town_Plant_Tree_Fruit_1: 1952524069
+      Sprite_Town_Plant_Tree_Fruit_2: 268731130
+      Sprite_Town_Plant_Tree_Fruit_3: -1661993012
+      Sprite_Town_Plant_Tree_Fruit_4: -1275980943
+      Sprite_Town_Plant_Tree_Fruit_5: 1682997399
+      Sprite_Town_Plant_Tree_Fruit_6: -908473678
+      Sprite_Town_Plant_Tree_Fruit_7: 1124668291
+      Sprite_Town_Plant_Tree_Fruit_8: 144881472
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

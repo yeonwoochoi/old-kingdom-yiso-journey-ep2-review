@@ -134,37 +134,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Town_Prop_StorageBag_03_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 11
-        width: 33
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6051c205db50a9310800000000000000
-      internalID: 1412447743786095878
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Sprite_Town_Prop_StorageBag_03_1
       rect:
         serializedVersion: 2
-        x: 31
+        x: 32
         y: 0
-        width: 66
+        width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -182,11 +160,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 47
-        y: 31
+        y: 32
         width: 34
-        height: 33
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -208,7 +186,7 @@ TextureImporter:
         width: 63
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -225,12 +203,12 @@ TextureImporter:
       name: Sprite_Town_Prop_StorageBag_03_4
       rect:
         serializedVersion: 2
-        x: 160
+        x: 161
         y: 0
-        width: 32
+        width: 31
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -247,12 +225,12 @@ TextureImporter:
       name: Sprite_Town_Prop_StorageBag_03_5
       rect:
         serializedVersion: 2
-        x: 191
+        x: 192
         y: 12
-        width: 34
+        width: 33
         height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -269,12 +247,12 @@ TextureImporter:
       name: Sprite_Town_Prop_StorageBag_03_6
       rect:
         serializedVersion: 2
-        x: 224
-        y: 32
-        width: 31
-        height: 30
+        x: 225
+        y: 33
+        width: 30
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -294,9 +272,9 @@ TextureImporter:
         x: 225
         y: 0
         width: 31
-        height: 33
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -313,7 +291,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 517768a22e3e0834a8f38ae7e2a20fb9
     internalID: 0
     vertices: []
     indices: 

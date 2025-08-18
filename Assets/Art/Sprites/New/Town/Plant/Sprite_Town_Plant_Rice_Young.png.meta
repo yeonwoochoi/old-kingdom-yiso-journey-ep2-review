@@ -40,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -54,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,45 +116,287 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: youngwheat_0
+      name: Sprite_Town_Plant_Rice_Young_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 127
-        width: 96
-        height: 65
+        x: 32
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0994839db7739ed50800000000000000
-      internalID: 6767000920165730704
+      spriteID: 4d0a3090e6388274e996207b9217e791
+      internalID: 6619429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: youngwheat_1
+      name: Sprite_Town_Plant_Rice_Young_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 96
-        height: 105
+        x: 64
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 054e5d307367dd190800000000000000
-      internalID: -7936056989697317808
+      spriteID: cf4681fd7cda40644822fb4c9a076a4b
+      internalID: 2096123174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Rice_Young_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 861de1e07f12b364080f1a44c6be72fe
+      internalID: 690065403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Rice_Young_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7944a934b59ba9a41b333cb2a76bd7bb
+      internalID: 511907575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Rice_Young_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77d32e33b02cd8f4ab6bca78138a462e
+      internalID: -190725949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Rice_Young_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f55ffebbb5d81a47b454c6a5730c6a6
+      internalID: -1860720287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Rice_Young_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7369d38894382674ca11ace8eb08523e
+      internalID: 961008768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Rice_Young_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2029b4328cc4ae143be8d8604149b737
+      internalID: 1178035921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Rice_Young_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e9157f148e6f74b859250952072394
+      internalID: 1435889509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Rice_Young_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8d20aa36864274d8f0cb9aea772ce2
+      internalID: 426002038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Rice_Young_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e16583d278a2cc4da119040b02d6a02
+      internalID: -1641795371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Rice_Young_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d01cb2ba70d5c294694ba301de22dad0
+      internalID: 1475954221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Plant_Rice_Young_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468f7664d5118ae459bb9da2cb4a4fbc
+      internalID: 1714744476
       vertices: []
       indices: 
       edges: []
@@ -163,7 +405,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: db6a59b01b4ff404fa604e36cb93c85e
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +415,24 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      youngwheat_0: 6767000920165730704
-      youngwheat_1: -7936056989697317808
+      Sprite_Town_Plant_Rice_Young_0: 1548858225
+      Sprite_Town_Plant_Rice_Young_1: 6619429
+      Sprite_Town_Plant_Rice_Young_10: 1435889509
+      Sprite_Town_Plant_Rice_Young_11: 426002038
+      Sprite_Town_Plant_Rice_Young_12: -1641795371
+      Sprite_Town_Plant_Rice_Young_13: 1475954221
+      Sprite_Town_Plant_Rice_Young_14: 1714744476
+      Sprite_Town_Plant_Rice_Young_15: -651722037
+      Sprite_Town_Plant_Rice_Young_16: -402609005
+      Sprite_Town_Plant_Rice_Young_17: -1437739653
+      Sprite_Town_Plant_Rice_Young_2: 2096123174
+      Sprite_Town_Plant_Rice_Young_3: 1811692140
+      Sprite_Town_Plant_Rice_Young_4: 690065403
+      Sprite_Town_Plant_Rice_Young_5: 511907575
+      Sprite_Town_Plant_Rice_Young_6: -190725949
+      Sprite_Town_Plant_Rice_Young_7: -1860720287
+      Sprite_Town_Plant_Rice_Young_8: 961008768
+      Sprite_Town_Plant_Rice_Young_9: 1178035921
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
