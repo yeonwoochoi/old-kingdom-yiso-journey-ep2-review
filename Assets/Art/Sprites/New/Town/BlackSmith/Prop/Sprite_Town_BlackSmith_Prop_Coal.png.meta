@@ -131,100 +131,34 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Town_BlackSmith_Coal_0
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 72
-        width: 115
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a8184fad68a31a980800000000000000
-      internalID: -8529471868389523062
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_BlackSmith_Coal_1
-      rect:
-        serializedVersion: 2
-        x: 146
-        y: 72
-        width: 104
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eedd37205cd7c77f0800000000000000
-      internalID: -613477164126052882
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_BlackSmith_Coal_2
-      rect:
-        serializedVersion: 2
-        x: 271
-        y: 74
-        width: 62
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 13dbc8cd03eb94ee0800000000000000
-      internalID: -1276279902314906319
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_BlackSmith_Coal_3
+      name: Sprite_Town_BlackSmith_Prop_Coal_0
       rect:
         serializedVersion: 2
         x: 15
-        y: 15
-        width: 93
-        height: 49
+        y: 73
+        width: 113
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6ffddf7c077abf030800000000000000
-      internalID: 3529598835808395254
+      spriteID: c60f43fef8ec5454d8bcbc85e110e671
+      internalID: 374212748
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Town_BlackSmith_Coal_4
+      name: Sprite_Town_BlackSmith_Prop_Coal_1
       rect:
         serializedVersion: 2
-        x: 127
-        y: 15
-        width: 69
+        x: 147
+        y: 73
+        width: 102
         height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -232,54 +166,120 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b95c9052789fdfa70800000000000000
-      internalID: 8862514000572302747
+      spriteID: 655ebd5beaef6a244b9346e60830de2a
+      internalID: 786243124
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Town_BlackSmith_Coal_5
+      name: Sprite_Town_BlackSmith_Prop_Coal_2
       rect:
         serializedVersion: 2
-        x: 207
+        x: 272
+        y: 75
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46ec59f99d4d0b43b972e3b7a5bfb01
+      internalID: 139196746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_BlackSmith_Prop_Coal_3
+      rect:
+        serializedVersion: 2
+        x: 16
         y: 16
-        width: 34
-        height: 38
+        width: 91
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 92efe7cbcd7e70c70800000000000000
-      internalID: 8937366920781299241
+      spriteID: 99d38481018688842bf0b1535d7fdd0c
+      internalID: 185712722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Town_BlackSmith_Coal_6
+      name: Sprite_Town_BlackSmith_Prop_Coal_4
       rect:
         serializedVersion: 2
-        x: 253
-        y: 15
-        width: 53
-        height: 38
+        x: 128
+        y: 16
+        width: 67
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d3085de1debba4e60800000000000000
-      internalID: 7947371119547613245
+      spriteID: 3e277fb70239d2d4d923a67f2fc75c97
+      internalID: -1105549476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_BlackSmith_Prop_Coal_5
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 17
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 082cd84744d044449a414be7e29d5312
+      internalID: -96807657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_BlackSmith_Prop_Coal_6
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 16
+        width: 51
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f97926e972f1c64eb031f1d6b8bfebd
+      internalID: -1270685895
       vertices: []
       indices: 
       edges: []
@@ -288,7 +288,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: fdbbb3fef45b1f24092fc713410e46b4
     internalID: 0
     vertices: []
     indices: 
@@ -298,13 +298,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprite_Town_BlackSmith_Coal_0: -8529471868389523062
-      Sprite_Town_BlackSmith_Coal_1: -613477164126052882
-      Sprite_Town_BlackSmith_Coal_2: -1276279902314906319
-      Sprite_Town_BlackSmith_Coal_3: 3529598835808395254
-      Sprite_Town_BlackSmith_Coal_4: 8862514000572302747
-      Sprite_Town_BlackSmith_Coal_5: 8937366920781299241
-      Sprite_Town_BlackSmith_Coal_6: 7947371119547613245
+      Sprite_Town_BlackSmith_Prop_Coal_0: 374212748
+      Sprite_Town_BlackSmith_Prop_Coal_1: 786243124
+      Sprite_Town_BlackSmith_Prop_Coal_2: 139196746
+      Sprite_Town_BlackSmith_Prop_Coal_3: 185712722
+      Sprite_Town_BlackSmith_Prop_Coal_4: -1105549476
+      Sprite_Town_BlackSmith_Prop_Coal_5: -96807657
+      Sprite_Town_BlackSmith_Prop_Coal_6: -1270685895
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

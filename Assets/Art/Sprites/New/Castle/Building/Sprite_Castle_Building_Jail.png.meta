@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: giwa_prison_0
+      name: Sprite_Castle_Building_Jail_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 35
-        width: 322
-        height: 239
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 33
+        y: 36
+        width: 320
+        height: 237
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 65b29b6d675c69f40800000000000000
-      internalID: 5734988289702177622
+      spriteID: befcc101e02e8f34cb447069034eeb57
+      internalID: 911796013
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0cdc675d0d4cd6f4d9dae31a36d6278d
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      giwa_prison_0: 5734988289702177622
+      Sprite_Castle_Building_Jail_0: 911796013
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -3,95 +3,77 @@ guid: fecd0077034ad2e48a880ec303bb0aba
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7623746891817259517
-    second: lpc-ship-accessories_0
+      213: -8023626141016496153
+    second: Sprite_Water_Ship_Prop_Acc_02_0
   - first:
-      213: 2116483426634536928
-    second: lpc-ship-accessories_1
+      213: 4534762286450283987
+    second: Sprite_Water_Ship_Prop_Acc_02_1
   - first:
-      213: 9114541542617371449
-    second: lpc-ship-accessories_2
+      213: 4344972174527613491
+    second: Sprite_Water_Ship_Prop_Acc_02_2
   - first:
-      213: -6471033556849190060
-    second: lpc-ship-accessories_3
+      213: 3150961313570520713
+    second: Sprite_Water_Ship_Prop_Acc_02_3
   - first:
-      213: 1090545132760836461
-    second: lpc-ship-accessories_4
+      213: -765179273955387851
+    second: Sprite_Water_Ship_Prop_Acc_02_4
   - first:
-      213: 8340830605583806173
-    second: lpc-ship-accessories_5
+      213: -5927429135511300666
+    second: Sprite_Water_Ship_Prop_Acc_02_5
   - first:
-      213: -6027057197488265637
-    second: lpc-ship-accessories_6
+      213: 7659946504713648606
+    second: Sprite_Water_Ship_Prop_Acc_02_6
   - first:
-      213: -583643368925102745
-    second: lpc-ship-accessories_7
+      213: -6296037472980645920
+    second: Sprite_Water_Ship_Prop_Acc_02_7
   - first:
-      213: 8727767196421706061
-    second: lpc-ship-accessories_8
+      213: -3712886508158672242
+    second: Sprite_Water_Ship_Prop_Acc_02_8
   - first:
-      213: -5101788931748198530
-    second: lpc-ship-accessories_9
+      213: -7047520558694291524
+    second: Sprite_Water_Ship_Prop_Acc_02_9
   - first:
-      213: 8430149712186950482
-    second: lpc-ship-accessories_10
+      213: 6655253771512591959
+    second: Sprite_Water_Ship_Prop_Acc_02_10
   - first:
-      213: 947197957364705139
-    second: lpc-ship-accessories_11
+      213: -3608919960049075228
+    second: Sprite_Water_Ship_Prop_Acc_02_11
   - first:
-      213: -2775385481226173698
-    second: lpc-ship-accessories_12
+      213: -2239146405172634979
+    second: Sprite_Water_Ship_Prop_Acc_02_12
   - first:
-      213: -8304487359059976580
-    second: lpc-ship-accessories_13
+      213: 7700303967514362835
+    second: Sprite_Water_Ship_Prop_Acc_02_13
   - first:
-      213: -8601796580878404891
-    second: lpc-ship-accessories_14
+      213: -1891777408021817943
+    second: Sprite_Water_Ship_Prop_Acc_02_14
   - first:
-      213: -1667773042113829017
-    second: lpc-ship-accessories_15
+      213: 2025169283142318340
+    second: Sprite_Water_Ship_Prop_Acc_02_15
   - first:
-      213: 4270390863714163910
-    second: lpc-ship-accessories_16
+      213: -5626836492023419661
+    second: Sprite_Water_Ship_Prop_Acc_02_16
   - first:
-      213: -7245386809449687178
-    second: lpc-ship-accessories_17
+      213: 3901916982993042568
+    second: Sprite_Water_Ship_Prop_Acc_02_17
   - first:
-      213: 7628785018332145446
-    second: lpc-ship-accessories_18
+      213: -1658654205545476390
+    second: Sprite_Water_Ship_Prop_Acc_02_18
   - first:
-      213: -7086953320118578985
-    second: lpc-ship-accessories_19
+      213: 5911954967543566329
+    second: Sprite_Water_Ship_Prop_Acc_02_19
   - first:
-      213: 6904568166737894337
-    second: lpc-ship-accessories_20
+      213: -5770163702183813425
+    second: Sprite_Water_Ship_Prop_Acc_02_20
   - first:
-      213: 3886915112717191966
-    second: lpc-ship-accessories_21
+      213: -2621432174415472626
+    second: Sprite_Water_Ship_Prop_Acc_02_21
   - first:
-      213: -9116258200373329304
-    second: lpc-ship-accessories_22
+      213: -7486055041644913816
+    second: Sprite_Water_Ship_Prop_Acc_02_22
   - first:
-      213: 6150425695416619529
-    second: lpc-ship-accessories_23
-  - first:
-      213: -6808354349983533961
-    second: lpc-ship-accessories_24
-  - first:
-      213: 187611817766829095
-    second: lpc-ship-accessories_25
-  - first:
-      213: 4733390971608266719
-    second: lpc-ship-accessories_26
-  - first:
-      213: 6969186296584070819
-    second: lpc-ship-accessories_27
-  - first:
-      213: -791377611299049357
-    second: lpc-ship-accessories_28
-  - first:
-      213: -3113778159822494006
-    second: lpc-ship-accessories_29
+      213: -6880577054668745901
+    second: Sprite_Water_Ship_Prop_Acc_02_23
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -124,7 +106,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -138,7 +120,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -200,661 +182,441 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lpc-ship-accessories_0
+      name: Sprite_Water_Ship_Prop_Acc_02_0
       rect:
         serializedVersion: 2
         x: 12
-        y: 927
+        y: 127
         width: 40
         height: 97
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df19140e76dfcc960800000000000000
-      internalID: 7623746891817259517
+      spriteID: 7e76c26298a56a090800000000000000
+      internalID: -8023626141016496153
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lpc-ship-accessories_1
+      name: Sprite_Water_Ship_Prop_Acc_02_1
       rect:
         serializedVersion: 2
         x: 63
-        y: 927
+        y: 127
         width: 34
         height: 97
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0e79d8186724f5d10800000000000000
-      internalID: 2116483426634536928
+      spriteID: 3d515b8f546beee30800000000000000
+      internalID: 4534762286450283987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lpc-ship-accessories_2
+      name: Sprite_Water_Ship_Prop_Acc_02_2
       rect:
         serializedVersion: 2
         x: 127
-        y: 991
+        y: 191
         width: 34
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 933df3afd3b5d7e70800000000000000
-      internalID: 9114541542617371449
+      spriteID: 33accad0c217c4c30800000000000000
+      internalID: 4344972174527613491
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lpc-ship-accessories_3
-      rect:
-        serializedVersion: 2
-        x: 395
-        y: 952
-        width: 17
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 45b1f5ad3454236a0800000000000000
-      internalID: -6471033556849190060
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lpc-ship-accessories_4
-      rect:
-        serializedVersion: 2
-        x: 417
-        y: 942
-        width: 9
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d69adb13505622f00800000000000000
-      internalID: 1090545132760836461
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lpc-ship-accessories_5
+      name: Sprite_Water_Ship_Prop_Acc_02_5
       rect:
         serializedVersion: 2
         x: 427
-        y: 952
+        y: 152
         width: 17
         height: 55
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dde67818e3590c370800000000000000
-      internalID: 8340830605583806173
+      spriteID: 6c55c8a2b9a8dbda0800000000000000
+      internalID: -5927429135511300666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lpc-ship-accessories_6
+      name: Sprite_Water_Ship_Prop_Acc_02_6
       rect:
         serializedVersion: 2
         x: 452
-        y: 952
+        y: 152
         width: 17
         height: 55
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b5620ce59679b5ca0800000000000000
-      internalID: -6027057197488265637
+      spriteID: ed9b3fb03c89d4a60800000000000000
+      internalID: 7659946504713648606
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lpc-ship-accessories_7
-      rect:
-        serializedVersion: 2
-        x: 470
-        y: 942
-        width: 9
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 76df4bfb27b76e7f0800000000000000
-      internalID: -583643368925102745
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lpc-ship-accessories_8
-      rect:
-        serializedVersion: 2
-        x: 484
-        y: 952
-        width: 17
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d41d50106024f1970800000000000000
-      internalID: 8727767196421706061
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lpc-ship-accessories_9
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 607
-        width: 449
-        height: 322
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e77012c3ffdc239b0800000000000000
-      internalID: -5101788931748198530
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lpc-ship-accessories_10
+      name: Sprite_Water_Ship_Prop_Acc_02_9
       rect:
         serializedVersion: 2
         x: 127
-        y: 927
+        y: 127
         width: 34
         height: 57
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 253c3469f78edf470800000000000000
-      internalID: 8430149712186950482
+      spriteID: cb7a3c7246d223e90800000000000000
+      internalID: -7047520558694291524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lpc-ship-accessories_11
+      name: Sprite_Water_Ship_Prop_Acc_02_10
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 0
+        width: 61
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 756361d4b063c5c50800000000000000
+      internalID: 6655253771512591959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Ship_Prop_Acc_02_11
       rect:
         serializedVersion: 2
         x: 447
-        y: 895
+        y: 95
         width: 65
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 377e2b4168f152d00800000000000000
-      internalID: 947197957364705139
+      spriteID: 4eb357eca6a8aedc0800000000000000
+      internalID: -3608919960049075228
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lpc-ship-accessories_12
+      name: Sprite_Water_Ship_Prop_Acc_02_12
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 67
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9a979f3534fce0e0800000000000000
+      internalID: -2239146405172634979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Ship_Prop_Acc_02_13
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 31
+        width: 8
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d3893619a9fcda60800000000000000
+      internalID: 7700303967514362835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Ship_Prop_Acc_02_14
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 47
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a510c0787e0fb5e0800000000000000
+      internalID: -1891777408021817943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Ship_Prop_Acc_02_15
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 0
+        width: 20
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 409fab3bbb8da1c10800000000000000
+      internalID: 2025169283142318340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Ship_Prop_Acc_02_16
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 64
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fc2db3d50679e1b0800000000000000
+      internalID: -5626836492023419661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Ship_Prop_Acc_02_17
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88c3d52a2d4662630800000000000000
+      internalID: 3901916982993042568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Ship_Prop_Acc_02_18
       rect:
         serializedVersion: 2
         x: 447
-        y: 863
+        y: 63
         width: 65
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ef2ccb40c99db79d0800000000000000
-      internalID: -2775385481226173698
+      spriteID: ade0149b9c64bf8e0800000000000000
+      internalID: -1658654205545476390
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lpc-ship-accessories_13
+      name: Sprite_Water_Ship_Prop_Acc_02_19
       rect:
         serializedVersion: 2
-        x: 1
-        y: 575
-        width: 94
-        height: 32
+        x: 3
+        y: 34
+        width: 27
+        height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c7e1289feb880cc80800000000000000
-      internalID: -8304487359059976580
+      spriteID: 9ff4a8858bb7b0250800000000000000
+      internalID: 5911954967543566329
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lpc-ship-accessories_14
+      name: Sprite_Water_Ship_Prop_Acc_02_20
       rect:
         serializedVersion: 2
-        x: 97
-        y: 589
-        width: 62
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5e2b29e759740a880800000000000000
-      internalID: -8601796580878404891
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lpc-ship-accessories_15
-      rect:
-        serializedVersion: 2
-        x: 161
-        y: 575
-        width: 9
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 76725d22141ead8e0800000000000000
-      internalID: -1667773042113829017
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lpc-ship-accessories_16
-      rect:
-        serializedVersion: 2
-        x: 214
-        y: 575
-        width: 9
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6cc91c37dd9734b30800000000000000
-      internalID: 4270390863714163910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lpc-ship-accessories_17
-      rect:
-        serializedVersion: 2
-        x: 246
-        y: 575
+        x: 38
+        y: 35
         width: 20
-        height: 32
+        height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6775372a517337b90800000000000000
-      internalID: -7245386809449687178
+      spriteID: fce1b7b3fa24cefa0800000000000000
+      internalID: -5770163702183813425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lpc-ship-accessories_18
+      name: Sprite_Water_Ship_Prop_Acc_02_21
       rect:
         serializedVersion: 2
-        x: 1
-        y: 481
-        width: 94
-        height: 73
+        x: 319
+        y: 31
+        width: 58
+        height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 627628d1e83eed960800000000000000
-      internalID: 7628785018332145446
+      spriteID: e089f29835dce9bd0800000000000000
+      internalID: -2621432174415472626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lpc-ship-accessories_19
+      name: Sprite_Water_Ship_Prop_Acc_02_22
       rect:
         serializedVersion: 2
-        x: 97
-        y: 536
-        width: 62
-        height: 18
+        x: 391
+        y: 31
+        width: 58
+        height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7d09e8ee08516ad90800000000000000
-      internalID: -7086953320118578985
+      spriteID: 86b9bb93a903c1890800000000000000
+      internalID: -7486055041644913816
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lpc-ship-accessories_20
+      name: Sprite_Water_Ship_Prop_Acc_02_23
       rect:
         serializedVersion: 2
-        x: 161
-        y: 481
-        width: 9
-        height: 73
+        x: 31
+        y: 7
+        width: 34
+        height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1cbd1e96a24f1df50800000000000000
-      internalID: 6904568166737894337
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lpc-ship-accessories_21
-      rect:
-        serializedVersion: 2
-        x: 214
-        y: 481
-        width: 9
-        height: 73
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e1b0b9583b811f530800000000000000
-      internalID: 3886915112717191966
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lpc-ship-accessories_22
-      rect:
-        serializedVersion: 2
-        x: 246
-        y: 543
-        width: 20
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 862810e777b8c7180800000000000000
-      internalID: -9116258200373329304
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lpc-ship-accessories_23
-      rect:
-        serializedVersion: 2
-        x: 451
-        y: 535
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9021eb86593ba5550800000000000000
-      internalID: 6150425695416619529
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lpc-ship-accessories_24
-      rect:
-        serializedVersion: 2
-        x: 451
-        y: 520
-        width: 9
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 774fe387acdd381a0800000000000000
-      internalID: -6808354349983533961
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lpc-ship-accessories_25
-      rect:
-        serializedVersion: 2
-        x: 463
-        y: 514
-        width: 11
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 72c38a944f78a9200800000000000000
-      internalID: 187611817766829095
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lpc-ship-accessories_26
-      rect:
-        serializedVersion: 2
-        x: 492
-        y: 529
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fd770c5920260b140800000000000000
-      internalID: 4733390971608266719
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lpc-ship-accessories_27
-      rect:
-        serializedVersion: 2
-        x: 492
-        y: 517
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3a6e96d230687b060800000000000000
-      internalID: 6969186296584070819
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lpc-ship-accessories_28
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 481
-        width: 62
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 370b25361467405f0800000000000000
-      internalID: -791377611299049357
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lpc-ship-accessories_29
-      rect:
-        serializedVersion: 2
-        x: 246
-        y: 481
-        width: 20
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ac6296ad243a9c4d0800000000000000
-      internalID: -3113778159822494006
+      spriteID: 35314c6af974380a0800000000000000
+      internalID: -6880577054668745901
       vertices: []
       indices: 
       edges: []
@@ -863,7 +625,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7a5442f1e3243c149abe0b6f33136ee2
     internalID: 0
     vertices: []
     indices: 
@@ -873,36 +635,30 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lpc-ship-accessories_0: 7623746891817259517
-      lpc-ship-accessories_1: 2116483426634536928
-      lpc-ship-accessories_10: 8430149712186950482
-      lpc-ship-accessories_11: 947197957364705139
-      lpc-ship-accessories_12: -2775385481226173698
-      lpc-ship-accessories_13: -8304487359059976580
-      lpc-ship-accessories_14: -8601796580878404891
-      lpc-ship-accessories_15: -1667773042113829017
-      lpc-ship-accessories_16: 4270390863714163910
-      lpc-ship-accessories_17: -7245386809449687178
-      lpc-ship-accessories_18: 7628785018332145446
-      lpc-ship-accessories_19: -7086953320118578985
-      lpc-ship-accessories_2: 9114541542617371449
-      lpc-ship-accessories_20: 6904568166737894337
-      lpc-ship-accessories_21: 3886915112717191966
-      lpc-ship-accessories_22: -9116258200373329304
-      lpc-ship-accessories_23: 6150425695416619529
-      lpc-ship-accessories_24: -6808354349983533961
-      lpc-ship-accessories_25: 187611817766829095
-      lpc-ship-accessories_26: 4733390971608266719
-      lpc-ship-accessories_27: 6969186296584070819
-      lpc-ship-accessories_28: -791377611299049357
-      lpc-ship-accessories_29: -3113778159822494006
-      lpc-ship-accessories_3: -6471033556849190060
-      lpc-ship-accessories_4: 1090545132760836461
-      lpc-ship-accessories_5: 8340830605583806173
-      lpc-ship-accessories_6: -6027057197488265637
-      lpc-ship-accessories_7: -583643368925102745
-      lpc-ship-accessories_8: 8727767196421706061
-      lpc-ship-accessories_9: -5101788931748198530
+      Sprite_Water_Ship_Prop_Acc_02_0: -8023626141016496153
+      Sprite_Water_Ship_Prop_Acc_02_1: 4534762286450283987
+      Sprite_Water_Ship_Prop_Acc_02_10: 6655253771512591959
+      Sprite_Water_Ship_Prop_Acc_02_11: -3608919960049075228
+      Sprite_Water_Ship_Prop_Acc_02_12: -2239146405172634979
+      Sprite_Water_Ship_Prop_Acc_02_13: 7700303967514362835
+      Sprite_Water_Ship_Prop_Acc_02_14: -1891777408021817943
+      Sprite_Water_Ship_Prop_Acc_02_15: 2025169283142318340
+      Sprite_Water_Ship_Prop_Acc_02_16: -5626836492023419661
+      Sprite_Water_Ship_Prop_Acc_02_17: 3901916982993042568
+      Sprite_Water_Ship_Prop_Acc_02_18: -1658654205545476390
+      Sprite_Water_Ship_Prop_Acc_02_19: 5911954967543566329
+      Sprite_Water_Ship_Prop_Acc_02_2: 4344972174527613491
+      Sprite_Water_Ship_Prop_Acc_02_20: -5770163702183813425
+      Sprite_Water_Ship_Prop_Acc_02_21: -2621432174415472626
+      Sprite_Water_Ship_Prop_Acc_02_22: -7486055041644913816
+      Sprite_Water_Ship_Prop_Acc_02_23: -6880577054668745901
+      Sprite_Water_Ship_Prop_Acc_02_3: 3150961313570520713
+      Sprite_Water_Ship_Prop_Acc_02_4: -765179273955387851
+      Sprite_Water_Ship_Prop_Acc_02_5: -5927429135511300666
+      Sprite_Water_Ship_Prop_Acc_02_6: 7659946504713648606
+      Sprite_Water_Ship_Prop_Acc_02_7: -6296037472980645920
+      Sprite_Water_Ship_Prop_Acc_02_8: -3712886508158672242
+      Sprite_Water_Ship_Prop_Acc_02_9: -7047520558694291524
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
