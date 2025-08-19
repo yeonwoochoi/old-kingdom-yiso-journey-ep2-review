@@ -16,6 +16,14 @@ namespace Settings {
         public const string PortalLayerName = "Portal";
         public const string AlliesLayerName = "Allies";
         public const string PetLayerName = "Pet";
+        
+        public const string DefaultSortingName = "Default";
+        public const string BackgroundSortingName = "Background";
+        public const string DecorationSortingName = "Decoration";
+        public const string WorldSortingName = "World";
+        public const string EffectSortingName = "Effects";
+        public const string UISortingName = "UI";
+        
 
         #endregion
 
@@ -41,9 +49,10 @@ namespace Settings {
         #region Sorting Layer IDs
 
         public static readonly int DefaultSortingID;
-        public static readonly int Layer1SortingID;
-        public static readonly int Layer2SortingID;
-        public static readonly int Layer3SortingID;
+        public static readonly int BackgroundSortingID;
+        public static readonly int DecorationSortingID;
+        public static readonly int WorldSortingID;
+        public static readonly int EffectSortingID;
         public static readonly int UISortingID;
 
         #endregion
@@ -63,8 +72,13 @@ namespace Settings {
 
             ObstaclesAndMapMask = (1 << ObstaclesLayer) | (1 << MapLayer);
             AllCharactersMask = (1 << PlayerLayer) | (1 << EnemiesLayer) | (1 << NpcLayer) | (1 << AlliesLayer) | (1 << PetLayer);
-            
-            // TODO
+
+            DefaultSortingID = SortingLayer.NameToID(DefaultSortingName);
+            BackgroundSortingID = SortingLayer.NameToID(BackgroundSortingName);
+            DecorationSortingID = SortingLayer.NameToID(DecorationSortingName);
+            WorldSortingID = SortingLayer.NameToID(WorldSortingName);
+            EffectSortingID = SortingLayer.NameToID(EffectSortingName);
+            UISortingID = SortingLayer.NameToID(UILayerName);
         }
     }
 }
