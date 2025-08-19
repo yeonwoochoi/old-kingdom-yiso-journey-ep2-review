@@ -3,6 +3,9 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Gameplay.Core {
+    /// <summary>
+    /// TODO 개선
+    /// </summary>
     [RequireComponent(typeof(Rigidbody2D))]
     public class TopDownController: RunIBehaviour {
         [ReadOnly] public Vector2 currentMovement; // 외부(Input)에서 전달된 목표 이동 벡터
