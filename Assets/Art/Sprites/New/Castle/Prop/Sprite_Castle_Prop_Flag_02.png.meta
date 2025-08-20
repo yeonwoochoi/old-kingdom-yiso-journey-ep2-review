@@ -152,23 +152,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: flag_red_N_0
+      name: Sprite_Castle_Prop_Flag_02_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 30
         height: 87
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.48468047, y: 0.06154242}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 38c35e6dccdeffda0800000000000000
-      internalID: -5908742722052342653
+      spriteID: 4bce03868296ba743b164b16f53df70f
+      internalID: 364214972
       vertices: []
       indices: 
       edges: []
@@ -177,7 +177,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f035a5669e61c1942974f8a2fd772209
     internalID: 0
     vertices: []
     indices: 
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      flag_red_N_0: -5908742722052342653
+      Sprite_Castle_Prop_Flag_02_0: 364214972
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

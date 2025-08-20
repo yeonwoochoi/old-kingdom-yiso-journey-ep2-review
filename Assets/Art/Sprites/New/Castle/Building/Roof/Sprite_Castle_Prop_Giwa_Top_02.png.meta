@@ -152,23 +152,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: castle_giwa2_0
+      name: Sprite_Castle_Prop_Giwa_Top_02_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 5
-        width: 370
-        height: 221
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2
+        y: 6
+        width: 368
+        height: 219
+      alignment: 9
+      pivot: {x: 0.5, y: 0.028}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bc49cc290b96a64d0800000000000000
-      internalID: -3140581583039458101
+      spriteID: c992d3dcf31d86140892531e8725ca35
+      internalID: -1724471117
       vertices: []
       indices: 
       edges: []
@@ -177,7 +177,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d2e0ef55aec77ae43a42dcf62c9eb2fe
     internalID: 0
     vertices: []
     indices: 
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      castle_giwa2_0: -3140581583039458101
+      Sprite_Castle_Prop_Giwa_Top_02_0: -1724471117
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

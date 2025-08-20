@@ -137,199 +137,221 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: buildings_palaces_0
+      name: Sprite_Castle_Building_Palace_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 885
-        width: 464
+        x: 742
+        y: 837
+        width: 123
+        height: 391
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caedf06975c093e4390376dce74613b5
+      internalID: -1469257038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Building_Palace_1
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 817
+        width: 534
+        height: 403
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 835c79aa99cbcf94da50fc315a0f821c
+      internalID: 1079116357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Building_Palace_2
+      rect:
+        serializedVersion: 2
+        x: 1930
+        y: 713
+        width: 602
+        height: 501
+      alignment: 9
+      pivot: {x: 0.5, y: 0.056}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc817c8a0f69944d854fef19fabbaf7
+      internalID: -528991188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Building_Palace_3
+      rect:
+        serializedVersion: 2
+        x: 2131
+        y: 1210
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f92850acabd3440b3be7be649e8d2c
+      internalID: -1948727027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Building_Palace_4
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 887
+        width: 463
         height: 323
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.048}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4a2352e5f5e233d00800000000000000
-      internalID: 951154933441573540
+      spriteID: 48e08108291fda64d9db03ab05d1a0fa
+      internalID: 582218503
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buildings_palaces_1
+      name: Sprite_Castle_Building_Palace_5
       rect:
         serializedVersion: 2
-        x: 741
-        y: 838
-        width: 124
-        height: 390
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 51371c6b34c4eba00800000000000000
-      internalID: 774140039666955029
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buildings_palaces_2
-      rect:
-        serializedVersion: 2
-        x: 1079
-        y: 816
-        width: 535
-        height: 404
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 967473b3b5c7d55c0800000000000000
-      internalID: -4225084144126310551
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buildings_palaces_3
-      rect:
-        serializedVersion: 2
-        x: 1929
-        y: 712
-        width: 604
-        height: 505
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ef53676a1c975f530800000000000000
-      internalID: 3888147725932705278
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buildings_palaces_4
-      rect:
-        serializedVersion: 2
-        x: 43
+        x: 44
         y: 528
-        width: 528
+        width: 527
         height: 281
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.031}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ababe0862d4fe2370800000000000000
-      internalID: 8299840347816508090
+      spriteID: 862611a15b56af0439bddcb024ce925c
+      internalID: -1645672960
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buildings_palaces_5
+      name: Sprite_Castle_Building_Palace_6
       rect:
         serializedVersion: 2
         x: 743
-        y: 147
+        y: 149
         width: 170
-        height: 457
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 455
+      alignment: 9
+      pivot: {x: 0.4644779, y: 0.09699972}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e94d4e1e6f9a12fc0800000000000000
-      internalID: -3521346555810098018
+      spriteID: 2205ee7b695e2764e9ce63052d95744c
+      internalID: 907521512
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buildings_palaces_6
+      name: Sprite_Castle_Building_Palace_7
       rect:
         serializedVersion: 2
-        x: 1115
-        y: 359
-        width: 388
+        x: 1116
+        y: 360
+        width: 386
         height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.11}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cccca7159652a7380800000000000000
-      internalID: -8972818173313495860
+      spriteID: 8b54989e990d1a6469edd766fce8eb02
+      internalID: 1453443152
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buildings_palaces_7
+      name: Sprite_Castle_Building_Palace_8
       rect:
         serializedVersion: 2
         x: 1696
         y: 155
         width: 170
         height: 456
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.49317124, y: 0.08504991}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4554060bb7127c630800000000000000
-      internalID: 3947160413537322324
+      spriteID: 4e2a8f5e6d0d4404b97c0d58e326eb35
+      internalID: 1925945203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buildings_palaces_8
+      name: Sprite_Castle_Building_Palace_9
       rect:
         serializedVersion: 2
-        x: 2142
-        y: 267
-        width: 289
-        height: 231
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2143
+        y: 268
+        width: 287
+        height: 230
+      alignment: 9
+      pivot: {x: 0.5, y: 0.064}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3262a8a6a1a6cfc30800000000000000
-      internalID: 4394503998095894051
+      spriteID: 010ae5e1ce072104f8665c397144240a
+      internalID: -1716709840
       vertices: []
       indices: 
       edges: []
@@ -338,7 +360,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: fb273915a2a70604b92c278d78eb87ab
     internalID: 0
     vertices: []
     indices: 
@@ -348,15 +370,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      buildings_palaces_0: 951154933441573540
-      buildings_palaces_1: 774140039666955029
-      buildings_palaces_2: -4225084144126310551
-      buildings_palaces_3: 3888147725932705278
-      buildings_palaces_4: 8299840347816508090
-      buildings_palaces_5: -3521346555810098018
-      buildings_palaces_6: -8972818173313495860
-      buildings_palaces_7: 3947160413537322324
-      buildings_palaces_8: 4394503998095894051
+      Sprite_Castle_Building_Palace_0: -1469257038
+      Sprite_Castle_Building_Palace_1: 1079116357
+      Sprite_Castle_Building_Palace_2: -528991188
+      Sprite_Castle_Building_Palace_3: -1948727027
+      Sprite_Castle_Building_Palace_4: 582218503
+      Sprite_Castle_Building_Palace_5: -1645672960
+      Sprite_Castle_Building_Palace_6: 907521512
+      Sprite_Castle_Building_Palace_7: 1453443152
+      Sprite_Castle_Building_Palace_8: 1925945203
+      Sprite_Castle_Building_Palace_9: -1716709840
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
