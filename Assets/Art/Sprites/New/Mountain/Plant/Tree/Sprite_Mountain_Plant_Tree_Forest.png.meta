@@ -119,67 +119,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Plain_Plant_Tree_Forest_0
+      name: Sprite_Mountain_Plant_Tree_Forest_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 7
-        width: 244
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7
+        y: 8
+        width: 242
+        height: 298
+      alignment: 9
+      pivot: {x: 0.48876703, y: 0.09275347}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1b9eafe3ac9b51b00800000000000000
-      internalID: 798748787219294641
+      spriteID: bc516a797676420498c893b9344e81ed
+      internalID: 537147854
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Plain_Plant_Tree_Forest_1
+      name: Sprite_Mountain_Plant_Tree_Forest_1
       rect:
         serializedVersion: 2
-        x: 294
-        y: 5
-        width: 244
-        height: 299
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 295
+        y: 6
+        width: 242
+        height: 297
+      alignment: 9
+      pivot: {x: 0.4961708, y: 0.10215608}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 31cd5274c8beee170800000000000000
-      internalID: 8209758158464605203
+      spriteID: 89d3ec575e058b24980b99e7e2f3ea6d
+      internalID: -392193058
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Plain_Plant_Tree_Forest_2
+      name: Sprite_Mountain_Plant_Tree_Forest_2
       rect:
         serializedVersion: 2
-        x: 583
-        y: 3
-        width: 244
-        height: 299
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 584
+        y: 4
+        width: 242
+        height: 297
+      alignment: 9
+      pivot: {x: 0.50162274, y: 0.107550584}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f4ca0bc29fd71ec80800000000000000
-      internalID: -8295210529489638321
+      spriteID: c74727410527f794c8765edf85b78102
+      internalID: 1420790328
       vertices: []
       indices: 
       edges: []
@@ -188,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b582e7f68f6370746b871236ad288538
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprite_Plain_Plant_Tree_Forest_0: 798748787219294641
-      Sprite_Plain_Plant_Tree_Forest_1: 8209758158464605203
-      Sprite_Plain_Plant_Tree_Forest_2: -8295210529489638321
+      Sprite_Mountain_Plant_Tree_Forest_0: 537147854
+      Sprite_Mountain_Plant_Tree_Forest_1: -392193058
+      Sprite_Mountain_Plant_Tree_Forest_2: 1420790328
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

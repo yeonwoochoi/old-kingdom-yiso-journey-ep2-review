@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kingarea_roof_0
+      name: Sprite_Castle_Prop_KingArea_Roof_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 13
-        width: 256
-        height: 191
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 10
+        y: 14
+        width: 254
+        height: 189
+      alignment: 9
+      pivot: {x: 0.5, y: 0.025}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7d0dccbf3c9c98520800000000000000
-      internalID: 2704914894793003223
+      spriteID: cf54f1ad9d1d6f04b9ef160970ab94c2
+      internalID: 2070689157
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1d52a2cc480525744825b50febebc824
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      kingarea_roof_0: 2704914894793003223
+      Sprite_Castle_Prop_KingArea_Roof_0: 2070689157
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
