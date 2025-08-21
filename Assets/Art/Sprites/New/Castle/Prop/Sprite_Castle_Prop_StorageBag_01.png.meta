@@ -152,265 +152,243 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Town_Prop_StorageBag_01_2
+      name: Sprite_Castle_Prop_StorageBag_01_1
       rect:
         serializedVersion: 2
-        x: 47
-        y: 88
-        width: 34
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 53a54d7500f7945d0800000000000000
-      internalID: -3077789230880761291
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_StorageBag_01_3
-      rect:
-        serializedVersion: 2
-        x: 92
-        y: 56
-        width: 66
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b6edea708f313cb30800000000000000
-      internalID: 4306307624698044011
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_StorageBag_01_4
-      rect:
-        serializedVersion: 2
-        x: 156
-        y: 56
-        width: 33
-        height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5b9e2370d9919bb90800000000000000
-      internalID: -7225715964917913163
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_StorageBag_01_5
-      rect:
-        serializedVersion: 2
-        x: 188
-        y: 64
-        width: 34
-        height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 460ac188fc4d88820800000000000000
-      internalID: 2920818346156662884
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_StorageBag_01_6
-      rect:
-        serializedVersion: 2
-        x: 220
-        y: 56
-        width: 34
-        height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 00e0ed3a8bd92db20800000000000000
-      internalID: 3157759705088921088
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_StorageBag_01_7
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 14
-        width: 31
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4ebcc7ff7e07e2e40800000000000000
-      internalID: 5633564325613194212
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_StorageBag_01_8
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 14
+        x: 48
+        y: 89
         width: 32
-        height: 34
+        height: 31
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ea2bd76752c68f160800000000000000
-      internalID: 7059511324060791470
+      spriteID: 7d769c15ffee9e042bb1fa6746e1697e
+      internalID: -712497702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Town_Prop_StorageBag_01_9
+      name: Sprite_Castle_Prop_StorageBag_01_2
       rect:
         serializedVersion: 2
-        x: 67
+        x: 93
+        y: 57
+        width: 64
+        height: 63
+      alignment: 9
+      pivot: {x: 0.5035273, y: 0.15958405}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb2fcb2ded083c84d9d31d174452fb72
+      internalID: -1641341947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Prop_StorageBag_01_4
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 65
+        width: 32
+        height: 48
+      alignment: 9
+      pivot: {x: 0.4929452, y: 0.2507348}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12a10bc8cec778042bc5a422df872399
+      internalID: 1290952590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Prop_StorageBag_01_5
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 57
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.4858904, y: 0.16490304}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26dffd6d0af8c5640988d9168fcbe56e
+      internalID: 357055970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Prop_StorageBag_01_7
+      rect:
+        serializedVersion: 2
+        x: 3
         y: 15
-        width: 34
+        width: 29
+        height: 31
+      alignment: 9
+      pivot: {x: 0.47664663, y: 0.26696828}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 496482626a1fb0540979e90e1b1866a8
+      internalID: 845268883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Prop_StorageBag_01_8
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 15
+        width: 30
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.46237502, y: 0.28835982}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c4df81a63df986760800000000000000
-      internalID: 7451381313851424076
+      spriteID: f542c003b9eca8147a1c26d758168f72
+      internalID: -473842106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Town_Prop_StorageBag_01_10
+      name: Sprite_Castle_Prop_StorageBag_01_9
       rect:
         serializedVersion: 2
-        x: 113
-        y: 15
-        width: 31
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 68
+        y: 16
+        width: 32
+        height: 30
+      alignment: 9
+      pivot: {x: 0.47883582, y: 0.28177547}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 07c10142a419e5780800000000000000
-      internalID: -8692350483159835536
+      spriteID: 7d2cb728685680f459473ea4d503f758
+      internalID: -211061711
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Town_Prop_StorageBag_01_11
+      name: Sprite_Castle_Prop_StorageBag_01_10
       rect:
         serializedVersion: 2
-        x: 149
-        y: 18
-        width: 26
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 114
+        y: 16
+        width: 29
+        height: 31
+      alignment: 9
+      pivot: {x: 0.5, y: 0.29609722}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 87ee0405df0cac390800000000000000
-      internalID: -7797207610632901000
+      spriteID: 99e19568824fd8645bdf64da983d2587
+      internalID: -1491952891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Town_Prop_StorageBag_01_12
+      name: Sprite_Castle_Prop_StorageBag_01_11
       rect:
         serializedVersion: 2
-        x: 180
-        y: 15
-        width: 26
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8cb6614462cf74260800000000000000
-      internalID: 7081906180344671176
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_StorageBag_01_13
-      rect:
-        serializedVersion: 2
-        x: 215
+        x: 150
         y: 19
-        width: 22
-        height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 22
+      alignment: 9
+      pivot: {x: 0.5094058, y: 0.37686393}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 542785fa120f671a0800000000000000
-      internalID: -6811993358884900283
+      spriteID: 6ae19a8d3e8aa674e9e066b09fdeeca9
+      internalID: 1693712818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Prop_StorageBag_01_12
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 16
+        width: 24
+        height: 31
+      alignment: 9
+      pivot: {x: 0.49059358, y: 0.31066167}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59c44eaf2ec66fb4bb78fc45601e6fb8
+      internalID: -537873798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Castle_Prop_StorageBag_01_13
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 20
+        width: 20
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5, y: 0.27425048}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2c8fa75af9d32d429893613a41e6687
+      internalID: 908737052
       vertices: []
       indices: 
       edges: []
@@ -429,20 +407,20 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprite_Town_Prop_StorageBag_01_0: -3775048867508134921
-      Sprite_Town_Prop_StorageBag_01_1: 7195483106929764733
-      Sprite_Town_Prop_StorageBag_01_10: -8692350483159835536
-      Sprite_Town_Prop_StorageBag_01_11: -7797207610632901000
-      Sprite_Town_Prop_StorageBag_01_12: 7081906180344671176
-      Sprite_Town_Prop_StorageBag_01_13: -6811993358884900283
-      Sprite_Town_Prop_StorageBag_01_2: -3077789230880761291
-      Sprite_Town_Prop_StorageBag_01_3: 4306307624698044011
-      Sprite_Town_Prop_StorageBag_01_4: -7225715964917913163
-      Sprite_Town_Prop_StorageBag_01_5: 2920818346156662884
-      Sprite_Town_Prop_StorageBag_01_6: 3157759705088921088
-      Sprite_Town_Prop_StorageBag_01_7: 5633564325613194212
-      Sprite_Town_Prop_StorageBag_01_8: 7059511324060791470
-      Sprite_Town_Prop_StorageBag_01_9: 7451381313851424076
+      Sprite_Castle_Prop_StorageBag_01_0: -336367780
+      Sprite_Castle_Prop_StorageBag_01_1: -712497702
+      Sprite_Castle_Prop_StorageBag_01_10: -1491952891
+      Sprite_Castle_Prop_StorageBag_01_11: 1693712818
+      Sprite_Castle_Prop_StorageBag_01_12: -537873798
+      Sprite_Castle_Prop_StorageBag_01_13: 908737052
+      Sprite_Castle_Prop_StorageBag_01_2: -1641341947
+      Sprite_Castle_Prop_StorageBag_01_3: 2078942130
+      Sprite_Castle_Prop_StorageBag_01_4: 1290952590
+      Sprite_Castle_Prop_StorageBag_01_5: 357055970
+      Sprite_Castle_Prop_StorageBag_01_6: 599806431
+      Sprite_Castle_Prop_StorageBag_01_7: 845268883
+      Sprite_Castle_Prop_StorageBag_01_8: -473842106
+      Sprite_Castle_Prop_StorageBag_01_9: -211061711
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -119,67 +119,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Plain_Plant_Tree_BigTree_0
+      name: Sprite_Mountain_Plant_Tree_BigTree_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 1
-        width: 273
-        height: 316
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1547ad28196bb4dd0800000000000000
-      internalID: -2500704431992310703
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Plant_Tree_BigTree_1
-      rect:
-        serializedVersion: 2
-        x: 319
-        y: 3
-        width: 273
-        height: 316
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bf6fa78f54fa3ea60800000000000000
-      internalID: 7702192502790092539
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Plain_Plant_Tree_BigTree_2
-      rect:
-        serializedVersion: 2
-        x: 623
+        x: 16
         y: 2
-        width: 278
-        height: 318
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 271
+        height: 314
+      alignment: 9
+      pivot: {x: 0.52111524, y: 0.17978467}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e19788a6411823ae0800000000000000
-      internalID: -1571051395312223970
+      spriteID: 8f54103c6a9ec484a8b6ed735e051eef
+      internalID: -290840231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Mountain_Plant_Tree_BigTree_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 4
+        width: 271
+        height: 314
+      alignment: 9
+      pivot: {x: 0.527148, y: 0.18759479}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38954cdf9094ca4478386229708d82a2
+      internalID: 29187866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Mountain_Plant_Tree_BigTree_2
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 3
+        width: 276
+        height: 317
+      alignment: 9
+      pivot: {x: 0.51777095, y: 0.17250016}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00cfdf447d63e11498cc4923270223cc
+      internalID: -1587325688
       vertices: []
       indices: 
       edges: []
@@ -188,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 162fe1092e6e0a34fa91f5d22490750d
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprite_Plain_Plant_Tree_BigTree_0: -2500704431992310703
-      Sprite_Plain_Plant_Tree_BigTree_1: 7702192502790092539
-      Sprite_Plain_Plant_Tree_BigTree_2: -1571051395312223970
+      Sprite_Mountain_Plant_Tree_BigTree_0: -290840231
+      Sprite_Mountain_Plant_Tree_BigTree_1: 29187866
+      Sprite_Mountain_Plant_Tree_BigTree_2: -1587325688
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
