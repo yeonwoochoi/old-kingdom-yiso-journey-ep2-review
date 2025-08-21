@@ -16,5 +16,10 @@ namespace Gameplay.Tools.Environment {
                 topDownController.SetFriction(friction, surfaceForce);
             }
         }
+        private void OnTriggerExit2D(Collider2D other) {
+            if (other.TryGetComponent<TopDownController>(out var topDownController)) {
+                topDownController.SetFriction(0f, Vector2.zero);
+            }
+        }
     }
 }

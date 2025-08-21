@@ -3,9 +3,6 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Gameplay.Core {
-    /// <summary>
-    /// TODO 개선
-    /// </summary>
     [RequireComponent(typeof(Rigidbody2D))]
     public class TopDownController: RunIBehaviour {
         [ReadOnly] public Vector2 currentMovement; // 외부(Input)에서 전달된 목표 이동 벡터
@@ -13,7 +10,6 @@ namespace Gameplay.Core {
         private Rigidbody2D _rigidbody2D;
         private Collider2D[] _collider2Ds;
 
-        private Vector2 _positionLastFrame;
         private bool _freeMovement = true; // 외부에서 조작 가능한 상태인지 여부
         private bool _allowImpact = true; // 외부에서 받은 물리 충격 적용 가능한 상태인지 여부
         private Vector2 _impactForce; // 외부 힘에 의해 받는 힘
@@ -68,6 +64,12 @@ namespace Gameplay.Core {
             MovePosition(_rigidbody2D.position + currentMovement + _surfaceForce);
         }
 
+        public void SetCollisions(bool state) {
+            foreach (var collider2D in _collider2Ds) {
+                collider2D.enabled = state;
+            }
+        }
+
         /// <summary>
         /// 특정 벡터로 이동 (선 입력)
         /// 기본 이동용
@@ -116,7 +118,7 @@ namespace Gameplay.Core {
             if (_impactForce.magnitude > ImpactThreshold) {
                 _rigidbody2D.AddForce(_impactForce);
             }
-            _impactForce = Vector2.Lerp(_impactForce, Vector2.zero, Time.deltaTime * ImpactFalloffRate);
+            _impactForce = Vector2.Lerp(_impactForce, Vector2.zero, Time.fixedDeltaTime * ImpactFalloffRate);
         }
     }
 }
