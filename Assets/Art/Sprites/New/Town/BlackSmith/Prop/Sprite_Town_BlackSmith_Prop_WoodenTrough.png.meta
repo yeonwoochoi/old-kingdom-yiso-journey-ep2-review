@@ -170,147 +170,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: water troughs half_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 15
-        width: 32
-        height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 266057b2aadec84d0800000000000000
-      internalID: -3130866325800024478
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: water troughs half_2
-      rect:
-        serializedVersion: 2
-        x: 63
-        y: 32
-        width: 66
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 31804aa3750021450800000000000000
-      internalID: 6057904823412721683
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: water troughs half_3
-      rect:
-        serializedVersion: 2
-        x: 129
-        y: 0
-        width: 31
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1988d210b55071c00800000000000000
-      internalID: 871170941339404433
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: water troughs half_4
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 15
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9f87ea526bc5d85a0800000000000000
-      internalID: -6517451148349245191
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: water troughs half_5
-      rect:
-        serializedVersion: 2
-        x: 197
-        y: 9
-        width: 59
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f6a9d23d0b5043b40800000000000000
-      internalID: 5418962508648913519
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: water troughs half_6
-      rect:
-        serializedVersion: 2
-        x: 257
-        y: 9
-        width: 61
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c8697aa892611d8b0800000000000000
-      internalID: -5129294132922575220
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Sprite_Town_BlackSmith_Prop_WoodenTrough_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 15
-        width: 31
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 16
+        width: 32
+        height: 35
+      alignment: 9
+      pivot: {x: 0.47504807, y: 0.18821979}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -319,6 +187,138 @@ TextureImporter:
       bones: []
       spriteID: 044a3913f00ed4e4fae9b47183052b55
       internalID: 1203491588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_BlackSmith_Prop_WoodenTrough_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 64
+        height: 32
+      alignment: 9
+      pivot: {x: 0.49545002, y: 0.16331065}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97d33258a11ce141afdd6204f6f0ba0
+      internalID: 2075763459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_BlackSmith_Prop_WoodenTrough_3
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 29
+        height: 64
+      alignment: 9
+      pivot: {x: 0.47682768, y: 0.11675944}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b6af9835de87f4cb69ec9b06972ee8
+      internalID: -1293385588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_BlackSmith_Prop_WoodenTrough_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 16
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.48950005, y: 0.17450792}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a30e87d0a2ff44a945d20be874b1da
+      internalID: 104533535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_BlackSmith_Prop_WoodenTrough_5
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 10
+        width: 57
+        height: 38
+      alignment: 9
+      pivot: {x: 0.49115792, y: 0.19495487}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6eb06cfac3089a4683e485cd766c160
+      internalID: -635564470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_BlackSmith_Prop_WoodenTrough_6
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 10
+        width: 59
+        height: 38
+      alignment: 9
+      pivot: {x: 0.4999995, y: 0.20821773}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56210d4069691394ca954cabdecaa42e
+      internalID: 274013910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_BlackSmith_Prop_WoodenTrough_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 31
+        height: 35
+      alignment: 9
+      pivot: {x: 0.52709603, y: 0.14480874}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92645e44c60509a49b5b70897d1d118c
+      internalID: -1504827662
       vertices: []
       indices: 
       edges: []
@@ -338,13 +338,12 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Sprite_Town_BlackSmith_Prop_WoodenTrough_0: 1203491588
-      water troughs half_0: -3130866325800024478
-      water troughs half_1: -2576909375688148691
-      water troughs half_2: 6057904823412721683
-      water troughs half_3: 871170941339404433
-      water troughs half_4: -6517451148349245191
-      water troughs half_5: 5418962508648913519
-      water troughs half_6: -5129294132922575220
+      Sprite_Town_BlackSmith_Prop_WoodenTrough_1: -1504827662
+      Sprite_Town_BlackSmith_Prop_WoodenTrough_2: 2075763459
+      Sprite_Town_BlackSmith_Prop_WoodenTrough_3: -1293385588
+      Sprite_Town_BlackSmith_Prop_WoodenTrough_4: 104533535
+      Sprite_Town_BlackSmith_Prop_WoodenTrough_5: -635564470
+      Sprite_Town_BlackSmith_Prop_WoodenTrough_6: 274013910
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

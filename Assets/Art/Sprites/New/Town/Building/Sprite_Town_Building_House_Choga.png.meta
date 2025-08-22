@@ -176,205 +176,161 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: choga_house_all_0
+      name: Sprite_Town_Building_House_Choga_1
       rect:
         serializedVersion: 2
-        x: 28
-        y: 1622
-        width: 226
-        height: 153
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ecc4d3b3d960da1e0800000000000000
-      internalID: -2185082971831317298
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: choga_house_all_1
-      rect:
-        serializedVersion: 2
-        x: 297
+        x: 298
         y: 1573
-        width: 246
+        width: 244
         height: 204
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.506899, y: 0.42985505}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8d3b220b2235fb1d0800000000000000
-      internalID: -3332853790781819944
+      spriteID: e7deb8b3dc6a5ec4e977d60a0db0e7bf
+      internalID: 821884333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: choga_house_all_2
+      name: Sprite_Town_Building_House_Choga_2
       rect:
         serializedVersion: 2
         x: 649
-        y: 1570
-        width: 240
+        y: 1571
+        width: 239
         height: 206
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.50323945, y: 0.5323273}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cc44ffd41582f1620800000000000000
-      internalID: 2746958627385328844
+      spriteID: 39aeb9fe2a7b0dc4693a1090b350026b
+      internalID: -1163165408
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: choga_house_all_3
+      name: Sprite_Town_Building_House_Choga_3
       rect:
         serializedVersion: 2
         x: 1060
         y: 1056
         width: 368
-        height: 722
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 241
+      alignment: 9
+      pivot: {x: 0.5, y: 0.10197784}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d957e2b93ea22d310800000000000000
-      internalID: 1428251188879324573
+      spriteID: 87f05b1fab010f842944b79ddac22f40
+      internalID: -1129060315
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: choga_house_all_4
+      name: Sprite_Town_Building_House_Choga_4
       rect:
         serializedVersion: 2
         x: 1565
         y: 1375
-        width: 460
+        width: 459
         height: 381
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.50712025, y: 0.36704716}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 89ca02293831829e0800000000000000
-      internalID: -1646044207990657896
+      spriteID: 413cf55f0574d6e4e8ae8b707de6822a
+      internalID: -102370155
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: choga_house_all_5
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 1422
-        width: 221
-        height: 153
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 24f15ee0ea6067730800000000000000
-      internalID: 3996389063981866818
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: choga_house_all_6
+      name: Sprite_Town_Building_House_Choga_6
       rect:
         serializedVersion: 2
         x: 302
         y: 1334
         width: 246
         height: 204
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.50512844, y: 0.42466167}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 26fced333bd9928b0800000000000000
-      internalID: -5176432903690727582
+      spriteID: e3239f2890c665548a235430da66175d
+      internalID: 1448357602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: choga_house_all_7
+      name: Sprite_Town_Building_House_Choga_7
       rect:
         serializedVersion: 2
         x: 653
-        y: 1316
-        width: 240
-        height: 206
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 1315
+        width: 239
+        height: 205
+      alignment: 9
+      pivot: {x: 0.50136936, y: 0.54469025}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: eb643d86276b5fc20800000000000000
-      internalID: 3239696109464143550
+      spriteID: a1adcd21393bd274798dff469484fede
+      internalID: 1727865435
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: choga_house_all_8
+      name: Sprite_Town_Building_House_Choga_8
       rect:
         serializedVersion: 2
-        x: 24
-        y: 1147
-        width: 251
-        height: 159
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 25
+        y: 1148
+        width: 249
+        height: 157
+      alignment: 9
+      pivot: {x: 0.50000006, y: 0.09604601}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 51092fcbf9b719ce0800000000000000
-      internalID: -1400202083135483883
+      spriteID: 827a979e721f5404589e7166fee8ac80
+      internalID: -54563391
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: choga_house_all_9
+      name: Sprite_Town_Building_House_Choga_9
       rect:
         serializedVersion: 2
         x: 408
@@ -382,21 +338,21 @@ TextureImporter:
         width: 186
         height: 113
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c64ee379a66e63660800000000000000
-      internalID: 7365327586089428076
+      spriteID: a51a8e11fe045fb4fbc582d6f6d73d69
+      internalID: -1522228671
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: choga_house_all_10
+      name: Sprite_Town_Building_House_Choga_10
       rect:
         serializedVersion: 2
         x: 782
@@ -404,257 +360,257 @@ TextureImporter:
         width: 175
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ed3ea6cffdd5f2ce0800000000000000
-      internalID: -1427819340259204130
+      spriteID: cf68d284f5900ad45a9fc9c9dde8d104
+      internalID: 174796535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: choga_house_all_11
+      name: Sprite_Town_Building_House_Choga_11
       rect:
         serializedVersion: 2
         x: 42
         y: 876
         width: 251
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5066377, y: 0.083480835}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 202e19db60aa4a1b0800000000000000
-      internalID: -5646201086888779262
+      spriteID: 3963fa8350342bf499463b0313cc09d6
+      internalID: -61893626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: choga_house_all_12
+      name: Sprite_Town_Building_House_Choga_12
       rect:
         serializedVersion: 2
         x: 351
-        y: 898
-        width: 275
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a64a4f85556fa27f0800000000000000
-      internalID: -636425550894422934
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: choga_house_all_13
-      rect:
-        serializedVersion: 2
-        x: 679
-        y: 898
-        width: 275
+        y: 899
+        width: 274
         height: 162
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.48783875, y: 0.109191895}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8d76dc69c4b952b60800000000000000
-      internalID: 7720747889446447064
+      spriteID: ece3d5a637a0ec84b8afaddaefc54393
+      internalID: 2119261756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: choga_house_all_14
+      name: Sprite_Town_Building_House_Choga_13
       rect:
         serializedVersion: 2
-        x: 51
-        y: 501
-        width: 401
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 680
+        y: 899
+        width: 274
+        height: 161
+      alignment: 9
+      pivot: {x: 0.4999998, y: 0.12746112}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f717c926bf3112c50800000000000000
-      internalID: 6638609296132960639
+      spriteID: 95cef8a4a5217174ea10464b3b377662
+      internalID: 1819596266
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: choga_house_all_15
+      name: Sprite_Town_Building_House_Choga_16
       rect:
         serializedVersion: 2
-        x: 537
-        y: 515
-        width: 354
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 16424b5f7ff99b000800000000000000
-      internalID: 52248758019433569
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: choga_house_all_16
-      rect:
-        serializedVersion: 2
-        x: 1038
+        x: 1039
         y: 490
-        width: 391
+        width: 390
         height: 266
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5000003, y: 0.36224365}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8b3d6129cf5bf3840800000000000000
-      internalID: 5206079790650938296
+      spriteID: fe068ad63b8987e4bacbdb46919012a4
+      internalID: 408315302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: choga_house_all_17
+      name: Sprite_Town_Building_House_Choga_17
       rect:
         serializedVersion: 2
         x: 1582
         y: 480
-        width: 391
-        height: 266
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 390
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3981671}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 94d909152bee81470800000000000000
-      internalID: 8365698757480717641
+      spriteID: 08c5c73a5aea85849b955b8a22976675
+      internalID: -1535826982
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: choga_house_all_18
+      name: Sprite_Town_Building_House_Choga_18
       rect:
         serializedVersion: 2
-        x: 76
-        y: 154
-        width: 290
-        height: 228
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 77
+        y: 155
+        width: 288
+        height: 227
+      alignment: 9
+      pivot: {x: 0.50567377, y: 0.068095945}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: aed668683c7f60a70800000000000000
-      internalID: 8792987741635112426
+      spriteID: 4676ba7d79be9424e872e650dc811973
+      internalID: -1271302696
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: choga_house_all_19
+      name: Sprite_Town_Building_House_Choga_19
       rect:
         serializedVersion: 2
         x: 440
-        y: 153
+        y: 154
         width: 290
-        height: 228
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 227
+      alignment: 9
+      pivot: {x: 0.5, y: 0.042178184}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 032777397a51f5560800000000000000
-      internalID: 7304580930096034352
+      spriteID: 39f57e377a7c7af488db6c1bea2baa3f
+      internalID: 5188886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: choga_house_all_20
+      name: Sprite_Town_Building_House_Choga_20
       rect:
         serializedVersion: 2
-        x: 865
-        y: 160
-        width: 290
-        height: 228
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 866
+        y: 161
+        width: 288
+        height: 227
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09688988}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 001c3bf47668c9f80800000000000000
-      internalID: -8098450251642060544
+      spriteID: 26f793f2478de964589d158a6932bbf0
+      internalID: 1710279425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: choga_house_all_21
+      name: Sprite_Town_Building_House_Choga_21
       rect:
         serializedVersion: 2
         x: 1229
-        y: 156
+        y: 157
         width: 290
-        height: 228
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 227
+      alignment: 9
+      pivot: {x: 0.48873124, y: 0.0752946}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cfdd0682eff3d5bc0800000000000000
-      internalID: -3792804950344409604
+      spriteID: 5160b3d649aab5b489c4a8de769bb2ec
+      internalID: -1288442782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Building_House_Choga_22
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 1537
+        width: 383
+        height: 241
+      alignment: 9
+      pivot: {x: 0.483641, y: 0.08691862}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f9ab0b690629143b84ce7cbc3cced1
+      internalID: 324479220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Building_House_Choga_23
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 1297
+        width: 374
+        height: 240
+      alignment: 9
+      pivot: {x: 0.48919415, y: 0.09584554}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23e4b6f2c0310143ac179a25d27cd77
+      internalID: -986884690
       vertices: []
       indices: 
       edges: []
@@ -663,7 +619,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 62dd96030dff9254e83dc370f7a3c5a8
     internalID: 0
     vertices: []
     indices: 
@@ -673,28 +629,30 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      choga_house_all_0: -2185082971831317298
-      choga_house_all_1: -3332853790781819944
-      choga_house_all_10: -1427819340259204130
-      choga_house_all_11: -5646201086888779262
-      choga_house_all_12: -636425550894422934
-      choga_house_all_13: 7720747889446447064
-      choga_house_all_14: 6638609296132960639
-      choga_house_all_15: 52248758019433569
-      choga_house_all_16: 5206079790650938296
-      choga_house_all_17: 8365698757480717641
-      choga_house_all_18: 8792987741635112426
-      choga_house_all_19: 7304580930096034352
-      choga_house_all_2: 2746958627385328844
-      choga_house_all_20: -8098450251642060544
-      choga_house_all_21: -3792804950344409604
-      choga_house_all_3: 1428251188879324573
-      choga_house_all_4: -1646044207990657896
-      choga_house_all_5: 3996389063981866818
-      choga_house_all_6: -5176432903690727582
-      choga_house_all_7: 3239696109464143550
-      choga_house_all_8: -1400202083135483883
-      choga_house_all_9: 7365327586089428076
+      Sprite_Town_Building_House_Choga_0: -2112604816
+      Sprite_Town_Building_House_Choga_1: 821884333
+      Sprite_Town_Building_House_Choga_10: 174796535
+      Sprite_Town_Building_House_Choga_11: -61893626
+      Sprite_Town_Building_House_Choga_12: 2119261756
+      Sprite_Town_Building_House_Choga_13: 1819596266
+      Sprite_Town_Building_House_Choga_14: -884658901
+      Sprite_Town_Building_House_Choga_15: 601206813
+      Sprite_Town_Building_House_Choga_16: 408315302
+      Sprite_Town_Building_House_Choga_17: -1535826982
+      Sprite_Town_Building_House_Choga_18: -1271302696
+      Sprite_Town_Building_House_Choga_19: 5188886
+      Sprite_Town_Building_House_Choga_2: -1163165408
+      Sprite_Town_Building_House_Choga_20: 1710279425
+      Sprite_Town_Building_House_Choga_21: -1288442782
+      Sprite_Town_Building_House_Choga_22: 324479220
+      Sprite_Town_Building_House_Choga_23: -986884690
+      Sprite_Town_Building_House_Choga_3: -1129060315
+      Sprite_Town_Building_House_Choga_4: -102370155
+      Sprite_Town_Building_House_Choga_5: -34384046
+      Sprite_Town_Building_House_Choga_6: 1448357602
+      Sprite_Town_Building_House_Choga_7: 1727865435
+      Sprite_Town_Building_House_Choga_8: -54563391
+      Sprite_Town_Building_House_Choga_9: -1522228671
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
