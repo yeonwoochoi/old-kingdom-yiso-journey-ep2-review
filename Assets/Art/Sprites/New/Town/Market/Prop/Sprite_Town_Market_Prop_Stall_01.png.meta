@@ -135,89 +135,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: market_tent_1_0
+      name: Sprite_Town_Market_Prop_Stall_01_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 161
-        width: 154
-        height: 127
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 26
+        y: 162
+        width: 152
+        height: 125
+      alignment: 9
+      pivot: {x: 0.49332723, y: 0.090237916}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a8c89856037da9490800000000000000
-      internalID: -7738636406820860790
+      spriteID: 583aa926bd16e36449080bb15aa640b3
+      internalID: 438991915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: market_tent_1_1
+      name: Sprite_Town_Market_Prop_Stall_01_1
       rect:
         serializedVersion: 2
-        x: 216
-        y: 161
-        width: 154
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 217
+        y: 162
+        width: 152
+        height: 122
+      alignment: 9
+      pivot: {x: 0.5, y: 0.100945644}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 69e7bc69d9ec4cf70800000000000000
-      internalID: 9206710714487242390
+      spriteID: 2dfd1ad6bc07452409db78cb590fd918
+      internalID: 1732313036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: market_tent_1_2
+      name: Sprite_Town_Market_Prop_Stall_01_2
       rect:
         serializedVersion: 2
-        x: 22
-        y: 7
-        width: 154
-        height: 123
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 23
+        y: 8
+        width: 152
+        height: 121
+      alignment: 9
+      pivot: {x: 0.49666354, y: 0.1102212}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e2ace5ddb9be2a1c0800000000000000
-      internalID: -4493770423495898578
+      spriteID: 86462a320febb1d44a3b4b475687fddd
+      internalID: 31154601
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: market_tent_1_3
+      name: Sprite_Town_Market_Prop_Stall_01_3
       rect:
         serializedVersion: 2
-        x: 222
-        y: 11
-        width: 154
-        height: 123
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 224
+        y: 13
+        width: 152
+        height: 121
+      alignment: 9
+      pivot: {x: 0.49332708, y: 0.07669186}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1291f3d69e0f21d60800000000000000
-      internalID: 7859609185065834785
+      spriteID: a0dcba3983a69244fa577a47591aa2bc
+      internalID: 1784244268
       vertices: []
       indices: 
       edges: []
@@ -226,7 +226,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: aa03103f486bc05418e16ceffa65d78d
     internalID: 0
     vertices: []
     indices: 
@@ -236,10 +236,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      market_tent_1_0: -7738636406820860790
-      market_tent_1_1: 9206710714487242390
-      market_tent_1_2: -4493770423495898578
-      market_tent_1_3: 7859609185065834785
+      Sprite_Town_Market_Prop_Stall_01_0: 438991915
+      Sprite_Town_Market_Prop_Stall_01_1: 1732313036
+      Sprite_Town_Market_Prop_Stall_01_2: 31154601
+      Sprite_Town_Market_Prop_Stall_01_3: 1784244268
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

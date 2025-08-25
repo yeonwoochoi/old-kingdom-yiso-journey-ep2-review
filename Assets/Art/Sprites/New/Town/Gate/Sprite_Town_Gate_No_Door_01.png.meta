@@ -119,12 +119,12 @@ TextureImporter:
       name: Sprite_Town_Gate_No_Door_01_0
       rect:
         serializedVersion: 2
-        x: 31
+        x: 32
         y: 0
-        width: 162
+        width: 160
         height: 286
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.49055728, y: 0.031607695}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -141,12 +141,12 @@ TextureImporter:
       name: Sprite_Town_Gate_No_Door_01_1
       rect:
         serializedVersion: 2
-        x: 248
-        y: 94
-        width: 224
-        height: 145
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 249
+        y: 95
+        width: 222
+        height: 143
+      alignment: 9
+      pivot: {x: 0.49791712, y: 0.025717195}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -163,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b0be7d1a0e72d5541af447d6ca5b34e0
     internalID: 0
     vertices: []
     indices: 

@@ -119,67 +119,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gate_no_door_0
+      name: Sprite_Town_Gate_Giwa_No_Door_0
       rect:
         serializedVersion: 2
-        x: 37
-        y: 35
-        width: 130
-        height: 149
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 38
+        y: 36
+        width: 128
+        height: 147
+      alignment: 9
+      pivot: {x: 0.50235164, y: 0.05564673}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bb3b9a2041ca30f60800000000000000
-      internalID: 7999426565084132283
+      spriteID: 73e2ced4abf8ec940bd06bd47b8bc532
+      internalID: -386846562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gate_no_door_1
+      name: Sprite_Town_Gate_Giwa_No_Door_1
       rect:
         serializedVersion: 2
-        x: 223
-        y: 40
-        width: 194
-        height: 149
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 224
+        y: 41
+        width: 192
+        height: 147
+      alignment: 9
+      pivot: {x: 0.49529663, y: 0.06588532}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 96065c8adfe6859c0800000000000000
-      internalID: -3938275838398209943
+      spriteID: c84d5c6020c00d643b8cee3a041506e8
+      internalID: 1434970225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gate_no_door_2
+      name: Sprite_Town_Gate_Giwa_No_Door_2
       rect:
         serializedVersion: 2
-        x: 471
-        y: 42
-        width: 130
-        height: 149
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 472
+        y: 43
+        width: 128
+        height: 147
+      alignment: 9
+      pivot: {x: 0.50470304, y: 0.05974213}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 433a17023d81a3140800000000000000
-      internalID: 4700096456176018228
+      spriteID: bbc02a423376ff64bb95d5c6c1a98810
+      internalID: -1347581145
       vertices: []
       indices: 
       edges: []
@@ -188,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: bac3ab14243a56e4b973e461b422a8c1
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      gate_no_door_0: 7999426565084132283
-      gate_no_door_1: -3938275838398209943
-      gate_no_door_2: 4700096456176018228
+      Sprite_Town_Gate_Giwa_No_Door_0: -386846562
+      Sprite_Town_Gate_Giwa_No_Door_1: 1434970225
+      Sprite_Town_Gate_Giwa_No_Door_2: -1347581145
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

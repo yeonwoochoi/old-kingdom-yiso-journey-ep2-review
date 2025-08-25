@@ -152,23 +152,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chinese3_0
+      name: Sprite_Town_Building_Shop_02_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 43
         y: 0
-        width: 340
-        height: 334
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 296
+        height: 333
+      alignment: 9
+      pivot: {x: 0.5059965, y: 0.032718174}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d09216acab9fb5b40800000000000000
-      internalID: 5430208356379863309
+      spriteID: ff65e12de8b68404b8b5a8f735cdda32
+      internalID: -1967114503
       vertices: []
       indices: 
       edges: []
@@ -177,7 +177,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 79945dcab0cb06f44ba4e6130b98033f
     internalID: 0
     vertices: []
     indices: 
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      chinese3_0: 5430208356379863309
+      Sprite_Town_Building_Shop_02_0: -1967114503
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

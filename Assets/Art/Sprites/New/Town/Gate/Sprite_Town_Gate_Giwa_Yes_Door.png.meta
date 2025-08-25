@@ -122,89 +122,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gate_yes_door_0
+      name: Sprite_Town_Gate_Giwa_Yes_Door_0
       rect:
         serializedVersion: 2
-        x: 35
-        y: 196
-        width: 130
-        height: 149
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 36
+        y: 197
+        width: 128
+        height: 147
+      alignment: 9
+      pivot: {x: 0.49396282, y: 0.047906887}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7abee9b8438ba0890800000000000000
-      internalID: -7490972494357140569
+      spriteID: dd374c41d8bac4541bfd418311ace0ca
+      internalID: 686696320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gate_yes_door_1
+      name: Sprite_Town_Gate_Giwa_Yes_Door_1
       rect:
         serializedVersion: 2
-        x: 229
-        y: 200
-        width: 130
-        height: 149
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 230
+        y: 201
+        width: 128
+        height: 147
+      alignment: 9
+      pivot: {x: 0.493963, y: 0.055792153}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a580fbf326c04b2b0800000000000000
-      internalID: -5569813223034648486
+      spriteID: 4de6be7f12c65d842a7ee6dd0d0c938c
+      internalID: 317525495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gate_yes_door_2
+      name: Sprite_Town_Gate_Giwa_Yes_Door_2
       rect:
         serializedVersion: 2
-        x: 33
-        y: 17
-        width: 134
-        height: 132
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 34
+        y: 18
+        width: 132
+        height: 130
+      alignment: 9
+      pivot: {x: 0.49999994, y: 0.051383577}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bafe7cb6207d12660800000000000000
-      internalID: 7359399671498272683
+      spriteID: 6abdf88bcab558d4baa3e34756f93c1e
+      internalID: 1295504216
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gate_yes_door_3
+      name: Sprite_Town_Gate_Giwa_Yes_Door_3
       rect:
         serializedVersion: 2
-        x: 214
-        y: 17
-        width: 134
-        height: 132
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 215
+        y: 18
+        width: 132
+        height: 130
+      alignment: 9
+      pivot: {x: 0.4852725, y: 0.08129133}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ee2b483433cf22630800000000000000
-      internalID: 3900957524362572526
+      spriteID: be2623cd312cb6f4cb576025586d0bdf
+      internalID: 754202549
       vertices: []
       indices: 
       edges: []
@@ -213,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 453a21d309d95c94fa1ed1970170fec7
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      gate_yes_door_0: -7490972494357140569
-      gate_yes_door_1: -5569813223034648486
-      gate_yes_door_2: 7359399671498272683
-      gate_yes_door_3: 3900957524362572526
+      Sprite_Town_Gate_Giwa_Yes_Door_0: 686696320
+      Sprite_Town_Gate_Giwa_Yes_Door_1: 317525495
+      Sprite_Town_Gate_Giwa_Yes_Door_2: 1295504216
+      Sprite_Town_Gate_Giwa_Yes_Door_3: 754202549
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

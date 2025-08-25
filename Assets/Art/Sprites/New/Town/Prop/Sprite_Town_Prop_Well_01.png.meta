@@ -125,111 +125,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wells_0
+      name: Sprite_Town_Prop_Well_01_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 126
-        width: 66
-        height: 61
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6455376f544ed1d70800000000000000
-      internalID: 9015613018204230982
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wells_1
-      rect:
-        serializedVersion: 2
-        x: 118
+        x: 30
         y: 127
-        width: 74
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 59
+      alignment: 9
+      pivot: {x: 0.4704228, y: 0.15991288}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 64d950fa73030cf20800000000000000
-      internalID: 3440803131028774214
+      spriteID: 8dc81536f2a3206459a104c7ae7bb2df
+      internalID: -1821502708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wells_2
+      name: Sprite_Town_Prop_Well_01_1
       rect:
         serializedVersion: 2
-        x: 227
-        y: 119
-        width: 77
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 119
+        y: 128
+        width: 72
+        height: 55
+      alignment: 9
+      pivot: {x: 0.4579347, y: 0.0801117}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e99ece4ebd1b384f0800000000000000
-      internalID: -827622348509353570
+      spriteID: 221096b02dcd50c46967d1bb9c3a40ac
+      internalID: 1443952527
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wells_3
+      name: Sprite_Town_Prop_Well_01_2
       rect:
         serializedVersion: 2
-        x: 49
+        x: 228
+        y: 120
+        width: 75
+        height: 63
+      alignment: 9
+      pivot: {x: 0.4596171, y: 0.06131914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 744a94650441a124f9cb9fbbb190606c
+      internalID: 1166031003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Well_01_3
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 24
+        width: 101
+        height: 77
+      alignment: 9
+      pivot: {x: 0.42503214, y: 0.032911327}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd0b7537b22d4b48a51b9dfef89dc91
+      internalID: -491184604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Well_01_4
+      rect:
+        serializedVersion: 2
+        x: 179
         y: 23
-        width: 103
-        height: 79
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 87
+        height: 73
+      alignment: 9
+      pivot: {x: 0.5261095, y: 0.059178732}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 49315f00375872b80800000000000000
-      internalID: -8419614249362058348
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wells_4
-      rect:
-        serializedVersion: 2
-        x: 178
-        y: 22
-        width: 89
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4dd31f3f49d880ab0800000000000000
-      internalID: -5041624111953920556
+      spriteID: 56307f818b8fb894b9ff608aeeff9cad
+      internalID: 526670888
       vertices: []
       indices: 
       edges: []
@@ -238,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7bd6725481845b844a45df7e3625b810
     internalID: 0
     vertices: []
     indices: 
@@ -248,11 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      wells_0: 9015613018204230982
-      wells_1: 3440803131028774214
-      wells_2: -827622348509353570
-      wells_3: -8419614249362058348
-      wells_4: -5041624111953920556
+      Sprite_Town_Prop_Well_01_0: -1821502708
+      Sprite_Town_Prop_Well_01_1: 1443952527
+      Sprite_Town_Prop_Well_01_2: 1166031003
+      Sprite_Town_Prop_Well_01_3: -491184604
+      Sprite_Town_Prop_Well_01_4: 526670888
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

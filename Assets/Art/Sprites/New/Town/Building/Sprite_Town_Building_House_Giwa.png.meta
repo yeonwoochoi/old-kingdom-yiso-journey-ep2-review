@@ -128,133 +128,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: house_giwahouse_0
+      name: Sprite_Town_Building_House_Giwa_0
       rect:
         serializedVersion: 2
-        x: 56
+        x: 57
+        y: 496
+        width: 547
+        height: 310
+      alignment: 9
+      pivot: {x: 0.4961855, y: 0.08759431}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d70e39642ad4e24b8148e1628758b3f
+      internalID: 1341947803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Building_House_Giwa_2
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 575
+        width: 379
+        height: 211
+      alignment: 9
+      pivot: {x: 0.50333184, y: 0.39227787}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d07dbb7525409044813581eef515c59
+      internalID: -349502677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Building_House_Giwa_3
+      rect:
+        serializedVersion: 2
+        x: 1198
         y: 495
-        width: 551
-        height: 312
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 128
+        height: 274
+      alignment: 9
+      pivot: {x: 0.49999905, y: 0.08523069}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d8b75d0514f7d9cb0800000000000000
-      internalID: -4855584904729756787
+      spriteID: 13e0c2544edec464fb8177179db57f5d
+      internalID: 326563051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: house_giwahouse_1
+      name: Sprite_Town_Building_House_Giwa_4
       rect:
         serializedVersion: 2
-        x: 665
-        y: 574
-        width: 381
-        height: 213
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 150
+        y: 146
+        width: 352
+        height: 286
+      alignment: 9
+      pivot: {x: 0.50098413, y: 0.047977954}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 742578e400e55df70800000000000000
-      internalID: 9211371968266719815
+      spriteID: 6ceae1331a2c98e4b8a86f041435542e
+      internalID: -1603929975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: house_giwahouse_2
+      name: Sprite_Town_Building_House_Giwa_5
       rect:
         serializedVersion: 2
-        x: 1197
-        y: 494
-        width: 130
-        height: 276
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 678
+        y: 340
+        width: 372
+        height: 169
+      alignment: 9
+      pivot: {x: 0.5038362, y: 0.06463641}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b4266ec92ea1dcc90800000000000000
-      internalID: -7148027472969833909
+      spriteID: 7dc2cc36fab492346bc91d0113cb2773
+      internalID: -1628386453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: house_giwahouse_3
+      name: Sprite_Town_Building_House_Giwa_6
       rect:
         serializedVersion: 2
-        x: 149
-        y: 145
-        width: 354
-        height: 288
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 721
+        y: 53
+        width: 301
+        height: 170
+      alignment: 9
+      pivot: {x: 0.4937154, y: 0.13567285}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a14653650838d54a0800000000000000
-      internalID: -6602976891429886950
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: house_giwahouse_4
-      rect:
-        serializedVersion: 2
-        x: 676
-        y: 339
-        width: 374
-        height: 171
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d58a569ff98533900800000000000000
-      internalID: 662971014260828253
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: house_giwahouse_5
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 52
-        width: 303
-        height: 172
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8c6ce68d6117191c0800000000000000
-      internalID: -4498690209832057144
+      spriteID: 68eb5c91e10c22546ae00d9ddad23ea5
+      internalID: 1320452371
       vertices: []
       indices: 
       edges: []
@@ -263,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3ca30950e27234d41bba3ab35b078698
     internalID: 0
     vertices: []
     indices: 
@@ -273,12 +273,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      house_giwahouse_0: -4855584904729756787
-      house_giwahouse_1: 9211371968266719815
-      house_giwahouse_2: -7148027472969833909
-      house_giwahouse_3: -6602976891429886950
-      house_giwahouse_4: 662971014260828253
-      house_giwahouse_5: -4498690209832057144
+      Sprite_Town_Building_House_Giwa_0: 1341947803
+      Sprite_Town_Building_House_Giwa_1: -1481592313
+      Sprite_Town_Building_House_Giwa_2: -349502677
+      Sprite_Town_Building_House_Giwa_3: 326563051
+      Sprite_Town_Building_House_Giwa_4: -1603929975
+      Sprite_Town_Building_House_Giwa_5: -1628386453
+      Sprite_Town_Building_House_Giwa_6: 1320452371
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: building_shop_1_0
+      name: Sprite_Town_Building_Shop_01_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 4
-        width: 246
-        height: 246
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8
+        y: 5
+        width: 244
+        height: 244
+      alignment: 9
+      pivot: {x: 0.49999994, y: 0.030763282}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d3e35e87a48e238e0800000000000000
-      internalID: -1715053101521224131
+      spriteID: 660e45ee8043547419c932121bea4041
+      internalID: -291468734
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f5ce507b9a1bb2a4f935258a4b21cdaf
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      building_shop_1_0: -1715053101521224131
+      Sprite_Town_Building_Shop_01_0: -291468734
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

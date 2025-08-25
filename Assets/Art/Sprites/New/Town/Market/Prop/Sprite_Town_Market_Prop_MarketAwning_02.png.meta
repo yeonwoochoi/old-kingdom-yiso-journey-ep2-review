@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: streetmarket_stand_wooden_0
+      name: Sprite_Town_Market_Prop_MarketAwning_02_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 9
-        width: 98
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 10
+        y: 10
+        width: 96
+        height: 109
+      alignment: 9
+      pivot: {x: 0.49763384, y: 0.024855053}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 864c598b8bec2ee20800000000000000
-      internalID: 3378489963247420520
+      spriteID: b933006d849a3c248b8bff0106150f66
+      internalID: -1269581033
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a672e01bb5adc2e428c99e64bffd32b5
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      streetmarket_stand_wooden_0: 3378489963247420520
+      Sprite_Town_Market_Prop_MarketAwning_02_0: -1269581033
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

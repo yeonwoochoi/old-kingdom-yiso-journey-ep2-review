@@ -128,133 +128,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: house_warehouse__0
+      name: Sprite_Town_Building_Warehouse_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 129
-        width: 168
-        height: 260
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3004b1e2c2759d490800000000000000
-      internalID: -7721044238886289405
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: house_warehouse__1
-      rect:
-        serializedVersion: 2
-        x: 235
+        x: 11
         y: 130
-        width: 168
-        height: 260
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 166
+        height: 258
+      alignment: 9
+      pivot: {x: 0.4786786, y: 0.05552283}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 386f6fa0df4d9fa60800000000000000
-      internalID: 7708426420497086083
+      spriteID: 1ea585ba418ca9b44b167ae42c5cba7b
+      internalID: 1251473439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: house_warehouse__2
+      name: Sprite_Town_Building_Warehouse_1
       rect:
         serializedVersion: 2
-        x: 458
-        y: 194
-        width: 128
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 236
+        y: 131
+        width: 166
+        height: 258
+      alignment: 9
+      pivot: {x: 0.49573582, y: 0.052779086}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b150dd5818aa90a30800000000000000
-      internalID: 4182061202263573787
+      spriteID: c1a11acac94584d45aceb80143fc7d4f
+      internalID: 1488373541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: house_warehouse__3
+      name: Sprite_Town_Building_Warehouse_2
       rect:
         serializedVersion: 2
-        x: 636
-        y: 194
-        width: 128
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 459
+        y: 195
+        width: 126
+        height: 146
+      alignment: 9
+      pivot: {x: 0.4887642, y: 0.04642361}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 14db9756ea717f000800000000000000
-      internalID: 69550357041757505
+      spriteID: 3273af14144dbba4c9f25583056796ba
+      internalID: -1486470918
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: house_warehouse__4
+      name: Sprite_Town_Building_Warehouse_3
       rect:
         serializedVersion: 2
-        x: 460
-        y: 20
-        width: 128
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 637
+        y: 195
+        width: 126
+        height: 146
+      alignment: 9
+      pivot: {x: 0.49692693, y: 0.03775547}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6508294aad178b740800000000000000
-      internalID: 5168005756285517910
+      spriteID: 3caa6b832d7f7ae4787e05ea458ed6c2
+      internalID: -1718886422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: house_warehouse__5
+      name: Sprite_Town_Building_Warehouse_4
       rect:
         serializedVersion: 2
-        x: 652
-        y: 22
-        width: 128
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 461
+        y: 21
+        width: 126
+        height: 146
+      alignment: 9
+      pivot: {x: 0.49385336, y: 0.046463873}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 97c9b13bb057db0a0800000000000000
-      internalID: -6864201563932746631
+      spriteID: 2a56dd704daaa5844aa962145922ade7
+      internalID: 1902045087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Building_Warehouse_5
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 23
+        width: 126
+        height: 146
+      alignment: 9
+      pivot: {x: 0.50307256, y: 0.035854746}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbdf9ee5cdea67f428a5f5ef026e8d4e
+      internalID: 723030029
       vertices: []
       indices: 
       edges: []
@@ -263,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: fb7ba064a3513bb4f8616fe95e7f263d
     internalID: 0
     vertices: []
     indices: 
@@ -273,12 +273,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      house_warehouse__0: -7721044238886289405
-      house_warehouse__1: 7708426420497086083
-      house_warehouse__2: 4182061202263573787
-      house_warehouse__3: 69550357041757505
-      house_warehouse__4: 5168005756285517910
-      house_warehouse__5: -6864201563932746631
+      Sprite_Town_Building_Warehouse_0: 1251473439
+      Sprite_Town_Building_Warehouse_1: 1488373541
+      Sprite_Town_Building_Warehouse_2: -1486470918
+      Sprite_Town_Building_Warehouse_3: -1718886422
+      Sprite_Town_Building_Warehouse_4: 1902045087
+      Sprite_Town_Building_Warehouse_5: 723030029
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

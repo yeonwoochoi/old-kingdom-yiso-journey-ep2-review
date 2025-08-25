@@ -161,89 +161,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: market_stree2t_0
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 233
-        width: 130
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 53dbe75b28a1585f0800000000000000
-      internalID: -755168213821637323
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: market_stree2t_1
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 234
-        width: 130
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 822e2b78ba29d8650800000000000000
-      internalID: 6236802324391715368
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: market_stree2t_2
+      name: Sprite_Town_Market_Prop_Stall_02_0
       rect:
         serializedVersion: 2
         x: 35
-        y: 41
-        width: 130
-        height: 137
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 234
+        width: 128
+        height: 123
+      alignment: 9
+      pivot: {x: 0.49469763, y: 0.04753398}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4b02bb00d7d54f8c0800000000000000
-      internalID: -3966442580342005580
+      spriteID: 0d8980128fb83df4087f037dcaf29198
+      internalID: 1462494340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: market_stree2t_3
+      name: Sprite_Town_Market_Prop_Stall_02_1
       rect:
         serializedVersion: 2
-        x: 216
-        y: 41
-        width: 130
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 209
+        y: 235
+        width: 128
+        height: 122
+      alignment: 9
+      pivot: {x: 0.49999976, y: 0.04975916}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ef5011d287553ea90800000000000000
-      internalID: -7285885797514803714
+      spriteID: 204bfb1f7b646d64995af5dd32312fa1
+      internalID: 1131445683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Market_Prop_Stall_02_2
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 42
+        width: 128
+        height: 135
+      alignment: 9
+      pivot: {x: 0.48840177, y: 0.04179707}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f42a62b48e9985b4e81188515a619732
+      internalID: 342728648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Market_Prop_Stall_02_3
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 42
+        width: 128
+        height: 124
+      alignment: 9
+      pivot: {x: 0.5, y: 0.037067074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41c1d256fe126ce41bda7c31c741bacb
+      internalID: -1192686790
       vertices: []
       indices: 
       edges: []
@@ -252,7 +252,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4bddd9144beeb094ab378d24383e537e
     internalID: 0
     vertices: []
     indices: 
@@ -262,10 +262,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      market_stree2t_0: -755168213821637323
-      market_stree2t_1: 6236802324391715368
-      market_stree2t_2: -3966442580342005580
-      market_stree2t_3: -7285885797514803714
+      Sprite_Town_Market_Prop_Stall_02_0: 1462494340
+      Sprite_Town_Market_Prop_Stall_02_1: 1131445683
+      Sprite_Town_Market_Prop_Stall_02_2: 342728648
+      Sprite_Town_Market_Prop_Stall_02_3: -1192686790
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
