@@ -19,7 +19,7 @@ namespace Gameplay.Character.Core.Modules {
 
         [Serializable]
         public class Settings {
-            [SerializeField] private YisoHealth characterHealth;
+            [SerializeField] private YisoEntityHealth characterEntityHealth;
         }
     }
 }
