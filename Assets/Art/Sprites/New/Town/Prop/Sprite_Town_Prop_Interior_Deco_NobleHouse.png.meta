@@ -161,375 +161,353 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Town_Prop_Interior_Deco_0
+      name: Sprite_Town_Prop_Interior_Deco_NobleHouse_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 174
-        width: 67
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 16
+        y: 175
+        width: 65
+        height: 64
+      alignment: 9
+      pivot: {x: 0.50693506, y: 0.10556412}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2d6439a424e1fe0b0800000000000000
-      internalID: -5697301733532547374
+      spriteID: 2522cbdcb3380584eb7be3be6781908a
+      internalID: 2093664113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Town_Prop_Interior_Deco_1
+      name: Sprite_Town_Prop_Interior_Deco_NobleHouse_1
       rect:
         serializedVersion: 2
-        x: 111
-        y: 174
-        width: 67
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 112
+        y: 175
+        width: 65
+        height: 64
+      alignment: 9
+      pivot: {x: 0.49306476, y: 0.12669468}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c0511c402cea84ad0800000000000000
-      internalID: -2717730226791443188
+      spriteID: c26fc56601a5f5540a18240f4f05b272
+      internalID: 1893374488
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Town_Prop_Interior_Deco_2
-      rect:
-        serializedVersion: 2
-        x: 197
-        y: 207
-        width: 25
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a07e63061f86231e0800000000000000
-      internalID: -2219596280429615350
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_Interior_Deco_3
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 191
-        width: 51
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 52046ffab5d3f2840800000000000000
-      internalID: 5201443558639681573
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_Interior_Deco_4
-      rect:
-        serializedVersion: 2
-        x: 319
-        y: 192
-        width: 30
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b01148d5725824930800000000000000
-      internalID: 4126006612743950603
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_Interior_Deco_5
-      rect:
-        serializedVersion: 2
-        x: 194
-        y: 160
-        width: 27
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 961b80e7774ad77c0800000000000000
-      internalID: -4071917654950497943
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_Interior_Deco_6
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 97
-        width: 66
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 807d89566c92038a0800000000000000
-      internalID: -6327511544370768120
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_Interior_Deco_7
-      rect:
-        serializedVersion: 2
-        x: 99
-        y: 83
-        width: 45
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 85c81699f169e5850800000000000000
-      internalID: 6367691985609919576
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_Interior_Deco_8
-      rect:
-        serializedVersion: 2
-        x: 165
-        y: 95
-        width: 66
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e07cc2b7f5923da70800000000000000
-      internalID: 8850463182778320654
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_Interior_Deco_9
-      rect:
-        serializedVersion: 2
-        x: 255
-        y: 101
-        width: 50
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5e73334f906bde6f0800000000000000
-      internalID: -653666217030895643
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_Interior_Deco_10
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 47
-        width: 34
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8b6314199b4f90290800000000000000
-      internalID: -7923532991538579784
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_Interior_Deco_11
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 33
-        width: 25
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7f1261e996eb9ce90800000000000000
-      internalID: -7004858384565001737
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_Interior_Deco_12
-      rect:
-        serializedVersion: 2
-        x: 63
-        y: 32
-        width: 22
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 14597cd9574e35bb0800000000000000
-      internalID: -4948360371740633791
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_Interior_Deco_13
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 35
-        width: 13
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6860f7432660e7a10800000000000000
-      internalID: 1908970310908970630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_Interior_Deco_14
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 31
-        width: 46
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e0639902075843490800000000000000
-      internalID: -7767436740677519858
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_Interior_Deco_15
+      name: Sprite_Town_Prop_Interior_Deco_NobleHouse_2
       rect:
         serializedVersion: 2
         x: 198
-        y: 26
-        width: 33
-        height: 33
+        y: 208
+        width: 23
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1f54c5ed4cfb53560800000000000000
-      internalID: 7292946023861470705
+      spriteID: 2fc7ae126f7fc9a4eae10512d9b28f0a
+      internalID: -328429017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Town_Prop_Interior_Deco_16
+      name: Sprite_Town_Prop_Interior_Deco_NobleHouse_3
       rect:
         serializedVersion: 2
-        x: 256
-        y: 25
-        width: 40
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 241
+        y: 192
+        width: 49
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5275985, y: 0.049215954}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 136fd645d5eb04840800000000000000
-      internalID: 5206370477298021937
+      spriteID: d43003fdafb372345b656660dedd751b
+      internalID: 1533119927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_NobleHouse_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 193
+        width: 28
+        height: 52
+      alignment: 9
+      pivot: {x: 0.516098, y: 0.066554144}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f92c808a9a70354469a4767d5ad26571
+      internalID: 1019149489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_NobleHouse_5
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 161
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a91a2be949f0c714d9155b0386b6a3ec
+      internalID: 1922801951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_NobleHouse_6
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 98
+        width: 64
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5070433, y: 0.14721282}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911b575566af2564496260e06271a6a7
+      internalID: -612832111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_NobleHouse_7
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 84
+        width: 43
+        height: 60
+      alignment: 9
+      pivot: {x: 0.49999964, y: 0.15439911}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51100e68cac24e547ad5d2a396dcd5d6
+      internalID: 410374991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_NobleHouse_8
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 96
+        width: 64
+        height: 50
+      alignment: 9
+      pivot: {x: 0.49999976, y: 0.06724777}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d991c23e2bff34282303f987b75ea6
+      internalID: -1457573676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_NobleHouse_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 102
+        width: 48
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5375646, y: 0.07068216}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb43aa04fc7f7de46b18fc021fe8abc7
+      internalID: 286807404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_NobleHouse_10
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 48
+        width: 32
+        height: 96
+      alignment: 9
+      pivot: {x: 0.52817345, y: 0.0726947}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f34d8c694bc6b464891a5b92a9be142c
+      internalID: -1500346755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_NobleHouse_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 33
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e97849459db29145b569d10194e22c7
+      internalID: 2045134914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_NobleHouse_13
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 36
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7c570b01afe8ab458d774383e9de6dd
+      internalID: 1210667418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_NobleHouse_14
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 32
+        width: 44
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3273a17b33c36324286d3543adb95b78
+      internalID: -344953868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_NobleHouse_15
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 27
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7913409722fd5b94c8085fc80d3b3811
+      internalID: -521867403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Interior_Deco_NobleHouse_16
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 26
+        width: 38
+        height: 45
+      alignment: 9
+      pivot: {x: 0.4881359, y: 0.13937344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5197256d0f426484590e6a262bc85a01
+      internalID: 1133546282
       vertices: []
       indices: 
       edges: []
@@ -538,7 +516,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7d816cf62c4960a429924873a3d12f03
     internalID: 0
     vertices: []
     indices: 
@@ -548,23 +526,23 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprite_Town_Prop_Interior_Deco_0: -5697301733532547374
-      Sprite_Town_Prop_Interior_Deco_1: -2717730226791443188
-      Sprite_Town_Prop_Interior_Deco_10: -7923532991538579784
-      Sprite_Town_Prop_Interior_Deco_11: -7004858384565001737
-      Sprite_Town_Prop_Interior_Deco_12: -4948360371740633791
-      Sprite_Town_Prop_Interior_Deco_13: 1908970310908970630
-      Sprite_Town_Prop_Interior_Deco_14: -7767436740677519858
-      Sprite_Town_Prop_Interior_Deco_15: 7292946023861470705
-      Sprite_Town_Prop_Interior_Deco_16: 5206370477298021937
-      Sprite_Town_Prop_Interior_Deco_2: -2219596280429615350
-      Sprite_Town_Prop_Interior_Deco_3: 5201443558639681573
-      Sprite_Town_Prop_Interior_Deco_4: 4126006612743950603
-      Sprite_Town_Prop_Interior_Deco_5: -4071917654950497943
-      Sprite_Town_Prop_Interior_Deco_6: -6327511544370768120
-      Sprite_Town_Prop_Interior_Deco_7: 6367691985609919576
-      Sprite_Town_Prop_Interior_Deco_8: 8850463182778320654
-      Sprite_Town_Prop_Interior_Deco_9: -653666217030895643
+      Sprite_Town_Prop_Interior_Deco_NobleHouse_0: 2093664113
+      Sprite_Town_Prop_Interior_Deco_NobleHouse_1: 1893374488
+      Sprite_Town_Prop_Interior_Deco_NobleHouse_10: -1500346755
+      Sprite_Town_Prop_Interior_Deco_NobleHouse_11: 1066617472
+      Sprite_Town_Prop_Interior_Deco_NobleHouse_12: 2045134914
+      Sprite_Town_Prop_Interior_Deco_NobleHouse_13: 1210667418
+      Sprite_Town_Prop_Interior_Deco_NobleHouse_14: -344953868
+      Sprite_Town_Prop_Interior_Deco_NobleHouse_15: -521867403
+      Sprite_Town_Prop_Interior_Deco_NobleHouse_16: 1133546282
+      Sprite_Town_Prop_Interior_Deco_NobleHouse_2: -328429017
+      Sprite_Town_Prop_Interior_Deco_NobleHouse_3: 1533119927
+      Sprite_Town_Prop_Interior_Deco_NobleHouse_4: 1019149489
+      Sprite_Town_Prop_Interior_Deco_NobleHouse_5: 1922801951
+      Sprite_Town_Prop_Interior_Deco_NobleHouse_6: -612832111
+      Sprite_Town_Prop_Interior_Deco_NobleHouse_7: 410374991
+      Sprite_Town_Prop_Interior_Deco_NobleHouse_8: -1457573676
+      Sprite_Town_Prop_Interior_Deco_NobleHouse_9: 286807404
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

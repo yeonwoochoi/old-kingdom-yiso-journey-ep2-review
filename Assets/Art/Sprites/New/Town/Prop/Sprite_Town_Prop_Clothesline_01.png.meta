@@ -146,265 +146,265 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: laundry_pole_0
+      name: Sprite_Town_Prop_Clothesline_01_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 223
-        width: 75
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 17
+        y: 224
+        width: 73
+        height: 32
+      alignment: 9
+      pivot: {x: 0.4872073, y: 0.120616436}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1799348204f3225a0800000000000000
-      internalID: -6547601363457304207
+      spriteID: 687ab6ca49d82ad4fad96beee84bfd24
+      internalID: -245602025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: laundry_pole_1
+      name: Sprite_Town_Prop_Clothesline_01_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 175
-        width: 82
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eb11406d066141040800000000000000
-      internalID: 4617340123124863422
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: laundry_pole_2
-      rect:
-        serializedVersion: 2
-        x: 111
-        y: 175
-        width: 75
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5309bfb5ddbf6f240800000000000000
-      internalID: 4825320978923622453
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: laundry_pole_3
-      rect:
-        serializedVersion: 2
-        x: 207
-        y: 175
-        width: 97
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 101ba900c63639b10800000000000000
-      internalID: 1987041176118276353
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: laundry_pole_4
-      rect:
-        serializedVersion: 2
-        x: 327
-        y: 172
-        width: 81
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: aa69fc6b92343f520800000000000000
-      internalID: 2734603245183801002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: laundry_pole_5
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 111
-        width: 78
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f7157a46f1dc43bd0800000000000000
-      internalID: -2651268745898012289
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: laundry_pole_6
-      rect:
-        serializedVersion: 2
-        x: 111
-        y: 116
+        x: 17
+        y: 176
         width: 80
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14007187}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 50908d46330e94a50800000000000000
-      internalID: 6505977648053225733
+      spriteID: 103ded62643ff8e41a235fb987f3ef6d
+      internalID: 568137454
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: laundry_pole_7
+      name: Sprite_Town_Prop_Clothesline_01_2
       rect:
         serializedVersion: 2
-        x: 207
-        y: 111
-        width: 84
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 112
+        y: 176
+        width: 73
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14007187}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 05e37914cfd3de3e0800000000000000
-      internalID: -2022892503978000816
+      spriteID: 666011893104e7640ac3d5a8abd2ed1c
+      internalID: 253717471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: laundry_pole_8
+      name: Sprite_Town_Prop_Clothesline_01_3
       rect:
         serializedVersion: 2
-        x: 320
-        y: 97
-        width: 81
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 208
+        y: 176
+        width: 95
+        height: 32
+      alignment: 9
+      pivot: {x: 0.49672338, y: 0.13034391}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 52e6523bf3735e520800000000000000
-      internalID: 2730649495798115877
+      spriteID: ebf2bd98e3441a847928dd60c3997a75
+      internalID: 1342357471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: laundry_pole_9
+      name: Sprite_Town_Prop_Clothesline_01_4
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 173
+        width: 79
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12355716}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 094f4b1b6c322d34ba3d4653f0eaabdb
+      internalID: 1934008126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Clothesline_01_5
       rect:
         serializedVersion: 2
         x: 16
-        y: 37
-        width: 66
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 112
+        width: 76
+        height: 43
+      alignment: 9
+      pivot: {x: 0.50000006, y: 0.11995679}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 45779b39a0980d7e0800000000000000
-      internalID: -1742742377271298220
+      spriteID: 644a39a9cd42d9b458cc92e9a310cd6b
+      internalID: -614603943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: laundry_pole_10
+      name: Sprite_Town_Prop_Clothesline_01_6
       rect:
         serializedVersion: 2
-        x: 111
-        y: 44
+        x: 112
+        y: 117
+        width: 78
+        height: 43
+      alignment: 9
+      pivot: {x: 0.48836046, y: 0.077730045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dc61124fbb48d34eae90ad89942d0eb
+      internalID: -1144893698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Clothesline_01_7
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 112
+        width: 82
+        height: 42
+      alignment: 9
+      pivot: {x: 0.48892808, y: 0.13252422}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5042105fe8cb1ed4c97fefb4931f194f
+      internalID: -1909327062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Clothesline_01_8
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 98
         width: 79
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 62
+      alignment: 9
+      pivot: {x: 0.52163774, y: 0.23343757}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 40a1830bce69efcf0800000000000000
-      internalID: -216569788754290172
+      spriteID: 14094e4df7b6d854fbc99bea8b09d1df
+      internalID: -201767159
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: laundry_pole_11
+      name: Sprite_Town_Prop_Clothesline_01_9
       rect:
         serializedVersion: 2
-        x: 223
-        y: 16
-        width: 66
+        x: 17
+        y: 38
+        width: 64
         height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4614929, y: 0.16884014}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7fe6fc0cce53e5340800000000000000
-      internalID: 4854376739315347191
+      spriteID: f1c6b25796ec81648a9a5ea52b4b05e6
+      internalID: -2058436512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Clothesline_01_10
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 45
+        width: 77
+        height: 45
+      alignment: 9
+      pivot: {x: 0.4999998, y: 0.1166726}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5efff20797eb45e448d0e2fceac11951
+      internalID: -1885396126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Clothesline_01_11
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 17
+        width: 64
+        height: 56
+      alignment: 9
+      pivot: {x: 0.49999976, y: 0.08659005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2288ae26ddf48e45b1ddbe16297c448
+      internalID: 1551432008
       vertices: []
       indices: 
       edges: []
@@ -413,7 +413,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 42e8f2c7f5437084a92de9b75de5c9f6
     internalID: 0
     vertices: []
     indices: 
@@ -423,18 +423,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      laundry_pole_0: -6547601363457304207
-      laundry_pole_1: 4617340123124863422
-      laundry_pole_10: -216569788754290172
-      laundry_pole_11: 4854376739315347191
-      laundry_pole_2: 4825320978923622453
-      laundry_pole_3: 1987041176118276353
-      laundry_pole_4: 2734603245183801002
-      laundry_pole_5: -2651268745898012289
-      laundry_pole_6: 6505977648053225733
-      laundry_pole_7: -2022892503978000816
-      laundry_pole_8: 2730649495798115877
-      laundry_pole_9: -1742742377271298220
+      Sprite_Town_Prop_Clothesline_01_0: -245602025
+      Sprite_Town_Prop_Clothesline_01_1: 568137454
+      Sprite_Town_Prop_Clothesline_01_10: -1885396126
+      Sprite_Town_Prop_Clothesline_01_11: 1551432008
+      Sprite_Town_Prop_Clothesline_01_2: 253717471
+      Sprite_Town_Prop_Clothesline_01_3: 1342357471
+      Sprite_Town_Prop_Clothesline_01_4: 1934008126
+      Sprite_Town_Prop_Clothesline_01_5: -614603943
+      Sprite_Town_Prop_Clothesline_01_6: -1144893698
+      Sprite_Town_Prop_Clothesline_01_7: -1909327062
+      Sprite_Town_Prop_Clothesline_01_8: -201767159
+      Sprite_Town_Prop_Clothesline_01_9: -2058436512
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

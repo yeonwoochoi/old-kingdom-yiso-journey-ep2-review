@@ -144,144 +144,56 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: food_hansik_2_0
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 143
-        width: 34
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1d6ebee8a939969c0800000000000000
-      internalID: -3933450507499346223
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: food_hansik_2_1
-      rect:
-        serializedVersion: 2
-        x: 70
-        y: 145
-        width: 33
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 655576fcb8f2fa790800000000000000
-      internalID: -7516736975531453098
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: food_hansik_2_2
+      name: Sprite_Town_Prop_TableSet_Meal_01_0
       rect:
         serializedVersion: 2
         x: 9
-        y: 98
-        width: 33
-        height: 32
+        y: 144
+        width: 32
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 27a4d32d3b503d9c0800000000000000
-      internalID: -3903770182115571086
+      spriteID: 582f8d6604d4ff94683efaa8eb691287
+      internalID: 1216387249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food_hansik_2_3
+      name: Sprite_Town_Prop_TableSet_Meal_01_1
       rect:
         serializedVersion: 2
-        x: 78
-        y: 86
-        width: 50
-        height: 55
+        x: 71
+        y: 146
+        width: 31
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3657f7d5b6a6b9c30800000000000000
-      internalID: 4367201273028506979
+      spriteID: 9fae48e15820feb4eacfb1d490808b18
+      internalID: 1687152191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food_hansik_2_4
+      name: Sprite_Town_Prop_TableSet_Meal_01_2
       rect:
         serializedVersion: 2
         x: 10
-        y: 48
-        width: 34
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4c5a4e81fe14ad780800000000000000
-      internalID: -8657534838495730236
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: food_hansik_2_5
-      rect:
-        serializedVersion: 2
-        x: 78
-        y: 24
-        width: 50
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3390ca71902b94e50800000000000000
-      internalID: 6794157264986704179
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: food_hansik_2_6
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 5
-        width: 34
+        y: 99
+        width: 31
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -289,10 +201,98 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 290d74c01f92f3ef0800000000000000
-      internalID: -126336149273194350
+      spriteID: beea1d73309b2a64ab57eb8485e68927
+      internalID: -1388428202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_TableSet_Meal_01_3
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 87
+        width: 48
+        height: 53
+      alignment: 9
+      pivot: {x: 0.4868671, y: 0.03017915}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50b7ffe64998f64bbec32fce36bd20c
+      internalID: 547060508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_TableSet_Meal_01_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 49
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a06b127e5ef69241816d4c6b1b73975
+      internalID: -667072785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_TableSet_Meal_01_5
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 25
+        width: 48
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5000003, y: 0.09388153}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c7f802ac9a8164199713bded2c9fa5
+      internalID: -431474101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_TableSet_Meal_01_6
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 6
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 457407a9917a26f498e73f48b76ac484
+      internalID: -401311093
       vertices: []
       indices: 
       edges: []
@@ -301,7 +301,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 43c53bf5c5d33b1429c9eb098e545b8f
     internalID: 0
     vertices: []
     indices: 
@@ -311,13 +311,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      food_hansik_2_0: -3933450507499346223
-      food_hansik_2_1: -7516736975531453098
-      food_hansik_2_2: -3903770182115571086
-      food_hansik_2_3: 4367201273028506979
-      food_hansik_2_4: -8657534838495730236
-      food_hansik_2_5: 6794157264986704179
-      food_hansik_2_6: -126336149273194350
+      Sprite_Town_Prop_TableSet_Meal_01_0: 1216387249
+      Sprite_Town_Prop_TableSet_Meal_01_1: 1687152191
+      Sprite_Town_Prop_TableSet_Meal_01_2: -1388428202
+      Sprite_Town_Prop_TableSet_Meal_01_3: 547060508
+      Sprite_Town_Prop_TableSet_Meal_01_4: -667072785
+      Sprite_Town_Prop_TableSet_Meal_01_5: -431474101
+      Sprite_Town_Prop_TableSet_Meal_01_6: -401311093
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

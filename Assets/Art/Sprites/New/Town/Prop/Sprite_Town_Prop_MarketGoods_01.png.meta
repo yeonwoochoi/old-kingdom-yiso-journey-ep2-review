@@ -248,727 +248,683 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fishing village object_0
+      name: Sprite_Town_Prop_MarketGoods_01_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 397
-        width: 92
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: df0d8e503fa43e360800000000000000
-      internalID: 7197679037104836861
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fishing village object_1
-      rect:
-        serializedVersion: 2
-        x: 112
+        x: 5
         y: 398
-        width: 92
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 90
+        height: 48
+      alignment: 9
+      pivot: {x: 0.50236535, y: 0.038749695}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5d6b62fb34c5ab2d0800000000000000
-      internalID: -3262193534036953387
+      spriteID: 68ceea63eaf7a534b8e7f9608e7db5d8
+      internalID: 102130695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fishing village object_2
+      name: Sprite_Town_Prop_MarketGoods_01_1
       rect:
         serializedVersion: 2
-        x: 225
-        y: 398
-        width: 92
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 113
+        y: 399
+        width: 90
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.038749058}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0d90dbcfbbd99b0b0800000000000000
-      internalID: -5712361221618071088
+      spriteID: 5f9178c33ad5c03459fd57ba04f5a487
+      internalID: 252673139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fishing village object_3
+      name: Sprite_Town_Prop_MarketGoods_01_2
       rect:
         serializedVersion: 2
-        x: 25
-        y: 353
-        width: 14
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 226
+        y: 399
+        width: 90
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5047309, y: 0.04318428}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a4c72530252cb7d00800000000000000
-      internalID: 971583802127318090
+      spriteID: bb0f6d78d8183d64da95a3bec6155dde
+      internalID: -1382468137
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fishing village object_4
+      name: Sprite_Town_Prop_MarketGoods_01_5
       rect:
         serializedVersion: 2
-        x: 47
-        y: 353
-        width: 12
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 209
+        y: 309
+        width: 90
+        height: 58
+      alignment: 9
+      pivot: {x: 0.49526927, y: 0.04486663}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e0a585429d1a9fdb0800000000000000
-      internalID: -4757593577350473202
+      spriteID: a2a85e7d7222cf54ab03058eeeb97469
+      internalID: -1306744495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fishing village object_5
+      name: Sprite_Town_Prop_MarketGoods_01_6
       rect:
         serializedVersion: 2
-        x: 208
-        y: 308
-        width: 92
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 321
+        y: 305
+        width: 93
+        height: 63
+      alignment: 9
+      pivot: {x: 0.49542204, y: 0.057334293}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7b860796b6fb36e00800000000000000
-      internalID: 1036882807276726455
+      spriteID: afb988c634137c04997f1e53b72c710a
+      internalID: -999844689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fishing village object_6
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 304
-        width: 95
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eb7267b91c8014460800000000000000
-      internalID: 7224064904908908478
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fishing village object_7
-      rect:
-        serializedVersion: 2
-        x: 447
-        y: 314
-        width: 34
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 58a6f12bba09f4e90800000000000000
-      internalID: -7039248625454585211
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fishing village object_8
-      rect:
-        serializedVersion: 2
-        x: 581
-        y: 316
-        width: 33
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5db3a011356c5c010800000000000000
-      internalID: 1208590135089314773
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fishing village object_9
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 306
-        width: 61
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6b1334c8677421f70800000000000000
-      internalID: 9156459566882566582
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fishing village object_10
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 303
-        width: 34
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a6e107aa1d9b85db0800000000000000
-      internalID: -4802884692431856022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fishing village object_11
-      rect:
-        serializedVersion: 2
-        x: 491
-        y: 314
-        width: 34
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9dd80247787cf8b40800000000000000
-      internalID: 5444789859097021913
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fishing village object_12
-      rect:
-        serializedVersion: 2
-        x: 537
-        y: 316
-        width: 33
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ae15a7859298bfbe0800000000000000
-      internalID: -1442408444971036182
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fishing village object_13
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 223
-        width: 40
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cb3596c382a5176c0800000000000000
-      internalID: -4147434652972788804
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fishing village object_14
-      rect:
-        serializedVersion: 2
-        x: 207
-        y: 231
-        width: 92
-        height: 61
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4561c6103b4169830800000000000000
-      internalID: 4077469271686125140
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fishing village object_15
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 222
-        width: 92
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2a7a63136c1191730800000000000000
-      internalID: 3970224089430665122
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fishing village object_16
-      rect:
-        serializedVersion: 2
-        x: 447
-        y: 255
-        width: 34
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3bdadd84b6190f5c0800000000000000
-      internalID: -4183684163857175117
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fishing village object_17
-      rect:
-        serializedVersion: 2
-        x: 491
-        y: 255
-        width: 34
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e15abf96c3d5b9dc0800000000000000
-      internalID: -3631206160486652642
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fishing village object_18
-      rect:
-        serializedVersion: 2
-        x: 537
-        y: 257
-        width: 33
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c0f69bc013cf362a0800000000000000
-      internalID: -6745270529273794804
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fishing village object_19
-      rect:
-        serializedVersion: 2
-        x: 581
-        y: 257
-        width: 34
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b414c00d430eab990800000000000000
-      internalID: -7369331322805010101
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fishing village object_20
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 222
-        width: 56
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6f2967a73303faaa0800000000000000
-      internalID: -6147641968681381130
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fishing village object_21
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 222
-        width: 33
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8b1b86e40ebc2f640800000000000000
-      internalID: 5112372691267531192
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fishing village object_22
+      name: Sprite_Town_Prop_MarketGoods_01_7
       rect:
         serializedVersion: 2
         x: 448
-        y: 192
-        width: 56
+        y: 315
+        width: 32
+        height: 45
+      alignment: 9
+      pivot: {x: 0.48759842, y: 0.085517034}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e4ef8bd4d18c5649a6ed2ca2094e495
+      internalID: -690032124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_MarketGoods_01_8
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 317
+        width: 31
         height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.51280165, y: 0.12205215}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ae91af7445223db50800000000000000
-      internalID: 6616670022917560810
+      spriteID: 6fbd7323db7684a4788f1d45ec62c728
+      internalID: -922498386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fishing village object_23
+      name: Sprite_Town_Prop_MarketGoods_01_9
       rect:
         serializedVersion: 2
-        x: 512
-        y: 192
-        width: 33
+        x: 9
+        y: 307
+        width: 59
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a829f335ac0df247a73d4dbbb0c2da4
+      internalID: 1668315266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_MarketGoods_01_10
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 304
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a61426240a7b2a64bb886ceb2e3a8a5f
+      internalID: 432735119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_MarketGoods_01_11
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 315
+        width: 32
+        height: 36
+      alignment: 9
+      pivot: {x: 0.48759937, y: 0.13622539}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb2c1ee89a440744a3408d448b53475
+      internalID: -671406172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_MarketGoods_01_12
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 317
+        width: 31
         height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07910341}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 97b674f708331b2e0800000000000000
-      internalID: -2111850123275834503
+      spriteID: 84fa9fd442688224a8db3b194b1d14ea
+      internalID: 1910823210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fishing village object_24
+      name: Sprite_Town_Prop_MarketGoods_01_13
       rect:
         serializedVersion: 2
-        x: 650
-        y: 199
-        width: 65
-        height: 29
+        x: 17
+        y: 224
+        width: 38
+        height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9f6658b312c6edab0800000000000000
-      internalID: -4981425247836870919
+      spriteID: 317bffe78ca68574a9488667568a8d85
+      internalID: -504021904
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fishing village object_25
+      name: Sprite_Town_Prop_MarketGoods_01_14
       rect:
         serializedVersion: 2
         x: 208
-        y: 156
-        width: 93
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 232
+        width: 90
+        height: 59
+      alignment: 9
+      pivot: {x: 0.49290383, y: 0.038147748}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3daafc2bc60b6af70800000000000000
-      internalID: 9198233269853727443
+      spriteID: 296c556792d2a1140b0ad0c1efdef5ec
+      internalID: 436792085
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fishing village object_26
+      name: Sprite_Town_Prop_MarketGoods_01_15
       rect:
         serializedVersion: 2
-        x: 446
-        y: 104
-        width: 60
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f332dc63bbcd190c0800000000000000
-      internalID: -4570629450167934145
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fishing village object_27
-      rect:
-        serializedVersion: 2
-        x: 511
-        y: 103
-        width: 60
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e933dbc8a9088b740800000000000000
-      internalID: 5168021973682172830
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fishing village object_28
-      rect:
-        serializedVersion: 2
-        x: 581
-        y: 104
-        width: 60
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 189dc4ee27dfd8f80800000000000000
-      internalID: -8102541484503541375
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fishing village object_29
-      rect:
-        serializedVersion: 2
-        x: 648
-        y: 103
-        width: 60
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ae212024f85a3a380800000000000000
-      internalID: -8961136798830816534
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fishing village object_30
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 40
-        width: 92
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0ed21c7a8295d4b00800000000000000
-      internalID: 814405138771946976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fishing village object_31
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 30
-        width: 92
-        height: 61
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8dc001963a576f990800000000000000
-      internalID: -7352559996932977448
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fishing village object_32
-      rect:
-        serializedVersion: 2
-        x: 223
-        y: 29
-        width: 92
+        x: 321
+        y: 223
+        width: 90
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.037640333}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 803cf1f5ea79b3740800000000000000
-      internalID: 5132862975494832904
+      spriteID: 445cfb5a97378734eb4a9a459c739cb8
+      internalID: 762344674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_MarketGoods_01_16
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 256
+        width: 32
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5124016, y: 0.09347609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 139edcfcef05530418458503d4e40047
+      internalID: 1008751779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_MarketGoods_01_17
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 256
+        width: 32
+        height: 38
+      alignment: 9
+      pivot: {x: 0.4627962, y: 0.10315504}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c87b28ef9be6cc944959d1492ef0fd4f
+      internalID: -816220525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_MarketGoods_01_18
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 258
+        width: 31
+        height: 38
+      alignment: 9
+      pivot: {x: 0.510815, y: 0.05886359}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c51ce3e9a1044944be23354e11368a7
+      internalID: -1461059303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_MarketGoods_01_19
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 258
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.4847374, y: 0.123524666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6cce7ef6683fb247a1f5a9c6563ec00
+      internalID: -1832193887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_MarketGoods_01_20
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 223
+        width: 54
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708386a583125f0458874104a52aa9cd
+      internalID: 1781554880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_MarketGoods_01_21
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 223
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a131c680c7d6e347a89b65d66b756ba
+      internalID: -1675206632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_MarketGoods_01_22
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 193
+        width: 54
+        height: 40
+      alignment: 9
+      pivot: {x: 0.49999943, y: 0.095629886}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d676ee9d846ebd4fac61bc8b48926d8
+      internalID: -624444308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_MarketGoods_01_23
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 193
+        width: 31
+        height: 31
+      alignment: 9
+      pivot: {x: 0.51682997, y: 0.062388267}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc8d6d5b5652d54095eb6af347d4d9e
+      internalID: 1141789019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_MarketGoods_01_24
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 200
+        width: 63
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c53dcd3d685bf940803d2a311fe6eba
+      internalID: -1873993975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_MarketGoods_01_25
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 157
+        width: 91
+        height: 48
+      alignment: 9
+      pivot: {x: 0.513581, y: 0.0622921}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2535455badc8fba43b837c9f4026fe8a
+      internalID: 271741731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_MarketGoods_01_26
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 105
+        width: 58
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.121366635}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52bf2f5ea1277e043b611d369762b4e7
+      internalID: 644962021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_MarketGoods_01_27
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 104
+        width: 58
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15742724}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 026207406a194a742aaa1f485693836a
+      internalID: -1316599911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_MarketGoods_01_28
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 105
+        width: 58
+        height: 56
+      alignment: 9
+      pivot: {x: 0.4825913, y: 0.15742697}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e96b07c1e2e064385b263103734cb4
+      internalID: -1480756082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_MarketGoods_01_29
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 104
+        width: 58
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15742724}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f4fb893a667ff4caa6c59e79aa73b8
+      internalID: -272769831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_MarketGoods_01_30
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 41
+        width: 90
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5000001, y: 0.06115079}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8fb384ad544754d80189e69805647d
+      internalID: -1210628439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_MarketGoods_01_31
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 31
+        width: 90
+        height: 59
+      alignment: 9
+      pivot: {x: 0.49206612, y: 0.027994446}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71e3544aa6209145972a4c81d4f8aa0
+      internalID: 1235726603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_MarketGoods_01_32
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 30
+        width: 90
+        height: 62
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06810908}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c79d568f96468247a7f39612f0aff85
+      internalID: -167635812
       vertices: []
       indices: 
       edges: []
@@ -977,7 +933,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 09c137de40caba248a1177cc46e68914
     internalID: 0
     vertices: []
     indices: 
@@ -987,39 +943,39 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fishing village object_0: 7197679037104836861
-      fishing village object_1: -3262193534036953387
-      fishing village object_10: -4802884692431856022
-      fishing village object_11: 5444789859097021913
-      fishing village object_12: -1442408444971036182
-      fishing village object_13: -4147434652972788804
-      fishing village object_14: 4077469271686125140
-      fishing village object_15: 3970224089430665122
-      fishing village object_16: -4183684163857175117
-      fishing village object_17: -3631206160486652642
-      fishing village object_18: -6745270529273794804
-      fishing village object_19: -7369331322805010101
-      fishing village object_2: -5712361221618071088
-      fishing village object_20: -6147641968681381130
-      fishing village object_21: 5112372691267531192
-      fishing village object_22: 6616670022917560810
-      fishing village object_23: -2111850123275834503
-      fishing village object_24: -4981425247836870919
-      fishing village object_25: 9198233269853727443
-      fishing village object_26: -4570629450167934145
-      fishing village object_27: 5168021973682172830
-      fishing village object_28: -8102541484503541375
-      fishing village object_29: -8961136798830816534
-      fishing village object_3: 971583802127318090
-      fishing village object_30: 814405138771946976
-      fishing village object_31: -7352559996932977448
-      fishing village object_32: 5132862975494832904
-      fishing village object_4: -4757593577350473202
-      fishing village object_5: 1036882807276726455
-      fishing village object_6: 7224064904908908478
-      fishing village object_7: -7039248625454585211
-      fishing village object_8: 1208590135089314773
-      fishing village object_9: 9156459566882566582
+      Sprite_Town_Prop_MarketGoods_01_0: 102130695
+      Sprite_Town_Prop_MarketGoods_01_1: 252673139
+      Sprite_Town_Prop_MarketGoods_01_10: 432735119
+      Sprite_Town_Prop_MarketGoods_01_11: -671406172
+      Sprite_Town_Prop_MarketGoods_01_12: 1910823210
+      Sprite_Town_Prop_MarketGoods_01_13: -504021904
+      Sprite_Town_Prop_MarketGoods_01_14: 436792085
+      Sprite_Town_Prop_MarketGoods_01_15: 762344674
+      Sprite_Town_Prop_MarketGoods_01_16: 1008751779
+      Sprite_Town_Prop_MarketGoods_01_17: -816220525
+      Sprite_Town_Prop_MarketGoods_01_18: -1461059303
+      Sprite_Town_Prop_MarketGoods_01_19: -1832193887
+      Sprite_Town_Prop_MarketGoods_01_2: -1382468137
+      Sprite_Town_Prop_MarketGoods_01_20: 1781554880
+      Sprite_Town_Prop_MarketGoods_01_21: -1675206632
+      Sprite_Town_Prop_MarketGoods_01_22: -624444308
+      Sprite_Town_Prop_MarketGoods_01_23: 1141789019
+      Sprite_Town_Prop_MarketGoods_01_24: -1873993975
+      Sprite_Town_Prop_MarketGoods_01_25: 271741731
+      Sprite_Town_Prop_MarketGoods_01_26: 644962021
+      Sprite_Town_Prop_MarketGoods_01_27: -1316599911
+      Sprite_Town_Prop_MarketGoods_01_28: -1480756082
+      Sprite_Town_Prop_MarketGoods_01_29: -272769831
+      Sprite_Town_Prop_MarketGoods_01_3: 214477428
+      Sprite_Town_Prop_MarketGoods_01_30: -1210628439
+      Sprite_Town_Prop_MarketGoods_01_31: 1235726603
+      Sprite_Town_Prop_MarketGoods_01_32: -167635812
+      Sprite_Town_Prop_MarketGoods_01_4: -917545396
+      Sprite_Town_Prop_MarketGoods_01_5: -1306744495
+      Sprite_Town_Prop_MarketGoods_01_6: -999844689
+      Sprite_Town_Prop_MarketGoods_01_7: -690032124
+      Sprite_Town_Prop_MarketGoods_01_8: -922498386
+      Sprite_Town_Prop_MarketGoods_01_9: 1668315266
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

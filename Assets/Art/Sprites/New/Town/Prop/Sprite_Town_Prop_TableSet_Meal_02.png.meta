@@ -176,89 +176,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hansik_0
+      name: Sprite_Town_Prop_TableSet_Meal_02_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 4
         y: 59
-        width: 57
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2bd06ec4068d70840800000000000000
-      internalID: 5190355003686391218
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hansik_1
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 61
-        width: 55
-        height: 49
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 80b226b4db5c9cb50800000000000000
-      internalID: 6614034944574499592
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hansik_5
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 3
-        width: 71
+        width: 56
         height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a694d5f4a305299c0800000000000000
-      internalID: -3921984114116441750
+      spriteID: 1a3165eaa51a3664dabca308ef7b93be
+      internalID: -776447088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hansik_7
+      name: Sprite_Town_Prop_TableSet_Meal_02_1
       rect:
         serializedVersion: 2
-        x: 87
-        y: 5
-        width: 58
-        height: 49
+        x: 81
+        y: 62
+        width: 50
+        height: 47
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9d868cec1055e40b0800000000000000
-      internalID: -5742559008598234919
+      spriteID: ca55e931d32354e4f988f042c9d6839f
+      internalID: 1775869686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_TableSet_Meal_02_5
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 4
+        width: 69
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c3ec9183f844f42918f76762b48cba
+      internalID: -1044440854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_TableSet_Meal_02_7
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 4
+        width: 57
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 810543aaf2bf8d4439804b77beeb515e
+      internalID: -58880717
       vertices: []
       indices: 
       edges: []
@@ -277,15 +277,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      hansik_0: 5190355003686391218
-      hansik_1: 6614034944574499592
-      hansik_2: 168687091089599177
-      hansik_3: 481723247657425050
-      hansik_4: -4735502815245877614
-      hansik_5: -3921984114116441750
-      hansik_6: -4631522876655229197
-      hansik_7: -5742559008598234919
-      hansik_8: 8909700404832599435
+      Sprite_Town_Prop_TableSet_Meal_02_0: -776447088
+      Sprite_Town_Prop_TableSet_Meal_02_1: 1775869686
+      Sprite_Town_Prop_TableSet_Meal_02_2: -844500536
+      Sprite_Town_Prop_TableSet_Meal_02_3: 308531293
+      Sprite_Town_Prop_TableSet_Meal_02_4: 2084924134
+      Sprite_Town_Prop_TableSet_Meal_02_5: -1044440854
+      Sprite_Town_Prop_TableSet_Meal_02_6: 1128277247
+      Sprite_Town_Prop_TableSet_Meal_02_7: -58880717
+      Sprite_Town_Prop_TableSet_Meal_02_8: 523703884
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

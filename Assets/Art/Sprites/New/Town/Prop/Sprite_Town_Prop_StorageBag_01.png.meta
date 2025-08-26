@@ -171,28 +171,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Town_Prop_StorageBag_02_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 57
-        width: 64
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 716f6b8eadf30a7b0800000000000000
-      internalID: -5215098159055309289
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Sprite_Town_Prop_StorageBag_02_2
       rect:
         serializedVersion: 2
@@ -200,8 +178,8 @@ TextureImporter:
         y: 57
         width: 65
         height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0760518}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -219,11 +197,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 161
-        y: 57
+        y: 90
         width: 31
-        height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 33
+      alignment: 9
+      pivot: {x: 0.4794164, y: 0.13744238}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -244,8 +222,8 @@ TextureImporter:
         y: 65
         width: 32
         height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.48005962, y: 0.12352005}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -266,8 +244,8 @@ TextureImporter:
         y: 57
         width: 32
         height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.48402357, y: 0.12816516}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -288,8 +266,8 @@ TextureImporter:
         y: 15
         width: 26
         height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.50000006, y: 0.25954103}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -303,28 +281,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Town_Prop_StorageBag_02_7
-      rect:
-        serializedVersion: 2
-        x: 38
-        y: 19
-        width: 22
-        height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 912a06628d8ab1570800000000000000
-      internalID: 8438523973119025689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Sprite_Town_Prop_StorageBag_02_8
       rect:
         serializedVersion: 2
@@ -332,8 +288,8 @@ TextureImporter:
         y: 15
         width: 31
         height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.49015513, y: 0.25029263}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -347,28 +303,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Town_Prop_StorageBag_02_9
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 18
-        width: 26
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d0e7a83b38995b4d0800000000000000
-      internalID: -3119418375952237043
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Sprite_Town_Prop_StorageBag_02_10
       rect:
         serializedVersion: 2
@@ -376,8 +310,8 @@ TextureImporter:
         y: 15
         width: 31
         height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5000005, y: 0.25954103}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -398,8 +332,8 @@ TextureImporter:
         y: 15
         width: 32
         height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.48092556, y: 0.16787277}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -420,8 +354,8 @@ TextureImporter:
         y: 15
         width: 33
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5000005, y: 0.18526441}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

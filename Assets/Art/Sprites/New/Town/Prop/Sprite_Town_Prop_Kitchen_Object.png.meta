@@ -152,309 +152,309 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Town_Prop_Kitchen_deco 1_0
+      name: Sprite_Town_Prop_Kitchen_Object_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 301
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 29
+        y: 302
+        width: 58
+        height: 58
+      alignment: 9
+      pivot: {x: 0.4907758, y: 0.034182318}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c88743cd41a7eeb20800000000000000
-      internalID: 3165601818100398220
+      spriteID: e47b11185387c2d47a0cc1682a7ea604
+      internalID: 1405998434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Town_Prop_Kitchen_deco 1_1
+      name: Sprite_Town_Prop_Kitchen_Object_1
       rect:
         serializedVersion: 2
-        x: 118
-        y: 322
-        width: 60
+        x: 119
+        y: 323
+        width: 58
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0866cfac32b80649aa6637bfe178149
+      internalID: 1606485914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Kitchen_Object_2
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 316
+        width: 128
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29b21b7f545cae34eb293ee9954ef7d9
+      internalID: 775287392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Kitchen_Object_3
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 316
+        width: 31
+        height: 42
+      alignment: 9
+      pivot: {x: 0.47554755, y: 0.07136172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 343b0f9d9f8e7414fad19ee91f340e2b
+      internalID: -2077319324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Kitchen_Object_4
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 320
+        width: 30
+        height: 32
+      alignment: 9
+      pivot: {x: 0.48736572, y: 0.0973053}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 923cbcf659ba6e641ad6b8673b3f5765
+      internalID: 871865886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Kitchen_Object_5
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 146
+        width: 159
+        height: 115
+      alignment: 9
+      pivot: {x: 0.4966352, y: 0.15341398}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46fdde6402f532a4291ff8eca08c0ffc
+      internalID: -2084956236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Kitchen_Object_6
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 152
+        width: 127
+        height: 68
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13460293}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc0d3bb505664f409d6bbeead7558a6
+      internalID: 21072954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Kitchen_Object_7
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 168
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03088347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b460cf2500aecc4391248fa98d9ced6
+      internalID: 1549604121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Kitchen_Object_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 14
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5107843, y: 0.047059834}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff63bffa2f371814cb5e9a44e7bc50b1
+      internalID: -1192514045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Kitchen_Object_9
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 29
+        width: 62
+        height: 78
+      alignment: 9
+      pivot: {x: 0.508349, y: 0.06862846}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70348614b1942c04680cef38585b7a06
+      internalID: 390958091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Kitchen_Object_10
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 74
+        width: 32
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7f7dec49fa87ea570800000000000000
-      internalID: 8479847843896416247
+      spriteID: d698a06a586302d419c33115057695ea
+      internalID: -147786503
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Town_Prop_Kitchen_deco 1_2
+      name: Sprite_Town_Prop_Kitchen_Object_11
       rect:
         serializedVersion: 2
-        x: 256
-        y: 315
-        width: 130
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 327
+        y: 54
+        width: 48
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4784317, y: 0.07743174}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2b606813fe0d93a70800000000000000
-      internalID: 8807300272046343858
+      spriteID: 5a4db7d8a627c6b49ba7c4341aab9e2e
+      internalID: -706800865
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Town_Prop_Kitchen_deco 1_3
+      name: Sprite_Town_Prop_Kitchen_Object_12
       rect:
         serializedVersion: 2
-        x: 436
-        y: 315
-        width: 33
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 420
+        y: 40
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.4959557, y: 0.055148125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ab5f2219e84a4cbc0800000000000000
-      internalID: -3763702456347593286
+      spriteID: 63f47d04e1e8bc74c914082f4a455657
+      internalID: 667251752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Town_Prop_Kitchen_deco 1_4
+      name: Sprite_Town_Prop_Kitchen_Object_13
       rect:
         serializedVersion: 2
-        x: 485
-        y: 319
-        width: 32
-        height: 34
+        x: 279
+        y: 34
+        width: 31
+        height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: daee12e27047020e0800000000000000
-      internalID: -2296708235771384147
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_Kitchen_deco 1_5
-      rect:
-        serializedVersion: 2
-        x: 25
-        y: 145
-        width: 161
-        height: 117
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: aedb84f558f385e30800000000000000
-      internalID: 4492410470363872746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_Kitchen_deco 1_6
-      rect:
-        serializedVersion: 2
-        x: 239
-        y: 151
-        width: 129
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6768c0b63f9854da0800000000000000
-      internalID: -5961206853188942218
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_Kitchen_deco 1_7
-      rect:
-        serializedVersion: 2
-        x: 431
-        y: 167
-        width: 98
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e90b2c16b8c8dfc00800000000000000
-      internalID: 936058827831423134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_Kitchen_deco 1_8
-      rect:
-        serializedVersion: 2
-        x: 31
-        y: 13
-        width: 98
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 778ca144253358bf0800000000000000
-      internalID: -322795369864181641
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_Kitchen_deco 1_9
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 28
-        width: 64
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 727ad28a396ed4ad0800000000000000
-      internalID: -2716261478378395865
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_Kitchen_deco 1_10
-      rect:
-        serializedVersion: 2
-        x: 278
-        y: 73
-        width: 34
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a54334d7205890010800000000000000
-      internalID: 1155601025135227994
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_Kitchen_deco 1_11
-      rect:
-        serializedVersion: 2
-        x: 326
-        y: 53
-        width: 50
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 72650e28c5bdf8750800000000000000
-      internalID: 6309502793348568615
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_Kitchen_deco 1_12
-      rect:
-        serializedVersion: 2
-        x: 419
-        y: 39
-        width: 130
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d2a8d7761253eaf50800000000000000
-      internalID: 6894506497137281581
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Town_Prop_Kitchen_deco 1_13
-      rect:
-        serializedVersion: 2
-        x: 278
-        y: 33
-        width: 33
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7a1f7a0b8ce2e3800800000000000000
-      internalID: 593963640351617447
+      spriteID: e1480524bd0cd3b44a9270d042410d4f
+      internalID: 741043805
       vertices: []
       indices: 
       edges: []
@@ -463,7 +463,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2485811a1bdc3854a8e5d25543b36c4c
     internalID: 0
     vertices: []
     indices: 
@@ -473,20 +473,20 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprite_Town_Prop_Kitchen_deco 1_0: 3165601818100398220
-      Sprite_Town_Prop_Kitchen_deco 1_1: 8479847843896416247
-      Sprite_Town_Prop_Kitchen_deco 1_10: 1155601025135227994
-      Sprite_Town_Prop_Kitchen_deco 1_11: 6309502793348568615
-      Sprite_Town_Prop_Kitchen_deco 1_12: 6894506497137281581
-      Sprite_Town_Prop_Kitchen_deco 1_13: 593963640351617447
-      Sprite_Town_Prop_Kitchen_deco 1_2: 8807300272046343858
-      Sprite_Town_Prop_Kitchen_deco 1_3: -3763702456347593286
-      Sprite_Town_Prop_Kitchen_deco 1_4: -2296708235771384147
-      Sprite_Town_Prop_Kitchen_deco 1_5: 4492410470363872746
-      Sprite_Town_Prop_Kitchen_deco 1_6: -5961206853188942218
-      Sprite_Town_Prop_Kitchen_deco 1_7: 936058827831423134
-      Sprite_Town_Prop_Kitchen_deco 1_8: -322795369864181641
-      Sprite_Town_Prop_Kitchen_deco 1_9: -2716261478378395865
+      Sprite_Town_Prop_Kitchen_Object_0: 1405998434
+      Sprite_Town_Prop_Kitchen_Object_1: 1606485914
+      Sprite_Town_Prop_Kitchen_Object_10: -147786503
+      Sprite_Town_Prop_Kitchen_Object_11: -706800865
+      Sprite_Town_Prop_Kitchen_Object_12: 667251752
+      Sprite_Town_Prop_Kitchen_Object_13: 741043805
+      Sprite_Town_Prop_Kitchen_Object_2: 775287392
+      Sprite_Town_Prop_Kitchen_Object_3: -2077319324
+      Sprite_Town_Prop_Kitchen_Object_4: 871865886
+      Sprite_Town_Prop_Kitchen_Object_5: -2084956236
+      Sprite_Town_Prop_Kitchen_Object_6: 21072954
+      Sprite_Town_Prop_Kitchen_Object_7: 1549604121
+      Sprite_Town_Prop_Kitchen_Object_8: -1192514045
+      Sprite_Town_Prop_Kitchen_Object_9: 390958091
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

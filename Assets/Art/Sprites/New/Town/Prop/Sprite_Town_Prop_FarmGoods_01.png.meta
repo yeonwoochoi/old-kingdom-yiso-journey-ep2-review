@@ -209,697 +209,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: farm_object_0
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 381
-        width: 76
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0f515d82eb52254a0800000000000000
-      internalID: -6606176204740028944
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_1
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 349
-        width: 76
-        height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 53d589af35d293f70800000000000000
-      internalID: 9167408355199180085
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_2
-      rect:
-        serializedVersion: 2
-        x: 130
-        y: 353
-        width: 18
-        height: 59
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4b84b0f8c537d7390800000000000000
-      internalID: -7818966536671246156
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_3
-      rect:
-        serializedVersion: 2
-        x: 158
-        y: 357
-        width: 16
-        height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5d41f5426dda28cf0800000000000000
-      internalID: -251447493934508843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_4
-      rect:
-        serializedVersion: 2
-        x: 189
-        y: 357
-        width: 16
-        height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 64adff82758760430800000000000000
-      internalID: 3748816055577860678
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_5
-      rect:
-        serializedVersion: 2
-        x: 221
-        y: 358
-        width: 19
-        height: 58
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 51ec98462cd1eee50800000000000000
-      internalID: 6840437604769975829
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_6
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 358
-        width: 14
-        height: 57
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ec26e253726a6f300800000000000000
-      internalID: 285598313710772942
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_7
-      rect:
-        serializedVersion: 2
-        x: 330
-        y: 339
-        width: 59
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0d84a534fb6d57090800000000000000
-      internalID: -8037281843015694128
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_8
-      rect:
-        serializedVersion: 2
-        x: 414
-        y: 351
-        width: 52
-        height: 67
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7e43c929288b435e0800000000000000
-      internalID: -1930715469290130201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_9
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 316
-        width: 76
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7d0a380dec9983cb0800000000000000
-      internalID: -4883984682342702889
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_10
-      rect:
-        serializedVersion: 2
-        x: 145
-        y: 291
-        width: 97
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 74fa4f7f67eae0530800000000000000
-      internalID: 3823184959673511751
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_11
-      rect:
-        serializedVersion: 2
-        x: 261
-        y: 278
-        width: 53
-        height: 71
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 62fe179046955a890800000000000000
-      internalID: -7447448122597183706
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_12
-      rect:
-        serializedVersion: 2
-        x: 335
-        y: 232
-        width: 49
-        height: 90
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7cc649dcb9c64b570800000000000000
-      internalID: 8481523414670273735
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_13
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 205
-        width: 53
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 49b813d3f1522fda0800000000000000
-      internalID: -5912622544683168876
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_14
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 245
-        width: 54
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 761beac9b45b56650800000000000000
-      internalID: 6225581396265447783
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_15
-      rect:
-        serializedVersion: 2
-        x: 148
-        y: 222
-        width: 53
-        height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1debdd1c0ec424760800000000000000
-      internalID: 7440594062578400977
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_16
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 218
-        width: 34
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cfa2c86748629a700800000000000000
-      internalID: 552014779696032508
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_17
-      rect:
-        serializedVersion: 2
-        x: 415
-        y: 243
-        width: 34
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 12fe541bab5c58a50800000000000000
-      internalID: 6522837040944770849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_18
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 134
-        width: 82
-        height: 57
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: aecd69787f6505b30800000000000000
-      internalID: 4274011667506322666
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_19
-      rect:
-        serializedVersion: 2
-        x: 117
-        y: 138
-        width: 65
-        height: 46
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fb4f8ebef5b6e19b0800000000000000
-      internalID: -5107526867667585857
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_20
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 132
-        width: 65
-        height: 57
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a8cbd5b14431441b0800000000000000
-      internalID: -5673388447342150518
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_21
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 136
-        width: 84
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e78baa5f749b86ac0800000000000000
-      internalID: -3861632961754777474
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_22
-      rect:
-        serializedVersion: 2
-        x: 367
-        y: 119
-        width: 66
-        height: 108
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 885a534e47cdbcc50800000000000000
-      internalID: 6686680466364671368
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_23
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 75
-        width: 24
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5e4cc8cb0f3184940800000000000000
-      internalID: 5280492487768327397
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_24
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 74
-        width: 34
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 354e2a449733c8340800000000000000
-      internalID: 4867321893216248915
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_25
-      rect:
-        serializedVersion: 2
-        x: 85
-        y: 74
-        width: 24
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a56d64114e500bba0800000000000000
-      internalID: -6075349420222261670
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_26
-      rect:
-        serializedVersion: 2
-        x: 134
-        y: 67
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7953f96980b4e1890800000000000000
-      internalID: -7485463030384347753
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_29
-      rect:
-        serializedVersion: 2
-        x: 235
-        y: 55
-        width: 54
-        height: 57
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b00407e420a43f430800000000000000
-      internalID: 3815474683079311371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_30
-      rect:
-        serializedVersion: 2
-        x: 201
-        y: 62
-        width: 25
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5dccde0f5df57bb80800000000000000
-      internalID: -8379123209224729387
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_31
-      rect:
-        serializedVersion: 2
-        x: 25
-        y: 32
-        width: 30
-        height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: aef5a9e834f31c990800000000000000
-      internalID: -7367537956013580310
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: farm_object_32
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 11
-        width: 44
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2aa39090e7dbee180800000000000000
-      internalID: -9084115049344583006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Sprite_Town_Prop_FarmGoods_01_0
       rect:
         serializedVersion: 2
-        x: 112
-        y: 293
-        width: 33
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 16
+        y: 381
+        width: 74
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12600479}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -908,6 +226,666 @@ TextureImporter:
       bones: []
       spriteID: e310f52ba04a0e6419197fb21ca68044
       internalID: 1449836168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_1
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 359
+        width: 16
+        height: 52
+      alignment: 9
+      pivot: {x: 0.41908932, y: 0.1141152}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27645cae8b2b2f44281014d8436d3bbf
+      internalID: 583110300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_2
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 358
+        width: 14
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5000011, y: 0.08092088}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e9e37f20fdd3845ba860a25c43b398
+      internalID: 608606072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_3
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 358
+        width: 14
+        height: 52
+      alignment: 9
+      pivot: {x: 0.4383545, y: 0.09336853}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad8804d85bc91d4290e8bf260971b1f
+      internalID: 972484737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_4
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 359
+        width: 17
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5000009, y: 0.13011932}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29dce40ba21da94fbce2e4b74f4c9ee
+      internalID: -1972193556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_5
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 359
+        width: 12
+        height: 55
+      alignment: 9
+      pivot: {x: 0.48202005, y: 0.12731712}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e9c0646be9f33e4c96a3605920cc40a
+      internalID: -1930517323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_6
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 340
+        width: 57
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e5099d4df7f4745a23ed4de8cb9c00
+      internalID: 581329752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_7
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 352
+        width: 50
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a4fc5015fc46a4fba00d04e0417f57
+      internalID: 1286169510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_8
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 349
+        width: 74
+        height: 31
+      alignment: 9
+      pivot: {x: 0.49784935, y: 0.10983375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd35b34563172b444b685272110a004d
+      internalID: -1105322049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 317
+        width: 74
+        height: 31
+      alignment: 9
+      pivot: {x: 0.49784935, y: 0.14576967}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b156483d7df0a344bb95e3bd0dcf893a
+      internalID: -1878263833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_10
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 292
+        width: 95
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.10215454}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1132447444bce2c4182bfb7855c16d9b
+      internalID: 1764198177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_11
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 279
+        width: 51
+        height: 69
+      alignment: 9
+      pivot: {x: 0.4999994, y: 0.1650311}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab696068cd5a1644a96f110a7583959
+      internalID: -184355602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_12
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 233
+        width: 47
+        height: 88
+      alignment: 9
+      pivot: {x: 0.5067359, y: 0.086242676}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4cf52ee4a238544d9016c0e8700219a
+      internalID: -1949222929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_13
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 206
+        width: 51
+        height: 78
+      alignment: 9
+      pivot: {x: 0.50000006, y: 0.15580162}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dfbf3082a9f0404c8933814ad859031
+      internalID: 1959246618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_14
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 246
+        width: 52
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b68b6af4947c341b2ef5184e1f85e1
+      internalID: -421052788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_15
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 223
+        width: 51
+        height: 45
+      alignment: 9
+      pivot: {x: 0.50620794, y: 0.13413459}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 186975a50ef87a449b44c66d39fa29ae
+      internalID: 362636771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_16
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 219
+        width: 32
+        height: 62
+      alignment: 9
+      pivot: {x: 0.52968216, y: 0.13231881}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3abef6c5e6dae143a0cede9e83ab925
+      internalID: -1163703507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_17
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 244
+        width: 32
+        height: 62
+      alignment: 9
+      pivot: {x: 0.5007725, y: 0.056314036}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84d74f75e15b7e4da4477b5f9bb6a6a
+      internalID: 1573658487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_18
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 135
+        width: 80
+        height: 55
+      alignment: 9
+      pivot: {x: 0.4716304, y: 0.13320173}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe111960952eb74d91ecf6d2dc50cca
+      internalID: 206756131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_19
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 139
+        width: 63
+        height: 44
+      alignment: 9
+      pivot: {x: 0.49999976, y: 0.064427115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a52ae7a32d7ea4fa6351894ddfca84
+      internalID: -1044313240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_20
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 133
+        width: 63
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5112937, y: 0.12268316}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aed270c92447f524caa48e5dda675870
+      internalID: 1630513329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_21
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 137
+        width: 82
+        height: 62
+      alignment: 9
+      pivot: {x: 0.5, y: 0.041073214}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5abb6b38d97d31f429a844c8bc532b7e
+      internalID: -736092531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_22
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 120
+        width: 64
+        height: 106
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06033203}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c4fc5229892e2c4c8c39a86a7bbc748
+      internalID: -1455926185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_23
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 76
+        width: 22
+        height: 30
+      alignment: 9
+      pivot: {x: 0.46708384, y: 0.048266094}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6748c93d0960c6c46b0c2cc4b736cca9
+      internalID: -852509477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_24
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 75
+        width: 32
+        height: 31
+      alignment: 9
+      pivot: {x: 0.5064657, y: 0.04615267}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46006492aceb5f640824cd82f677c034
+      internalID: -1259666079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_25
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 75
+        width: 22
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5282135, y: 0.050637007}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da950ef4541420448fea556d5d1cae4
+      internalID: -208350982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_28
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 84
+        width: 30
+        height: 32
+      alignment: 9
+      pivot: {x: 0.4999995, y: 0.14454556}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eebe51630edd3d49a96ba664648e0b5
+      internalID: -1128084881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_29
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 56
+        width: 52
+        height: 55
+      alignment: 9
+      pivot: {x: 0.48806822, y: 0.06381919}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d4332a0ad8e7849a03466d51095ba3
+      internalID: -1164138972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_31
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 33
+        width: 28
+        height: 25
+      alignment: 9
+      pivot: {x: 0.47045544, y: 0.111197814}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e23ea61ea2e48438bc4377929b83d3
+      internalID: -1150203656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_32
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 12
+        width: 42
+        height: 31
+      alignment: 9
+      pivot: {x: 0.49999982, y: 0.099723265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe35967a206e6554da5425ae25ff122e
+      internalID: -1607787950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_FarmGoods_01_33
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 294
+        width: 32
+        height: 28
+      alignment: 9
+      pivot: {x: 0.4956236, y: 0.0674057}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae4546bd5a676624aa4259e56d7798a8
+      internalID: -2145051733
       vertices: []
       indices: 
       edges: []
@@ -927,39 +905,39 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Sprite_Town_Prop_FarmGoods_01_0: 1449836168
-      farm_object_0: -6606176204740028944
-      farm_object_1: 9167408355199180085
-      farm_object_10: 3823184959673511751
-      farm_object_11: -7447448122597183706
-      farm_object_12: 8481523414670273735
-      farm_object_13: -5912622544683168876
-      farm_object_14: 6225581396265447783
-      farm_object_15: 7440594062578400977
-      farm_object_16: 552014779696032508
-      farm_object_17: 6522837040944770849
-      farm_object_18: 4274011667506322666
-      farm_object_19: -5107526867667585857
-      farm_object_2: -7818966536671246156
-      farm_object_20: -5673388447342150518
-      farm_object_21: -3861632961754777474
-      farm_object_22: 6686680466364671368
-      farm_object_23: 5280492487768327397
-      farm_object_24: 4867321893216248915
-      farm_object_25: -6075349420222261670
-      farm_object_26: -7485463030384347753
-      farm_object_27: -6871939736432708485
-      farm_object_28: -7169893348442022093
-      farm_object_29: 3815474683079311371
-      farm_object_3: -251447493934508843
-      farm_object_30: -8379123209224729387
-      farm_object_31: -7367537956013580310
-      farm_object_32: -9084115049344583006
-      farm_object_4: 3748816055577860678
-      farm_object_5: 6840437604769975829
-      farm_object_6: 285598313710772942
-      farm_object_7: -8037281843015694128
-      farm_object_8: -1930715469290130201
-      farm_object_9: -4883984682342702889
+      Sprite_Town_Prop_FarmGoods_01_1: 583110300
+      Sprite_Town_Prop_FarmGoods_01_10: 1764198177
+      Sprite_Town_Prop_FarmGoods_01_11: -184355602
+      Sprite_Town_Prop_FarmGoods_01_12: -1949222929
+      Sprite_Town_Prop_FarmGoods_01_13: 1959246618
+      Sprite_Town_Prop_FarmGoods_01_14: -421052788
+      Sprite_Town_Prop_FarmGoods_01_15: 362636771
+      Sprite_Town_Prop_FarmGoods_01_16: -1163703507
+      Sprite_Town_Prop_FarmGoods_01_17: 1573658487
+      Sprite_Town_Prop_FarmGoods_01_18: 206756131
+      Sprite_Town_Prop_FarmGoods_01_19: -1044313240
+      Sprite_Town_Prop_FarmGoods_01_2: 608606072
+      Sprite_Town_Prop_FarmGoods_01_20: 1630513329
+      Sprite_Town_Prop_FarmGoods_01_21: -736092531
+      Sprite_Town_Prop_FarmGoods_01_22: -1455926185
+      Sprite_Town_Prop_FarmGoods_01_23: -852509477
+      Sprite_Town_Prop_FarmGoods_01_24: -1259666079
+      Sprite_Town_Prop_FarmGoods_01_25: -208350982
+      Sprite_Town_Prop_FarmGoods_01_26: 1458173422
+      Sprite_Town_Prop_FarmGoods_01_27: -1332973781
+      Sprite_Town_Prop_FarmGoods_01_28: -1128084881
+      Sprite_Town_Prop_FarmGoods_01_29: -1164138972
+      Sprite_Town_Prop_FarmGoods_01_3: 972484737
+      Sprite_Town_Prop_FarmGoods_01_30: 1377765859
+      Sprite_Town_Prop_FarmGoods_01_31: -1150203656
+      Sprite_Town_Prop_FarmGoods_01_32: -1607787950
+      Sprite_Town_Prop_FarmGoods_01_33: -2145051733
+      Sprite_Town_Prop_FarmGoods_01_4: -1972193556
+      Sprite_Town_Prop_FarmGoods_01_5: -1930517323
+      Sprite_Town_Prop_FarmGoods_01_6: 581329752
+      Sprite_Town_Prop_FarmGoods_01_7: 1286169510
+      Sprite_Town_Prop_FarmGoods_01_8: -1105322049
+      Sprite_Town_Prop_FarmGoods_01_9: -1878263833
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

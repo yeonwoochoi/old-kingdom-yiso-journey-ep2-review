@@ -116,45 +116,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: interior_office_desk_0
+      name: Sprite_Town_Prop_Office_Desk_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 15
-        width: 82
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 12
+        y: 16
+        width: 80
+        height: 60
+      alignment: 9
+      pivot: {x: 0.5026456, y: 0.05555563}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6239908cb2d430370800000000000000
-      internalID: 8287552589726847782
+      spriteID: dccd427653deab044800d478feb4e848
+      internalID: 592163431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: interior_office_desk_1
+      name: Sprite_Town_Prop_Office_Desk_1
       rect:
         serializedVersion: 2
-        x: 150
-        y: 14
-        width: 82
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 151
+        y: 15
+        width: 80
+        height: 60
+      alignment: 9
+      pivot: {x: 0.5000002, y: 0.044973597}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: eb3003ab3f51b6400800000000000000
-      internalID: 318372335204697022
+      spriteID: 4e100403385247a408753bf5df0f9595
+      internalID: -636038318
       vertices: []
       indices: 
       edges: []
@@ -163,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 287bb2b51a7d0bb458770cfa49865722
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      interior_office_desk_0: 8287552589726847782
-      interior_office_desk_1: 318372335204697022
+      Sprite_Town_Prop_Office_Desk_0: 592163431
+      Sprite_Town_Prop_Office_Desk_1: -636038318
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
