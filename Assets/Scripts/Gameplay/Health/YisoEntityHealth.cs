@@ -33,8 +33,14 @@ namespace Gameplay.Health {
         public event Action OnDied;
         public event Action<float> OnHealed;
         public event Action OnRevived;
-        
-        
+
+        private YisoDamageProcessor _damageProcessor;
+
+        protected override void Awake() {
+            base.Awake();
+            _damageProcessor = GetComponent<YisoDamageProcessor>();
+        }
+
         protected override void Start() {
             base.Start();
             if (useManualInitialization) {
@@ -50,6 +56,8 @@ namespace Gameplay.Health {
             MaxHealth = newMaxHealth;
             CurrentHealth = startingHealth ?? newMaxHealth;
             CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
+
+            _damageProcessor = GetComponent<YisoDamageProcessor>();
             
             IsInitialized = true;
             OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
@@ -61,8 +69,11 @@ namespace Gameplay.Health {
             }
             
             var previousHealth = CurrentHealth;
-            
-            CurrentHealth = Math.Max(CurrentHealth - damageInfo.FinalDamage, 0f);
+            var finalDamage = _damageProcessor == null
+                ? damageInfo.FinalDamage
+                : _damageProcessor.FinalizeDamage(damageInfo);
+
+            CurrentHealth = Math.Max(CurrentHealth - finalDamage, 0f);
             OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
             OnDamaged?.Invoke(damageInfo);
             
