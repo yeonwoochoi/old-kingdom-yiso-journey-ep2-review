@@ -204,188 +204,56 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fish_meat_0
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 282
-        width: 30
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 48b65c1a5bb395320800000000000000
-      internalID: 2547132715543915396
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fish_meat_2
-      rect:
-        serializedVersion: 2
-        x: 125
-        y: 276
-        width: 46
-        height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: aba274e05318e53c0800000000000000
-      internalID: -4368912523630007622
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fish_meat_3
-      rect:
-        serializedVersion: 2
-        x: 214
-        y: 249
-        width: 60
-        height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e7927f8e060615530800000000000000
-      internalID: 3841957926465382782
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fish_meat_6
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 218
-        width: 31
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ef780b2e9f6739230800000000000000
-      internalID: 3644387339095017470
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fish_meat_8
-      rect:
-        serializedVersion: 2
-        x: 126
-        y: 208
-        width: 43
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d1ab29f1561fc39c0800000000000000
-      internalID: -3946013756859696611
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fish_meat_9
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 186
-        width: 57
-        height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6cb90ba3a57e2e1c0800000000000000
-      internalID: -4475760704935126074
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fish_meat_12
+      name: Sprite_Town_Prop_Meat_0
       rect:
         serializedVersion: 2
         x: 20
-        y: 156
+        y: 283
         width: 28
-        height: 21
+        height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b5e86cdae40a1a420800000000000000
-      internalID: 2639567116399185499
+      spriteID: 82892f4798d754543a8f769ece22b585
+      internalID: 501764666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fish_meat_14
+      name: Sprite_Town_Prop_Meat_2
       rect:
         serializedVersion: 2
-        x: 129
-        y: 153
-        width: 31
-        height: 26
+        x: 126
+        y: 277
+        width: 44
+        height: 29
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 78563b1ab99aa8e30800000000000000
-      internalID: 4506600863035516295
+      spriteID: 5b596a614664fde4dbb9c2d51bac0e90
+      internalID: -590077619
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fish_meat_16
+      name: Sprite_Town_Prop_Meat_4
       rect:
         serializedVersion: 2
-        x: 222
-        y: 120
-        width: 49
+        x: 217
+        y: 249
+        width: 56
         height: 51
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -393,43 +261,131 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2182a1c5d6b050860800000000000000
-      internalID: 7495409719152617490
+      spriteID: 60cb4451bc55f7c45895bdd7c2462357
+      internalID: 1137835736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fish_meat_17
+      name: Sprite_Town_Prop_Meat_7
       rect:
         serializedVersion: 2
-        x: 66
-        y: 106
-        width: 33
-        height: 23
+        x: 68
+        y: 235
+        width: 29
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d4a875106c0d950b0800000000000000
-      internalID: -5739326701262370227
+      spriteID: d1758f28239c17c4b8c2c45d146b7705
+      internalID: -1264217291
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fish_meat_19
+      name: Sprite_Town_Prop_Meat_8
       rect:
         serializedVersion: 2
-        x: 115
-        y: 79
-        width: 63
+        x: 127
+        y: 209
+        width: 41
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d24a19d46be3e4682fdd5bab85e30d
+      internalID: 607437456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Meat_9
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 187
+        width: 55
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4f9358c4103fcf4eb4596c16256e0b0
+      internalID: 1969093062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Meat_12
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 157
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6426b9e584294ee4fa206662d8324aaf
+      internalID: -859297504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Meat_14
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 154
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2341bec0aa6fcd0488130d7ed254407d
+      internalID: 1552052773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Meat_16
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 121
+        width: 47
         height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -437,76 +393,120 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b73effca7404c12f0800000000000000
-      internalID: -1000854340593785989
+      spriteID: 68bbd714271dc28478733db85432fb7c
+      internalID: -969163446
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fish_meat_20
+      name: Sprite_Town_Prop_Meat_18
       rect:
         serializedVersion: 2
-        x: 216
-        y: 55
-        width: 65
-        height: 58
+        x: 67
+        y: 107
+        width: 31
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 750b6c82f09e6adb0800000000000000
-      internalID: -4780877703089311657
+      spriteID: e87950e6673404b46a7ba0d5f079087e
+      internalID: -1053174879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fish_meat_23
+      name: Sprite_Town_Prop_Meat_19
       rect:
         serializedVersion: 2
-        x: 20
-        y: 28
-        width: 29
-        height: 27
+        x: 116
+        y: 80
+        width: 62
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8590a3de6301af7c0800000000000000
-      internalID: -4036896287889946280
+      spriteID: 246d6b895c78d1f4f894d688c36f08a5
+      internalID: -219489968
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fish_meat_25
+      name: Sprite_Town_Prop_Meat_20
       rect:
         serializedVersion: 2
-        x: 124
-        y: 24
-        width: 50
-        height: 36
+        x: 217
+        y: 56
+        width: 63
+        height: 56
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8af9627ddc6f53810800000000000000
-      internalID: 1744571794614296488
+      spriteID: 8dd78e7a84efd6449801f41e07ab5686
+      internalID: -153401643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Meat_23
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 29
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66efcf50250432a48a91bece2141e2f0
+      internalID: -1982842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Town_Prop_Meat_25
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 25
+        width: 48
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2042617e3633c1f4ba0ab7269c0c7642
+      internalID: -1324779393
       vertices: []
       indices: 
       edges: []
@@ -525,33 +525,33 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fish_meat_0: 2547132715543915396
-      fish_meat_1: 4327108172062470958
-      fish_meat_10: 5294476168926240960
-      fish_meat_11: -4883438978183438675
-      fish_meat_12: 2639567116399185499
-      fish_meat_13: -6091639358921757787
-      fish_meat_14: 4506600863035516295
-      fish_meat_15: -3771512752211269533
-      fish_meat_16: 7495409719152617490
-      fish_meat_17: -5739326701262370227
-      fish_meat_18: -4970394299715331744
-      fish_meat_19: -1000854340593785989
-      fish_meat_2: -4368912523630007622
-      fish_meat_20: -4780877703089311657
-      fish_meat_21: 5720146631708523393
-      fish_meat_22: -5970919532635572972
-      fish_meat_23: -4036896287889946280
-      fish_meat_24: 6591843632938273002
-      fish_meat_25: 1744571794614296488
-      fish_meat_26: -2970504594696127646
-      fish_meat_3: 3841957926465382782
-      fish_meat_4: 5249039553316243469
-      fish_meat_5: -158380429602097005
-      fish_meat_6: 3644387339095017470
-      fish_meat_7: -2804560247079756500
-      fish_meat_8: -3946013756859696611
-      fish_meat_9: -4475760704935126074
+      Sprite_Town_Prop_Meat_0: 501764666
+      Sprite_Town_Prop_Meat_1: -246141018
+      Sprite_Town_Prop_Meat_10: 1381451491
+      Sprite_Town_Prop_Meat_11: 725532143
+      Sprite_Town_Prop_Meat_12: -859297504
+      Sprite_Town_Prop_Meat_13: 1767631354
+      Sprite_Town_Prop_Meat_14: 1552052773
+      Sprite_Town_Prop_Meat_15: 855634644
+      Sprite_Town_Prop_Meat_16: -969163446
+      Sprite_Town_Prop_Meat_17: -1557710716
+      Sprite_Town_Prop_Meat_18: -1053174879
+      Sprite_Town_Prop_Meat_19: -219489968
+      Sprite_Town_Prop_Meat_2: -590077619
+      Sprite_Town_Prop_Meat_20: -153401643
+      Sprite_Town_Prop_Meat_21: 1985338917
+      Sprite_Town_Prop_Meat_22: 63188403
+      Sprite_Town_Prop_Meat_23: -1982842
+      Sprite_Town_Prop_Meat_24: 1594383952
+      Sprite_Town_Prop_Meat_25: -1324779393
+      Sprite_Town_Prop_Meat_26: 1318587511
+      Sprite_Town_Prop_Meat_3: -62517795
+      Sprite_Town_Prop_Meat_4: 1137835736
+      Sprite_Town_Prop_Meat_5: -1570733172
+      Sprite_Town_Prop_Meat_6: -1812080186
+      Sprite_Town_Prop_Meat_7: -1264217291
+      Sprite_Town_Prop_Meat_8: 607437456
+      Sprite_Town_Prop_Meat_9: 1969093062
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

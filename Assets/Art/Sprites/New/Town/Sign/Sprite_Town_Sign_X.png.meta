@@ -155,45 +155,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SP_Sign_X_0
+      name: Sprite_Town_Sign_X_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 1
-        width: 38
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 14
+        y: 2
+        width: 36
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5042388, y: 0.061277974}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4195766cab24a4420800000000000000
-      internalID: 2614975903602006292
+      spriteID: 0c30f208ad496ef4bb1a2ed6c807f7db
+      internalID: 1237742297
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_Sign_X_1
+      name: Sprite_Town_Sign_X_1
       rect:
         serializedVersion: 2
-        x: 77
-        y: 1
-        width: 38
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 78
+        y: 2
+        width: 36
+        height: 48
+      alignment: 9
+      pivot: {x: 0.49576104, y: 0.06445712}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1f71d9af58e8a7ae0800000000000000
-      internalID: -1550770415589320719
+      spriteID: e7417eb0988f77a4d8018ec789877fe9
+      internalID: -273612594
       vertices: []
       indices: 
       edges: []
@@ -202,7 +202,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: bc3f07bf3ff795547b10bc56f4b503e8
     internalID: 0
     vertices: []
     indices: 
@@ -212,8 +212,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SP_Sign_X_0: 2614975903602006292
-      SP_Sign_X_1: -1550770415589320719
+      Sprite_Town_Sign_X_0: 1237742297
+      Sprite_Town_Sign_X_1: -273612594
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

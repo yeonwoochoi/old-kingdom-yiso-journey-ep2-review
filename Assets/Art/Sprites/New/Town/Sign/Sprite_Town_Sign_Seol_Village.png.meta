@@ -152,23 +152,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: seol_village_sign_0
+      name: Sprite_Town_Sign_Seol_Village_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 6
-        width: 56
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5
+        y: 7
+        width: 54
+        height: 49
+      alignment: 9
+      pivot: {x: 0.50208694, y: 0.037716903}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 08fbdd6739eeae470800000000000000
-      internalID: 8424808370071781248
+      spriteID: 150d321c2d5579f43a20db59bd60177c
+      internalID: -185505925
       vertices: []
       indices: 
       edges: []
@@ -177,7 +177,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6bb6ce9771d5dbd4199bde4364f7aaae
     internalID: 0
     vertices: []
     indices: 
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      seol_village_sign_0: 8424808370071781248
+      Sprite_Town_Sign_Seol_Village_0: -185505925
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

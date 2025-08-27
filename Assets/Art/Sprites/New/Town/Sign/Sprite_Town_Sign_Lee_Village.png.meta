@@ -152,23 +152,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lee_village_sign_0
+      name: Sprite_Town_Sign_Lee_Village_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 6
-        width: 56
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5
+        y: 7
+        width: 54
+        height: 49
+      alignment: 9
+      pivot: {x: 0.49791297, y: 0.03081715}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ac0ab57133837cad0800000000000000
-      internalID: -2682113260989472566
+      spriteID: f2fe3823d645a064391ca47b4d2f4a51
+      internalID: -1442412747
       vertices: []
       indices: 
       edges: []
@@ -177,7 +177,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 42f04b573545440448643718fe355d6f
     internalID: 0
     vertices: []
     indices: 
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lee_village_sign_0: -2682113260989472566
+      Sprite_Town_Sign_Lee_Village_0: -1442412747
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

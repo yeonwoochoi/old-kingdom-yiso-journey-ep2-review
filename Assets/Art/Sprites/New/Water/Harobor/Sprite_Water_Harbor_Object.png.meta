@@ -112,7 +112,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -188,587 +188,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: harbor_object_0
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 343
-        width: 68
-        height: 68
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4909ca2691faef840800000000000000
-      internalID: 5259833938379837588
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_1
-      rect:
-        serializedVersion: 2
-        x: 118
-        y: 327
-        width: 51
-        height: 74
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 06b5624594d8df520800000000000000
-      internalID: 2737499494595058528
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_2
-      rect:
-        serializedVersion: 2
-        x: 178
-        y: 327
-        width: 51
-        height: 74
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 63cc6f5c58c6dcca0800000000000000
-      internalID: -5995016207152526282
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_3
-      rect:
-        serializedVersion: 2
-        x: 291
-        y: 335
-        width: 42
-        height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 89d29aab7fe33a180800000000000000
-      internalID: -9105364787903517288
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_4
-      rect:
-        serializedVersion: 2
-        x: 340
-        y: 324
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ff5291e8d3ad94c60800000000000000
-      internalID: 7803007787307967999
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_5
-      rect:
-        serializedVersion: 2
-        x: 395
-        y: 335
-        width: 42
-        height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7a0fcd87a495554b0800000000000000
-      internalID: -5452353597471919961
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_6
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 247
-        width: 68
-        height: 68
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f6a94379f9e73dcd0800000000000000
-      internalID: -2534542941377750417
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_7
-      rect:
-        serializedVersion: 2
-        x: 115
-        y: 243
-        width: 50
-        height: 62
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d6f55d83e9f9ab280800000000000000
-      internalID: -9026727001203581075
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_8
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 243
-        width: 50
-        height: 62
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: aedbee46dbd942880800000000000000
-      internalID: -8636604748622021142
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_9
-      rect:
-        serializedVersion: 2
-        x: 279
-        y: 253
-        width: 41
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0d687a24619c16010800000000000000
-      internalID: 1180445674792519376
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_10
-      rect:
-        serializedVersion: 2
-        x: 342
-        y: 256
-        width: 40
-        height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8b6cde0371c0f97b0800000000000000
-      internalID: -5215436549727074632
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_11
-      rect:
-        serializedVersion: 2
-        x: 406
-        y: 271
-        width: 40
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c5dda2d2b75121ee0800000000000000
-      internalID: -1291946524318966436
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_12
-      rect:
-        serializedVersion: 2
-        x: 398
-        y: 246
-        width: 26
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f3ec8c137a30c77d0800000000000000
-      internalID: -2919454441813258689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_13
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 146
-        width: 48
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4acade8043199cc90800000000000000
-      internalID: -7149023280799830876
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_14
-      rect:
-        serializedVersion: 2
-        x: 82
-        y: 156
-        width: 65
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 68ce7e9b8d796fd00800000000000000
-      internalID: 1006158523851598982
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_15
-      rect:
-        serializedVersion: 2
-        x: 223
-        y: 154
-        width: 21
-        height: 39
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1bb0c271b4f489430800000000000000
-      internalID: 3789866270362176433
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_16
-      rect:
-        serializedVersion: 2
-        x: 302
-        y: 46
-        width: 40
-        height: 155
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5b13b71786aef83f0800000000000000
-      internalID: -896240066522041931
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_17
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 82
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b23b1b9b131e65c50800000000000000
-      internalID: 6653753103171564331
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_18
-      rect:
-        serializedVersion: 2
-        x: 93
-        y: 87
-        width: 41
-        height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b3ea6b335408a2ad0800000000000000
-      internalID: -2726225589710705093
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_19
-      rect:
-        serializedVersion: 2
-        x: 159
-        y: 87
-        width: 41
-        height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 82e4f7bc6613b7570800000000000000
-      internalID: 8465414242143522344
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_20
-      rect:
-        serializedVersion: 2
-        x: 223
-        y: 117
-        width: 21
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8e8641c907aed8780800000000000000
-      internalID: -8679023137497257752
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_21
-      rect:
-        serializedVersion: 2
-        x: 365
-        y: 50
-        width: 40
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 23f32d851ae9da0f0800000000000000
-      internalID: -1104051917818806478
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_22
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 32
-        width: 48
-        height: 49
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 04baa198113157120800000000000000
-      internalID: 2410854141562366784
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_23
-      rect:
-        serializedVersion: 2
-        x: 91
-        y: 32
-        width: 48
-        height: 49
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 999e5c789c0e52110800000000000000
-      internalID: 1235640828954012057
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_24
-      rect:
-        serializedVersion: 2
-        x: 146
-        y: 32
-        width: 65
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cc2147848675f2250800000000000000
-      internalID: 5922048140419273420
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harbor_object_25
-      rect:
-        serializedVersion: 2
-        x: 211
-        y: 22
-        width: 21
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a3d761873f2603e00800000000000000
-      internalID: 1022425913244417338
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Sprite_Water_Harbor_Object_0
       rect:
         serializedVersion: 2
-        x: 147
-        y: 156
-        width: 65
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 28
+        y: 344
+        width: 66
+        height: 66
+      alignment: 9
+      pivot: {x: 0.5086667, y: 0.15333188}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -777,6 +205,468 @@ TextureImporter:
       bones: []
       spriteID: a1608faf97a188442a4380c700795694
       internalID: -501251799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Harbor_Object_1
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 328
+        width: 49
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08192444}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07cc14b20641e5f4d809318b86a0791b
+      internalID: -488549999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Harbor_Object_2
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 328
+        width: 49
+        height: 72
+      alignment: 9
+      pivot: {x: 0.47166505, y: 0.0575392}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 637231a6b2b0f764fbbd52b9b9b1fa6d
+      internalID: -1175797939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Harbor_Object_6
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 248
+        width: 66
+        height: 66
+      alignment: 9
+      pivot: {x: 0.4739999, y: 0.11866506}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0bf14d3df5dedc49a3b877bf537b1e0
+      internalID: -901011251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Harbor_Object_7
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 244
+        width: 48
+        height: 60
+      alignment: 9
+      pivot: {x: 0.5079654, y: 0.12508774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4345c4e4f5402f4eb91e4444387cb66
+      internalID: -2123688396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Harbor_Object_8
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 244
+        width: 48
+        height: 60
+      alignment: 9
+      pivot: {x: 0.5015561, y: 0.11425324}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 752947692fee46d43a3cb908e1002732
+      internalID: -1930313424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Harbor_Object_9
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 254
+        width: 39
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5000008, y: 0.14535828}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4fd6f2a2eecd8f41afe51d0e2ce894b
+      internalID: 81400294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Harbor_Object_10
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 257
+        width: 38
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.22829895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686ad7bb9abe67f4ca8d2c5392dda7c7
+      internalID: -107882110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Harbor_Object_11
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 272
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b758abc8694b75245b9149ee2935ad50
+      internalID: -123531470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Harbor_Object_13
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 147
+        width: 46
+        height: 63
+      alignment: 9
+      pivot: {x: 0.48294556, y: 0.16378517}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b5235f10f1e1f64abcef34da1d38591
+      internalID: -2009315726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Harbor_Object_15
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 155
+        width: 19
+        height: 37
+      alignment: 9
+      pivot: {x: 0.43806538, y: 0.25616866}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a022afe23b253dc418c6449020d171a4
+      internalID: -322710706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Harbor_Object_16
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 47
+        width: 38
+        height: 153
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0692936}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1fa60e036b11c48bccb78139285f7d
+      internalID: -749073168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Harbor_Object_17
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 83
+        width: 46
+        height: 63
+      alignment: 9
+      pivot: {x: 0.49147275, y: 0.08072372}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033101eb99a8b564e81a03855aebd62e
+      internalID: 1327670842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Harbor_Object_18
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 88
+        width: 39
+        height: 52
+      alignment: 9
+      pivot: {x: 0.4885328, y: 0.06516325}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdcff877b02a8d44a844249dd81d1f38
+      internalID: 1544480839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Harbor_Object_19
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 88
+        width: 39
+        height: 52
+      alignment: 9
+      pivot: {x: 0.495019, y: 0.090004556}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e5385d4c3386645b4b9cda27d6a428
+      internalID: -1669456768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Harbor_Object_20
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 118
+        width: 19
+        height: 28
+      alignment: 9
+      pivot: {x: 0.45870972, y: 0.24783842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e2eaa19755f3d488a2f2f56fa30696
+      internalID: -417919418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Harbor_Object_21
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 51
+        width: 38
+        height: 98
+      alignment: 9
+      pivot: {x: 0.4690319, y: 0.11175206}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa54f3a2b2fac5d4087b418da24e5b11
+      internalID: 642394914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Harbor_Object_22
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 33
+        width: 46
+        height: 47
+      alignment: 9
+      pivot: {x: 0.49821612, y: 0.0456655}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73916e124505daf4eb49f1763c11b5bc
+      internalID: 1777019786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Harbor_Object_23
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 33
+        width: 46
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5170542, y: 0.14113276}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96269c34e15b71041be43dadd69ff37b
+      internalID: -2123749109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Harbor_Object_24
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 33
+        width: 64
+        height: 41
+      alignment: 9
+      pivot: {x: 0.49999976, y: 0.09670778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adcaed7301f63ea408a12ac7cf453362
+      internalID: -1039072210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Harbor_Object_25
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 22
+        width: 19
+        height: 28
+      alignment: 9
+      pivot: {x: 0.4999992, y: 0.27585664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 197e266cffd244b44b93af9648fcfd6f
+      internalID: -789632206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Water_Harbor_Object_14
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 60
+        width: 22
+        height: 37
+      alignment: 9
+      pivot: {x: 0.4999993, y: 0.1607565}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95df513733f87d7478b09f15e02b29b8
+      internalID: 643235435
       vertices: []
       indices: 
       edges: []
@@ -796,32 +686,31 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Sprite_Water_Harbor_Object_0: -501251799
-      harbor_object_0: 5259833938379837588
-      harbor_object_1: 2737499494595058528
-      harbor_object_10: -5215436549727074632
-      harbor_object_11: -1291946524318966436
-      harbor_object_12: -2919454441813258689
-      harbor_object_13: -7149023280799830876
-      harbor_object_14: 1006158523851598982
-      harbor_object_15: 3789866270362176433
-      harbor_object_16: -896240066522041931
-      harbor_object_17: 6653753103171564331
-      harbor_object_18: -2726225589710705093
-      harbor_object_19: 8465414242143522344
-      harbor_object_2: -5995016207152526282
-      harbor_object_20: -8679023137497257752
-      harbor_object_21: -1104051917818806478
-      harbor_object_22: 2410854141562366784
-      harbor_object_23: 1235640828954012057
-      harbor_object_24: 5922048140419273420
-      harbor_object_25: 1022425913244417338
-      harbor_object_3: -9105364787903517288
-      harbor_object_4: 7803007787307967999
-      harbor_object_5: -5452353597471919961
-      harbor_object_6: -2534542941377750417
-      harbor_object_7: -9026727001203581075
-      harbor_object_8: -8636604748622021142
-      harbor_object_9: 1180445674792519376
+      Sprite_Water_Harbor_Object_1: -488549999
+      Sprite_Water_Harbor_Object_10: -107882110
+      Sprite_Water_Harbor_Object_11: -123531470
+      Sprite_Water_Harbor_Object_12: 610983889
+      Sprite_Water_Harbor_Object_13: -2009315726
+      Sprite_Water_Harbor_Object_14: 643235435
+      Sprite_Water_Harbor_Object_15: -322710706
+      Sprite_Water_Harbor_Object_16: -749073168
+      Sprite_Water_Harbor_Object_17: 1327670842
+      Sprite_Water_Harbor_Object_18: 1544480839
+      Sprite_Water_Harbor_Object_19: -1669456768
+      Sprite_Water_Harbor_Object_2: -1175797939
+      Sprite_Water_Harbor_Object_20: -417919418
+      Sprite_Water_Harbor_Object_21: 642394914
+      Sprite_Water_Harbor_Object_22: 1777019786
+      Sprite_Water_Harbor_Object_23: -2123749109
+      Sprite_Water_Harbor_Object_24: -1039072210
+      Sprite_Water_Harbor_Object_25: -789632206
+      Sprite_Water_Harbor_Object_3: 2024753829
+      Sprite_Water_Harbor_Object_4: -1601674219
+      Sprite_Water_Harbor_Object_5: 1937524915
+      Sprite_Water_Harbor_Object_6: -901011251
+      Sprite_Water_Harbor_Object_7: -2123688396
+      Sprite_Water_Harbor_Object_8: -1930313424
+      Sprite_Water_Harbor_Object_9: 81400294
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

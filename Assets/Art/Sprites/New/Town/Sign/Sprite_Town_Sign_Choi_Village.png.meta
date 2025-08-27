@@ -152,23 +152,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: choi_village_sign_0
+      name: Sprite_Town_Sign_Choi_Village_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 6
-        width: 56
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5
+        y: 7
+        width: 54
+        height: 49
+      alignment: 9
+      pivot: {x: 0.49791297, y: 0.028517237}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 51c3cc22665e104d0800000000000000
-      internalID: -3170000435858883563
+      spriteID: 12c55775691790f48bc488b3054b6a5d
+      internalID: -1930372789
       vertices: []
       indices: 
       edges: []
@@ -177,7 +177,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 71979bc7799bc6c4dab764df76c97a7e
     internalID: 0
     vertices: []
     indices: 
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      choi_village_sign_0: -3170000435858883563
+      Sprite_Town_Sign_Choi_Village_0: -1930372789
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

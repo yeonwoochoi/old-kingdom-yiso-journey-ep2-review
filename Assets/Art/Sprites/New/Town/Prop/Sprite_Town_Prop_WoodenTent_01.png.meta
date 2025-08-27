@@ -135,89 +135,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tent_wooden_0
+      name: Sprite_Town_Prop_WoodenTent_01_0
       rect:
         serializedVersion: 2
-        x: 47
-        y: 290
-        width: 130
-        height: 130
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 48
+        y: 291
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.50734967, y: 0.040646315}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3477cc5cbb7255e40800000000000000
-      internalID: 5644461395409663811
+      spriteID: dc73edc2b84c2454aada42f07ebff721
+      internalID: 225393143
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tent_wooden_1
+      name: Sprite_Town_Prop_WoodenTent_01_3
       rect:
         serializedVersion: 2
-        x: 223
-        y: 281
-        width: 130
-        height: 144
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 271
+        y: 104
+        width: 138
+        height: 138
+      alignment: 9
+      pivot: {x: 0.49725872, y: 0.025763359}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8e2857e3b857f4fe0800000000000000
-      internalID: -1202613334575840536
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tent_wooden_2
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 28
-        width: 193
-        height: 214
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8f8b50555f9ce7c50800000000000000
-      internalID: 6664986554085521656
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tent_wooden_3
-      rect:
-        serializedVersion: 2
-        x: 270
-        y: 103
-        width: 140
-        height: 140
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b1e9c03abb417f5e0800000000000000
-      internalID: -1876007923649569253
+      spriteID: 5ebb1a2086640e744b64e01328b59ea1
+      internalID: 1805268111
       vertices: []
       indices: 
       edges: []
@@ -226,7 +182,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 04110c33a2d3a9548b05bab0e291f52b
     internalID: 0
     vertices: []
     indices: 
@@ -236,10 +192,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tent_wooden_0: 5644461395409663811
-      tent_wooden_1: -1202613334575840536
-      tent_wooden_2: 6664986554085521656
-      tent_wooden_3: -1876007923649569253
+      Sprite_Town_Prop_WoodenTent_01_0: 225393143
+      Sprite_Town_Prop_WoodenTent_01_1: -1242430652
+      Sprite_Town_Prop_WoodenTent_01_2: 2040900521
+      Sprite_Town_Prop_WoodenTent_01_3: 1805268111
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

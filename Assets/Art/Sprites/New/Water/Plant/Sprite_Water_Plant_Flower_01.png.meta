@@ -157,7 +157,7 @@ TextureImporter:
         width: 28
         height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -179,7 +179,7 @@ TextureImporter:
         width: 28
         height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -201,7 +201,7 @@ TextureImporter:
         width: 27
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -223,7 +223,7 @@ TextureImporter:
         width: 62
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -245,7 +245,7 @@ TextureImporter:
         width: 28
         height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -262,10 +262,10 @@ TextureImporter:
       name: Sprite_Water_Plant_Flower_01_5
       rect:
         serializedVersion: 2
-        x: 11
-        y: 77
-        width: 16
-        height: 12
+        x: 128
+        y: 96
+        width: 31
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,12 +284,12 @@ TextureImporter:
       name: Sprite_Water_Plant_Flower_01_6
       rect:
         serializedVersion: 2
-        x: 34
+        x: 11
         y: 64
-        width: 29
+        width: 52
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -306,12 +306,12 @@ TextureImporter:
       name: Sprite_Water_Plant_Flower_01_7
       rect:
         serializedVersion: 2
-        x: 66
-        y: 72
-        width: 26
-        height: 17
+        x: 64
+        y: 38
+        width: 61
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -325,28 +325,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Water_Plant_Flower_01_8
-      rect:
-        serializedVersion: 2
-        x: 98
-        y: 66
-        width: 26
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 284791ac5f7442e4aa75198a27274709
-      internalID: 938879751
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Sprite_Water_Plant_Flower_01_9
       rect:
         serializedVersion: 2
@@ -355,7 +333,7 @@ TextureImporter:
         width: 32
         height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -377,7 +355,7 @@ TextureImporter:
         width: 32
         height: 55
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -391,28 +369,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Water_Plant_Flower_01_11
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 40
-        width: 32
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f738c11e19f5e744b79b9134e45ca22
-      internalID: 1516856499
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Sprite_Water_Plant_Flower_01_12
       rect:
         serializedVersion: 2
@@ -421,7 +377,7 @@ TextureImporter:
         width: 30
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

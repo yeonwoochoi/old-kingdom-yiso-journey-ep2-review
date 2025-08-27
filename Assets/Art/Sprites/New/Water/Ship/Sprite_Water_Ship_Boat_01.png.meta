@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boat_1_0
+      name: Sprite_Water_Ship_Boat_01_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 7
-        width: 125
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 10
+        y: 8
+        width: 123
+        height: 63
+      alignment: 9
+      pivot: {x: 0.4971504, y: 0.104991324}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fb4e3b7b09c053770800000000000000
-      internalID: 8589785679975933119
+      spriteID: 1e3f24aac669e574498cb3523f3742b1
+      internalID: 1004022198
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4ac7dfcb5284dad43b94a09320804abd
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      boat_1_0: 8589785679975933119
+      Sprite_Water_Ship_Boat_01_0: 1004022198
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

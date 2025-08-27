@@ -152,23 +152,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: son_village_sign_0
+      name: Sprite_Town_Sign_Son_Village_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 6
-        width: 56
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5
+        y: 7
+        width: 54
+        height: 49
+      alignment: 9
+      pivot: {x: 0.49999994, y: 0.03311706}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7d2b275e49da6b880800000000000000
-      internalID: -8595491983773748521
+      spriteID: bbebfcf64a5de9b469a439b1c95441db
+      internalID: -125687575
       vertices: []
       indices: 
       edges: []
@@ -177,7 +177,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 420818e2b3fd17a4eadf2a11b05c4252
     internalID: 0
     vertices: []
     indices: 
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      son_village_sign_0: -8595491983773748521
+      Sprite_Town_Sign_Son_Village_0: -125687575
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

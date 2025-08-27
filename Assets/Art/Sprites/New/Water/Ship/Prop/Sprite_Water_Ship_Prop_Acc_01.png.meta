@@ -199,7 +199,7 @@ TextureImporter:
         width: 53
         height: 246
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -216,12 +216,12 @@ TextureImporter:
       name: Sprite_Water_Ship_Prop_Acc_1
       rect:
         serializedVersion: 2
-        x: 62
+        x: 100
         y: 679
-        width: 109
+        width: 71
         height: 334
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -243,7 +243,7 @@ TextureImporter:
         width: 67
         height: 367
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -265,7 +265,7 @@ TextureImporter:
         width: 72
         height: 389
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -287,7 +287,7 @@ TextureImporter:
         width: 72
         height: 389
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -309,7 +309,7 @@ TextureImporter:
         width: 67
         height: 367
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -331,7 +331,7 @@ TextureImporter:
         width: 64
         height: 327
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -353,7 +353,7 @@ TextureImporter:
         width: 53
         height: 246
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -367,160 +367,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Water_Ship_Prop_Acc_8
-      rect:
-        serializedVersion: 2
-        x: 920
-        y: 991
-        width: 16
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4e3635a8f496a75f0800000000000000
-      internalID: -758177796914453532
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Water_Ship_Prop_Acc_9
-      rect:
-        serializedVersion: 2
-        x: 971
-        y: 134
-        width: 42
-        height: 890
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e289c6944817d0ce0800000000000000
-      internalID: -1437367893079844818
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Water_Ship_Prop_Acc_10
-      rect:
-        serializedVersion: 2
-        x: 919
-        y: 937
-        width: 18
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e1789f93a66a38370800000000000000
-      internalID: 8323679511480207134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Water_Ship_Prop_Acc_11
-      rect:
-        serializedVersion: 2
-        x: 918
-        y: 871
-        width: 20
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c5aa04103bc368f30800000000000000
-      internalID: 4577412810786515548
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Water_Ship_Prop_Acc_12
-      rect:
-        serializedVersion: 2
-        x: 916
-        y: 802
-        width: 24
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 733d66b5c8e43fa00800000000000000
-      internalID: 789060724455822135
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Water_Ship_Prop_Acc_13
-      rect:
-        serializedVersion: 2
-        x: 915
-        y: 745
-        width: 26
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: be55689ee70f96aa0800000000000000
-      internalID: -6167133786832742933
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Water_Ship_Prop_Acc_14
-      rect:
-        serializedVersion: 2
-        x: 914
-        y: 674
-        width: 28
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6a03bd38d58e6db30800000000000000
-      internalID: 4311889181595611302
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Sprite_Water_Ship_Prop_Acc_15
       rect:
         serializedVersion: 2
@@ -529,7 +375,7 @@ TextureImporter:
         width: 47
         height: 161
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -551,7 +397,7 @@ TextureImporter:
         width: 56
         height: 203
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -573,7 +419,7 @@ TextureImporter:
         width: 58
         height: 224
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -595,7 +441,7 @@ TextureImporter:
         width: 62
         height: 251
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -609,72 +455,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Water_Ship_Prop_Acc_19
-      rect:
-        serializedVersion: 2
-        x: 913
-        y: 613
-        width: 30
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2f7e63556d4890a50800000000000000
-      internalID: 6487862794291439602
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Water_Ship_Prop_Acc_20
-      rect:
-        serializedVersion: 2
-        x: 912
-        y: 551
-        width: 32
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f3f9293a0a203c3b0800000000000000
-      internalID: -5493544231499555009
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Water_Ship_Prop_Acc_21
-      rect:
-        serializedVersion: 2
-        x: 911
-        y: 487
-        width: 34
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c982889dbb61b5f60800000000000000
-      internalID: 8024032157154945180
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Sprite_Water_Ship_Prop_Acc_22
       rect:
         serializedVersion: 2
@@ -682,8 +462,8 @@ TextureImporter:
         y: 31
         width: 82
         height: 418
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4857083, y: 0.02058084}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -697,37 +477,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Water_Ship_Prop_Acc_23
-      rect:
-        serializedVersion: 2
-        x: 910
-        y: 423
-        width: 36
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fcfdf087db4f8d450800000000000000
-      internalID: 6113905588755750863
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Sprite_Water_Ship_Prop_Acc_24
       rect:
         serializedVersion: 2
         x: 130
         y: 31
-        width: 238
+        width: 83
         height: 331
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.47176096, y: 0.022029255}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -740,55 +498,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Sprite_Water_Ship_Prop_Acc_25
-      rect:
-        serializedVersion: 2
-        x: 909
-        y: 359
-        width: 38
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 02b0f92686b63e030800000000000000
-      internalID: 3522777429609220896
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Water_Ship_Prop_Acc_26
-      rect:
-        serializedVersion: 2
-        x: 908
-        y: 263
-        width: 40
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5e14c9473d720b890800000000000000
-      internalID: -7444406394895449627
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9f71651bc4069164b9e6976fec45e35b
     internalID: 0
     vertices: []
     indices: 

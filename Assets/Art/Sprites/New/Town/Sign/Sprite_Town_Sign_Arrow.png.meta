@@ -173,177 +173,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SP_Sign_0
+      name: Sprite_Town_Sign_Arrow_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 65
-        width: 38
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 14
+        y: 66
+        width: 36
+        height: 48
+      alignment: 9
+      pivot: {x: 0.50847787, y: 0.08035294}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 195472fc5afa8f2c0800000000000000
-      internalID: -4397571909447367279
+      spriteID: da669084239d40f498dfdbce26ffff76
+      internalID: 243258588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_Sign_1
+      name: Sprite_Town_Sign_Arrow_1
       rect:
         serializedVersion: 2
-        x: 77
-        y: 65
-        width: 42
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 78
+        y: 66
+        width: 40
+        height: 48
+      alignment: 9
+      pivot: {x: 0.46948034, y: 0.105786}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4fac45044a0da47c0800000000000000
-      internalID: -4086224308012791052
+      spriteID: f76c971ba661e404683d52a862e7c65d
+      internalID: 1976682049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_Sign_2
+      name: Sprite_Town_Sign_Arrow_2
       rect:
         serializedVersion: 2
-        x: 141
-        y: 65
-        width: 38
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 142
+        y: 66
+        width: 36
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0994277}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8de75bbf9d4c77640800000000000000
-      internalID: 5077743545393446616
+      spriteID: 7c0e595fc314a9540a69e1076e611121
+      internalID: -825550599
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_Sign_3
+      name: Sprite_Town_Sign_Arrow_3
       rect:
         serializedVersion: 2
-        x: 205
-        y: 65
-        width: 38
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 206
+        y: 66
+        width: 36
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5084779, y: 0.08671109}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a28fb7166f187e830800000000000000
-      internalID: 4100388880941578282
+      spriteID: d072011a6b20dd54f943da032ce26818
+      internalID: 576483166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_Sign_4
+      name: Sprite_Town_Sign_Arrow_4
       rect:
         serializedVersion: 2
-        x: 13
-        y: 1
-        width: 42
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 14
+        y: 2
+        width: 40
+        height: 48
+      alignment: 9
+      pivot: {x: 0.44659042, y: 0.080352694}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dfbd5eeac3f092370800000000000000
-      internalID: 8298180541713603581
+      spriteID: 6b756cd09438e2a4aa3bc97a4b78dc56
+      internalID: 331080601
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_Sign_5
+      name: Sprite_Town_Sign_Arrow_5
       rect:
         serializedVersion: 2
-        x: 77
-        y: 1
-        width: 38
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 78
+        y: 2
+        width: 36
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.080352694}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b284a129e3ecf5d70800000000000000
-      internalID: 9034166145662994475
+      spriteID: 6fd1a2c22a1ce6844ba2fb0fa2853f82
+      internalID: -1473301102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_Sign_6
+      name: Sprite_Town_Sign_Arrow_6
       rect:
         serializedVersion: 2
-        x: 141
-        y: 1
-        width: 38
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 142
+        y: 2
+        width: 36
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5254334, y: 0.08671098}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f8dc0c347afb6f3b0800000000000000
-      internalID: -5478981171532477041
+      spriteID: dd401796f25a6134b980110a58dbd076
+      internalID: 1814418244
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_Sign_7
+      name: Sprite_Town_Sign_Arrow_7
       rect:
         serializedVersion: 2
-        x: 205
-        y: 1
-        width: 38
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 206
+        y: 2
+        width: 36
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5084779, y: 0.09306926}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5911f83ab1336f5a0800000000000000
-      internalID: -6487942019379424875
+      spriteID: 44c467e1ae278dc45acd9453b72fdbec
+      internalID: -1448338756
       vertices: []
       indices: 
       edges: []
@@ -352,7 +352,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: be3fe0cc819a216448bdef2cf7a2184b
     internalID: 0
     vertices: []
     indices: 
@@ -362,14 +362,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SP_Sign_0: -4397571909447367279
-      SP_Sign_1: -4086224308012791052
-      SP_Sign_2: 5077743545393446616
-      SP_Sign_3: 4100388880941578282
-      SP_Sign_4: 8298180541713603581
-      SP_Sign_5: 9034166145662994475
-      SP_Sign_6: -5478981171532477041
-      SP_Sign_7: -6487942019379424875
+      Sprite_Town_Sign_Arrow_0: 243258588
+      Sprite_Town_Sign_Arrow_1: 1976682049
+      Sprite_Town_Sign_Arrow_2: -825550599
+      Sprite_Town_Sign_Arrow_3: 576483166
+      Sprite_Town_Sign_Arrow_4: 331080601
+      Sprite_Town_Sign_Arrow_5: -1473301102
+      Sprite_Town_Sign_Arrow_6: 1814418244
+      Sprite_Town_Sign_Arrow_7: -1448338756
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
