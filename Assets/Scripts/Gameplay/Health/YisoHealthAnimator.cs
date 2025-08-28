@@ -9,9 +9,16 @@ namespace Gameplay.Health {
     public struct AnimatorParameterAction {
         public AnimatorControllerParameterType parameterType;
         public string parameterName;
+
+        [ShowIf("parameterType", AnimatorControllerParameterType.Float)]
         public float floatValue;
+
+        [ShowIf("parameterType", AnimatorControllerParameterType.Bool)]
         public bool boolValue;
+
+        [ShowIf("parameterType", AnimatorControllerParameterType.Int)]
         public int intValue;
+
         [HideInInspector] public int parameterHash;
     }
 
@@ -36,6 +43,15 @@ namespace Gameplay.Health {
             base.Awake();
             _animator = GetComponentInChildren<Animator>();
             _entityHealth = GetComponent<YisoEntityHealth>();
+
+            if (_animator == null) {
+                Debug.LogError($"[{gameObject.name}] YisoHealthAnimator가 제어할 Animator를 찾을 수 없습니다!", this);
+                updateAnimatorParameters = false; // 기능 비활성화
+            }
+
+            if (_entityHealth == null) {
+                Debug.LogError($"[{gameObject.name}] YisoHealthAnimator가 구독할 YisoEntityHealth를 찾을 수 없습니다!", this);
+            }
 
             InitializeParameterHashes();
         }
