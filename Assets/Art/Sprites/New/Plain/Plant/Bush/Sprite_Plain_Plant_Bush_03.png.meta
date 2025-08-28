@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: ef6b5c1fc6f82bf4e9fb52e85680cea6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3217104739484073585
+    second: Grasses, Tall_0
+  - first:
+      213: 2694602776387699972
+    second: Grasses, Tall_1
+  - first:
+      213: -6597010625377911020
+    second: Grasses, Tall_2
+  - first:
+      213: -4990407031492125703
+    second: Grasses, Tall_3
+  - first:
+      213: 6905602416541605741
+    second: Grasses, Tall_4
+  - first:
+      213: -1068662863537730324
+    second: Grasses, Tall_5
+  - first:
+      213: -662583507759036809
+    second: Grasses, Tall_6
+  - first:
+      213: 2345192770618808027
+    second: Grasses, Tall_7
+  - first:
+      213: -8236565918250377566
+    second: Grasses, Tall_8
+  - first:
+      213: 6277974081789362563
+    second: Grasses, Tall_9
+  - first:
+      213: 6273451272515388345
+    second: Grasses, Tall_10
+  - first:
+      213: 5343201415691847675
+    second: Grasses, Tall_11
+  - first:
+      213: -2514402739604971888
+    second: Grasses, Tall_12
+  - first:
+      213: -8123209469912263650
+    second: Grasses, Tall_13
+  - first:
+      213: 1189517827918532716
+    second: Grasses, Tall_14
+  - first:
+      213: 8184755450145873951
+    second: Grasses, Tall_15
+  - first:
+      213: -9036945395272833921
+    second: Grasses, Tall_16
+  - first:
+      213: -3570196045535307355
+    second: Grasses, Tall_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Bush_03_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 140
+        width: 22
+        height: 27
+      alignment: 9
+      pivot: {x: 0.5146837, y: 0.20088366}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898835334644a2d4c90509bcbade011d
+      internalID: 800214363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Bush_03_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 140
+        width: 24
+        height: 27
+      alignment: 9
+      pivot: {x: 0.45961937, y: 0.17695448}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85862ad7380c93c48888fcc5a1177b8e
+      internalID: -1195268655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Bush_03_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 141
+        width: 27
+        height: 42
+      alignment: 9
+      pivot: {x: 0.49999973, y: 0.1692632}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 353c78fc04150d8428a423c4ab5ab3a3
+      internalID: -11371825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Bush_03_3
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 141
+        width: 26
+        height: 42
+      alignment: 9
+      pivot: {x: 0.4999994, y: 0.14618829}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e17f7c4e323f00442aa7de421620e62e
+      internalID: -1213799290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Bush_03_4
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 139
+        width: 25
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5258435, y: 0.09619346}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba23780523868ed46815e0a1401c3b76
+      internalID: 11892727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Bush_03_5
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 139
+        width: 25
+        height: 52
+      alignment: 9
+      pivot: {x: 0.51292175, y: 0.13346745}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f1cb2a80ca66f94891243754c5a5484
+      internalID: 1346386764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Bush_03_6
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 76
+        width: 22
+        height: 27
+      alignment: 9
+      pivot: {x: 0.5293676, y: 0.20088394}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb057060aef081c4ab56d30e6396bd44
+      internalID: 1247948421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Bush_03_7
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 76
+        width: 24
+        height: 27
+      alignment: 9
+      pivot: {x: 0.47307953, y: 0.20088394}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788171c57abdd494194a3eff7926fd7c
+      internalID: -1364625746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Bush_03_8
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 77
+        width: 27
+        height: 42
+      alignment: 9
+      pivot: {x: 0.46410567, y: 0.16926302}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 850a05c58d5b7454a8bd68ee106a7888
+      internalID: 75992995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Bush_03_9
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 77
+        width: 26
+        height: 42
+      alignment: 9
+      pivot: {x: 0.4999994, y: 0.13849695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76957af6854bc3a439e7429aade7b487
+      internalID: 324248926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Bush_03_10
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 75
+        width: 25
+        height: 52
+      alignment: 9
+      pivot: {x: 0.51292175, y: 0.13346775}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b219fda3a553494281fa26fab954205
+      internalID: 247629713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Bush_03_11
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 75
+        width: 25
+        height: 52
+      alignment: 9
+      pivot: {x: 0.51292175, y: 0.13968013}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af800e7ce88c3654aa0eceba9ac56c51
+      internalID: -827577913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Bush_03_12
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 12
+        width: 22
+        height: 27
+      alignment: 9
+      pivot: {x: 0.4706321, y: 0.23677813}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eed940c0c916e14cbbdc6854143d954
+      internalID: -2142189987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Bush_03_13
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 12
+        width: 24
+        height: 27
+      alignment: 9
+      pivot: {x: 0.5190713, y: 0.17791013}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f14b178fbdcdb824cbc56b80f734c05c
+      internalID: 466124027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Bush_03_14
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 13
+        width: 27
+        height: 42
+      alignment: 9
+      pivot: {x: 0.47457206, y: 0.11857796}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 867a1e0969617b0409a3f07761e22f40
+      internalID: 203228616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Bush_03_15
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 13
+        width: 26
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5000003, y: 0.09133352}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6da0860fc77d7344489b047dcff7e13b
+      internalID: -989203110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Bush_03_16
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 11
+        width: 25
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09510576}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8934601e07a879244b4a9a3315886170
+      internalID: 1127611325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Plain_Plant_Bush_03_17
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 11
+        width: 25
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5274628, y: 0.10390781}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 501aba17fc00b3f45b338c9e826214ea
+      internalID: 568107151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ac3d34eb7d0ca60448e3e1fff20c18ee
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Sprite_Plain_Plant_Bush_03_0: 800214363
+      Sprite_Plain_Plant_Bush_03_1: -1195268655
+      Sprite_Plain_Plant_Bush_03_10: 247629713
+      Sprite_Plain_Plant_Bush_03_11: -827577913
+      Sprite_Plain_Plant_Bush_03_12: -2142189987
+      Sprite_Plain_Plant_Bush_03_13: 466124027
+      Sprite_Plain_Plant_Bush_03_14: 203228616
+      Sprite_Plain_Plant_Bush_03_15: -989203110
+      Sprite_Plain_Plant_Bush_03_16: 1127611325
+      Sprite_Plain_Plant_Bush_03_17: 568107151
+      Sprite_Plain_Plant_Bush_03_2: -11371825
+      Sprite_Plain_Plant_Bush_03_3: -1213799290
+      Sprite_Plain_Plant_Bush_03_4: 11892727
+      Sprite_Plain_Plant_Bush_03_5: 1346386764
+      Sprite_Plain_Plant_Bush_03_6: 1247948421
+      Sprite_Plain_Plant_Bush_03_7: -1364625746
+      Sprite_Plain_Plant_Bush_03_8: 75992995
+      Sprite_Plain_Plant_Bush_03_9: 324248926
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
