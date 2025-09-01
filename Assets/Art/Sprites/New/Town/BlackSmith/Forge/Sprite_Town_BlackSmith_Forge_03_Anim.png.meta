@@ -125,12 +125,12 @@ TextureImporter:
       name: Sprite_Town_BlackSmith_Forge_03_Anim_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 15
-        width: 66
-        height: 98
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 16
+        y: 16
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.044}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: Sprite_Town_BlackSmith_Forge_03_Anim_1
       rect:
         serializedVersion: 2
-        x: 95
-        y: 15
-        width: 66
-        height: 98
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 96
+        y: 16
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.044}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -166,23 +166,23 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Town_BlackSmith_Forge_03_Anim_2
+      name: Sprite_Town_BlackSmith_Forge_03_Anim_3
       rect:
         serializedVersion: 2
-        x: 175
-        y: 15
-        width: 66
-        height: 98
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 176
+        y: 16
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.044}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4e92c9f9e69d6d3e0800000000000000
-      internalID: -2029195512936388124
+      spriteID: 2a00c062425f21145aab3e6760006153
+      internalID: 5145012740082137788
       vertices: []
       indices: 
       edges: []
