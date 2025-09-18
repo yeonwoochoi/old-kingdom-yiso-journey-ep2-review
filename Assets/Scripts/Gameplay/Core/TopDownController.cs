@@ -3,8 +3,15 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Gameplay.Core {
+    interface IPhysicsControllable {
+        void Impact(Vector2 direction, float force);
+        void SetCollisionsEnabled(bool state);
+        void SetMovementEnabled(bool state);
+        void SetMovement(Vector2 movement);
+    }
+    
     [RequireComponent(typeof(Rigidbody2D))]
-    public class TopDownController: RunIBehaviour {
+    public class TopDownController: RunIBehaviour, IPhysicsControllable {
         [ReadOnly] public Vector2 currentMovement; // 외부(Input)에서 전달된 목표 이동 벡터
         
         private Rigidbody2D _rigidbody2D;
@@ -53,7 +60,8 @@ namespace Gameplay.Core {
                 ApplyImpact();
             }
             
-            if (!FreeMovement) return;
+            // 넉백 도중에는 움직이지 못하게끔. (넉백이 상쇄되지 않게)
+            if (!FreeMovement || _impactForce.magnitude > 0) return;
 
             if (_friction > 1f) {
                 currentMovement /= _friction;
@@ -64,10 +72,14 @@ namespace Gameplay.Core {
             MovePosition(_rigidbody2D.position + currentMovement + _surfaceForce);
         }
 
-        public void SetCollisions(bool state) {
+        public void SetCollisionsEnabled(bool state) {
             foreach (var collider2D in _collider2Ds) {
                 collider2D.enabled = state;
             }
+        }
+
+        public void SetMovementEnabled(bool state) {
+            FreeMovement = state;
         }
 
         /// <summary>
