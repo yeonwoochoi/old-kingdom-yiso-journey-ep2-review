@@ -17,7 +17,7 @@ namespace Gameplay.Tools.Event {
         }
 
         public static void AddListener<YisoEvent>(IYisoEventListener<YisoEvent> listener) where YisoEvent : struct {
-            Type eventType = typeof(YisoEvent);
+            var eventType = typeof(YisoEvent);
 
             if (!subscribersList.ContainsKey(eventType)) {
                 subscribersList[eventType] = new List<IYisoEventListenerBase>();
@@ -29,7 +29,7 @@ namespace Gameplay.Tools.Event {
         }
 
         public static void RemoveListener<YisoEvent>(IYisoEventListener<YisoEvent> listener) where YisoEvent : struct {
-            Type eventType = typeof(YisoEvent);
+            var eventType = typeof(YisoEvent);
             var listenerFound = false;
 
             if (!subscribersList.ContainsKey(eventType)) {

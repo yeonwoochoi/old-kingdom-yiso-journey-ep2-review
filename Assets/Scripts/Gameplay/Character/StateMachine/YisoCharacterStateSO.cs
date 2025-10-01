@@ -5,8 +5,28 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Gameplay.Character.StateMachine {
+    public enum YisoStateRole {
+        Idle,           // 기본 대기
+        Move,           // 이동
+        Chase,          // 추격
+        Attack,         // 일반 공격
+        SkillAttack,    // 스킬 공격
+        Hit,            // 피격
+        Died,           // 사망
+        Spawn,          // 스폰
+        Custom          // 그 외의 모든 커스텀 상태
+    }
+
     [CreateAssetMenu(fileName = "NewCharacterState", menuName = "Yiso/Gameplay/Character/State Machine/Character State")]
     public class YisoCharacterStateSO: ScriptableObject {
+        [Header("State Identity")]
+        [Tooltip("이 상태가 맡은 기본 역할입니다.")]
+        public YisoStateRole role = YisoStateRole.Idle;
+
+        [Tooltip("Role이 'Custom'일 경우, 이 상태를 식별할 고유한 이름입니다.")]
+        [ShowIf("role", YisoStateRole.Custom)]
+        public string customStateName;
+        
         [Header("Settings")]
         [Tooltip("단일 상태로 볼 것인지 여러 상태가 합쳐져 있는 다중 상태로 볼건지 여부")]
         [SerializeField] private bool hasChildState = false;
@@ -29,6 +49,8 @@ namespace Gameplay.Character.StateMachine {
         [Tooltip("자식 상태 목록이다.")]
         [SerializeField, ShowIf("hasChildState")] private List<YisoCharacterStateSO> childStates;
 
+        public string StateKey => (role == YisoStateRole.Custom) ? customStateName : role.ToString();
+        
         public virtual void OnEnter(IYisoCharacterContext context) {
             ExecuteActions(onEnterActions, context);
             if (hasChildState) {

@@ -1,5 +1,4 @@
 ﻿using Core.Behaviour;
-using Gameplay.Character.Core;
 using Gameplay.Core;
 using Settings;
 using Sirenix.OdinInspector;

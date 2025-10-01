@@ -4,6 +4,7 @@ using Core.Behaviour;
 using Gameplay.Character.Core.Modules;
 using Gameplay.Character.StateMachine;
 using Gameplay.Character.Types;
+using Gameplay.Health;
 using UnityEngine;
 
 namespace Gameplay.Character.Core {
@@ -136,7 +137,8 @@ namespace Gameplay.Character.Core {
         // --- 기능 위임 메소드 (Facade Pattern): 복잡한 내부 구조를 숨기고 간단한 사용법 제공. ---
         
         public void RequestStateChange(YisoCharacterStateSO newState) => GetModule<YisoCharacterStateModule>().RequestStateChange(newState);
-        public void RequestStateChange(string newStateName) => GetModule<YisoCharacterStateModule>().RequestStateChange(newStateName);
+        public void RequestStateChangeByKey(string newStateName) => GetModule<YisoCharacterStateModule>().RequestStateChangeByKey(newStateName);
+        public void RequestStateChangeByRole(YisoStateRole newStateRole) => GetModule<YisoCharacterStateModule>().RequestStateChangeByRole(newStateRole);
         public void Move(Vector3 direction, float speedMultiplier = 1) { /* TODO: CoreModule 또는 MovementModule에 위임 */ }
         public void PlayAnimation(YisoCharacterAnimationState state, bool value) => GetModule<YisoCharacterAnimationModule>().SetBool(state, value);
         public void PlayAnimation(YisoCharacterAnimationState state, float value) => GetModule<YisoCharacterAnimationModule>().SetFloat(state, value);
@@ -144,7 +146,7 @@ namespace Gameplay.Character.Core {
         public void PlayAnimation(YisoCharacterAnimationState state) => GetModule<YisoCharacterAnimationModule>().SetTrigger(state);
         public float GetCurrentHealth() => GetModule<YisoCharacterLifecycleModule>().CurrentHealth;
         public bool IsDead() => GetModule<YisoCharacterLifecycleModule>().IsDead;
-        public void TakeDamage(float damage) => GetModule<YisoCharacterLifecycleModule>().TakeDamage(damage);
+        public void TakeDamage(DamageInfo damage) => GetModule<YisoCharacterLifecycleModule>().TakeDamage(damage);
         
         /// <summary>
         /// 모든 모듈에 프레임 업데이트 신호 전파.

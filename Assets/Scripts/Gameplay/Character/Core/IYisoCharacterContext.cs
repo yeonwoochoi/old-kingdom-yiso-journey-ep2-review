@@ -1,6 +1,7 @@
 ﻿using Gameplay.Character.Core.Modules;
 using Gameplay.Character.StateMachine;
 using Gameplay.Character.Types;
+using Gameplay.Health;
 using UnityEngine;
 
 namespace Gameplay.Character.Core {
@@ -20,7 +21,8 @@ namespace Gameplay.Character.Core {
         T GetModule<T>() where T : class, IYisoCharacterModule;
         YisoCharacterStateSO GetCurrentState();
         void RequestStateChange(YisoCharacterStateSO newStateSO);
-        void RequestStateChange(string newStateName);
+        void RequestStateChangeByKey(string newStateName);
+        void RequestStateChangeByRole(YisoStateRole newStateRole);
         void Move(Vector3 direction, float speedMultiplier = 1f);
         void PlayAnimation(YisoCharacterAnimationState state, bool value);
         void PlayAnimation(YisoCharacterAnimationState state, float value);
@@ -28,6 +30,6 @@ namespace Gameplay.Character.Core {
         void PlayAnimation(YisoCharacterAnimationState state);
         float GetCurrentHealth();
         bool IsDead();
-        void TakeDamage(float damage);
+        void TakeDamage(DamageInfo damage);
     }
 }
