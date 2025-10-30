@@ -1,0 +1,31 @@
+name: Create Release Tag and Release Notes
+
+on:
+  push:
+    branches:
+      - main # 'main' 브랜치에 코드가 푸시(병합)될 때 이 워크플로우를 실행합니다.
+
+jobs:
+  tag_and_release:
+    runs-on: ubuntu-latest # 이 작업은 우분투 가상 환경에서 실행됩니다.
+    steps:
+      # 1. 먼저 저장소의 코드를 가상 환경으로 가져와야 합니다. 필수 단계입니다.
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: '0' # 모든 커밋 히스토리를 가져와야 버전 분석이 가능합니다.
+
+      # 2. 자동으로 버전을 올리고 태그를 생성하는 핵심 Action
+      - name: Bump version and push tag
+        id: tag_version # 이 단계의 결과를 나중에 참조하기 위한 ID
+        uses: mathieudutour/github-tag-action@v6.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # 태그를 푸시할 권한을 얻기 위해 필요합니다. (자동으로 제공됨)
+          default_bump: "patch" # 커밋 메시지에 특별한 키워드가 없으면 patch 버전을 올립니다.
+
+      # 3. (선택사항) 생성된 태그를 기반으로 GitHub Release를 자동으로 만들어줍니다.
+      - name: Create a GitHub Release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ steps.tag_version.outputs.new_tag }} # 바로 위 단계에서 생성된 새 태그를 사용합니다.
+          generateReleaseNotes: true # 이번 릴리즈에 포함된 커밋 목록으로 릴리즈 노트를 자동 생성합니다.
