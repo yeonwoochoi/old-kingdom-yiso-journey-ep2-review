@@ -1,10 +1,8 @@
 ﻿using System;
 using Gameplay.Character.Core;
+using Gameplay.Character.Core.Modules;
 
 namespace Gameplay.Character.Abilities {
-    [Serializable]
-    public abstract class YisoAbilitySettingsBase { }
-    
     /// <summary>
     /// 모든 캐릭터 어빌리티의 최상위 인터페이스.
     /// Pure C# 클래스이며, IDisposable을 구현하여 명시적인 리소스 정리를 지원.
@@ -34,19 +32,18 @@ namespace Gameplay.Character.Abilities {
     /// </summary>
     public abstract class YisoCharacterAbilityBase : IYisoCharacterAbility {
         protected IYisoCharacterContext Context { get; private set; }
+        protected YisoCharacterStateModule _stateModule;
+        protected YisoCharacterAnimationModule _animationModule;
 
-        /// <summary>
-        /// 각 어빌리티의 구체적인 설정을 노출하는 추상 프로퍼티.
-        /// </summary>
-        protected abstract YisoAbilitySettingsBase Settings { get; }
-
-        public virtual bool IsAbilityEnabled => true;
+        public virtual bool IsAbilityEnabled => _stateModule?.CurrentState == null || _stateModule.CurrentState.canCastAbility;
 
         /// <summary>
         /// 어빌리티 최초 생성 시 1회 호출. 컨텍스트 주입 등 기본 설정.
         /// </summary>
         public virtual void Initialize(IYisoCharacterContext context) {
             Context = context;
+            _stateModule = Context.GetModule<YisoCharacterStateModule>();
+            _animationModule = Context.GetModule<YisoCharacterAnimationModule>();
         }
 
         public virtual void LateInitialize() { }

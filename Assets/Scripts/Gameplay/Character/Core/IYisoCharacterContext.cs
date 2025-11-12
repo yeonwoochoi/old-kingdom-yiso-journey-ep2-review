@@ -1,4 +1,5 @@
-﻿using Gameplay.Character.Core.Modules;
+﻿using System.Collections;
+using Gameplay.Character.Core.Modules;
 using Gameplay.Character.StateMachine;
 using Gameplay.Character.Types;
 using Gameplay.Health;
@@ -18,12 +19,15 @@ namespace Gameplay.Character.Core {
         string ID { get; }
         GameObject Model { get; }
         Animator Animator { get; }
+        Vector2 MovementVector { get; }
         T GetModule<T>() where T : class, IYisoCharacterModule;
+        Coroutine StartCoroutine(IEnumerator routine);
+        void StopCoroutine(Coroutine routine);
         YisoCharacterStateSO GetCurrentState();
         void RequestStateChange(YisoCharacterStateSO newStateSO);
         void RequestStateChangeByKey(string newStateName);
         void RequestStateChangeByRole(YisoStateRole newStateRole);
-        void Move(Vector3 direction, float speedMultiplier = 1f);
+        void Move(Vector2 finalMovementVector);
         void PlayAnimation(YisoCharacterAnimationState state, bool value);
         void PlayAnimation(YisoCharacterAnimationState state, float value);
         void PlayAnimation(YisoCharacterAnimationState state, int value);

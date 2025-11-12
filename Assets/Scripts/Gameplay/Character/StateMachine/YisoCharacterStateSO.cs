@@ -48,6 +48,13 @@ namespace Gameplay.Character.StateMachine {
         [Header("Child States"), ShowIf("hasChildState")]
         [Tooltip("자식 상태 목록이다.")]
         [SerializeField, ShowIf("hasChildState")] private List<YisoCharacterStateSO> childStates;
+        
+        [Header("Behavior Permissions")]
+        [Tooltip("이 상태에 있는 동안 이동(Movement)이 허용되는지 여부.")]
+        public bool canMove = false; // Movement Ability만 따로 중단
+
+        [Tooltip("이 상태에 있는 동안 어빌리티 사용(Ability Cast)이 허용되는지 여부.")]
+        public bool canCastAbility = true; // false이면 Ability의 Update 로직 싹다 중단
 
         public string StateKey => (role == YisoStateRole.Custom) ? customStateName : role.ToString();
         
@@ -103,9 +110,7 @@ namespace Gameplay.Character.StateMachine {
             foreach (var childState in childStates) {
                 if (childState.CheckTransitions(context, out var childCandidate)) {
                     if (childCandidate != null) {
-                        if (!childStateCandidates.ContainsKey(childCandidate)) {
-                            childStateCandidates[childCandidate] = 0;
-                        }
+                        childStateCandidates.TryAdd(childCandidate, 0);
                         childStateCandidates[childCandidate]++;
                     }
                 }

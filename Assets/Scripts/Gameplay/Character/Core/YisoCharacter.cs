@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Core.Behaviour;
 using Gameplay.Character.Core.Modules;
 using Gameplay.Character.StateMachine;
 using Gameplay.Character.Types;
+using Gameplay.Core;
 using Gameplay.Health;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Gameplay.Character.Core {
@@ -25,17 +28,29 @@ namespace Gameplay.Character.Core {
         [SerializeField] private YisoCharacterAnimationModule.Settings _animationSettings;
         [SerializeField] private YisoCharacterAbilityModule.Settings _abilitySettings;
         [SerializeField] private YisoCharacterCoreModule.Settings _coreSettings;
-        [SerializeField] private YisoCharacterInputModule.Settings _inputSettings;
+        [SerializeField, ShowIf("IsPlayer")] private YisoCharacterInputModule.Settings _inputSettings;
+        [SerializeField, ShowIf("@!IsPlayer")] private YisoCharacterAIModule.Settings _aiSettings;
         [SerializeField] private YisoCharacterLifecycleModule.Settings _lifecycleSettings;
         [SerializeField] private YisoCharacterStateModule.Settings _stateSettings;
         [SerializeField] private YisoCharacterSaveModule.Settings _saveSettings;
-
+        
         public GameObject GameObject => gameObject;
         public Transform Transform => transform;
         public YisoCharacterConstants.CharacterType Type => characterType;
         public bool IsPlayer => Type == YisoCharacterConstants.CharacterType.Player; // 추가 조건이 있으면 여기다.
         public bool IsAIControlled => characterType != YisoCharacterConstants.CharacterType.Player;
         public string ID => characterID;
+
+        public Vector2 MovementVector {
+            get {
+                if (IsPlayer) {
+                    return GetModule<YisoCharacterInputModule>()?.MoveInput ?? Vector2.zero;
+                }
+                else {
+                    return GetModule<YisoCharacterAIModule>()?.PathDirection ?? Vector2.zero;
+                }
+            }
+        }
 
         /// <summary>
         /// 캐릭터의 시각적 모델. 미할당 시 'Model' 이름의 자식 오브젝트 자동 탐색.
@@ -67,6 +82,7 @@ namespace Gameplay.Character.Core {
         
         // 모든 기능 모듈을 타입별로 저장하는 딕셔너리.
         private Dictionary<Type, IYisoCharacterModule> _modules;
+        private IPhysicsControllable _physicsController;
 
         protected override void Awake() {
             base.Awake();
@@ -83,6 +99,11 @@ namespace Gameplay.Character.Core {
         /// </summary>
         private void Initialize() {
             _modules = new Dictionary<Type, IYisoCharacterModule>();
+            _physicsController = GetComponent<IPhysicsControllable>();
+
+            if (_physicsController == null) {
+                Debug.LogError($"[{gameObject.name}]에 IPhysicsControllable을 구현한 컴포넌트(예: TopDownController)가 없습니다!", this);
+            }
 
             // 기능에 맞는 모듈 생성 및 등록.
             RegisterModule(new YisoCharacterAbilityModule(this, _abilitySettings));
@@ -95,6 +116,9 @@ namespace Gameplay.Character.Core {
             // 플레이어 타입일 경우, 입력 모듈 추가.
             if (IsPlayer) {
                 RegisterModule(new YisoCharacterInputModule(this, _inputSettings));
+            }
+            else {
+                RegisterModule(new YisoCharacterAIModule(this, _aiSettings));
             }
 
             // 1단계: 모듈 독립 초기화. (다른 모듈 참조 금지)
@@ -130,6 +154,14 @@ namespace Gameplay.Character.Core {
             return module as T;
         }
 
+        public new Coroutine StartCoroutine(IEnumerator routine) {
+            return base.StartCoroutine(routine);
+        }
+
+        public new void StopCoroutine(Coroutine routine) {
+            base.StopCoroutine(routine);
+        }
+
         public YisoCharacterStateSO GetCurrentState() {
             return GetModule<YisoCharacterStateModule>().CurrentState;
         }
@@ -139,7 +171,10 @@ namespace Gameplay.Character.Core {
         public void RequestStateChange(YisoCharacterStateSO newState) => GetModule<YisoCharacterStateModule>().RequestStateChange(newState);
         public void RequestStateChangeByKey(string newStateName) => GetModule<YisoCharacterStateModule>().RequestStateChangeByKey(newStateName);
         public void RequestStateChangeByRole(YisoStateRole newStateRole) => GetModule<YisoCharacterStateModule>().RequestStateChangeByRole(newStateRole);
-        public void Move(Vector3 direction, float speedMultiplier = 1) { /* TODO: CoreModule 또는 MovementModule에 위임 */ }
+
+        public void Move(Vector2 finalMovementVector) {
+            _physicsController.SetMovement(finalMovementVector);
+        }
         public void PlayAnimation(YisoCharacterAnimationState state, bool value) => GetModule<YisoCharacterAnimationModule>().SetBool(state, value);
         public void PlayAnimation(YisoCharacterAnimationState state, float value) => GetModule<YisoCharacterAnimationModule>().SetFloat(state, value);
         public void PlayAnimation(YisoCharacterAnimationState state, int value) => GetModule<YisoCharacterAnimationModule>().SetInteger(state, value);
