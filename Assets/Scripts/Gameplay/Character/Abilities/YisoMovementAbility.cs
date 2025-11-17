@@ -13,6 +13,8 @@ namespace Gameplay.Character.Abilities {
         
         private float _speedMultiplier = 1f;
         private Coroutine _temporaryMultiplierCoroutine;
+        
+        public Vector2 FinalMovementInput { get; private set; }
 
         public YisoMovementAbility(YisoMovementAbilitySO settings) {
             _settings = settings;
@@ -27,6 +29,8 @@ namespace Gameplay.Character.Abilities {
             base.ProcessAbility();
             
             CalculateInterpolatedInput();
+            
+            FinalMovementInput = _lerpedInput;
 
             var movementIsPermitted = Context.GetCurrentState()?.canMove ?? false;
             if (!movementIsPermitted) {
@@ -35,7 +39,7 @@ namespace Gameplay.Character.Abilities {
             }
 
             var characterMoveSpeed = _settings.baseMovementSpeed;
-            var finalMovementVector = _lerpedInput * (characterMoveSpeed * _speedMultiplier);
+            var finalMovementVector = FinalMovementInput * (characterMoveSpeed * _speedMultiplier);
             
             Context.Move(finalMovementVector);
         }

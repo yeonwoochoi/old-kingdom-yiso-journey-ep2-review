@@ -26,118 +26,115 @@ namespace Gameplay.Character.Core.Modules {
         Combo,
         DeathType
     }
-    
-    public static class YisoAnimatorParams {
-        public const string MoveSpeed = "MoveSpeed";
-        public const string AttackSpeed = "AttackSpeed";
-        public const string Horizontal = "X";
-        public const string Vertical = "Y";
-        public const string IsIdle = "IsIdle";
-        public const string IsMoving = "IsMoving";
-        public const string IsAttacking = "IsAttacking";
-        public const string IsMoveAttacking = "IsMoveAttack";
-        public const string IsDead = "IsDeath";
-        public const string IsSpellCasting = "IsSpellCasting";
-        public const string IsSkillCasting = "IsSkillCasting";
-        public const string IsSpawning = "IsSpawn";
-        public const string SkillNumber = "SkillNumber";
-        public const string Combo = "Combo";
-        public const string DeathType = "DeathType";
-    }
-    
-    public static class YisoAnimatorHashes {
-        public static readonly int MoveSpeed = Animator.StringToHash(YisoAnimatorParams.MoveSpeed);
-        public static readonly int AttackSpeed = Animator.StringToHash(YisoAnimatorParams.AttackSpeed);
-        public static readonly int Horizontal = Animator.StringToHash(YisoAnimatorParams.Horizontal);
-        public static readonly int Vertical = Animator.StringToHash(YisoAnimatorParams.Vertical);
-        public static readonly int IsIdle = Animator.StringToHash(YisoAnimatorParams.IsIdle);
-        public static readonly int IsMoving = Animator.StringToHash(YisoAnimatorParams.IsMoving);
-        public static readonly int IsAttacking = Animator.StringToHash(YisoAnimatorParams.IsAttacking);
-        public static readonly int IsMoveAttacking = Animator.StringToHash(YisoAnimatorParams.IsMoveAttacking);
-        public static readonly int IsDead = Animator.StringToHash(YisoAnimatorParams.IsDead);
-        public static readonly int IsSpellCasting = Animator.StringToHash(YisoAnimatorParams.IsSpellCasting);
-        public static readonly int IsSkillCasting = Animator.StringToHash(YisoAnimatorParams.IsSkillCasting);
-        public static readonly int IsSpawning = Animator.StringToHash(YisoAnimatorParams.IsSpawning);
-        public static readonly int SkillNumber = Animator.StringToHash(YisoAnimatorParams.SkillNumber);
-        public static readonly int Combo = Animator.StringToHash(YisoAnimatorParams.Combo);
-        public static readonly int DeathType = Animator.StringToHash(YisoAnimatorParams.DeathType);
+
+    public static class YisoAnimatorHashManager {
+        private static readonly Dictionary<YisoCharacterAnimationState, int> Hashes = new();
+
+        private static readonly Dictionary<YisoCharacterAnimationState, string> NameMap = new() {
+            {YisoCharacterAnimationState.MoveSpeed, "MoveSpeed"},
+            {YisoCharacterAnimationState.AttackSpeed, "AttackSpeed"},
+            {YisoCharacterAnimationState.Horizontal, "X"},
+            {YisoCharacterAnimationState.Vertical, "Y"},
+            {YisoCharacterAnimationState.IsIdle, "IsIdle"},
+            {YisoCharacterAnimationState.IsMoving, "IsMoving"},
+            {YisoCharacterAnimationState.IsAttacking, "IsAttacking"},
+            {YisoCharacterAnimationState.IsMoveAttacking, "IsMoveAttack"},
+            {YisoCharacterAnimationState.IsDead, "IsDeath"},
+            {YisoCharacterAnimationState.IsSpellCasting, "IsSpellCasting"},
+            {YisoCharacterAnimationState.IsSkillCasting, "IsSkillCasting"},
+            {YisoCharacterAnimationState.IsSpawning, "IsSpawn"},
+            {YisoCharacterAnimationState.SkillNumber, "SkillNumber"},
+            {YisoCharacterAnimationState.Combo, "Combo"},
+            {YisoCharacterAnimationState.DeathType, "DeathType"},
+        };
+
+        static YisoAnimatorHashManager() {
+            foreach (YisoCharacterAnimationState state in Enum.GetValues(typeof(YisoCharacterAnimationState))) {
+                if (state == YisoCharacterAnimationState.None) continue;
+                if (NameMap.TryGetValue(state, out var name)) {
+                    Hashes[state] = Animator.StringToHash(name);
+                }
+            }
+        }
+        
+        public static int GetHash(YisoCharacterAnimationState state) {
+            return Hashes.GetValueOrDefault(state, 0);
+        }
+        
+        public static string GetName(YisoCharacterAnimationState state) {
+            return NameMap.GetValueOrDefault(state);
+        }
     }
     
     public sealed class YisoCharacterAnimationModule : YisoCharacterModuleBase {
         private Settings _settings;
         
         private Animator _animator;
-        private HashSet<int> _animatorParameters;
-        private Dictionary<YisoCharacterAnimationState, int> _animationStateToHash;
+        private readonly HashSet<int> _verifiedHashes = new();
 
         public YisoCharacterAnimationModule(IYisoCharacterContext context, Settings settings) : base(context) {
             _settings = settings;
             _animator = context.Animator;
-            _animatorParameters = new HashSet<int>();
-            _animationStateToHash = new Dictionary<YisoCharacterAnimationState, int>();
         }
 
         public override void Initialize() {
             base.Initialize();
-            InitializeParameters();
+            VerifyAnimatorParameters();
         }
 
-        private void InitializeParameters() {
+        private void VerifyAnimatorParameters() {
             if (_animator == null) {
                 Debug.LogWarning($"[YisoCharacterAnimationModule] Animator is null for {Context.GameObject.name}. Cannot initialize parameters.");
                 return;
             }
             
-            _animatorParameters.Clear();
-            _animationStateToHash.Clear();
+            _verifiedHashes.Clear();
             
             foreach (YisoCharacterAnimationState state in Enum.GetValues(typeof(YisoCharacterAnimationState))) {
                 if (state == YisoCharacterAnimationState.None) continue; // None은 실제 파라미터가 아니므로 건너뛴다.
 
-                var paramName = state.ToString(); // Enum 이름을 문자열 파라미터 이름으로 사용
+                var paramName = YisoAnimatorHashManager.GetName(state);
                 var paramType = state.GetParameterType();
 
                 // Animator Controller에 해당 이름과 타입의 파라미터가 실제로 존재하는지 확인
-                if (_animator.HasParameterOfType(paramName, paramType)) {
-                    var hash = Animator.StringToHash(paramName);
-                    _animationStateToHash[state] = hash; // Enum과 해시 매핑
-                    _animatorParameters.Add(hash); // 유효한 파라미터 해시만 HashSet에 추가
+                if (!string.IsNullOrEmpty(paramName) && _animator.HasParameterOfType(paramName, paramType)) {
+                    _verifiedHashes.Add(YisoAnimatorHashManager.GetHash(state));
                 } else {
                     Debug.LogWarning($"[YisoCharacterAnimationModule] Animator parameter '{paramName}' (Type: {paramType}) not found in Animator Controller for {Context.GameObject.name}.");
                 }
             }
             
-            Debug.Log($"[YisoCharacterAnimationModule] Initialized {Context.GameObject.name}'s Animator parameters. Found {_animatorParameters.Count} parameters.");
+            Debug.Log($"[YisoCharacterAnimationModule] Initialized {Context.GameObject.name}'s Animator parameters. Found {_verifiedHashes.Count} parameters.");
         }
         
-        private bool TryGetHash(YisoCharacterAnimationState state, out int hash) {
-            if (_animationStateToHash.TryGetValue(state, out hash)) {
-                return true;
-            }
-            Debug.LogWarning($"[YisoCharacterAnimationModule] Animator parameter '{state.ToString()}' not registered/found for {Context.GameObject.name}.");
-            return false;
+        private bool IsVerified(int hash) {
+            return hash != 0 && _verifiedHashes.Contains(hash);
         }
-
+        
         public void SetBool(YisoCharacterAnimationState state, bool value) {
-            if (TryGetHash(state, out var hash)) {
+            var hash = YisoAnimatorHashManager.GetHash(state);
+            if (IsVerified(hash)) {
                 _animator.SetBool(hash, value);
             }
         }
 
         public void SetFloat(YisoCharacterAnimationState state, float value) {
-            if (TryGetHash(state, out var hash)) {
+            var hash = YisoAnimatorHashManager.GetHash(state);
+            if (IsVerified(hash)) {
                 _animator.SetFloat(hash, value);
             }
         }
 
         public void SetInteger(YisoCharacterAnimationState state, int value) {
-            if (TryGetHash(state, out var hash)) {
+            var hash = YisoAnimatorHashManager.GetHash(state);
+            if (IsVerified(hash)) {
                 _animator.SetInteger(hash, value);
             }
         }
 
         public void SetTrigger(YisoCharacterAnimationState state) {
-            if (TryGetHash(state, out var hash)) {
+            var hash = YisoAnimatorHashManager.GetHash(state);
+            if (IsVerified(hash)) {
                 _animator.SetTrigger(hash);
             }
         }
