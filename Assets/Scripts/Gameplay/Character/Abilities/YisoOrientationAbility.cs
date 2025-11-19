@@ -107,7 +107,6 @@ namespace Gameplay.Character.Abilities {
             }
         }
         
-        
         #region Public API
         
         /// <summary>
