@@ -48,10 +48,7 @@ namespace Gameplay.Character.Core.Modules {
                         continue;
                     }
 
-                    if (!_stateCache.ContainsKey(key)) {
-                        _stateCache.Add(key, state);
-                    }
-                    else {
+                    if (!_stateCache.TryAdd(key, state)) {
                         Debug.LogWarning($"중복된 상태 키('{key}')가 감지되었습니다. 첫 번째 상태만 사용됩니다.");
                     }
                 }

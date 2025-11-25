@@ -108,6 +108,7 @@ namespace Gameplay.Character.Core {
             // 기능에 맞는 모듈 생성 및 등록.
             RegisterModule(new YisoCharacterAbilityModule(this, _abilitySettings));
             RegisterModule(new YisoCharacterAnimationModule(this, _animationSettings));
+            RegisterModule(new YisoCharacterBlackboardModule(this));
             RegisterModule(new YisoCharacterCoreModule(this, _coreSettings));
             RegisterModule(new YisoCharacterLifecycleModule(this, _lifecycleSettings));
             RegisterModule(new YisoCharacterSaveModule(this, _saveSettings));

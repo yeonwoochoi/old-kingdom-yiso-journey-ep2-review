@@ -51,7 +51,7 @@ namespace Gameplay.Character.StateMachine {
         /// <returns>상태 전환이 필요한 경우 true를 반환합니다.</returns>
         public bool CheckTransition(IYisoCharacterContext context, out YisoCharacterStateSO nextState) {
             // Decision의 평가 결과를 먼저 가져옴
-            var decisionResult = _decisions.All(decision => decision);
+            var decisionResult = _decisions.All(decision => decision.Decide(context));
 
             // 평가 결과에 따라 다음 상태를 결정
             if (decisionResult) {

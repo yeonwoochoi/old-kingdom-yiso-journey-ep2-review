@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using Core.Behaviour;
 using Gameplay.Health.GUI;
+using Gameplay.Tools.Movement;
 using Sirenix.OdinInspector;
-using Tools.Movement;
 using UI.Components;
 using UnityEngine;
 
