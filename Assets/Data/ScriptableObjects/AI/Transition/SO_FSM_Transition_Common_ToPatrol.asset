@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c0c1ca60edc47dd8d2dbe34f1382e3d, type: 3}
-  m_Name: SO_FSM_Transition_Common_ToIdle
+  m_Name: SO_FSM_Transition_Common_ToPatrol
   m_EditorClassIdentifier: 
-  _decisions:
-  - {fileID: 0}
+  _decisions: []
   _isTrueStateRandom: 0
-  _trueState: {fileID: 11400000, guid: 0a045ce1fef9df74aa40426a4f5de58c, type: 2}
+  _trueState: {fileID: 0}
   _trueStates: []
   _isFalseStateRandom: 0
   _falseState: {fileID: 0}

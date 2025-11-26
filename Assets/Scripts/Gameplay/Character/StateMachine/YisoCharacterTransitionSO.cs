@@ -9,7 +9,7 @@ namespace Gameplay.Character.StateMachine {
     /// 하나의 상태에서 다른 상태로 전환되는 규칙과 대상을 정의하는 ScriptableObject.
     /// 조건에 따라 단일 상태 또는 목록 중 하나를 랜덤으로 선택하여 전환할 수 있습니다.
     /// </summary>
-    [CreateAssetMenu(fileName = "NewCharacterTransition", menuName = "Yiso/Gameplay/Character/State Machine/Transition")]
+    [CreateAssetMenu(fileName = "SO_FSM_Transition_", menuName = "Yiso/State Machine/Transition")]
     public class YisoCharacterTransitionSO : ScriptableObject {
         
         [Header("Condition")]

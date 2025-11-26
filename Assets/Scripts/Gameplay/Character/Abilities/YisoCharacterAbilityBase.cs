@@ -35,7 +35,7 @@ namespace Gameplay.Character.Abilities {
         protected YisoCharacterStateModule _stateModule;
         protected YisoCharacterAnimationModule _animationModule;
 
-        public virtual bool IsAbilityEnabled => _stateModule?.CurrentState == null || _stateModule.CurrentState.canCastAbility;
+        public virtual bool IsAbilityEnabled => _stateModule?.CurrentState == null || _stateModule.CurrentState.CanCastAbility;
 
         /// <summary>
         /// 어빌리티 최초 생성 시 1회 호출. 컨텍스트 주입 등 기본 설정.

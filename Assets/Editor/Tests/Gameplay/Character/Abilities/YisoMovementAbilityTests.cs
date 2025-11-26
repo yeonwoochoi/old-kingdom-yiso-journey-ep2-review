@@ -1,12 +1,13 @@
-﻿using Gameplay.Character.Core.Modules;
+﻿using Editor.Tests.Utils;
 
 namespace Gameplay.Character.Abilities.Tests {
     using NUnit.Framework;
     using Moq;
     using UnityEngine;
-    using Gameplay.Character.Core;
-    using Gameplay.Character.Abilities.Definitions;
-    using Gameplay.Character.StateMachine;
+    using Core;
+    using Definitions;
+    using StateMachine;
+    using Core.Modules;
     
     public class YisoMovementAbilityTests {
         private Mock<IYisoCharacterContext> _mockContext;
@@ -36,7 +37,7 @@ namespace Gameplay.Character.Abilities.Tests {
 
             // Context.GetCurrentState().canMove가 true를 반환하도록 설정
             var mockState = ScriptableObject.CreateInstance<YisoCharacterStateSO>();
-            mockState.canMove = true;
+            TestUtils.SetPrivateField(mockState, "canMove", true);
             _mockContext.Setup(ctx => ctx.GetCurrentState()).Returns(mockState);
 
 
@@ -58,7 +59,7 @@ namespace Gameplay.Character.Abilities.Tests {
             _mockContext.Setup(ctx => ctx.MovementVector).Returns(inputVector);
             
             var mockState = ScriptableObject.CreateInstance<YisoCharacterStateSO>();
-            mockState.canMove = false;
+            TestUtils.SetPrivateField(mockState, "canMove", false);
             _mockContext.Setup(ctx => ctx.GetCurrentState()).Returns(mockState);
             
             _movementAbility.PreProcessAbility();
@@ -73,7 +74,7 @@ namespace Gameplay.Character.Abilities.Tests {
             _mockContext.Setup(ctx => ctx.MovementVector).Returns(inputVector);
             
             var mockState = ScriptableObject.CreateInstance<YisoCharacterStateSO>();
-            mockState.canMove = true;
+            TestUtils.SetPrivateField(mockState, "canMove", true);
             _mockContext.Setup(ctx => ctx.GetCurrentState()).Returns(mockState);
             
             _movementAbility.PreProcessAbility();

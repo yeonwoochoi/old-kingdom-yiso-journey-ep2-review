@@ -32,7 +32,7 @@ namespace Gameplay.Character.Abilities {
             
             FinalMovementInput = _lerpedInput;
 
-            var movementIsPermitted = Context.GetCurrentState()?.canMove ?? false;
+            var movementIsPermitted = Context.GetCurrentState()?.CanMove ?? false;
             if (!movementIsPermitted) {
                 Context.Move(Vector2.zero);
                 return;

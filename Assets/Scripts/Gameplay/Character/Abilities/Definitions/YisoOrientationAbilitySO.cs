@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 namespace Gameplay.Character.Abilities.Definitions {
-    [CreateAssetMenu(fileName = "New OrientationAbility", menuName = "Yiso/Abilities/Orientation")]
+    [CreateAssetMenu(fileName = "SO_Ability_Orientation", menuName = "Yiso/Abilities/Orientation")]
     public class YisoOrientationAbilitySO: YisoAbilitySO {
         [Header("Orientation Settings")]
         [Tooltip("캐릭터가 처음 생성될 때 바라볼 기본 방향입니다.")]

@@ -10,7 +10,7 @@ namespace Gameplay.Character.Core.Modules {
         private readonly Dictionary<int, string> _stringData = new();
         private readonly Dictionary<int, bool> _boolData = new();
         private readonly Dictionary<int, Vector3> _vectorData = new();
-        private readonly Dictionary<int, UnityEngine.Object> _objectData = new();
+        private readonly Dictionary<int, Object> _objectData = new();
 
         public YisoCharacterBlackboardModule(IYisoCharacterContext context) : base(context) { }
 
@@ -20,7 +20,7 @@ namespace Gameplay.Character.Core.Modules {
         public void SetString(YisoBlackboardKeySO key, string value) => _stringData[GetKeyID(key)] = value;
         public void SetBool(YisoBlackboardKeySO key, bool value) => _boolData[GetKeyID(key)] = value;
         public void SetVector(YisoBlackboardKeySO key, Vector3 value) => _vectorData[GetKeyID(key)] = value;
-        public void SetObject(YisoBlackboardKeySO key, UnityEngine.Object value) => _objectData[GetKeyID(key)] = value;
+        public void SetObject(YisoBlackboardKeySO key, Object value) => _objectData[GetKeyID(key)] = value;
 
         // --- Getters ---
         public float GetFloat(YisoBlackboardKeySO key, float defaultValue = 0f) => 
@@ -38,7 +38,7 @@ namespace Gameplay.Character.Core.Modules {
         public Vector3 GetVector(YisoBlackboardKeySO key, Vector3 defaultValue = default) => 
             _vectorData.GetValueOrDefault(GetKeyID(key), defaultValue);
 
-        public T GetObject<T>(YisoBlackboardKeySO key) where T : UnityEngine.Object {
+        public T GetObject<T>(YisoBlackboardKeySO key) where T : Object {
             var id = GetKeyID(key);
             if (_objectData.TryGetValue(id, out var obj)) {
                 return obj as T;

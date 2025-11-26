@@ -2,7 +2,7 @@
 using UnityEngine;
 
 namespace Gameplay.Character.StateMachine {
-    [CreateAssetMenu(fileName = "NewCharacterStateMachine", menuName = "Yiso/Gameplay/Character/State Machine/Character State Machine")]
+    [CreateAssetMenu(fileName = "SO_FSM_StateMachine_", menuName = "Yiso/State Machine/State Machine")]
     public class YisoCharacterStateMachineSO: ScriptableObject {
         [Header("State Machine Configuration")]
         [Tooltip("이 상태 머신이 처음 시작될 때의 상태.")]

@@ -18,7 +18,6 @@ namespace Gameplay.Character.Abilities {
         private YisoCharacterStateModule _stateModule;
         // private YisoBaseAim _weaponAim; // TODO (Weapon Aim) 구현 후 참조하기
         
-        
         #region Public Properties (외부 제공 정보)
         
 
@@ -74,7 +73,7 @@ namespace Gameplay.Character.Abilities {
             if (currentState == null) return LastDirectionVector;
 
             // "공격" 시 aim 기반 방향 결정 (1순위)
-            if (currentState.role == YisoStateRole.Attack || currentState.role == YisoStateRole.SkillAttack) {
+            if (currentState.Role == YisoStateRole.Attack || currentState.Role == YisoStateRole.SkillAttack) {
                 // TODO: Weapon Aim 반영하기
                 // if (_weaponAim != null && _weaponAim.IsAiming) {
                 //     Vector2 aimDirection = _weaponAim.AimDirection;

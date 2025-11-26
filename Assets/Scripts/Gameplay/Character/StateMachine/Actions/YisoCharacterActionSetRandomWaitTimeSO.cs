@@ -10,11 +10,11 @@ namespace Gameplay.Character.StateMachine.Actions {
     [CreateAssetMenu(fileName = "SO_FSM_Action_Common_SetRandomWaitTime", menuName = "Yiso/State Machine/Action/SetRandomWaitTime")]
     public class YisoCharacterActionSetRandomWaitTimeSO: YisoCharacterActionSO {
         [Header("Input Keys")]
-        public YisoBlackboardKeySO minTimeKey;
-        public YisoBlackboardKeySO maxTimeKey;
+        [SerializeField] private YisoBlackboardKeySO minTimeKey;
+        [SerializeField] private YisoBlackboardKeySO maxTimeKey;
 
         [Header("Output Key (Write)")]
-        public YisoBlackboardKeySO resultKey; // 계산된 시간을 저장할 키 (예: CurrentWaitTime)
+        [SerializeField] private YisoBlackboardKeySO resultKey; // 계산된 시간을 저장할 키 (예: CurrentWaitTime)
 
         public override void PerformAction(IYisoCharacterContext context) {
             var bb = context.GetModule<YisoCharacterBlackboardModule>();

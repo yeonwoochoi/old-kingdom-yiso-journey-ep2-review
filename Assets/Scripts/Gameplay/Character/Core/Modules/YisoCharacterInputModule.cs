@@ -52,7 +52,7 @@ namespace Gameplay.Character.Core.Modules {
 
         public override void OnUpdate() {
             base.OnUpdate();
-            if (_stateModule?.CurrentState.role == YisoStateRole.Move) {
+            if (_stateModule?.CurrentState.Role == YisoStateRole.Move) {
                 Context?.Move(MoveInput);
             }
         }

@@ -17,15 +17,15 @@ namespace Gameplay.Character.StateMachine {
         Custom          // 그 외의 모든 커스텀 상태
     }
 
-    [CreateAssetMenu(fileName = "NewCharacterState", menuName = "Yiso/Gameplay/Character/State Machine/Character State")]
+    [CreateAssetMenu(fileName = "SO_FSM_State_", menuName = "Yiso/State Machine/State")]
     public class YisoCharacterStateSO: ScriptableObject {
         [Header("State Identity")]
         [Tooltip("이 상태가 맡은 기본 역할입니다.")]
-        public YisoStateRole role = YisoStateRole.Idle;
+        [SerializeField] private YisoStateRole role = YisoStateRole.Idle;
 
         [Tooltip("Role이 'Custom'일 경우, 이 상태를 식별할 고유한 이름입니다.")]
         [ShowIf("role", YisoStateRole.Custom)]
-        public string customStateName;
+        [SerializeField] private string customStateName;
         
         [Header("Settings")]
         [Tooltip("단일 상태로 볼 것인지 여러 상태가 합쳐져 있는 다중 상태로 볼건지 여부")]
@@ -51,12 +51,15 @@ namespace Gameplay.Character.StateMachine {
         
         [Header("Behavior Permissions")]
         [Tooltip("이 상태에 있는 동안 이동(Movement)이 허용되는지 여부.")]
-        public bool canMove = false; // Movement Ability만 따로 중단
+        [SerializeField] private bool canMove = true; // Movement Ability만 따로 중단
 
         [Tooltip("이 상태에 있는 동안 어빌리티 사용(Ability Cast)이 허용되는지 여부.")]
-        public bool canCastAbility = true; // false이면 Ability의 Update 로직 싹다 중단
+        [SerializeField] private bool canCastAbility = true; // false이면 Ability의 Update 로직 싹다 중단
 
         public string StateKey => (role == YisoStateRole.Custom) ? customStateName : role.ToString();
+        public YisoStateRole Role => role;
+        public bool CanMove => canMove;
+        public bool CanCastAbility => canCastAbility;
         
         public virtual void OnEnter(IYisoCharacterContext context) {
             ExecuteActions(onEnterActions, context);
