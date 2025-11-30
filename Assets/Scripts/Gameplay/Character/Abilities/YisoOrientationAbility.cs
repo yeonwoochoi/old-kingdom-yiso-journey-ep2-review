@@ -2,11 +2,11 @@
 using Gameplay.Character.Core;
 using Gameplay.Character.Core.Modules;
 using Gameplay.Character.StateMachine;
+using Gameplay.Character.Types;
+using Gameplay.Character.Weapon;
 using UnityEngine;
 
 namespace Gameplay.Character.Abilities {
-    public enum FacingDirection { North, South, East, West }
-    
     /// <summary>
     /// 캐릭터의 방향(Orientation)을 결정하는 유일한 책임자입니다.
     /// 이동, 조준 등 여러 입력 소스를 종합하여 최종 방향 벡터를 결정하고 외부에 제공합니다.
@@ -16,6 +16,7 @@ namespace Gameplay.Character.Abilities {
         
         private YisoMovementAbility _movementAbility;
         private YisoCharacterStateModule _stateModule;
+        private YisoWeaponAim _weaponAim;
         // private YisoBaseAim _weaponAim; // TODO (Weapon Aim) 구현 후 참조하기
         
         #region Public Properties (외부 제공 정보)
@@ -24,7 +25,7 @@ namespace Gameplay.Character.Abilities {
         /// <summary>
         /// 캐릭터가 현재 바라보고 있는 방향 상태입니다.
         /// </summary>
-        public FacingDirection CurrentFacingDirection { get; private set; }
+        public FacingDirections CurrentFacingDirection { get; private set; }
         
         
         /// <summary>
@@ -50,7 +51,13 @@ namespace Gameplay.Character.Abilities {
                 _movementAbility = abilityModule.GetAbility<YisoMovementAbility>();
                 // _weaponAim = Blah Blah; TODO: 이 부분도 Weapon Aim 가져오기
             }
+            
             _stateModule = Context.GetModule<YisoCharacterStateModule>();
+            
+            var weaponModule = Context.GetModule<YisoCharacterWeaponModule>();
+            if (weaponModule != null) {
+                _weaponAim = weaponModule.CurrentWeapon?.WeaponAim;
+            }
         }
         
         
@@ -74,13 +81,12 @@ namespace Gameplay.Character.Abilities {
 
             // "공격" 시 aim 기반 방향 결정 (1순위)
             if (currentState.Role == YisoStateRole.Attack || currentState.Role == YisoStateRole.SkillAttack) {
-                // TODO: Weapon Aim 반영하기
-                // if (_weaponAim != null && _weaponAim.IsAiming) {
-                //     Vector2 aimDirection = _weaponAim.AimDirection;
-                //     if (aimDirection.sqrMagnitude > _settings.aimThreshold * _settings.aimThreshold) {
-                //         return aimDirection;
-                //     }
-                // }
+                if (_weaponAim != null) {
+                    var aimDirection = _weaponAim.CurrentAim;
+                    if (aimDirection.sqrMagnitude > _settings.aimThreshold * _settings.aimThreshold) {
+                        return aimDirection;
+                    }
+                }
             }
 
             // "움직일" 시 movement 기반 방향 결정 (2순위)
@@ -99,10 +105,10 @@ namespace Gameplay.Character.Abilities {
 
             LastDirectionVector = direction.normalized;
             if (Mathf.Abs(LastDirectionVector.x) > Mathf.Abs(LastDirectionVector.y)) {
-                CurrentFacingDirection = LastDirectionVector.x > 0 ? FacingDirection.East : FacingDirection.West;
+                CurrentFacingDirection = LastDirectionVector.x > 0 ? FacingDirections.Right : FacingDirections.Left;
             }
             else {
-                CurrentFacingDirection = LastDirectionVector.y > 0 ? FacingDirection.North : FacingDirection.South;
+                CurrentFacingDirection = LastDirectionVector.y > 0 ? FacingDirections.Up : FacingDirections.Down;
             }
         }
         
@@ -111,15 +117,9 @@ namespace Gameplay.Character.Abilities {
         /// <summary>
         /// 캐릭터의 방향을 외부에서 강제로 설정합니다 (예: 컷신, 상호작용).
         /// </summary>
-        public void ForceFace(FacingDirection direction) {
+        public void ForceFace(FacingDirections direction) {
             CurrentFacingDirection = direction;
-            LastDirectionVector = direction switch {
-                FacingDirection.East => Vector2.right,
-                FacingDirection.West => Vector2.left,
-                FacingDirection.North => Vector2.up,
-                FacingDirection.South => Vector2.down,
-                _ => LastDirectionVector
-            };
+            LastDirectionVector = direction.ToVector2();
         }
         
         #endregion

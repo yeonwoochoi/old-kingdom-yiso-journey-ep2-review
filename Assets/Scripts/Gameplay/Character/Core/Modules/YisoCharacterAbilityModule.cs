@@ -97,7 +97,22 @@ namespace Gameplay.Character.Core.Modules {
                 ability.ResetAbility();
             }
         }
-        
+
+        /// <summary>
+        /// 애니메이션 이벤트를 모든 어빌리티에게 전파합니다.
+        /// Animator의 Animation Event에서 호출됩니다.
+        ///
+        /// 중요: IsAbilityEnabled 체크를 하지 않습니다.
+        /// 이유: 공격 중인 어빌리티는 IsAbilityEnabled가 false일 수 있지만,
+        /// 애니메이션 이벤트(EnableDamage, DisableDamage, AttackEnd)는 반드시 받아야 합니다.
+        /// </summary>
+        /// <param name="eventName">애니메이션 이벤트 이름</param>
+        public void OnAnimationEvent(string eventName) {
+            foreach (var ability in _abilityList) {
+                ability.OnAnimationEvent(eventName);
+            }
+        }
+
         [Serializable]
         public class Settings {
             public List<YisoAbilitySO> abilities;

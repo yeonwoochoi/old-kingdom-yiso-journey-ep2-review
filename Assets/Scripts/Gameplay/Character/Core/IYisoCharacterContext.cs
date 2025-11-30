@@ -13,7 +13,7 @@ namespace Gameplay.Character.Core {
     public interface IYisoCharacterContext {
         GameObject GameObject { get; }
         Transform Transform { get; }
-        YisoCharacterConstants.CharacterType Type { get; }
+        CharacterType Type { get; }
         bool IsPlayer { get; }
         bool IsAIControlled { get; }
         string ID { get; }

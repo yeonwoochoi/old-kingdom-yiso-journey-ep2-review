@@ -24,6 +24,9 @@ namespace Gameplay.Character.Abilities {
 
         // --- 기타 제어 ---
         void ResetAbility();
+        
+        // --- 애니메이션 이벤트 로직 ---
+        void OnAnimationEvent(string eventName);
     }
     
     /// <summary>
@@ -84,6 +87,13 @@ namespace Gameplay.Character.Abilities {
         /// 어빌리티 상태를 초기화.
         /// </summary>
         public virtual void ResetAbility() {  }
+
+        /// <summary>
+        /// 애니메이션 이벤트가 발생했을 때 호출됩니다.
+        /// 구현 클래스에서 이벤트 이름에 따라 로직을 분기 처리합니다.
+        /// </summary>
+        /// <param name="eventName">애니메이션 이벤트 이름</param>
+        public virtual void OnAnimationEvent(string eventName) { }
 
         /// <summary>
         /// 객체 완전 소멸 시 호출. 모든 리소스 최종 정리.

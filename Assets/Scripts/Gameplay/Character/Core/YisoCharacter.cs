@@ -18,7 +18,7 @@ namespace Gameplay.Character.Core {
     [AddComponentMenu("Yiso/Gameplay/Character/Core/Character")]
     public class YisoCharacter : RunIBehaviour, IYisoCharacterContext {
         [Header("Base Settings")]
-        [SerializeField] private YisoCharacterConstants.CharacterType characterType;
+        [SerializeField] private CharacterType characterType;
         [SerializeField] private string characterID = "";
         [SerializeField] private GameObject characterModel;
         [SerializeField] private Animator animator;
@@ -33,12 +33,13 @@ namespace Gameplay.Character.Core {
         [SerializeField] private YisoCharacterLifecycleModule.Settings _lifecycleSettings;
         [SerializeField] private YisoCharacterStateModule.Settings _stateSettings;
         [SerializeField] private YisoCharacterSaveModule.Settings _saveSettings;
+        [SerializeField] private YisoCharacterWeaponModule.Settings _weaponSettings;
         
         public GameObject GameObject => gameObject;
         public Transform Transform => transform;
-        public YisoCharacterConstants.CharacterType Type => characterType;
-        public bool IsPlayer => Type == YisoCharacterConstants.CharacterType.Player; // 추가 조건이 있으면 여기다.
-        public bool IsAIControlled => characterType != YisoCharacterConstants.CharacterType.Player;
+        public CharacterType Type => characterType;
+        public bool IsPlayer => Type == CharacterType.Player; // 추가 조건이 있으면 여기다.
+        public bool IsAIControlled => characterType != CharacterType.Player;
         public string ID => characterID;
 
         public Vector2 MovementVector {
@@ -113,6 +114,7 @@ namespace Gameplay.Character.Core {
             RegisterModule(new YisoCharacterLifecycleModule(this, _lifecycleSettings));
             RegisterModule(new YisoCharacterSaveModule(this, _saveSettings));
             RegisterModule(new YisoCharacterStateModule(this, _stateSettings));
+            RegisterModule(new YisoCharacterWeaponModule(this, _weaponSettings));
 
             // 플레이어 타입일 경우, 입력 모듈 추가.
             if (IsPlayer) {
@@ -180,6 +182,13 @@ namespace Gameplay.Character.Core {
         public void PlayAnimation(YisoCharacterAnimationState state, float value) => GetModule<YisoCharacterAnimationModule>().SetFloat(state, value);
         public void PlayAnimation(YisoCharacterAnimationState state, int value) => GetModule<YisoCharacterAnimationModule>().SetInteger(state, value);
         public void PlayAnimation(YisoCharacterAnimationState state) => GetModule<YisoCharacterAnimationModule>().SetTrigger(state);
+
+        /// <summary>
+        /// 애니메이션 이벤트를 AbilityModule로 라우팅합니다.
+        /// Animator의 Animation Event에서 호출됩니다.
+        /// </summary>
+        /// <param name="eventName">애니메이션 이벤트 이름</param>
+        public void OnAnimationEvent(string eventName) => GetModule<YisoCharacterAbilityModule>()?.OnAnimationEvent(eventName);
         public float GetCurrentHealth() => GetModule<YisoCharacterLifecycleModule>().CurrentHealth;
         public bool IsDead() => GetModule<YisoCharacterLifecycleModule>().IsDead;
         public void TakeDamage(DamageInfo damage) => GetModule<YisoCharacterLifecycleModule>().TakeDamage(damage);
