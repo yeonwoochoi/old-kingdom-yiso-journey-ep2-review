@@ -59,8 +59,19 @@ namespace Gameplay.Character.Abilities {
         }
 
         // 공격 중이 아니고, State에서 Ability를 허용하는 경우에만 활성화
-        public override bool IsAbilityEnabled => !_isAttacking && base.IsAbilityEnabled;
-        
+        public override bool IsAbilityEnabled {
+            get {
+                var currentState = Context.GetCurrentState();
+                if (currentState == null) return false;
+
+                if (currentState.Role == YisoStateRole.Attack) {
+                    return true;
+                }
+
+                return currentState.CanCastAbility;
+            }
+        }
+
         public override void PreProcessAbility() {
             base.PreProcessAbility();
 

@@ -19,14 +19,23 @@ namespace Gameplay.Character.Abilities {
         private YisoWeaponAim _weaponAim;
         // private YisoBaseAim _weaponAim; // TODO (Weapon Aim) 구현 후 참조하기
         
+        // [핵심] 부모(Base)의 로직을 무시하고, 사망 상태가 아니라면 항상 실행되도록 변경
+        public override bool IsAbilityEnabled {
+            get {
+                // 1. 캐릭터가 죽었으면 방향 전환도 멈춰야 함 (선택 사항)
+                if (Context.IsDead()) return false; 
+            
+                // 2. State의 CanCastAbility 여부와 상관없이 무조건 실행 (Always Run)
+                return true; 
+            }
+        }
+        
         #region Public Properties (외부 제공 정보)
         
-
         /// <summary>
         /// 캐릭터가 현재 바라보고 있는 방향 상태입니다.
         /// </summary>
         public FacingDirections CurrentFacingDirection { get; private set; }
-        
         
         /// <summary>
         /// 마지막으로 유효했던 정규화된 방향 벡터입니다. (애니메이터 전달용)
