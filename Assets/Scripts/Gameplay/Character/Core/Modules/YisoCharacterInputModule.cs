@@ -1,5 +1,4 @@
 ﻿using System;
-using Gameplay.Character.StateMachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,13 +8,23 @@ namespace Gameplay.Character.Core.Modules {
     }
     
     // TODO: 추가 action 구현하셈 (지금은 OnMove, OnAttack만 구현됨)
+    /// <summary>
+    /// InputModule은 InputSystem의 이벤트를 받아 입력 데이터를 갱신하는 역할만 수행합니다.
+    /// 로직 실행(Move 호출, State 변경 등)은 Ability나 FSM에서 이 데이터를 Pull하여 처리합니다.
+    /// </summary>
     public sealed class YisoCharacterInputModule : YisoCharacterModuleBase {
         private Settings _settings;
         private InputSystem_Actions _inputActions;
-        
-        private YisoCharacterStateModule _stateModule;
-        
+
+        /// <summary>
+        /// 현재 프레임의 이동 입력 벡터 (WASD, 방향키 등)
+        /// </summary>
         public Vector2 MoveInput { get; private set; }
+
+        /// <summary>
+        /// 공격 버튼이 현재 눌려있는지 여부 (performed: true, canceled: false)
+        /// </summary>
+        public bool AttackInput { get; private set; }
 
         public YisoCharacterInputModule(IYisoCharacterContext context, Settings settings) : base(context) {
             _settings = settings;
@@ -26,18 +35,14 @@ namespace Gameplay.Character.Core.Modules {
             _inputActions = new InputSystem_Actions();
         }
 
-        public override void LateInitialize() {
-            base.LateInitialize();
-            _stateModule = Context.GetModule<YisoCharacterStateModule>();
-        }
-
         public override void OnEnable() {
             base.OnEnable();
             _inputActions.Player.Enable();
-            
+
             _inputActions.Player.Move.performed += OnMove;
             _inputActions.Player.Move.canceled += OnMove;
             _inputActions.Player.Attack.performed += OnAttack;
+            _inputActions.Player.Attack.canceled += OnAttack;
         }
 
         public override void OnDisable() {
@@ -46,15 +51,9 @@ namespace Gameplay.Character.Core.Modules {
             _inputActions.Player.Move.performed -= OnMove;
             _inputActions.Player.Move.canceled -= OnMove;
             _inputActions.Player.Attack.performed -= OnAttack;
-            
-            _inputActions.Player.Disable();
-        }
+            _inputActions.Player.Attack.canceled -= OnAttack;
 
-        public override void OnUpdate() {
-            base.OnUpdate();
-            if (_stateModule?.CurrentState.Role == YisoStateRole.Move) {
-                Context?.Move(MoveInput);
-            }
+            _inputActions.Player.Disable();
         }
 
         public void SwitchActionMap(ActionMapType mapName) {
@@ -73,16 +72,19 @@ namespace Gameplay.Character.Core.Modules {
         }
 
         private void OnMove(InputAction.CallbackContext context) {
-            Debug.Log("InputModule: Move input received!");
+            // Pull 방식: 데이터만 갱신하고, 로직 실행은 MovementAbility가 담당
             MoveInput = context.ReadValue<Vector2>();
-            _stateModule?.RequestStateChangeByRole(MoveInput.sqrMagnitude > 0.01f
-                ? YisoStateRole.Move
-                : YisoStateRole.Idle);
         }
 
         private void OnAttack(InputAction.CallbackContext context) {
-            Debug.Log("InputModule: Attack input received!");
-            _stateModule?.RequestStateChangeByRole(YisoStateRole.Attack);
+            // Pull 방식: 버튼 상태만 갱신 (performed: true, canceled: false)
+            // 단발/연속 입력 구분은 Ability에서 처리
+            if (context.performed) {
+                AttackInput = true;
+            }
+            else if (context.canceled) {
+                AttackInput = false;
+            }
         }
         
         [Serializable] 
