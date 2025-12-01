@@ -68,6 +68,47 @@ namespace Gameplay.Character.StateMachine {
         }
 
         /// <summary>
+        /// 이 Transition이 지정된 목표 상태로 연결되어 있는지 확인합니다.
+        /// True 경로(_trueState, _trueStates) 또는 False 경로(_falseState, _falseStates)에
+        /// targetState가 포함되어 있으면 true를 반환합니다.
+        /// </summary>
+        /// <param name="targetState">검증할 목표 상태</param>
+        /// <returns>이 Transition이 targetState로 연결되어 있으면 true</returns>
+        public bool IsLinkedTo(YisoCharacterStateSO targetState) {
+            if (targetState == null) return false;
+
+            // True 경로 확인
+            if (_isTrueStateRandom) {
+                // 랜덤 목록에 포함되어 있는지 확인
+                if (_trueStates != null && _trueStates.Contains(targetState)) {
+                    return true;
+                }
+            }
+            else {
+                // 단일 상태가 목표 상태와 같은지 확인
+                if (_trueState == targetState) {
+                    return true;
+                }
+            }
+
+            // False 경로 확인
+            if (_isFalseStateRandom) {
+                // 랜덤 목록에 포함되어 있는지 확인
+                if (_falseStates != null && _falseStates.Contains(targetState)) {
+                    return true;
+                }
+            }
+            else {
+                // 단일 상태가 목표 상태와 같은지 확인
+                if (_falseState == targetState) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        /// <summary>
         /// 제공된 목록에서 무작위로 상태 하나를 선택하여 반환
         /// </summary>
         private YisoCharacterStateSO GetRandomStateFrom(IReadOnlyList<YisoCharacterStateSO> stateList) {
@@ -75,7 +116,7 @@ namespace Gameplay.Character.StateMachine {
                 // 목록이 비어있으면 전환할 수 없으므로 null을 반환
                 return null;
             }
-            
+
             // 목록에서 랜덤 인덱스를 뽑아 해당 상태를 반환
             return stateList[Random.Range(0, stateList.Count)];
         }

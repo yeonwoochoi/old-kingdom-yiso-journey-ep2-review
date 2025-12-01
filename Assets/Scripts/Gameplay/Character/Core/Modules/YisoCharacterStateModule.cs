@@ -104,10 +104,22 @@ namespace Gameplay.Character.Core.Modules {
         }
 
         public void RequestStateChange(YisoCharacterStateSO newState, bool force = false) {
+            // 1. null 체크 및 동일 상태 체크
             if (!force && (newState == null || newState == CurrentState)) {
                 return;
             }
 
+            // 2. Transition 검증 (force가 false이고 CurrentState가 존재할 때만)
+            if (!force && CurrentState != null) {
+                if (!CurrentState.CanTransitionTo(newState)) {
+                    Debug.LogWarning(
+                        $"[StateModule] State transition rejected: '{CurrentState.name}' → '{newState.name}'. " +
+                        $"No valid transition path found in StateMachine.");
+                    return;
+                }
+            }
+
+            // 3. 상태 전이 실행
             CurrentState?.OnExit(Context);
 
             CurrentState = newState;

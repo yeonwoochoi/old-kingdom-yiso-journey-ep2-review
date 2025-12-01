@@ -51,7 +51,7 @@ namespace Gameplay.Character.StateMachine {
         
         [Header("Behavior Permissions")]
         [Tooltip("이 상태에 있는 동안 이동(Movement)이 허용되는지 여부.")]
-        [SerializeField] private bool canMove = true; // Movement Ability만 따로 중단
+        [SerializeField] private bool canMove = false; // Movement Ability만 따로 중단
 
         [Tooltip("이 상태에 있는 동안 어빌리티 사용(Ability Cast)이 허용되는지 여부.")]
         [SerializeField] private bool canCastAbility = true; // false이면 Ability의 Update 로직 싹다 중단
@@ -129,7 +129,27 @@ namespace Gameplay.Character.StateMachine {
             nextState = null;
             return false;
         }
-        
+
+        /// <summary>
+        /// 이 상태에서 지정된 목표 상태로 전환이 가능한지 검증합니다.
+        /// transitions 리스트에서 하나라도 targetState로 연결되어 있으면 true를 반환합니다.
+        /// </summary>
+        /// <param name="targetState">전환 가능 여부를 확인할 목표 상태</param>
+        /// <returns>전환이 가능하면 true, 불가능하면 false</returns>
+        public bool CanTransitionTo(YisoCharacterStateSO targetState) {
+            if (targetState == null) return false;
+            if (transitions == null || transitions.Count == 0) return false;
+
+            // transitions 리스트를 순회하며 하나라도 targetState로 연결되어 있는지 확인
+            foreach (var transition in transitions) {
+                if (transition != null && transition.IsLinkedTo(targetState)) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         private void ExecuteActions(IReadOnlyList<YisoCharacterActionSO> actions, IYisoCharacterContext context) {
             if (actions == null) return;
             foreach (var action in actions) {
