@@ -1,6 +1,7 @@
 using Gameplay.Character.Abilities.Definitions;
 using Gameplay.Character.Core.Modules;
 using Gameplay.Character.Data;
+using Gameplay.Character.StateMachine;
 using Gameplay.Character.Types;
 using UnityEngine;
 
@@ -29,6 +30,9 @@ namespace Gameplay.Character.Abilities {
         private bool _isAttacking = false;
         private float _lastAttackTime = -999f;
 
+        // Input Edge Detection (단발 입력 감지용)
+        private bool _wasAttackPressedLastFrame = false;
+
         // Combo System
         private int _currentCombo = 0; // 현재 콤보 (0부터 시작)
         private float _comboResetTimer = 0f; // 콤보 리셋 타이머
@@ -56,6 +60,44 @@ namespace Gameplay.Character.Abilities {
 
         // 공격 중이 아니고, State에서 Ability를 허용하는 경우에만 활성화
         public override bool IsAbilityEnabled => !_isAttacking && base.IsAbilityEnabled;
+        
+        public override void PreProcessAbility() {
+            base.PreProcessAbility();
+
+            // 공격 중이면 입력 무시
+            if (_isAttacking) return;
+
+            // 무기가 없으면 공격 불가
+            if (_weaponModule == null || !_weaponModule.HasWeapon()) return;
+
+            // 공격 입력 확인 (Player만)
+            if (_inputModule != null && Context.Type == CharacterType.Player) {
+                // Pull 방식: InputModule에서 공격 버튼 상태를 가져옴
+                var isPressed = _inputModule.AttackInput;
+
+                // 단발/연속 입력 모드 분기
+                var shouldAttack = false;
+
+                if (_settings.continuousPressAttack) {
+                    // 연속 입력 모드: 버튼을 누르고 있는 동안 계속 공격
+                    shouldAttack = isPressed;
+                }
+                else {
+                    // 단발 입력 모드: Edge Detection (버튼을 누르는 순간만 공격)
+                    // 이전 프레임에 false였고, 현재 프레임에 true이면 공격
+                    shouldAttack = !_wasAttackPressedLastFrame && isPressed;
+                }
+
+                // Edge Detection 상태 업데이트
+                _wasAttackPressedLastFrame = isPressed;
+
+                // 공격 실행
+                if (shouldAttack) {
+                    TryAttack();
+                }
+            }
+            // AI의 경우 외부에서 TriggerAttack() 호출
+        }
 
         public override void ProcessAbility() {
             base.ProcessAbility();
@@ -85,27 +127,7 @@ namespace Gameplay.Character.Abilities {
                 }
             }
         }
-
-        public override void PreProcessAbility() {
-            base.PreProcessAbility();
-
-            // 공격 중이면 입력 무시
-            if (_isAttacking) return;
-
-            // 무기가 없으면 공격 불가
-            if (_weaponModule == null || !_weaponModule.HasWeapon()) return;
-
-            // 공격 입력 확인 (Player만)
-            if (_inputModule != null && Context.Type == CharacterType.Player) {
-                // TODO: InputModule에서 공격 버튼 입력을 가져오는 로직 구현
-                // 현재는 임시로 Input.GetMouseButtonDown 사용
-                if (Input.GetMouseButtonDown(0)) {
-                    TryAttack();
-                }
-            }
-            // AI의 경우 외부에서 TriggerAttack() 호출
-        }
-
+        
         public override void UpdateAnimator() {
             base.UpdateAnimator();
 
@@ -191,6 +213,10 @@ namespace Gameplay.Character.Abilities {
             if (Time.time - _lastAttackTime < cooldown) {
                 return;
             }
+
+            // [핵심] FSM에 Attack 상태 전이 요청
+            // StateModule이 Transition 검증 후 승인/거부 결정
+            Context.RequestStateChangeByRole(YisoStateRole.Attack);
 
             // 콤보 업데이트 (콤보 사용 시에만)
             if (_settings.useComboAttacks) {
@@ -287,6 +313,8 @@ namespace Gameplay.Character.Abilities {
         private void HandleAttackEnd() {
             _isAttacking = false;
             _safetyTimer = 0f; // Safety Net 타이머 리셋
+            
+            Context.RequestStateChangeByRole(YisoStateRole.Idle);
         }
 
         #endregion
