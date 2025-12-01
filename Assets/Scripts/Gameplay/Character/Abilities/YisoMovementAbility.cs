@@ -1,19 +1,25 @@
 ﻿using System.Collections;
 using Gameplay.Character.Abilities.Definitions;
 using Gameplay.Character.Core.Modules;
+using Gameplay.Character.StateMachine;
 using UnityEngine;
 
 namespace Gameplay.Character.Abilities {
+    /// <summary>
+    /// Pull 방식 이동 시스템: Ability가 능동적으로 입력 데이터를 조회하여 이동 로직을 수행합니다.
+    /// - Player: InputModule.MoveInput을 Context.MovementVector를 통해 조회
+    /// - AI: AIModule.PathDirection을 Context.MovementVector를 통해 조회
+    /// </summary>
     public class YisoMovementAbility: YisoCharacterAbilityBase {
         private readonly YisoMovementAbilitySO _settings;
-        
+
         private Vector2 _currentInput;
         private Vector2 _lerpedInput;
         private float _currentAcceleration;
-        
+
         private float _speedMultiplier = 1f;
         private Coroutine _temporaryMultiplierCoroutine;
-        
+
         public Vector2 FinalMovementInput { get; private set; }
 
         public YisoMovementAbility(YisoMovementAbilitySO settings) {
@@ -22,6 +28,9 @@ namespace Gameplay.Character.Abilities {
 
         public override void PreProcessAbility() {
             base.PreProcessAbility();
+            // Pull 방식: Ability가 능동적으로 입력 데이터를 조회
+            // Context.MovementVector는 Player일 경우 InputModule.MoveInput,
+            // AI일 경우 AIModule.PathDirection을 반환
             _currentInput = Context.MovementVector;
         }
 
@@ -40,8 +49,25 @@ namespace Gameplay.Character.Abilities {
 
             var characterMoveSpeed = _settings.baseMovementSpeed;
             var finalMovementVector = FinalMovementInput * (characterMoveSpeed * _speedMultiplier);
-            
+
             Context.Move(finalMovementVector);
+
+            // [핵심] FSM 상태 동기화 요청
+            // Movement Input에 따라 Idle ↔ Move 전이를 요청
+            var currentState = Context.GetCurrentState();
+            if (currentState != null) {
+                var isMoving = FinalMovementInput.sqrMagnitude > 0.01f;
+
+                // Idle -> Move: 이동 입력이 있고 현재 Idle 상태일 때
+                if (isMoving && currentState.Role == YisoStateRole.Idle) {
+                    Context.RequestStateChangeByRole(YisoStateRole.Move);
+                }
+                // Move -> Idle: 이동 입력이 없고 현재 Move 상태일 때
+                // (Attack 등 다른 상태에서는 건드리지 않음)
+                else if (!isMoving && currentState.Role == YisoStateRole.Move) {
+                    Context.RequestStateChangeByRole(YisoStateRole.Idle);
+                }
+            }
         }
 
         public override void UpdateAnimator() {
