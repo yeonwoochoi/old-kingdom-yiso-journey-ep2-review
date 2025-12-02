@@ -44,6 +44,12 @@ namespace Gameplay.Character.Weapon {
         private Vector3 _initialLocalScale;
 
         /// <summary>
+        /// 조준 방향 잠금 플래그.
+        /// true일 경우 SetAimDirection 호출 시 방향이 변경되지 않습니다 (공격 중 등).
+        /// </summary>
+        private bool _isAimLocked = false;
+
+        /// <summary>
         /// 현재 무기가 조준하는 정확한 방향 벡터 (입력된 원본 방향)
         /// 히트박스 회전에 사용됨.
         /// </summary>
@@ -71,21 +77,20 @@ namespace Gameplay.Character.Weapon {
         /// </summary>
         /// <param name="direction">목표 방향 벡터</param>
         public void SetAimDirection(Vector2 direction) {
-            if (direction.sqrMagnitude < 0.01f) {
-                return;
-            }
+            if (direction.sqrMagnitude < 0.01f) return;
+            if (_isAimLocked) return;
 
-            // 1. Vector2 원본 저장
-            CurrentAim = direction.normalized;
+            ApplyAim(direction, lockAfter: false);
+        }
 
-            // 2. FacingDirections Enum 변환
-            CurrentDirection = ConvertToFacingDirection(direction);
+        /// <summary>
+        /// 조준 방향을 강제로 설정하고 잠급니다 (공격 시작 시 사용).
+        /// </summary>
+        /// <param name="direction">고정할 방향</param>
+        public void LockAimToDirection(Vector2 direction) {
+            if (direction.sqrMagnitude < 0.01f) return;
 
-            // 3. 히트박스 회전 (Collider가 정확한 방향을 가리키도록)
-            RotateHitbox(CurrentAim);
-
-            // 4. 방향에 따라 오프셋 조정 (선택적)
-            ApplyDirectionalOffset(CurrentDirection);
+            ApplyAim(direction, lockAfter: true);
         }
 
         /// <summary>
@@ -96,9 +101,53 @@ namespace Gameplay.Character.Weapon {
             _weaponTransform.localPosition = offset;
         }
 
+        /// <summary>
+        /// 조준 방향을 잠급니다 (예: 공격 중).
+        /// 잠금 상태에서는 SetAimDirection 호출 시 방향이 변경되지 않습니다.
+        /// </summary>
+        public void LockAim() {
+            _isAimLocked = true;
+        }
+
+        /// <summary>
+        /// 조준 방향 잠금을 해제합니다.
+        /// </summary>
+        public void UnlockAim() {
+            _isAimLocked = false;
+        }
+
+        /// <summary>
+        /// 현재 조준 방향이 잠겨있는지 여부를 반환합니다.
+        /// </summary>
+        public bool IsAimLocked() {
+            return _isAimLocked;
+        }
+
         #endregion
 
         #region Private Helper
+
+        /// <summary>
+        /// 공통 Aim 적용 로직
+        /// </summary>
+        /// <param name="direction">목표 방향 벡터</param>
+        /// <param name="lockAfter">적용 후 조준 잠금 여부</param>
+        private void ApplyAim(Vector2 direction, bool lockAfter) {
+            // 1. Vector2 원본 저장
+            CurrentAim = direction.normalized;
+
+            // 2. FacingDirections Enum 변환
+            CurrentDirection = ConvertToFacingDirection(CurrentAim);
+
+            // 3. 히트박스 회전
+            RotateHitbox(CurrentAim);
+
+            // 4. 방향별 오프셋 적용
+            ApplyDirectionalOffset(CurrentDirection);
+
+            // 5. 잠금 적용
+            if (lockAfter) _isAimLocked = true;
+        }
 
         /// <summary>
         /// Vector2를 FacingDirections Enum으로 변환합니다.
