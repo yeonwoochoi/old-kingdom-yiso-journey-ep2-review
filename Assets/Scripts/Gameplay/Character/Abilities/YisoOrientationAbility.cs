@@ -13,12 +13,18 @@ namespace Gameplay.Character.Abilities {
     /// </summary>
     public class YisoOrientationAbility: YisoCharacterAbilityBase {
         private readonly YisoOrientationAbilitySO _settings;
-        
+
         private YisoMovementAbility _movementAbility;
         private YisoCharacterStateModule _stateModule;
         private YisoCharacterWeaponModule _weaponModule;
         private YisoWeaponAim _weaponAim;
         // private YisoBaseAim _weaponAim; // TODO (Weapon Aim) 구현 후 참조하기
+
+        /// <summary>
+        /// 방향 전환 잠금 플래그.
+        /// true일 경우 입력이 들어와도 방향이 변경되지 않습니다 (공격 중 등).
+        /// </summary>
+        private bool _isOrientationLocked = false;
         
         // [핵심] 부모(Base)의 로직을 무시하고, 사망 상태가 아니라면 항상 실행되도록 변경
         public override bool IsAbilityEnabled {
@@ -59,7 +65,6 @@ namespace Gameplay.Character.Abilities {
             var abilityModule = Context.GetModule<YisoCharacterAbilityModule>();
             if (abilityModule != null) {
                 _movementAbility = abilityModule.GetAbility<YisoMovementAbility>();
-                // _weaponAim = Blah Blah; TODO: 이 부분도 Weapon Aim 가져오기
             }
             
             _stateModule = Context.GetModule<YisoCharacterStateModule>();
@@ -90,7 +95,7 @@ namespace Gameplay.Character.Abilities {
             if (currentState == null) return LastDirectionVector;
 
             // "공격" 시 aim 기반 방향 결정 (1순위)
-            if (currentState.Role == YisoStateRole.Attack || currentState.Role == YisoStateRole.SkillAttack) {
+            if (currentState.Role is YisoStateRole.Attack or YisoStateRole.SkillAttack) {
                 if (_weaponAim != null) {
                     var aimDirection = _weaponAim.CurrentAim;
                     if (aimDirection.sqrMagnitude > _settings.aimThreshold * _settings.aimThreshold) {
@@ -113,6 +118,9 @@ namespace Gameplay.Character.Abilities {
         private void UpdateFacingState(Vector2 direction) {
             if (direction.sqrMagnitude < 0.01f) return;
 
+            // 방향 전환이 잠겨있으면 업데이트하지 않음
+            if (_isOrientationLocked) return;
+
             LastDirectionVector = direction.normalized;
             if (Mathf.Abs(LastDirectionVector.x) > Mathf.Abs(LastDirectionVector.y)) {
                 CurrentFacingDirection = LastDirectionVector.x > 0 ? FacingDirections.Right : FacingDirections.Left;
@@ -123,7 +131,7 @@ namespace Gameplay.Character.Abilities {
         }
         
         #region Public API
-        
+
         /// <summary>
         /// 캐릭터의 방향을 외부에서 강제로 설정합니다 (예: 컷신, 상호작용).
         /// </summary>
@@ -131,7 +139,29 @@ namespace Gameplay.Character.Abilities {
             CurrentFacingDirection = direction;
             LastDirectionVector = direction.ToVector2();
         }
-        
+
+        /// <summary>
+        /// 방향 전환을 잠급니다 (예: 공격 중).
+        /// 잠금 상태에서는 입력이 들어와도 방향이 변경되지 않습니다.
+        /// </summary>
+        public void LockOrientation() {
+            _isOrientationLocked = true;
+        }
+
+        /// <summary>
+        /// 방향 전환 잠금을 해제합니다.
+        /// </summary>
+        public void UnlockOrientation() {
+            _isOrientationLocked = false;
+        }
+
+        /// <summary>
+        /// 현재 방향 전환이 잠겨있는지 여부를 반환합니다.
+        /// </summary>
+        public bool IsOrientationLocked() {
+            return _isOrientationLocked;
+        }
+
         #endregion
     }
 }
