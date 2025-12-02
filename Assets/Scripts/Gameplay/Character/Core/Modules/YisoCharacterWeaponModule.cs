@@ -1,6 +1,5 @@
 using System;
 using Gameplay.Character.Data;
-using Gameplay.Character.Types;
 using Gameplay.Character.Weapon;
 using UnityEngine;
 
