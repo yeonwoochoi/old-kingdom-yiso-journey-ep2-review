@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0c1ca60edc47dd8d2dbe34f1382e3d, type: 3}
+  m_Name: SO_FSM_Transition_Player_ToAttack
+  m_EditorClassIdentifier: 
+  _decisions: []
+  _isTrueStateRandom: 0
+  _trueState: {fileID: 11400000, guid: a2d54138fe8d7934f8248d2f9152fb7d, type: 2}
+  _trueStates: []
+  _isFalseStateRandom: 0
+  _falseState: {fileID: 0}
+  _falseStates: []

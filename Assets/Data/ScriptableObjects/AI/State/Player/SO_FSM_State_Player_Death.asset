@@ -10,15 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3211f3a2f3c4830991109dccc353d82, type: 3}
-  m_Name: SO_FSM_State_Common_Chase
+  m_Name: SO_FSM_State_Player_Death
   m_EditorClassIdentifier: 
-  role: 2
+  role: 6
   customStateName: 
   hasChildState: 0
-  onEnterActions: []
+  onEnterActions:
+  - {fileID: 11400000, guid: b059eb0e79926654295f701048a0a7cb, type: 2}
   onUpdateActions: []
-  onExitActions: []
-  transitions: []
+  onExitActions:
+  - {fileID: 11400000, guid: 5f8e51f9760758540ac95f40742a1354, type: 2}
+  transitions:
+  - {fileID: 11400000, guid: 8c13b5ffaf8256146be6a0e540ebb844, type: 2}
   childStates: []
-  canMove: 1
-  canCastAbility: 1
+  canMove: 0
+  canCastAbility: 0

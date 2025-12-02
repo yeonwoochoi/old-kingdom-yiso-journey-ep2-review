@@ -10,15 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3211f3a2f3c4830991109dccc353d82, type: 3}
-  m_Name: SO_FSM_State_Common_Attack
+  m_Name: SO_FSM_State_Player_Move
   m_EditorClassIdentifier: 
   role: 1
   customStateName: 
   hasChildState: 0
-  onEnterActions: []
+  onEnterActions:
+  - {fileID: 11400000, guid: c42cff635a236cd4e9f8b6b7f7ac8aef, type: 2}
   onUpdateActions: []
-  onExitActions: []
-  transitions: []
+  onExitActions:
+  - {fileID: 11400000, guid: 7843a627bbc6e6a4c9e84ea5bf32f0fe, type: 2}
+  transitions:
+  - {fileID: 11400000, guid: 3df0bd8394fdc614bb8373497bf367f1, type: 2}
+  - {fileID: 11400000, guid: 24bc1ba94e7248d40a3d9c86a5ed5220, type: 2}
+  - {fileID: 11400000, guid: 35ac345d23bd19049831095dde69a62b, type: 2}
   childStates: []
-  canMove: 0
+  canMove: 1
   canCastAbility: 1
