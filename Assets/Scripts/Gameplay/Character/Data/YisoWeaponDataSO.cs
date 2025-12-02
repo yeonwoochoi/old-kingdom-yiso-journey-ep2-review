@@ -6,7 +6,7 @@ namespace Gameplay.Character.Data {
     /// 무기의 데이터를 정의하는 ScriptableObject.
     /// 무기의 프리팹, 데미지, 공격 속도, 콤보 설정 등의 정보를 포함.
     /// </summary>
-    [CreateAssetMenu(fileName = "SO_Weapon_", menuName = "Yiso/Character/Weapon Data")]
+    [CreateAssetMenu(fileName = "SO_Weapon_", menuName = "Yiso/Weapon/Weapon Data")]
     public class YisoWeaponDataSO : ScriptableObject {
         [Header("Basic Info")]
         [Tooltip("무기의 이름")]
