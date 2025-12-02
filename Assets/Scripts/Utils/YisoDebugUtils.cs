@@ -112,40 +112,76 @@ namespace Utils {
         }
 
         /// <summary>
-        /// 폴리곤 내부를 채웁니다 (Triangle Fan 방식으로 근사).
+        /// 폴리곤 내부를 채웁니다 (Triangle Fan 방식).
+        /// Arc 패턴을 감지하여 적절한 중심점을 사용합니다.
+        /// - Arc 패턴: 첫 번째 점이 (0,0)에 가까우면 Arc의 중심으로 사용
+        /// - 일반 Polygon: 모든 점의 무게중심 사용
         /// </summary>
         private static void DrawPolygonFill(Vector2[] points) {
             if (points.Length < 3) return;
 
-            // 중심점 계산
-            var center = Vector2.zero;
-            foreach (var point in points) {
-                center += point;
+            // Arc 패턴 감지: 첫 번째 점이 원점에 매우 가까운지 확인
+            var firstPoint = points[0];
+            var isArc = firstPoint.sqrMagnitude < 0.01f; // 0.1유닛 이내면 원점으로 간주
+
+            Vector2 center;
+            int startIndex;
+
+            if (isArc) {
+                // Arc 패턴: 첫 번째 점을 중심으로 사용
+                center = firstPoint;
+                startIndex = 1; // 두 번째 점부터 호를 그림
+            }
+            else {
+                // 일반 Polygon: 무게중심 계산
+                center = Vector2.zero;
+                foreach (var point in points) {
+                    center += point;
+                }
+                center /= points.Length;
+                startIndex = 0;
             }
 
-            center /= points.Length;
-
             // Triangle Fan으로 삼각형 그리기
-            for (int i = 0; i < points.Length; i++) {
+            for (int i = startIndex; i < points.Length; i++) {
                 var p1 = center;
                 var p2 = points[i];
                 var p3 = points[(i + 1) % points.Length];
 
-                // Gizmos.DrawMesh가 없으므로 선으로 근사 (알파가 있으면 선을 여러 번 그려서 채워진 느낌)
                 DrawTriangleFill(p1, p2, p3);
             }
         }
 
         /// <summary>
-        /// 삼각형을 채웁니다 (선으로 근사).
+        /// 삼각형을 채웁니다 (선을 촘촘하게 그려서 채워진 느낌 근사).
+        /// Gizmos.DrawMesh가 없으므로 중심에서 변으로 여러 선을 그려 면을 표현.
         /// </summary>
         private static void DrawTriangleFill(Vector2 p1, Vector2 p2, Vector2 p3) {
-            // 삼각형의 각 변을 그려서 채워진 느낌 근사
-            // 실제로는 Gizmos.DrawMesh를 사용해야 하지만 2D에서는 제한적
-            // 대신 중심에서 각 변으로 라인을 그려 채워진 느낌을 줌
+            // 삼각형 테두리
             Gizmos.DrawLine(p1, p2);
             Gizmos.DrawLine(p2, p3);
             Gizmos.DrawLine(p3, p1);
+
+            // 삼각형 중심에서 각 변으로 선을 그려 채워진 느낌 강화
+            var center = (p1 + p2 + p3) / 3f;
+
+            // 각 변의 중점으로 선 그리기 (8방향)
+            var steps = 8;
+            for (int i = 0; i <= steps; i++) {
+                var t = i / (float)steps;
+
+                // p1-p2 변 위의 점
+                var edgePoint12 = Vector2.Lerp(p1, p2, t);
+                Gizmos.DrawLine(center, edgePoint12);
+
+                // p2-p3 변 위의 점
+                var edgePoint23 = Vector2.Lerp(p2, p3, t);
+                Gizmos.DrawLine(center, edgePoint23);
+
+                // p3-p1 변 위의 점
+                var edgePoint31 = Vector2.Lerp(p3, p1, t);
+                Gizmos.DrawLine(center, edgePoint31);
+            }
         }
 
         /// <summary>
