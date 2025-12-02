@@ -20,6 +20,8 @@ namespace Gameplay.Character.Core {
         [Header("Current State")]
         [ShowInInspector, ReadOnly]
         public YisoCharacterStateSO CurrentState => !Application.isPlaying ? null : GetModule<YisoCharacterStateModule>()?.CurrentState;
+        [ShowInInspector, ReadOnly]
+        public int CurrentCombo => !Application.isPlaying ? -1 : GetModule<YisoCharacterWeaponModule>().CurrentWeapon.CurrentComboIndex;
 
         [Header("Base Settings")]
         [SerializeField] private CharacterType characterType;
