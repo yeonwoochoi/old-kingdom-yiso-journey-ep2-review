@@ -315,5 +315,60 @@ namespace Gameplay.Character.Abilities {
         }
 
         #endregion
+
+        public override void ResetAbility() {
+            base.ResetAbility();
+
+            // 1. 공격 상태 강제 중단
+            _isAttacking = false;
+            _safetyTimer = 0f;
+
+            // 2. 입력 상태 리셋
+            _wasAttackPressedLastFrame = false;
+
+            // 3. 콤보 리셋
+            ResetCombo();
+
+            // 4. 무기 데미지 비활성화
+            _weaponModule?.DisableWeaponDamage();
+
+            // 5. Orientation & WeaponAim 잠금 해제
+            _orientationAbility?.UnlockOrientation();
+
+            var currentWeapon = _weaponModule?.CurrentWeapon;
+            if (currentWeapon != null && currentWeapon.WeaponAim != null) {
+                currentWeapon.WeaponAim.UnlockAim();
+            }
+        }
+
+        public override void OnDeath() {
+            base.OnDeath();
+
+            // 공격 중이었다면 강제 중단
+            if (_isAttacking) {
+                // 데미지 비활성화
+                HandleDisableDamage();
+
+                // 공격 상태 정리 (FSM 전환 없이)
+                _isAttacking = false;
+                _safetyTimer = 0f;
+
+                // Orientation & WeaponAim 잠금 해제
+                _orientationAbility?.UnlockOrientation();
+
+                var currentWeapon = _weaponModule?.CurrentWeapon;
+                if (currentWeapon != null && currentWeapon.WeaponAim != null) {
+                    currentWeapon.WeaponAim.UnlockAim();
+                }
+            }
+        }
+
+        public override void OnRevive() {
+            base.OnRevive();
+
+            // ResetAbility와 동일하지만, 부활 시 특별히 처리할 사항이 있다면 여기에 추가
+            // 현재는 ResetAbility를 호출하여 모든 상태 초기화
+            ResetAbility();
+        }
     }
 }

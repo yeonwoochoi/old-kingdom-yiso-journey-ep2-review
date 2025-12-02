@@ -121,6 +121,26 @@ namespace Gameplay.Character.Core.Modules {
         }
 
         /// <summary>
+        /// 캐릭터 사망 시 모든 어빌리티에게 알립니다.
+        /// 각 어빌리티는 진행 중인 로직을 중단하거나 이펙트를 정리합니다.
+        /// </summary>
+        public void OnDeath() {
+            foreach (var ability in _abilityList) {
+                ability.OnDeath();
+            }
+        }
+
+        /// <summary>
+        /// 캐릭터 부활 시 모든 어빌리티에게 알립니다.
+        /// 각 어빌리티는 상태를 초기화하고 쿨타임을 리셋합니다.
+        /// </summary>
+        public void OnRevive() {
+            foreach (var ability in _abilityList) {
+                ability.OnRevive();
+            }
+        }
+
+        /// <summary>
         /// 애니메이션 이벤트를 모든 어빌리티에게 전파합니다.
         /// Animator의 Animation Event에서 호출됩니다.
         ///

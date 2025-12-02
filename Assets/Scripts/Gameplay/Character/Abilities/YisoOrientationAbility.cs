@@ -163,5 +163,33 @@ namespace Gameplay.Character.Abilities {
         }
 
         #endregion
+
+        public override void OnDeath() {
+            base.OnDeath();
+
+            // 사망 시 방향 잠금 해제 (다른 능력이 잠궈놨을 수 있음)
+            UnlockOrientation();
+
+            // 무기 방향 잠금도 해제 (안전장치)
+            if (_weaponAim != null) {
+                _weaponAim.UnlockAim();
+            }
+        }
+
+        public override void OnRevive() {
+            base.OnRevive();
+
+            // 부활 시 방향 초기화
+            // 1. Orientation 잠금 해제
+            UnlockOrientation();
+
+            // 2. 무기 방향 잠금도 해제
+            if (_weaponAim != null) {
+                _weaponAim.UnlockAim();
+            }
+
+            // 3. 초기 방향으로 복구
+            ForceFace(_settings.initialFacingDirection);
+        }
     }
 }

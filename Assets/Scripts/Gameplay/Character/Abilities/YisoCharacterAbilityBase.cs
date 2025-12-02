@@ -24,7 +24,11 @@ namespace Gameplay.Character.Abilities {
 
         // --- 기타 제어 ---
         void ResetAbility();
-        
+
+        // --- Lifecycle Hooks ---
+        void OnDeath();
+        void OnRevive();
+
         // --- 애니메이션 이벤트 로직 ---
         void OnAnimationEvent(string eventName);
     }
@@ -87,6 +91,18 @@ namespace Gameplay.Character.Abilities {
         /// 어빌리티 상태를 초기화.
         /// </summary>
         public virtual void ResetAbility() {  }
+
+        /// <summary>
+        /// 캐릭터 사망 시 호출됩니다.
+        /// 진행 중인 로직을 강제로 중단하거나 이펙트를 정리할 때 사용합니다.
+        /// </summary>
+        public virtual void OnDeath() {  }
+
+        /// <summary>
+        /// 캐릭터 부활 시 호출됩니다.
+        /// 상태를 초기화하거나 쿨타임을 리셋할 때 사용합니다.
+        /// </summary>
+        public virtual void OnRevive() {  }
 
         /// <summary>
         /// 애니메이션 이벤트가 발생했을 때 호출됩니다.
