@@ -18,8 +18,8 @@ namespace Gameplay.Character.Weapon {
         public YisoDamageOnTouch DamageOnTouch { get; private set; }
         
         public bool IsActive => WeaponObject != null && WeaponObject.activeSelf;
+        public int CurrentComboIndex { get; private set; } = 0;
 
-        private int _currentComboIndex = 0;
         private GameObject _owner;
 
         // --- Performance Optimization: Cached Hash IDs ---
@@ -117,7 +117,7 @@ namespace Gameplay.Character.Weapon {
         public void EnableDamage() => DamageOnTouch?.EnableDamage();
         public void DisableDamage() => DamageOnTouch?.DisableDamage();
         public void SetAimDirection(Vector2 direction) => WeaponAim?.SetAimDirection(direction);
-        public void SetComboIndex(int comboIndex) => _currentComboIndex = comboIndex;
+        public void SetComboIndex(int comboIndex) => CurrentComboIndex = comboIndex;
         
         /// <summary>
         /// 캐릭터 Animator의 모든 파라미터를 무기 Animator에 동기화합니다.
@@ -172,7 +172,7 @@ namespace Gameplay.Character.Weapon {
         private void HandleHit(GameObject target, Vector3 hitPoint) {
             if (WeaponData == null || _owner == null) return;
 
-            var finalDamage = WeaponData.GetComboDamage(_currentComboIndex);
+            var finalDamage = WeaponData.GetComboDamage(CurrentComboIndex);
 
             var damageInfo = new DamageInfo {
                 FinalDamage = finalDamage,
