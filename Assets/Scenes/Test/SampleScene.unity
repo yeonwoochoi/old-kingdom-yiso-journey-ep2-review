@@ -2224,12 +2224,15 @@ MonoBehaviour:
   _lifecycleSettings:
     characterEntityHealth: {fileID: 1497929015}
   _stateSettings:
-    stateMachine: {fileID: 11400000, guid: 13dcf52875ceb5f46938b592561b9d73, type: 2}
+    stateMachine: {fileID: 11400000, guid: deba3aefa7bd6f64f96d72da66937204, type: 2}
     decisionCheckFrequency: 0.1
     actionExecuteFrequency: 0
     randomizeFrequencies: 0
     randomDecisionFrequency: {x: 0.1, y: 0.3}
     randomActionFrequency: {x: 0, y: 0.1}
+  _weaponSettings:
+    weaponAttachPoint: {fileID: 0}
+    initialWeapon: {fileID: 0}
 --- !u!114 &1497929015
 MonoBehaviour:
   m_ObjectHideFlags: 0
