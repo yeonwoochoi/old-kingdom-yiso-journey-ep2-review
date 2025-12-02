@@ -34,6 +34,9 @@ namespace Gameplay.Character.Abilities {
         // Input Edge Detection (단발 입력 감지용)
         private bool _wasAttackPressedLastFrame = false;
 
+        // Attack Queue (선입력 버퍼)
+        private bool _nextAttackQueued = false;
+
         // Combo System
         private int _currentCombo = 0; // 현재 콤보 (0부터 시작)
         private float _comboResetTimer = 0f; // 콤보 리셋 타이머
@@ -75,9 +78,26 @@ namespace Gameplay.Character.Abilities {
 
         public override void PreProcessAbility() {
             base.PreProcessAbility();
-            
-            // 공격 중이면 입력 무시
-            if (_isAttacking) return;
+
+            // 공격 중이면 선입력 버퍼만 처리하고 리턴
+            if (_isAttacking) {
+                // 공격 중 추가 입력 감지 (선입력 버퍼)
+                if (_inputModule != null && Context.Type == CharacterType.Player) {
+                    var isPressed = _inputModule.AttackInput;
+
+                    // 단발 모드일 때만 선입력 저장 (연속 모드는 HandleAttackEnd에서 자동 판단)
+                    if (!_settings.continuousPressAttack) {
+                        // Edge Detection: 버튼을 누르는 순간만 큐에 저장
+                        if (!_wasAttackPressedLastFrame && isPressed) {
+                            _nextAttackQueued = true;
+                        }
+                    }
+
+                    // Edge Detection 상태 업데이트
+                    _wasAttackPressedLastFrame = isPressed;
+                }
+                return;
+            }
 
             // 무기가 없으면 공격 불가
             if (_weaponModule == null || !_weaponModule.HasWeapon()) return;
@@ -211,19 +231,20 @@ namespace Gameplay.Character.Abilities {
         /// <summary>
         /// 공격을 시도합니다.
         /// </summary>
-        private void TryAttack() {
+        /// <returns>공격이 성공적으로 시작되었으면 true, 실패하면 false</returns>
+        private bool TryAttack() {
             // 무기가 없으면 공격 불가
             if (_weaponModule == null || !_weaponModule.HasWeapon()) {
-                return;
+                return false;
             }
 
             var weaponData = _weaponModule.GetCurrentWeaponData();
-            if (weaponData == null) return;
+            if (weaponData == null) return false;
 
             // 쿨타임 체크
             var cooldown = weaponData.GetAttackCooldown();
             if (Time.time - _lastAttackTime < cooldown) {
-                return;
+                return false;
             }
 
             // [핵심] FSM에 Attack 상태 전이 요청
@@ -242,6 +263,7 @@ namespace Gameplay.Character.Abilities {
 
             // 공격 시작
             AttackStart(weaponData);
+            return true;
         }
 
         /// <summary>
@@ -286,6 +308,9 @@ namespace Gameplay.Character.Abilities {
         private void AttackStart(YisoWeaponDataSO weaponData) {
             _isAttacking = true;
             _lastAttackTime = Time.time;
+
+            // 선입력 큐 초기화 (새로운 공격이 시작되었으므로 이전 큐는 무효화)
+            _nextAttackQueued = false;
 
             // Safety Net: 애니메이션 duration + 여유 시간(0.1초)
             // 이 시간이 지나면 AttackEnd 이벤트가 없어도 강제 종료
@@ -337,10 +362,9 @@ namespace Gameplay.Character.Abilities {
         /// 애니메이션 이벤트: 공격 종료
         /// </summary>
         private void HandleAttackEnd() {
-            _isAttacking = false;
             _safetyTimer = 0f; // Safety Net 타이머 리셋
 
-            // 1. Orientation 잠금 해제
+            // 1. Orientation 잠금 해제 (콤보 계속 시 다음 공격에서 다시 잠금)
             _orientationAbility?.UnlockOrientation();
 
             // 2. WeaponAim 잠금 해제
@@ -348,8 +372,38 @@ namespace Gameplay.Character.Abilities {
             if (currentWeapon != null && currentWeapon.WeaponAim != null) {
                 currentWeapon.WeaponAim.UnlockAim();
             }
+
+            // 3. 콤보 연계 판단: 연속 입력 또는 선입력 큐 확인
+            var shouldContinueCombo = false;
+
+            if (_inputModule != null && Context.Type == CharacterType.Player) {
+                if (_settings.continuousPressAttack) {
+                    // 연속 입력 모드: 버튼이 계속 눌려있으면 콤보 계속
+                    shouldContinueCombo = _inputModule.AttackInput;
+                }
+                else {
+                    // 단발 입력 모드: 선입력 큐가 있으면 콤보 계속
+                    shouldContinueCombo = _nextAttackQueued;
+                }
+            }
+
+            // 4. 콤보 계속 또는 종료
+            _isAttacking = false; 
             
-            Context.RequestStateChangeByRole(YisoStateRole.Idle);
+            if (shouldContinueCombo) {
+                // 콤보 계속: 다음 공격 시도
+                var attackStarted = TryAttack();
+
+                // 공격이 실패하면 (쿨타임, 무기 없음 등) Idle로 전환
+                if (!attackStarted) {
+                    Context.RequestStateChangeByRole(YisoStateRole.Idle);
+                }
+                // 공격이 성공하면 Attack 상태 유지 (TryAttack에서 이미 RequestStateChange 호출)
+            }
+            else {
+                // 콤보 종료: Idle로 전환
+                Context.RequestStateChangeByRole(YisoStateRole.Idle);
+            }
         }
 
         #endregion
@@ -363,6 +417,7 @@ namespace Gameplay.Character.Abilities {
 
             // 2. 입력 상태 리셋
             _wasAttackPressedLastFrame = false;
+            _nextAttackQueued = false;
 
             // 3. 콤보 리셋
             ResetCombo();
