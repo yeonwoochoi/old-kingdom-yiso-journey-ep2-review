@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Utils.Beagle {
+namespace Utils {
     public static class YisoColorUtils {
         // NOTE: The follwing color names come from the CSS3 specification, Section 4.3 Extended Color Keywords
         // http://www.w3.org/TR/css3-color/#svg-color

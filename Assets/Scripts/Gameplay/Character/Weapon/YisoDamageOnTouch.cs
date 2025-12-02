@@ -125,5 +125,24 @@ namespace Gameplay.Character.Weapon {
         }
 
         #endregion
+
+#if UNITY_EDITOR
+        private void OnDrawGizmos() {
+            if (_collider == null) {
+                _collider = GetComponent<Collider2D>();
+            }
+
+            if (_collider == null) return;
+
+            var isActive = _collider.enabled;
+            // 활성화 상태: 반투명 빨간색 채우기 + 빨간색 테두리
+            // 비활성화 상태: 투명 채우기 + 빨간색 테두리만
+            var fillColor = isActive ? new Color(1f, 0f, 0f, 0.3f) : new Color(1f, 0f, 0f, 0f);
+            var wireColor = Color.red;
+
+            // 유틸리티 클래스를 통해 Collider2D 그리기
+            Utils.YisoDebugUtils.DrawGizmoCollider2D(_collider, fillColor, wireColor);
+        }
+#endif
     }
 }

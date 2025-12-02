@@ -2,6 +2,7 @@ using Core.Behaviour;
 using Gameplay.Character.Types;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Character.Weapon {
     /// <summary>
@@ -160,5 +161,42 @@ namespace Gameplay.Character.Weapon {
         }
 
         #endregion
+
+#if UNITY_EDITOR
+        [Header("Gizmo Settings")]
+        [Tooltip("Gizmo 화살표 길이")]
+        [SerializeField] private float gizmoArrowLength = 1.5f;
+
+        [Tooltip("Gizmo 화살표 머리 크기")]
+        [SerializeField] private float gizmoArrowHeadSize = 0.3f;
+
+        [Tooltip("Gizmo 화살표 색상")]
+        [SerializeField] private Color gizmoArrowColor = Color.yellow;
+
+        private void OnDrawGizmos() {
+            if (CurrentAim.sqrMagnitude < 0.01f) return;
+
+            // 주 화살표 그리기 (무기 위치에서)
+            YisoDebugUtils.DrawGizmoArrow(
+                transform.position,
+                CurrentAim,
+                gizmoArrowLength,
+                gizmoArrowHeadSize,
+                gizmoArrowColor
+            );
+
+            // 히트박스가 있으면 히트박스 중심에서도 화살표 그리기 (반투명)
+            if (hitboxTransform != null) {
+                var hitboxColor = new Color(gizmoArrowColor.r, gizmoArrowColor.g, gizmoArrowColor.b, 0.5f);
+                YisoDebugUtils.DrawGizmoArrow(
+                    hitboxTransform.position,
+                    CurrentAim,
+                    gizmoArrowLength * 0.7f,
+                    gizmoArrowHeadSize * 0.7f,
+                    hitboxColor
+                );
+            }
+        }
+#endif
     }
 }
