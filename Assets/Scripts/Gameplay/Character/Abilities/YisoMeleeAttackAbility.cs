@@ -26,6 +26,7 @@ namespace Gameplay.Character.Abilities {
 
         private YisoCharacterWeaponModule _weaponModule;
         private YisoCharacterInputModule _inputModule; // Player 전용
+        private YisoOrientationAbility _orientationAbility; // 방향 제어
 
         private bool _isAttacking = false;
         private float _lastAttackTime = -999f;
@@ -55,6 +56,20 @@ namespace Gameplay.Character.Abilities {
 
             if (_animationModule == null) {
                 Debug.LogWarning("[YisoMeleeAttackAbility] YisoCharacterAnimationModule을 찾을 수 없습니다. 애니메이션이 작동하지 않습니다.");
+            }
+        }
+
+        public override void LateInitialize() {
+            base.LateInitialize();
+
+            // OrientationAbility 참조 가져오기
+            var abilityModule = Context.GetModule<YisoCharacterAbilityModule>();
+            if (abilityModule != null) {
+                _orientationAbility = abilityModule.GetAbility<YisoOrientationAbility>();
+            }
+
+            if (_orientationAbility == null) {
+                Debug.LogWarning("[YisoMeleeAttackAbility] YisoOrientationAbility를 찾을 수 없습니다. 공격 중 방향 잠금이 작동하지 않습니다.");
             }
         }
 
@@ -277,6 +292,20 @@ namespace Gameplay.Character.Abilities {
             var duration = weaponData.attackDuration;
             _safetyTimer = duration + 0.1f;
 
+            // ========== 공격 방향 고정 ==========
+            // 1. Orientation 잠금: 공격 중에는 캐릭터 방향이 변경되지 않도록
+            if (_orientationAbility != null) {
+                _orientationAbility.LockOrientation();
+            }
+
+            // 2. WeaponAim 방향 고정: 공격 시작 시점의 방향으로 고정
+            var currentWeapon = _weaponModule?.CurrentWeapon;
+            if (currentWeapon != null && currentWeapon.WeaponAim != null) {
+                // 공격 시작 시점의 방향 (현재 Orientation의 LastDirectionVector 사용)
+                var attackDirection = _orientationAbility?.LastDirectionVector ?? Vector2.down;
+                currentWeapon.WeaponAim.LockAimToDirection(attackDirection);
+            }
+
             // 애니메이션 이벤트가 DamageOnTouch를 제어하므로 여기서는 상태만 설정
             // EnableDamage, DisableDamage, AttackEnd는 애니메이션 이벤트에서 호출됨
         }
@@ -310,6 +339,15 @@ namespace Gameplay.Character.Abilities {
         private void HandleAttackEnd() {
             _isAttacking = false;
             _safetyTimer = 0f; // Safety Net 타이머 리셋
+
+            // 1. Orientation 잠금 해제
+            _orientationAbility?.UnlockOrientation();
+
+            // 2. WeaponAim 잠금 해제
+            var currentWeapon = _weaponModule?.CurrentWeapon;
+            if (currentWeapon != null && currentWeapon.WeaponAim != null) {
+                currentWeapon.WeaponAim.UnlockAim();
+            }
             
             Context.RequestStateChangeByRole(YisoStateRole.Idle);
         }
