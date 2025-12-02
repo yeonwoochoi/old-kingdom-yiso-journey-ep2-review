@@ -16,6 +16,7 @@ namespace Gameplay.Character.Abilities {
         
         private YisoMovementAbility _movementAbility;
         private YisoCharacterStateModule _stateModule;
+        private YisoCharacterWeaponModule _weaponModule;
         private YisoWeaponAim _weaponAim;
         // private YisoBaseAim _weaponAim; // TODO (Weapon Aim) 구현 후 참조하기
         
@@ -63,9 +64,9 @@ namespace Gameplay.Character.Abilities {
             
             _stateModule = Context.GetModule<YisoCharacterStateModule>();
             
-            var weaponModule = Context.GetModule<YisoCharacterWeaponModule>();
-            if (weaponModule != null) {
-                _weaponAim = weaponModule.CurrentWeapon?.WeaponAim;
+            _weaponModule = Context.GetModule<YisoCharacterWeaponModule>();
+            if (_weaponModule != null) {
+                _weaponAim = _weaponModule.CurrentWeapon?.WeaponAim;
             }
         }
         
