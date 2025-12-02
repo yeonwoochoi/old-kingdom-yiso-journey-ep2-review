@@ -17,6 +17,10 @@ namespace Gameplay.Character.Core {
     /// </summary>
     [AddComponentMenu("Yiso/Gameplay/Character/Core/Character")]
     public class YisoCharacter : RunIBehaviour, IYisoCharacterContext {
+        [Header("Current State")]
+        [ShowInInspector, ReadOnly]
+        public YisoCharacterStateSO CurrentState => !Application.isPlaying ? null : GetModule<YisoCharacterStateModule>()?.CurrentState;
+
         [Header("Base Settings")]
         [SerializeField] private CharacterType characterType;
         [SerializeField] private string characterID = "";
