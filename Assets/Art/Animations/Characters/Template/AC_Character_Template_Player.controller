@@ -1259,9 +1259,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
+  - m_ConditionMode: 3
     m_ConditionEvent: Combo
-    m_EventTreshold: 3
+    m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2794987862162260005}
   m_Solo: 0
@@ -1309,9 +1309,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
+  - m_ConditionMode: 3
     m_ConditionEvent: Combo
-    m_EventTreshold: 2
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5690458140345543554}
   m_Solo: 0
@@ -1652,16 +1652,16 @@ AnimatorStateMachine:
   - {fileID: 7353477345891745074}
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: 1125710281721455154}
+  - first: {fileID: 3191839673492855955}
     second:
-    - {fileID: -8377552058281782343}
+    - {fileID: 2220249522354502838}
   - first: {fileID: 2150931112667943757}
     second:
     - {fileID: -4492202707030021037}
     - {fileID: -7225145285164228800}
-  - first: {fileID: 3191839673492855955}
+  - first: {fileID: 1125710281721455154}
     second:
-    - {fileID: 2220249522354502838}
+    - {fileID: -8377552058281782343}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: -50, y: 200, z: 0}
   m_EntryPosition: {x: -50, y: 100, z: 0}
@@ -2033,9 +2033,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
+  - m_ConditionMode: 3
     m_ConditionEvent: Combo
-    m_EventTreshold: 4
+    m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8776731623035874351}
   m_Solo: 0
