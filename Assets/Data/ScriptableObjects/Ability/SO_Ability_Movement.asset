@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01be6646f5374ceba3b5f28e99954800, type: 3}
   m_Name: SO_Ability_Movement
   m_EditorClassIdentifier: 
+  priority: 50
   baseMovementSpeed: 5
   idleThreshold: 0.05
   acceleration: 10

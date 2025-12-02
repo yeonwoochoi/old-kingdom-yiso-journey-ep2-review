@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: SO_Weapon_Sword
   m_EditorClassIdentifier: 
   weaponName: Sword
-  weaponPrefab: {fileID: 0}
+  weaponPrefab: {fileID: 2437791315141813589, guid: 4ef8a4e51dfe44243a11bc02749bfdf1, type: 3}
   baseDamage: 10
   minDamage: 10
   maxDamage: 15
   attackRate: 1
-  attackDuration: 0.3
+  attackDuration: 0.8
   maxComboCount: 4
   comboResetTime: 1
   comboDamageMultipliers:
