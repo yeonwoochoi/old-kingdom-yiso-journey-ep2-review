@@ -2,6 +2,9 @@
 using UnityEngine.InputSystem;
 
 namespace Gameplay.Test {
+    /// <summary>
+    /// Test Code
+    /// </summary>
     [RequireComponent(typeof(Rigidbody2D))]
     public class YisoPlayerMove : MonoBehaviour {
         public float speed = 10f;
