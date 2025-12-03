@@ -1,3 +1,4 @@
+using Gameplay.Character.Core;
 using Gameplay.Character.Core.Modules;
 using Gameplay.Character.Data;
 using Gameplay.Character.Types;
@@ -21,6 +22,7 @@ namespace Gameplay.Character.Weapon {
         public int CurrentComboIndex { get; private set; } = 0;
 
         private GameObject _owner;
+        private IYisoCharacterContext _context;
 
         // --- Performance Optimization: Cached Hash IDs ---
         // 매 프레임 Dictionary 조회를 피하기 위해 해시값을 미리 저장합니다.
@@ -44,9 +46,10 @@ namespace Gameplay.Character.Weapon {
         private readonly int _hashCombo;
         private readonly int _hashDeathType;
 
-        public YisoWeaponInstance(YisoWeaponDataSO weaponData, Transform parent, GameObject owner) {
+        public YisoWeaponInstance(IYisoCharacterContext context, YisoWeaponDataSO weaponData, Transform parent, GameObject owner) {
             WeaponData = weaponData;
             _owner = owner;
+            _context = context;
 
             // 1. 해시 캐싱 (생성 시 1회만 조회) - Full Synchronization
             // Float Parameters
@@ -80,8 +83,8 @@ namespace Gameplay.Character.Weapon {
                 WeaponAim = WeaponObject.GetComponentInChildren<YisoWeaponAim>();
                 DamageOnTouch = WeaponObject.GetComponentInChildren<YisoDamageOnTouch>();
 
-                // 4. 검증 및 설정
-                if (WeaponAnimator == null) Debug.LogWarning($"[YisoWeaponInstance] No Animator on '{weaponData.weaponName}'");
+                // 4. 검증 및 설정 (Enemy는 Weapon에 Animator 없음)
+                if (_context.Type == CharacterType.Player && WeaponAnimator == null) Debug.LogWarning($"[YisoWeaponInstance] No Animator on '{weaponData.weaponName}'");
                 if (WeaponAim == null) Debug.LogWarning($"[YisoWeaponInstance] No WeaponAim on '{weaponData.weaponName}'");
 
                 if (DamageOnTouch != null) {

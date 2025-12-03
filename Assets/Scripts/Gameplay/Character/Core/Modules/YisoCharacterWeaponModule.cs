@@ -84,6 +84,7 @@ namespace Gameplay.Character.Core.Modules {
 
             // 새 무기 생성
             CurrentWeapon = new YisoWeaponInstance(
+                Context,
                 weaponData,
                 _weaponAttachPoint,
                 Context.GameObject
