@@ -51,7 +51,7 @@ namespace Gameplay.Character.Core.Modules {
             _abilityModule?.OnDeath();
 
             // 2. FSM 상태 전환
-            _stateModule?.RequestStateChangeByRole(YisoStateRole.Died);
+            _stateModule?.RequestStateChangeByRole(YisoStateRole.Died, true);
         }
 
         private void OnCharacterRevived() {
