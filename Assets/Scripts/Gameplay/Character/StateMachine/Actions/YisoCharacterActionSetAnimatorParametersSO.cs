@@ -11,7 +11,7 @@ namespace Gameplay.Character.StateMachine.Actions {
     /// 다중 Animator Parameter를 한 번에 제어하는 FSM Action.
     /// 단일 SO 파일에서 여러 파라미터 설정을 리스트로 관리하여 파일 폭증 문제 해결.
     /// </summary>
-    [CreateAssetMenu(fileName = "SO_FSM_Action_Common_SetAnimatorParameters", menuName = "Yiso/State Machine/Action/Set Animator Parameters (Multi)")]
+    [CreateAssetMenu(fileName = "SO_FSM_Action_Common_SetAnimatorParameters", menuName = "Yiso/State Machine/Action/SetAnimatorParameters")]
     public class YisoCharacterActionSetAnimatorParametersSO : YisoCharacterActionSO {
         /// <summary>
         /// 개별 Animator Parameter 설정을 나타내는 구조체.
