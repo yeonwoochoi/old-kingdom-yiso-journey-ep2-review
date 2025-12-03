@@ -36,8 +36,8 @@ namespace Gameplay.Character.Data {
         
         private bool _initialized = false;
 
-        protected override void Awake() {
-            base.Awake();
+        protected override void Start() {
+            base.Start();
             InitializeBlackboard();
         }
 
@@ -45,10 +45,13 @@ namespace Gameplay.Character.Data {
             if (_initialized) return;
             _initialized = true;
             
-            var context = GetComponent<IYisoCharacterContext>();
+            var context = GetComponentInParent<IYisoCharacterContext>();
 
             var module = context?.GetModule<YisoCharacterBlackboardModule>();
-            if (module == null) return;
+            if (module == null) {
+                Debug.LogError($"YisoCharacterBlackboardModule not found");
+                return;
+            }
 
             foreach (var e in _floatEntries) module.SetFloat(e.key, e.value);
             foreach (var e in _intEntries) module.SetInt(e.key, e.value);
