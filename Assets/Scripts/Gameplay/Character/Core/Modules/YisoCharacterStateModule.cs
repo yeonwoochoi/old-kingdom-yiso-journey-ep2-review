@@ -88,15 +88,15 @@ namespace Gameplay.Character.Core.Modules {
             }
         }
 
-        public void RequestStateChangeByRole(YisoStateRole role) {
-            RequestStateChangeByKey(role.ToString());
+        public void RequestStateChangeByRole(YisoStateRole role, bool force = false) {
+            RequestStateChangeByKey(role.ToString(), force);
         }
 
-        public void RequestStateChangeByKey(string stateKey) {
+        public void RequestStateChangeByKey(string stateKey, bool force = false) {
             if (string.IsNullOrEmpty(stateKey)) return;
             var targetState = FindStateByName(stateKey);
             if (targetState != null) {
-                RequestStateChange(targetState);
+                RequestStateChange(targetState, force);
             }
             else {
                 Debug.LogError($"'{stateKey}' 키를 가진 상태를 찾을 수 없습니다.");
