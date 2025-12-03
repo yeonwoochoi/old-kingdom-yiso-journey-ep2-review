@@ -52,20 +52,22 @@ namespace Gameplay.Character.Abilities {
 
             Context.Move(finalMovementVector);
 
-            // [핵심] FSM 상태 동기화 요청
-            // Movement Input에 따라 Idle ↔ Move 전이를 요청
-            var currentState = Context.GetCurrentState();
-            if (currentState != null) {
-                var isMoving = FinalMovementInput.sqrMagnitude > 0.01f;
+            // 플레이어만 입력 기반으로 상태를 자동 전환합니다.
+            // AI는 FSM의 Transition 규칙에 따라 스스로 상태를 바꿉니다.
+            if (Context.IsPlayer) {
+                // [핵심] FSM 상태 동기화 요청
+                var currentState = Context.GetCurrentState();
+                if (currentState != null) {
+                    var isMoving = FinalMovementInput.sqrMagnitude > 0.01f;
 
-                // Idle -> Move: 이동 입력이 있고 현재 Idle 상태일 때
-                if (isMoving && currentState.Role == YisoStateRole.Idle) {
-                    Context.RequestStateChangeByRole(YisoStateRole.Move);
-                }
-                // Move -> Idle: 이동 입력이 없고 현재 Move 상태일 때
-                // (Attack 등 다른 상태에서는 건드리지 않음)
-                else if (!isMoving && currentState.Role == YisoStateRole.Move) {
-                    Context.RequestStateChangeByRole(YisoStateRole.Idle);
+                    // Idle -> Move: 이동 입력이 있고 현재 Idle 상태일 때
+                    if (isMoving && currentState.Role == YisoStateRole.Idle) {
+                        Context.RequestStateChangeByRole(YisoStateRole.Move);
+                    }
+                    // Move -> Idle: 이동 입력이 없고 현재 Move 상태일 때
+                    else if (!isMoving && currentState.Role == YisoStateRole.Move) {
+                        Context.RequestStateChangeByRole(YisoStateRole.Idle);
+                    }
                 }
             }
         }
@@ -111,5 +113,10 @@ namespace Gameplay.Character.Abilities {
         }
 
         #endregion
+
+        public override void OnDeath() {
+            base.OnDeath();
+            Context.Move(Vector2.zero);
+        }
     }
 }
