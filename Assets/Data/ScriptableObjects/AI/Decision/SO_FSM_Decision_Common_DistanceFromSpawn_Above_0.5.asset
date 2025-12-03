@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0328bce9e366451d9f9cff6cb1f6ee08, type: 3}
+  m_Name: SO_FSM_Decision_Common_DistanceFromSpawn_Above_0.5
+  m_EditorClassIdentifier: 
+  description: "Under 0.5\uB97C \uC704\uD574 \uB9CC\uB4E0 decision\n\nReturn -> Idle
+    \uD560\uB54C \uC4F0\uC784."
+  distanceThreshold: 0.5
+  spawnPositionKey: {fileID: 11400000, guid: 77d2b05f2ecacd44d8774d430fe1b9de, type: 2}

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27182e632effa6f4a9e66f5bf604598f, type: 3}
+  m_Name: SO_Weapon_Yiso_Sword
+  m_EditorClassIdentifier: 
+  weaponName: Sword
+  weaponPrefab: {fileID: 2437791315141813589, guid: 4ef8a4e51dfe44243a11bc02749bfdf1, type: 3}
+  baseDamage: 10
+  minDamage: 10
+  maxDamage: 15
+  attackRate: 2
+  attackDuration: 0.5
+  maxComboCount: 4
+  comboResetTime: 5
+  comboDamageMultipliers:
+  - 1
+  - 1.2
+  - 1.5
+  - 2

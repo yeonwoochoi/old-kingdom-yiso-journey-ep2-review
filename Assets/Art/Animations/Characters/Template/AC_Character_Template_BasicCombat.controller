@@ -141,9 +141,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
+  - m_ConditionMode: 4
     m_ConditionEvent: DeathType
-    m_EventTreshold: 1
+    m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3463162080873856603}
   m_Solo: 0
@@ -1022,12 +1022,12 @@ AnimatorStateMachine:
   - {fileID: 7353477345891745074}
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: 2150931112667943757}
-    second:
-    - {fileID: -4492202707030021037}
   - first: {fileID: 3191839673492855955}
     second:
     - {fileID: 2220249522354502838}
+  - first: {fileID: 2150931112667943757}
+    second:
+    - {fileID: -4492202707030021037}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: -50, y: 200, z: 0}
   m_EntryPosition: {x: -50, y: 100, z: 0}
