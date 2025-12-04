@@ -202,12 +202,21 @@ Assets/
 - **Pattern**: Mock `IYisoCharacterContext` to test modules/abilities in isolation
 - **Utilities**: `TestUtils.cs` provides reflection helpers for setting private ScriptableObject fields
 
-### Test Files (5 total)
-1. `YisoMovementAbilityTests.cs` - Movement ability unit tests
-2. `YisoFSMActionTests.cs` - FSM action behavior tests
-3. `YisoFSMDecisionTests.cs` - FSM decision logic tests
-4. `YisoFSMTransitionTests.cs` - FSM transition tests
-5. `TestUtils.cs` - Reflection-based test utilities
+### Test Files (9 total)
+**FSM Tests** (`Assets/Editor/Tests/Gameplay/Character/StateMachine/`):
+1. `YisoFSMActionTests.cs` - FSM action behavior tests
+2. `YisoFSMDecisionTests.cs` - FSM decision logic tests
+3. `YisoFSMTransitionTests.cs` - FSM transition tests
+4. `YisoFSMTransitionValidationTests.cs` - IsLinkedTo() validation tests
+5. `YisoFSMStateValidationTests.cs` - CanTransitionTo() validation tests
+
+**Ability Tests** (`Assets/Editor/Tests/Gameplay/Character/Abilities/`):
+6. `YisoMovementAbilityTests.cs` - Movement ability unit tests
+7. `YisoMovementAbilityStateTests.cs` - Movement state transition tests
+8. `YisoMeleeAttackAbilityInputTests.cs` - Attack input mode tests
+
+**Utilities**:
+9. `TestUtils.cs` - Reflection-based test utilities
 
 ### Testing Approach
 - **Arrange-Act-Assert** pattern consistently used
@@ -215,7 +224,124 @@ Assets/
 - **Reflection utilities**: `TestUtils.SetPrivateField()` sets private ScriptableObject fields for test setup
 - **Behavior verification**: Use `Verify()` to ensure correct method calls
 
-**Example**: `Assets/Editor/Tests/Gameplay/Character/Abilities/YisoMovementAbilityTests.cs`
+### Critical Testing Guidelines
+
+#### ScriptableObject Testing Rules (MUST FOLLOW)
+**⚠️ NEVER Mock ScriptableObjects!**
+
+ScriptableObjects **cannot** be mocked with `Mock<T>` because their properties/methods are not virtual.
+
+**✅ Correct Pattern:**
+```csharp
+// Real instance creation
+var stateSO = ScriptableObject.CreateInstance<YisoCharacterStateSO>();
+
+// Inject values using reflection
+TestUtils.SetPrivateField(stateSO, "role", YisoStateRole.Idle);
+TestUtils.SetPrivateField(stateSO, "canMove", true);
+```
+
+**❌ Wrong Pattern:**
+```csharp
+// THIS WILL FAIL - DO NOT USE!
+var mockState = new Mock<YisoCharacterStateSO>();
+mockState.Setup(s => s.Role).Returns(YisoStateRole.Idle); // NotSupportedException
+```
+
+#### Memory Management (Required)
+All ScriptableObject instances **must** be destroyed in `[TearDown]`:
+
+```csharp
+[TearDown]
+public void TearDown() {
+    if (_stateSO != null) Object.DestroyImmediate(_stateSO);
+    if (_abilitySO != null) Object.DestroyImmediate(_abilitySO);
+    if (_weaponData != null) Object.DestroyImmediate(_weaponData);
+}
+```
+
+#### What Can Be Mocked
+- **Interfaces**: `IYisoCharacterContext`, `IYisoCharacterModule` ✅
+- **ScriptableObjects**: ❌ NEVER
+- **Sealed Classes** (all Modules): ❌ NEVER
+  - `YisoCharacterInputModule` (sealed)
+  - `YisoCharacterWeaponModule` (sealed)
+  - `YisoCharacterAnimationModule` (sealed)
+  - `YisoCharacterStateModule` (sealed)
+  - All other `YisoCharacter*Module` classes are sealed
+
+**⚠️ Module Testing Limitation**
+Since all Module classes are `sealed`, they cannot be mocked. Tests should:
+1. Focus on Ability logic without Module dependencies
+2. Use reflection to verify internal state
+3. Use `Assert.Ignore()` for tests requiring sealed Modules
+4. Consider integration tests for full Module interactions
+
+#### Complete Test Example
+```csharp
+public class YisoAbilityTests {
+    private Mock<IYisoCharacterContext> _mockContext;
+    private YisoAbilitySO _abilitySO;  // Real instance
+    private YisoCharacterStateSO _stateSO;  // Real instance
+
+    [SetUp]
+    public void Setup() {
+        _mockContext = new Mock<IYisoCharacterContext>();
+
+        // Create real ScriptableObject instances
+        _abilitySO = ScriptableObject.CreateInstance<YisoAbilitySO>();
+        _stateSO = ScriptableObject.CreateInstance<YisoCharacterStateSO>();
+
+        // Inject private fields using reflection
+        TestUtils.SetPrivateField(_stateSO, "role", YisoStateRole.Idle);
+        TestUtils.SetPrivateField(_stateSO, "canCastAbility", true);
+
+        _mockContext.Setup(c => c.GetCurrentState()).Returns(_stateSO);
+    }
+
+    [TearDown]
+    public void TearDown() {
+        if (_abilitySO != null) Object.DestroyImmediate(_abilitySO);
+        if (_stateSO != null) Object.DestroyImmediate(_stateSO);
+    }
+
+    [Test]
+    public void ProcessAbility__ShouldDoSomething() {
+        // Arrange & Act
+        var ability = new YisoAbility(_abilitySO);
+        ability.Initialize(_mockContext.Object);
+
+        // Assert
+        // ...
+    }
+}
+```
+
+### Safe Reflection Patterns
+
+**✅ NEW: TestUtils.GetPrivateField<T>()**
+안전한 필드 읽기 메서드 (타입 안전성 보장):
+
+```csharp
+// 타입 안전한 필드 읽기
+var wasPressed = TestUtils.GetPrivateField<bool>(_ability, "_wasAttackPressedLastFrame");
+Assert.IsFalse(wasPressed);
+
+// 잘못된 필드명 → Assert.Fail 자동 호출
+var badField = TestUtils.GetPrivateField<int>(_ability, "_nonExistentField");
+// → "Field '_nonExistentField' not found on type 'YisoMeleeAttackAbility'.
+//    Available fields: _settings, _isAttacking, ..."
+```
+
+**Benefits:**
+1. **즉시 실패**: 필드가 없으면 `Assert.Fail()` 호출 → 조용한 실패 방지
+2. **타입 안전**: Generic으로 타입 체크 → 잘못된 타입 캐스팅 방지
+3. **디버깅 정보**: 사용 가능한 필드 목록 출력 → 빠른 문제 해결
+
+**Example Files**:
+- `Assets/Editor/Tests/Utils/TestUtils.cs` - Improved reflection utilities
+- `Assets/Editor/Tests/Gameplay/Character/Abilities/YisoMeleeAttackAbilityInputTests.cs`
+- `Assets/Editor/Tests/Gameplay/Character/StateMachine/YisoFSMTransitionValidationTests.cs`
 
 ## Key Dependencies
 
