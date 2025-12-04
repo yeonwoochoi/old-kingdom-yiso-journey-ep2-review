@@ -73,10 +73,17 @@ namespace Gameplay.Character.Abilities {
         }
 
         public override void UpdateAnimator() {
+            // ========== Animator Parameter Architecture ==========
+            // [Continuous Values] - Ability에서 매 프레임 업데이트
+            // - MoveSpeed: 이동 속도 (연속 값)
+            //
+            // [State Flags] - FSM Action에서 상태 전환 시 설정
+            // - IsMoving: FSM Enter_Move/Exit_Move Action에서 제어
+            //   (Ability에서는 설정하지 않음)
+            // =====================================================
+
             var moveSpeed = _lerpedInput.magnitude * _speedMultiplier;
             Context.PlayAnimation(YisoCharacterAnimationState.MoveSpeed, moveSpeed);
-            
-            // IsMoving과 IsIdle 파라미터는 StateModule이나 StateSO의 Action에서 처리하는 것이 더 적합할 것 같음.
         }
 
         #region Public API
