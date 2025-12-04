@@ -24,9 +24,8 @@ namespace Gameplay.Health {
         [Title("Additional Components Control")]
         [Tooltip("활성화/비활성화할 추가 컴포넌트")] [SerializeField]
         private MonoBehaviour[] additionalComponents; // 특정 컨트롤러 타입 대신 MonoBehaviour로 받아 유연성 확보
-
-        [Tooltip("정렬 레이어를 변경할 Renderer입니다. 없으면 자식에서 찾습니다.")]
-        [SerializeField] private Renderer mainRenderer;
+        
+        private Renderer _mainRenderer; //정렬 레이어를 변경할 Renderer입니다. 없으면 자식에서 찾습니다.
 
         private string layerOnDeath = GameLayers.BackgroundSortingName;
         private YisoEntityHealth _entityHealth;
@@ -35,12 +34,12 @@ namespace Gameplay.Health {
 
         protected override void Awake() {
             base.Awake();
-            _entityHealth = GetComponent<YisoEntityHealth>();
-            _physicsController = GetComponent<IPhysicsControllable>();
-
-            if (mainRenderer == null) mainRenderer = GetComponentInChildren<Renderer>();
-            if (changeLayerOnDeath && mainRenderer != null) {
-                _layerOnAlive = mainRenderer.sortingLayerName;
+            _entityHealth = GetComponentInParent<YisoEntityHealth>();
+            _physicsController = GetComponentInParent<IPhysicsControllable>();
+            _mainRenderer = _entityHealth?.GetComponentInChildren<Renderer>();
+            
+            if (changeLayerOnDeath && _mainRenderer != null) {
+                _layerOnAlive = _mainRenderer.sortingLayerName;
             }
         }
 
@@ -78,8 +77,8 @@ namespace Gameplay.Health {
                 if (disableMovementOnDeath) _physicsController.SetMovementEnabled(false);
             }
 
-            if (changeLayerOnDeath && mainRenderer != null) {
-                mainRenderer.sortingLayerName = layerOnDeath;
+            if (changeLayerOnDeath && _mainRenderer != null) {
+                _mainRenderer.sortingLayerName = layerOnDeath;
             }
 
             SetAdditionalComponentsEnabled(false);
@@ -91,7 +90,7 @@ namespace Gameplay.Health {
                 if (disableMovementOnDeath) _physicsController.SetMovementEnabled(true);
             }
 
-            if (changeLayerOnDeath && mainRenderer != null) mainRenderer.sortingLayerName = _layerOnAlive;
+            if (changeLayerOnDeath && _mainRenderer != null) _mainRenderer.sortingLayerName = _layerOnAlive;
 
             SetAdditionalComponentsEnabled(true);
         }

@@ -8,7 +8,6 @@ namespace Gameplay.Health {
     /// 데미지를 최종적으로 가공하거나 거부하는 '관문' 역할을 한다.
     /// </summary>
     [AddComponentMenu("Yiso/Health/Damage Processor")]
-    [RequireComponent(typeof(YisoEntityHealth))]
     public class YisoDamageProcessor : RunIBehaviour {
         [Title("Invulnerability Settings")] [Tooltip("체크 시 이 개체는 영구적으로 모든 피해를 받지 않습니다.")] [SerializeField]
         private bool isPermanentlyInvulnerable = false;
@@ -24,7 +23,7 @@ namespace Gameplay.Health {
 
         protected override void Awake() {
             base.Awake();
-            _entityHealth = GetComponent<YisoEntityHealth>();
+            _entityHealth = GetComponentInParent<YisoEntityHealth>();
         }
 
         public float FinalizeDamage(DamageInfo damageInfo) {

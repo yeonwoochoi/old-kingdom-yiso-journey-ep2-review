@@ -38,7 +38,7 @@ namespace Gameplay.Health {
 
         protected override void Awake() {
             base.Awake();
-            _damageProcessor = GetComponent<YisoDamageProcessor>();
+            _damageProcessor = GetComponentInChildren<YisoDamageProcessor>();
         }
 
         protected override void Start() {
@@ -57,7 +57,7 @@ namespace Gameplay.Health {
             CurrentHealth = startingHealth ?? newMaxHealth;
             CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
 
-            _damageProcessor = GetComponent<YisoDamageProcessor>();
+            _damageProcessor = GetComponentInChildren<YisoDamageProcessor>();
             
             IsInitialized = true;
             OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
