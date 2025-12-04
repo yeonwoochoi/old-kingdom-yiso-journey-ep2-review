@@ -164,17 +164,24 @@ namespace Gameplay.Character.Abilities {
             base.UpdateAnimator();
 
             if (_animationModule != null) {
-                // IsAttacking 파라미터
-                _animationModule.SetBool(YisoCharacterAnimationState.IsAttacking, _isAttacking);
+                // ========== Animator Parameter Architecture ==========
+                // [Continuous Values] - Ability에서 매 프레임 업데이트
+                // - Combo: Enemy도 사용하는 공통 로직
+                // - AttackSpeed: 무기별 공격 속도 (연속 값)
+                //
+                // [State Flags] - FSM Action에서 상태 전환 시 설정
+                // - IsAttacking: FSM Enter_Attack/Exit_Attack Action에서 제어
+                //   (Ability에서는 설정하지 않음)
+                // =====================================================
 
-                // Combo 파라미터
+                // Combo 파라미터 (Player/Enemy 공통)
                 // useComboAttacks가 false면: 0으로 고정 (기본 공격 애니메이션)
                 // useComboAttacks가 true면: _currentCombo + 1 (1, 2, 3, ... 콤보 애니메이션)
                 var comboValue = _settings.useComboAttacks ? _currentCombo + 1 : 0;
                 _animationModule.SetInteger(YisoCharacterAnimationState.Combo, comboValue);
 
-                // AttackSpeed 파라미터
-                _animationModule.SetFloat(YisoCharacterAnimationState.AttackSpeed, 1f);
+                // AttackSpeed 파라미터 (Continuous value)
+                _animationModule.SetFloat(YisoCharacterAnimationState.AttackSpeed, _weaponModule.GetCurrentWeaponData().attackRate);
             }
         }
 
