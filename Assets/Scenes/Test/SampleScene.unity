@@ -274,6 +274,7 @@ MonoBehaviour:
   delayBeforeDestruction: 3
   respawnAtInitialLocation: 0
   disableModelOnDeath: 1
+  delayBeforeDisable: 3
   grantExperienceOnDeath: 0
 --- !u!114 &167491516
 MonoBehaviour:
@@ -306,9 +307,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   updateAnimatorParameters: 1
-  onDamageActions: []
-  onDeathActions: []
-  onReviveActions: []
+  onDamageAdditionalActions: []
+  onDeathAdditionalActions: []
+  onReviveAdditionalActions: []
 --- !u!114 &167491518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2433,7 +2434,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 1
+  m_LinearDamping: 10
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -2892,7 +2893,8 @@ MonoBehaviour:
   delayBeforeDestruction: 3
   respawnAtInitialLocation: 0
   disableModelOnDeath: 1
-  grantExperienceOnDeath: 0
+  delayBeforeDisable: 3
+  grantExperienceOnDeath: 1
 --- !u!114 &1818567767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2924,9 +2926,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   updateAnimatorParameters: 1
-  onDamageActions: []
-  onDeathActions: []
-  onReviveActions: []
+  onDamageAdditionalActions: []
+  onDeathAdditionalActions: []
+  onReviveAdditionalActions: []
 --- !u!114 &1818567769
 MonoBehaviour:
   m_ObjectHideFlags: 0

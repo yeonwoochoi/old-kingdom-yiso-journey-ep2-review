@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 768bb415b67240de821aaf1abd0d7991, type: 3}
-  m_Name: SO_FSM_Decision_Common_DistanceToTarget_Above_1.5
+  m_Name: SO_FSM_Decision_Common_DistanceToTarget_Above_2
   m_EditorClassIdentifier: 
   description: "True: Target\uACFC \uAC70\uB9AC 1.5 \uC774\uC0C1\nFalse: \uADF8 \uBC18\uB300"
   _decision: {fileID: 11400000, guid: 7131a0dccc4978143894ee62a23f956d, type: 2}

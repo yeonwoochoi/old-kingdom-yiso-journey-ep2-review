@@ -17,8 +17,8 @@ MonoBehaviour:
   hasChildState: 0
   onEnterActions:
   - {fileID: 11400000, guid: c42cff635a236cd4e9f8b6b7f7ac8aef, type: 2}
+  onUpdateActions:
   - {fileID: 11400000, guid: 049084f9fa7e05d448d58de4c897f2d6, type: 2}
-  onUpdateActions: []
   onExitActions:
   - {fileID: 11400000, guid: 7843a627bbc6e6a4c9e84ea5bf32f0fe, type: 2}
   transitions:

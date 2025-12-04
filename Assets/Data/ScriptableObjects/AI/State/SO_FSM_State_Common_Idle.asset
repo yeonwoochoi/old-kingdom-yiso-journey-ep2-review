@@ -16,12 +16,10 @@ MonoBehaviour:
   customStateName: 
   hasChildState: 0
   onEnterActions:
-  - {fileID: 11400000, guid: 088d23fa9a5620a419db8888eb172852, type: 2}
   - {fileID: 11400000, guid: e531127d126ae9045a49b6cff4997f40, type: 2}
   - {fileID: 11400000, guid: e9b05b94e92f7aa4fa2bed0dd104e02b, type: 2}
   onUpdateActions: []
-  onExitActions:
-  - {fileID: 11400000, guid: 215ea7857c7ce6b488ee38f9dfa955bd, type: 2}
+  onExitActions: []
   transitions:
   - {fileID: 11400000, guid: 0c96ec712d5cd3c45aed04d325e0d9ee, type: 2}
   - {fileID: 11400000, guid: 6c003f1b56e2ba64a8cc9e43f0f344c7, type: 2}

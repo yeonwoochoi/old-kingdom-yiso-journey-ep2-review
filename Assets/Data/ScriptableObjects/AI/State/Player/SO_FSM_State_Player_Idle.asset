@@ -15,11 +15,9 @@ MonoBehaviour:
   role: 0
   customStateName: 
   hasChildState: 0
-  onEnterActions:
-  - {fileID: 11400000, guid: 088d23fa9a5620a419db8888eb172852, type: 2}
+  onEnterActions: []
   onUpdateActions: []
-  onExitActions:
-  - {fileID: 11400000, guid: 215ea7857c7ce6b488ee38f9dfa955bd, type: 2}
+  onExitActions: []
   transitions:
   - {fileID: 11400000, guid: 35ac345d23bd19049831095dde69a62b, type: 2}
   - {fileID: 11400000, guid: 24bc1ba94e7248d40a3d9c86a5ed5220, type: 2}
