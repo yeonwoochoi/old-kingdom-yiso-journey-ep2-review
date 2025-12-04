@@ -85,6 +85,12 @@ namespace Gameplay.Character.Abilities {
         }
 
         public override void UpdateAnimator() {
+            // ========== Animator Parameter Architecture ==========
+            // [Continuous Values] - Ability에서 매 프레임 업데이트
+            // - Horizontal: 캐릭터가 바라보는 방향 X축 (-1 ~ 1)
+            // - Vertical: 캐릭터가 바라보는 방향 Y축 (-1 ~ 1)
+            // =====================================================
+
             // 계산된 최종 방향 벡터를 애니메이터에 전달합니다.
             Context.PlayAnimation(YisoCharacterAnimationState.Horizontal, LastDirectionVector.x);
             Context.PlayAnimation(YisoCharacterAnimationState.Vertical, LastDirectionVector.y);
