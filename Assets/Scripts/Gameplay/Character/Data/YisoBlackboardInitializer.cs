@@ -31,8 +31,8 @@ namespace Gameplay.Character.Data {
         
         private bool _initialized = false;
 
-        protected override void Start() {
-            base.Start();
+        protected override void Awake() {
+            base.Awake();
             InitializeBlackboard();
         }
 
