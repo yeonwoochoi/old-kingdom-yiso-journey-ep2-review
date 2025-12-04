@@ -16,13 +16,8 @@ namespace Gameplay.Character.Data {
 
         [Serializable]
         public class VectorEntry {
-            [HorizontalGroup("Line", 0.4f), HideLabel]
             public YisoBlackboardKeySO key;
-            
-            [HorizontalGroup("Line", 0.2f), LabelText("Current Pos")]
             public bool useCurrentPosition;
-            
-            [HorizontalGroup("Line"), HideLabel]
             [HideIf(nameof(useCurrentPosition))] // 체크되면 수동 입력 필드 숨김
             public Vector3 value;
         }
