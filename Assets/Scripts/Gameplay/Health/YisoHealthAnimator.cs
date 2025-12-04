@@ -66,7 +66,7 @@ namespace Gameplay.Health {
 
         protected override void Awake() {
             base.Awake();
-            _entityHealth = GetComponent<YisoEntityHealth>();
+            _entityHealth = GetComponentInParent<YisoEntityHealth>();
 
             if (_entityHealth == null) {
                 Debug.LogError($"[{gameObject.name}] YisoHealthAnimator: YisoEntityHealth를 찾을 수 없습니다!", this);
