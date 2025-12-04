@@ -87,6 +87,7 @@ namespace Gameplay.Health {
                 Debug.LogWarning($"[{gameObject.name}] HealthBar Prefab is not registered. So, Health UI Controller is not worked", this);
                 return;
             }
+
             _healthBarInstance = Instantiate(healthBarPrefab, transform.position + healthBarOffset, Quaternion.identity);
             _healthBarInstance.name = $"HealthBar | {gameObject.name}";
 
@@ -95,9 +96,9 @@ namespace Gameplay.Health {
                 followTarget.target = transform;
                 followTarget.offset = healthBarOffset;
             }
-            
+
             _healthBarInstance.SetBar(_entityHealth.CurrentHealth, 0, _entityHealth.MaxHealth);
-            
+
             if (alwaysVisible) _healthBarInstance.ShowBar();
             else _healthBarInstance.HideBar(0);
         }

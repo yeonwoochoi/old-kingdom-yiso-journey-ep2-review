@@ -14,9 +14,19 @@ namespace Gameplay.Health {
         public bool IsCritical;
     }
     
+    /// <summary>
+    /// Entity의 체력을 관리하는 컴포넌트.
+    ///
+    /// 초기화 모드:
+    /// - useManualInitialization = true: Awake()에서 자동으로 initialHealth 값으로 초기화 (상자, NPC 등)
+    /// - useManualInitialization = false: 외부에서 Initialize() 호출 필요 (플레이어 캐릭터 등)
+    ///
+    /// 중요: 다른 Health 관련 컴포넌트들(YisoHealthUIController, YisoHealthAnimator 등)은
+    ///       Start()에서 EntityHealth에 접근하므로, Manual 모드에서는 Awake()에서 초기화하여 순서 보장.
+    /// </summary>
     [AddComponentMenu("Yiso/Health/Entity Health")]
     public class YisoEntityHealth: RunIBehaviour {
-        [Tooltip("True: 인스펙터의 'Manual Max Health' 값으로 자체 초기화한다. (상자 등)\nFalse: 외부 시스템이 Initialize()를 호출해야 한다. (캐릭터 등)")]
+        [Tooltip("True: Awake()에서 'Initial Health' 값으로 자동 초기화 (상자, NPC 등)\nFalse: 외부 시스템이 Initialize()를 호출해야 함 (플레이어 캐릭터 등)")]
         [SerializeField] private bool useManualInitialization = true;
         [SerializeField, ShowIf("useManualInitialization")] private float initialHealth = 100f;
 
@@ -39,10 +49,9 @@ namespace Gameplay.Health {
         protected override void Awake() {
             base.Awake();
             _damageProcessor = GetComponentInChildren<YisoDamageProcessor>();
-        }
 
-        protected override void Start() {
-            base.Start();
+            // Manual 초기화 모드면 Awake에서 즉시 초기화
+            // (다른 컴포넌트들이 Start에서 EntityHealth에 접근하므로 순서 보장 필요)
             if (useManualInitialization) {
                 Initialize(initialHealth);
             }
