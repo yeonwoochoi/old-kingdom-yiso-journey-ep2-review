@@ -7,7 +7,7 @@ using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Utils;
 
-namespace UI.Components {
+namespace Gameplay.Health.GUI {
     public class YisoProgressBar : RunIBehaviour {
         public enum ProgressBarStates {
             Idle,
