@@ -1,4 +1,5 @@
-﻿using Core.Behaviour;
+﻿using System.Collections;
+using Core.Behaviour;
 using Gameplay.Character.Core;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -18,6 +19,9 @@ namespace Gameplay.Health {
         [Tooltip("사망 시 모델을 비활성화할지 여부입니다.")]
         [SerializeField] private bool disableModelOnDeath = true;
 
+        [Tooltip("disableModelOnDeath가 true일 때, 사망 후 몇 초 뒤에 model을 비활성화할지 결정합니다.")] [ShowIf("disableModelOnDeath")]
+        [SerializeField] private float delayBeforeDisable = 3f;
+
         [Title("Rewards")] [Header("Experience Points")]
         [SerializeField] private bool grantExperienceOnDeath = false;
 
@@ -29,8 +33,8 @@ namespace Gameplay.Health {
 
         protected override void Awake() {
             base.Awake();
-            _entityHealth = GetComponent<YisoEntityHealth>();
-            _characterContext = GetComponent<IYisoCharacterContext>();
+            _entityHealth = GetComponentInParent<YisoEntityHealth>();
+            _characterContext = GetComponentInParent<IYisoCharacterContext>();
             _model = _characterContext != null ? _characterContext.Model : gameObject;
 
             if (respawnAtInitialLocation) {
@@ -54,7 +58,9 @@ namespace Gameplay.Health {
 
         private void HandleDeath() {
             if (grantExperienceOnDeath) GrantExperience();
-            if (disableModelOnDeath && _model != null) _model.SetActive(false);
+            if (_model != null && disableModelOnDeath) {
+                StartCoroutine(DisableModelAfterDelay());
+            }
             
             if (destroyOnDeath) {
                 DestroySelf();
@@ -70,11 +76,18 @@ namespace Gameplay.Health {
 
         private void GrantExperience() {
             if (!grantExperienceOnDeath) return;
-            // TODO: Core Service 연동
+            // TODO: Core Service 연동 (경험치)
+        }
+
+        private IEnumerator DisableModelAfterDelay() {
+            if (delayBeforeDestruction > 0f) {
+                yield return new WaitForSeconds(delayBeforeDestruction);
+            }
+            _model.SetActive(false);
         }
 
         private void DestroySelf() {
-            Destroy(gameObject, delayBeforeDestruction);
+            Destroy(_entityHealth.gameObject, delayBeforeDestruction);
         }
 
         private void OnApplicationQuit() {
