@@ -12,6 +12,11 @@ namespace Utils {
         /// <param name="C">the minimum bound of target interval [C,D]</param>
         /// <param name="D">the maximum bound of target interval [C,D]</param>
         public static float Remap(float x, float A, float B, float C, float D) {
+            // 0으로 나누기 방지: A == B이면 C 반환 (비율 계산 불가능)
+            if (Mathf.Approximately(B - A, 0f)) {
+                return C;
+            }
+
             float remappedValue = C + (x - A) / (B - A) * (D - C);
             return remappedValue;
         }
