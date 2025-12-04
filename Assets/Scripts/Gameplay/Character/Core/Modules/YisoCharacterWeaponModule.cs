@@ -47,15 +47,8 @@ namespace Gameplay.Character.Core.Modules {
             }
         }
 
-        public override void OnUpdate() {
-            base.OnUpdate();
-
-            // 무기 Animator를 캐릭터 Animator와 동기화
-            // YisoWeaponInstance.SyncAnimator에서 Hash 기반으로 동기화 수행
-            if (CurrentWeapon != null && Context.Animator != null) {
-                CurrentWeapon.SyncAnimator(Context.Animator);
-            }
-        }
+        // OnUpdate에서의 Bottom-up 동기화 제거
+        // → Top-down Push 방식으로 변경: AnimationModule.Set* 호출 시 자동으로 외부 Animator에 전파됨
 
         public override void OnDestroy() {
             base.OnDestroy();
@@ -92,6 +85,12 @@ namespace Gameplay.Character.Core.Modules {
 
             CurrentWeapon.Activate();
 
+            // 무기 Animator를 AnimationModule에 등록 (Top-down Push 방식)
+            if (CurrentWeapon.WeaponAnimator != null) {
+                var animationModule = Context.GetModule<YisoCharacterAnimationModule>();
+                animationModule?.RegisterExternalAnimator(CurrentWeapon.WeaponAnimator);
+            }
+
             Debug.Log($"[YisoCharacterWeaponModule] 무기 '{weaponData.weaponName}' 장착 완료.");
         }
 
@@ -100,6 +99,12 @@ namespace Gameplay.Character.Core.Modules {
         /// </summary>
         public void UnequipWeapon() {
             if (CurrentWeapon != null) {
+                // 무기 Animator 등록 해제
+                if (CurrentWeapon.WeaponAnimator != null) {
+                    var animationModule = Context.GetModule<YisoCharacterAnimationModule>();
+                    animationModule?.UnregisterExternalAnimator(CurrentWeapon.WeaponAnimator);
+                }
+
                 CurrentWeapon.Destroy();
                 CurrentWeapon = null;
             }
