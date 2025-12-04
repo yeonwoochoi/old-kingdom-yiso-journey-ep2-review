@@ -181,7 +181,11 @@ namespace Gameplay.Character.Abilities {
                 _animationModule.SetInteger(YisoCharacterAnimationState.Combo, comboValue);
 
                 // AttackSpeed 파라미터 (Continuous value)
-                _animationModule.SetFloat(YisoCharacterAnimationState.AttackSpeed, _weaponModule.GetCurrentWeaponData().attackRate);
+                // Note: WeaponDataSO의 attackRate는 내부 시스템용 값 (x2 배수)
+                // Animator AttackSpeed는 1.0 = 정상 속도이므로, attackRate를 0.5배하여 설정
+                // 예: attackRate = 2.0 → AttackSpeed = 1.0 (정상 속도)
+                var attackSpeed = _weaponModule.GetCurrentWeaponData().attackRate * 0.5f;
+                _animationModule.SetFloat(YisoCharacterAnimationState.AttackSpeed, attackSpeed);
             }
         }
 
