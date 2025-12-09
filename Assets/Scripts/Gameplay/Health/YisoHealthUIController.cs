@@ -34,7 +34,7 @@ namespace Gameplay.Health {
         [SerializeField] private YisoFloatingText floatingTextPrefab;
 
         [Tooltip("데미지 텍스트가 생성될 위치 오프셋입니다.")]
-        [SerializeField] private Vector3 floatingTextOffset = new Vector3(0, 1f, 0);
+        [SerializeField] private Vector3 floatingTextOffset = new Vector3(0, 0.5f, 0);
 
         [Title("Floating Text Colors")]
         [Tooltip("일반 데미지일 때의 텍스트 색상")]
