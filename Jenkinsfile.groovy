@@ -22,13 +22,35 @@ pipeline{
                 script{
                     withEnv(["UNITY_PATH=${UNITY_INSTALLATION}"]){
                         bat '''
-                        echo "Current Directory Check:"
-                        cd
+                        echo "=== 1. 기존 빌드 폴더 및 파일 청소 ==="
+                        if exist "Builds\\Windows" rmdir /s /q "Builds\\Windows"
+                        if exist "Builds\\Windows.zip" del /q "Builds\\Windows.zip"
                         
+                        echo "=== 2. 유니티 빌드 시작 ==="
                         "%UNITY_PATH%\\Unity.exe" -quit -batchmode -projectPath . -executeMethod BuildScript.BuildWindows -logFile -
+                        
+                        echo "=== 3. 버전 관리 (History 폴더에 백업) ==="
+                        if not exist "Builds\\History" mkdir "Builds\\History"
+
+                        
+                        :: Windows.zip이 성공적으로 만들어졌다면, 번호를 붙여서 복사한다.
+                        if exist "Builds\\Windows.zip" (
+                            copy "Builds\\Windows.zip" "Builds\\History\\Windows_Build_%BUILD_NUMBER%.zip"
+                            echo "백업 완료: Builds\\History\\Windows_Build_%BUILD_NUMBER%.zip"
+                        ) else (
+                            echo "에러: Windows.zip 파일이 생성되지 않았습니다!"
+                            exit 1
+                        )
                         '''
                     }
                 }
+            }
+        }
+
+        stage('Archive Artifacts') {
+            when { expression { BUILD_WINDOWS == 'true' } }
+            steps {
+                archiveArtifacts artifacts: 'Builds/History/Windows_Build_*.zip', allowEmptyArchive: true, onlyIfSuccessful: true
             }
         }
 
