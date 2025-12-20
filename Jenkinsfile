@@ -1,18 +1,16 @@
 def PROJECT_NAME = "old-kingdom-yiso-journey-ep2"
-def CUSTOM_WORKSPACE = "C:\\Jenkins\\Unity_Projects\\${PROJECT_NAME}"
+def CUSTOM_WORKSPACE = "C:\\Jenkins\\Unity_Projects"
 def UNITY_VERSION = "6000.0.62f1"
 def UNITY_INSTALLATION = "C:\\Program Files\\Unity\\Hub\\Editor\\${UNITY_VERSION}\\Editor"
 
 pipeline{
     environment{
-        PROJECT_PATH = "${CUSTOM_WORKSPACE}"
+        PROJECT_PATH = "${CUSTOM_WORKSPACE}\\${PROJECT_NAME}"
     }
 
     agent{
-        label{
-            label ""
-            customWorkspace "${CUSTOM_WORKSPACE}"
-        }
+        label ""
+        customWorkspace "${PROJECT_PATH}"
     }
 
     stages{
