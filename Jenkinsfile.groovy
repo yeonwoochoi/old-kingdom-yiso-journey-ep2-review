@@ -3,6 +3,9 @@ def CUSTOM_WORKSPACE = "C:\\Jenkins\\Unity_Projects"
 def UNITY_VERSION = "6000.0.62f1"
 def UNITY_INSTALLATION = "C:\\Program Files\\Unity\\Hub\\Editor\\${UNITY_VERSION}\\Editor"
 
+def NEXUS_IP = "localhost:8081"
+def NEXUS_REPO = "unity-builds"
+
 pipeline{
     environment{
         PROJECT_PATH = "${CUSTOM_WORKSPACE}\\${PROJECT_NAME}"
@@ -51,6 +54,24 @@ pipeline{
             when { expression { BUILD_WINDOWS == 'true' } }
             steps {
                 archiveArtifacts artifacts: 'Builds/History/Windows_Build_*.zip', allowEmptyArchive: true, onlyIfSuccessful: true
+            }
+        }
+
+        stage('Upload to Nexus') {
+            when { expression { BUILD_WINDOWS == 'true' } }
+            steps {
+                script {
+                    withCredentials([usernamePassword(credentialsId: 'nexus-auth', usernameVariable: 'NEXUS_USER', passwordVariable: 'NEXUS_PASS')]) {
+                        
+                        def uploadUrl = "http://${NEXUS_IP}/repository/${NEXUS_REPO}/Windows_Build_${env.BUILD_NUMBER}.zip"
+                        def sourceFile = "Builds\\History\\Windows_Build_${env.BUILD_NUMBER}.zip"
+                        
+                        bat """
+                        echo "=== Uploading to Nexus... ==="
+                        curl -v -u %NEXUS_USER%:%NEXUS_PASS% --upload-file "${sourceFile}" "${uploadUrl}"
+                        """
+                    }
+                }
             }
         }
 
