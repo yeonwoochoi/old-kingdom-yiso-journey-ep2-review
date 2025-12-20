@@ -20,7 +20,10 @@ pipeline{
                 script{
                     withEnv(["UNITY_PATH=${UNITY_INSTALLATION}"]){
                         bat '''
-                        "%UNITY_PATH%/Unity.exe" -quit -batchmode -projectPath . -executeMethod BuildScript.BuildWindows -logFile -
+                        echo "Current Directory Check:"
+                        cd
+                        
+                        "%UNITY_PATH%\\Unity.exe" -quit -batchmode -projectPath . -executeMethod BuildScript.BuildWindows -logFile -
                         '''
                     }
                 }
