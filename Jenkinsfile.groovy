@@ -9,8 +9,10 @@ pipeline{
     }
 
     agent{
-        label ""
-        customWorkspace "${PROJECT_PATH}"
+        node {
+            label ""
+            customWorkspace "${CUSTOM_WORKSPACE}\\${PROJECT_NAME}"
+        }
     }
 
     stages{
