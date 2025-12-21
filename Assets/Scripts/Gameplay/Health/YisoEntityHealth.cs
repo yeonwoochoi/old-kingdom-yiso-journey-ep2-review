@@ -76,7 +76,12 @@ namespace Gameplay.Health {
             if (!IsInitialized || IsDead) {
                 return;
             }
-            
+
+            // 무적 체크 - 무적이면 아무것도 하지 않고 리턴
+            if (_damageProcessor != null && !_damageProcessor.CanTakeDamage()) {
+                return;
+            }
+
             var previousHealth = CurrentHealth;
             var finalDamage = _damageProcessor == null
                 ? damageInfo.FinalDamage
@@ -85,7 +90,7 @@ namespace Gameplay.Health {
             CurrentHealth = Math.Max(CurrentHealth - finalDamage, 0f);
             OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
             OnDamaged?.Invoke(damageInfo);
-            
+
             if (CurrentHealth <= 0f && previousHealth > 0f) {
                 OnDied?.Invoke();
             }
