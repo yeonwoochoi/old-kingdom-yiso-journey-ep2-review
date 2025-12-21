@@ -36,9 +36,9 @@ namespace Gameplay.Character.Abilities {
 
         public override void ProcessAbility() {
             base.ProcessAbility();
-            
+
             CalculateInterpolatedInput();
-            
+
             FinalMovementInput = _lerpedInput;
 
             var movementIsPermitted = Context.GetCurrentState()?.CanMove ?? false;
@@ -49,6 +49,11 @@ namespace Gameplay.Character.Abilities {
 
             var characterMoveSpeed = _settings.baseMovementSpeed;
             var finalMovementVector = FinalMovementInput * (characterMoveSpeed * _speedMultiplier);
+
+            // 디버그: AI의 경우 이동 벡터 확인
+            if (!Context.IsPlayer) {
+                Debug.Log($"[MovementAbility] _currentInput: {_currentInput}, _lerpedInput: {_lerpedInput}, finalMovementVector: {finalMovementVector}");
+            }
 
             Context.Move(finalMovementVector);
 
@@ -101,6 +106,21 @@ namespace Gameplay.Character.Abilities {
 
         private void CalculateInterpolatedInput(bool forceDecelerate = false) {
             if (_currentInput.sqrMagnitude > _settings.idleThreshold * _settings.idleThreshold && !forceDecelerate) {
+                // 방향 전환 감지: 현재 입력과 이전 입력의 내적이 음수면 반대 방향
+                var directionChanged = false;
+                if (_lerpedInput.sqrMagnitude > 0.01f) {
+                    var dot = Vector2.Dot(_currentInput.normalized, _lerpedInput.normalized);
+                    if (dot < 0f) { // 반대 방향 (180도 이상)
+                        directionChanged = true;
+                    }
+                }
+
+                // 방향이 크게 바뀌면 가속도 리셋 (즉시 방향 전환)
+                if (directionChanged) {
+                    _currentAcceleration = 0f;
+                    _lerpedInput = Vector2.zero;
+                }
+
                 _currentAcceleration = Mathf.Lerp(_currentAcceleration, 1f, _settings.acceleration * Time.deltaTime);
                 _lerpedInput = _settings.useAnalogInput
                     ? Vector2.ClampMagnitude(_currentInput, _currentAcceleration)

@@ -9,14 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c0c1ca60edc47dd8d2dbe34f1382e3d, type: 3}
-  m_Name: SO_FSM_Transition_Common_IdleToPatrol
+  m_Script: {fileID: 11500000, guid: 049a0719320f48808c44d7c2e523ee1d, type: 3}
+  m_Name: SO_FSM_Decision_Common_TargetIsNull_Or_CheckWaitTime_Attack
   m_EditorClassIdentifier: 
-  _decisions:
+  description: "target\uC774 null\uC774\uAC70\uB098\n\uC77C\uC815 \uC2DC\uAC04 \uC9C0\uB098\uBA74
+    true"
+  decisions:
   - {fileID: 11400000, guid: ec51d78fde5af3540b2b8de81a8ff558, type: 2}
-  _isTrueStateRandom: 0
-  _trueState: {fileID: 11400000, guid: 0b215aa549c68d5469823c9bfb726b63, type: 2}
-  _trueStates: []
-  _isFalseStateRandom: 0
-  _falseState: {fileID: 0}
-  _falseStates: []
+  - {fileID: 11400000, guid: 3983b3849cfb9964a9eaddf856856f33, type: 2}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SO_FSM_Transition_Common_AttackToIdle
   m_EditorClassIdentifier: 
   _decisions:
-  - {fileID: 11400000, guid: ec51d78fde5af3540b2b8de81a8ff558, type: 2}
+  - {fileID: 11400000, guid: fda83055a3059524884d1daba19c8ab0, type: 2}
   _isTrueStateRandom: 0
   _trueState: {fileID: 11400000, guid: fe7b26fd90479064ab3b9095388a2edd, type: 2}
   _trueStates: []

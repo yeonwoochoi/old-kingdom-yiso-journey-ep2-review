@@ -30,7 +30,7 @@ namespace Gameplay.Character.StateMachine.Decisions.Tests {
         [Test]
         public void CheckWaitTime__WhenTimeNotPassed__ReturnsFalse() {
             // Arrange
-            var decision = ScriptableObject.CreateInstance<YisoCharacterDecisionSetRandomWaitTimeSO>(); // 이름 수정필요 (CheckWaitTimeSO)
+            var decision = ScriptableObject.CreateInstance<YisoCharacterDecisionCheckWaitTimeSO>(); // 이름 수정필요 (CheckWaitTimeSO)
             TestUtils.SetPrivateField(decision, "targetTimeKey", _targetTimeKey); // private 필드 주입
 
             // 목표 시간 3초 설정
@@ -46,7 +46,7 @@ namespace Gameplay.Character.StateMachine.Decisions.Tests {
         [Test]
         public void CheckWaitTime__WhenTimePassed__ReturnsTrue() {
             // Arrange
-            var decision = ScriptableObject.CreateInstance<YisoCharacterDecisionSetRandomWaitTimeSO>();
+            var decision = ScriptableObject.CreateInstance<YisoCharacterDecisionCheckWaitTimeSO>();
             TestUtils.SetPrivateField(decision, "targetTimeKey", _targetTimeKey);
 
             _blackboardModule.SetFloat(_targetTimeKey, 3.0f);

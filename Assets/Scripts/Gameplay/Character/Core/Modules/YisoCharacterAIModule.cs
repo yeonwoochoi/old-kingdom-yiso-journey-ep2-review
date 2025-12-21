@@ -52,6 +52,9 @@ namespace Gameplay.Character.Core.Modules {
             // TODO: 향후 NavMesh, A* 등으로 교체 가능
             var direction = (targetPosition - currentPosition).normalized;
             PathDirection = direction;
+
+            // 디버그: PathDirection 확인
+            Debug.Log($"[AIModule] Current: {currentPosition}, Destination: {targetPosition}, PathDirection: {PathDirection}");
         }
 
         #region Public API

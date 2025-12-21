@@ -70,7 +70,10 @@ namespace Gameplay.Core {
             if (_friction is > 0f and < 1f) {
                 currentMovement = Vector2.Lerp(currentMovement, Vector2.zero, 1 - _friction);
             }
-            MovePosition(_rigidbody2D.position + (currentMovement + _surfaceForce) * Time.fixedDeltaTime);
+
+            var finalMovement = (currentMovement + _surfaceForce) * Time.fixedDeltaTime;
+            Debug.Log($"[TopDownController] currentMovement: {currentMovement}, surfaceForce: {_surfaceForce}, finalMovement: {finalMovement}");
+            MovePosition(_rigidbody2D.position + finalMovement);
         }
 
         public void SetCollisionsEnabled(bool state) {

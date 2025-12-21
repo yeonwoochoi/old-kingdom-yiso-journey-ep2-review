@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c476139266aa4bb8a7689ed8a3bbe37d, type: 3}
-  m_Name: SO_FSM_Decision_Common_SetRandomWaitTime_Over
+  m_Script: {fileID: 11500000, guid: 733ef947b314a9b41a84521176628dbe, type: 3}
+  m_Name: SO_FSM_Decision_Common_CheckWaitTime_Spawn
   m_EditorClassIdentifier: 
-  description: "\uC77C\uC815 \uC2DC\uAC04 \uC774\uC0C1 state\uC5D0 \uBA38\uBB3C\uC5C8\uB294\uC9C0
-    \uC5EC\uBD80 \uCCB4\uD06C\nTrue: \uC2DC\uAC04 \uCD08\uACFC\nFalse: x"
+  description: 
   targetTimeKey: {fileID: 11400000, guid: bdb072b00158cc748a60d8b5f9666bb3, type: 2}

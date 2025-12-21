@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b243fc8520094ffbbf48bc694014b5f3, type: 3}
-  m_Name: SO_FSM_Action_Common_SetRandomWaitTime
+  m_Name: SO_FSM_Action_Common_SetRandomWaitTime_Attack
   m_EditorClassIdentifier: 
   description: 
-  minTimeKey: {fileID: 11400000, guid: 33d68a1c2fe3e9f4f9fefd83cbbda2f0, type: 2}
-  maxTimeKey: {fileID: 11400000, guid: bc8c78fe352d8a640980d48ff944bad0, type: 2}
-  resultKey: {fileID: 11400000, guid: 07a31423cd4959e47bfa3352e509c9e2, type: 2}
+  minTimeKey: {fileID: 11400000, guid: 0a36b711c2caf70419f35d36b7585ed1, type: 2}
+  maxTimeKey: {fileID: 11400000, guid: dc3d5d4c05cfb874a826b1f1575b8e5d, type: 2}
+  resultKey: {fileID: 11400000, guid: ef27f533b7a151d4f82d263f78fab12b, type: 2}
