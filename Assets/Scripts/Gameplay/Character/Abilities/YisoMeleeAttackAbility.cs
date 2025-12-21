@@ -259,8 +259,12 @@ namespace Gameplay.Character.Abilities {
             }
 
             // [핵심] FSM에 Attack 상태 전이 요청
-            // StateModule이 Transition 검증 후 승인/거부 결정
-            Context.RequestStateChangeByRole(YisoStateRole.Attack);
+            // Player만 State 전환 요청 (AI는 FSM이 이미 전환함)
+            // 또한 이미 Attack 상태라면 재전환 방지 (콤보 연계 시)
+            var currentState = Context.GetCurrentState();
+            if (currentState?.Role != YisoStateRole.Attack) {
+                Context.RequestStateChangeByRole(YisoStateRole.Attack);
+            }
 
             // 콤보 업데이트 (콤보 사용 시에만)
             if (_settings.useComboAttacks) {
@@ -399,21 +403,25 @@ namespace Gameplay.Character.Abilities {
             }
 
             // 4. 콤보 계속 또는 종료
-            _isAttacking = false; 
-            
+            _isAttacking = false;
+
             if (shouldContinueCombo) {
                 // 콤보 계속: 다음 공격 시도
                 var attackStarted = TryAttack();
 
                 // 공격이 실패하면 (쿨타임, 무기 없음 등) Idle로 전환
-                if (!attackStarted) {
+                // Player만 State 전환 요청 (AI는 FSM Transition이 처리)
+                if (!attackStarted && Context.IsPlayer) {
                     Context.RequestStateChangeByRole(YisoStateRole.Idle);
                 }
                 // 공격이 성공하면 Attack 상태 유지 (TryAttack에서 이미 RequestStateChange 호출)
             }
             else {
                 // 콤보 종료: Idle로 전환
-                Context.RequestStateChangeByRole(YisoStateRole.Idle);
+                // Player만 State 전환 요청 (AI는 FSM Transition이 처리)
+                if (Context.IsPlayer) {
+                    Context.RequestStateChangeByRole(YisoStateRole.Idle);
+                }
             }
         }
 
