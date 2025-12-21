@@ -31,32 +31,60 @@ namespace Gameplay.Character.Data {
         
         private bool _initialized = false;
 
-        protected override void Awake() {
-            base.Awake();
+        protected override void Start() {
+            base.Start();
             InitializeBlackboard();
         }
 
         private void InitializeBlackboard() {
             if (_initialized) return;
             _initialized = true;
-            
-            var context = GetComponentInParent<IYisoCharacterContext>();
 
-            var module = context?.GetModule<YisoCharacterBlackboardModule>();
-            if (module == null) {
-                Debug.LogError($"YisoCharacterBlackboardModule not found");
+            var context = GetComponentInParent<IYisoCharacterContext>();
+            if (context == null) {
+                Debug.LogError($"[{gameObject.name}] YisoCharacter not found! BlackboardInitializer must be a child of YisoCharacter.", this);
+                enabled = false;
                 return;
             }
 
-            foreach (var e in _floatEntries) module.SetFloat(e.key, e.value);
-            foreach (var e in _intEntries) module.SetInt(e.key, e.value);
-            foreach (var e in _stringEntries) module.SetString(e.key, e.value);
-            foreach (var e in _boolEntries) module.SetBool(e.key, e.value);
-            foreach (var e in _objectEntries) module.SetObject(e.key, e.value);
+            var module = context.GetModule<YisoCharacterBlackboardModule>();
+            if (module == null) {
+                Debug.LogError($"[{gameObject.name}] YisoCharacterBlackboardModule not found!", this);
+                enabled = false;
+                return;
+            }
+
+            // Null key 체크와 함께 초기화
+            foreach (var e in _floatEntries) {
+                if (e.key == null) { Debug.LogWarning($"[{gameObject.name}] Float entry has null key. Skipping.", this); continue; }
+                module.SetFloat(e.key, e.value);
+            }
+            foreach (var e in _intEntries) {
+                if (e.key == null) { Debug.LogWarning($"[{gameObject.name}] Int entry has null key. Skipping.", this); continue; }
+                module.SetInt(e.key, e.value);
+            }
+            foreach (var e in _stringEntries) {
+                if (e.key == null) { Debug.LogWarning($"[{gameObject.name}] String entry has null key. Skipping.", this); continue; }
+                module.SetString(e.key, e.value);
+            }
+            foreach (var e in _boolEntries) {
+                if (e.key == null) { Debug.LogWarning($"[{gameObject.name}] Bool entry has null key. Skipping.", this); continue; }
+                module.SetBool(e.key, e.value);
+            }
+            foreach (var e in _objectEntries) {
+                if (e.key == null) { Debug.LogWarning($"[{gameObject.name}] Object entry has null key. Skipping.", this); continue; }
+                module.SetObject(e.key, e.value);
+            }
             foreach (var e in _vectorEntries) {
+                if (e.key == null) { Debug.LogWarning($"[{gameObject.name}] Vector entry has null key. Skipping.", this); continue; }
                 var finalValue = e.useCurrentPosition ? context.Transform.position : e.value;
                 module.SetVector(e.key, finalValue);
             }
+
+            Debug.Log($"Blackboard initialized on [{name}]");
+
+            // 초기화 완료 후 컴포넌트 비활성화 (더 이상 필요 없음)
+            enabled = false;
         }
     }
 }
