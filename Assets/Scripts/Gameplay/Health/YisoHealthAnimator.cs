@@ -71,8 +71,13 @@ namespace Gameplay.Health {
             if (_entityHealth == null) {
                 Debug.LogError($"[{gameObject.name}] YisoHealthAnimator: YisoEntityHealth를 찾을 수 없습니다!", this);
                 updateAnimatorParameters = false;
+                enabled = false;
                 return;
             }
+        }
+
+        protected override void Start() {
+            base.Start();
 
             // YisoCharacter Context 가져오기 (캐릭터가 아닌 경우 null)
             _context = GetComponentInParent<IYisoCharacterContext>();
@@ -85,6 +90,7 @@ namespace Gameplay.Health {
                 Debug.LogWarning($"[{gameObject.name}] YisoHealthAnimator: YisoCharacterAnimationModule을 찾을 수 없습니다. " +
                                  "이 컴포넌트는 YisoCharacter에만 작동합니다.", this);
                 updateAnimatorParameters = false;
+                enabled = false;
             }
         }
 
