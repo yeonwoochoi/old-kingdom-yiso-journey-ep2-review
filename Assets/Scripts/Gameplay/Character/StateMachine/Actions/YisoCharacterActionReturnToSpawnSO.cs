@@ -12,6 +12,7 @@ namespace Gameplay.Character.StateMachine.Actions {
     public class YisoCharacterActionReturnToSpawnSO: YisoCharacterActionSO {
         [Header("Blackboard Keys")]
         [SerializeField] private YisoBlackboardKeySO spawnPositionKey; // 스폰 위치 (Vector3)
+        [SerializeField] private YisoBlackboardKeySO targetKey; // 타겟 키 (초기화용)
 
         public override void PerformAction(IYisoCharacterContext context) {
             if (spawnPositionKey == null) {
@@ -24,6 +25,12 @@ namespace Gameplay.Character.StateMachine.Actions {
             if (aiModule == null || bb == null) {
                 Debug.LogWarning($"[ReturnToSpawn] AIModule or Blackboard is null!");
                 return;
+            }
+
+            // Target 초기화 (복귀 중엔 타겟을 추적하지 않음)
+            if (targetKey != null) {
+                bb.SetObject(targetKey, null);
+                Debug.Log($"[ReturnToSpawn] Target cleared from Blackboard");
             }
 
             // SpawnPosition 가져오기
@@ -41,6 +48,9 @@ namespace Gameplay.Character.StateMachine.Actions {
             // 스폰 위치로 이동
             var targetPosition = (Vector2)spawnPosition;
             aiModule.SetDestination(targetPosition);
+
+            // 추가 디버깅: Destination이 제대로 설정되었는지 확인
+            Debug.Log($"[ReturnToSpawn] AIModule.Destination set to: {aiModule.Destination}, PathDirection will be: {((Vector2)context.Transform.position - targetPosition).normalized * -1f}");
         }
     }
 }
