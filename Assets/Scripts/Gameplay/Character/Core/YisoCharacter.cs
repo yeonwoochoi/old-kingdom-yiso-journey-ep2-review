@@ -112,6 +112,16 @@ namespace Gameplay.Character.Core {
                 Debug.LogError($"[{gameObject.name}]에 IPhysicsControllable을 구현한 컴포넌트(예: TopDownController)가 없습니다!", this);
             }
 
+            // [중요] InputModule/AIModule은 AbilityModule보다 먼저 등록해야 함
+            // 이유: AbilityModule의 MovementAbility가 Context.MovementVector(InputModule.MoveInput 또는 AIModule.PathDirection)를
+            // 조회하므로, OnUpdate() 실행 순서상 Input/AI 모듈이 먼저 업데이트되어야 최신 값을 사용할 수 있다.
+            if (IsPlayer) {
+                RegisterModule(new YisoCharacterInputModule(this, _inputSettings));
+            }
+            else {
+                RegisterModule(new YisoCharacterAIModule(this, _aiSettings));
+            }
+
             // 기능에 맞는 모듈 생성 및 등록.
             RegisterModule(new YisoCharacterAbilityModule(this, _abilitySettings));
             RegisterModule(new YisoCharacterAnimationModule(this, _animationSettings));
@@ -121,14 +131,6 @@ namespace Gameplay.Character.Core {
             RegisterModule(new YisoCharacterSaveModule(this, _saveSettings));
             RegisterModule(new YisoCharacterStateModule(this, _stateSettings));
             RegisterModule(new YisoCharacterWeaponModule(this, _weaponSettings));
-
-            // 플레이어 타입일 경우, 입력 모듈 추가.
-            if (IsPlayer) {
-                RegisterModule(new YisoCharacterInputModule(this, _inputSettings));
-            }
-            else {
-                RegisterModule(new YisoCharacterAIModule(this, _aiSettings));
-            }
 
             // 1단계: 모듈 독립 초기화. (다른 모듈 참조 금지)
             foreach (var module in _modules.Values) {
