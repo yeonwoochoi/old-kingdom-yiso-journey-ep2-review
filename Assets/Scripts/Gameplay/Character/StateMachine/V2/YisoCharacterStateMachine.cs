@@ -10,11 +10,12 @@ namespace Gameplay.Character.StateMachine.V2 {
         [SerializeField] private string initialState;
         [SerializeField] private bool randomizeFrequencies = true;
         
+        // Transition 체크 주기 설정
         [ShowIf("randomizeFrequencies")] 
-        [SerializeField] private Vector2 actionFrequencyRange = new Vector2(0.1f, 0.2f);
+        [SerializeField] private Vector2 actionFrequencyRange = new Vector2(0.1f, 0.2f); // 범위 내 랜덤 값 주기로 체크
         
         [HideIf("randomizeFrequencies")]
-        [SerializeField] private float actionFrequency = 0.1f;
+        [SerializeField] private float actionFrequency = 0.1f; // 정해진 주기로 체크
 
         [Title("States")]
         [SerializeField] private List<YisoCharacterState> states;
@@ -61,22 +62,18 @@ namespace Gameplay.Character.StateMachine.V2 {
             base.OnUpdate();
             
             if (CurrentState == null) return;
+                
+            CurrentState?.PlayUpdateActions();
 
             _timer += Time.deltaTime;
-
             if (_timer >= _currentFrequency) {
                 _timer = 0f;
                 ResetFrequency();
                 
-                // 1. Transition Check
                 var nextStateKey = CurrentState.CheckTransitions();
                 if (!string.IsNullOrEmpty(nextStateKey)) {
                     ChangeState(nextStateKey);
-                    return; // 상태 바뀌었으면 다음 프레임부터 Update Action 호출됨 (선택사항)
                 }
-                
-                // 2. Update Action
-                CurrentState?.PlayUpdateActions();
             }
         }
 
