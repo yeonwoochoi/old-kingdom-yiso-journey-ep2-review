@@ -49,9 +49,6 @@ namespace Gameplay.Character.Core.Modules {
 
             // 1. 어빌리티들에게 사망 알림 (이펙트 끄기, 로직 중단 등)
             _abilityModule?.OnDeath();
-
-            // 2. FSM 상태 전환
-            _stateModule?.RequestStateChangeByRole(YisoStateRole.Died, true);
         }
 
         private void OnCharacterRevived() {
@@ -59,9 +56,6 @@ namespace Gameplay.Character.Core.Modules {
 
             // 1. 어빌리티들에게 부활 알림 (초기화, 잠금 해제)
             _abilityModule?.OnRevive();
-
-            // 2. FSM을 Idle 상태로 전환
-            _stateModule?.RequestStateChangeByRole(YisoStateRole.Idle);
         }
 
         public override void OnDestroy() {

@@ -1,7 +1,6 @@
 ﻿using Gameplay.Character.Abilities.Definitions;
 using Gameplay.Character.Core;
 using Gameplay.Character.Core.Modules;
-using Gameplay.Character.StateMachine;
 using Gameplay.Character.Types;
 using Gameplay.Character.Weapon;
 using UnityEngine;
@@ -15,7 +14,6 @@ namespace Gameplay.Character.Abilities {
         private readonly YisoOrientationAbilitySO _settings;
 
         private YisoMovementAbility _movementAbility;
-        private YisoCharacterStateModule _stateModule;
         private YisoCharacterWeaponModule _weaponModule;
         private YisoWeaponAim _weaponAim;
         // private YisoBaseAim _weaponAim; // TODO (Weapon Aim) 구현 후 참조하기
@@ -67,8 +65,6 @@ namespace Gameplay.Character.Abilities {
                 _movementAbility = abilityModule.GetAbility<YisoMovementAbility>();
             }
             
-            _stateModule = Context.GetModule<YisoCharacterStateModule>();
-            
             _weaponModule = Context.GetModule<YisoCharacterWeaponModule>();
             if (_weaponModule != null) {
                 _weaponAim = _weaponModule.CurrentWeapon?.WeaponAim;
@@ -97,16 +93,11 @@ namespace Gameplay.Character.Abilities {
         }
 
         private Vector2 DetermineSourceDirection() {
-            var currentState = _stateModule?.CurrentState;
-            if (currentState == null) return LastDirectionVector;
-
             // "공격" 시 aim 기반 방향 결정 (1순위)
-            if (currentState.Role is YisoStateRole.Attack or YisoStateRole.SkillAttack) {
-                if (_weaponAim != null) {
-                    var aimDirection = _weaponAim.CurrentAim;
-                    if (aimDirection.sqrMagnitude > _settings.aimThreshold * _settings.aimThreshold) {
-                        return aimDirection;
-                    }
+            if (_weaponAim != null) {
+                var aimDirection = _weaponAim.CurrentAim;
+                if (aimDirection.sqrMagnitude > _settings.aimThreshold * _settings.aimThreshold) {
+                    return aimDirection;
                 }
             }
 

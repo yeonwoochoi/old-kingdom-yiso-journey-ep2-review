@@ -16,6 +16,30 @@ namespace Gameplay.Character.Core.Modules {
         private readonly List<IYisoCharacterAbility> _abilityList;
 
         private readonly Settings _settings;
+        
+        /// <summary>
+        /// 현재 이동을 막고 있는 어빌리티가 하나라도 있는지 확인
+        /// </summary>
+        public bool IsMovementBlocked {
+            get {
+                foreach (var ability in _abilityList) {
+                    if (ability.PreventsMovement) return true;
+                }
+                return false;
+            }
+        }
+        
+        /// <summary>
+        /// 현재 공격을 막고 있는 어빌리티가 하나라도 있는지 확인
+        /// </summary>
+        public bool IsAttackBlocked {
+            get {
+                foreach (var ability in _abilityList) {
+                    if (ability.PreventsAttack) return true;
+                }
+                return false;
+            }
+        }
 
         public YisoCharacterAbilityModule(IYisoCharacterContext context, Settings settings) : base(context) {
             _settings = settings;

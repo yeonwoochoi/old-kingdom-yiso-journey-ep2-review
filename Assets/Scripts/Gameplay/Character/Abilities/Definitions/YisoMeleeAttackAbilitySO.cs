@@ -13,6 +13,7 @@ namespace Gameplay.Character.Abilities.Definitions {
         [Header("Attack Settings")]
         [Tooltip("콤보 공격 사용 여부")]
         public bool useComboAttacks = false;
+        public bool canMoveWhileAttacking = false;
         
         public override IYisoCharacterAbility CreateAbility() {
             return new YisoMeleeAttackAbility(this);

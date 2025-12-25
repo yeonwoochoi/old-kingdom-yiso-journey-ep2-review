@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using Gameplay.Character.Abilities.Definitions;
 using Gameplay.Character.Core.Modules;
-using Gameplay.Character.StateMachine;
 using UnityEngine;
 
 namespace Gameplay.Character.Abilities {
@@ -41,10 +40,9 @@ namespace Gameplay.Character.Abilities {
 
             FinalMovementInput = _lerpedInput;
 
-            var movementIsPermitted = Context.GetCurrentState()?.CanMove ?? false;
-            if (!movementIsPermitted) {
+            if (!Context.IsMovementAllowed) {
                 Context.Move(Vector2.zero);
-                return;
+                return; 
             }
 
             var characterMoveSpeed = _settings.baseMovementSpeed;
@@ -56,25 +54,6 @@ namespace Gameplay.Character.Abilities {
             }
 
             Context.Move(finalMovementVector);
-
-            // 플레이어만 입력 기반으로 상태를 자동 전환합니다.
-            // AI는 FSM의 Transition 규칙에 따라 스스로 상태를 바꿉니다.
-            if (Context.IsPlayer) {
-                // [핵심] FSM 상태 동기화 요청
-                var currentState = Context.GetCurrentState();
-                if (currentState != null) {
-                    var isMoving = FinalMovementInput.sqrMagnitude > 0.01f;
-
-                    // Idle -> Move: 이동 입력이 있고 현재 Idle 상태일 때
-                    if (isMoving && currentState.Role == YisoStateRole.Idle) {
-                        Context.RequestStateChangeByRole(YisoStateRole.Move);
-                    }
-                    // Move -> Idle: 이동 입력이 없고 현재 Move 상태일 때
-                    else if (!isMoving && currentState.Role == YisoStateRole.Move) {
-                        Context.RequestStateChangeByRole(YisoStateRole.Idle);
-                    }
-                }
-            }
         }
 
         public override void UpdateAnimator() {

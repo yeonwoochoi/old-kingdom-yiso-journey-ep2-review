@@ -1,7 +1,6 @@
 using Gameplay.Character.Abilities.Definitions;
 using Gameplay.Character.Core.Modules;
 using Gameplay.Character.Data;
-using Gameplay.Character.StateMachine;
 using Gameplay.Character.Types;
 using UnityEngine;
 
@@ -43,6 +42,9 @@ namespace Gameplay.Character.Abilities {
 
         // Safety Net: 애니메이션 이벤트가 씹혀도 강제 종료하는 안전장치
         private float _safetyTimer = 0f;
+        
+        // 공격 중에 움직이지 못하게 할건지 설정하는 부분
+        public override bool PreventsMovement => _isAttacking && !_settings.canMoveWhileAttacking;
 
         public YisoMeleeAttackAbility(YisoMeleeAttackAbilitySO settings) {
             _settings = settings;
@@ -133,6 +135,25 @@ namespace Gameplay.Character.Abilities {
 
         public override void ProcessAbility() {
             base.ProcessAbility();
+
+            // "공격 중인데" 권한이 사라졌다면 강제 중단 (인터럽트)
+            if (_isAttacking && !Context.IsAttackAllowed) {
+                // 1. 콤보 예약 삭제 (중요: 이거 안 하면 HandleAttackEnd에서 다음 공격 시도함)
+                _nextAttackQueued = false; 
+        
+                // 2. 데미지 판정 끄기
+                HandleDisableDamage();
+        
+                // 3. 공격 종료 처리
+                HandleAttackEnd();
+        
+                return; 
+            }
+
+            // 공격 중이 아니고 권한도 없다면 로직 패스
+            if (!_isAttacking && !Context.IsAttackAllowed) {
+                return;
+            }
 
             // Safety Net: 애니메이션 이벤트가 호출되지 않는 경우 강제 종료
             if (_isAttacking && _safetyTimer > 0f) {
@@ -244,6 +265,8 @@ namespace Gameplay.Character.Abilities {
         /// </summary>
         /// <returns>공격이 성공적으로 시작되었으면 true, 실패하면 false</returns>
         private bool TryAttack() {
+            if (!Context.IsAttackAllowed) return false;
+            
             // 무기가 없으면 공격 불가
             if (_weaponModule == null || !_weaponModule.HasWeapon()) {
                 return false;
@@ -256,14 +279,6 @@ namespace Gameplay.Character.Abilities {
             var cooldown = weaponData.GetAttackCooldown();
             if (Time.time - _lastAttackTime < cooldown) {
                 return false;
-            }
-
-            // [핵심] FSM에 Attack 상태 전이 요청
-            // Player만 State 전환 요청 (AI는 FSM이 이미 전환함)
-            // 또한 이미 Attack 상태라면 재전환 방지 (콤보 연계 시)
-            var currentState = Context.GetCurrentState();
-            if (currentState?.Role != YisoStateRole.Attack) {
-                Context.RequestStateChangeByRole(YisoStateRole.Attack);
             }
 
             // 콤보 업데이트 (콤보 사용 시에만)
@@ -406,22 +421,7 @@ namespace Gameplay.Character.Abilities {
             _isAttacking = false;
 
             if (shouldContinueCombo) {
-                // 콤보 계속: 다음 공격 시도
-                var attackStarted = TryAttack();
-
-                // 공격이 실패하면 (쿨타임, 무기 없음 등) Idle로 전환
-                // Player만 State 전환 요청 (AI는 FSM Transition이 처리)
-                if (!attackStarted && Context.IsPlayer) {
-                    Context.RequestStateChangeByRole(YisoStateRole.Idle);
-                }
-                // 공격이 성공하면 Attack 상태 유지 (TryAttack에서 이미 RequestStateChange 호출)
-            }
-            else {
-                // 콤보 종료: Idle로 전환
-                // Player만 State 전환 요청 (AI는 FSM Transition이 처리)
-                if (Context.IsPlayer) {
-                    Context.RequestStateChangeByRole(YisoStateRole.Idle);
-                }
+                TryAttack();
             }
         }
 

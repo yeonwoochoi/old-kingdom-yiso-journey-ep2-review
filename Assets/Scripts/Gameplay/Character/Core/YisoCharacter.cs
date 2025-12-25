@@ -17,12 +17,6 @@ namespace Gameplay.Character.Core {
     /// </summary>
     [AddComponentMenu("Yiso/Gameplay/Character/Core/Character")]
     public class YisoCharacter : RunIBehaviour, IYisoCharacterContext {
-        [Header("Current State")]
-        [ShowInInspector, ReadOnly]
-        public YisoCharacterStateSO CurrentState => !Application.isPlaying ? null : GetModule<YisoCharacterStateModule>()?.CurrentState;
-        [ShowInInspector, ReadOnly]
-        public int CurrentCombo => !Application.isPlaying ? -1 : GetModule<YisoCharacterWeaponModule>().CurrentWeapon.CurrentComboIndex;
-
         [Header("Base Settings")]
         [SerializeField] private CharacterType characterType;
         [SerializeField] private string characterID = "";
@@ -86,7 +80,43 @@ namespace Gameplay.Character.Core {
                 return animator;
             }
         }
-        
+
+        public bool IsMovementAllowed {
+            get {
+                // 1. 죽었으면 못 움직임
+                if (IsDead()) return false;
+
+                // (TODO) 2. 상태이상(CC기) 걸렸으면 못 움직임 (나중에 추가)
+                // if (StatusModule.IsStunned) return false;
+
+                // 3. 다른 Ability가 이동을 막고 있으면 못 움직임
+                var abilityModule = GetModule<YisoCharacterAbilityModule>();
+                if (abilityModule != null && abilityModule.IsMovementBlocked) {
+                    return false;
+                }
+
+                return true;
+            }
+        }
+
+        public bool IsAttackAllowed {
+            get {
+                // 1. 죽었으면 못 움직임
+                if (IsDead()) return false;
+
+                // (TODO) 2. 상태이상(CC기) 걸렸으면 못 움직임 (나중에 추가)
+                // if (StatusModule.IsStunned) return false;
+
+                // 3. 다른 Ability가 이동을 막고 있으면 못 움직임
+                var abilityModule = GetModule<YisoCharacterAbilityModule>();
+                if (abilityModule != null && abilityModule.IsAttackBlocked) {
+                    return false;
+                }
+
+                return true;
+            }
+        }
+
         // 모든 기능 모듈을 타입별로 저장하는 딕셔너리.
         private Dictionary<Type, IYisoCharacterModule> _modules;
         private IPhysicsControllable _physicsController;
@@ -172,16 +202,6 @@ namespace Gameplay.Character.Core {
         public new void StopCoroutine(Coroutine routine) {
             base.StopCoroutine(routine);
         }
-
-        public YisoCharacterStateSO GetCurrentState() {
-            return GetModule<YisoCharacterStateModule>().CurrentState;
-        }
-
-        // --- 기능 위임 메소드 (Facade Pattern): 복잡한 내부 구조를 숨기고 간단한 사용법 제공. ---
-        
-        public void RequestStateChange(YisoCharacterStateSO newState) => GetModule<YisoCharacterStateModule>().RequestStateChange(newState);
-        public void RequestStateChangeByKey(string newStateName) => GetModule<YisoCharacterStateModule>().RequestStateChangeByKey(newStateName);
-        public void RequestStateChangeByRole(YisoStateRole newStateRole) => GetModule<YisoCharacterStateModule>().RequestStateChangeByRole(newStateRole);
 
         public void Move(Vector2 finalMovementVector) {
             _physicsController.SetMovement(finalMovementVector);

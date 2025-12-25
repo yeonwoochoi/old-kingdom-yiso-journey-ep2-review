@@ -23,10 +23,6 @@ namespace Gameplay.Character.Core {
         T GetModule<T>() where T : class, IYisoCharacterModule;
         Coroutine StartCoroutine(IEnumerator routine);
         void StopCoroutine(Coroutine routine);
-        YisoCharacterStateSO GetCurrentState();
-        void RequestStateChange(YisoCharacterStateSO newStateSO);
-        void RequestStateChangeByKey(string newStateName);
-        void RequestStateChangeByRole(YisoStateRole newStateRole);
         void Move(Vector2 finalMovementVector);
         void PlayAnimation(YisoCharacterAnimationState state, bool value);
         void PlayAnimation(YisoCharacterAnimationState state, float value);
@@ -36,5 +32,7 @@ namespace Gameplay.Character.Core {
         float GetCurrentHealth();
         bool IsDead();
         void TakeDamage(DamageInfo damage);
+        bool IsMovementAllowed { get; }
+        bool IsAttackAllowed { get; }
     }
 }

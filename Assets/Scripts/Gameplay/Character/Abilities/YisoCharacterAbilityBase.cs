@@ -31,6 +31,18 @@ namespace Gameplay.Character.Abilities {
 
         // --- 애니메이션 이벤트 로직 ---
         void OnAnimationEvent(string eventName);
+
+        /// <summary>
+        /// 이 어빌리티가 활성화된 동안 이동(Movement)을 제한할지 여부
+        /// (예: 공격 중에는 이동 불가)
+        /// </summary>
+        bool PreventsMovement { get; }
+
+        /// <summary>
+        /// 이 어빌리티가 활성화된 동안 다른 공격(Attack)을 제한할지 여부
+        /// (예: 스킬 시전 중에는 기본 공격 불가)
+        /// </summary>
+        bool PreventsAttack { get; }
     }
     
     /// <summary>
@@ -39,17 +51,17 @@ namespace Gameplay.Character.Abilities {
     /// </summary>
     public abstract class YisoCharacterAbilityBase : IYisoCharacterAbility {
         protected IYisoCharacterContext Context { get; private set; }
-        protected YisoCharacterStateModule _stateModule;
         protected YisoCharacterAnimationModule _animationModule;
 
-        public virtual bool IsAbilityEnabled => _stateModule?.CurrentState == null || _stateModule.CurrentState.CanCastAbility;
+        public virtual bool IsAbilityEnabled => true;
+        public virtual bool PreventsMovement => false; // 기본적으로는 이동을 막지 않음
+        public virtual bool PreventsAttack => false; // 기본적으로는 공격을 막지 않음
 
         /// <summary>
         /// 어빌리티 최초 생성 시 1회 호출. 컨텍스트 주입 등 기본 설정.
         /// </summary>
         public virtual void Initialize(IYisoCharacterContext context) {
             Context = context;
-            _stateModule = Context.GetModule<YisoCharacterStateModule>();
             _animationModule = Context.GetModule<YisoCharacterAnimationModule>();
         }
 
