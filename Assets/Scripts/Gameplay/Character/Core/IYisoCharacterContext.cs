@@ -32,6 +32,7 @@ namespace Gameplay.Character.Core {
         void PlayAnimation(YisoCharacterAnimationState state, float value);
         void PlayAnimation(YisoCharacterAnimationState state, int value);
         void PlayAnimation(YisoCharacterAnimationState state);
+        public void OnAnimationEvent(string eventName);
         float GetCurrentHealth();
         bool IsDead();
         void TakeDamage(DamageInfo damage);

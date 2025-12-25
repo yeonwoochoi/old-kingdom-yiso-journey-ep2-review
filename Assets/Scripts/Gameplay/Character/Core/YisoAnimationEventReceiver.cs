@@ -9,15 +9,15 @@ namespace Gameplay.Character.Core {
     [RequireComponent(typeof(Animator))]
     [AddComponentMenu("Yiso/Character/Animation Event Receiver")]
     public class YisoAnimationEventReceiver : MonoBehaviour {
-        private YisoCharacter _character;
+        private IYisoCharacterContext _character;
 
         private void Awake() {
             // 부모 계층에서 YisoCharacter 찾기
-            _character = GetComponentInParent<YisoCharacter>();
+            _character = GetComponentInParent<IYisoCharacterContext>();
 
             if (_character == null) {
-                Debug.LogError($"[YisoAnimationEventReceiver] YisoCharacter를 찾을 수 없습니다. " +
-                               $"이 컴포넌트는 YisoCharacter의 자식 오브젝트에 있어야 합니다. GameObject: {gameObject.name}");
+                Debug.LogError($"[YisoAnimationEventReceiver] IYisoCharacterContext를 찾을 수 없습니다. " +
+                               $"이 컴포넌트는 IYisoCharacterContext의 자식 오브젝트에 있어야 합니다. GameObject: {gameObject.name}");
             }
         }
 
