@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using Gameplay.Character.Abilities.Definitions;
+﻿using Gameplay.Character.Abilities.Definitions;
 using Gameplay.Character.Core.Modules;
 using UnityEngine;
 
@@ -17,7 +16,7 @@ namespace Gameplay.Character.Abilities {
         private float _currentAcceleration;
 
         private float _speedMultiplier = 1f;
-        private Coroutine _temporaryMultiplierCoroutine;
+        private float _multiplierEndTime = -1f;
 
         public Vector2 FinalMovementInput { get; private set; }
 
@@ -36,14 +35,23 @@ namespace Gameplay.Character.Abilities {
         public override void ProcessAbility() {
             base.ProcessAbility();
 
-            CalculateInterpolatedInput();
-
-            FinalMovementInput = _lerpedInput;
-
-            if (!Context.IsMovementAllowed) {
-                Context.Move(Vector2.zero);
-                return; 
+            // 임시 속도 배율 타이머 체크
+            if (_multiplierEndTime > 0f && Time.time >= _multiplierEndTime) {
+                _speedMultiplier = 1f;
+                _multiplierEndTime = -1f;
             }
+            
+            if (!Context.IsMovementAllowed) {
+                // 내부 가속도 상태 초기화 (스턴 해제 시 급발진 방지)
+                _currentAcceleration = 0f;
+                _lerpedInput = Vector2.zero;
+        
+                Context.Move(Vector2.zero);
+                return;
+            }
+
+            CalculateInterpolatedInput();
+            FinalMovementInput = _lerpedInput;
 
             var characterMoveSpeed = _settings.baseMovementSpeed;
             var finalMovementVector = FinalMovementInput * (characterMoveSpeed * _speedMultiplier);
@@ -73,10 +81,8 @@ namespace Gameplay.Character.Abilities {
         #region Public API
 
         public void ApplyTemporarySpeedMultiplier(float multiplier, float duration) {
-            if (_temporaryMultiplierCoroutine != null) {
-                Context.StopCoroutine(_temporaryMultiplierCoroutine);
-            }
-            _temporaryMultiplierCoroutine = Context.StartCoroutine(ApplyTemporarySpeedMultiplierCoroutine(multiplier, duration));
+            _speedMultiplier = multiplier;
+            _multiplierEndTime = Time.time + duration;
         }
 
         #endregion
@@ -111,18 +117,38 @@ namespace Gameplay.Character.Abilities {
             }
         }
 
-        private IEnumerator ApplyTemporarySpeedMultiplierCoroutine(float multiplier, float duration) {
-            _speedMultiplier = multiplier;
-            yield return new WaitForSeconds(duration);
-            _speedMultiplier = 1f;
-            _temporaryMultiplierCoroutine = null;
-        }
-
         #endregion
+
+        public override void ResetAbility() {
+            base.ResetAbility();
+
+            // 이동 상태 초기화
+            _currentInput = Vector2.zero;
+            _lerpedInput = Vector2.zero;
+            _currentAcceleration = 0f;
+
+            // 속도 배율 초기화
+            _speedMultiplier = 1f;
+            _multiplierEndTime = -1f;
+
+            // 이동 중지
+            Context.Move(Vector2.zero);
+        }
 
         public override void OnDeath() {
             base.OnDeath();
+
+            // 사망 시 이동 중지 및 속도 배율 리셋
             Context.Move(Vector2.zero);
+            _speedMultiplier = 1f;
+            _multiplierEndTime = -1f;
+        }
+
+        public override void OnRevive() {
+            base.OnRevive();
+
+            // 부활 시 모든 상태 초기화
+            ResetAbility();
         }
     }
 }

@@ -16,7 +16,6 @@ namespace Gameplay.Character.Abilities {
         private YisoMovementAbility _movementAbility;
         private YisoCharacterWeaponModule _weaponModule;
         private YisoWeaponAim _weaponAim;
-        // private YisoBaseAim _weaponAim; // TODO (Weapon Aim) 구현 후 참조하기
 
         /// <summary>
         /// 방향 전환 잠금 플래그.
@@ -64,10 +63,18 @@ namespace Gameplay.Character.Abilities {
             if (abilityModule != null) {
                 _movementAbility = abilityModule.GetAbility<YisoMovementAbility>();
             }
-            
+
+            if (_movementAbility == null) {
+                Debug.LogWarning("[YisoOrientationAbility] YisoMovementAbility를 찾을 수 없습니다. 이동 기반 방향 전환이 작동하지 않습니다.");
+            }
+
             _weaponModule = Context.GetModule<YisoCharacterWeaponModule>();
             if (_weaponModule != null) {
                 _weaponAim = _weaponModule.CurrentWeapon?.WeaponAim;
+            }
+
+            if (_weaponAim == null) {
+                Debug.LogWarning("[YisoOrientationAbility] WeaponAim을 찾을 수 없습니다. 무기 조준 기반 방향 전환이 작동하지 않습니다.");
             }
         }
         

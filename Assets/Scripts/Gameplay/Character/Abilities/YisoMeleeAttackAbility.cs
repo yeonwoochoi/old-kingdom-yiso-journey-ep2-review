@@ -12,22 +12,12 @@ namespace Gameplay.Character.Abilities {
     /// 완전한 애니메이션 이벤트 기반으로 동작 (코루틴 미사용).
     /// Safety Net 타이머를 통해 애니메이션 이벤트가 씹혀도 강제 종료됩니다.
     /// </summary>
-    public class YisoMeleeAttackAbility : YisoCharacterAbilityBase {
-        #region Animation Event Constants (Magic String 방지)
-
-        private const string EVENT_ENABLE_DAMAGE = "EnableDamage";
-        private const string EVENT_DISABLE_DAMAGE = "DisableDamage";
-        private const string EVENT_ATTACK_END = "AttackEnd";
-
-        #endregion
-
+    public class YisoMeleeAttackAbility : YisoAttackAbilityBase {
         private readonly YisoMeleeAttackAbilitySO _settings;
 
         private YisoCharacterWeaponModule _weaponModule;
         private YisoCharacterInputModule _inputModule; // Player 전용
-        private YisoOrientationAbility _orientationAbility; // 방향 제어
 
-        private bool _isAttacking = false;
         private float _lastAttackTime = -999f;
 
         // Input Edge Detection (단발 입력 감지용)
@@ -42,9 +32,9 @@ namespace Gameplay.Character.Abilities {
 
         // Safety Net: 애니메이션 이벤트가 씹혀도 강제 종료하는 안전장치
         private float _safetyTimer = 0f;
-        
-        // 공격 중에 움직이지 못하게 할건지 설정하는 부분
-        public override bool PreventsMovement => _isAttacking && !_settings.canMoveWhileAttacking;
+
+        // YisoAttackAbilityBase 추상 속성 구현
+        protected override bool CanMoveWhileAttacking => _settings.canMoveWhileAttacking;
 
         public YisoMeleeAttackAbility(YisoMeleeAttackAbilitySO settings) {
             _settings = settings;
@@ -64,19 +54,7 @@ namespace Gameplay.Character.Abilities {
             }
         }
 
-        public override void LateInitialize() {
-            base.LateInitialize();
-
-            // OrientationAbility 참조 가져오기
-            var abilityModule = Context.GetModule<YisoCharacterAbilityModule>();
-            if (abilityModule != null) {
-                _orientationAbility = abilityModule.GetAbility<YisoOrientationAbility>();
-            }
-
-            if (_orientationAbility == null) {
-                Debug.LogWarning("[YisoMeleeAttackAbility] YisoOrientationAbility를 찾을 수 없습니다. 공격 중 방향 잠금이 작동하지 않습니다.");
-            }
-        }
+        // LateInitialize는 Base 클래스(YisoAttackAbilityBase)에서 처리
 
         public override void PreProcessAbility() {
             base.PreProcessAbility();
@@ -161,7 +139,7 @@ namespace Gameplay.Character.Abilities {
 
                 if (_safetyTimer <= 0f) {
                     Debug.LogWarning($"[YisoMeleeAttackAbility] Safety Net 타이머 만료! " +
-                                     $"애니메이션 이벤트 '{EVENT_ATTACK_END}'가 호출되지 않아 강제 종료합니다. " +
+                                     $"애니메이션 이벤트 '{YisoAbilityAnimationEvents.ATTACK_END}'가 호출되지 않아 강제 종료합니다. " +
                                      $"애니메이션 클립에 이벤트가 제대로 설정되었는지 확인하세요.");
 
                     // 강제 정리
@@ -214,7 +192,7 @@ namespace Gameplay.Character.Abilities {
         /// 애니메이션 이벤트를 처리합니다.
         /// Animator의 Animation Event에서 호출됩니다.
         /// </summary>
-        /// <param name="eventName">이벤트 이름 (const string 상수와 비교)</param>
+        /// <param name="eventName">이벤트 이름 (YisoAbilityAnimationEvents 상수와 비교)</param>
         public override void OnAnimationEvent(string eventName) {
             base.OnAnimationEvent(eventName);
 
@@ -222,15 +200,15 @@ namespace Gameplay.Character.Abilities {
             if (!_isAttacking) return;
 
             switch (eventName) {
-                case EVENT_ENABLE_DAMAGE:
+                case YisoAbilityAnimationEvents.ATTACK_ENABLE_DAMAGE:
                     HandleEnableDamage();
                     break;
 
-                case EVENT_DISABLE_DAMAGE:
+                case YisoAbilityAnimationEvents.ATTACK_DISABLE_DAMAGE:
                     HandleDisableDamage();
                     break;
 
-                case EVENT_ATTACK_END:
+                case YisoAbilityAnimationEvents.ATTACK_END:
                     HandleAttackEnd();
                     break;
 
@@ -249,12 +227,7 @@ namespace Gameplay.Character.Abilities {
             TryAttack();
         }
 
-        /// <summary>
-        /// 현재 공격 중인지 여부를 반환합니다.
-        /// </summary>
-        public bool IsAttacking() {
-            return _isAttacking;
-        }
+        // IsAttacking()은 Base 클래스(YisoAttackAbilityBase)에 정의됨
 
         #endregion
 
@@ -349,9 +322,7 @@ namespace Gameplay.Character.Abilities {
 
             // ========== 공격 방향 고정 ==========
             // 1. Orientation 잠금: 공격 중에는 캐릭터 방향이 변경되지 않도록
-            if (_orientationAbility != null) {
-                _orientationAbility.LockOrientation();
-            }
+            LockOrientation();
 
             // 2. WeaponAim 방향 고정: 공격 시작 시점의 방향으로 고정
             var currentWeapon = _weaponModule?.CurrentWeapon;
@@ -395,7 +366,7 @@ namespace Gameplay.Character.Abilities {
             _safetyTimer = 0f; // Safety Net 타이머 리셋
 
             // 1. Orientation 잠금 해제 (콤보 계속 시 다음 공격에서 다시 잠금)
-            _orientationAbility?.UnlockOrientation();
+            UnlockOrientation();
 
             // 2. WeaponAim 잠금 해제
             var currentWeapon = _weaponModule?.CurrentWeapon;
@@ -445,7 +416,7 @@ namespace Gameplay.Character.Abilities {
             _weaponModule?.DisableWeaponDamage();
 
             // 5. Orientation & WeaponAim 잠금 해제
-            _orientationAbility?.UnlockOrientation();
+            UnlockOrientation();
 
             var currentWeapon = _weaponModule?.CurrentWeapon;
             if (currentWeapon != null && currentWeapon.WeaponAim != null) {
@@ -454,7 +425,7 @@ namespace Gameplay.Character.Abilities {
         }
 
         public override void OnDeath() {
-            base.OnDeath();
+            base.OnDeath(); // Base 클래스에서 UnlockOrientation() 호출됨
 
             // 공격 중이었다면 강제 중단
             if (_isAttacking) {
@@ -465,9 +436,7 @@ namespace Gameplay.Character.Abilities {
                 _isAttacking = false;
                 _safetyTimer = 0f;
 
-                // Orientation & WeaponAim 잠금 해제
-                _orientationAbility?.UnlockOrientation();
-
+                // WeaponAim 잠금 해제
                 var currentWeapon = _weaponModule?.CurrentWeapon;
                 if (currentWeapon != null && currentWeapon.WeaponAim != null) {
                     currentWeapon.WeaponAim.UnlockAim();
@@ -476,7 +445,7 @@ namespace Gameplay.Character.Abilities {
         }
 
         public override void OnRevive() {
-            base.OnRevive();
+            base.OnRevive(); // Base 클래스에서 UnlockOrientation() 호출됨
 
             // ResetAbility와 동일하지만, 부활 시 특별히 처리할 사항이 있다면 여기에 추가
             // 현재는 ResetAbility를 호출하여 모든 상태 초기화

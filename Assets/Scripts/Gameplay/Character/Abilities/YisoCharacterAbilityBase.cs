@@ -53,7 +53,14 @@ namespace Gameplay.Character.Abilities {
         protected IYisoCharacterContext Context { get; private set; }
         protected YisoCharacterAnimationModule _animationModule;
 
-        public virtual bool IsAbilityEnabled => true;
+        public virtual bool IsAbilityEnabled {
+            get {
+                // 기본적으로 사망 시 모든 Ability 비활성화
+                // (OrientationAbility 등 특수한 경우 override 가능)
+                if (Context != null && Context.IsDead()) return false;
+                return true;
+            }
+        }
         public virtual bool PreventsMovement => false; // 기본적으로는 이동을 막지 않음
         public virtual bool PreventsAttack => false; // 기본적으로는 공격을 막지 않음
 
