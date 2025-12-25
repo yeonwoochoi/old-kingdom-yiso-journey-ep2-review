@@ -4,7 +4,7 @@ using Gameplay.Character.Core;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Gameplay.Character.StateMachine.V2 {
+namespace Gameplay.Character.StateMachine {
     public class YisoCharacterStateMachine: RunIBehaviour {
         [Title("Settings")]
         [SerializeField] private string initialState;
@@ -30,14 +30,9 @@ namespace Gameplay.Character.StateMachine.V2 {
         private float _timer; // frequency 타이머
         private float _currentFrequency = 0f;
 
-        protected override void Awake() {
-            base.Awake();
-            
+        public void PreInitialize(IYisoCharacterContext owner) {
             // Context 찾기
-            Owner = GetComponentInParent<IYisoCharacterContext>();
-            if (Owner == null) {
-                Debug.LogError($"[FSM] {name}: IYisoCharacterContext를 찾을 수 없습니다!");
-            }
+            Owner = owner;
             
             foreach (var state in states) {
                 if (!_stateMap.TryAdd(state.StateName, state)) {
@@ -48,8 +43,7 @@ namespace Gameplay.Character.StateMachine.V2 {
             ResetFrequency();
         }
 
-        protected override void Start() {
-            base.Start();
+        public void Initialize() {
             if (!string.IsNullOrEmpty(initialState) && _stateMap.ContainsKey(initialState)) {
                 ChangeState(initialState, true);
             }

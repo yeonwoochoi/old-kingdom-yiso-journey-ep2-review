@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Sirenix.OdinInspector;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace Gameplay.Character.StateMachine.V2 {
+namespace Gameplay.Character.StateMachine {
     [Serializable]
     public class YisoCharacterTransition {
         [Title("Destination")]

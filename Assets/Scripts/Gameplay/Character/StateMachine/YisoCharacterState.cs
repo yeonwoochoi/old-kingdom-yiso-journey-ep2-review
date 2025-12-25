@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Gameplay.Character.StateMachine.V2 {
+namespace Gameplay.Character.StateMachine {
     [Serializable]
     public class YisoCharacterState {
         [Title("Settings")]

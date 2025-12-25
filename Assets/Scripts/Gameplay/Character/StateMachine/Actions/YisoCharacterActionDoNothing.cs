@@ -1,4 +1,4 @@
-﻿namespace Gameplay.Character.StateMachine.V2.Actions {
+﻿namespace Gameplay.Character.StateMachine.Actions {
     public class YisoCharacterActionDoNothing: YisoCharacterAction {
         public override void PerformAction() { }
     }

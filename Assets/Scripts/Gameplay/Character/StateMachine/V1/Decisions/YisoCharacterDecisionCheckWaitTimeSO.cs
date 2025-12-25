@@ -18,7 +18,8 @@ namespace Gameplay.Character.StateMachine.Decisions {
             var waitDuration = blackboardModule.GetFloat(targetTimeKey);
             
             // 현재 경과 시간과 비교
-            return stateModule.TimeInCurrentState >= waitDuration;
+            // return stateModule.TimeInCurrentState >= waitDuration;
+            return true; // deprecated
         }
     }
 }
