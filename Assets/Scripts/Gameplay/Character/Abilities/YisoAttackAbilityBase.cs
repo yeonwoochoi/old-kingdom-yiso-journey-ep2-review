@@ -1,7 +1,6 @@
-﻿using Gameplay.Character.Abilities;
-using Gameplay.Character.Core.Modules;
+﻿using Gameplay.Character.Core.Modules;
 
-namespace Gameplay.Character {
+namespace Gameplay.Character.Abilities {
     /// <summary>
     /// 모든 공격 Ability의 추상 기반 클래스.
     /// 공격 상태 관리, 방향 제어 등 공통 기능을 제공합니다.

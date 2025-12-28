@@ -16,6 +16,9 @@ namespace Gameplay.Character.StateMachine {
         
         [HideIf("randomizeFrequencies")]
         [SerializeField] private float actionFrequency = 0.1f; // 정해진 주기로 체크
+        
+        [Title("Target System")]
+        [SerializeField, Min(1)] private int maxTargetCount = 10; // 슬롯 개수 (기본 10개)
 
         [Title("States")]
         [SerializeField] private List<YisoCharacterState> states;
@@ -29,10 +32,30 @@ namespace Gameplay.Character.StateMachine {
 
         private float _timer; // frequency 타이머
         private float _currentFrequency = 0f;
+        
+        private Transform[] _targetSlots;
+
+        /// <summary>
+        /// 0번 슬롯 (Main Target)
+        /// </summary>
+        public Transform MainTarget {
+            get {
+                if (_targetSlots == null || _targetSlots.Length == 0) return null;
+                return _targetSlots[0]; 
+            }
+        }
+        
+        /// <summary>
+        /// 전체 타겟 슬롯 배열 (읽기 전용으로 노출하거나 필요시 Get 메서드 사용)
+        /// </summary>
+        public Transform[] TargetSlots => _targetSlots;
 
         public void PreInitialize(IYisoCharacterContext owner) {
             // Context 찾기
             Owner = owner;
+            
+            // 타겟 슬롯 메모리 할당 (고정 크기)
+            _targetSlots = new Transform[maxTargetCount];
             
             foreach (var state in states) {
                 if (!_stateMap.TryAdd(state.StateName, state)) {
@@ -94,5 +117,55 @@ namespace Gameplay.Character.StateMachine {
         private void ResetFrequency() {
             _currentFrequency = randomizeFrequencies ? Random.Range(actionFrequencyRange.x, actionFrequencyRange.y) : actionFrequency;
         }
+
+        #region Target
+
+        /// <summary>
+        /// 특정 인덱스(슬롯)에 타겟을 설정합니다.
+        /// index 0 = Main Target
+        /// </summary>
+        public void SetTarget(int index, Transform target) {
+            if (index < 0 || index >= _targetSlots.Length) {
+                Debug.LogWarning($"[FSM] 잘못된 타겟 인덱스 접근: {index}. Max: {maxTargetCount}");
+                return;
+            }
+            _targetSlots[index] = target;
+        }
+
+        /// <summary>
+        /// 특정 인덱스의 타겟을 가져옵니다.
+        /// </summary>
+        public Transform GetTarget(int index) {
+            if (index < 0 || index >= _targetSlots.Length) return null;
+            return _targetSlots[index];
+        }
+
+        /// <summary>
+        /// 특정 인덱스의 타겟을 비웁니다.
+        /// </summary>
+        public void ClearTarget(int index) {
+            if (index < 0 || index >= _targetSlots.Length) return;
+            _targetSlots[index] = null;
+        }
+
+        /// <summary>
+        /// 모든 타겟 슬롯을 초기화합니다.
+        /// </summary>
+        public void ClearAllTargets() {
+            if (_targetSlots == null) return;
+            for (int i = 0; i < _targetSlots.Length; i++) {
+                _targetSlots[i] = null;
+            }
+        }
+        
+        /// <summary>
+        /// 해당 슬롯에 유효한 타겟이 있는지 확인 (null 체크 + Destroy 체크)
+        /// </summary>
+        public bool HasValidTarget(int index) {
+            if (index < 0 || index >= _targetSlots.Length) return false;
+            return _targetSlots[index] != null;
+        }
+
+        #endregion
     }
 }

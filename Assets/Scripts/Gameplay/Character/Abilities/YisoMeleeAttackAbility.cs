@@ -58,56 +58,41 @@ namespace Gameplay.Character.Abilities {
 
         public override void PreProcessAbility() {
             base.PreProcessAbility();
-
-            // 공격 중이면 선입력 버퍼만 처리하고 리턴
-            if (_isAttacking) {
-                // 공격 중 추가 입력 감지 (선입력 버퍼)
-                if (_inputModule != null && Context.Type == CharacterType.Player) {
-                    var isPressed = _inputModule.AttackInput;
-
-                    // 단발 모드일 때만 선입력 저장 (연속 모드는 HandleAttackEnd에서 자동 판단)
-                    if (!_settings.continuousPressAttack) {
-                        // Edge Detection: 버튼을 누르는 순간만 큐에 저장
-                        if (!_wasAttackPressedLastFrame && isPressed) {
-                            _nextAttackQueued = true;
-                        }
-                    }
-
-                    // Edge Detection 상태 업데이트
-                    _wasAttackPressedLastFrame = isPressed;
-                }
-                return;
-            }
-
+    
             // 무기가 없으면 공격 불가
             if (_weaponModule == null || !_weaponModule.HasWeapon()) return;
+    
+            // Player만 입력 처리
+            if (_inputModule == null || Context.Type != CharacterType.Player) return;
+    
+            // Pull 방식: InputModule에서 공격 버튼 상태를 가져옴
+            var isPressed = _inputModule.AttackInput;
 
-            // 공격 입력 확인 (Player만)
-            if (_inputModule != null && Context.Type == CharacterType.Player) {
-                // Pull 방식: InputModule에서 공격 버튼 상태를 가져옴
-                var isPressed = _inputModule.AttackInput;
+            // 단발/연속 입력 모드 분기
+            var shouldAttack = false;
 
-                // 단발/연속 입력 모드 분기
-                var shouldAttack = false;
-
-                if (_settings.continuousPressAttack) {
-                    // 연속 입력 모드: 버튼을 누르고 있는 동안 계속 공격
-                    shouldAttack = isPressed;
-                }
-                else {
-                    // 단발 입력 모드: Edge Detection (버튼을 누르는 순간만 공격)
-                    // 이전 프레임에 false였고, 현재 프레임에 true이면 공격
-                    shouldAttack = !_wasAttackPressedLastFrame && isPressed;
-                }
-
-                // Edge Detection 상태 업데이트
-                _wasAttackPressedLastFrame = isPressed;
-
-                // 공격 실행
-                if (shouldAttack) {
-                    TryAttack();
+            if (_settings.continuousPressAttack) {
+                // 연속 입력 모드: 버튼을 누르고 있는 동안 계속 공격
+                shouldAttack = isPressed;
+            }
+            else {
+                // 단발 입력 모드: Edge Detection (버튼을 누르는 순간만 공격)
+                shouldAttack = !_wasAttackPressedLastFrame && isPressed;
+        
+                // 공격 중인데 버튼을 눌렀다면 -> 큐에 예약
+                if (shouldAttack && _isAttacking) {
+                    _nextAttackQueued = true;
                 }
             }
+
+            // Edge Detection 상태 업데이트
+            _wasAttackPressedLastFrame = isPressed;
+
+            // 공격 중이 아닐 때만 즉시 실행 (예약된 큐는 HandleAttackEnd가 처리함)
+            if (!_isAttacking && shouldAttack) {
+                TryAttack();
+            }
+
             // AI의 경우 외부에서 TriggerAttack() 호출
         }
 
@@ -413,7 +398,7 @@ namespace Gameplay.Character.Abilities {
             ResetCombo();
 
             // 4. 무기 데미지 비활성화
-            _weaponModule?.DisableWeaponDamage();
+            HandleDisableDamage();
 
             // 5. Orientation & WeaponAim 잠금 해제
             UnlockOrientation();
@@ -427,28 +412,14 @@ namespace Gameplay.Character.Abilities {
         public override void OnDeath() {
             base.OnDeath(); // Base 클래스에서 UnlockOrientation() 호출됨
 
-            // 공격 중이었다면 강제 중단
-            if (_isAttacking) {
-                // 데미지 비활성화
-                HandleDisableDamage();
-
-                // 공격 상태 정리 (FSM 전환 없이)
-                _isAttacking = false;
-                _safetyTimer = 0f;
-
-                // WeaponAim 잠금 해제
-                var currentWeapon = _weaponModule?.CurrentWeapon;
-                if (currentWeapon != null && currentWeapon.WeaponAim != null) {
-                    currentWeapon.WeaponAim.UnlockAim();
-                }
-            }
+            ResetAbility();
         }
 
         public override void OnRevive() {
             base.OnRevive(); // Base 클래스에서 UnlockOrientation() 호출됨
 
             // ResetAbility와 동일하지만, 부활 시 특별히 처리할 사항이 있다면 여기에 추가
-            // 현재는 ResetAbility를 호출하여 모든 상태 초기화
+            // 부활 시 모든 상태 초기화 (OnDeath에서 이미 했더라도 확실하게 한 번 더)
             ResetAbility();
         }
     }

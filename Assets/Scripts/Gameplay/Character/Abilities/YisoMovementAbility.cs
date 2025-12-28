@@ -42,11 +42,7 @@ namespace Gameplay.Character.Abilities {
             }
             
             if (!Context.IsMovementAllowed) {
-                // 내부 가속도 상태 초기화 (스턴 해제 시 급발진 방지)
-                _currentAcceleration = 0f;
-                _lerpedInput = Vector2.zero;
-        
-                Context.Move(Vector2.zero);
+                StopMovement();
                 return;
             }
 
@@ -55,11 +51,6 @@ namespace Gameplay.Character.Abilities {
 
             var characterMoveSpeed = _settings.baseMovementSpeed;
             var finalMovementVector = FinalMovementInput * (characterMoveSpeed * _speedMultiplier);
-
-            // 디버그: AI의 경우 이동 벡터 확인
-            if (!Context.IsPlayer) {
-                Debug.Log($"[MovementAbility] _currentInput: {_currentInput}, _lerpedInput: {_lerpedInput}, finalMovementVector: {finalMovementVector}");
-            }
 
             Context.Move(finalMovementVector);
         }
@@ -89,8 +80,8 @@ namespace Gameplay.Character.Abilities {
 
         #region Private Logic
 
-        private void CalculateInterpolatedInput(bool forceDecelerate = false) {
-            if (_currentInput.sqrMagnitude > _settings.idleThreshold * _settings.idleThreshold && !forceDecelerate) {
+        private void CalculateInterpolatedInput() {
+            if (_currentInput.sqrMagnitude > _settings.idleThreshold * _settings.idleThreshold) {
                 // 방향 전환 감지: 현재 입력과 이전 입력의 내적이 음수면 반대 방향
                 var directionChanged = false;
                 if (_lerpedInput.sqrMagnitude > 0.01f) {
@@ -118,30 +109,34 @@ namespace Gameplay.Character.Abilities {
         }
 
         #endregion
+        
+        /// <summary>
+        /// 운동량만 멈추는 함수 (버프는 유지)
+        /// </summary>
+        private void StopMovement() {
+            _currentAcceleration = 0f;
+            _lerpedInput = Vector2.zero;
+            Context.Move(Vector2.zero);
+        }
 
+        /// <summary>
+        /// 버프 (이속 증가)까지 리셋
+        /// </summary>
         public override void ResetAbility() {
             base.ResetAbility();
-
-            // 이동 상태 초기화
+    
+            StopMovement();
+            
             _currentInput = Vector2.zero;
-            _lerpedInput = Vector2.zero;
-            _currentAcceleration = 0f;
-
-            // 속도 배율 초기화
             _speedMultiplier = 1f;
             _multiplierEndTime = -1f;
-
-            // 이동 중지
-            Context.Move(Vector2.zero);
         }
 
         public override void OnDeath() {
             base.OnDeath();
 
             // 사망 시 이동 중지 및 속도 배율 리셋
-            Context.Move(Vector2.zero);
-            _speedMultiplier = 1f;
-            _multiplierEndTime = -1f;
+            ResetAbility();
         }
 
         public override void OnRevive() {
