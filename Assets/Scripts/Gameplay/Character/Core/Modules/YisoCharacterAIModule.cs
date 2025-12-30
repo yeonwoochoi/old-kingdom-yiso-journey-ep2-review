@@ -6,6 +6,11 @@ namespace Gameplay.Character.Core.Modules {
         private Settings _settings;
 
         /// <summary>
+        /// AI가 스폰된 초기 위치 (FSM에서 복귀 지점 판단 등에 사용)
+        /// </summary>
+        public Vector3 SpawnPosition { get; private set; }
+
+        /// <summary>
         /// AI가 이동할 방향 (단위 벡터).
         /// YisoMovementAbility가 Context.MovementVector를 통해 이 값을 조회함.
         /// </summary>
@@ -23,6 +28,12 @@ namespace Gameplay.Character.Core.Modules {
 
         public YisoCharacterAIModule(IYisoCharacterContext context, Settings settings) : base(context) {
             _settings = settings;
+        }
+
+        public override void OnEnable() {
+            base.OnEnable();
+            // 모듈 활성화 시점의 위치를 스폰 위치로 저장
+            SpawnPosition = Context.Transform.position;
         }
 
         public override void OnUpdate() {

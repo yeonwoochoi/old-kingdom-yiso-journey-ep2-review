@@ -44,16 +44,15 @@ The character system is the heart of the game architecture. **YisoCharacter** ac
 - `Assets/Scripts/Gameplay/Character/Core/YisoCharacter.cs` - Central character hub
 - `Assets/Scripts/Gameplay/Character/Core/Modules/` - All character modules
 
-**Character Modules** (9 total):
+**Character Modules** (8 total):
 1. **CoreModule** - Basic functionality
 2. **AbilityModule** - Manages character abilities lifecycle
 3. **AnimationModule** - Animation control
-4. **BlackboardModule** - FSM data storage (Blackboard pattern)
-5. **StateModule** - FSM state management
-6. **InputModule** - Player input (Player type only)
-7. **AIModule** - AI pathfinding (AI types only)
-8. **LifecycleModule** - Health/death management
-9. **SaveModule** - Save/load functionality
+4. **StateModule** - FSM state management
+5. **InputModule** - Player input (Player type only)
+6. **AIModule** - AI pathfinding (AI types only)
+7. **LifecycleModule** - Health/death management
+8. **SaveModule** - Save/load functionality
 
 **Module Initialization**: Two-phase process
 1. **Initialize()** - Each module sets up independently
@@ -82,16 +81,6 @@ The FSM system separates data (ScriptableObjects) from runtime logic (C# classes
 **Example Action/Decision Locations**:
 - Actions: `Assets/Scripts/Gameplay/Character/StateMachine/Actions/`
 - Decisions: `Assets/Scripts/Gameplay/Character/StateMachine/Decisions/`
-
-### Blackboard Pattern for Data Isolation
-
-The **YisoCharacterBlackboardModule** provides type-safe, centralized data storage for FSM components, preventing direct coupling between states.
-
-**Key File**: `Assets/Scripts/Gameplay/Character/Core/Modules/YisoCharacterBlackboardModule.cs`
-
-**Supported Types**: float, int, string, bool, Vector3, Object
-
-**Usage**: ScriptableObject-based keys (`YisoBlackboardKeySO`) identify data, enabling reusable FSM logic across different characters.
 
 ### Ability System
 
@@ -132,7 +121,6 @@ Type-safe event system using generics and struct-based events for performance.
 - **Module Pattern**: Character decomposed into independent, reusable modules
 - **Facade Pattern**: YisoCharacter provides simple API hiding module complexity
 - **Factory Pattern**: AbilitySO creates ability instances
-- **Blackboard Pattern**: Centralized FSM data storage
 - **Observer Pattern**: Event system for decoupled communication
 - **Strategy Pattern**: Abilities as interchangeable behaviors
 - **State Pattern**: FSM with ScriptableObjects
@@ -162,11 +150,11 @@ Assets/
 │   │   └── Manager/                # RunIUpdateManager (centralized updates)
 │   ├── Gameplay/
 │   │   ├── Character/              # ** MAIN CHARACTER SYSTEM **
-│   │   │   ├── Core/              # YisoCharacter + 9 Modules
+│   │   │   ├── Core/              # YisoCharacter + 8 Modules
 │   │   │   ├── Abilities/         # Ability implementations (C# classes)
 │   │   │   ├── StateMachine/      # FSM Actions, Decisions, States (SOs)
 │   │   │   ├── Types/             # Enums and constants
-│   │   │   └── Data/              # Blackboard keys
+│   │   │   └── Data/              # Character data definitions
 │   │   ├── Core/                  # TopDownController (physics)
 │   │   ├── Health/                # Health/damage system
 │   │   └── Tools/                 # Utility systems
@@ -422,8 +410,7 @@ UpdateAnimator()       // Sync animation parameters
 1. **New abilities**: Create `YisoAbilitySO` subclass + `IYisoCharacterAbility` implementation
 2. **New FSM logic**: Create ScriptableObject-based Action/Decision, not hardcoded logic
 3. **Module communication**: Use `IYisoCharacterContext` interface, not direct module references
-4. **Shared data**: Use Blackboard pattern for FSM-accessible data
-5. **Events**: Use `YisoEventManager` for decoupled communication between systems
+4. **Events**: Use `YisoEventManager` for decoupled communication between systems
 
 ### Physics & Movement
 - **TopDownController** (`Assets/Scripts/Gameplay/Core/TopDownController.cs`) handles Rigidbody2D-based movement

@@ -26,6 +26,7 @@ namespace Gameplay.Character.StateMachine {
         public YisoCharacterState CurrentState { get; private set; }
         public IYisoCharacterContext Owner { get; private set; }
         public float TimeInCurrentState => Time.time - _lastStateEnterTime;
+        public int MaxTargetCount => maxTargetCount;
         
         private float _lastStateEnterTime = 0f;
         private readonly Dictionary<string, YisoCharacterState> _stateMap =  new();
