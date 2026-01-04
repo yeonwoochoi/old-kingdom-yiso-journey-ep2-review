@@ -1,4 +1,5 @@
 ﻿using Gameplay.Character.Abilities.Definitions;
+using Gameplay.Character.Core;
 using Gameplay.Character.Core.Modules;
 using UnityEngine;
 
@@ -18,18 +19,22 @@ namespace Gameplay.Character.Abilities {
         private float _speedMultiplier = 1f;
         private float _multiplierEndTime = -1f;
 
+        private YisoCharacterInputModule _inputModule;
+
         public Vector2 FinalMovementInput { get; private set; }
 
         public YisoMovementAbility(YisoMovementAbilitySO settings) {
             _settings = settings;
         }
 
+        public override void Initialize(IYisoCharacterContext context) {
+            base.Initialize(context);
+            _inputModule = context.GetModule<YisoCharacterInputModule>();
+        }
+
         public override void PreProcessAbility() {
             base.PreProcessAbility();
-            // Pull 방식: Ability가 능동적으로 입력 데이터를 조회
-            // Context.MovementVector는 Player일 경우 InputModule.MoveInput,
-            // AI일 경우 AIModule.PathDirection을 반환
-            _currentInput = Context.MovementVector;
+            _currentInput = _inputModule?.MoveInput ?? Vector2.zero;
         }
 
         public override void ProcessAbility() {

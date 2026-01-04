@@ -19,13 +19,14 @@ namespace Gameplay.Character.Core {
         string ID { get; }
         GameObject Model { get; }
         Animator Animator { get; }
-        Vector2 MovementVector { get; }
         FacingDirections FacingDirection { get; }
         Vector2 FacingDirectionVector { get; }
         T GetModule<T>() where T : class, IYisoCharacterModule;
         Coroutine StartCoroutine(IEnumerator routine);
         void StopCoroutine(Coroutine routine);
         void Move(Vector2 finalMovementVector);
+        void Face(FacingDirections direction);
+        void Face(Vector2 directionVector);
         void PlayAnimation(YisoCharacterAnimationState state, bool value);
         void PlayAnimation(YisoCharacterAnimationState state, float value);
         void PlayAnimation(YisoCharacterAnimationState state, int value);

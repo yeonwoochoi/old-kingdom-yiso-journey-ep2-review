@@ -32,7 +32,6 @@ namespace Gameplay.Character.Core {
         [SerializeField] private YisoCharacterAbilityModule.Settings _abilitySettings;
         [SerializeField] private YisoCharacterCoreModule.Settings _coreSettings;
         [SerializeField, ShowIf("IsPlayer")] private YisoCharacterInputModule.Settings _inputSettings;
-        [SerializeField, ShowIf("@!IsPlayer")] private YisoCharacterAIModule.Settings _aiSettings;
         [SerializeField] private YisoCharacterLifecycleModule.Settings _lifecycleSettings;
         [SerializeField] private YisoCharacterStateModule.Settings _stateSettings;
         [SerializeField] private YisoCharacterSaveModule.Settings _saveSettings;
@@ -44,17 +43,6 @@ namespace Gameplay.Character.Core {
         public bool IsPlayer => Type == CharacterType.Player; // 추가 조건이 있으면 여기다.
         public bool IsAIControlled => characterType != CharacterType.Player;
         public string ID => characterID;
-
-        public Vector2 MovementVector {
-            get {
-                if (IsPlayer) {
-                    return GetModule<YisoCharacterInputModule>()?.MoveInput ?? Vector2.zero;
-                }
-                else {
-                    return GetModule<YisoCharacterAIModule>()?.PathDirection ?? Vector2.zero;
-                }
-            }
-        }
 
         public FacingDirections FacingDirection => GetModule<YisoCharacterAbilityModule>()?.GetAbility<YisoOrientationAbility>()?.CurrentFacingDirection ?? FacingDirections.Down;
         public Vector2 FacingDirectionVector => GetModule<YisoCharacterAbilityModule>()?.GetAbility<YisoOrientationAbility>()?.CurrentFacingDirectionVector ?? Vector2.zero;
@@ -152,14 +140,11 @@ namespace Gameplay.Character.Core {
                     this);
             }
 
-            // [중요] InputModule/AIModule은 AbilityModule보다 먼저 등록해야 함
-            // 이유: AbilityModule의 MovementAbility가 Context.MovementVector(InputModule.MoveInput 또는 AIModule.PathDirection)를
-            // 조회하므로, OnUpdate() 실행 순서상 Input/AI 모듈이 먼저 업데이트되어야 최신 값을 사용할 수 있다.
+            // [중요] InputModule은 AbilityModule보다 먼저 등록해야 함
+            // 이유: AbilityModule의 MovementAbility가 Context.MovementVector(InputModule.MoveInput)를
+            // 조회하므로, OnUpdate() 실행 순서상 Input 모듈이 먼저 업데이트되어야 최신 값을 사용할 수 있다.
             if (IsPlayer) {
                 RegisterModule(new YisoCharacterInputModule(this, _inputSettings));
-            }
-            else {
-                RegisterModule(new YisoCharacterAIModule(this, _aiSettings));
             }
 
             // 기능에 맞는 모듈 생성 및 등록.
@@ -215,6 +200,23 @@ namespace Gameplay.Character.Core {
 
         public void Move(Vector2 finalMovementVector) {
             _physicsController.SetMovement(finalMovementVector);
+        }
+
+        public void Face(FacingDirections direction) {
+            GetModule<YisoCharacterAbilityModule>()
+                ?.GetAbility<YisoOrientationAbility>()
+                ?.ForceFace(direction);
+        }
+
+        public void Face(Vector2 directionVector) {
+            if (directionVector.sqrMagnitude < 0.01f) return;
+
+            // Vector2를 FacingDirections로 변환
+            var facingDirection = Mathf.Abs(directionVector.x) > Mathf.Abs(directionVector.y)
+                ? (directionVector.x > 0 ? FacingDirections.Right : FacingDirections.Left)
+                : (directionVector.y > 0 ? FacingDirections.Up : FacingDirections.Down);
+
+            Face(facingDirection);
         }
 
         public void PlayAnimation(YisoCharacterAnimationState state, bool value) =>
