@@ -40,6 +40,7 @@ namespace Gameplay.Character.Abilities {
         /// 캐릭터가 현재 바라보고 있는 방향 상태입니다.
         /// </summary>
         public FacingDirections CurrentFacingDirection { get; private set; }
+        public Vector2 CurrentFacingDirectionVector { get; private set; }
         
         /// <summary>
         /// 마지막으로 유효했던 정규화된 방향 벡터입니다. (애니메이터 전달용)
@@ -82,7 +83,7 @@ namespace Gameplay.Character.Abilities {
         public override void ProcessAbility() {
             // 1. 현재 상황에 따라 '바라볼 방향'의 소스를 결정합니다. (우선순위 로직)
             var sourceDirection = DetermineSourceDirection();
-
+            
             // 2. 결정된 소스 방향을 바탕으로 실제 방향 상태를 업데이트합니다.
             UpdateFacingState(sourceDirection);
         }
@@ -126,6 +127,8 @@ namespace Gameplay.Character.Abilities {
             if (_isOrientationLocked) return;
 
             LastDirectionVector = direction.normalized;
+            CurrentFacingDirectionVector = LastDirectionVector;
+            
             if (Mathf.Abs(LastDirectionVector.x) > Mathf.Abs(LastDirectionVector.y)) {
                 CurrentFacingDirection = LastDirectionVector.x > 0 ? FacingDirections.Right : FacingDirections.Left;
             }
@@ -142,6 +145,7 @@ namespace Gameplay.Character.Abilities {
         public void ForceFace(FacingDirections direction) {
             CurrentFacingDirection = direction;
             LastDirectionVector = direction.ToVector2();
+            CurrentFacingDirectionVector = LastDirectionVector;
         }
 
         /// <summary>

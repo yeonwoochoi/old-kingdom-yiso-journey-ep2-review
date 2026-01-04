@@ -20,6 +20,8 @@ namespace Gameplay.Character.Core {
         GameObject Model { get; }
         Animator Animator { get; }
         Vector2 MovementVector { get; }
+        FacingDirections FacingDirection { get; }
+        Vector2 FacingDirectionVector { get; }
         T GetModule<T>() where T : class, IYisoCharacterModule;
         Coroutine StartCoroutine(IEnumerator routine);
         void StopCoroutine(Coroutine routine);

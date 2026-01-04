@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Core.Behaviour;
+using Gameplay.Character.Abilities;
 using Gameplay.Character.Core.Modules;
 using Gameplay.Character.StateMachine;
 using Gameplay.Character.Types;
@@ -17,15 +18,17 @@ namespace Gameplay.Character.Core {
     /// </summary>
     [AddComponentMenu("Yiso/Gameplay/Character/Core/Character")]
     public class YisoCharacter : RunIBehaviour, IYisoCharacterContext {
-        [Header("Base Settings")]
-        [SerializeField] private CharacterType characterType;
+        [Header("Base Settings")] [SerializeField]
+        private CharacterType characterType;
+
         [SerializeField] private string characterID = "";
         [SerializeField] private GameObject characterModel;
         [SerializeField] private Animator animator;
-        
+
         // 각 모듈의 초기 설정을 담는 클래스. 인스펙터에서 값 조정 후 모듈 생성 시 주입.
-        [Header("Module Settings")]
-        [SerializeField] private YisoCharacterAnimationModule.Settings _animationSettings;
+        [Header("Module Settings")] [SerializeField]
+        private YisoCharacterAnimationModule.Settings _animationSettings;
+
         [SerializeField] private YisoCharacterAbilityModule.Settings _abilitySettings;
         [SerializeField] private YisoCharacterCoreModule.Settings _coreSettings;
         [SerializeField, ShowIf("IsPlayer")] private YisoCharacterInputModule.Settings _inputSettings;
@@ -34,7 +37,7 @@ namespace Gameplay.Character.Core {
         [SerializeField] private YisoCharacterStateModule.Settings _stateSettings;
         [SerializeField] private YisoCharacterSaveModule.Settings _saveSettings;
         [SerializeField] private YisoCharacterWeaponModule.Settings _weaponSettings;
-        
+
         public GameObject GameObject => gameObject;
         public Transform Transform => transform;
         public CharacterType Type => characterType;
@@ -53,6 +56,9 @@ namespace Gameplay.Character.Core {
             }
         }
 
+        public FacingDirections FacingDirection => GetModule<YisoCharacterAbilityModule>()?.GetAbility<YisoOrientationAbility>()?.CurrentFacingDirection ?? FacingDirections.Down;
+        public Vector2 FacingDirectionVector => GetModule<YisoCharacterAbilityModule>()?.GetAbility<YisoOrientationAbility>()?.CurrentFacingDirectionVector ?? Vector2.zero;
+
         /// <summary>
         /// 캐릭터의 시각적 모델. 미할당 시 'Model' 이름의 자식 오브젝트 자동 탐색.
         /// </summary>
@@ -61,8 +67,10 @@ namespace Gameplay.Character.Core {
                 if (!characterModel) {
                     Debug.LogWarning($"[YisoCharacter] '{gameObject.name}' 모델 미할당. 'Model' 자식 탐색.");
                     characterModel = transform.Find("Model")?.gameObject;
-                    if (!characterModel) Debug.LogError($"[YisoCharacter] '{gameObject.name}'에서 'Model' 탐색 실패. 수동 할당 필요.");
+                    if (!characterModel)
+                        Debug.LogError($"[YisoCharacter] '{gameObject.name}'에서 'Model' 탐색 실패. 수동 할당 필요.");
                 }
+
                 return characterModel;
             }
         }
@@ -77,6 +85,7 @@ namespace Gameplay.Character.Core {
                     if (Model != null) Model.TryGetComponent(out animator);
                     if (!animator) Debug.LogError($"[YisoCharacter] '{gameObject.name}'의 모델에서 애니메이터 탐색 실패. 수동 할당 필요.");
                 }
+
                 return animator;
             }
         }
@@ -139,7 +148,8 @@ namespace Gameplay.Character.Core {
             _physicsController = GetComponent<IPhysicsControllable>();
 
             if (_physicsController == null) {
-                Debug.LogError($"[{gameObject.name}]에 IPhysicsControllable을 구현한 컴포넌트(예: TopDownController)가 없습니다!", this);
+                Debug.LogError($"[{gameObject.name}]에 IPhysicsControllable을 구현한 컴포넌트(예: TopDownController)가 없습니다!",
+                    this);
             }
 
             // [중요] InputModule/AIModule은 AbilityModule보다 먼저 등록해야 함
@@ -173,7 +183,7 @@ namespace Gameplay.Character.Core {
                 module.LateInitialize();
             }
         }
-        
+
         /// <summary>
         /// 모듈을 딕셔너리에 등록. 중복 등록 방지.
         /// </summary>
@@ -183,6 +193,7 @@ namespace Gameplay.Character.Core {
                 if (forceSet) _modules[type] = module;
                 return;
             }
+
             _modules.Add(module.GetType(), module);
         }
 
@@ -205,21 +216,31 @@ namespace Gameplay.Character.Core {
         public void Move(Vector2 finalMovementVector) {
             _physicsController.SetMovement(finalMovementVector);
         }
-        public void PlayAnimation(YisoCharacterAnimationState state, bool value) => GetModule<YisoCharacterAnimationModule>().SetBool(state, value);
-        public void PlayAnimation(YisoCharacterAnimationState state, float value) => GetModule<YisoCharacterAnimationModule>().SetFloat(state, value);
-        public void PlayAnimation(YisoCharacterAnimationState state, int value) => GetModule<YisoCharacterAnimationModule>().SetInteger(state, value);
-        public void PlayAnimation(YisoCharacterAnimationState state) => GetModule<YisoCharacterAnimationModule>().SetTrigger(state);
+
+        public void PlayAnimation(YisoCharacterAnimationState state, bool value) =>
+            GetModule<YisoCharacterAnimationModule>().SetBool(state, value);
+
+        public void PlayAnimation(YisoCharacterAnimationState state, float value) =>
+            GetModule<YisoCharacterAnimationModule>().SetFloat(state, value);
+
+        public void PlayAnimation(YisoCharacterAnimationState state, int value) =>
+            GetModule<YisoCharacterAnimationModule>().SetInteger(state, value);
+
+        public void PlayAnimation(YisoCharacterAnimationState state) =>
+            GetModule<YisoCharacterAnimationModule>().SetTrigger(state);
 
         /// <summary>
         /// 애니메이션 이벤트를 AbilityModule로 라우팅합니다.
         /// Animator의 Animation Event에서 호출됩니다.
         /// </summary>
         /// <param name="eventName">애니메이션 이벤트 이름</param>
-        public void OnAnimationEvent(string eventName) => GetModule<YisoCharacterAbilityModule>()?.OnAnimationEvent(eventName);
+        public void OnAnimationEvent(string eventName) =>
+            GetModule<YisoCharacterAbilityModule>()?.OnAnimationEvent(eventName);
+
         public float GetCurrentHealth() => GetModule<YisoCharacterLifecycleModule>().CurrentHealth;
         public bool IsDead() => GetModule<YisoCharacterLifecycleModule>().IsDead;
         public void TakeDamage(DamageInfo damage) => GetModule<YisoCharacterLifecycleModule>().TakeDamage(damage);
-        
+
         /// <summary>
         /// 모든 모듈에 프레임 업데이트 신호 전파.
         /// </summary>
