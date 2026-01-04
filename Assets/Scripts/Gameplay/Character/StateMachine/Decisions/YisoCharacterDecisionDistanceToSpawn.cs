@@ -19,15 +19,9 @@ namespace Gameplay.Character.StateMachine.Decisions {
         private const float SqrTolerance = 0.01f;
 
         public override bool Decide() {
-            if (StateMachine == null) return false;
+            if (StateMachine.Owner == null) return false;
 
-            var aiModule = StateMachine.Owner.GetModule<YisoCharacterAIModule>();
-            if (aiModule == null) {
-                Debug.LogWarning($"[{GetType().Name}] AI Module not found. This decision requires an AI character.");
-                return false;
-            }
-
-            var spawnPosition = aiModule.SpawnPosition;
+            var spawnPosition = StateMachine.SpawnPosition;
             var currentPosition = StateMachine.Owner.Transform.position;
 
             var currentDistSqr = YisoStateMachineUtils.GetDistanceSqr(currentPosition, spawnPosition);
