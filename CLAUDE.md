@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**Old Kingdom Yiso Journey Episode 2** is a Unity 2D top-down action RPG built with Unity 6000.0.62f1. The codebase follows a modular architecture with ScriptableObject-driven FSM and component-based abilities system. The development team uses Korean comments throughout the codebase.
+**Old Kingdom Yiso Journey Episode 2** is a Unity 2D top-down action RPG built with Unity 6000.0.62f1. The codebase follows a modular architecture with C# class-based FSM (Ver2) and ScriptableObject-driven abilities system. The development team uses Korean comments throughout the codebase.
 
 ## Common Commands
 
@@ -44,7 +44,7 @@ The character system is the heart of the game architecture. **YisoCharacter** ac
 - `Assets/Scripts/Gameplay/Character/Core/YisoCharacter.cs` - Central character hub
 - `Assets/Scripts/Gameplay/Character/Core/Modules/` - All character modules
 
-**Character Modules** (8 total):
+**Character Modules** (9 total):
 1. **CoreModule** - Basic functionality
 2. **AbilityModule** - Manages character abilities lifecycle
 3. **AnimationModule** - Animation control
@@ -53,6 +53,7 @@ The character system is the heart of the game architecture. **YisoCharacter** ac
 6. **AIModule** - AI pathfinding (AI types only)
 7. **LifecycleModule** - Health/death management
 8. **SaveModule** - Save/load functionality
+9. **WeaponModule** - Weapon creation, equipping, and management
 
 **Module Initialization**: Two-phase process
 1. **Initialize()** - Each module sets up independently
@@ -62,23 +63,30 @@ The character system is the heart of the game architecture. **YisoCharacter** ac
 
 **Character Types**: Player, Enemy, NPC, Pet, Ally - differentiated by which modules are active (InputModule vs AIModule)
 
-### ScriptableObject-Based FSM
+### C# Class-Based FSM (Ver2)
 
-The FSM system separates data (ScriptableObjects) from runtime logic (C# classes), enabling designer-friendly workflows without code changes.
+The FSM system uses C# classes for states, actions, and decisions. Ver1 (ScriptableObject-based FSM) was completely removed in commit `8fa6bcf`.
 
 **Key Files**:
-- `Assets/Scripts/Gameplay/Character/StateMachine/YisoCharacterStateMachineSO.cs`
-- `Assets/Scripts/Gameplay/Character/StateMachine/YisoCharacterStateSO.cs`
-- `Assets/Scripts/Gameplay/Character/StateMachine/YisoCharacterTransitionSO.cs`
+- `Assets/Scripts/Gameplay/Character/StateMachine/YisoCharacterStateMachine.cs` - FSM runtime manager (MonoBehaviour)
+- `Assets/Scripts/Gameplay/Character/StateMachine/YisoCharacterState.cs` - Serializable state class
+- `Assets/Scripts/Gameplay/Character/StateMachine/YisoCharacterTransition.cs` - Transition logic
+- `Assets/Scripts/Gameplay/Character/StateMachine/YisoCharacterAction.cs` - Abstract action base class
+- `Assets/Scripts/Gameplay/Character/StateMachine/YisoCharacterDecision.cs` - Decision base class
 
 **FSM Structure**:
-- **States**: Define OnEnter/OnUpdate/OnExit actions, child states, and permissions (canMove, canCastAbility)
-- **Transitions**: Decision-based routing to different states based on true/false results
-- **Actions**: Executable behaviors (Movement, Attack, Patrol, Chase, etc.)
-- **Decisions**: Boolean conditions (Distance checks, Target detection, Timers, etc.)
-- **State Roles**: Idle, Move, Chase, Attack, SkillAttack, Hit, Died, Spawn, Custom
+- **States**: Serializable classes with OnEnter/OnUpdate/OnExit actions and child states
+- **Transitions**: Decision-based routing between states (true/false evaluation)
+- **Actions (11 implementations)**:
+  - Move: MoveTowardTarget, MoveRandomly, Patrol, StopMovement, ReturnToSpawn
+  - Attack: Attack, ChangeWeapon
+  - Orientation: FaceTowardTarget, ConeOfVision
+  - General: DoNothing, SetAnimator
+- **Decisions (6 implementations)**: DetectTargetConeOfVision, DetectTargetInRadius, DistanceToTarget, DistanceToSpawn, TargetIsNull, TimeInState
+- **Frequency-based Updates**: Configurable action frequency via `actionFrequency` or `actionFrequencyRange`
+- **Target System**: Multi-target support with `maxTargetCount` slots
 
-**Example Action/Decision Locations**:
+**Action/Decision Locations**:
 - Actions: `Assets/Scripts/Gameplay/Character/StateMachine/Actions/`
 - Decisions: `Assets/Scripts/Gameplay/Character/StateMachine/Decisions/`
 
@@ -97,7 +105,8 @@ Abilities follow a **separation of data and logic** pattern:
 
 **Example Abilities**:
 - **YisoMovementAbility**: Interpolated movement with acceleration/deceleration, speed multipliers
-- **YisoOrientationAbility**: Character facing direction control
+- **YisoOrientationAbility**: Character facing direction control (always-enabled ability)
+- **YisoMeleeAttackAbility**: Melee combat with input buffering and animation events
 
 ### Update Loop Optimization
 
@@ -123,12 +132,13 @@ Type-safe event system using generics and struct-based events for performance.
 - **Factory Pattern**: AbilitySO creates ability instances
 - **Observer Pattern**: Event system for decoupled communication
 - **Strategy Pattern**: Abilities as interchangeable behaviors
-- **State Pattern**: FSM with ScriptableObjects
+- **State Pattern**: FSM with C# classes (Ver2)
 
 ### Naming Conventions
 - **"Yiso" prefix**: All game-specific classes (e.g., `YisoCharacter`, `YisoMovementAbility`)
-- **"SO" suffix**: All ScriptableObjects (e.g., `YisoCharacterStateSO`, `YisoAbilitySO`)
-- **Module naming**: `YisoCharacter[Function]Module` (e.g., `YisoCharacterInputModule`)
+- **"SO" suffix**: ScriptableObjects for Abilities and Data (e.g., `YisoAbilitySO`, `YisoWeaponDataSO`)
+  - **Note**: FSM no longer uses ScriptableObjects (Ver2 uses C# classes)
+- **Module naming**: `YisoCharacter[Function]Module` (e.g., `YisoCharacterInputModule`, `YisoCharacterWeaponModule`)
 
 ### Interface-First Design
 Key interfaces define contracts between systems:
@@ -150,9 +160,10 @@ Assets/
 │   │   └── Manager/                # RunIUpdateManager (centralized updates)
 │   ├── Gameplay/
 │   │   ├── Character/              # ** MAIN CHARACTER SYSTEM **
-│   │   │   ├── Core/              # YisoCharacter + 8 Modules
+│   │   │   ├── Core/              # YisoCharacter + 9 Modules
 │   │   │   ├── Abilities/         # Ability implementations (C# classes)
-│   │   │   ├── StateMachine/      # FSM Actions, Decisions, States (SOs)
+│   │   │   ├── StateMachine/      # FSM Actions, Decisions, States (C# classes)
+│   │   │   ├── Weapon/            # Weapon system (instance, aim, damage)
 │   │   │   ├── Types/             # Enums and constants
 │   │   │   └── Data/              # Character data definitions
 │   │   ├── Core/                  # TopDownController (physics)
@@ -161,6 +172,7 @@ Assets/
 │   │       ├── Event/             # YisoEventManager
 │   │       ├── Movement/          # Movement utilities
 │   │       ├── StateMachine/      # Generic FSM base classes
+│   │       ├── Visual/            # Field of View renderer
 │   │       └── ...
 │   ├── Managers/                  # Game-level managers
 │   ├── Settings/                  # Game settings
@@ -168,15 +180,9 @@ Assets/
 │   └── Utils/                     # Math, Color utilities
 ├── Data/ScriptableObjects/        # ** DATA ASSETS **
 │   ├── Ability/                   # Ability SO instances
-│   └── AI/                        # FSM SO instances
-│       ├── Action/
-│       ├── Decision/
-│       ├── State/
-│       └── State Machine/
+│   └── Weapon/                    # Weapon data SO instances
 ├── Editor/Tests/                  # ** UNIT TESTS **
-│   └── Gameplay/Character/
-│       ├── Abilities/             # Ability tests (Moq-based)
-│       └── StateMachine/          # FSM tests
+│   └── Utils/                     # TestUtils (reflection helpers)
 └── Plugins/
     ├── Sirenix/                   # Odin Inspector
     └── Demigiant/                 # DOTween
@@ -187,149 +193,43 @@ Assets/
 ### Test Framework
 - **Location**: `Assets/Editor/Tests/`
 - **Framework**: NUnit with Moq for mocking
-- **Pattern**: Mock `IYisoCharacterContext` to test modules/abilities in isolation
-- **Utilities**: `TestUtils.cs` provides reflection helpers for setting private ScriptableObject fields
+- **Current Status**: Test files were deleted during Ver2 FSM migration (commit `2c61734`)
+- **Utilities**: `TestUtils.cs` provides reflection helpers for future test development
 
-### Test Files (9 total)
-**FSM Tests** (`Assets/Editor/Tests/Gameplay/Character/StateMachine/`):
-1. `YisoFSMActionTests.cs` - FSM action behavior tests
-2. `YisoFSMDecisionTests.cs` - FSM decision logic tests
-3. `YisoFSMTransitionTests.cs` - FSM transition tests
-4. `YisoFSMTransitionValidationTests.cs` - IsLinkedTo() validation tests
-5. `YisoFSMStateValidationTests.cs` - CanTransitionTo() validation tests
+### Test Utilities
+**TestUtils.cs** (`Assets/Editor/Tests/Utils/TestUtils.cs`):
+- **SetPrivateField()** / **GetPrivateField<T>()**: Reflection-based field access
+- **SetPrivateProperty()** / **GetPrivateProperty<T>()**: Reflection-based property access
+- Type-safe error reporting with available field/property names
 
-**Ability Tests** (`Assets/Editor/Tests/Gameplay/Character/Abilities/`):
-6. `YisoMovementAbilityTests.cs` - Movement ability unit tests
-7. `YisoMovementAbilityStateTests.cs` - Movement state transition tests
-8. `YisoMeleeAttackAbilityInputTests.cs` - Attack input mode tests
-
-**Utilities**:
-9. `TestUtils.cs` - Reflection-based test utilities
-
-### Testing Approach
-- **Arrange-Act-Assert** pattern consistently used
-- **Mock-based isolation**: Use Moq to verify module interactions without dependencies
-- **Reflection utilities**: `TestUtils.SetPrivateField()` sets private ScriptableObject fields for test setup
-- **Behavior verification**: Use `Verify()` to ensure correct method calls
-
-### Critical Testing Guidelines
-
-#### ScriptableObject Testing Rules (MUST FOLLOW)
-**⚠️ NEVER Mock ScriptableObjects!**
-
-ScriptableObjects **cannot** be mocked with `Mock<T>` because their properties/methods are not virtual.
-
-**✅ Correct Pattern:**
+**Safe Reflection Pattern Example:**
 ```csharp
-// Real instance creation
-var stateSO = ScriptableObject.CreateInstance<YisoCharacterStateSO>();
-
-// Inject values using reflection
-TestUtils.SetPrivateField(stateSO, "role", YisoStateRole.Idle);
-TestUtils.SetPrivateField(stateSO, "canMove", true);
-```
-
-**❌ Wrong Pattern:**
-```csharp
-// THIS WILL FAIL - DO NOT USE!
-var mockState = new Mock<YisoCharacterStateSO>();
-mockState.Setup(s => s.Role).Returns(YisoStateRole.Idle); // NotSupportedException
-```
-
-#### Memory Management (Required)
-All ScriptableObject instances **must** be destroyed in `[TearDown]`:
-
-```csharp
-[TearDown]
-public void TearDown() {
-    if (_stateSO != null) Object.DestroyImmediate(_stateSO);
-    if (_abilitySO != null) Object.DestroyImmediate(_abilitySO);
-    if (_weaponData != null) Object.DestroyImmediate(_weaponData);
-}
-```
-
-#### What Can Be Mocked
-- **Interfaces**: `IYisoCharacterContext`, `IYisoCharacterModule` ✅
-- **ScriptableObjects**: ❌ NEVER
-- **Sealed Classes** (all Modules): ❌ NEVER
-  - `YisoCharacterInputModule` (sealed)
-  - `YisoCharacterWeaponModule` (sealed)
-  - `YisoCharacterAnimationModule` (sealed)
-  - `YisoCharacterStateModule` (sealed)
-  - All other `YisoCharacter*Module` classes are sealed
-
-**⚠️ Module Testing Limitation**
-Since all Module classes are `sealed`, they cannot be mocked. Tests should:
-1. Focus on Ability logic without Module dependencies
-2. Use reflection to verify internal state
-3. Use `Assert.Ignore()` for tests requiring sealed Modules
-4. Consider integration tests for full Module interactions
-
-#### Complete Test Example
-```csharp
-public class YisoAbilityTests {
-    private Mock<IYisoCharacterContext> _mockContext;
-    private YisoAbilitySO _abilitySO;  // Real instance
-    private YisoCharacterStateSO _stateSO;  // Real instance
-
-    [SetUp]
-    public void Setup() {
-        _mockContext = new Mock<IYisoCharacterContext>();
-
-        // Create real ScriptableObject instances
-        _abilitySO = ScriptableObject.CreateInstance<YisoAbilitySO>();
-        _stateSO = ScriptableObject.CreateInstance<YisoCharacterStateSO>();
-
-        // Inject private fields using reflection
-        TestUtils.SetPrivateField(_stateSO, "role", YisoStateRole.Idle);
-        TestUtils.SetPrivateField(_stateSO, "canCastAbility", true);
-
-        _mockContext.Setup(c => c.GetCurrentState()).Returns(_stateSO);
-    }
-
-    [TearDown]
-    public void TearDown() {
-        if (_abilitySO != null) Object.DestroyImmediate(_abilitySO);
-        if (_stateSO != null) Object.DestroyImmediate(_stateSO);
-    }
-
-    [Test]
-    public void ProcessAbility__ShouldDoSomething() {
-        // Arrange & Act
-        var ability = new YisoAbility(_abilitySO);
-        ability.Initialize(_mockContext.Object);
-
-        // Assert
-        // ...
-    }
-}
-```
-
-### Safe Reflection Patterns
-
-**✅ NEW: TestUtils.GetPrivateField<T>()**
-안전한 필드 읽기 메서드 (타입 안전성 보장):
-
-```csharp
-// 타입 안전한 필드 읽기
+// Type-safe field reading
 var wasPressed = TestUtils.GetPrivateField<bool>(_ability, "_wasAttackPressedLastFrame");
 Assert.IsFalse(wasPressed);
 
-// 잘못된 필드명 → Assert.Fail 자동 호출
-var badField = TestUtils.GetPrivateField<int>(_ability, "_nonExistentField");
-// → "Field '_nonExistentField' not found on type 'YisoMeleeAttackAbility'.
-//    Available fields: _settings, _isAttacking, ..."
+// Setting private fields
+TestUtils.SetPrivateField(_abilitySO, "priority", 100);
 ```
 
-**Benefits:**
-1. **즉시 실패**: 필드가 없으면 `Assert.Fail()` 호출 → 조용한 실패 방지
-2. **타입 안전**: Generic으로 타입 체크 → 잘못된 타입 캐스팅 방지
-3. **디버깅 정보**: 사용 가능한 필드 목록 출력 → 빠른 문제 해결
+### Testing Guidelines for Future Development
 
-**Example Files**:
-- `Assets/Editor/Tests/Utils/TestUtils.cs` - Improved reflection utilities
-- `Assets/Editor/Tests/Gameplay/Character/Abilities/YisoMeleeAttackAbilityInputTests.cs`
-- `Assets/Editor/Tests/Gameplay/Character/StateMachine/YisoFSMTransitionValidationTests.cs`
+#### What Can Be Mocked
+- **Interfaces**: `IYisoCharacterContext`, `IYisoCharacterModule` ✅
+- **ScriptableObjects**: ❌ NEVER (use CreateInstance instead)
+- **Sealed Classes** (all Modules): ❌ NEVER
+  - All `YisoCharacter*Module` classes are sealed
+  - Focus on Ability logic tests or integration tests
+
+#### ScriptableObject Testing Pattern
+```csharp
+// Real instance creation (DO NOT mock)
+var abilitySO = ScriptableObject.CreateInstance<YisoAbilitySO>();
+TestUtils.SetPrivateField(abilitySO, "priority", 100);
+
+// Memory cleanup in TearDown
+Object.DestroyImmediate(abilitySO);
+```
 
 ## Key Dependencies
 
@@ -401,16 +301,17 @@ UpdateAnimator()       // Sync animation parameters
 
 ### When Modifying Characters
 1. **Module changes**: Ensure two-phase initialization is maintained (Initialize → LateInitialize)
-2. **FSM changes**: Modify ScriptableObject assets, not runtime code
+2. **FSM changes**: Modify C# classes in `Assets/Scripts/Gameplay/Character/StateMachine/`
 3. **Ability changes**: Separate SO settings from C# logic; use factory pattern
-4. **State permissions**: Check `canMove`, `canCastAbility` in states before executing abilities
+4. **State permissions**: Check state constraints before executing abilities
 5. **Object pooling**: Properly implement OnEnable/OnDisable for module lifecycle support
 
 ### When Adding New Features
 1. **New abilities**: Create `YisoAbilitySO` subclass + `IYisoCharacterAbility` implementation
-2. **New FSM logic**: Create ScriptableObject-based Action/Decision, not hardcoded logic
-3. **Module communication**: Use `IYisoCharacterContext` interface, not direct module references
-4. **Events**: Use `YisoEventManager` for decoupled communication between systems
+2. **New FSM Actions**: Extend `YisoCharacterAction` base class, implement `PerformAction()`
+3. **New FSM Decisions**: Extend `YisoCharacterDecision` base class, implement `Decide()`
+4. **Module communication**: Use `IYisoCharacterContext` interface, not direct module references
+5. **Events**: Use `YisoEventManager` for decoupled communication between systems
 
 ### Physics & Movement
 - **TopDownController** (`Assets/Scripts/Gameplay/Core/TopDownController.cs`) handles Rigidbody2D-based movement
@@ -422,3 +323,94 @@ UpdateAnimator()       // Sync animation parameters
 - Action maps: **Player** and **UI**
 - Configuration: `Assets/Settings/InputSystem/InputSystem_Actions.inputactions`
 - Runtime switching between action maps is supported
+
+## New Systems (Recently Added)
+
+### Weapon System
+**Location**: `Assets/Scripts/Gameplay/Character/Weapon/`
+
+The weapon system provides melee/ranged combat functionality integrated with the character module architecture.
+
+**Key Components**:
+- **YisoCharacterWeaponModule** (Module #9): Manages weapon lifecycle (creation, equipping, destruction)
+- **YisoWeaponInstance**: Runtime weapon instance with active/inactive states
+- **YisoWeaponAim**: Aiming logic for directional attacks, integrates with YisoOrientationAbility
+- **YisoDamageOnTouch**: Collision-based damage detection and application
+- **YisoWeaponDataSO**: ScriptableObject defining weapon stats and behavior
+
+**Integration**:
+- WeaponModule initialized in YisoCharacter (line 172)
+- YisoOrientationAbility reads from WeaponAim for aim-based direction control
+- YisoMeleeAttackAbility triggers weapon activation via animation events
+
+### Field of View (FOV) System
+**Commits**: `4e569af` (FOV feature), `273592e` (Cone of Vision decision)
+
+**Location**: `Assets/Scripts/Gameplay/Tools/Visual/YisoFieldOfViewRenderer.cs`
+
+Mesh-based field of view visualization with raycasting for AI enemy detection.
+
+**Key Components**:
+- **YisoFieldOfViewRenderer**: Renders FOV mesh using configurable angle and range
+- **YisoCharacterActionConeOfVision**: FSM Action that updates FOV direction
+- **YisoCharacterDecisionDetectTargetConeOfVision**: FSM Decision detecting enemies within FOV cone
+
+**Usage in FSM**:
+- AI states use ConeOfVision action to visualize detection range
+- DetectTargetConeOfVision decision triggers state transitions (e.g., Idle → Chase)
+
+### IYisoCharacterContext API
+
+The `IYisoCharacterContext` interface provides the core API for FSM Actions and Abilities to interact with characters.
+
+**Movement & Direction Control**:
+```csharp
+void Move(Vector2 finalMovementVector);  // Set character movement
+void Face(FacingDirections direction);   // Face a cardinal direction
+void Face(Vector2 directionVector);      // Face a direction vector (auto-converts to cardinal)
+```
+
+**State & Animation**:
+```csharp
+void PlayAnimation(YisoCharacterAnimationState state, bool/float/int value);
+void OnAnimationEvent(string eventName);  // Routes to AbilityModule
+```
+
+**Health & Lifecycle**:
+```csharp
+float GetCurrentHealth();
+bool IsDead();
+void TakeDamage(DamageInfo damage);
+```
+
+**Permissions**:
+```csharp
+bool IsMovementAllowed { get; }  // Checks death, ability blocks
+bool IsAttackAllowed { get; }    // Checks death, ability blocks
+```
+
+**Properties**:
+```csharp
+Vector2 MovementVector { get; }           // Input/AI direction
+FacingDirections FacingDirection { get; } // Current facing (from OrientationAbility)
+Vector2 FacingDirectionVector { get; }    // Current facing as Vector2
+```
+
+**Implementation**: `Assets/Scripts/Gameplay/Character/Core/YisoCharacter.cs` (lines 216-235)
+
+## Recent Changes
+
+### Ver2 FSM Migration (Commit `8fa6bcf`)
+- **Removed**: Ver1 FSM (ScriptableObject-based), BlackboardModule, all Ver1 SO files
+- **Added**: Ver2 FSM (C# class-based) with Serializable states and improved performance
+- **Breaking Change**: All FSM SO assets became obsolete; states now defined in Inspector
+
+### Face API Addition (Latest)
+- **Added**: `Face(FacingDirections)` and `Face(Vector2)` methods to IYisoCharacterContext
+- **Purpose**: Enable FSM Actions to control character direction via Facade pattern
+- **Implementation**: Delegates to YisoOrientationAbility.ForceFace()
+
+### WeaponModule Integration
+- **Added**: 9th character module for weapon management
+- **Integration**: YisoOrientationAbility reads WeaponAim for aim-based direction priority
+- **Pattern**: Ability → WeaponModule.CurrentWeapon.WeaponAim → Orientation updates
