@@ -24,11 +24,11 @@ namespace Gameplay.Character.StateMachine.Decisions {
             if (StateMachine == null) return false;
 
             var targetIndex = isMainTarget ? 0 : targetSlotNumber;
+            if (!StateMachine.HasTarget(targetIndex)) return false;
+
             var target = StateMachine.GetTarget(targetIndex);
-
-            if (target == null) return false;
-
-            var currentDistSqr = YisoStateMachineUtils.GetDistanceSqr(StateMachine.Owner.Transform.position, target.position);
+            var currentPos = StateMachine.GetCurrentPosition();
+            var currentDistSqr = YisoStateMachineUtils.GetDistanceSqr(currentPos, target.position);
             var thresholdSqr = distance * distance;
 
             switch (comparison) {

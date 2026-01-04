@@ -5,35 +5,38 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Gameplay.Character.StateMachine {
-    public class YisoCharacterStateMachine: RunIBehaviour {
-        [Title("Settings")]
-        [SerializeField] private string initialState;
+    public class YisoCharacterStateMachine : RunIBehaviour {
+        [Title("Settings")] [SerializeField] private string initialState;
         [SerializeField] private bool randomizeFrequencies = true;
-        
-        // Transition 체크 주기 설정
-        [ShowIf("randomizeFrequencies")] 
-        [SerializeField] private Vector2 actionFrequencyRange = new Vector2(0.1f, 0.2f); // 범위 내 랜덤 값 주기로 체크
-        
-        [HideIf("randomizeFrequencies")]
-        [SerializeField] private float actionFrequency = 0.1f; // 정해진 주기로 체크
-        
-        [Title("Target System")]
-        [SerializeField, Min(1)] private int maxTargetCount = 10; // 슬롯 개수 (기본 10개)
 
-        [Title("States")]
-        [SerializeField] private List<YisoCharacterState> states;
+        // Transition 체크 주기 설정
+        [ShowIf("randomizeFrequencies")] [SerializeField]
+        private Vector2 actionFrequencyRange = new Vector2(0.1f, 0.2f); // 범위 내 랜덤 값 주기로 체크
+
+        [HideIf("randomizeFrequencies")] [SerializeField]
+        private float actionFrequency = 0.1f; // 정해진 주기로 체크
+
+        [Title("Target System")] [SerializeField, Min(1)]
+        private int maxTargetCount = 10; // 슬롯 개수 (기본 10개)
+
+        [Title("States")] [SerializeField] private List<YisoCharacterState> states;
 
         public YisoCharacterState CurrentState { get; private set; }
         public IYisoCharacterContext Owner { get; private set; }
         public float TimeInCurrentState => Time.time - _lastStateEnterTime;
         public int MaxTargetCount => maxTargetCount;
-        
+
+        /// <summary>
+        /// AI 캐릭터가 스폰된 초기 위치 (복귀 판단 등에 사용)
+        /// </summary>
+        public Vector3 SpawnPosition { get; private set; }
+
         private float _lastStateEnterTime = 0f;
-        private readonly Dictionary<string, YisoCharacterState> _stateMap =  new();
+        private readonly Dictionary<string, YisoCharacterState> _stateMap = new();
 
         private float _timer; // frequency 타이머
         private float _currentFrequency = 0f;
-        
+
         private Transform[] _targetSlots;
 
         /// <summary>
@@ -42,10 +45,10 @@ namespace Gameplay.Character.StateMachine {
         public Transform MainTarget {
             get {
                 if (_targetSlots == null || _targetSlots.Length == 0) return null;
-                return _targetSlots[0]; 
+                return _targetSlots[0];
             }
         }
-        
+
         /// <summary>
         /// 전체 타겟 슬롯 배열 (읽기 전용으로 노출하거나 필요시 Get 메서드 사용)
         /// </summary>
@@ -54,16 +57,19 @@ namespace Gameplay.Character.StateMachine {
         public void PreInitialize(IYisoCharacterContext owner) {
             // Context 찾기
             Owner = owner;
-            
+
+            // 스폰 위치 저장
+            SpawnPosition = owner.Transform.position;
+
             // 타겟 슬롯 메모리 할당 (고정 크기)
             _targetSlots = new Transform[maxTargetCount];
-            
+
             foreach (var state in states) {
                 if (!_stateMap.TryAdd(state.StateName, state)) {
                     Debug.LogWarning($"[FSM] {name}: 중복된 상태 이름이 있습니다 -> {state.StateName}");
                 }
             }
-            
+
             ResetFrequency();
         }
 
@@ -78,16 +84,16 @@ namespace Gameplay.Character.StateMachine {
 
         public override void OnUpdate() {
             base.OnUpdate();
-            
+
             if (CurrentState == null) return;
-                
+
             CurrentState?.PlayUpdateActions();
 
             _timer += Time.deltaTime;
             if (_timer >= _currentFrequency) {
                 _timer = 0f;
                 ResetFrequency();
-                
+
                 var nextStateKey = CurrentState.CheckTransitions();
                 if (!string.IsNullOrEmpty(nextStateKey)) {
                     ChangeState(nextStateKey);
@@ -116,7 +122,9 @@ namespace Gameplay.Character.StateMachine {
         }
 
         private void ResetFrequency() {
-            _currentFrequency = randomizeFrequencies ? Random.Range(actionFrequencyRange.x, actionFrequencyRange.y) : actionFrequency;
+            _currentFrequency = randomizeFrequencies
+                ? Random.Range(actionFrequencyRange.x, actionFrequencyRange.y)
+                : actionFrequency;
         }
 
         #region Target
@@ -130,6 +138,7 @@ namespace Gameplay.Character.StateMachine {
                 Debug.LogWarning($"[FSM] 잘못된 타겟 인덱스 접근: {index}. Max: {maxTargetCount}");
                 return;
             }
+
             _targetSlots[index] = target;
         }
 
@@ -158,13 +167,90 @@ namespace Gameplay.Character.StateMachine {
                 _targetSlots[i] = null;
             }
         }
-        
+
         /// <summary>
         /// 해당 슬롯에 유효한 타겟이 있는지 확인 (null 체크 + Destroy 체크)
         /// </summary>
         public bool HasValidTarget(int index) {
             if (index < 0 || index >= _targetSlots.Length) return false;
             return _targetSlots[index] != null;
+        }
+
+        #endregion
+
+        #region Utility Methods for Actions
+
+        /// <summary>
+        /// Weapon Module을 가져옵니다.
+        /// </summary>
+        public Core.Modules.YisoCharacterWeaponModule GetWeaponModule() {
+            return Owner?.GetModule<Core.Modules.YisoCharacterWeaponModule>();
+        }
+
+        /// <summary>
+        /// Ability Module을 가져옵니다.
+        /// </summary>
+        public Core.Modules.YisoCharacterAbilityModule GetAbilityModule() {
+            return Owner?.GetModule<Core.Modules.YisoCharacterAbilityModule>();
+        }
+
+        /// <summary>
+        /// 메인 타겟(슬롯 0)이 유효한지 확인합니다.
+        /// </summary>
+        public bool HasTarget(int index = 0) {
+            return GetTarget(index) != null;
+        }
+
+        /// <summary>
+        /// 캐릭터의 현재 위치를 반환합니다.
+        /// </summary>
+        public Vector2 GetCurrentPosition() {
+            if (Owner?.Transform == null) return Vector2.zero;
+            return Owner.Transform.position;
+        }
+
+        /// <summary>
+        /// 메인 타겟을 향하는 방향 벡터를 반환합니다.
+        /// </summary>
+        public Vector2 GetDirectionToTarget(int index = 0) {
+            if (!HasTarget(index)) return Vector2.zero;
+
+            var currentPos = GetCurrentPosition();
+            var targetPos = (Vector2) GetTarget(index).position;
+
+            return (targetPos - currentPos).normalized;
+        }
+
+        /// <summary>
+        /// 메인 타겟까지의 거리를 반환합니다.
+        /// </summary>
+        public float GetDistanceToTarget(int index = 0) {
+            if (!HasTarget(index)) return float.MaxValue;
+
+            var currentPos = GetCurrentPosition();
+            var targetPos = (Vector2) GetTarget(index).position;
+
+            return Vector2.Distance(currentPos, targetPos);
+        }
+
+        /// <summary>
+        /// 스폰 위치로의 방향 벡터를 반환합니다.
+        /// </summary>
+        public Vector2 GetDirectionToSpawn() {
+            var currentPos = GetCurrentPosition();
+            var spawnPos = (Vector2) SpawnPosition;
+
+            return (spawnPos - currentPos).normalized;
+        }
+
+        /// <summary>
+        /// 스폰 위치까지의 거리를 반환합니다.
+        /// </summary>
+        public float GetDistanceToSpawn() {
+            var currentPos = GetCurrentPosition();
+            var spawnPos = (Vector2) SpawnPosition;
+
+            return Vector2.Distance(currentPos, spawnPos);
         }
 
         #endregion

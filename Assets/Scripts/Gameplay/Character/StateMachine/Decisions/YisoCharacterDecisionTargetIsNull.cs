@@ -20,9 +20,7 @@ namespace Gameplay.Character.StateMachine.Decisions {
             if (StateMachine == null) return true;
 
             var targetIndex = isMainTarget ? 0 : targetSlotNumber;
-            var target = StateMachine.GetTarget(targetIndex);
-
-            return target == null;
+            return !StateMachine.HasTarget(targetIndex);
         }
     }
 }

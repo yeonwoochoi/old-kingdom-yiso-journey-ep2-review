@@ -47,10 +47,14 @@ namespace Gameplay.Character.StateMachine.Actions.Orientation {
             // MeshRenderer 컴포넌트도 켜줌
             var meshRenderer = _fovRenderer.GetComponent<MeshRenderer>();
             if (meshRenderer != null) meshRenderer.enabled = true;
+            
+            // 진입 시 방향 동기화 (깜빡임 방지)
+            UpdateRendererDirection();
+
         }
 
         public override void PerformAction() {
-            
+            UpdateRendererDirection();
         }
 
         public override void OnExitState() {
@@ -61,6 +65,12 @@ namespace Gameplay.Character.StateMachine.Actions.Orientation {
             
             var meshRenderer = _fovRenderer.GetComponent<MeshRenderer>();
             if (meshRenderer != null) meshRenderer.enabled = false;
+        }
+
+        private void UpdateRendererDirection() {
+            if (_fovRenderer == null || StateMachine.Owner == null) return;
+            var currentDir = StateMachine.Owner.FacingDirectionVector;
+            _fovRenderer.SetAimDirection(currentDir);
         }
     }
 }

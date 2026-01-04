@@ -19,12 +19,12 @@ namespace Gameplay.Character.StateMachine.Decisions {
         private const float SqrTolerance = 0.01f;
 
         public override bool Decide() {
-            if (StateMachine.Owner == null) return false;
+            if (StateMachine?.Owner == null) return false;
 
-            var spawnPosition = StateMachine.SpawnPosition;
-            var currentPosition = StateMachine.Owner.Transform.position;
+            var currentPos = StateMachine.GetCurrentPosition();
+            var spawnPos = (Vector2)StateMachine.SpawnPosition;
 
-            var currentDistSqr = YisoStateMachineUtils.GetDistanceSqr(currentPosition, spawnPosition);
+            var currentDistSqr = YisoStateMachineUtils.GetDistanceSqr(currentPos, spawnPos);
             var thresholdSqr = distance * distance;
 
             switch (comparison) {
