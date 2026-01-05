@@ -960,11 +960,6 @@ MonoBehaviour:
     characterEntityHealth: {fileID: 1362263426}
   _stateSettings:
     stateMachine: {fileID: 11400000, guid: 782b0da8b15413b408b41bec1e9a3e4c, type: 2}
-    decisionCheckFrequency: 0.1
-    actionExecuteFrequency: 0
-    randomizeFrequencies: 0
-    randomDecisionFrequency: {x: 0.1, y: 0.3}
-    randomActionFrequency: {x: 0, y: 0.1}
   _weaponSettings:
     weaponAttachPoint: {fileID: 96548311}
     initialWeapon: {fileID: 11400000, guid: 92356cdad4feff74eb924d87a374e9e7, type: 2}
@@ -1209,11 +1204,6 @@ MonoBehaviour:
     characterEntityHealth: {fileID: 1497929015}
   _stateSettings:
     stateMachine: {fileID: 11400000, guid: deba3aefa7bd6f64f96d72da66937204, type: 2}
-    decisionCheckFrequency: 0.1
-    actionExecuteFrequency: 0
-    randomizeFrequencies: 0
-    randomDecisionFrequency: {x: 0.1, y: 0.3}
-    randomActionFrequency: {x: 0, y: 0.1}
   _weaponSettings:
     weaponAttachPoint: {fileID: 1333830990}
     initialWeapon: {fileID: 11400000, guid: e201acb019ccfea41a97b7fc0eba0bbe, type: 2}

@@ -18,20 +18,23 @@ namespace Gameplay.Character.StateMachine.Decisions {
         [Tooltip("타겟 레이어 마스크")]
         private LayerMask targetLayer;
 
-        [Title("Target Storage")]
+        [Title("Target Selection")]
+        [SerializeField] private bool isMainTarget = true;
+
         [SerializeField]
-        [Tooltip("감지한 타겟을 저장할 슬롯 번호 (0 = Main Target)")]
-        [MinValue(0), MaxValue("@MaxSlotIndex")]
-        private int targetSlotNumber = 0;
+        [ShowIf("@!isMainTarget")]
+        [MinValue(1), MaxValue("@MaxSlotIndex")]
+        private int targetSlotNumber = 1;
 
         public override bool Decide() {
             if (StateMachine == null) return false;
 
             var origin = (Vector2)StateMachine.Owner.Transform.position;
             var detectedTarget = YisoStateMachineUtils.FindClosestTarget(origin, detectionRadius, targetLayer);
+            var targetIndex = isMainTarget ? 0 : targetSlotNumber;
 
             if (detectedTarget != null) {
-                StateMachine.SetTarget(targetSlotNumber, detectedTarget);
+                StateMachine.SetTarget(targetIndex, detectedTarget);
                 return true;
             }
 
