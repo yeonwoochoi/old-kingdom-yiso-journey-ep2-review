@@ -38,21 +38,7 @@ namespace Gameplay.Character.StateMachine {
         private float _currentFrequency = 0f;
 
         private Transform[] _targetSlots;
-
-        /// <summary>
-        /// 0번 슬롯 (Main Target)
-        /// </summary>
-        public Transform MainTarget {
-            get {
-                if (_targetSlots == null || _targetSlots.Length == 0) return null;
-                return _targetSlots[0];
-            }
-        }
-
-        /// <summary>
-        /// 전체 타겟 슬롯 배열 (읽기 전용으로 노출하거나 필요시 Get 메서드 사용)
-        /// </summary>
-        public Transform[] TargetSlots => _targetSlots;
+        private IYisoCharacterContext[] _targetContexts;
 
         public void PreInitialize(IYisoCharacterContext owner) {
             // Context 찾기
@@ -63,6 +49,7 @@ namespace Gameplay.Character.StateMachine {
 
             // 타겟 슬롯 메모리 할당 (고정 크기)
             _targetSlots = new Transform[maxTargetCount];
+            _targetContexts = new IYisoCharacterContext[maxTargetCount];
 
             foreach (var state in states) {
                 if (!_stateMap.TryAdd(state.StateName, state)) {
@@ -138,6 +125,14 @@ namespace Gameplay.Character.StateMachine {
                 Debug.LogWarning($"[FSM] 잘못된 타겟 인덱스 접근: {index}. Max: {maxTargetCount}");
                 return;
             }
+            
+            // 캐싱
+            if (target != null) {
+                _targetContexts[index] = target.GetComponent<IYisoCharacterContext>();
+            }
+            else {
+                _targetContexts[index] = null;
+            }
 
             _targetSlots[index] = target;
         }
@@ -149,6 +144,18 @@ namespace Gameplay.Character.StateMachine {
             if (index < 0 || index >= _targetSlots.Length) return null;
             return _targetSlots[index];
         }
+        
+        public IYisoCharacterContext GetTargetContext(int index) {
+            if (index < 0 || index >= _targetContexts.Length) return null;
+            
+            // 만약 타겟 오브젝트가 파괴되었다면 null 처리 (Safety Check)
+            if (_targetSlots[index] == null) {
+                _targetContexts[index] = null;
+                return null;
+            }
+            
+            return _targetContexts[index];
+        }
 
         /// <summary>
         /// 특정 인덱스의 타겟을 비웁니다.
@@ -156,6 +163,7 @@ namespace Gameplay.Character.StateMachine {
         public void ClearTarget(int index) {
             if (index < 0 || index >= _targetSlots.Length) return;
             _targetSlots[index] = null;
+            _targetContexts[index] = null;
         }
 
         /// <summary>
@@ -165,6 +173,7 @@ namespace Gameplay.Character.StateMachine {
             if (_targetSlots == null) return;
             for (int i = 0; i < _targetSlots.Length; i++) {
                 _targetSlots[i] = null;
+                _targetContexts[i] = null;
             }
         }
 
