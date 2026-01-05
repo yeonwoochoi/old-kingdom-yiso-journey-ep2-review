@@ -81,6 +81,8 @@ namespace Gameplay.Character.StateMachine {
             [LabelText("@this.mode + \" Group\"")]
             [ListDrawerSettings(ShowIndexLabels = false, CustomAddFunction = "CreateDefaultElement")]
             [Indent]
+            [SerializeReference]        // 재귀 구조 직렬화 허용 (참조 방식으로 저장)
+            [HideReferenceObjectPicker] // "Select Type" 드롭다운 숨기기 (타입이 하나뿐이므로)
             public List<TransitionCondition> subConditions;
 
             public bool Decide() {
