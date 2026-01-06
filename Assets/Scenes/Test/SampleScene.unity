@@ -619,75 +619,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1362263430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &788105763
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 788105764}
-  - component: {fileID: 788105765}
-  m_Layer: 0
-  m_Name: AI (Data)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &788105764
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 788105763}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1095492505}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &788105765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 788105763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1096ee3712044a89f223ee6df00c04e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _floatEntries:
-  - key: {fileID: 11400000, guid: 33d68a1c2fe3e9f4f9fefd83cbbda2f0, type: 2}
-    value: 3
-  - key: {fileID: 11400000, guid: bc8c78fe352d8a640980d48ff944bad0, type: 2}
-    value: 5
-  - key: {fileID: 11400000, guid: 07a31423cd4959e47bfa3352e509c9e2, type: 2}
-    value: 0
-  - key: {fileID: 11400000, guid: bdb072b00158cc748a60d8b5f9666bb3, type: 2}
-    value: 3
-  - key: {fileID: 11400000, guid: 0a36b711c2caf70419f35d36b7585ed1, type: 2}
-    value: 1
-  - key: {fileID: 11400000, guid: dc3d5d4c05cfb874a826b1f1575b8e5d, type: 2}
-    value: 1.5
-  - key: {fileID: 11400000, guid: ef27f533b7a151d4f82d263f78fab12b, type: 2}
-    value: 0
-  _intEntries: []
-  _stringEntries: []
-  _boolEntries: []
-  _vectorEntries:
-  - key: {fileID: 11400000, guid: 77d2b05f2ecacd44d8774d430fe1b9de, type: 2}
-    useCurrentPosition: 1
-    value: {x: 0, y: 0, z: 0}
-  _objectEntries:
-  - key: {fileID: 11400000, guid: 6f1499a097d226c469d3175d87a2b356, type: 2}
-    value: {fileID: 0}
 --- !u!1 &1095492504
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,60 +648,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 788105764}
   - {fileID: 1818567763}
   m_Father: {fileID: 1362263430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1127413195
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1127413196}
-  - component: {fileID: 1127413197}
-  m_Layer: 0
-  m_Name: AI (Data)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1127413196
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1127413195}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1193150496}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1127413197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1127413195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1096ee3712044a89f223ee6df00c04e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _floatEntries: []
-  _intEntries: []
-  _stringEntries: []
-  _boolEntries: []
-  _vectorEntries: []
-  _objectEntries: []
 --- !u!1 &1193150495
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,7 +680,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1127413196}
   - {fileID: 167491512}
   m_Father: {fileID: 1497929010}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -953,16 +832,16 @@ MonoBehaviour:
   animator: {fileID: 613678064}
   _abilitySettings:
     abilities:
-    - {fileID: 11400000, guid: 9a8e3c0df3dccc242ad346ffd8a449bd, type: 2}
-    - {fileID: 11400000, guid: a17b9d558adbfd246aac5d132b92cc66, type: 2}
-    - {fileID: 11400000, guid: 27ae983060e22644fbf0982befd72503, type: 2}
+    - {fileID: 11400000, guid: fc853e139b48bd440babe4d31836e6d4, type: 2}
+    - {fileID: 11400000, guid: a2ab50a37cb23f8469c7a97d6e53f777, type: 2}
+    - {fileID: 11400000, guid: b9a2b403727ae7e46818d9f814ca2747, type: 2}
   _lifecycleSettings:
     characterEntityHealth: {fileID: 1362263426}
   _stateSettings:
-    stateMachine: {fileID: 11400000, guid: 782b0da8b15413b408b41bec1e9a3e4c, type: 2}
+    stateMachine: {fileID: 1466805898063499468, guid: b22a6242ec47ee54085711703f4ca6d6, type: 3}
   _weaponSettings:
     weaponAttachPoint: {fileID: 96548311}
-    initialWeapon: {fileID: 11400000, guid: 92356cdad4feff74eb924d87a374e9e7, type: 2}
+    initialWeapon: {fileID: 11400000, guid: cee94a09f7a7ba14f848bc5101ce81c0, type: 2}
 --- !u!114 &1362263426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1197,16 +1076,16 @@ MonoBehaviour:
   animator: {fileID: 1642988288}
   _abilitySettings:
     abilities:
-    - {fileID: 11400000, guid: 82a186a8f1c278548958b9b010c6fad8, type: 2}
-    - {fileID: 11400000, guid: a17b9d558adbfd246aac5d132b92cc66, type: 2}
-    - {fileID: 11400000, guid: a3966d789523c424e8f773a0db2f71fe, type: 2}
+    - {fileID: 11400000, guid: b9a2b403727ae7e46818d9f814ca2747, type: 2}
+    - {fileID: 11400000, guid: fc853e139b48bd440babe4d31836e6d4, type: 2}
+    - {fileID: 11400000, guid: a2ab50a37cb23f8469c7a97d6e53f777, type: 2}
   _lifecycleSettings:
     characterEntityHealth: {fileID: 1497929015}
   _stateSettings:
-    stateMachine: {fileID: 11400000, guid: deba3aefa7bd6f64f96d72da66937204, type: 2}
+    stateMachine: {fileID: 0}
   _weaponSettings:
     weaponAttachPoint: {fileID: 1333830990}
-    initialWeapon: {fileID: 11400000, guid: e201acb019ccfea41a97b7fc0eba0bbe, type: 2}
+    initialWeapon: {fileID: 11400000, guid: b45b7555524403c48895e0700a56daea, type: 2}
 --- !u!114 &1497929015
 MonoBehaviour:
   m_ObjectHideFlags: 0
