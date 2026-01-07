@@ -8,6 +8,8 @@ namespace Gameplay.Character.Core.Modules {
         private readonly Settings _settings;
         private YisoCharacterStateMachine _stateMachine;
         
+        public string CurrentState => _stateMachine?.CurrentState?.StateName ?? "None";
+        
         public YisoCharacterStateModule(IYisoCharacterContext context, Settings settings) : base(context) {
             _settings = settings;
         }

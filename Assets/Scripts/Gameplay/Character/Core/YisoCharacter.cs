@@ -37,6 +37,9 @@ namespace Gameplay.Character.Core {
         [SerializeField] private YisoCharacterSaveModule.Settings _saveSettings;
         [SerializeField] private YisoCharacterWeaponModule.Settings _weaponSettings;
 
+        [Title("Debug (Runtime)")] [ShowInInspector, ReadOnly]
+        private string CurrentState => Application.isPlaying ? GetModule<YisoCharacterStateModule>()?.CurrentState ?? "None" : "None";
+
         public GameObject GameObject => gameObject;
         public Transform Transform => transform;
         public CharacterType Type => characterType;
