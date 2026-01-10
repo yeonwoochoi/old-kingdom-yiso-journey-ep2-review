@@ -152,7 +152,6 @@ namespace Gameplay.Character.Abilities {
         /// 운동량만 멈추는 함수 (버프는 유지)
         /// </summary>
         private void StopMovement() {
-            YisoLogger.Log("이동 정지: IsMovementAllowed=false");
             _currentAcceleration = 0f;
             _lerpedInput = Vector2.zero;
             Context.Move(Vector2.zero);

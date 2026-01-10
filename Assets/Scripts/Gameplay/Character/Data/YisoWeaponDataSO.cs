@@ -30,7 +30,7 @@ namespace Gameplay.Character.Data {
         public float attackRate = 1f;
 
         [Tooltip("공격 지속 시간 (초) - DamageOnTouch 활성화 시간")]
-        public float attackDuration = 0.3f;
+        public List<float> attackDurations = new List<float>();
 
         [Header("Combo Settings")]
         [Tooltip("최대 콤보 수 (예: 4 = 4단 콤보)")]

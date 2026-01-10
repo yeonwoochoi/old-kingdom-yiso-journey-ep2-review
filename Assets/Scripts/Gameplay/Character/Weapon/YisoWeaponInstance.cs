@@ -3,6 +3,7 @@ using Gameplay.Character.Data;
 using Gameplay.Character.Types;
 using Gameplay.Health;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Character.Weapon {
     /// <summary>
@@ -15,7 +16,6 @@ namespace Gameplay.Character.Weapon {
         public GameObject WeaponObject { get; private set; }
         public Animator WeaponAnimator { get; private set; }
         public YisoWeaponAim WeaponAim { get; private set; }
-        public YisoDamageOnTouch DamageOnTouch { get; private set; }
 
         public bool IsActive => WeaponObject != null && WeaponObject.activeSelf;
         public int CurrentComboIndex { get; private set; } = 0;
@@ -29,29 +29,44 @@ namespace Gameplay.Character.Weapon {
             _context = context;
 
             // 무기 프리팹 인스턴스화
-            if (weaponData.weaponPrefab != null) {
+            if (weaponData.weaponPrefab != null)
+            {
                 WeaponObject = Object.Instantiate(weaponData.weaponPrefab, parent);
                 WeaponObject.transform.localPosition = Vector3.zero;
                 WeaponObject.transform.localRotation = Quaternion.identity;
 
-                // 컴포넌트 캐싱
                 WeaponAnimator = WeaponObject.GetComponentInChildren<Animator>();
                 WeaponAim = WeaponObject.GetComponentInChildren<YisoWeaponAim>();
-                DamageOnTouch = WeaponObject.GetComponentInChildren<YisoDamageOnTouch>();
 
-                // 4. 검증 및 설정 (Enemy는 Weapon에 Animator 없음)
-                if (_context.Type == CharacterType.Player && WeaponAnimator == null) Debug.LogWarning($"[YisoWeaponInstance] No Animator on '{weaponData.weaponName}'");
-                if (WeaponAim == null) Debug.LogWarning($"[YisoWeaponInstance] No WeaponAim on '{weaponData.weaponName}'");
+                if (WeaponAim != null)
+                {
+                    // [변경] WeaponAim에 등록된 모든 히트박스에 이벤트 구독
+                    if (WeaponAim.ComboSettings != null)
+                    {
+                        foreach (var setting in WeaponAim.ComboSettings)
+                        {
+                            if (setting.hitbox != null)
+                            {
+                                setting.hitbox.SetOwner(owner);
+                                setting.hitbox.OnHit += HandleHit;
+                            }
+                        }
+                    }
 
-                if (DamageOnTouch != null) {
-                    DamageOnTouch.SetOwner(owner);
-                    DamageOnTouch.OnHit += HandleHit;
-                } else {
-                    Debug.LogWarning($"[YisoWeaponInstance] No DamageOnTouch on '{weaponData.weaponName}'");
+                    // 초기 상태 설정 (0번 콤보)
+                    SetComboIndex(0);
                 }
+                else
+                {
+                    YisoLogger.LogWarning($"[YisoWeaponInstance] No WeaponAim on '{weaponData.weaponName}'");
+                }
+
+                if (_context.Type == CharacterType.Player && WeaponAnimator == null)
+                    YisoLogger.LogWarning($"[YisoWeaponInstance] No Animator on '{weaponData.weaponName}'");
             }
-            else {
-                Debug.LogError($"[YisoWeaponInstance] WeaponDataSO '{weaponData.name}' has no prefab!");
+            else
+            {
+                YisoLogger.LogError($"[YisoWeaponInstance] WeaponDataSO '{weaponData.name}' has no prefab!");
             }
         }
 
@@ -59,8 +74,14 @@ namespace Gameplay.Character.Weapon {
         public void Deactivate() => WeaponObject?.SetActive(false);
 
         public void Destroy() {
-            if (DamageOnTouch != null) DamageOnTouch.OnHit -= HandleHit;
-            
+            if (WeaponAim != null && WeaponAim.ComboSettings != null)
+            {
+                foreach (var setting in WeaponAim.ComboSettings)
+                {
+                    if (setting.hitbox != null) setting.hitbox.OnHit -= HandleHit;
+                }
+            }
+
             if (WeaponObject != null) {
                 Object.Destroy(WeaponObject);
                 WeaponObject = null;
@@ -68,15 +89,18 @@ namespace Gameplay.Character.Weapon {
             
             WeaponAnimator = null;
             WeaponAim = null;
-            DamageOnTouch = null;
             WeaponData = null;
         }
 
         // --- Proxy Methods ---
-        public void EnableDamage() => DamageOnTouch?.EnableDamage();
-        public void DisableDamage() => DamageOnTouch?.DisableDamage();
+        public void EnableDamage() => WeaponAim?.CurrentHitbox?.EnableDamage();
+        public void DisableDamage() => WeaponAim?.CurrentHitbox?.DisableDamage();
         public void SetAimDirection(Vector2 direction) => WeaponAim?.SetAimDirection(direction);
-        public void SetComboIndex(int comboIndex) => CurrentComboIndex = comboIndex;
+        public void SetComboIndex(int comboIndex)
+        {
+            CurrentComboIndex = comboIndex;
+            WeaponAim?.SetComboIndex(comboIndex);
+        }
 
         private void HandleHit(GameObject target, Vector3 hitPoint) {
             if (WeaponData == null || _owner == null) return;

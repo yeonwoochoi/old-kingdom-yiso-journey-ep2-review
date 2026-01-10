@@ -18,7 +18,8 @@ MonoBehaviour:
   minDamage: 10
   maxDamage: 15
   attackRate: 1
-  attackDuration: 0.3
+  attackDurations:
+  - 0.5
   maxComboCount: 1
   comboResetTime: 1
   comboDamageMultipliers:

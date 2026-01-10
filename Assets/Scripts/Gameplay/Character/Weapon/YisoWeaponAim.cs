@@ -1,47 +1,41 @@
 using Core.Behaviour;
 using Gameplay.Character.Types;
 using Sirenix.OdinInspector;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Utils;
 
 namespace Gameplay.Character.Weapon {
-    /// <summary>
-    /// 무기의 방향 상태를 관리하는 컴포넌트.
-    /// - CurrentAim (Vector2): 정확한 입력 방향 벡터를 보유하여 히트박스 회전에 사용
-    /// - CurrentDirection (FacingDirections): 4방향 Enum 상태 (필요시 참조용)
-    ///
-    /// 무기 비주얼(Sprite)은 Animator의 X, Y 파라미터로 4방향 애니메이션 제어되며,
-    /// 실제 타격 판정(Collider/Hitbox)은 CurrentAim 방향으로 회전하여 정확한 판정을 보장합니다.
-    /// </summary>
     [AddComponentMenu("Yiso/Weapon/Weapon Aim")]
-    public class YisoWeaponAim : RunIBehaviour {
-        [Header("Hitbox Settings")]
-        [Tooltip("타격 판정(DamageOnTouch)이 붙어있는 Transform. 입력 방향에 맞춰 회전됨.\n" +
-                 "할당하지 않으면 회전하지 않음 (Animator만으로 제어).")]
-        [SerializeField] private Transform hitboxTransform;
-        
-        [Header("Aim Settings")]
-        [Tooltip("무기의 기본 오프셋 (로컬 좌표)")]
-        [SerializeField] private Vector3 weaponOffset = Vector3.zero;
+    public class YisoWeaponAim : RunIBehaviour
+    {
+        [Serializable]
+        public class WeaponComboSetting
+        {
+            [Title("Hitbox")]
+            [Required]
+            public YisoDamageOnTouch hitbox; // 해당 콤보에 쓸 히트박스
 
-        [Header("Directional Offsets")]
-        [Tooltip("방향별 오프셋 사용 여부. 픽셀 아트에서 방향마다 무기 위치를 미세 조정할 때 사용.")]
-        [SerializeField] private bool useDirectionalOffsets = false;
+            [Title("Offsets")]
+            [Tooltip("이 콤보에서의 기본 위치 오프셋")]
+            public Vector3 baseOffset = Vector3.zero;
 
-        [Tooltip("위쪽을 볼 때 추가 오프셋"), ShowIf("useDirectionalOffsets")]
-        [SerializeField] private Vector3 offsetUp = Vector3.zero;
+            public bool useDirectionalOffsets = false;
 
-        [Tooltip("아래쪽을 볼 때 추가 오프셋"), ShowIf("useDirectionalOffsets")]
-        [SerializeField] private Vector3 offsetDown = Vector3.zero;
-        
-        [Tooltip("왼쪽을 볼 때 추가 오프셋"), ShowIf("useDirectionalOffsets")]
-        [SerializeField] private Vector3 offsetLeft = Vector3.zero;
+            [ShowIf("useDirectionalOffsets")][Indent] public Vector3 offsetUp = Vector3.zero;
+            [ShowIf("useDirectionalOffsets")][Indent] public Vector3 offsetDown = Vector3.zero;
+            [ShowIf("useDirectionalOffsets")][Indent] public Vector3 offsetLeft = Vector3.zero;
+            [ShowIf("useDirectionalOffsets")][Indent] public Vector3 offsetRight = Vector3.zero;
+        }
 
-        [Tooltip("오른쪽을 볼 때 추가 오프셋"), ShowIf("useDirectionalOffsets")]
-        [SerializeField] private Vector3 offsetRight = Vector3.zero;
+        [Header("Combo Settings")]
+        [ListDrawerSettings(ShowIndexLabels = true)]
+        [SerializeField] private List<WeaponComboSetting> comboSettings;
 
+        // 현재 적용 중인 설정 (캐싱용)
+        private WeaponComboSetting _currentSetting; // 현재 히트박스
         private Transform _weaponTransform;
-        private Vector3 _initialLocalScale;
 
         /// <summary>
         /// 조준 방향 잠금 플래그.
@@ -59,23 +53,55 @@ namespace Gameplay.Character.Weapon {
         /// 현재 무기가 바라보는 4방향 Enum (참조용)
         /// </summary>
         public FacingDirections CurrentDirection { get; private set; } = FacingDirections.Down;
+        public IReadOnlyList<WeaponComboSetting> ComboSettings => comboSettings;
+        public YisoDamageOnTouch CurrentHitbox => _currentSetting?.hitbox;
 
         protected override void Awake() {
             base.Awake();
             _weaponTransform = transform;
-            _initialLocalScale = _weaponTransform.localScale;
+
+            // 초기화 시 모든 히트박스 끄기
+            if (comboSettings != null)
+            {
+                foreach (var setting in comboSettings)
+                {
+                    if (setting.hitbox != null) setting.hitbox.gameObject.SetActive(false);
+                }
+            }
         }
 
         #region Public API
 
         /// <summary>
-        /// 무기의 방향을 설정합니다.
-        /// - CurrentAim: 입력받은 벡터를 그대로 저장
-        /// - CurrentDirection: Vector2 → FacingDirections로 변환하여 저장
-        /// - 히트박스: CurrentAim 방향으로 회전
-        /// - 플립: X축 기준 좌우 반전 (선택적)
+        /// 콤보 인덱스를 변경하고, 해당 설정(히트박스, 오프셋)을 적용합니다.
         /// </summary>
-        /// <param name="direction">목표 방향 벡터</param>
+        public void SetComboIndex(int index)
+        {
+            if (comboSettings == null || comboSettings.Count == 0) return;
+
+            // 인덱스 안전 처리
+            if (index < 0 || index >= comboSettings.Count) index = 0;
+
+            // 1. 이전 히트박스 끄기
+            if (_currentSetting?.hitbox != null)
+            {
+                _currentSetting.hitbox.DisableDamage(); // Collider 끄기
+                _currentSetting.hitbox.gameObject.SetActive(false);
+            }
+
+            // 2. 새 설정 적용
+            _currentSetting = comboSettings[index];
+
+            // 3. 새 히트박스 켜기
+            if (_currentSetting.hitbox != null)
+            {
+                _currentSetting.hitbox.gameObject.SetActive(true);
+            }
+
+            // 4. 변경된 오프셋 및 회전 즉시 갱신 (현재 바라보는 방향 기준)
+            ApplyAim(CurrentAim, lockAfter: _isAimLocked);
+        }
+
         public void SetAimDirection(Vector2 direction) {
             if (direction.sqrMagnitude < 0.01f) return;
             if (_isAimLocked) return;
@@ -93,59 +119,25 @@ namespace Gameplay.Character.Weapon {
             ApplyAim(direction, lockAfter: true);
         }
 
-        /// <summary>
-        /// 무기 오프셋을 설정합니다.
-        /// </summary>
-        public void SetWeaponOffset(Vector3 offset) {
-            weaponOffset = offset;
-            _weaponTransform.localPosition = offset;
-        }
-
-        /// <summary>
-        /// 조준 방향을 잠급니다 (예: 공격 중).
-        /// 잠금 상태에서는 SetAimDirection 호출 시 방향이 변경되지 않습니다.
-        /// </summary>
-        public void LockAim() {
-            _isAimLocked = true;
-        }
-
-        /// <summary>
-        /// 조준 방향 잠금을 해제합니다.
-        /// </summary>
-        public void UnlockAim() {
-            _isAimLocked = false;
-        }
-
-        /// <summary>
-        /// 현재 조준 방향이 잠겨있는지 여부를 반환합니다.
-        /// </summary>
-        public bool IsAimLocked() {
-            return _isAimLocked;
-        }
+        public void LockAim() => _isAimLocked = true;
+        public void UnlockAim() => _isAimLocked = false;
+        public bool IsAimLocked() => _isAimLocked;
 
         #endregion
 
         #region Private Helper
 
-        /// <summary>
-        /// 공통 Aim 적용 로직
-        /// </summary>
-        /// <param name="direction">목표 방향 벡터</param>
-        /// <param name="lockAfter">적용 후 조준 잠금 여부</param>
-        private void ApplyAim(Vector2 direction, bool lockAfter) {
-            // 1. Vector2 원본 저장
+        private void ApplyAim(Vector2 direction, bool lockAfter)
+        {
             CurrentAim = direction.normalized;
-
-            // 2. FacingDirections Enum 변환
             CurrentDirection = ConvertToFacingDirection(CurrentAim);
 
-            // 3. 히트박스 회전
+            // 현재 설정이 없으면 아무것도 못함
+            if (_currentSetting == null) return;
+
             RotateHitbox(CurrentAim);
+            ApplyOffset(CurrentDirection);
 
-            // 4. 방향별 오프셋 적용
-            ApplyDirectionalOffset(CurrentDirection);
-
-            // 5. 잠금 적용
             if (lockAfter) _isAimLocked = true;
         }
 
@@ -162,50 +154,29 @@ namespace Gameplay.Character.Weapon {
             }
         }
 
-        /// <summary>
-        /// 히트박스를 입력 방향으로 회전시킵니다.
-        /// 무기 비주얼(Sprite)은 Animator가 제어하므로 회전하지 않고,
-        /// 타격 판정(Collider)만 회전하여 정확한 방향 판정을 보장합니다.
-        /// </summary>
-        /// <param name="direction">목표 방향 벡터</param>
-        private void RotateHitbox(Vector2 direction) {
-            if (hitboxTransform == null) return;
+        private void RotateHitbox(Vector2 direction)
+        {
+            if (_currentSetting.hitbox == null) return;
 
-            // Vector2를 각도로 변환 (2D 평면에서 Z축 회전)
             var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            hitboxTransform.rotation = Quaternion.Euler(0, 0, angle);
+            _currentSetting.hitbox.transform.rotation = Quaternion.Euler(0, 0, angle);
         }
 
-        /// <summary>
-        /// 방향에 따라 무기 오프셋을 조정합니다.
-        /// useDirectionalOffsets가 true일 경우, 기본 오프셋에 방향별 오프셋을 더합니다.
-        /// </summary>
-        private void ApplyDirectionalOffset(FacingDirections direction) {
-            // 기본 오프셋으로 시작
-            var finalOffset = weaponOffset;
+        private void ApplyOffset(FacingDirections direction)
+        {
+            // 현재 콤보 설정의 Base Offset 사용
+            var finalOffset = _currentSetting.baseOffset;
 
-            // 방향별 오프셋이 활성화된 경우
-            if (useDirectionalOffsets) {
-                switch (direction) {
-                    case FacingDirections.Up:
-                        finalOffset += offsetUp;
-                        break;
-
-                    case FacingDirections.Down:
-                        finalOffset += offsetDown;
-                        break;
-
-                    case FacingDirections.Left:
-                        finalOffset += offsetLeft;
-                        break;
-
-                    case FacingDirections.Right:
-                        finalOffset += offsetRight;
-                        break;
+            if (_currentSetting.useDirectionalOffsets)
+            {
+                switch (direction)
+                {
+                    case FacingDirections.Up: finalOffset += _currentSetting.offsetUp; break;
+                    case FacingDirections.Down: finalOffset += _currentSetting.offsetDown; break;
+                    case FacingDirections.Left: finalOffset += _currentSetting.offsetLeft; break;
+                    case FacingDirections.Right: finalOffset += _currentSetting.offsetRight; break;
                 }
             }
-
-            // 최종 위치 적용
             _weaponTransform.localPosition = finalOffset;
         }
 
@@ -235,10 +206,10 @@ namespace Gameplay.Character.Weapon {
             );
 
             // 히트박스가 있으면 히트박스 중심에서도 화살표 그리기 (반투명)
-            if (hitboxTransform != null) {
+            if (_currentSetting?.hitbox != null) {
                 var hitboxColor = new Color(gizmoArrowColor.r, gizmoArrowColor.g, gizmoArrowColor.b, 0.5f);
                 YisoDebugUtils.DrawGizmoArrow(
-                    hitboxTransform.position,
+                    _currentSetting.hitbox.transform.position,
                     CurrentAim,
                     gizmoArrowLength * 0.7f,
                     gizmoArrowHeadSize * 0.7f,
