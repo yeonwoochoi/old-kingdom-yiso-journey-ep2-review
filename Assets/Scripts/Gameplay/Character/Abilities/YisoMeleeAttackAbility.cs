@@ -151,8 +151,7 @@ namespace Gameplay.Character.Abilities {
                 var comboValue = _settings.useComboAttacks ? _currentCombo + 1 : 0;
                 Context.PlayAnimation(YisoCharacterAnimationState.Combo, comboValue);
 
-                // attack speed 보정용으로 0.5 곱해준거임 (attackRate 그대로 갖다 쓰면 거의 2배속)
-                var attackSpeed = _weaponModule.GetCurrentWeaponData().attackRate;
+                var attackSpeed = _weaponModule.GetCurrentWeaponData().attackSpeed;
                 Context.PlayAnimation(YisoCharacterAnimationState.AttackSpeed, attackSpeed);
             }
         }
@@ -286,7 +285,7 @@ namespace Gameplay.Character.Abilities {
 
             // Safety Net: 애니메이션 duration + 여유 시간(0.1초)
             // 이 시간이 지나면 AttackEnd 이벤트가 없어도 강제 종료
-            var duration = weaponData.attackDurations[_currentCombo];
+            var duration = weaponData.GetAttackDuration(_currentCombo);
             _safetyTimer = duration + 0.1f;
 
             // ========== 공격 방향 고정 ==========
@@ -358,10 +357,15 @@ namespace Gameplay.Character.Abilities {
             }
 
             // 4. 콤보 계속 또는 종료
-            _isAttacking = false;
-
-            if (shouldContinueCombo) {
+            if (shouldContinueCombo)
+            {
+                // 콤보가 이어지면 _isAttacking 상태 유지 (끄지 않음)
                 TryAttack();
+            }
+            else
+            {
+                // 콤보가 안 이어질 때만 공격 종료 처리
+                _isAttacking = false;
             }
         }
 
