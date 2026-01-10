@@ -3,6 +3,7 @@ using Gameplay.Character.Core.Modules;
 using Gameplay.Character.Data;
 using Gameplay.Character.Types;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Character.Abilities {
     /// <summary>

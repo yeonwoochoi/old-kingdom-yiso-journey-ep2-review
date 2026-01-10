@@ -43,14 +43,21 @@ namespace Gameplay.Character.Core.Modules {
             base.LateInitialize();
 
             // 초기 무기 장착
-            if (_settings.initialWeapon != null) {
+
+            YisoLogger.Log($"[WeaponModule] LateInitialize 실행됨: {Context.GameObject.name}", Context.GameObject);
+
+            if (_settings.initialWeapon != null)
+            {
                 EquipWeapon(_settings.initialWeapon);
+            }
+            else
+            {
+                YisoLogger.LogWarning($"[WeaponModule] 초기 무기가 설정되지 않았습니다: {Context.GameObject.name}", Context.GameObject);
             }
         }
 
         // OnUpdate에서의 Bottom-up 동기화 제거
         // → Top-down Push 방식으로 변경: AnimationModule.Set* 호출 시 자동으로 외부 Animator에 전파됨
-
         public override void OnDestroy() {
             base.OnDestroy();
             // 모듈 파괴 시 현재 무기도 파괴

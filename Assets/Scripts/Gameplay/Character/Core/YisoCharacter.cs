@@ -189,9 +189,30 @@ namespace Gameplay.Character.Core {
         }
 
         private void LateInitialize() {
-            // 2단계: 모듈 연결 초기화. (다른 모듈 참조 가능)
-            foreach (var module in _modules.Values) {
-                module.LateInitialize();
+            //// 2단계: 모듈 연결 초기화. (다른 모듈 참조 가능)
+            //foreach (var module in _modules.Values) {
+            //    module.LateInitialize();
+            //}
+            foreach (var module in _modules.Values)
+            {
+                try
+                {
+                    // 1. 실행 전 로그
+                    // YisoLogger.Log($"[LateInit] 시작: {module.GetType().Name}", this);
+
+                    module.LateInitialize();
+
+                    // 2. 실행 후 로그 (이게 안 찍히면 이 모듈이 범인)
+                    // YisoLogger.Log($"[LateInit] 성공: {module.GetType().Name}", this);
+                }
+                catch (System.Exception ex)
+                {
+                    // 3. 에러 잡아서 로그 띄우기 (이게 뜨면 범인 검거 완료)
+                    YisoLogger.LogError($"[CRITICAL] {module.GetType().Name}.LateInitialize() 실행 중 에러 발생!\n{ex}", this);
+
+                    // 에러가 나도 다음 모듈은 실행되도록 continue (디버깅용)
+                    continue;
+                }
             }
             CacheAbilities(); // 자주 쓰는 ability 캐싱
         }

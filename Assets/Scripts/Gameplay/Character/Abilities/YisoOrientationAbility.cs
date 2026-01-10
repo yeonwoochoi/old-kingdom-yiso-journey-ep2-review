@@ -16,7 +16,6 @@ namespace Gameplay.Character.Abilities {
 
         private YisoMovementAbility _movementAbility;
         private YisoCharacterWeaponModule _weaponModule;
-        private YisoWeaponAim _weaponAim;
 
         /// <summary>
         /// 방향 전환 잠금 플래그.
@@ -72,15 +71,6 @@ namespace Gameplay.Character.Abilities {
             }
 
             _weaponModule = Context.GetModule<YisoCharacterWeaponModule>();
-            if (_weaponModule != null) {
-                _weaponAim = _weaponModule.CurrentWeapon?.WeaponAim;
-            }
-
-            if (_weaponAim == null) {
-                YisoLogger.LogWarning("WeaponAim을 찾을 수 없습니다. 무기 조준 기반 방향 전환이 작동하지 않습니다.");
-            } else {
-                YisoLogger.Log("WeaponAim 연결 완료");
-            }
         }
         
         
@@ -104,11 +94,14 @@ namespace Gameplay.Character.Abilities {
             Context.PlayAnimation(YisoCharacterAnimationState.Vertical, LastDirectionVector.y);
         }
 
-        private Vector2 DetermineSourceDirection() {
-            // "공격" 시 aim 기반 방향 결정 (1순위)
-            if (_weaponAim != null) {
-                var aimDirection = _weaponAim.CurrentAim;
-                if (aimDirection.sqrMagnitude > _settings.aimThreshold * _settings.aimThreshold) {
+        private Vector2 DetermineSourceDirection()
+        {
+            var currentAim = _weaponModule?.CurrentWeapon?.WeaponAim;
+            if (currentAim != null)
+            {
+                var aimDirection = currentAim.CurrentAim;
+                if (aimDirection.sqrMagnitude > _settings.aimThreshold * _settings.aimThreshold)
+                {
                     return aimDirection;
                 }
             }
@@ -183,8 +176,10 @@ namespace Gameplay.Character.Abilities {
             UnlockOrientation();
 
             // 무기 방향 잠금도 해제 (안전장치)
-            if (_weaponAim != null) {
-                _weaponAim.UnlockAim();
+            var currentAim = _weaponModule?.CurrentWeapon?.WeaponAim;
+            if (currentAim != null)
+            {
+                currentAim.UnlockAim();
             }
         }
 
@@ -196,8 +191,10 @@ namespace Gameplay.Character.Abilities {
             UnlockOrientation();
 
             // 2. 무기 방향 잠금도 해제
-            if (_weaponAim != null) {
-                _weaponAim.UnlockAim();
+            var currentAim = _weaponModule?.CurrentWeapon?.WeaponAim;
+            if (currentAim != null)
+            {
+                currentAim.UnlockAim();
             }
 
             // 3. 초기 방향으로 복구

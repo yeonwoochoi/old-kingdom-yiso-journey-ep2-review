@@ -52,6 +52,9 @@ namespace Gameplay.Character.StateMachine {
             _targetSlots = new Transform[maxTargetCount];
             _targetContexts = new IYisoCharacterContext[maxTargetCount];
 
+            CurrentState = null;
+            _lastStateEnterTime = 0f;
+
             foreach (var state in states) {
                 if (!_stateMap.TryAdd(state.StateName, state)) {
                     YisoLogger.LogWarning($"FSM {name}: 중복된 상태 이름 발견 -> {state.StateName}");
