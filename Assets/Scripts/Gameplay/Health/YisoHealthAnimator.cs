@@ -4,6 +4,7 @@ using Core.Behaviour;
 using Gameplay.Character.Core;
 using Gameplay.Character.Core.Modules;
 using Sirenix.OdinInspector;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 
 namespace Gameplay.Health {
@@ -38,7 +39,6 @@ namespace Gameplay.Health {
     /// <summary>
     /// YisoEntityHealth 이벤트에 반응하여 Animator Parameter를 설정하는 컴포넌트.
     /// 필수 파라미터(IsDead, IsHit)는 코드에서 자동 설정하며, Inspector에서는 추가 파라미터만 설정 가능하다.
-    /// 모든 Animator 제어는 YisoCharacterAnimationModule을 경유하여 일관성을 보장한다.
     /// </summary>
     [AddComponentMenu("Yiso/Health/Health Animator")]
     public class YisoHealthAnimator : RunIBehaviour {
@@ -62,7 +62,6 @@ namespace Gameplay.Health {
 
         private YisoEntityHealth _entityHealth;
         private IYisoCharacterContext _context;
-        private YisoCharacterAnimationModule _animationModule;
 
         protected override void Awake() {
             base.Awake();
@@ -82,13 +81,8 @@ namespace Gameplay.Health {
             // YisoCharacter Context 가져오기 (캐릭터가 아닌 경우 null)
             _context = GetComponentInParent<IYisoCharacterContext>();
 
-            if (_context != null) {
-                _animationModule = _context.GetModule<YisoCharacterAnimationModule>();
-            }
-
-            if (_animationModule == null) {
-                Debug.LogWarning($"[{gameObject.name}] YisoHealthAnimator: YisoCharacterAnimationModule을 찾을 수 없습니다. " +
-                                 "이 컴포넌트는 YisoCharacter에만 작동합니다.", this);
+            if (_context == null) {
+                Debug.LogWarning($"[{gameObject.name}] YisoHealthAnimator: IYisoCharacterContext 찾을 수 없습니다.");
                 updateAnimatorParameters = false;
                 enabled = false;
             }
@@ -116,10 +110,10 @@ namespace Gameplay.Health {
         /// 추가 파라미터: Inspector 설정에 따라 적용
         /// </summary>
         private void HandleDamage(DamageInfo damageInfo) {
-            if (!updateAnimatorParameters || _animationModule == null) return;
+            if (!updateAnimatorParameters || _context == null) return;
 
             // 1. 필수 파라미터 자동 설정: IsHit Trigger
-            _animationModule.SetTrigger(YisoCharacterAnimationState.IsHit);
+            _context.PlayAnimation(YisoCharacterAnimationState.IsHit);
 
             // 2. 추가 파라미터 적용 (선택 사항)
             ApplyAdditionalActions(onDamageAdditionalActions);
@@ -131,10 +125,10 @@ namespace Gameplay.Health {
         /// 추가 파라미터: Inspector 설정에 따라 적용 (예: DeathType)
         /// </summary>
         private void HandleDeath() {
-            if (!updateAnimatorParameters || _animationModule == null) return;
+            if (!updateAnimatorParameters || _context == null) return;
 
             // 1. 필수 파라미터 자동 설정: IsDead = true
-            _animationModule.SetBool(YisoCharacterAnimationState.IsDead, true);
+            _context.PlayAnimation(YisoCharacterAnimationState.IsDead, true);
 
             // 2. 추가 파라미터 적용 (선택 사항)
             ApplyAdditionalActions(onDeathAdditionalActions);
@@ -146,19 +140,18 @@ namespace Gameplay.Health {
         /// 추가 파라미터: Inspector 설정에 따라 적용
         /// </summary>
         private void HandleRevive() {
-            if (!updateAnimatorParameters || _animationModule == null) return;
+            if (!updateAnimatorParameters || _context == null) return;
 
             // 1. 필수 파라미터 자동 설정: IsDead = false
-            _animationModule.SetBool(YisoCharacterAnimationState.IsDead, false);
-            _animationModule.SetTrigger(YisoCharacterAnimationState.IsSpawning);
+            _context.PlayAnimation(YisoCharacterAnimationState.IsDead, false);
+            _context.PlayAnimation(YisoCharacterAnimationState.IsSpawning);
 
             // 2. 추가 파라미터 적용 (선택 사항)
             ApplyAdditionalActions(onReviveAdditionalActions);
         }
 
         /// <summary>
-        /// 추가 파라미터 리스트를 AnimationModule을 통해 적용한다.
-        /// 모든 Animator 제어는 AnimationModule을 경유하여 검증 및 타입 안전성을 보장한다.
+        /// 추가 파라미터 리스트를 IYisoCharacterContext을 통해 적용한다.
         /// </summary>
         private void ApplyAdditionalActions(List<AnimatorParameterSetting> actions) {
             if (actions == null || actions.Count == 0) return;
@@ -169,22 +162,21 @@ namespace Gameplay.Health {
                     continue;
                 }
 
-                // AnimationModule을 통해 파라미터 설정 (검증 포함)
                 switch (action.parameterType) {
                     case AnimatorControllerParameterType.Trigger:
-                        _animationModule.SetTrigger(action.parameter);
+                        _context.PlayAnimation(action.parameter);
                         break;
 
                     case AnimatorControllerParameterType.Bool:
-                        _animationModule.SetBool(action.parameter, action.boolValue);
+                        _context.PlayAnimation(action.parameter, action.boolValue);
                         break;
 
                     case AnimatorControllerParameterType.Int:
-                        _animationModule.SetInteger(action.parameter, action.intValue);
+                        _context.PlayAnimation(action.parameter, action.intValue);
                         break;
 
                     case AnimatorControllerParameterType.Float:
-                        _animationModule.SetFloat(action.parameter, action.floatValue);
+                        _context.PlayAnimation(action.parameter, action.floatValue);
                         break;
 
                     default:
