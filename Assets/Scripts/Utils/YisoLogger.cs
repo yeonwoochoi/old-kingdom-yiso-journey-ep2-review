@@ -48,6 +48,18 @@ namespace Utils
         }
 
         [Conditional(DEFINE_SYMBOL)]
+        public static void LogWarning(
+            object message,
+            Object context, // context 추가
+            [CallerFilePath] string filePath = "",
+            [CallerMemberName] string memberName = "")
+        {
+            string scriptName = GetScriptName(filePath);
+            // Debug.LogWarning에도 context 전달
+            Debug.LogWarning($"[{scriptName}::{memberName}] {message}", context);
+        }
+
+        [Conditional(DEFINE_SYMBOL)]
         public static void LogError(
             object message,
             [CallerFilePath] string filePath = "",
@@ -55,6 +67,18 @@ namespace Utils
         {
             string scriptName = GetScriptName(filePath);
             Debug.LogError($"[{scriptName}::{memberName}] {message}");
+        }
+
+        [Conditional(DEFINE_SYMBOL)]
+        public static void LogError(
+            object message,
+            Object context, // context 추가
+            [CallerFilePath] string filePath = "",
+            [CallerMemberName] string memberName = "")
+        {
+            string scriptName = GetScriptName(filePath);
+            // Debug.LogError에도 context 전달
+            Debug.LogError($"[{scriptName}::{memberName}] {message}", context);
         }
 
         private static readonly Dictionary<string, string> _fileNameCache = new Dictionary<string, string>();
