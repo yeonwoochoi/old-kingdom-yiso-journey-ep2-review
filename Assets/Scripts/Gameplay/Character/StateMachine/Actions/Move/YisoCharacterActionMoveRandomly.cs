@@ -67,14 +67,14 @@ namespace Gameplay.Character.StateMachine.Actions.Move {
             if (distSqr <= stopDistance * stopDistance) {
                 // 도착했으면 멈춤 (불필요한 물리 연산 및 떨림 방지)
                 if (!_isWaiting) {
-                    StateMachine.Owner.Move(Vector2.zero);
+                    MovementAbility?.SetMovementInput(Vector2.zero);
                     _isWaiting = true;
                 }
             }
             else {
                 // 도착하지 않았으면 목표 방향으로 이동
                 var direction = (_targetPosition - currentPos).normalized;
-                StateMachine.Owner.Move(direction);
+                MovementAbility?.SetMovementInput(direction);
                 _isWaiting = false;
             }
         }

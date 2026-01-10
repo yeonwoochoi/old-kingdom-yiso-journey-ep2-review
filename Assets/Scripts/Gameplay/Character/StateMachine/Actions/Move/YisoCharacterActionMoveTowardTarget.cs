@@ -22,7 +22,7 @@ namespace Gameplay.Character.StateMachine.Actions.Move {
 
             // 이미 목표 거리 내에 있으면 이동하지 않음
             if (distance <= stopDistance) {
-                StateMachine.Owner.Move(Vector2.zero);
+                MovementAbility?.SetMovementInput(Vector2.zero);
                 return;
             }
 
@@ -32,7 +32,7 @@ namespace Gameplay.Character.StateMachine.Actions.Move {
                 direction = -direction;
             }
 
-            StateMachine.Owner.Move(direction);
+            MovementAbility?.SetMovementInput(direction);
         }
     }
 }
