@@ -2,6 +2,7 @@
 using Gameplay.Character.StateMachine;
 using Gameplay.Character.Types;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Character.Core.Modules {
     public class YisoCharacterStateModule: YisoCharacterModuleBase {
@@ -22,7 +23,9 @@ namespace Gameplay.Character.Core.Modules {
                 }
             
                 if (_stateMachine == null) {
-                    Debug.LogError($"[YisoCharacterStateModule] StateMachine을 찾을 수 없습니다! {Context.GameObject.name}");
+                    YisoLogger.LogError($"StateMachine을 찾을 수 없습니다! {Context.GameObject.name}");
+                } else {
+                    YisoLogger.Log($"StateModule 초기화: FSM={_stateMachine.name}");
                 }
             
                 _settings.stateMachine.PreInitialize(Context);

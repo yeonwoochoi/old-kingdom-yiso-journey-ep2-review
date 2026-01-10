@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Character.Core.Modules {
     /// <summary>
@@ -87,7 +88,7 @@ namespace Gameplay.Character.Core.Modules {
 
         private void VerifyAnimatorParameters() {
             if (_animator == null) {
-                Debug.LogWarning($"[YisoCharacterAnimationModule] Animator is null for {Context.GameObject.name}. Cannot initialize parameters.");
+                YisoLogger.LogWarning($"[YisoCharacterAnimationModule] Animator is null for {Context.GameObject.name}. Cannot initialize parameters.");
                 return;
             }
             
@@ -103,11 +104,11 @@ namespace Gameplay.Character.Core.Modules {
                 if (!string.IsNullOrEmpty(paramName) && _animator.HasParameterOfType(paramName, paramType)) {
                     _verifiedHashes.Add(YisoAnimatorHashManager.GetHash(state));
                 } else {
-                    Debug.LogWarning($"[YisoCharacterAnimationModule] Animator parameter '{paramName}' (Type: {paramType}) not found in Animator Controller for {Context.GameObject.name}.");
+                    YisoLogger.LogWarning($"[YisoCharacterAnimationModule] Animator parameter '{paramName}' (Type: {paramType}) not found in Animator Controller for {Context.GameObject.name}.");
                 }
             }
             
-            Debug.Log($"[YisoCharacterAnimationModule] Initialized {Context.GameObject.name}'s Animator parameters. Found {_verifiedHashes.Count} parameters.");
+            YisoLogger.Log($"[YisoCharacterAnimationModule] Initialized {Context.GameObject.name}'s Animator parameters. Found {_verifiedHashes.Count} parameters.");
         }
         
         private bool IsVerified(int hash) {
@@ -122,12 +123,12 @@ namespace Gameplay.Character.Core.Modules {
         /// </summary>
         public void RegisterExternalAnimator(Animator externalAnimator) {
             if (externalAnimator == null) {
-                Debug.LogWarning("[YisoCharacterAnimationModule] Attempted to register null external animator.");
+                YisoLogger.LogWarning("[YisoCharacterAnimationModule] Attempted to register null external animator.");
                 return;
             }
 
             if (_externalAnimators.Contains(externalAnimator)) {
-                Debug.LogWarning($"[YisoCharacterAnimationModule] Animator '{externalAnimator.name}' is already registered.");
+                YisoLogger.LogWarning($"[YisoCharacterAnimationModule] Animator '{externalAnimator.name}' is already registered.");
                 return;
             }
 
@@ -136,7 +137,7 @@ namespace Gameplay.Character.Core.Modules {
             // 등록 시 현재 상태를 초기 동기화 (Float, Bool, Int만)
             SyncToExternalAnimator(externalAnimator);
 
-            Debug.Log($"[YisoCharacterAnimationModule] Registered external animator '{externalAnimator.name}'. Total: {_externalAnimators.Count}");
+            YisoLogger.Log($"[YisoCharacterAnimationModule] Registered external animator '{externalAnimator.name}'. Total: {_externalAnimators.Count}");
         }
 
         /// <summary>
@@ -146,7 +147,7 @@ namespace Gameplay.Character.Core.Modules {
             if (externalAnimator == null) return;
 
             if (_externalAnimators.Remove(externalAnimator)) {
-                Debug.Log($"[YisoCharacterAnimationModule] Unregistered external animator '{externalAnimator.name}'. Remaining: {_externalAnimators.Count}");
+                YisoLogger.Log($"[YisoCharacterAnimationModule] Unregistered external animator '{externalAnimator.name}'. Remaining: {_externalAnimators.Count}");
             }
         }
 
@@ -278,7 +279,7 @@ namespace Gameplay.Character.Core.Modules {
             if (_animator != null) {
                 _animator.CrossFade(state.ToString(), crossFadeDuration);
             } else {
-                Debug.LogWarning($"[YisoCharacterAnimationModule] Animator is null for {Context.GameObject.name}. Cannot play animation '{state}'.");
+                YisoLogger.LogWarning($"[YisoCharacterAnimationModule] Animator is null for {Context.GameObject.name}. Cannot play animation '{state}'.");
             }
         }
 

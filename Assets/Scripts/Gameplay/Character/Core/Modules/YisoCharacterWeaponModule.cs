@@ -2,6 +2,7 @@ using System;
 using Gameplay.Character.Data;
 using Gameplay.Character.Weapon;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Character.Core.Modules {
     /// <summary>
@@ -34,7 +35,7 @@ namespace Gameplay.Character.Core.Modules {
             else {
                 // 설정되지 않은 경우 캐릭터의 Model을 부착 지점으로 사용
                 _weaponAttachPoint = Context.Transform;
-                Debug.LogWarning($"[YisoCharacterWeaponModule] WeaponAttachPoint가 설정되지 않아 캐릭터의 Transform을 사용합니다.");
+                YisoLogger.LogWarning($"[YisoCharacterWeaponModule] WeaponAttachPoint가 설정되지 않아 캐릭터의 Transform을 사용합니다.");
             }
         }
 
@@ -68,7 +69,7 @@ namespace Gameplay.Character.Core.Modules {
         /// <param name="weaponData">장착할 무기 데이터</param>
         public void EquipWeapon(YisoWeaponDataSO weaponData) {
             if (weaponData == null) {
-                Debug.LogWarning("[YisoCharacterWeaponModule] EquipWeapon: weaponData가 null입니다.");
+                YisoLogger.LogWarning("[YisoCharacterWeaponModule] EquipWeapon: weaponData가 null입니다.");
                 return;
             }
 
@@ -91,7 +92,7 @@ namespace Gameplay.Character.Core.Modules {
                 animationModule?.RegisterExternalAnimator(CurrentWeapon.WeaponAnimator);
             }
 
-            Debug.Log($"[YisoCharacterWeaponModule] 무기 '{weaponData.weaponName}' 장착 완료.");
+            YisoLogger.Log($"[YisoCharacterWeaponModule] 무기 '{weaponData.weaponName}' 장착 완료.");
         }
 
         /// <summary>

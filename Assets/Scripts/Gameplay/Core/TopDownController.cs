@@ -1,6 +1,7 @@
 ﻿using Core.Behaviour;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Core {
     interface IPhysicsControllable {
@@ -72,7 +73,7 @@ namespace Gameplay.Core {
             }
 
             var finalMovement = (currentMovement + _surfaceForce) * Time.fixedDeltaTime;
-            Debug.Log($"[TopDownController] currentMovement: {currentMovement}, surfaceForce: {_surfaceForce}, finalMovement: {finalMovement}");
+            // YisoLogger.Log($"물리 이동: currentMovement={currentMovement}, surfaceForce={_surfaceForce}, finalMovement={finalMovement}");
             MovePosition(_rigidbody2D.position + finalMovement);
         }
 

@@ -143,16 +143,6 @@ namespace Gameplay.Character.Abilities {
             base.UpdateAnimator();
 
             if (Context != null) {
-                // ========== Animator Parameter Architecture ==========
-                // [Continuous Values] - Ability에서 매 프레임 업데이트
-                // - Combo: Enemy도 사용하는 공통 로직
-                // - AttackSpeed: 무기별 공격 속도 (연속 값)
-                //
-                // [State Flags] - Ability에서 공격 상태에 따라 설정
-                // - IsAttacking: 공격 중 여부 (Player/Enemy 공통)
-                // =====================================================
-
-                // IsAttacking 파라미터 (Player/Enemy 공통)
                 Context.PlayAnimation(YisoCharacterAnimationState.IsAttacking, _isAttacking);
 
                 // Combo 파라미터 (Player/Enemy 공통)
@@ -161,10 +151,7 @@ namespace Gameplay.Character.Abilities {
                 var comboValue = _settings.useComboAttacks ? _currentCombo + 1 : 0;
                 Context.PlayAnimation(YisoCharacterAnimationState.Combo, comboValue);
 
-                // AttackSpeed 파라미터 (Continuous value)
-                // Note: WeaponDataSO의 attackRate는 내부 시스템용 값 (x2 배수)
-                // Animator AttackSpeed는 1.0 = 정상 속도이므로, attackRate를 0.5배하여 설정
-                // 예: attackRate = 2.0 → AttackSpeed = 1.0 (정상 속도)
+                // attack speed 보정용으로 0.5 곱해준거임 (attackRate 그대로 갖다 쓰면 거의 2배속)
                 var attackSpeed = _weaponModule.GetCurrentWeaponData().attackRate * 0.5f;
                 Context.PlayAnimation(YisoCharacterAnimationState.AttackSpeed, attackSpeed);
             }

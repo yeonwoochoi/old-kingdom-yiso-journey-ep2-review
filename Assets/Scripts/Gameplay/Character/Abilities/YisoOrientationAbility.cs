@@ -4,6 +4,7 @@ using Gameplay.Character.Core.Modules;
 using Gameplay.Character.Types;
 using Gameplay.Character.Weapon;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Character.Abilities {
     /// <summary>
@@ -56,8 +57,9 @@ namespace Gameplay.Character.Abilities {
         public override void Initialize(IYisoCharacterContext context) {
             base.Initialize(context);
             ForceFace(_settings.initialFacingDirection);
+            YisoLogger.Log($"OrientationAbility 초기화: 초기 방향={_settings.initialFacingDirection}");
         }
-        
+
         public override void LateInitialize() {
             base.LateInitialize();
             var abilityModule = Context.GetModule<YisoCharacterAbilityModule>();
@@ -66,7 +68,7 @@ namespace Gameplay.Character.Abilities {
             }
 
             if (_movementAbility == null) {
-                Debug.LogWarning("[YisoOrientationAbility] YisoMovementAbility를 찾을 수 없습니다. 이동 기반 방향 전환이 작동하지 않습니다.");
+                YisoLogger.LogWarning("YisoMovementAbility를 찾을 수 없습니다. 이동 기반 방향 전환이 작동하지 않습니다.");
             }
 
             _weaponModule = Context.GetModule<YisoCharacterWeaponModule>();
@@ -75,7 +77,9 @@ namespace Gameplay.Character.Abilities {
             }
 
             if (_weaponAim == null) {
-                Debug.LogWarning("[YisoOrientationAbility] WeaponAim을 찾을 수 없습니다. 무기 조준 기반 방향 전환이 작동하지 않습니다.");
+                YisoLogger.LogWarning("WeaponAim을 찾을 수 없습니다. 무기 조준 기반 방향 전환이 작동하지 않습니다.");
+            } else {
+                YisoLogger.Log("WeaponAim 연결 완료");
             }
         }
         
