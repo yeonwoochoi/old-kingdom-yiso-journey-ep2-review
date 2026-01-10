@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Gameplay.Character.Abilities;
 using Gameplay.Character.Core.Modules;
 using Gameplay.Character.StateMachine;
 using Gameplay.Character.Types;
@@ -35,7 +36,7 @@ namespace Gameplay.Character.Core {
         float GetCurrentHealth();
         bool IsDead();
         void TakeDamage(DamageInfo damage);
-        bool IsMovementAllowed { get; }
-        bool IsAttackAllowed { get; }
+        bool IsMovementAllowed(IYisoCharacterAbility ignoreAbility = null);
+        bool IsAttackAllowed(IYisoCharacterAbility ignoreAbility = null);
     }
 }

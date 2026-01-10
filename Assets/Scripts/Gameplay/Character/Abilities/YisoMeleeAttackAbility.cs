@@ -95,7 +95,7 @@ namespace Gameplay.Character.Abilities {
             base.ProcessAbility();
 
             // "공격 중인데" 권한이 사라졌다면 강제 중단 (인터럽트)
-            if (_isAttacking && !Context.IsAttackAllowed) {
+            if (_isAttacking && !Context.IsAttackAllowed(this)) {
                 // 1. 콤보 예약 삭제 (중요: 이거 안 하면 HandleAttackEnd에서 다음 공격 시도함)
                 _nextAttackQueued = false; 
         
@@ -109,7 +109,7 @@ namespace Gameplay.Character.Abilities {
             }
 
             // 공격 중이 아니고 권한도 없다면 로직 패스
-            if (!_isAttacking && !Context.IsAttackAllowed) {
+            if (!_isAttacking && !Context.IsAttackAllowed(this)) {
                 return;
             }
 
@@ -220,7 +220,7 @@ namespace Gameplay.Character.Abilities {
         /// </summary>
         /// <returns>공격이 성공적으로 시작되었으면 true, 실패하면 false</returns>
         private bool TryAttack() {
-            if (!Context.IsAttackAllowed) return false;
+            if (!Context.IsAttackAllowed(this)) return false;
             
             // 무기가 없으면 공격 불가
             if (_weaponModule == null || !_weaponModule.HasWeapon()) {

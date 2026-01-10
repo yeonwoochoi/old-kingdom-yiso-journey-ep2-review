@@ -2,6 +2,7 @@
 using Gameplay.Character.Core;
 using Gameplay.Character.Core.Modules;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Character.Abilities {
     /// <summary>
@@ -34,8 +35,12 @@ namespace Gameplay.Character.Abilities {
             base.Initialize(context);
 
             // Player일 경우에만 InputModule 캐싱 (AI는 null이어도 무방)
-            if (Context.IsPlayer)
+            if (Context.IsPlayer) {
                 _inputModule = context.GetModule<YisoCharacterInputModule>();
+                YisoLogger.Log($"MovementAbility 초기화: Player 모드, InputModule={(_inputModule != null ? "찾음" : "없음")}");
+            } else {
+                YisoLogger.Log("MovementAbility 초기화: AI 모드");
+            }
         }
 
         /// <summary>
@@ -45,7 +50,7 @@ namespace Gameplay.Character.Abilities {
         {
             if (Context.IsPlayer && !force)
             {
-                Debug.LogWarning("Player의 경우 InputSystem을 통해서 Movement Input을 넣어야 합니다.");
+                YisoLogger.LogWarning("Player의 경우 InputSystem을 통해서 Movement Input을 넣어야 합니다.");
                 return;
             }
             _currentInput = direction;
@@ -67,7 +72,7 @@ namespace Gameplay.Character.Abilities {
                 _multiplierEndTime = -1f;
             }
 
-            if (!Context.IsMovementAllowed)
+            if (!Context.IsMovementAllowed(this))
             {
                 StopMovement();
                 return;
@@ -147,6 +152,7 @@ namespace Gameplay.Character.Abilities {
         /// 운동량만 멈추는 함수 (버프는 유지)
         /// </summary>
         private void StopMovement() {
+            YisoLogger.Log("이동 정지: IsMovementAllowed=false");
             _currentAcceleration = 0f;
             _lerpedInput = Vector2.zero;
             Context.Move(Vector2.zero);

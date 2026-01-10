@@ -31,6 +31,7 @@ namespace Gameplay.Character.Core.Modules {
         
         /// <summary>
         /// 현재 공격을 막고 있는 어빌리티가 하나라도 있는지 확인
+        /// 이는 Ability가 아닌 외부에서 참조할때 사용하면 됨
         /// </summary>
         public bool IsAttackBlocked {
             get {
@@ -39,6 +40,36 @@ namespace Gameplay.Character.Core.Modules {
                 }
                 return false;
             }
+        }
+
+        // 특정 Ability를 제외하고 검사하는 기능
+        // Ability에선 이 함수를 호출해야함
+        // 왜? -> 자기 자신을 제외 안하면 데드락 걸릴 수도 있음. (다른 ability가 내 행동을 막는지 여부를 체크하는건데 내가 나를 막는지 참조할 필욘 없음)
+        public bool IsMovementBlockedExcluding(IYisoCharacterAbility ignoreAbility)
+        {
+            foreach (var ability in _abilityList)
+            {
+                // 자기 자신이면 검사 건너뜀
+                if (ability == ignoreAbility) continue;
+
+                if (ability.PreventsMovement) return true;
+            }
+            return false;
+        }
+
+        // 특정 Ability를 제외하고 검사하는 기능
+        // Ability에선 이 함수를 호출해야함
+        // 왜? -> 자기 자신을 제외 안하면 데드락 걸릴 수도 있음. (다른 ability가 내 행동을 막는지 여부를 체크하는건데 내가 나를 막는지 참조할 필욘 없음)
+        public bool IsAttackBlockedExcluding(IYisoCharacterAbility ignoreAbility)
+        {
+            foreach (var ability in _abilityList)
+            {
+                // 자기 자신이면 검사 건너뜀
+                if (ability == ignoreAbility) continue;
+
+                if (ability.PreventsAttack) return true;
+            }
+            return false;
         }
 
         public YisoCharacterAbilityModule(IYisoCharacterContext context, Settings settings) : base(context) {
