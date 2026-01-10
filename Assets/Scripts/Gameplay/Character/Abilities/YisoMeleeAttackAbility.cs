@@ -8,7 +8,6 @@ namespace Gameplay.Character.Abilities {
     /// <summary>
     /// 근접 무기를 사용한 공격 Ability.
     /// WeaponModule의 DamageOnTouch를 On/Off하여 공격을 제어하고, 콤보 시스템을 관리.
-    /// AnimationModule을 사용하여 Enum 기반 애니메이션 제어를 수행.
     /// 완전한 애니메이션 이벤트 기반으로 동작 (코루틴 미사용).
     /// Safety Net 타이머를 통해 애니메이션 이벤트가 씹혀도 강제 종료됩니다.
     /// </summary>
@@ -47,10 +46,6 @@ namespace Gameplay.Character.Abilities {
 
             if (_weaponModule == null) {
                 Debug.LogWarning("[YisoMeleeAttackAbility] YisoCharacterWeaponModule을 찾을 수 없습니다. 이 Ability는 작동하지 않습니다.");
-            }
-
-            if (_animationModule == null) {
-                Debug.LogWarning("[YisoMeleeAttackAbility] YisoCharacterAnimationModule을 찾을 수 없습니다. 애니메이션이 작동하지 않습니다.");
             }
         }
 
@@ -147,7 +142,7 @@ namespace Gameplay.Character.Abilities {
         public override void UpdateAnimator() {
             base.UpdateAnimator();
 
-            if (_animationModule != null) {
+            if (Context != null) {
                 // ========== Animator Parameter Architecture ==========
                 // [Continuous Values] - Ability에서 매 프레임 업데이트
                 // - Combo: Enemy도 사용하는 공통 로직
@@ -158,20 +153,20 @@ namespace Gameplay.Character.Abilities {
                 // =====================================================
 
                 // IsAttacking 파라미터 (Player/Enemy 공통)
-                _animationModule.SetBool(YisoCharacterAnimationState.IsAttacking, _isAttacking);
+                Context.PlayAnimation(YisoCharacterAnimationState.IsAttacking, _isAttacking);
 
                 // Combo 파라미터 (Player/Enemy 공통)
                 // useComboAttacks가 false면: 0으로 고정 (기본 공격 애니메이션)
                 // useComboAttacks가 true면: _currentCombo + 1 (1, 2, 3, ... 콤보 애니메이션)
                 var comboValue = _settings.useComboAttacks ? _currentCombo + 1 : 0;
-                _animationModule.SetInteger(YisoCharacterAnimationState.Combo, comboValue);
+                Context.PlayAnimation(YisoCharacterAnimationState.Combo, comboValue);
 
                 // AttackSpeed 파라미터 (Continuous value)
                 // Note: WeaponDataSO의 attackRate는 내부 시스템용 값 (x2 배수)
                 // Animator AttackSpeed는 1.0 = 정상 속도이므로, attackRate를 0.5배하여 설정
                 // 예: attackRate = 2.0 → AttackSpeed = 1.0 (정상 속도)
                 var attackSpeed = _weaponModule.GetCurrentWeaponData().attackRate * 0.5f;
-                _animationModule.SetFloat(YisoCharacterAnimationState.AttackSpeed, attackSpeed);
+                Context.PlayAnimation(YisoCharacterAnimationState.AttackSpeed, attackSpeed);
             }
         }
 
