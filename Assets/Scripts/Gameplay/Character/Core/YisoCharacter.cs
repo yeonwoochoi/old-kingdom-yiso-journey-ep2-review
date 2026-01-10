@@ -138,6 +138,11 @@ namespace Gameplay.Character.Core {
         private Dictionary<Type, IYisoCharacterModule> _modules;
         private IPhysicsControllable _physicsController;
 
+        // 자주 쓰는 Ability는 캐싱
+        private YisoMovementAbility _movementAbility;
+        private YisoMeleeAttackAbility _attackAbility;
+
+
         protected override void Awake() {
             base.Awake();
             Initialize();
@@ -188,6 +193,7 @@ namespace Gameplay.Character.Core {
             foreach (var module in _modules.Values) {
                 module.LateInitialize();
             }
+            CacheAbilities(); // 자주 쓰는 ability 캐싱
         }
 
         /// <summary>
@@ -209,6 +215,19 @@ namespace Gameplay.Character.Core {
         public T GetModule<T>() where T : class, IYisoCharacterModule {
             _modules.TryGetValue(typeof(T), out var module);
             return module as T;
+        }
+
+        /// <summary>
+        /// 자주 쓰는 Ability 여기서 미리 캐싱해두기
+        /// </summary>
+        private void CacheAbilities()
+        {
+            var abilityModule = GetModule<YisoCharacterAbilityModule>();
+            if (abilityModule != null)
+            {
+                _movementAbility = abilityModule.GetAbility<YisoMovementAbility>();
+                _attackAbility = abilityModule.GetAbility<YisoMeleeAttackAbility>();
+            }
         }
 
         public new Coroutine StartCoroutine(IEnumerator routine) {
@@ -261,6 +280,8 @@ namespace Gameplay.Character.Core {
             GetModule<YisoCharacterAbilityModule>()?.OnAnimationEvent(eventName);
 
         public float GetCurrentHealth() => GetModule<YisoCharacterLifecycleModule>().CurrentHealth;
+        public bool IsMoving() => _movementAbility != null && _movementAbility.IsMoving;
+        public bool IsAttacking() => _attackAbility != null && _attackAbility.IsAttacking();
         public bool IsDead() => GetModule<YisoCharacterLifecycleModule>().IsDead;
         public void TakeDamage(DamageInfo damage) => GetModule<YisoCharacterLifecycleModule>().TakeDamage(damage);
 

@@ -34,6 +34,8 @@ namespace Gameplay.Character.Core {
         void PlayAnimation(YisoCharacterAnimationState state);
         public void OnAnimationEvent(string eventName);
         float GetCurrentHealth();
+        bool IsMoving();
+        bool IsAttacking();
         bool IsDead();
         void TakeDamage(DamageInfo damage);
         bool IsMovementAllowed(IYisoCharacterAbility ignoreAbility = null);
