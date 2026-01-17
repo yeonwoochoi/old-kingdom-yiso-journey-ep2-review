@@ -2,6 +2,7 @@
 using Gameplay.Character.Core;
 using Gameplay.Character.Core.Modules;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Character.Abilities {
     /// <summary>
@@ -22,6 +23,9 @@ namespace Gameplay.Character.Abilities {
         private YisoCharacterInputModule _inputModule;
 
         public Vector2 FinalMovementInput { get; private set; }
+        public bool IsMoving => FinalMovementInput.magnitude > MovementThreshold;
+
+        private const float MovementThreshold = 0.01f;
 
         public YisoMovementAbility(YisoMovementAbilitySO settings) {
             _settings = settings;
@@ -29,49 +33,78 @@ namespace Gameplay.Character.Abilities {
 
         public override void Initialize(IYisoCharacterContext context) {
             base.Initialize(context);
-            _inputModule = context.GetModule<YisoCharacterInputModule>();
+
+            // Player일 경우에만 InputModule 캐싱 (AI는 null이어도 무방)
+            if (Context.IsPlayer) {
+                _inputModule = context.GetModule<YisoCharacterInputModule>();
+                YisoLogger.Log($"MovementAbility 초기화: Player 모드, InputModule={(_inputModule != null ? "찾음" : "없음")}");
+            } else {
+                YisoLogger.Log("MovementAbility 초기화: AI 모드");
+            }
+        }
+
+        /// <summary>
+        /// [AI 전용] FSM Action에서 이동하고자 하는 방향을 주입할 때 사용
+        /// </summary>
+        public void SetMovementInput(Vector2 direction, bool force = false)
+        {
+            if (Context.IsPlayer && !force)
+            {
+                YisoLogger.LogWarning("Player의 경우 InputSystem을 통해서 Movement Input을 넣어야 합니다.");
+                return;
+            }
+            _currentInput = direction;
         }
 
         public override void PreProcessAbility() {
             base.PreProcessAbility();
-            _currentInput = _inputModule?.MoveInput ?? Vector2.zero;
+            if (Context.IsPlayer)
+                _currentInput = _inputModule?.MoveInput ?? Vector2.zero;
+            // AI라면 FSM Action이 SetMovementInput을 호출했을 것이므로 _currentInput에 값이 이미 있음.
         }
 
         public override void ProcessAbility() {
             base.ProcessAbility();
-
             // 임시 속도 배율 타이머 체크
-            if (_multiplierEndTime > 0f && Time.time >= _multiplierEndTime) {
+            if (_multiplierEndTime > 0f && Time.time >= _multiplierEndTime)
+            {
                 _speedMultiplier = 1f;
                 _multiplierEndTime = -1f;
             }
-            
-            if (!Context.IsMovementAllowed) {
+
+            if (!Context.IsMovementAllowed(this))
+            {
                 StopMovement();
                 return;
             }
 
             CalculateInterpolatedInput();
-            FinalMovementInput = _lerpedInput;
 
-            var characterMoveSpeed = _settings.baseMovementSpeed;
-            var finalMovementVector = FinalMovementInput * (characterMoveSpeed * _speedMultiplier);
+            // TODO: 추후 StatModule에서 BaseMoveSpeed를 가져오도록 변경 가능
+            var characterBaseSpeed = _settings.baseMovementSpeed;
 
-            Context.Move(finalMovementVector);
+            // 최종 벡터 = (가속된 방향) * (기본 속도) * (배율)
+            FinalMovementInput = _lerpedInput * (characterBaseSpeed * _speedMultiplier);
+
+            Context.Move(FinalMovementInput);
+        }
+
+        public override void PostProcessAbility()
+        {
+            base.PostProcessAbility();
+
+            // AI의 경우, FSM이 매 프레임 입력을 넣지 않을 수도 있으므로 프레임 끝날 때 입력을 초기화해야 "미끄러짐" 방지 가능.
+            // (Player는 매 프레임 InputModule을 읽으므로 상관없음)
+            if (!Context.IsPlayer)
+            {
+                _currentInput = Vector2.zero;
+            }
         }
 
         public override void UpdateAnimator() {
-            // ========== Animator Parameter Architecture ==========
-            // [Continuous Values] - Ability에서 매 프레임 업데이트
-            // - MoveSpeed: 이동 속도 (연속 값)
-            //
-            // [State Flags] - FSM Action에서 상태 전환 시 설정
-            // - IsMoving: FSM Enter_Move/Exit_Move Action에서 제어
-            //   (Ability에서는 설정하지 않음)
-            // =====================================================
-
             var moveSpeed = _lerpedInput.magnitude * _speedMultiplier;
             Context.PlayAnimation(YisoCharacterAnimationState.MoveSpeed, moveSpeed);
+            Context.PlayAnimation(YisoCharacterAnimationState.IsMoving, IsMoving);
         }
 
         #region Public API

@@ -3,6 +3,7 @@ using Core.Behaviour;
 using Gameplay.Character.Core;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Character.StateMachine {
     public class YisoCharacterStateMachine : RunIBehaviour {
@@ -51,21 +52,26 @@ namespace Gameplay.Character.StateMachine {
             _targetSlots = new Transform[maxTargetCount];
             _targetContexts = new IYisoCharacterContext[maxTargetCount];
 
+            CurrentState = null;
+            _lastStateEnterTime = 0f;
+
             foreach (var state in states) {
                 if (!_stateMap.TryAdd(state.StateName, state)) {
-                    Debug.LogWarning($"[FSM] {name}: 중복된 상태 이름이 있습니다 -> {state.StateName}");
+                    YisoLogger.LogWarning($"FSM {name}: 중복된 상태 이름 발견 -> {state.StateName}");
                 }
             }
 
+            YisoLogger.Log($"FSM PreInitialize 완료: Owner={owner.GameObject.name}, States={states.Count}");
             ResetFrequency();
         }
 
         public void Initialize() {
             if (!string.IsNullOrEmpty(initialState) && _stateMap.ContainsKey(initialState)) {
                 ChangeState(initialState, true);
+                YisoLogger.Log($"FSM Initialize 완료: 초기 상태={initialState}");
             }
             else {
-                Debug.LogError($"[FSM] {name}: 초기 상태({initialState})가 유효하지 않습니다.");
+                YisoLogger.LogError($"FSM {name}: 초기 상태({initialState})가 유효하지 않습니다.");
             }
         }
 
@@ -90,12 +96,14 @@ namespace Gameplay.Character.StateMachine {
 
         public void ChangeState(string newStateName, bool force = false) {
             if (!_stateMap.TryGetValue(newStateName, out var nextState)) {
-                Debug.LogError($"[FSM] {name}: 존재하지 않는 상태로 전환 시도 -> {newStateName}");
+                YisoLogger.LogError($"FSM {name}: 존재하지 않는 상태로 전환 시도 -> {newStateName}");
                 return;
             }
 
             // 같은 상태로의 전환 방지 (Force가 아닐 경우)
             if (!force && CurrentState == nextState) return;
+
+            var oldStateName = CurrentState?.StateName ?? "None";
 
             // 이전 상태 종료
             CurrentState?.PlayExitActions();
@@ -106,6 +114,8 @@ namespace Gameplay.Character.StateMachine {
 
             // 새 상태 진입
             CurrentState.PlayEnterActions();
+
+            YisoLogger.Log($"FSM 상태 전환: {oldStateName} -> {newStateName}");
         }
 
         private void ResetFrequency() {

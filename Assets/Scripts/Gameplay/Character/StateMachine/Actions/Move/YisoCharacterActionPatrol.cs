@@ -52,7 +52,7 @@ namespace Gameplay.Character.StateMachine.Actions.Move {
                     SetNextPatrolIndex();
                 }
                 // 대기 중에는 정지
-                StateMachine.Owner.Move(Vector2.zero);
+                MovementAbility?.SetMovementInput(Vector2.zero);
                 return;
             }
 
@@ -71,13 +71,20 @@ namespace Gameplay.Character.StateMachine.Actions.Move {
             if (distSqr > arrivalThreshold * arrivalThreshold) {
                 // 아직 도착 안 함 -> 이동
                 Vector2 direction = (targetPos - currentPos).normalized;
-                StateMachine.Owner.Move(direction);
+                MovementAbility?.SetMovementInput(direction);
             }
             else {
                 // 도착함 -> 대기 시작
-                StateMachine.Owner.Move(Vector2.zero);
+                MovementAbility?.SetMovementInput(Vector2.zero);
                 _isWaiting = true;
             }
+        }
+
+        public override void OnExitState()
+        {
+            base.OnExitState();
+            // 상태 나갈 때 이동 멈추기
+            MovementAbility?.SetMovementInput(Vector2.zero);
         }
 
         private void SetNextPatrolIndex() {

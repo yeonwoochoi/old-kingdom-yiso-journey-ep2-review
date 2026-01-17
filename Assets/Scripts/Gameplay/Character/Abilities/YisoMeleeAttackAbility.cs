@@ -3,12 +3,12 @@ using Gameplay.Character.Core.Modules;
 using Gameplay.Character.Data;
 using Gameplay.Character.Types;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Character.Abilities {
     /// <summary>
     /// 근접 무기를 사용한 공격 Ability.
     /// WeaponModule의 DamageOnTouch를 On/Off하여 공격을 제어하고, 콤보 시스템을 관리.
-    /// AnimationModule을 사용하여 Enum 기반 애니메이션 제어를 수행.
     /// 완전한 애니메이션 이벤트 기반으로 동작 (코루틴 미사용).
     /// Safety Net 타이머를 통해 애니메이션 이벤트가 씹혀도 강제 종료됩니다.
     /// </summary>
@@ -47,10 +47,6 @@ namespace Gameplay.Character.Abilities {
 
             if (_weaponModule == null) {
                 Debug.LogWarning("[YisoMeleeAttackAbility] YisoCharacterWeaponModule을 찾을 수 없습니다. 이 Ability는 작동하지 않습니다.");
-            }
-
-            if (_animationModule == null) {
-                Debug.LogWarning("[YisoMeleeAttackAbility] YisoCharacterAnimationModule을 찾을 수 없습니다. 애니메이션이 작동하지 않습니다.");
             }
         }
 
@@ -100,7 +96,7 @@ namespace Gameplay.Character.Abilities {
             base.ProcessAbility();
 
             // "공격 중인데" 권한이 사라졌다면 강제 중단 (인터럽트)
-            if (_isAttacking && !Context.IsAttackAllowed) {
+            if (_isAttacking && !Context.IsAttackAllowed(this)) {
                 // 1. 콤보 예약 삭제 (중요: 이거 안 하면 HandleAttackEnd에서 다음 공격 시도함)
                 _nextAttackQueued = false; 
         
@@ -114,7 +110,7 @@ namespace Gameplay.Character.Abilities {
             }
 
             // 공격 중이 아니고 권한도 없다면 로직 패스
-            if (!_isAttacking && !Context.IsAttackAllowed) {
+            if (!_isAttacking && !Context.IsAttackAllowed(this)) {
                 return;
             }
 
@@ -147,31 +143,17 @@ namespace Gameplay.Character.Abilities {
         public override void UpdateAnimator() {
             base.UpdateAnimator();
 
-            if (_animationModule != null) {
-                // ========== Animator Parameter Architecture ==========
-                // [Continuous Values] - Ability에서 매 프레임 업데이트
-                // - Combo: Enemy도 사용하는 공통 로직
-                // - AttackSpeed: 무기별 공격 속도 (연속 값)
-                //
-                // [State Flags] - Ability에서 공격 상태에 따라 설정
-                // - IsAttacking: 공격 중 여부 (Player/Enemy 공통)
-                // =====================================================
-
-                // IsAttacking 파라미터 (Player/Enemy 공통)
-                _animationModule.SetBool(YisoCharacterAnimationState.IsAttacking, _isAttacking);
+            if (Context != null) {
+                Context.PlayAnimation(YisoCharacterAnimationState.IsAttacking, _isAttacking);
 
                 // Combo 파라미터 (Player/Enemy 공통)
                 // useComboAttacks가 false면: 0으로 고정 (기본 공격 애니메이션)
                 // useComboAttacks가 true면: _currentCombo + 1 (1, 2, 3, ... 콤보 애니메이션)
                 var comboValue = _settings.useComboAttacks ? _currentCombo + 1 : 0;
-                _animationModule.SetInteger(YisoCharacterAnimationState.Combo, comboValue);
+                Context.PlayAnimation(YisoCharacterAnimationState.Combo, comboValue);
 
-                // AttackSpeed 파라미터 (Continuous value)
-                // Note: WeaponDataSO의 attackRate는 내부 시스템용 값 (x2 배수)
-                // Animator AttackSpeed는 1.0 = 정상 속도이므로, attackRate를 0.5배하여 설정
-                // 예: attackRate = 2.0 → AttackSpeed = 1.0 (정상 속도)
-                var attackSpeed = _weaponModule.GetCurrentWeaponData().attackRate * 0.5f;
-                _animationModule.SetFloat(YisoCharacterAnimationState.AttackSpeed, attackSpeed);
+                var attackSpeed = _weaponModule.GetCurrentWeaponData().attackSpeed;
+                Context.PlayAnimation(YisoCharacterAnimationState.AttackSpeed, attackSpeed);
             }
         }
 
@@ -225,7 +207,7 @@ namespace Gameplay.Character.Abilities {
         /// </summary>
         /// <returns>공격이 성공적으로 시작되었으면 true, 실패하면 false</returns>
         private bool TryAttack() {
-            if (!Context.IsAttackAllowed) return false;
+            if (!Context.IsAttackAllowed(this)) return false;
             
             // 무기가 없으면 공격 불가
             if (_weaponModule == null || !_weaponModule.HasWeapon()) {
@@ -304,7 +286,7 @@ namespace Gameplay.Character.Abilities {
 
             // Safety Net: 애니메이션 duration + 여유 시간(0.1초)
             // 이 시간이 지나면 AttackEnd 이벤트가 없어도 강제 종료
-            var duration = weaponData.attackDuration;
+            var duration = weaponData.GetAttackDuration(_currentCombo);
             _safetyTimer = duration + 0.1f;
 
             // ========== 공격 방향 고정 ==========
@@ -376,10 +358,15 @@ namespace Gameplay.Character.Abilities {
             }
 
             // 4. 콤보 계속 또는 종료
-            _isAttacking = false;
-
-            if (shouldContinueCombo) {
+            if (shouldContinueCombo)
+            {
+                // 콤보가 이어지면 _isAttacking 상태 유지 (끄지 않음)
                 TryAttack();
+            }
+            else
+            {
+                // 콤보가 안 이어질 때만 공격 종료 처리
+                _isAttacking = false;
             }
         }
 

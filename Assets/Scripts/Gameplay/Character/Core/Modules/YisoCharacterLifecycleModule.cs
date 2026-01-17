@@ -2,6 +2,7 @@
 using Gameplay.Character.StateMachine;
 using Gameplay.Health;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Character.Core.Modules {
     public sealed class YisoCharacterLifecycleModule : YisoCharacterModuleBase {
@@ -24,7 +25,7 @@ namespace Gameplay.Character.Core.Modules {
 
             if (_entityHealth == null) {
                 if (!Context.GameObject.TryGetComponent(out _entityHealth)) {
-                    Debug.LogError($"[{Context.GameObject.name}] LifecycleModule에 YisoEntityHealth가 주입되지 않았습니다!", Context.GameObject);
+                    YisoLogger.LogError($"[{Context.GameObject.name}] LifecycleModule에 YisoEntityHealth가 주입되지 않았습니다!", Context.GameObject);
                     return;
                 }
             }
@@ -45,14 +46,14 @@ namespace Gameplay.Character.Core.Modules {
         }
 
         private void OnCharacterDied() {
-            Debug.Log($"[{Context.GameObject.name}] 사망 처리 시작.");
+            YisoLogger.Log($"[{Context.GameObject.name}] 사망 처리 시작.");
 
             // 1. 어빌리티들에게 사망 알림 (이펙트 끄기, 로직 중단 등)
             _abilityModule?.OnDeath();
         }
 
         private void OnCharacterRevived() {
-            Debug.Log($"[{Context.GameObject.name}] 부활 처리 시작.");
+            YisoLogger.Log($"[{Context.GameObject.name}] 부활 처리 시작.");
 
             // 1. 어빌리티들에게 부활 알림 (초기화, 잠금 해제)
             _abilityModule?.OnRevive();

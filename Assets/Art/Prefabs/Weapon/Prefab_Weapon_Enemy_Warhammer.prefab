@@ -45,13 +45,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bf30204c79975d4a99a77f4f1f6f74e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitboxTransform: {fileID: 7271093881739908371}
-  weaponOffset: {x: 0, y: 0, z: 0}
-  useDirectionalOffsets: 0
-  offsetUp: {x: 0, y: 0, z: 0}
-  offsetDown: {x: 0, y: 0, z: 0}
-  offsetLeft: {x: 0, y: 0, z: 0}
-  offsetRight: {x: 0, y: 0, z: 0}
+  comboSettings:
+  - hitbox: {fileID: 2230795841711223827}
+    baseOffset: {x: 0, y: 0, z: 0}
+    useDirectionalOffsets: 0
+    offsetUp: {x: 0, y: 0, z: 0}
+    offsetDown: {x: 0, y: 0, z: 0}
+    offsetLeft: {x: 0, y: 0, z: 0}
+    offsetRight: {x: 0, y: 0, z: 0}
   gizmoArrowLength: 1.5
   gizmoArrowHeadSize: -0.3
   gizmoArrowColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}

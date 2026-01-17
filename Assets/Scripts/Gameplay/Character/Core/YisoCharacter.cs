@@ -10,6 +10,7 @@ using Gameplay.Core;
 using Gameplay.Health;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Character.Core {
     /// <summary>
@@ -56,10 +57,10 @@ namespace Gameplay.Character.Core {
         public GameObject Model {
             get {
                 if (!characterModel) {
-                    Debug.LogWarning($"[YisoCharacter] '{gameObject.name}' 모델 미할당. 'Model' 자식 탐색.");
+                    YisoLogger.LogWarning($"'{gameObject.name}' 모델 미할당. 'Model' 자식 탐색 중...", this);
                     characterModel = transform.Find("Model")?.gameObject;
                     if (!characterModel)
-                        Debug.LogError($"[YisoCharacter] '{gameObject.name}'에서 'Model' 탐색 실패. 수동 할당 필요.");
+                        YisoLogger.LogError($"'{gameObject.name}'에서 'Model' 탐색 실패. 수동 할당 필요.", this);
                 }
 
                 return characterModel;
@@ -72,54 +73,75 @@ namespace Gameplay.Character.Core {
         public Animator Animator {
             get {
                 if (!animator) {
-                    Debug.LogWarning($"[YisoCharacter] '{gameObject.name}' 애니메이터 미할당. 모델에서 탐색.");
+                    YisoLogger.LogWarning($"'{gameObject.name}' 애니메이터 미할당. 모델에서 탐색 중...", this);
                     if (Model != null) Model.TryGetComponent(out animator);
-                    if (!animator) Debug.LogError($"[YisoCharacter] '{gameObject.name}'의 모델에서 애니메이터 탐색 실패. 수동 할당 필요.");
+                    if (!animator) YisoLogger.LogError($"'{gameObject.name}'의 모델에서 애니메이터 탐색 실패. 수동 할당 필요.", this);
                 }
 
                 return animator;
             }
         }
 
-        public bool IsMovementAllowed {
-            get {
-                // 1. 죽었으면 못 움직임
-                if (IsDead()) return false;
+        public bool IsMovementAllowed(IYisoCharacterAbility ignoreAbility = null)
+        {
+            // 1. 사망 체크
+            if (IsDead()) return false;
 
-                // (TODO) 2. 상태이상(CC기) 걸렸으면 못 움직임 (나중에 추가)
-                // if (StatusModule.IsStunned) return false;
+            // 2. CC기 체크 (TODO)
+            // if (StatusModule.IsStunned) return false;
 
-                // 3. 다른 Ability가 이동을 막고 있으면 못 움직임
-                var abilityModule = GetModule<YisoCharacterAbilityModule>();
-                if (abilityModule != null && abilityModule.IsMovementBlocked) {
-                    return false;
+            // 3. Ability 차단 체크
+            var abilityModule = GetModule<YisoCharacterAbilityModule>();
+            if (abilityModule != null)
+            {
+                // ignoreAbility가 있으면 제외하고 검사, 없으면 전체 검사
+                if (ignoreAbility != null)
+                {
+                    if (abilityModule.IsMovementBlockedExcluding(ignoreAbility)) return false;
                 }
-
-                return true;
+                else
+                {
+                    if (abilityModule.IsMovementBlocked) return false;
+                }
             }
+
+            return true;
         }
 
-        public bool IsAttackAllowed {
-            get {
-                // 1. 죽었으면 못 움직임
-                if (IsDead()) return false;
+        public bool IsAttackAllowed(IYisoCharacterAbility ignoreAbility = null)
+        {
+            // 1. 사망 체크
+            if (IsDead()) return false;
 
-                // (TODO) 2. 상태이상(CC기) 걸렸으면 못 움직임 (나중에 추가)
-                // if (StatusModule.IsStunned) return false;
+            // 2. CC기 체크 (TODO)
+            // if (StatusModule.IsStunned) return false;
 
-                // 3. 다른 Ability가 이동을 막고 있으면 못 움직임
-                var abilityModule = GetModule<YisoCharacterAbilityModule>();
-                if (abilityModule != null && abilityModule.IsAttackBlocked) {
-                    return false;
+            // 3. Ability 차단 체크
+            var abilityModule = GetModule<YisoCharacterAbilityModule>();
+            if (abilityModule != null)
+            {
+                // ignoreAbility가 있으면 제외하고 검사, 없으면 전체 검사
+                if (ignoreAbility != null)
+                {
+                    if (abilityModule.IsAttackBlockedExcluding(ignoreAbility)) return false;
                 }
-
-                return true;
+                else
+                {
+                    if (abilityModule.IsAttackBlocked) return false;
+                }
             }
+
+            return true;
         }
 
         // 모든 기능 모듈을 타입별로 저장하는 딕셔너리.
         private Dictionary<Type, IYisoCharacterModule> _modules;
         private IPhysicsControllable _physicsController;
+
+        // 자주 쓰는 Ability는 캐싱
+        private YisoMovementAbility _movementAbility;
+        private YisoMeleeAttackAbility _attackAbility;
+
 
         protected override void Awake() {
             base.Awake();
@@ -139,8 +161,9 @@ namespace Gameplay.Character.Core {
             _physicsController = GetComponent<IPhysicsControllable>();
 
             if (_physicsController == null) {
-                Debug.LogError($"[{gameObject.name}]에 IPhysicsControllable을 구현한 컴포넌트(예: TopDownController)가 없습니다!",
-                    this);
+                YisoLogger.LogError($"{gameObject.name}에 IPhysicsControllable을 구현한 컴포넌트(예: TopDownController)가 없습니다!", this);
+            } else {
+                YisoLogger.Log($"캐릭터 초기화 완료: {gameObject.name}, Type={Type}");
             }
 
             // [중요] InputModule은 AbilityModule보다 먼저 등록해야 함
@@ -166,10 +189,32 @@ namespace Gameplay.Character.Core {
         }
 
         private void LateInitialize() {
-            // 2단계: 모듈 연결 초기화. (다른 모듈 참조 가능)
-            foreach (var module in _modules.Values) {
-                module.LateInitialize();
+            //// 2단계: 모듈 연결 초기화. (다른 모듈 참조 가능)
+            //foreach (var module in _modules.Values) {
+            //    module.LateInitialize();
+            //}
+            foreach (var module in _modules.Values)
+            {
+                try
+                {
+                    // 1. 실행 전 로그
+                    // YisoLogger.Log($"[LateInit] 시작: {module.GetType().Name}", this);
+
+                    module.LateInitialize();
+
+                    // 2. 실행 후 로그 (이게 안 찍히면 이 모듈이 범인)
+                    // YisoLogger.Log($"[LateInit] 성공: {module.GetType().Name}", this);
+                }
+                catch (System.Exception ex)
+                {
+                    // 3. 에러 잡아서 로그 띄우기 (이게 뜨면 범인 검거 완료)
+                    YisoLogger.LogError($"[CRITICAL] {module.GetType().Name}.LateInitialize() 실행 중 에러 발생!\n{ex}", this);
+
+                    // 에러가 나도 다음 모듈은 실행되도록 continue (디버깅용)
+                    continue;
+                }
             }
+            CacheAbilities(); // 자주 쓰는 ability 캐싱
         }
 
         /// <summary>
@@ -191,6 +236,19 @@ namespace Gameplay.Character.Core {
         public T GetModule<T>() where T : class, IYisoCharacterModule {
             _modules.TryGetValue(typeof(T), out var module);
             return module as T;
+        }
+
+        /// <summary>
+        /// 자주 쓰는 Ability 여기서 미리 캐싱해두기
+        /// </summary>
+        private void CacheAbilities()
+        {
+            var abilityModule = GetModule<YisoCharacterAbilityModule>();
+            if (abilityModule != null)
+            {
+                _movementAbility = abilityModule.GetAbility<YisoMovementAbility>();
+                _attackAbility = abilityModule.GetAbility<YisoMeleeAttackAbility>();
+            }
         }
 
         public new Coroutine StartCoroutine(IEnumerator routine) {
@@ -243,6 +301,8 @@ namespace Gameplay.Character.Core {
             GetModule<YisoCharacterAbilityModule>()?.OnAnimationEvent(eventName);
 
         public float GetCurrentHealth() => GetModule<YisoCharacterLifecycleModule>().CurrentHealth;
+        public bool IsMoving() => _movementAbility != null && _movementAbility.IsMoving;
+        public bool IsAttacking() => _attackAbility != null && _attackAbility.IsAttacking();
         public bool IsDead() => GetModule<YisoCharacterLifecycleModule>().IsDead;
         public void TakeDamage(DamageInfo damage) => GetModule<YisoCharacterLifecycleModule>().TakeDamage(damage);
 

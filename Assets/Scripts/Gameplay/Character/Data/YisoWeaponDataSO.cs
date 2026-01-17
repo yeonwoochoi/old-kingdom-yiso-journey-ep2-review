@@ -26,11 +26,13 @@ namespace Gameplay.Character.Data {
         public float maxDamage = 15f;
 
         [Header("Attack Settings")]
+        [Tooltip("공격 간의 최소 대기 시간 (초). 콤보 입력 허용 간격.")]
+        public float minAttackInterval = 0.2f;
         [Tooltip("공격 속도 (초당 공격 횟수)")]
-        public float attackRate = 1f;
+        public float attackSpeed = 1f;
 
         [Tooltip("공격 지속 시간 (초) - DamageOnTouch 활성화 시간")]
-        public float attackDuration = 0.3f;
+        public List<float> baseAttackDurations = new List<float>();
 
         [Header("Combo Settings")]
         [Tooltip("최대 콤보 수 (예: 4 = 4단 콤보)")]
@@ -49,11 +51,29 @@ namespace Gameplay.Character.Data {
             return Random.Range(minDamage, maxDamage);
         }
 
-        /// <summary>
-        /// 공격 쿨타임(초)을 반환.
+        //// <summary>
+        /// 공격 쿨타임(최소 입력 간격)을 반환.
+        /// 속도와 관계없이 입력 제어용으로 사용.
         /// </summary>
-        public float GetAttackCooldown() {
-            return attackRate > 0 ? 1f / attackRate : 0f;
+        public float GetAttackCooldown()
+        {
+            return minAttackInterval;
+        }
+
+        public float GetAttackDuration(int comboIndex)
+        {
+            if (baseAttackDurations == null || baseAttackDurations.Count == 0) return 0f;
+
+            // 인덱스 안전 처리
+            int index = Mathf.Clamp(comboIndex, 0, baseAttackDurations.Count - 1);
+
+            float baseDuration = baseAttackDurations[index];
+
+            // 속도가 0이면 무한대나 다름없으므로 방어 코드
+            if (attackSpeed <= 0.01f) return baseDuration;
+
+            // [핵심] 속도가 2배면 시간은 1/2로 줄어듦
+            return baseDuration / attackSpeed;
         }
 
         /// <summary>

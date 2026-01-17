@@ -16,13 +16,13 @@ namespace Gameplay.Character.StateMachine.Actions.Move {
 
             // 이미 스폰 위치에 있으면 이동하지 않음
             if (distance <= arrivalThreshold) {
-                StateMachine.Owner.Move(Vector2.zero);
+                MovementAbility?.SetMovementInput(Vector2.zero);
                 return;
             }
 
             // 스폰 위치로 이동
             var direction = StateMachine.GetDirectionToSpawn();
-            StateMachine.Owner.Move(direction);
+            MovementAbility?.SetMovementInput(direction);
         }
     }
 }

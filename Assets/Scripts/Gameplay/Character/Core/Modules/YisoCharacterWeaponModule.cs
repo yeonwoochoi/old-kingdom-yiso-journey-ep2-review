@@ -2,6 +2,7 @@ using System;
 using Gameplay.Character.Data;
 using Gameplay.Character.Weapon;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Character.Core.Modules {
     /// <summary>
@@ -34,7 +35,7 @@ namespace Gameplay.Character.Core.Modules {
             else {
                 // 설정되지 않은 경우 캐릭터의 Model을 부착 지점으로 사용
                 _weaponAttachPoint = Context.Transform;
-                Debug.LogWarning($"[YisoCharacterWeaponModule] WeaponAttachPoint가 설정되지 않아 캐릭터의 Transform을 사용합니다.");
+                YisoLogger.LogWarning($"[YisoCharacterWeaponModule] WeaponAttachPoint가 설정되지 않아 캐릭터의 Transform을 사용합니다.");
             }
         }
 
@@ -42,14 +43,21 @@ namespace Gameplay.Character.Core.Modules {
             base.LateInitialize();
 
             // 초기 무기 장착
-            if (_settings.initialWeapon != null) {
+
+            YisoLogger.Log($"[WeaponModule] LateInitialize 실행됨: {Context.GameObject.name}", Context.GameObject);
+
+            if (_settings.initialWeapon != null)
+            {
                 EquipWeapon(_settings.initialWeapon);
+            }
+            else
+            {
+                YisoLogger.LogWarning($"[WeaponModule] 초기 무기가 설정되지 않았습니다: {Context.GameObject.name}", Context.GameObject);
             }
         }
 
         // OnUpdate에서의 Bottom-up 동기화 제거
         // → Top-down Push 방식으로 변경: AnimationModule.Set* 호출 시 자동으로 외부 Animator에 전파됨
-
         public override void OnDestroy() {
             base.OnDestroy();
             // 모듈 파괴 시 현재 무기도 파괴
@@ -68,7 +76,7 @@ namespace Gameplay.Character.Core.Modules {
         /// <param name="weaponData">장착할 무기 데이터</param>
         public void EquipWeapon(YisoWeaponDataSO weaponData) {
             if (weaponData == null) {
-                Debug.LogWarning("[YisoCharacterWeaponModule] EquipWeapon: weaponData가 null입니다.");
+                YisoLogger.LogWarning("[YisoCharacterWeaponModule] EquipWeapon: weaponData가 null입니다.");
                 return;
             }
 
@@ -91,7 +99,7 @@ namespace Gameplay.Character.Core.Modules {
                 animationModule?.RegisterExternalAnimator(CurrentWeapon.WeaponAnimator);
             }
 
-            Debug.Log($"[YisoCharacterWeaponModule] 무기 '{weaponData.weaponName}' 장착 완료.");
+            YisoLogger.Log($"[YisoCharacterWeaponModule] 무기 '{weaponData.weaponName}' 장착 완료.");
         }
 
         /// <summary>
