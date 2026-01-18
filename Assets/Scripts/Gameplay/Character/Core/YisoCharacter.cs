@@ -40,6 +40,9 @@ namespace Gameplay.Character.Core {
         [Title("Debug (Runtime)")] [ShowInInspector, ReadOnly]
         private string CurrentState => Application.isPlaying ? GetModule<YisoCharacterStateModule>()?.CurrentState ?? "None" : "None";
 
+        [ShowInInspector, ReadOnly]
+        private string[] CurrentTargets => Application.isPlaying ? GetModule<YisoCharacterStateModule>()?.CurrentTargets : null;
+
         public GameObject GameObject => gameObject;
         public Transform Transform => transform;
         public CharacterType Type => characterType;

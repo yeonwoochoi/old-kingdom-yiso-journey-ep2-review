@@ -10,6 +10,18 @@ namespace Gameplay.Character.Core.Modules {
         private YisoCharacterStateMachine _stateMachine;
         
         public string CurrentState => _stateMachine?.CurrentState?.StateName ?? "None";
+
+        public string[] CurrentTargets {
+            get {
+                if (_stateMachine == null) return null;
+                var targets = new string[_stateMachine.MaxTargetCount];
+                for (var i = 0; i < _stateMachine.MaxTargetCount; i++) {
+                    var target = _stateMachine.GetTarget(i);
+                    targets[i] = target != null ? target.name : "-";
+                }
+                return targets;
+            }
+        }
         
         public YisoCharacterStateModule(IYisoCharacterContext context, Settings settings) : base(context) {
             _settings = settings;
@@ -19,7 +31,7 @@ namespace Gameplay.Character.Core.Modules {
             base.Initialize();
             if (Context.Type != CharacterType.Player) {
                 if (_settings.stateMachinePrefab != null) {
-                    var stateMachineObj = Context.Transform.Instantiate(_settings.stateMachinePrefab);
+                    var stateMachineObj = Context.Transform.Instantiate(_settings.stateMachinePrefab, _settings.parent);
                     _stateMachine = stateMachineObj.GetComponent<YisoCharacterStateMachine>();
                 }
             
