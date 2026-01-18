@@ -83,7 +83,7 @@ namespace Gameplay.Character.Weapon {
             }
 
             if (WeaponObject != null) {
-                Object.Destroy(WeaponObject);
+                WeaponObject.SafeDestroy();
                 WeaponObject = null;
             }
             

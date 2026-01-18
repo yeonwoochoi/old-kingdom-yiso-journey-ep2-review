@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using Core.Behaviour;
 using Gameplay.Character.Abilities;
 using Gameplay.Character.Core.Modules;
-using Gameplay.Character.StateMachine;
 using Gameplay.Character.Types;
 using Gameplay.Core;
 using Gameplay.Health;

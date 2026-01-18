@@ -3,6 +3,7 @@ using Core.Behaviour;
 using Gameplay.Character.Core;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Health {
     [AddComponentMenu("Yiso/Health/Death Logic Handler")]
@@ -87,7 +88,7 @@ namespace Gameplay.Health {
         }
 
         private void DestroySelf() {
-            Destroy(_entityHealth.gameObject, delayBeforeDestruction);
+            _entityHealth.gameObject.SafeDestroy(delayBeforeDestruction);
         }
 
         private void OnApplicationQuit() {

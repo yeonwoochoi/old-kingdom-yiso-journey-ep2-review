@@ -2,6 +2,7 @@
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Health.GUI {
     /// <summary>
@@ -60,7 +61,7 @@ namespace Gameplay.Health.GUI {
             sequence.Insert(duration * 0.7f, textComponent.DOFade(0f, duration * 0.3f));
 
             sequence.OnComplete(() => {
-                Destroy(gameObject);
+                gameObject.SafeDestroy();
             });
 
             sequence.Play();

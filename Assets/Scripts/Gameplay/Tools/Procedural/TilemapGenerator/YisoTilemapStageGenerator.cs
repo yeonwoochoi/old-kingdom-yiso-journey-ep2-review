@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Gameplay.Tools.Tilemaps;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using Utils;
 using Random = UnityEngine.Random;
 
 namespace Gameplay.Tools.Procedural.TilemapGenerator {
@@ -47,10 +48,8 @@ namespace Gameplay.Tools.Procedural.TilemapGenerator {
 
         protected virtual void ResizeCameraBoundary() {
             if (mapBoundary == null) {
-                if (!TryGetComponent(out mapBoundary)) {
-                    mapBoundary = gameObject.AddComponent<BoxCollider2D>();
-                    mapBoundary.isTrigger = true;
-                }
+                mapBoundary = gameObject.GetOrAddComponent<BoxCollider2D>();
+                mapBoundary.isTrigger = true;
             }
 
             var bounds = obstacleTilemap.localBounds;
@@ -103,7 +102,7 @@ namespace Gameplay.Tools.Procedural.TilemapGenerator {
                         iterationsCount++;
                     }
 
-                    Instantiate(data.prefab, spawnPosition, Quaternion.identity);
+                    this.Instantiate(data.prefab, spawnPosition, Quaternion.identity);
                     _filledPositions.Add(spawnPosition);
                 }
             }

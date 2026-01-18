@@ -89,7 +89,7 @@ namespace Gameplay.Health {
                 return;
             }
 
-            _healthBarInstance = Instantiate(healthBarPrefab, transform.position + healthBarOffset, Quaternion.identity);
+            _healthBarInstance = this.Instantiate(healthBarPrefab, transform.position + healthBarOffset, Quaternion.identity);
             _healthBarInstance.name = $"HealthBar | {gameObject.name}";
 
             var followTarget = _healthBarInstance.GetComponent<YisoFollowTarget>();
@@ -125,7 +125,7 @@ namespace Gameplay.Health {
                 var textColor = damageInfo.IsCritical ? criticalDamageColor : normalDamageColor;
 
                 // TODO: 추후 Pooling Service 이용하기
-                var textInstance = Instantiate(floatingTextPrefab, transform.position + floatingTextOffset, Quaternion.identity);
+                var textInstance = this.Instantiate(floatingTextPrefab, transform.position + floatingTextOffset, Quaternion.identity);
                 textInstance.Initialize(damageText, textColor);
             }
         }
@@ -142,7 +142,7 @@ namespace Gameplay.Health {
                 var healText = $"+{Mathf.FloorToInt(healAmount)}";
 
                 // TODO: 추후 Pooling Service 이용하기
-                var textInstance = Instantiate(floatingTextPrefab, transform.position + floatingTextOffset, Quaternion.identity);
+                var textInstance = this.Instantiate(floatingTextPrefab, transform.position + floatingTextOffset, Quaternion.identity);
                 textInstance.Initialize(healText, healColor);
             }
         }
