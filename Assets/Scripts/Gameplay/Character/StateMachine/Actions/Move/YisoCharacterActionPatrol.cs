@@ -58,8 +58,9 @@ namespace Gameplay.Character.StateMachine.Actions.Move {
 
             // 2. 현재 목표 위치 계산 (스폰 위치 + 오프셋)
             // StateMachine.SpawnPosition은 Vector3이므로 Vector2로 캐스팅
-            Vector2 spawnPos = StateMachine.SpawnPosition; 
-            Vector2 targetOffset = patrolOffsets[_currentPatrolIndex].position;
+            // localPosition 사용: Transform이 캐릭터 하위에 있어 position은 캐릭터 따라 변함
+            Vector2 spawnPos = StateMachine.SpawnPosition;
+            Vector2 targetOffset = patrolOffsets[_currentPatrolIndex].localPosition;
             Vector2 targetPos = spawnPos + targetOffset;
 
             // 3. 거리 계산 및 이동
@@ -121,35 +122,32 @@ namespace Gameplay.Character.StateMachine.Actions.Move {
 
             // 기준점 설정
             // 런타임: 실제 스폰 위치 / 에디터: 현재 프리팹 위치
-            Vector3 basePosition = (Application.isPlaying && StateMachine != null) 
-                ? StateMachine.SpawnPosition 
-                : transform.position;
-
+            var basePosition = transform.position;
             Gizmos.color = Color.cyan;
 
-            for (int i = 0; i < patrolOffsets.Length; i++) {
-                Vector3 point = basePosition + (Vector3)patrolOffsets[i].position;
+            // 현재 목표 지점 표시 (런타임 전용)
+            if (Application.isPlaying && StateMachine != null) {
+                basePosition = StateMachine.SpawnPosition;
+                Gizmos.color = Color.red;
+            }
+            
+            for (var i = 0; i < patrolOffsets.Length; i++) {
+                // localPosition 사용: 오프셋 개념이므로 상대 좌표가 맞음
+                var point = basePosition + patrolOffsets[i].localPosition;
                 
                 // 포인트 표시
                 Gizmos.DrawSphere(point, 0.2f);
 
                 // 경로 선 연결
                 if (i < patrolOffsets.Length - 1) {
-                    Vector3 nextPoint = basePosition + (Vector3)patrolOffsets[i + 1].position;
+                    var nextPoint = basePosition + patrolOffsets[i + 1].localPosition;
                     Gizmos.DrawLine(point, nextPoint);
                 }
                 else if (!pingPong && patrolOffsets.Length > 1) {
                     // 순환 모드일 경우 마지막 -> 처음 연결
-                    Vector3 firstPoint = basePosition + (Vector3)patrolOffsets[0].position;
+                    var firstPoint = basePosition + patrolOffsets[0].localPosition;
                     Gizmos.DrawLine(point, firstPoint);
                 }
-            }
-
-            // 현재 목표 지점 표시 (런타임 전용)
-            if (Application.isPlaying && StateMachine != null) {
-                Vector3 currentTarget = basePosition + (Vector3)patrolOffsets[_currentPatrolIndex].position;
-                Gizmos.color = Color.red;
-                Gizmos.DrawLine(StateMachine.Owner.Transform.position, currentTarget);
             }
         }
     }
