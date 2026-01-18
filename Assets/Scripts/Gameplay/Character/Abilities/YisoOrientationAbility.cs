@@ -96,8 +96,9 @@ namespace Gameplay.Character.Abilities {
 
         private Vector2 DetermineSourceDirection()
         {
+            // 공격 중일 때만 weapon aim 방향 사용 (1순위)
             var currentAim = _weaponModule?.CurrentWeapon?.WeaponAim;
-            if (currentAim != null)
+            if (currentAim != null && currentAim.IsAimLocked())
             {
                 var aimDirection = currentAim.CurrentAim;
                 if (aimDirection.sqrMagnitude > _settings.aimThreshold * _settings.aimThreshold)
