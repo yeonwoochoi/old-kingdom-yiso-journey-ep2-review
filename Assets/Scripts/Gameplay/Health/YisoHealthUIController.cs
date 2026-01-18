@@ -4,6 +4,7 @@ using Gameplay.Health.GUI;
 using Gameplay.Tools.Movement;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Health {
     [AddComponentMenu("Yiso/Health/Health UI Controller")]
@@ -84,7 +85,7 @@ namespace Gameplay.Health {
 
         private void InstantiateHealthBar() {
             if (healthBarPrefab == null) {
-                Debug.LogWarning($"[{gameObject.name}] HealthBar Prefab is not registered. So, Health UI Controller is not worked", this);
+                YisoLogger.LogWarning($"[{gameObject.name}] HealthBar Prefab is not registered. So, Health UI Controller is not worked");
                 return;
             }
 
