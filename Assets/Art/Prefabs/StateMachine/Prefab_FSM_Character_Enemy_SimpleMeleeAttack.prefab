@@ -431,11 +431,11 @@ MonoBehaviour:
       conditions:
       - invertResult: 0
         mode: 0
-        singleDecision: {fileID: 164724343497522117}
+        singleDecision: {fileID: 4879701567476289260}
         subConditions: []
       - invertResult: 0
         mode: 0
-        singleDecision: {fileID: 4879701567476289260}
+        singleDecision: {fileID: 164724343497522117}
         subConditions: []
     - random: 0
       nextStates: []
@@ -459,30 +459,17 @@ MonoBehaviour:
         mode: 0
         singleDecision: {fileID: 4879701567476289260}
         subConditions:
-        - invertResult: 1
-          mode: 0
-          singleDecision: {fileID: 4879701567476289260}
-          subConditions: []
-        - invertResult: 0
-          mode: 0
-          singleDecision: {fileID: 7576444201929104723}
-          subConditions: []
+        - {fileID: 0}
+        - {fileID: 0}
     - random: 0
       nextStates: []
       nextState: Return
       conditions:
       - invertResult: 0
-        mode: 2
+        mode: 0
         singleDecision: {fileID: 5133254923230850878}
         subConditions:
-        - invertResult: 0
-          mode: 0
-          singleDecision: {fileID: 7576444201929104723}
-          subConditions: []
-        - invertResult: 0
-          mode: 0
-          singleDecision: {fileID: 5133254923230850878}
-          subConditions: []
+        - {fileID: 5133254923230850878}
     - random: 0
       nextStates: []
       nextState: Attack
@@ -829,7 +816,7 @@ GameObject:
   - component: {fileID: 476330588866109932}
   - component: {fileID: 4793145841892409225}
   m_Layer: 0
-  m_Name: '[Decision] Time In State'
+  m_Name: '[Decision] Time In State (1~1.5)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
