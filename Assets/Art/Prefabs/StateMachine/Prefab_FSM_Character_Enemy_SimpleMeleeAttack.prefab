@@ -35,7 +35,7 @@ Transform:
   - {fileID: 7584353533857687857}
   - {fileID: 8129395035989398842}
   - {fileID: 8322707768687671567}
-  - {fileID: 476330588866109932}
+  - {fileID: 7285869950653937613}
   m_Father: {fileID: 3057641756367828769}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1405934698230796171
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comparison: 0
-  distance: 0.5
+  distance: 0.2
 --- !u!1 &4226564770051555260
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,11 +431,11 @@ MonoBehaviour:
       conditions:
       - invertResult: 0
         mode: 0
-        singleDecision: {fileID: 4879701567476289260}
+        singleDecision: {fileID: 164724343497522117}
         subConditions: []
       - invertResult: 0
         mode: 0
-        singleDecision: {fileID: 164724343497522117}
+        singleDecision: {fileID: 4879701567476289260}
         subConditions: []
     - random: 0
       nextStates: []
@@ -455,12 +455,12 @@ MonoBehaviour:
       nextStates: []
       nextState: Idle
       conditions:
-      - invertResult: 0
+      - invertResult: 1
         mode: 0
         singleDecision: {fileID: 4879701567476289260}
         subConditions:
-        - {fileID: 0}
-        - {fileID: 0}
+        - rid: -2
+        - rid: -2
     - random: 0
       nextStates: []
       nextState: Return
@@ -469,7 +469,7 @@ MonoBehaviour:
         mode: 0
         singleDecision: {fileID: 5133254923230850878}
         subConditions:
-        - {fileID: 5133254923230850878}
+        - rid: -2
     - random: 0
       nextStates: []
       nextState: Attack
@@ -492,9 +492,31 @@ MonoBehaviour:
       nextStates: []
       nextState: Idle
       conditions:
+      - invertResult: 1
+        mode: 0
+        singleDecision: {fileID: 4879701567476289260}
+        subConditions:
+        - rid: 7497052333754286172
+        - rid: 7497052333754286173
       - invertResult: 0
         mode: 0
-        singleDecision: {fileID: 4793145841892409225}
+        singleDecision: {fileID: 948168113073194482}
+        subConditions: []
+    - random: 0
+      nextStates: []
+      nextState: Chase
+      conditions:
+      - invertResult: 0
+        mode: 0
+        singleDecision: {fileID: 4879701567476289260}
+        subConditions: []
+      - invertResult: 1
+        mode: 0
+        singleDecision: {fileID: 5936035395091036650}
+        subConditions: []
+      - invertResult: 0
+        mode: 0
+        singleDecision: {fileID: 948168113073194482}
         subConditions: []
     onEnterActions:
     - {fileID: 198082454192712039}
@@ -514,6 +536,25 @@ MonoBehaviour:
     onUpdateActions:
     - {fileID: 3758381948080195764}
     onExitActions: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 7497052333754286172
+      type: {class: YisoCharacterTransition/TransitionCondition, ns: Gameplay.Character.StateMachine, asm: Assembly-CSharp}
+      data:
+        invertResult: 1
+        mode: 0
+        singleDecision: {fileID: 4879701567476289260}
+        subConditions: []
+    - rid: 7497052333754286173
+      type: {class: YisoCharacterTransition/TransitionCondition, ns: Gameplay.Character.StateMachine, asm: Assembly-CSharp}
+      data:
+        invertResult: 1
+        mode: 0
+        singleDecision: {fileID: 5936035395091036650}
+        subConditions: []
 --- !u!1 &6432058167794069553
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,7 +689,7 @@ GameObject:
   - component: {fileID: 7669973020221387871}
   - component: {fileID: 5936035395091036650}
   m_Layer: 0
-  m_Name: '[Decision] Distance To Target (<=4)'
+  m_Name: '[Decision] Distance To Target (<=1.5)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -682,7 +723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comparison: 1
-  distance: 4
+  distance: 1.5
   isMainTarget: 1
   targetSlotNumber: 1
 --- !u!1 &7740512409337091493
@@ -774,6 +815,50 @@ MonoBehaviour:
   pingPong: 1
   waitTimeAtPoint: 1
   arrivalThreshold: 0.5
+--- !u!1 &8397294651692210956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7285869950653937613}
+  - component: {fileID: 948168113073194482}
+  m_Layer: 0
+  m_Name: '[Decision] Is Not Attacking'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7285869950653937613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8397294651692210956}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6628340333313597545}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &948168113073194482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8397294651692210956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e1f2596c436845459736f1e0d276f6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8437334450893282853
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,51 +890,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4544687437185917045}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8859765701273759974
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 476330588866109932}
-  - component: {fileID: 4793145841892409225}
-  m_Layer: 0
-  m_Name: '[Decision] Time In State (1~1.5)'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &476330588866109932
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8859765701273759974}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6628340333313597545}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4793145841892409225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8859765701273759974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cc35f8aefe37c446b84fc1672399f15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeRange: {x: 1, y: 1.5}
 --- !u!1 &8898032191191383189
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,4 +934,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30b42fe47aeec3941961a1d9ce7f6a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackInterval: 0.5
+  loopAttack: 1
+  isRandomInterval: 1
+  attackLoopInterval: 0.5
+  minAttackInterval: 1
+  maxAttackInterval: 1.5

@@ -520,6 +520,7 @@ GameObject:
   - component: {fileID: 613678066}
   - component: {fileID: 613678065}
   - component: {fileID: 613678064}
+  - component: {fileID: 613678067}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -619,6 +620,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1362263430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &613678067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613678063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36c7e40f3af2153468c82811d65a20ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1095492504
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,6 +662,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1818567763}
+  - {fileID: 1909650836}
   m_Father: {fileID: 1362263430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1193150495
@@ -838,7 +852,8 @@ MonoBehaviour:
   _lifecycleSettings:
     characterEntityHealth: {fileID: 1362263426}
   _stateSettings:
-    stateMachine: {fileID: 1466805898063499468, guid: b22a6242ec47ee54085711703f4ca6d6, type: 3}
+    stateMachinePrefab: {fileID: 1466805898063499468, guid: b22a6242ec47ee54085711703f4ca6d6, type: 3}
+    parent: {fileID: 1909650836}
   _weaponSettings:
     weaponAttachPoint: {fileID: 96548311}
     initialWeapon: {fileID: 11400000, guid: cee94a09f7a7ba14f848bc5101ce81c0, type: 2}
@@ -1082,7 +1097,8 @@ MonoBehaviour:
   _lifecycleSettings:
     characterEntityHealth: {fileID: 1497929015}
   _stateSettings:
-    stateMachine: {fileID: 0}
+    stateMachinePrefab: {fileID: 0}
+    parent: {fileID: 0}
   _weaponSettings:
     weaponAttachPoint: {fileID: 1333830990}
     initialWeapon: {fileID: 11400000, guid: b45b7555524403c48895e0700a56daea, type: 2}
@@ -1420,6 +1436,37 @@ MonoBehaviour:
   normalDamageColor: {r: 1, g: 1, b: 1, a: 1}
   criticalDamageColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   healColor: {r: 0, g: 1, b: 0, a: 1}
+--- !u!1 &1909650835
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1909650836}
+  m_Layer: 0
+  m_Name: FSM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1909650836
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909650835}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1095492505}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1997740501
 GameObject:
   m_ObjectHideFlags: 0
