@@ -2,6 +2,7 @@
 using Core.Behaviour;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Health {
     // TODO: Core 서비스에서 구현되면 지워야함.
@@ -75,6 +76,10 @@ namespace Gameplay.Health {
         public void TakeDamage(DamageInfo damageInfo) {
             if (!IsInitialized || IsDead) {
                 return;
+            }
+            
+            if (_damageProcessor == null) {
+                YisoLogger.LogWarning($"[{gameObject.name}] DamageProcessor is null!");
             }
 
             // 무적 체크 - 무적이면 아무것도 하지 않고 리턴
