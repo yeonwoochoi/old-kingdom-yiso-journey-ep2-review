@@ -82,9 +82,16 @@ namespace Gameplay.Character.Abilities {
 
             // TODO: 추후 StatModule에서 BaseMoveSpeed를 가져오도록 변경 가능
             var characterBaseSpeed = _settings.baseMovementSpeed;
-
-            // 최종 벡터 = (가속된 방향) * (기본 속도) * (배율)
-            FinalMovementInput = _lerpedInput * (characterBaseSpeed * _speedMultiplier);
+            const float stopThreshold = 0.1f; // 이 값을 조절하여 멈춤 민감도 조절
+            var hasInput = _currentInput.sqrMagnitude > _settings.idleThreshold * _settings.idleThreshold;
+            
+            if (!hasInput && _currentAcceleration < stopThreshold) {
+                _currentAcceleration = 0f;
+                _lerpedInput = Vector2.zero;
+                FinalMovementInput = Vector2.zero; // 확실하게 0으로
+            } else {
+                FinalMovementInput = _lerpedInput * (characterBaseSpeed * _speedMultiplier);
+            }
 
             Context.Move(FinalMovementInput);
         }
@@ -119,30 +126,41 @@ namespace Gameplay.Character.Abilities {
         #region Private Logic
 
         private void CalculateInterpolatedInput() {
-            if (_currentInput.sqrMagnitude > _settings.idleThreshold * _settings.idleThreshold) {
-                // 방향 전환 감지: 현재 입력과 이전 입력의 내적이 음수면 반대 방향
-                var directionChanged = false;
+            var hasInput = _currentInput.sqrMagnitude > _settings.idleThreshold * _settings.idleThreshold;
+
+            if (hasInput) {
+                // --- 이동 중 (가속 로직) ---
+                
+                // 방향 전환 감지 (급격한 턴)
                 if (_lerpedInput.sqrMagnitude > 0.01f) {
                     var dot = Vector2.Dot(_currentInput.normalized, _lerpedInput.normalized);
                     if (dot < 0f) { // 반대 방향 (180도 이상)
-                        directionChanged = true;
+                        _currentAcceleration = 0f;
+                        _lerpedInput = Vector2.zero;
                     }
                 }
 
-                // 방향이 크게 바뀌면 가속도 리셋 (즉시 방향 전환)
-                if (directionChanged) {
-                    _currentAcceleration = 0f;
-                    _lerpedInput = Vector2.zero;
-                }
-
                 _currentAcceleration = Mathf.Lerp(_currentAcceleration, 1f, _settings.acceleration * Time.deltaTime);
+                
+                // 아날로그 입력 여부에 따른 클램핑
                 _lerpedInput = _settings.useAnalogInput
                     ? Vector2.ClampMagnitude(_currentInput, _currentAcceleration)
                     : Vector2.ClampMagnitude(_currentInput.normalized, _currentAcceleration);
             }
             else {
-                _currentAcceleration = Mathf.Lerp(_currentAcceleration, 0f, _settings.deceleration * Time.deltaTime);
-                _lerpedInput = _lerpedInput.normalized * _currentAcceleration;
+                // --- 정지 중 (감속 로직) ---
+
+                bool useInstantStop = _settings.instantStop;
+
+                if (useInstantStop) {
+                    // 바로 멈춤
+                    _currentAcceleration = 0f;
+                    _lerpedInput = Vector2.zero;
+                } else {
+                    // 미끄러지듯 멈춤
+                    _currentAcceleration = Mathf.Lerp(_currentAcceleration, 0f, _settings.deceleration * Time.deltaTime);
+                    _lerpedInput = _lerpedInput.normalized * _currentAcceleration;
+                }
             }
         }
 

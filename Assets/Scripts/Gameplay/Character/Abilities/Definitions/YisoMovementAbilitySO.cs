@@ -19,6 +19,9 @@ namespace Gameplay.Character.Abilities.Definitions {
         [Tooltip("true: 조이스틱처럼 입력 강도에 따라 속도가 조절됩니다.\nfalse: WASD처럼 누르면 즉시 최대 속도로 움직입니다.")]
         public bool useAnalogInput = false;
 
+        [Tooltip("true: 바로 멈춥니다.\nfalse: 미끄러지듯이 멈춥니다.")]
+        public bool instantStop = false;
+
         // "나는 YisoMovementAbility(로직)를 만드는 공장이야."
         public override IYisoCharacterAbility CreateAbility() {
             // 자신(SO)을 생성자의 인자로 넘겨, 로직 클래스가 데이터를 참조할 수 있게 함
