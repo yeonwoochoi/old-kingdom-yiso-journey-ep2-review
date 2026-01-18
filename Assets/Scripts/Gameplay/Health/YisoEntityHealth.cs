@@ -38,8 +38,8 @@ namespace Gameplay.Health {
         public bool IsInitialized { get; private set; } = false;
 
         // --- 핵심 이벤트 ---
-        public event Action<float, float> OnHealthChanged;
-        public event Action<DamageInfo> OnDamaged;
+        public event Action<float, float> OnHealthChanged; // 데미지가 0이면 호출 안됨
+        public event Action<DamageInfo> OnDamaged; // Damage가 0이어도 호출됨 (floating text 같은건 이걸로)
         public event Action OnDied;
         public event Action<float> OnHealed;
         public event Action OnRevived;
@@ -88,7 +88,9 @@ namespace Gameplay.Health {
                 : _damageProcessor.FinalizeDamage(damageInfo);
 
             CurrentHealth = Math.Max(CurrentHealth - finalDamage, 0f);
-            OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
+            if (!Mathf.Approximately(previousHealth, CurrentHealth)) {
+                OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
+            }
             OnDamaged?.Invoke(damageInfo);
 
             if (CurrentHealth <= 0f && previousHealth > 0f) {
