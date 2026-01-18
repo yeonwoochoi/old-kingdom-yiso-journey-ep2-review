@@ -18,8 +18,9 @@ namespace Gameplay.Character.Core.Modules {
         public override void Initialize() {
             base.Initialize();
             if (Context.Type != CharacterType.Player) {
-                if (_settings.stateMachine != null) {
-                    _stateMachine = _settings.stateMachine;
+                if (_settings.stateMachinePrefab != null) {
+                    var stateMachineObj = Context.Transform.Instantiate(_settings.stateMachinePrefab);
+                    _stateMachine = stateMachineObj.GetComponent<YisoCharacterStateMachine>();
                 }
             
                 if (_stateMachine == null) {
@@ -28,7 +29,7 @@ namespace Gameplay.Character.Core.Modules {
                     YisoLogger.Log($"StateModule 초기화: FSM={_stateMachine.name}");
                 }
             
-                _settings.stateMachine.PreInitialize(Context);
+                _stateMachine.PreInitialize(Context);
             }
         }
 
@@ -39,7 +40,8 @@ namespace Gameplay.Character.Core.Modules {
 
         [Serializable]
         public class Settings {
-            public YisoCharacterStateMachine stateMachine;
+            public YisoCharacterStateMachine stateMachinePrefab;
+            public Transform parent;
         }
     }
 }
