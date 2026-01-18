@@ -4,8 +4,8 @@ using Core.Behaviour;
 using Gameplay.Character.Core;
 using Gameplay.Character.Core.Modules;
 using Sirenix.OdinInspector;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Health {
     /// <summary>
@@ -68,7 +68,7 @@ namespace Gameplay.Health {
             _entityHealth = GetComponentInParent<YisoEntityHealth>();
 
             if (_entityHealth == null) {
-                Debug.LogError($"[{gameObject.name}] YisoHealthAnimator: YisoEntityHealth를 찾을 수 없습니다!", this);
+                YisoLogger.LogError($"[{gameObject.name}] YisoHealthAnimator: YisoEntityHealth를 찾을 수 없습니다!");
                 updateAnimatorParameters = false;
                 enabled = false;
                 return;
@@ -82,7 +82,7 @@ namespace Gameplay.Health {
             _context = GetComponentInParent<IYisoCharacterContext>();
 
             if (_context == null) {
-                Debug.LogWarning($"[{gameObject.name}] YisoHealthAnimator: IYisoCharacterContext 찾을 수 없습니다.");
+                YisoLogger.LogWarning($"[{gameObject.name}] YisoHealthAnimator: IYisoCharacterContext 찾을 수 없습니다.");
                 updateAnimatorParameters = false;
                 enabled = false;
             }
@@ -158,7 +158,7 @@ namespace Gameplay.Health {
 
             foreach (var action in actions) {
                 if (action.parameter == YisoCharacterAnimationState.None) {
-                    Debug.LogWarning($"[{gameObject.name}] YisoHealthAnimator: AnimatorParameterSetting에 None이 설정되어 있습니다. 무시합니다.");
+                    YisoLogger.LogWarning($"[{gameObject.name}] YisoHealthAnimator: AnimatorParameterSetting에 None이 설정되어 있습니다. 무시합니다.");
                     continue;
                 }
 
@@ -180,7 +180,7 @@ namespace Gameplay.Health {
                         break;
 
                     default:
-                        Debug.LogWarning($"[{gameObject.name}] YisoHealthAnimator: 지원하지 않는 파라미터 타입 {action.parameterType}");
+                        YisoLogger.LogWarning($"[{gameObject.name}] YisoHealthAnimator: 지원하지 않는 파라미터 타입 {action.parameterType}");
                         break;
                 }
             }
