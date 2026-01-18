@@ -36,7 +36,7 @@ namespace Gameplay.Tools.Tilemaps {
             }
 
             if (!Application.isPlaying && slowRender) {
-                Debug.LogWarning("Rendering maps in SlowRender mode is only supported at runtime.");
+                YisoLogger.LogWarning("Rendering maps in SlowRender mode is only supported at runtime.");
             }
         }
 

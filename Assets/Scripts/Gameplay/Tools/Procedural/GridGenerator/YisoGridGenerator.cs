@@ -3,6 +3,7 @@ using Gameplay.Tools.Procedural.TilemapGenerator;
 using Gameplay.Tools.Tilemaps;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using Utils;
 
 namespace Gameplay.Tools.Procedural.GridGenerator {
     public class YisoGridGenerator {
@@ -35,8 +36,8 @@ namespace Gameplay.Tools.Procedural.GridGenerator {
 
         public static int[,] TilemapToGrid(Tilemap tilemap, int width, int height) {
             if (tilemap == null) {
-                Debug.LogError(
-                    "[YisoGridGenerator] You're trying to convert a tilemap into a grid but didn't specify what tilemap to convert.");
+                YisoLogger.LogError(
+                    "You're trying to convert a tilemap into a grid but didn't specify what tilemap to convert.");
                 return null;
             }
 

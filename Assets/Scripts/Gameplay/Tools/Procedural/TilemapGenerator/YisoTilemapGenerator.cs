@@ -8,6 +8,7 @@ using Gameplay.Tools.Tilemaps;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using Utils;
 using Random = UnityEngine.Random;
 
 namespace Gameplay.Tools.Procedural.TilemapGenerator {
@@ -55,10 +56,10 @@ namespace Gameplay.Tools.Procedural.TilemapGenerator {
         protected virtual void GenerateLayer(YisoTilemapGeneratorLayer layer) {
             if (!layer.active) return;
             
-            if (layer.targetTilemap == null) { Debug.LogError("Tilemap Generator : you need to specify a Target Tilemap to paint on."); }
-            if (layer.tile == null) { Debug.LogError("Tilemap Generator : you need to specify a Tile to paint with."); }
-            if (layer.gridWidth == 0) { Debug.LogError("Tilemap Generator : grid width can't be 0."); }
-            if (layer.gridHeight == 0) { Debug.LogError("Tilemap Generator : grid height can't be 0."); }
+            if (layer.targetTilemap == null) { YisoLogger.LogError("Tilemap Generator : you need to specify a Target Tilemap to paint on."); }
+            if (layer.tile == null) { YisoLogger.LogError("Tilemap Generator : you need to specify a Tile to paint with."); }
+            if (layer.gridWidth == 0) { YisoLogger.LogError("Tilemap Generator : grid width can't be 0."); }
+            if (layer.gridHeight == 0) { YisoLogger.LogError("Tilemap Generator : grid height can't be 0."); }
 
             var globalSeedFloat = 0f;
             var layerSeedFloat = 0f;

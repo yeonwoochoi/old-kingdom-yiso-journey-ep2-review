@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Utils;
 
 namespace Gameplay.Character.StateMachine.Actions {
     public class YisoCharacterActionSetAnimator: YisoCharacterAction {
@@ -11,12 +12,12 @@ namespace Gameplay.Character.StateMachine.Actions {
 
         public override void OnEnterState() {
             if (StateMachine?.Owner?.Animator == null) {
-                Debug.LogWarning($"[{name}] Animator를 찾을 수 없습니다.");
+                YisoLogger.LogWarning($"[{name}] Animator를 찾을 수 없습니다.");
                 return;
             }
 
             if (animatorController == null) {
-                Debug.LogWarning($"[{name}] AnimatorController가 할당되지 않았습니다.");
+                YisoLogger.LogWarning($"[{name}] AnimatorController가 할당되지 않았습니다.");
                 return;
             }
 

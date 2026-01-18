@@ -1,6 +1,7 @@
 ﻿using Gameplay.Tools.Visual;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Character.StateMachine.Actions.Orientation {
     public class YisoCharacterActionConeOfVision: YisoCharacterAction {
@@ -28,7 +29,7 @@ namespace Gameplay.Character.StateMachine.Actions.Orientation {
                 // 없으면 런타임에 추가 (선택사항, 에러 로그가 나을 수도 있음)
                 if (_fovRenderer == null)
                 {
-                    Debug.Log($"[ConeOfVision] Renderer not found on {StateMachine.name}. Creating new one.");
+                    YisoLogger.Log($"Renderer not found on {StateMachine.name}. Creating new one.");
                     var go = new GameObject("FOV_Renderer");
                     go.transform.SetParent(StateMachine.transform);
                     go.transform.localPosition = Vector3.zero;

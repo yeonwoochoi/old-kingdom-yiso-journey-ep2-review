@@ -46,7 +46,7 @@ namespace Gameplay.Character.Abilities {
             _inputModule = Context.GetModule<YisoCharacterInputModule>();
 
             if (_weaponModule == null) {
-                Debug.LogWarning("[YisoMeleeAttackAbility] YisoCharacterWeaponModule을 찾을 수 없습니다. 이 Ability는 작동하지 않습니다.");
+                YisoLogger.LogWarning("YisoCharacterWeaponModule을 찾을 수 없습니다. 이 Ability는 작동하지 않습니다.");
             }
         }
 
@@ -119,7 +119,7 @@ namespace Gameplay.Character.Abilities {
                 _safetyTimer -= Time.deltaTime;
 
                 if (_safetyTimer <= 0f) {
-                    Debug.LogWarning($"[YisoMeleeAttackAbility] Safety Net 타이머 만료! " +
+                    YisoLogger.LogWarning($"Safety Net 타이머 만료! " +
                                      $"애니메이션 이벤트 '{YisoAbilityAnimationEvents.ATTACK_END}'가 호출되지 않아 강제 종료합니다. " +
                                      $"애니메이션 클립에 이벤트가 제대로 설정되었는지 확인하세요.");
 
@@ -170,10 +170,12 @@ namespace Gameplay.Character.Abilities {
 
             switch (eventName) {
                 case YisoAbilityAnimationEvents.ATTACK_ENABLE_DAMAGE:
+                    YisoLogger.Log($"Attack Start {Time.time}");
                     HandleEnableDamage();
                     break;
 
                 case YisoAbilityAnimationEvents.ATTACK_DISABLE_DAMAGE:
+                    YisoLogger.Log($"Attack End {Time.time}");
                     HandleDisableDamage();
                     break;
 
@@ -314,7 +316,7 @@ namespace Gameplay.Character.Abilities {
         /// </summary>
         private void HandleEnableDamage() {
             if (_weaponModule == null) {
-                Debug.LogWarning("[YisoMeleeAttackAbility] WeaponModule이 null입니다. DamageOnTouch를 활성화할 수 없습니다.");
+                YisoLogger.LogWarning("WeaponModule이 null입니다. DamageOnTouch를 활성화할 수 없습니다.");
                 return;
             }
 

@@ -1,5 +1,6 @@
 ﻿using Gameplay.Character.Data;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Character.StateMachine.Actions.Attack {
     /// <summary>
@@ -29,13 +30,13 @@ namespace Gameplay.Character.StateMachine.Actions.Attack {
 
         private void ChangeWeapon() {
             if (weaponData == null) {
-                Debug.LogWarning("[ChangeWeapon] weaponData가 설정되지 않았습니다.");
+                YisoLogger.LogWarning("weaponData가 설정되지 않았습니다.");
                 return;
             }
 
             var weaponModule = StateMachine?.GetWeaponModule();
             if (weaponModule == null) {
-                Debug.LogWarning("[ChangeWeapon] WeaponModule을 찾을 수 없습니다.");
+                YisoLogger.LogWarning("WeaponModule을 찾을 수 없습니다.");
                 return;
             }
 

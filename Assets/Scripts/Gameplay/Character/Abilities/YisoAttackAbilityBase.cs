@@ -1,4 +1,5 @@
 ﻿using Gameplay.Character.Core.Modules;
+using Utils;
 
 namespace Gameplay.Character.Abilities {
     /// <summary>
@@ -36,7 +37,7 @@ namespace Gameplay.Character.Abilities {
             }
 
             if (_orientationAbility == null) {
-                UnityEngine.Debug.LogWarning($"[{GetType().Name}] YisoOrientationAbility를 찾을 수 없습니다. 공격 중 방향 잠금이 작동하지 않습니다.");
+                YisoLogger.LogWarning($"[{GetType().Name}] YisoOrientationAbility를 찾을 수 없습니다. 공격 중 방향 잠금이 작동하지 않습니다.");
             }
         }
 

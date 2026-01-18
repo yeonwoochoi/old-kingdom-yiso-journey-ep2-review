@@ -1,5 +1,6 @@
 ﻿using Gameplay.Character.Abilities;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Character.StateMachine.Actions.Attack {
     /// <summary>
@@ -28,7 +29,7 @@ namespace Gameplay.Character.StateMachine.Actions.Attack {
             // MeleeAttackAbility 가져오기
             var attackAbility = abilityModule.GetAbility<YisoMeleeAttackAbility>();
             if (attackAbility == null) {
-                Debug.LogWarning("[AttackAction] YisoMeleeAttackAbility를 찾을 수 없습니다.");
+                YisoLogger.LogWarning("YisoMeleeAttackAbility를 찾을 수 없습니다.");
                 return;
             }
 

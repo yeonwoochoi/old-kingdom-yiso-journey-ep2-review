@@ -1,4 +1,5 @@
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Character.Core {
     /// <summary>
@@ -16,7 +17,7 @@ namespace Gameplay.Character.Core {
             _character = GetComponentInParent<IYisoCharacterContext>();
 
             if (_character == null) {
-                Debug.LogError($"[YisoAnimationEventReceiver] IYisoCharacterContext를 찾을 수 없습니다. " +
+                YisoLogger.LogError($"IYisoCharacterContext를 찾을 수 없습니다. " +
                                $"이 컴포넌트는 IYisoCharacterContext의 자식 오브젝트에 있어야 합니다. GameObject: {gameObject.name}");
             }
         }

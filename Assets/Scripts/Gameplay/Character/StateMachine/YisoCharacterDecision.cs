@@ -1,5 +1,6 @@
 ﻿using Core.Behaviour;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Character.StateMachine {
     public abstract class YisoCharacterDecision: RunIBehaviour {
@@ -32,7 +33,7 @@ namespace Gameplay.Character.StateMachine {
             base.Awake();
             StateMachine = GetComponentInParent<YisoCharacterStateMachine>();
             if (StateMachine == null) {
-                Debug.LogError($"[Decision] {name}: 부모에서 YisoCharacterStateMachine을 찾을 수 없습니다.");
+                YisoLogger.LogError($"{name}: 부모에서 YisoCharacterStateMachine을 찾을 수 없습니다.");
             }
         }
 

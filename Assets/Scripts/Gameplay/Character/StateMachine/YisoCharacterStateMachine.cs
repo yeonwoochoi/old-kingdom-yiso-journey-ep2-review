@@ -132,7 +132,7 @@ namespace Gameplay.Character.StateMachine {
         /// </summary>
         public void SetTarget(int index, Transform target) {
             if (index < 0 || index >= _targetSlots.Length) {
-                Debug.LogWarning($"[FSM] 잘못된 타겟 인덱스 접근: {index}. Max: {maxTargetCount}");
+                YisoLogger.LogWarning($"잘못된 타겟 인덱스 접근: {index}. Max: {maxTargetCount}");
                 return;
             }
             

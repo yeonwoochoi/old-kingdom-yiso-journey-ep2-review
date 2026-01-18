@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Utils;
 using Random = UnityEngine.Random;
 
 namespace Gameplay.Character.StateMachine.Utils {
@@ -53,7 +54,7 @@ namespace Gameplay.Character.StateMachine.Utils {
                 if (count == _targetBuffer.Length) {
                     // [안전 장치] 너무 무식하게 커지면(예: 1000개 이상) 1000개로 제한 (그 이상은 버려)
                     if (_targetBuffer.Length >= 1000) {
-                        Debug.LogWarning($"[FSMUtils] FindClosestTarget: 타겟이 너무 많습니다({count}). 검색 범위를 제한합니다.");
+                        YisoLogger.LogWarning($"FindClosestTarget: 타겟이 너무 많습니다({count}). 검색 범위를 제한합니다.");
                     }
                     else {
                         // 버퍼 2배 확장 후 재검색 (continue)
@@ -100,7 +101,7 @@ namespace Gameplay.Character.StateMachine.Utils {
 
                     // 2. 안전장치: 너무 크면(1000개 이상) 더 늘리지 않고 현재 찾은 것만 처리
                     if (_targetBuffer.Length >= 1000) {
-                        Debug.LogWarning($"[FSMUtils] 타겟이 너무 많습니다({count}+). 버퍼 한계({_targetBuffer.Length})로 검색을 중단하고 현재 분량만 반환합니다.");
+                        YisoLogger.LogWarning($"타겟이 너무 많습니다({count}+). 버퍼 한계({_targetBuffer.Length})로 검색을 중단하고 현재 분량만 반환합니다.");
                         // continue 하지 않고 아래로 내려가서 처리함
                     }
                     else {
