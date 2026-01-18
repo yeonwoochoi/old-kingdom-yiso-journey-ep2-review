@@ -170,12 +170,10 @@ namespace Gameplay.Character.Abilities {
 
             switch (eventName) {
                 case YisoAbilityAnimationEvents.ATTACK_ENABLE_DAMAGE:
-                    YisoLogger.Log($"Attack Start {Time.time}");
                     HandleEnableDamage();
                     break;
 
                 case YisoAbilityAnimationEvents.ATTACK_DISABLE_DAMAGE:
-                    YisoLogger.Log($"Attack End {Time.time}");
                     HandleDisableDamage();
                     break;
 

@@ -13,7 +13,7 @@ namespace Gameplay.Health {
         private bool isPermanentlyInvulnerable = false;
 
         [Tooltip("피격 후 일시적으로 무적이 되는 시간입니다. 0으로 설정 시 이 기능을 사용하지 않습니다.")] [SerializeField]
-        private float invincibilityDurationOnHit = 0.2f;
+        private float invincibilityDurationOnHit = 0.3f;
 
         private YisoEntityHealth _entityHealth;
         private float _lastHitTimestamp = -1f;

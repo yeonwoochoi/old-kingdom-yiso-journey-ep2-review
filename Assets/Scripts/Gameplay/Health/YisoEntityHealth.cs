@@ -77,20 +77,20 @@ namespace Gameplay.Health {
             if (!IsInitialized || IsDead) {
                 return;
             }
+
+            var previousHealth = CurrentHealth;
+            var finalDamage = damageInfo.FinalDamage;
             
             if (_damageProcessor == null) {
                 YisoLogger.LogWarning($"[{gameObject.name}] DamageProcessor is null!");
             }
-
-            // 무적 체크 - 무적이면 아무것도 하지 않고 리턴
-            if (_damageProcessor != null && !_damageProcessor.CanTakeDamage()) {
-                return;
+            else {
+                // 무적 체크 - 무적이면 아무것도 하지 않고 리턴
+                if (!_damageProcessor.CanTakeDamage()) {
+                    return;
+                }
+                finalDamage = _damageProcessor.FinalizeDamage(damageInfo);
             }
-
-            var previousHealth = CurrentHealth;
-            var finalDamage = _damageProcessor == null
-                ? damageInfo.FinalDamage
-                : _damageProcessor.FinalizeDamage(damageInfo);
 
             CurrentHealth = Math.Max(CurrentHealth - finalDamage, 0f);
             if (!Mathf.Approximately(previousHealth, CurrentHealth)) {
