@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comparison: 0
-  distance: 0.2
+  distance: 0.5
 --- !u!1 &4226564770051555260
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,9 +518,9 @@ MonoBehaviour:
         mode: 0
         singleDecision: {fileID: 948168113073194482}
         subConditions: []
-    onEnterActions:
+    onEnterActions: []
+    onUpdateActions:
     - {fileID: 198082454192712039}
-    onUpdateActions: []
     onExitActions: []
   - stateName: Return
     transitions:
