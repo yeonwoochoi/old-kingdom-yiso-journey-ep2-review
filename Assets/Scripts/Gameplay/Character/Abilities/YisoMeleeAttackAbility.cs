@@ -1,4 +1,5 @@
 using Gameplay.Character.Abilities.Definitions;
+using Gameplay.Character.Core;
 using Gameplay.Character.Core.Modules;
 using Gameplay.Character.Data;
 using Gameplay.Character.Types;
@@ -40,7 +41,7 @@ namespace Gameplay.Character.Abilities {
             _settings = settings;
         }
 
-        public override void Initialize(Core.IYisoCharacterContext context) {
+        public override void Initialize(IYisoCharacterContext context) {
             base.Initialize(context);
             _weaponModule = Context.GetModule<YisoCharacterWeaponModule>();
             _inputModule = Context.GetModule<YisoCharacterInputModule>();

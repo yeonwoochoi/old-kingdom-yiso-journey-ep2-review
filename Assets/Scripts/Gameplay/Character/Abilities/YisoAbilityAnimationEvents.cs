@@ -24,6 +24,12 @@
         /// </summary>
         public const string ATTACK_END = "AttackEnd";
 
+        /// <summary>
+        /// 투사체 발사 이벤트.
+        /// Animator의 Ranged Attack 애니메이션에서 호출됩니다.
+        /// </summary>
+        public const string ATTACK_FIRE_PROJECTILE = "FireProjectile";
+
         // ========== Skill Events ==========
 
         /// <summary>
