@@ -125,4 +125,4 @@ appsettings.Production.json
 !Server/**/*.sln
 
 # .NET HTTP Client private env
-http-client.private.env
+Server/**/http-client.private.env.json
