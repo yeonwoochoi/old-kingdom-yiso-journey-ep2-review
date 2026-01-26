@@ -1,0 +1,133 @@
+using System;
+using System.Text;
+using System.Threading.Tasks;
+using UnityEngine;
+using UnityEngine.Networking;
+
+namespace Network.Web.Core {
+    /// <summary>
+    /// UnityWebRequest 기반 HTTP 클라이언트
+    /// </summary>
+    public class YisoHttpClient {
+        private readonly string baseUrl;
+        private string authToken;
+
+        public YisoHttpClient(string baseUrl) {
+            this.baseUrl = baseUrl.TrimEnd('/');
+        }
+
+        /// <summary>
+        /// Authorization 헤더에 사용할 Bearer 토큰 설정
+        /// </summary>
+        public void SetAuthToken(string token) {
+            authToken = token;
+        }
+
+        /// <summary>
+        /// Authorization 토큰 제거
+        /// </summary>
+        public void ClearAuthToken() {
+            authToken = null;
+        }
+
+        /// <summary>
+        /// GET 요청
+        /// </summary>
+        public async Task<YisoHttpResponse<T>> GetAsync<T>(string endpoint) {
+            var url = $"{baseUrl}/{endpoint.TrimStart('/')}";
+
+            using var request = UnityWebRequest.Get(url);
+            ConfigureRequest(request);
+
+            return await SendRequestAsync<T>(request);
+        }
+
+        /// <summary>
+        /// POST 요청 (JSON 바디)
+        /// </summary>
+        public async Task<YisoHttpResponse<T>> PostAsync<T>(string endpoint, object body) {
+            var url = $"{baseUrl}/{endpoint.TrimStart('/')}";
+            var json = JsonUtility.ToJson(body);
+
+            // UnityWebRequest.Post()은 Key-Value 형식의 Form 데이터 보낼때 씀
+            // 우리는 JSON으로 보낼거니까 UnityWebRequest.Post() 안 쓰고 완전 쌩 객체 만들어서 일일히 설정해주는거
+            using var request = new UnityWebRequest(url, "POST");
+            var bodyRaw = Encoding.UTF8.GetBytes(json);
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            ConfigureRequest(request);
+            request.SetRequestHeader("Content-Type", "application/json");
+
+            return await SendRequestAsync<T>(request);
+        }
+
+        /// <summary>
+        /// POST 요청 (응답 데이터 없음)
+        /// </summary>
+        public async Task<YisoHttpResponse> PostAsync(string endpoint, object body) {
+            var url = $"{baseUrl}/{endpoint.TrimStart('/')}";
+            var json = JsonUtility.ToJson(body);
+
+            using var request = new UnityWebRequest(url, "POST");
+            var bodyRaw = Encoding.UTF8.GetBytes(json);
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            ConfigureRequest(request);
+            request.SetRequestHeader("Content-Type", "application/json");
+
+            return await SendRequestAsync(request);
+        }
+
+        private void ConfigureRequest(UnityWebRequest request) {
+            if (!string.IsNullOrEmpty(authToken)) {
+                request.SetRequestHeader("Authorization", $"Bearer {authToken}");
+            }
+        }
+
+        private async Task<YisoHttpResponse<T>> SendRequestAsync<T>(UnityWebRequest request) {
+            try {
+                var operation = request.SendWebRequest();
+
+                while (!operation.isDone) {
+                    await Task.Yield();
+                }
+
+                if (request.result != UnityWebRequest.Result.Success) {
+                    var errorMessage = !string.IsNullOrEmpty(request.downloadHandler?.text)
+                        ? request.downloadHandler.text
+                        : request.error;
+                    return YisoHttpResponse<T>.Failure(errorMessage, request.responseCode);
+                }
+
+                var responseText = request.downloadHandler.text;
+                var data = JsonUtility.FromJson<T>(responseText);
+                return YisoHttpResponse<T>.Success(data, request.responseCode);
+            }
+            catch (Exception ex) {
+                return YisoHttpResponse<T>.Failure(ex.Message);
+            }
+        }
+
+        private async Task<YisoHttpResponse> SendRequestAsync(UnityWebRequest request) {
+            try {
+                var operation = request.SendWebRequest();
+
+                while (!operation.isDone) {
+                    await Task.Yield();
+                }
+
+                if (request.result != UnityWebRequest.Result.Success) {
+                    var errorMessage = !string.IsNullOrEmpty(request.downloadHandler?.text)
+                        ? request.downloadHandler.text
+                        : request.error;
+                    return YisoHttpResponse.Failure(errorMessage, request.responseCode);
+                }
+
+                return YisoHttpResponse.Success(request.responseCode);
+            }
+            catch (Exception ex) {
+                return YisoHttpResponse.Failure(ex.Message);
+            }
+        }
+    }
+}
