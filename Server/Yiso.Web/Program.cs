@@ -1,6 +1,7 @@
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Scalar.AspNetCore;
 using Yiso.Web.Repositories;
 using Yiso.Web.Repositories.Interfaces;
 using Yiso.Web.Services;
@@ -70,6 +71,7 @@ var app = builder.Build();
 // 개발 환경에서 OpenAPI 활성화 (Swagger)
 if (app.Environment.IsDevelopment()) {
     app.MapOpenApi();
+    app.MapScalarApiReference(); // Scalar UI: /scalar/v1
 }
 app.UseAuthentication();
 app.UseAuthorization(); // 권한 부여 미들웨어 ([Authorize] 어트리뷰트 처리)
