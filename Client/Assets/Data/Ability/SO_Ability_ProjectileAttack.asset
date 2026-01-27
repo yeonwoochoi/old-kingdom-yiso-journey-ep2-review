@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1263d2daa734199b71ae606e796b984, type: 3}
+  m_Name: SO_Ability_ProjectileAttack
+  m_EditorClassIdentifier: 
+  priority: 50
+  continuousPressAttack: 1
+  canMoveWhileAttacking: 0
+  projectilePrefab: {fileID: 2437791315141813589, guid: 01aaf790a95991e4aac629b1dc9a3ba5, type: 3}
+  projectileSpeed: 10
+  maxRange: 15
+  projectileCount: 3
+  fireInterval: 0.1
+  spreadAngle: 15
+  evenSpread: 1
+  targetLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  detectionRange: 10
+  detectionAngle: 120
+  baseDamage: 10
+  minDamage: 8
+  maxDamage: 12
+  attackCooldown: 0.5
+  attackDuration: 0.5
