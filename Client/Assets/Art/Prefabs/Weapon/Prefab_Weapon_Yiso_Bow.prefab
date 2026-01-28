@@ -99,7 +99,7 @@ Animator:
   m_GameObject: {fileID: 2437791315141813589}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: b2e28b04779ebde4d93f16f53b524847, type: 2}
+  m_Controller: {fileID: 22100000, guid: c3092d2a78c0cf946878370c5d905f09, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -123,7 +123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bf30204c79975d4a99a77f4f1f6f74e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  comboSettings: []
   gizmoArrowLength: 1.5
   gizmoArrowHeadSize: -0.3
   gizmoArrowColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
