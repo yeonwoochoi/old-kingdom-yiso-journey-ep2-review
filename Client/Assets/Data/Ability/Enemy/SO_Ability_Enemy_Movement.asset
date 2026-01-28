@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SO_Ability_Enemy_Movement
   m_EditorClassIdentifier: 
   priority: 50
-  baseMovementSpeed: 5
+  baseMovementSpeed: 2
   idleThreshold: 0.05
   acceleration: 10
   deceleration: 10

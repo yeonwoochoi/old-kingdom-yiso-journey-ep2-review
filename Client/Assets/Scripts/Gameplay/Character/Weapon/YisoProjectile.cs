@@ -133,8 +133,8 @@ namespace Gameplay.Character.Weapon {
                 return;
             }
 
-            // Health 컴포넌트 확인
-            var health = other.GetComponent<YisoEntityHealth>();
+            // Health 컴포넌트 확인 (Hurtbox 우선, 없으면 직접 찾기)
+            var health = FindHealth(other);
             if (health == null || health.IsDead) {
                 return;
             }
@@ -168,6 +168,21 @@ namespace Gameplay.Character.Weapon {
             };
 
             health.TakeDamage(damageInfo);
+        }
+
+        /// <summary>
+        /// Collider에서 YisoEntityHealth를 찾습니다.
+        /// YisoHurtbox가 있으면 우선 사용하고, 없으면 직접 GetComponent로 찾습니다.
+        /// </summary>
+        private YisoEntityHealth FindHealth(Collider2D collider) {
+            // 1. Hurtbox 컴포넌트 확인 (피격 판정 영역 분리된 경우)
+            var hurtbox = collider.GetComponent<YisoHurtbox>();
+            if (hurtbox != null) {
+                return hurtbox.Health;
+            }
+
+            // 2. 직접 Health 컴포넌트 확인 (기존 방식, 하위 호환)
+            return collider.GetComponent<YisoEntityHealth>();
         }
 
         /// <summary>

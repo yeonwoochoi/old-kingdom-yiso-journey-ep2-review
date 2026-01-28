@@ -186,20 +186,20 @@ namespace Gameplay.Character.Abilities {
                 if (col.transform == Context.Transform) continue;
                 if (IsChildOf(col.gameObject, Context.Transform.gameObject)) continue;
 
-                // Health 확인
-                var health = col.GetComponent<YisoEntityHealth>();
+                // Health 확인 (Hurtbox 우선, 없으면 직접 찾기)
+                var (health, targetTransform) = FindHealthAndTransform(col);
                 if (health == null || health.IsDead) continue;
 
-                // 방향 계산
-                Vector2 toTarget = ((Vector2)col.transform.position - (Vector2)position).normalized;
+                // 방향 계산 (캐릭터 루트 Transform 기준)
+                Vector2 toTarget = ((Vector2)targetTransform.position - (Vector2)position).normalized;
                 float angleToTarget = Vector2.Angle(facingDirection, toTarget);
 
                 // 부채꼴 범위 내인지 확인
                 if (angleToTarget <= halfAngle) {
-                    float distance = Vector2.Distance(position, col.transform.position);
+                    float distance = Vector2.Distance(position, targetTransform.position);
                     if (distance < closestDistance) {
                         closestDistance = distance;
-                        closestTarget = col.transform;
+                        closestTarget = targetTransform;
                     }
                 }
             }
@@ -237,17 +237,20 @@ namespace Gameplay.Character.Abilities {
                 if (col.transform == Context.Transform) continue;
                 if (IsChildOf(col.gameObject, Context.Transform.gameObject)) continue;
 
-                // Health 확인
-                var health = col.GetComponent<YisoEntityHealth>();
+                // Health 확인 (Hurtbox 우선, 없으면 직접 찾기)
+                var (health, targetTransform) = FindHealthAndTransform(col);
                 if (health == null || health.IsDead) continue;
 
-                // 방향 계산
-                Vector2 toTarget = ((Vector2)col.transform.position - (Vector2)position).normalized;
+                // 중복 방지 (같은 캐릭터의 여러 Collider가 검색될 수 있음)
+                if (results.Contains(targetTransform)) continue;
+
+                // 방향 계산 (캐릭터 루트 Transform 기준)
+                Vector2 toTarget = ((Vector2)targetTransform.position - (Vector2)position).normalized;
                 float angleToTarget = Vector2.Angle(facingDirection, toTarget);
 
                 // 부채꼴 범위 내인지 확인
                 if (angleToTarget <= halfAngle) {
-                    results.Add(col.transform);
+                    results.Add(targetTransform);
                 }
             }
 
@@ -441,6 +444,23 @@ namespace Gameplay.Character.Abilities {
                 v.x * cos - v.y * sin,
                 v.x * sin + v.y * cos
             );
+        }
+
+        /// <summary>
+        /// Collider에서 YisoEntityHealth와 타겟 Transform을 찾습니다.
+        /// Hurtbox가 있으면 Health의 GameObject Transform(캐릭터 루트)을 반환합니다.
+        /// </summary>
+        private (YisoEntityHealth health, Transform targetTransform) FindHealthAndTransform(Collider2D collider) {
+            // 1. Hurtbox 컴포넌트 확인 (피격 판정 영역 분리된 경우)
+            var hurtbox = collider.GetComponent<YisoHurtbox>();
+            if (hurtbox != null && hurtbox.Health != null) {
+                // Hurtbox가 있으면 Health의 GameObject Transform 반환 (캐릭터 루트)
+                return (hurtbox.Health, hurtbox.Health.transform);
+            }
+
+            // 2. 직접 Health 컴포넌트 확인 (기존 방식, 하위 호환)
+            var health = collider.GetComponent<YisoEntityHealth>();
+            return (health, collider.transform);
         }
 
         /// <summary>
