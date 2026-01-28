@@ -44,6 +44,7 @@ namespace Gameplay.Character.Weapon {
         private Vector3 _startPosition;
         private Collider2D _collider;
         private bool _isInitialized = false;
+        private bool _isWedged = false;
         
         private const string k_IsWedged = "Wedged";
         private int _isWedgedHash;
@@ -66,7 +67,7 @@ namespace Gameplay.Character.Weapon {
             _isWedgedHash = Animator.StringToHash(k_IsWedged);
 
             if (_animator != null) {
-                _animator.SetBool(_isWedgedHash, false);
+                _animator.SetBool(_isWedgedHash, _isWedged = false);
             }
         }
 
@@ -102,7 +103,9 @@ namespace Gameplay.Character.Weapon {
             if (!_isInitialized) return;
 
             // 이동
-            transform.position += (Vector3)(_direction * _speed * Time.deltaTime);
+            if (!_isWedged) {
+                transform.position += (Vector3)(_direction * _speed * Time.deltaTime);   
+            }
 
             // 최대 사거리 체크
             float distanceTraveled = Vector3.Distance(_startPosition, transform.position);
@@ -147,7 +150,7 @@ namespace Gameplay.Character.Weapon {
 
             // 충돌 시 파괴
             if (destroyOnHit) {
-                DestroyProjectile(destroyDelayOnWedged);
+                DestroyProjectile();
             }
         }
 
@@ -197,7 +200,7 @@ namespace Gameplay.Character.Weapon {
         }
 
         private IEnumerator DestroyProjectileCo(float delay) {
-            _animator?.SetBool(_isWedgedHash, true);
+            _animator?.SetBool(_isWedgedHash, _isWedged = true);
             yield return new WaitForSeconds(delay);
             // TODO: 오브젝트 풀링 사용 시 Pool.Return(this) 호출
             Destroy(gameObject);

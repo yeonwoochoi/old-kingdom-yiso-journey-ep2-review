@@ -9,13 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01be6646f5374ceba3b5f28e99954800, type: 3}
-  m_Name: SO_Ability_Movement
+  m_Script: {fileID: 11500000, guid: 89b05f92020262f429e9264b15088abd, type: 3}
+  m_Name: SO_Ability_Player_MeleeAttack
   m_EditorClassIdentifier: 
   priority: 50
-  baseMovementSpeed: 5
-  idleThreshold: 0.05
-  acceleration: 10
-  deceleration: 10
-  useAnalogInput: 0
-  instantStop: 1
+  continuousPressAttack: 1
+  useComboAttacks: 1
+  canMoveWhileAttacking: 0
