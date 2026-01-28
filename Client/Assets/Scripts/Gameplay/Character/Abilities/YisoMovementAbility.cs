@@ -172,6 +172,7 @@ namespace Gameplay.Character.Abilities {
         private void StopMovement() {
             _currentAcceleration = 0f;
             _lerpedInput = Vector2.zero;
+            FinalMovementInput = Vector2.zero;
             Context.Move(Vector2.zero);
         }
 
