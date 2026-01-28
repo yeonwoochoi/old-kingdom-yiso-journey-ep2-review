@@ -1,4 +1,7 @@
+using System;
+using Gameplay.Character.Types;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Gameplay.Character.Abilities.Definitions {
     /// <summary>
@@ -58,12 +61,34 @@ namespace Gameplay.Character.Abilities.Definitions {
 
         [Tooltip("최대 데미지")]
         public float maxDamage = 12f;
+        
+        [Header("Spawn Settings")]
+        [Tooltip("Spawn 오프셋")]
+        public Vector2 eastSpawnOffset = new Vector2(0.29f, 0.52f);
+        public Vector2 westSpawnOffset = new Vector2(0.29f, -0.52f);
+        public Vector2 southSpawnOffset = new Vector2(-0.023f, -0.056f);
+        public Vector2 northSpawnOffset = new Vector2(0.45f, 0f);
 
         /// <summary>
         /// 데미지 범위 내에서 랜덤 데미지 값을 반환.
         /// </summary>
         public float GetRandomDamage() {
             return Random.Range(minDamage, maxDamage);
+        }
+
+        public Vector2 GetSpawnOffset(FacingDirections direction) {
+            switch (direction) {
+                case FacingDirections.Up:
+                    return northSpawnOffset;
+                case FacingDirections.Down:
+                    return southSpawnOffset;
+                case FacingDirections.Left:
+                    return westSpawnOffset;
+                case FacingDirections.Right:
+                    return eastSpawnOffset;
+                default:
+                    return Vector2.zero;
+            }
         }
 
         public override IYisoCharacterAbility CreateAbility() {

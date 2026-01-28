@@ -398,7 +398,7 @@ namespace Gameplay.Character.Abilities {
         /// </summary>
         private void SpawnProjectile(Vector2 direction) {
             // 스폰 위치 (캐릭터 위치 + 약간의 오프셋)
-            Vector3 spawnPosition = Context.Transform.position + (Vector3)(direction * 0.5f);
+            Vector3 spawnPosition = _settings.GetSpawnOffset(_orientationAbility.CurrentFacingDirection);
 
             // 투사체 생성
             // TODO: Object Pooler 연동
