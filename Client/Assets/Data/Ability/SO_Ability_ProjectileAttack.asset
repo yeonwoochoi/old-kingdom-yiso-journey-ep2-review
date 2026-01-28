@@ -30,5 +30,7 @@ MonoBehaviour:
   baseDamage: 10
   minDamage: 8
   maxDamage: 12
-  attackCooldown: 0.5
-  attackDuration: 0.5
+  eastSpawnOffset: {x: 0.29, y: 0.52}
+  westSpawnOffset: {x: -0.29, y: 0.52}
+  southSpawnOffset: {x: -0.023, y: -0.056}
+  northSpawnOffset: {x: 0, y: 0.85}

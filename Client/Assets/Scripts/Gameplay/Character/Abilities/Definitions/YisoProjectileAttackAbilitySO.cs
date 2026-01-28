@@ -79,14 +79,19 @@ namespace Gameplay.Character.Abilities.Definitions {
         public Vector2 GetSpawnOffset(FacingDirections direction) {
             switch (direction) {
                 case FacingDirections.Up:
+                    Debug.Log($"{direction} {northSpawnOffset}");
                     return northSpawnOffset;
                 case FacingDirections.Down:
+                    Debug.Log($"{direction} {southSpawnOffset}");
                     return southSpawnOffset;
                 case FacingDirections.Left:
+                    Debug.Log($"{direction} {westSpawnOffset}");
                     return westSpawnOffset;
                 case FacingDirections.Right:
+                    Debug.Log($"{direction} {eastSpawnOffset}");
                     return eastSpawnOffset;
                 default:
+                    Debug.Log($"{direction} {Vector2.zero}");
                     return Vector2.zero;
             }
         }
