@@ -31,7 +31,7 @@ namespace Gameplay.Character.Data {
         [Tooltip("공격 속도 (초당 공격 횟수)")]
         public float attackSpeed = 1f;
 
-        [Tooltip("공격 지속 시간 (초) - DamageOnTouch 활성화 시간")]
+        [Tooltip("공격 지속 시간 (초)")]
         public List<float> baseAttackDurations = new List<float>();
 
         [Header("Combo Settings")]

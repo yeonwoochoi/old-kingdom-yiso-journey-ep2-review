@@ -1,4 +1,5 @@
-﻿using Gameplay.Character.Core.Modules;
+﻿using Gameplay.Character.Core;
+using Gameplay.Character.Core.Modules;
 using Utils;
 
 namespace Gameplay.Character.Abilities {
@@ -8,6 +9,9 @@ namespace Gameplay.Character.Abilities {
     /// Melee, Ranged, Magic 등 다양한 공격 타입이 이 클래스를 상속합니다.
     /// </summary>
     public abstract class YisoAttackAbilityBase : YisoCharacterAbilityBase {
+        protected YisoCharacterWeaponModule _weaponModule;
+        protected YisoCharacterInputModule _inputModule;
+        
         protected YisoOrientationAbility _orientationAbility;
         protected bool _isAttacking = false;
 
@@ -27,6 +31,16 @@ namespace Gameplay.Character.Abilities {
         /// </summary>
         public override bool PreventsAttack => _isAttacking;
 
+        public override void Initialize(IYisoCharacterContext context) {
+            base.Initialize(context);
+            _weaponModule = Context.GetModule<YisoCharacterWeaponModule>();
+            _inputModule = Context.GetModule<YisoCharacterInputModule>();
+            
+            if (_weaponModule == null) {
+                YisoLogger.LogWarning("YisoCharacterWeaponModule을 찾을 수 없습니다. 이 Ability는 작동하지 않습니다.");
+            }
+        }
+
         public override void LateInitialize() {
             base.LateInitialize();
 
@@ -38,6 +52,23 @@ namespace Gameplay.Character.Abilities {
 
             if (_orientationAbility == null) {
                 YisoLogger.LogWarning($"[{GetType().Name}] YisoOrientationAbility를 찾을 수 없습니다. 공격 중 방향 잠금이 작동하지 않습니다.");
+            }
+        }
+        
+        /// <summary>
+        /// 공격 중일 때만 IsAttacking 애니메이션 파라미터를 true로 설정합니다.
+        /// 여러 공격 Ability(Melee, Projectile 등)가 공존할 때 서로의 값을 덮어쓰지 않도록,
+        /// false 설정은 공격 종료 시 StopAttackAnimation()으로 명시적으로 수행합니다.
+        /// </summary>
+        public override void UpdateAnimator() {
+            base.UpdateAnimator();
+            if (Context != null) {
+                Context.PlayAnimation(YisoCharacterAnimationState.IsAttacking, _isAttacking);
+
+                if (_weaponModule != null) {
+                    var attackSpeed = _weaponModule.GetCurrentWeaponData().attackSpeed;
+                    Context.PlayAnimation(YisoCharacterAnimationState.AttackSpeed, attackSpeed);
+                }
             }
         }
 

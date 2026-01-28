@@ -16,9 +16,6 @@ namespace Gameplay.Character.Abilities {
     public class YisoMeleeAttackAbility : YisoAttackAbilityBase {
         private readonly YisoMeleeAttackAbilitySO _settings;
 
-        private YisoCharacterWeaponModule _weaponModule;
-        private YisoCharacterInputModule _inputModule; // Player 전용
-
         private float _lastAttackTime = -999f;
 
         // Input Edge Detection (단발 입력 감지용)
@@ -40,18 +37,6 @@ namespace Gameplay.Character.Abilities {
         public YisoMeleeAttackAbility(YisoMeleeAttackAbilitySO settings) {
             _settings = settings;
         }
-
-        public override void Initialize(IYisoCharacterContext context) {
-            base.Initialize(context);
-            _weaponModule = Context.GetModule<YisoCharacterWeaponModule>();
-            _inputModule = Context.GetModule<YisoCharacterInputModule>();
-
-            if (_weaponModule == null) {
-                YisoLogger.LogWarning("YisoCharacterWeaponModule을 찾을 수 없습니다. 이 Ability는 작동하지 않습니다.");
-            }
-        }
-
-        // LateInitialize는 Base 클래스(YisoAttackAbilityBase)에서 처리
 
         public override void PreProcessAbility() {
             base.PreProcessAbility();
@@ -142,19 +127,14 @@ namespace Gameplay.Character.Abilities {
         }
         
         public override void UpdateAnimator() {
-            base.UpdateAnimator();
+            base.UpdateAnimator(); // IsAttacking, AttackSpeed는 Base(YisoAttackAbilityBase)에서 처리
 
-            if (Context != null) {
-                Context.PlayAnimation(YisoCharacterAnimationState.IsAttacking, _isAttacking);
-
+            if (Context != null && _isAttacking) {
                 // Combo 파라미터 (Player/Enemy 공통)
                 // useComboAttacks가 false면: 0으로 고정 (기본 공격 애니메이션)
                 // useComboAttacks가 true면: _currentCombo + 1 (1, 2, 3, ... 콤보 애니메이션)
                 var comboValue = _settings.useComboAttacks ? _currentCombo + 1 : 0;
                 Context.PlayAnimation(YisoCharacterAnimationState.Combo, comboValue);
-
-                var attackSpeed = _weaponModule.GetCurrentWeaponData().attackSpeed;
-                Context.PlayAnimation(YisoCharacterAnimationState.AttackSpeed, attackSpeed);
             }
         }
 

@@ -113,14 +113,6 @@ namespace Gameplay.Character.Abilities {
             }
         }
 
-        public override void UpdateAnimator() {
-            base.UpdateAnimator();
-
-            if (Context != null) {
-                Context.PlayAnimation(YisoCharacterAnimationState.IsAttacking, _isAttacking);
-            }
-        }
-
         /// <summary>
         /// 애니메이션 이벤트를 처리합니다.
         /// </summary>
@@ -280,7 +272,7 @@ namespace Gameplay.Character.Abilities {
             if (!Context.IsAttackAllowed(this)) return false;
 
             // 쿨타임 체크
-            if (Time.time - _lastAttackTime < _settings.attackCooldown) {
+            if (Time.time - _lastAttackTime < _weaponModule.GetCurrentWeaponData().GetAttackCooldown()) {
                 return false;
             }
 
@@ -304,7 +296,7 @@ namespace Gameplay.Character.Abilities {
             _pendingProjectiles = 0; // 애니메이션 이벤트에서 설정됨
 
             // Safety Net 타이머 설정
-            _safetyTimer = _settings.attackDuration + 0.1f;
+            _safetyTimer = _weaponModule.GetCurrentWeaponData().GetAttackDuration(0) + 0.1f;
 
             // 공격 방향 결정 (타겟이 있으면 타겟 방향, 없으면 현재 바라보는 방향)
             if (_currentTarget != null) {
@@ -409,6 +401,7 @@ namespace Gameplay.Character.Abilities {
             Vector3 spawnPosition = Context.Transform.position + (Vector3)(direction * 0.5f);
 
             // 투사체 생성
+            // TODO: Object Pooler 연동
             var projectileGO = Object.Instantiate(_settings.projectilePrefab, spawnPosition, Quaternion.identity);
             var projectile = projectileGO.GetComponent<YisoProjectile>();
 

@@ -59,13 +59,6 @@ namespace Gameplay.Character.Abilities.Definitions {
         [Tooltip("최대 데미지")]
         public float maxDamage = 12f;
 
-        [Header("Attack Timing")]
-        [Tooltip("공격 간 최소 대기 시간 (쿨타임)")]
-        public float attackCooldown = 0.5f;
-
-        [Tooltip("공격 애니메이션 예상 지속 시간 (Safety Net용)")]
-        public float attackDuration = 0.5f;
-
         /// <summary>
         /// 데미지 범위 내에서 랜덤 데미지 값을 반환.
         /// </summary>
