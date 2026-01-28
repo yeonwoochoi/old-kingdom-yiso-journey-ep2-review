@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using Core.Behaviour;
 using Gameplay.Health;
 using UnityEngine;
@@ -27,6 +28,10 @@ namespace Gameplay.Character.Weapon {
         [Tooltip("벽/장애물 레이어 (충돌 시 파괴)")]
         [SerializeField] private LayerMask obstacleLayerMask = 0;
 
+        [Header("Animator")]
+        [Tooltip("벽에 박혔을 때 파괴 딜레이")]
+        [SerializeField] private float destroyDelayOnWedged = 2f;
+
         // --- 런타임 데이터 (Initialize에서 설정됨) ---
         private GameObject _owner;
         private Vector2 _direction;
@@ -34,10 +39,14 @@ namespace Gameplay.Character.Weapon {
         private float _maxRange;
         private float _damage;
         private LayerMask _targetLayerMask;
+        private Animator _animator;
 
         private Vector3 _startPosition;
         private Collider2D _collider;
         private bool _isInitialized = false;
+        
+        private const string k_IsWedged = "Wedged";
+        private int _isWedgedHash;
 
         /// <summary>
         /// 충돌 발생 시 호출되는 이벤트 (외부에서 추가 처리 가능).
@@ -51,6 +60,13 @@ namespace Gameplay.Character.Weapon {
             // Trigger 모드 강제
             if (_collider != null) {
                 _collider.isTrigger = true;
+            }
+            
+            _animator = GetComponent<Animator>();
+            _isWedgedHash = Animator.StringToHash(k_IsWedged);
+
+            if (_animator != null) {
+                _animator.SetBool(_isWedgedHash, false);
             }
         }
 
@@ -105,7 +121,7 @@ namespace Gameplay.Character.Weapon {
 
             // 장애물 충돌 체크
             if (((1 << other.gameObject.layer) & obstacleLayerMask) != 0) {
-                DestroyProjectile();
+                DestroyProjectile(destroyDelayOnWedged);
                 return;
             }
 
@@ -131,7 +147,7 @@ namespace Gameplay.Character.Weapon {
 
             // 충돌 시 파괴
             if (destroyOnHit) {
-                DestroyProjectile();
+                DestroyProjectile(destroyDelayOnWedged);
             }
         }
 
@@ -167,14 +183,26 @@ namespace Gameplay.Character.Weapon {
 
             return false;
         }
-
+        
         /// <summary>
         /// 투사체를 파괴합니다.
         /// </summary>
-        private void DestroyProjectile() {
+        private void DestroyProjectile(float delay = 0f) {
+            if (delay > 0f) {
+                StartCoroutine(DestroyProjectileCo(delay));
+                return;
+            }
             // TODO: 오브젝트 풀링 사용 시 Pool.Return(this) 호출
             Destroy(gameObject);
         }
+
+        private IEnumerator DestroyProjectileCo(float delay) {
+            _animator?.SetBool(_isWedgedHash, true);
+            yield return new WaitForSeconds(delay);
+            // TODO: 오브젝트 풀링 사용 시 Pool.Return(this) 호출
+            Destroy(gameObject);
+        }
+
 
 #if UNITY_EDITOR
         private void OnDrawGizmosSelected() {

@@ -16,6 +16,7 @@ namespace Gameplay.Character.Weapon {
         public GameObject WeaponObject { get; private set; }
         public Animator WeaponAnimator { get; private set; }
         public YisoWeaponAim WeaponAim { get; private set; }
+        public YisoMeleeHitboxController HitboxController { get; private set; }
 
         public bool IsActive => WeaponObject != null && WeaponObject.activeSelf;
         public int CurrentComboIndex { get; private set; } = 0;
@@ -37,13 +38,19 @@ namespace Gameplay.Character.Weapon {
 
                 WeaponAnimator = WeaponObject.GetComponentInChildren<Animator>();
                 WeaponAim = WeaponObject.GetComponentInChildren<YisoWeaponAim>();
+                HitboxController = WeaponObject.GetComponentInChildren<YisoMeleeHitboxController>();
 
-                if (WeaponAim != null)
+                if (WeaponAim == null)
                 {
-                    // [변경] WeaponAim에 등록된 모든 히트박스에 이벤트 구독
-                    if (WeaponAim.ComboSettings != null)
+                    YisoLogger.LogWarning($"[YisoWeaponInstance] No WeaponAim on '{weaponData.weaponName}'");
+                }
+
+                // 히트박스 컨트롤러가 있는 경우 (근접 무기) — 히트 이벤트 구독 및 초기 콤보 설정
+                if (HitboxController != null)
+                {
+                    if (HitboxController.ComboSettings != null)
                     {
-                        foreach (var setting in WeaponAim.ComboSettings)
+                        foreach (var setting in HitboxController.ComboSettings)
                         {
                             if (setting.hitbox != null)
                             {
@@ -55,10 +62,6 @@ namespace Gameplay.Character.Weapon {
 
                     // 초기 상태 설정 (0번 콤보)
                     SetComboIndex(0);
-                }
-                else
-                {
-                    YisoLogger.LogWarning($"[YisoWeaponInstance] No WeaponAim on '{weaponData.weaponName}'");
                 }
 
                 if (_context.Type == CharacterType.Player && WeaponAnimator == null)
@@ -74,9 +77,9 @@ namespace Gameplay.Character.Weapon {
         public void Deactivate() => WeaponObject?.SetActive(false);
 
         public void Destroy() {
-            if (WeaponAim != null && WeaponAim.ComboSettings != null)
+            if (HitboxController != null && HitboxController.ComboSettings != null)
             {
-                foreach (var setting in WeaponAim.ComboSettings)
+                foreach (var setting in HitboxController.ComboSettings)
                 {
                     if (setting.hitbox != null) setting.hitbox.OnHit -= HandleHit;
                 }
@@ -86,20 +89,21 @@ namespace Gameplay.Character.Weapon {
                 WeaponObject.SafeDestroy();
                 WeaponObject = null;
             }
-            
+
             WeaponAnimator = null;
             WeaponAim = null;
+            HitboxController = null;
             WeaponData = null;
         }
 
         // --- Proxy Methods ---
-        public void EnableDamage() => WeaponAim?.CurrentHitbox?.EnableDamage();
-        public void DisableDamage() => WeaponAim?.CurrentHitbox?.DisableDamage();
+        public void EnableDamage() => HitboxController?.EnableDamage();
+        public void DisableDamage() => HitboxController?.DisableDamage();
         public void SetAimDirection(Vector2 direction) => WeaponAim?.SetAimDirection(direction);
         public void SetComboIndex(int comboIndex)
         {
             CurrentComboIndex = comboIndex;
-            WeaponAim?.SetComboIndex(comboIndex);
+            HitboxController?.SetComboIndex(comboIndex);
         }
 
         private void HandleHit(GameObject target, Vector3 hitPoint) {
@@ -112,8 +116,8 @@ namespace Gameplay.Character.Weapon {
                 Attacker = _owner,
                 DamageDirection = (target.transform.position - WeaponObject.transform.position).normalized,
                 HitPoint = hitPoint,
-                KnockbackForce = 5f, 
-                IsCritical = false 
+                KnockbackForce = 5f,
+                IsCritical = false
             };
 
             var health = target.GetComponent<YisoEntityHealth>();
