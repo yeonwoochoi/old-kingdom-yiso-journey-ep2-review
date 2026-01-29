@@ -1,0 +1,359 @@
+/* YisoFSMEditorStyles.uss */
+/* FSM 에디터 전용 스타일시트 */
+
+/* ========================================
+   Graph View 캔버스
+   ======================================== */
+.yiso-fsm-graph-view {
+    flex-grow: 1;
+    background-color: #1e1e1e;
+}
+
+GridBackground {
+    --grid-background-color: #1e1e1e;
+    --line-color: rgba(51, 51, 51, 0.5);
+    --thick-line-color: rgba(51, 51, 51, 1.0);
+    --spacing: 20;
+}
+
+/* ========================================
+   State 노드 기본 스타일 (Animator 스타일)
+   ======================================== */
+.yiso-state-node {
+    min-width: 120px;
+    max-width: 200px;
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: #555555;
+}
+
+.yiso-state-node #title {
+    background-color: #4a4a4a;
+    padding: 8px 12px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.yiso-state-node #contents {
+    background-color: #3a3a3a;
+    padding: 6px 10px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.yiso-state-node #divider {
+    background-color: #2a2a2a;
+    height: 1px;
+}
+
+/* Port 숨기기 (Animator 스타일) */
+.yiso-state-node #input {
+    display: none;
+}
+
+.yiso-state-node #output {
+    display: none;
+}
+
+.yiso-state-node .port {
+    display: none;
+}
+
+/* ========================================
+   초기 상태(Initial State) 강조 스타일 - 주황색 (Animator 스타일)
+   ======================================== */
+.yiso-state-node.initial-state {
+    border-color: #d9853b;
+    border-width: 3px;
+}
+
+.yiso-state-node.initial-state #title {
+    background-color: #8b5a2b;
+}
+
+.yiso-state-node.initial-state #selection-border {
+    border-color: #d9853b;
+    border-width: 2px;
+}
+
+/* 초기 상태 마커 */
+.initial-state-marker {
+    width: 10px;
+    height: 10px;
+    background-color: #d9853b;
+    border-radius: 5px;
+    margin-right: 6px;
+    align-self: center;
+}
+
+/* ========================================
+   선택된 노드 스타일 (Hover 없음)
+   ======================================== */
+.yiso-state-node:selected {
+    border-color: #44aaff;
+    border-width: 3px;
+}
+
+.yiso-state-node:selected #selection-border {
+    border-color: #44aaff;
+    border-width: 2px;
+}
+
+/* ========================================
+   Transition 생성 모드 스타일
+   ======================================== */
+.yiso-fsm-graph-view.creating-transition {
+    cursor: crosshair;
+}
+
+/* ========================================
+   Transition Edge 스타일 (Animator 스타일, Hover 없음)
+   ======================================== */
+.yiso-transition-edge {
+    --edge-width: 3;
+    --edge-color: #b0b0b0;
+}
+
+.yiso-transition-edge:selected {
+    --edge-color: #44aaff;
+    --edge-width: 4;
+}
+
+/* Random Transition 스타일 (보라색) */
+.yiso-transition-edge.random-transition {
+    --edge-color: #aa88ff;
+}
+
+/* 화살표 스타일 */
+.yiso-transition-edge #arrow-head {
+    position: absolute;
+}
+
+/* ========================================
+   Inspector Panel 스타일
+   ======================================== */
+.yiso-fsm-inspector {
+    width: 300px;
+    min-width: 250px;
+    max-width: 400px;
+    background-color: #2d2d2d;
+    border-left-width: 1px;
+    border-left-color: #1a1a1a;
+    padding: 8px;
+}
+
+.yiso-fsm-inspector-header {
+    background-color: #3a3a3a;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+.yiso-fsm-inspector-header > Label {
+    -unity-font-style: bold;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.yiso-fsm-inspector-section {
+    margin-bottom: 12px;
+    padding: 8px;
+    background-color: #353535;
+    border-radius: 4px;
+}
+
+.yiso-fsm-inspector-section > Foldout > Toggle {
+    -unity-font-style: bold;
+    margin-bottom: 4px;
+}
+
+.yiso-fsm-inspector-section > Foldout > #unity-content {
+    margin-left: 8px;
+}
+
+/* ========================================
+   Action 리스트 스타일
+   ======================================== */
+.action-list-container {
+    margin-top: 4px;
+}
+
+.action-item {
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 8px;
+    margin: 2px 0;
+    background-color: #404040;
+    border-radius: 4px;
+}
+
+.action-item:hover {
+    background-color: #505050;
+}
+
+.action-item > Label {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.action-item > Button {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin-left: 4px;
+    font-size: 12px;
+}
+
+/* ========================================
+   Condition Tree 스타일
+   ======================================== */
+.condition-tree-container {
+    margin-top: 4px;
+}
+
+.condition-item {
+    margin: 4px 0;
+    padding: 6px;
+    background-color: #404040;
+    border-radius: 4px;
+    border-left-width: 3px;
+    border-left-color: #888888;
+}
+
+.condition-item.single-mode {
+    border-left-color: #88aa88;
+}
+
+.condition-item.and-mode {
+    border-left-color: #88aaff;
+}
+
+.condition-item.or-mode {
+    border-left-color: #ffaa88;
+}
+
+.condition-item.inverted {
+    background-color: #503030;
+}
+
+.condition-header {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.condition-header > Toggle {
+    width: 50px;
+    margin-right: 8px;
+}
+
+.condition-header > EnumField {
+    flex-grow: 1;
+}
+
+.sub-conditions-container {
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left-width: 1px;
+    border-left-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ========================================
+   Toolbar 스타일
+   ======================================== */
+.yiso-fsm-toolbar {
+    height: 24px;
+    padding: 2px 8px;
+    background-color: #3a3a3a;
+    border-bottom-width: 1px;
+    border-bottom-color: #1a1a1a;
+    flex-direction: row;
+    align-items: center;
+}
+
+.yiso-fsm-toolbar > ObjectField {
+    flex-grow: 1;
+    max-width: 300px;
+    margin-right: 8px;
+}
+
+.yiso-fsm-toolbar > Button {
+    margin: 0 4px;
+    padding: 2px 12px;
+}
+
+.yiso-fsm-toolbar > Button:hover {
+    background-color: #505050;
+}
+
+/* MiniMap 제거됨 */
+
+/* ========================================
+   컨텍스트 메뉴용 스타일
+   ======================================== */
+.context-menu-item {
+    padding: 4px 16px;
+}
+
+.context-menu-item:hover {
+    background-color: #44aaff;
+    color: white;
+}
+
+/* ========================================
+   Transition Info Label 스타일
+   ======================================== */
+.transition-info-label {
+    padding: 4px 8px;
+    background-color: rgba(60, 60, 60, 0.9);
+    border-radius: 4px;
+    font-size: 10px;
+    color: #cccccc;
+}
+
+/* ========================================
+   에러/경고 표시 스타일
+   ======================================== */
+.warning-indicator {
+    width: 16px;
+    height: 16px;
+    background-color: #ffaa00;
+    border-radius: 8px;
+    margin: 4px;
+}
+
+.error-indicator {
+    width: 16px;
+    height: 16px;
+    background-color: #ff4444;
+    border-radius: 8px;
+    margin: 4px;
+}
+
+/* ========================================
+   노드 Badge 스타일
+   ======================================== */
+.node-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    -unity-text-align: middle-center;
+    font-size: 12px;
+    -unity-font-style: bold;
+}
+
+.node-badge.transition-count {
+    background-color: #44aaff;
+    color: white;
+}
+
+.node-badge.action-count {
+    background-color: #88aa44;
+    color: white;
+}
