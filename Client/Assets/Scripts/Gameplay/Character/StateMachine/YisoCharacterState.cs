@@ -8,6 +8,12 @@ namespace Gameplay.Character.StateMachine {
     public class YisoCharacterState {
         [Title("Settings")]
         [SerializeField] private string stateName;
+
+#if UNITY_EDITOR
+        // 에디터 전용: FSM 에디터에서 노드 위치 저장
+        [HideInInspector]
+        public Vector2 editorNodePosition;
+#endif
         
         [Title("Transitions")]
         [SerializeField] private List<YisoCharacterTransition> transitions;
