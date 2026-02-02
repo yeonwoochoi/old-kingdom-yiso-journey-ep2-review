@@ -1,4 +1,5 @@
 using System.Text.Json;
+using Yiso.Web.Common;
 using Yiso.Web.DTOs;
 using Yiso.Web.Exceptions;
 
@@ -44,9 +45,7 @@ public class GlobalExceptionMiddleware {
         context.Response.StatusCode = statusCode;
 
         var response = ErrorResponse.Create(message, statusCode);
-        var json = JsonSerializer.Serialize(response, new JsonSerializerOptions {
-            PropertyNamingPolicy = JsonNamingPolicy.CamelCase
-        });
+        var json = JsonSerializer.Serialize(response, JsonSettings.Default);
 
         await context.Response.WriteAsync(json);
     }

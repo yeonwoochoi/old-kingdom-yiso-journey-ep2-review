@@ -1,4 +1,4 @@
-using System.Text.Json;
+using MemoryPack;
 using StackExchange.Redis;
 using Yiso.Web.Models;
 using Yiso.Web.Repositories.Interfaces;
@@ -20,21 +20,16 @@ public class RedisSessionRepository : ISessionRepository {
     public async Task<string> CreateAsync(SessionData data, TimeSpan expiry) {
         var sessionId = Guid.NewGuid().ToString();
         var key = GetKey(sessionId);
-        var json = JsonSerializer.Serialize(data);
-
-        await _db.StringSetAsync(key, json, expiry);
-
+        var bytes = MemoryPackSerializer.Serialize(data);
+        await _db.StringSetAsync(key, bytes, expiry);
         return sessionId;
     }
 
     public async Task<SessionData?> GetAsync(string sessionId) {
         var key = GetKey(sessionId);
-        var json = await _db.StringGetAsync(key);
-
-        if (json.IsNullOrEmpty) return null;
-
-        return JsonSerializer.Deserialize<SessionData>(json!);
-
+        var bytes = await _db.StringGetAsync(key);
+        if (bytes.IsNullOrEmpty) return null;
+        return MemoryPackSerializer.Deserialize<SessionData>((byte[]) bytes!);
     }
 
     public async Task DeleteAsync(string sessionId) {
@@ -46,16 +41,16 @@ public class RedisSessionRepository : ISessionRepository {
         var key = GetKey(sessionId);
 
         // 세션 데이터 조회 후 LastAccessedAt 갱신
-        var json = await _db.StringGetAsync(key);
-        if (json.IsNullOrEmpty) return;
+        var bytes = await _db.StringGetAsync(key);
+        if (bytes.IsNullOrEmpty) return;
 
-        var data = JsonSerializer.Deserialize<SessionData>(json!);
+        var data = MemoryPackSerializer.Deserialize<SessionData>((byte[]) bytes!);
         if (data == null) return;
 
         data.LastAccessedAt = DateTime.UtcNow;
-        var updatedJson = JsonSerializer.Serialize(data);
+        var updatedBytes = MemoryPackSerializer.Serialize(data);
 
-        await _db.StringSetAsync(key, updatedJson, expiry);
+        await _db.StringSetAsync(key, updatedBytes, expiry);
     }
 
     public async Task<bool> ExistsAsync(string sessionId) {
