@@ -24,13 +24,8 @@ public class AuthController : ControllerBase {
     /// </summary>
     [HttpPost("register")]
     public async Task<ActionResult<AuthResponse>> Register([FromBody] RegisterRequest request) {
-        try {
-            var response = await _authService.RegisterAsync(request);
-            return Ok(response);
-        }
-        catch (InvalidOperationException ex) {
-            return BadRequest(new { message = ex.Message });
-        }
+        var response = await _authService.RegisterAsync(request);
+        return Ok(response);
     }
 
     /// <summary>
@@ -39,13 +34,8 @@ public class AuthController : ControllerBase {
     /// </summary>
     [HttpPost("login")]
     public async Task<ActionResult<AuthResponse>> Login([FromBody] LoginRequest request) {
-        try {
-            var response = await _authService.LoginAsync(request);
-            return Ok(response);
-        }
-        catch (UnauthorizedAccessException ex) {
-            return Unauthorized(new { message = ex.Message });
-        }
+        var response = await _authService.LoginAsync(request);
+        return Ok(response);
     }
 
     /// <summary>
@@ -56,9 +46,10 @@ public class AuthController : ControllerBase {
     [HttpPost("logout")]
     [SessionAuth]
     public async Task<ActionResult> Logout() {
+        // SessionAuthAttribute에서 Items에 등록해둔 session id
         var sessionId = HttpContext.Items[SessionAuthAttribute.SessionIdHeader] as string;
         if (string.IsNullOrEmpty(sessionId)) {
-            return BadRequest(new { message = "세션 ID를 찾을 수 없습니다." });
+            return BadRequest(ErrorResponse.Create("세션 ID를 찾을 수 없습니다.", StatusCodes.Status400BadRequest));
         }
 
         await _authService.LogoutAsync(sessionId);
@@ -75,7 +66,7 @@ public class AuthController : ControllerBase {
     public ActionResult GetCurrentUser() {
         var sessionData = HttpContext.Items[SessionAuthAttribute.SessionDataKey] as SessionData;
         if (sessionData == null) {
-            return Unauthorized(new { message = "세션 데이터를 찾을 수 없습니다." });
+            return Unauthorized(ErrorResponse.Create("세션 데이터를 찾을 수 없습니다.", StatusCodes.Status401Unauthorized));
         }
 
         return Ok(new {

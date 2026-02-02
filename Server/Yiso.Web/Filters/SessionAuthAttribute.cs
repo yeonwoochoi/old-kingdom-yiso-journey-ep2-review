@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Yiso.Web.DTOs;
 using Yiso.Web.Services.Interfaces;
 
 namespace Yiso.Web.Filters;
@@ -16,13 +17,13 @@ public class SessionAuthAttribute : Attribute, IAsyncAuthorizationFilter {
     public async Task OnAuthorizationAsync(AuthorizationFilterContext context) {
         // 헤더에서 세션 ID 추출
         if (!context.HttpContext.Request.Headers.TryGetValue(SessionIdHeader, out var sessionIdValues)) {
-            context.Result = new UnauthorizedObjectResult(new { message = "세션 ID가 필요합니다." });
+            context.Result = new UnauthorizedObjectResult(ErrorResponse.Create("세션 ID가 필요합니다.", StatusCodes.Status401Unauthorized));
             return;
         }
 
         var sessionId = sessionIdValues.FirstOrDefault();
         if (string.IsNullOrEmpty(sessionId)) {
-            context.Result = new UnauthorizedObjectResult(new { message = "세션 ID가 필요합니다." });
+            context.Result = new UnauthorizedObjectResult(ErrorResponse.Create("세션 ID가 필요합니다.", StatusCodes.Status401Unauthorized));
             return;
         }
 
@@ -32,7 +33,7 @@ public class SessionAuthAttribute : Attribute, IAsyncAuthorizationFilter {
         // 세션 검증
         var sessionData = await authService.ValidateSessionAsync(sessionId);
         if (sessionData == null) {
-            context.Result = new UnauthorizedObjectResult(new { message = "유효하지 않거나 만료된 세션입니다." });
+            context.Result = new UnauthorizedObjectResult(ErrorResponse.Create("유효하지 않거나 만료된 세션입니다.", StatusCodes.Status401Unauthorized));
             return;
         }
 

@@ -1,4 +1,5 @@
 using Yiso.Web.DTOs;
+using Yiso.Web.Exceptions;
 using Yiso.Web.Models;
 using Yiso.Web.Repositories.Interfaces;
 using Yiso.Web.Services.Interfaces;
@@ -23,7 +24,7 @@ public class AuthService : IAuthService {
 
     public async Task<AuthResponse> RegisterAsync(RegisterRequest request) {
         if (await _userRepository.ExistsAsync(request.Username)) {
-            throw new InvalidOperationException("이미 존재하는 사용자 이름입니다.");
+            throw new ConflictException("이미 존재하는 사용자 이름입니다.");
         }
 
         // 유저 생성
@@ -52,7 +53,7 @@ public class AuthService : IAuthService {
         var user = await _userRepository.GetByUsernameAsync(request.Username);
 
         if (user == null || !_passwordService.VerifyPassword(request.Password, user.PasswordHash)) {
-            throw new UnauthorizedAccessException("잘못된 사용자 이름 또는 비밀번호입니다.");
+            throw new UnauthorizedException("잘못된 사용자 이름 또는 비밀번호입니다.");
         }
         
         var sessionData = new SessionData {
