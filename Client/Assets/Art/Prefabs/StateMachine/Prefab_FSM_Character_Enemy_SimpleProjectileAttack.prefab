@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 3057641756367828769}
   - component: {fileID: 1466805898063499468}
   m_Layer: 0
-  m_Name: Prefab_FSM_Character_Enemy_SimpleMeleeAttack
+  m_Name: Prefab_FSM_Character_Enemy_SimpleProjectileAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -446,6 +446,10 @@ MonoBehaviour:
         mode: 0
         singleDecision: {fileID: 5133254923230850878}
         subConditions: []
+    - random: 0
+      nextStates: []
+      nextState: RunAway
+      conditions: []
     onEnterActions: []
     onUpdateActions:
     - {fileID: 837813529225424801}
@@ -539,6 +543,12 @@ MonoBehaviour:
     onEnterActions: []
     onUpdateActions:
     - {fileID: 3758381948080195764}
+    onExitActions: []
+  - stateName: RunAway
+    editorNodePosition: {x: 303.0345, y: 32.911274}
+    transitions: []
+    onEnterActions: []
+    onUpdateActions: []
     onExitActions: []
   references:
     version: 2
