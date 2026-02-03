@@ -1,5 +1,6 @@
 using MemoryPack;
 using StackExchange.Redis;
+using Yiso.Shared.Models;
 using Yiso.Web.Models;
 using Yiso.Web.Repositories.Interfaces;
 

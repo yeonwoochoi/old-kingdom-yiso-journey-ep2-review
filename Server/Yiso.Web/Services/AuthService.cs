@@ -1,3 +1,4 @@
+using Yiso.Shared.Models;
 using Yiso.Web.DTOs;
 using Yiso.Web.Exceptions;
 using Yiso.Web.Models;

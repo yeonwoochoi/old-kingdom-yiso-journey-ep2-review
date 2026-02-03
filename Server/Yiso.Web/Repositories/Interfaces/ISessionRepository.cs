@@ -1,3 +1,4 @@
+using Yiso.Shared.Models;
 using Yiso.Web.Models;
 
 namespace Yiso.Web.Repositories.Interfaces;

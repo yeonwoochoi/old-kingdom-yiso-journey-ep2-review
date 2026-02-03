@@ -1,0 +1,20 @@
+# ==============================================================================
+# Server .gitignore — .NET 전용 규칙
+# ==============================================================================
+
+# Build output
+[Bb]in/
+[Oo]bj/
+
+# User-specific files
+*.rsuser
+*.user
+*.userosscache
+*.sln.docstates
+
+# Secrets
+appsettings.Development.json
+appsettings.Production.json
+
+# .NET HTTP Client private env
+**/http-client.private.env.json

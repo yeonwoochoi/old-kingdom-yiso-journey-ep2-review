@@ -1,6 +1,7 @@
+using System;
 using MemoryPack;
 
-namespace Yiso.Web.Models;
+namespace Yiso.Shared.Models;
 
 /// <summary>
 /// Redis에 저장되는 세션 데이터
