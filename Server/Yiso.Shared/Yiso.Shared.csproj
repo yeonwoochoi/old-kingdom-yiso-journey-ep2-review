@@ -16,6 +16,10 @@
         <ItemGroup>
             <SharedDlls Include="$(OutputPath)Yiso.Shared.dll" />
             <SharedDlls Include="$(OutputPath)MemoryPack.Core.dll" />
+            <SharedDlls Include="$(OutputPath)System.Collections.Immutable.dll" />
+            <SharedDlls Include="$(OutputPath)System.Runtime.CompilerServices.Unsafe.dll" />
+            <SharedDlls Include="$(OutputPath)System.Memory.dll" />
+            <SharedDlls Include="$(OutputPath)System.Buffers.dll" />
         </ItemGroup>
         <Copy SourceFiles="@(SharedDlls)" DestinationFolder="$(UnityPluginsPath)" SkipUnchangedFiles="true" />
     </Target>
