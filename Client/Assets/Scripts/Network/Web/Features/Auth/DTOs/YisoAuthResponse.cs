@@ -7,19 +7,8 @@ namespace Network.Web.Features.Auth.DTOs {
     /// </summary>
     [Serializable]
     public class YisoAuthResponse {
-        public string token;
+        public string sessionId;
         public string username;
-        public string expiresAt; // JsonUtility가 DateTime을 직접 지원하지 않아서 string 사용하는거
-
-        /// <summary>
-        /// string인 토큰 만료 시간(expiredAt)을 DateTime으로 파싱하기 위한 메서드
-        /// </summary>
-        public DateTime GetExpiresAt() {
-            if (DateTime.TryParse(expiresAt, out var result)) {
-                return result;
-            }
-            return DateTime.MinValue;
-        }
     }
 
     /// <summary>
@@ -31,12 +20,23 @@ namespace Network.Web.Features.Auth.DTOs {
         public string id;
         public string username;
         public string createdAt;
+        public string lastAccessedAt;
 
         /// <summary>
         /// 계정 생성 시간을 DateTime으로 파싱
         /// </summary>
         public DateTime GetCreatedAt() {
             if (DateTime.TryParse(createdAt, out var result)) {
+                return result;
+            }
+            return DateTime.MinValue;
+        }
+
+        /// <summary>
+        /// 마지막 접속 시간을 DateTime으로 파싱
+        /// </summary>
+        public DateTime GetLastAccessedAt() {
+            if (DateTime.TryParse(lastAccessedAt, out var result)) {
                 return result;
             }
             return DateTime.MinValue;

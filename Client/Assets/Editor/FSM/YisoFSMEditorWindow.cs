@@ -9,7 +9,7 @@ using UnityEngine;
 using TransitionCondition = Gameplay.Character.StateMachine.YisoCharacterTransition.TransitionCondition;
 using LogicMode = Gameplay.Character.StateMachine.YisoCharacterTransition.TransitionCondition.LogicMode;
 
-namespace YisoEditor.FSM {
+namespace Editor.FSM {
     /// <summary>
     /// Unity Animator Controller와 유사한 시각적 FSM 에디터 윈도우.
     /// YisoCharacterStateMachine 컴포넌트를 가진 프리팹/게임오브젝트를 선택하면

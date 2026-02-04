@@ -33,7 +33,8 @@ public class AppDbContext : DbContext {
 
             entity.Property(e => e.CreatedAt)
                 .HasColumnName("created_at")
-                .HasDefaultValueSql("CURRENT_TIMESTAMP");
+                .HasColumnType("datetime(6)")
+                .HasDefaultValueSql("CURRENT_TIMESTAMP(6)");
 
             // Username 유니크 인덱스
             entity.HasIndex(e => e.Username)

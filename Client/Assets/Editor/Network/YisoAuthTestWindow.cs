@@ -21,7 +21,7 @@ namespace Editor.Network {
         private Vector2 scrollPos;
         private bool isProcessing;
 
-        [MenuItem("Window/Yiso/Auth Test")]
+        [MenuItem("Yiso/Auth Test")]
         public static void ShowWindow() {
             var window = GetWindow<YisoAuthTestWindow>("Auth Test");
             window.minSize = new Vector2(350, 400);
@@ -132,7 +132,7 @@ namespace Editor.Network {
                     }
 
                     if (GUILayout.Button("로그아웃", GUILayout.Height(30))) {
-                        Session?.Logout();
+                        LogoutAsync();
                     }
                 }
 
@@ -171,7 +171,7 @@ namespace Editor.Network {
                 var response = await Session.RegisterAsync(username, password);
 
                 if (response.IsSuccess) {
-                    Log($"회원가입 성공!\n- 사용자: {response.Data.username}\n- 토큰: {response.Data.token[..20]}...");
+                    Log($"회원가입 성공!\n- 사용자: {response.Data.username}\n- 세션 ID: {response.Data.sessionId[..20]}...");
                 }
                 else {
                     Log($"회원가입 실패: {response.Error}\n(코드: {response.StatusCode})");
@@ -196,11 +196,29 @@ namespace Editor.Network {
                 var response = await Session.LoginAsync(username, password);
 
                 if (response.IsSuccess) {
-                    Log($"로그인 성공!\n- 사용자: {response.Data.username}\n- 만료: {response.Data.expiresAt}");
+                    Log($"로그인 성공!\n- 사용자: {response.Data.username}\n- 세션 ID: {response.Data.sessionId[..20]}...");
                 }
                 else {
                     Log($"로그인 실패: {response.Error}\n(코드: {response.StatusCode})");
                 }
+            }
+            catch (Exception ex) {
+                Log($"에러: {ex.Message}");
+            }
+
+            isProcessing = false;
+            Repaint();
+        }
+
+        private async void LogoutAsync() {
+            if (Session == null) return;
+
+            isProcessing = true;
+            Log("로그아웃 중...");
+            Repaint();
+
+            try {
+                await Session.LogoutAsync();
             }
             catch (Exception ex) {
                 Log($"에러: {ex.Message}");
@@ -221,7 +239,7 @@ namespace Editor.Network {
                 var success = await Session.TryAutoLoginAsync();
                 Log(success
                     ? $"자동 로그인 성공: {Session.CurrentUsername}"
-                    : "자동 로그인 실패 (저장된 토큰 없거나 만료됨)");
+                    : "자동 로그인 실패 (저장된 세션 없거나 만료됨)");
             }
             catch (Exception ex) {
                 Log($"에러: {ex.Message}");
@@ -247,7 +265,7 @@ namespace Editor.Network {
                 var response = await Session.GetCurrentUserAsync();
 
                 if (response.IsSuccess) {
-                    Log($"사용자 정보:\n- ID: {response.Data.id}\n- 이름: {response.Data.username}\n- 생성일: {response.Data.createdAt}");
+                    Log($"사용자 정보:\n- ID: {response.Data.id}\n- 이름: {response.Data.username}\n- 생성일: {response.Data.createdAt}\n- 마지막 접속: {response.Data.lastAccessedAt}");
                 }
                 else {
                     Log($"조회 실패: {response.Error}");

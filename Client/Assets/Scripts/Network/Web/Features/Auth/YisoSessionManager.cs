@@ -7,47 +7,41 @@ using Utils;
 namespace Network.Web.Features.Auth {
     /// <summary>
     /// 세션 상태 관리자
-    /// 로그인 상태, 토큰 관리, 자동 로그인 등을 처리
+    /// 로그인 상태, 세션 관리, 자동 로그인 등을 처리
     /// </summary>
     public class YisoSessionManager {
         private readonly YisoHttpClient httpClient;
         private readonly YisoAuthService authService;
-        private readonly YisoTokenStorage tokenStorage;
+        private readonly YisoSessionStorage sessionStorage;
 
         private bool isLoggedIn;
         private string currentUsername;
-        
+
         public bool IsLoggedIn => isLoggedIn;
         public string CurrentUsername => currentUsername;
-        
+
         public event Action<bool> OnLoginStateChanged;
 
         public YisoSessionManager(YisoHttpClient httpClient) {
             this.httpClient = httpClient;
             authService = new YisoAuthService(httpClient);
-            tokenStorage = new YisoTokenStorage();
+            sessionStorage = new YisoSessionStorage();
         }
 
         /// <summary>
-        /// 저장된 토큰으로 자동 로그인 시도
+        /// 저장된 세션 ID로 자동 로그인 시도
         /// </summary>
         public async Task<bool> TryAutoLoginAsync() {
-            if (!tokenStorage.HasToken()) {
-                YisoLogger.Log("[YisoSession] 저장된 토큰 없음");
+            if (!sessionStorage.HasSession()) {
+                YisoLogger.Log("[YisoSession] 저장된 세션 없음");
                 return false;
             }
 
-            if (tokenStorage.IsTokenExpired()) {
-                YisoLogger.Log("[YisoSession] 토큰 만료됨");
-                tokenStorage.ClearToken();
-                return false;
-            }
+            var sessionId = sessionStorage.LoadSessionId();
+            httpClient.SetSessionId(sessionId);
 
-            var token = tokenStorage.LoadToken();
-            httpClient.SetAuthToken(token);
-
-            // 토큰 유효성 검증 (서버에 확인)
-            // 헤더에 토큰 들어가 있음
+            // 세션 유효성 검증 (서버에 확인)
+            // 헤더에 세션 ID 들어가 있음
             var response = await authService.GetCurrentUserAsync();
 
             if (response.IsSuccess) {
@@ -59,8 +53,8 @@ namespace Network.Web.Features.Auth {
             }
 
             YisoLogger.Log($"[YisoSession] 자동 로그인 실패: {response.Error}");
-            httpClient.ClearAuthToken();
-            tokenStorage.ClearToken();
+            httpClient.ClearSessionId();
+            sessionStorage.ClearSession();
             return false;
         }
 
@@ -91,11 +85,17 @@ namespace Network.Web.Features.Auth {
         }
 
         /// <summary>
-        /// 로그아웃
+        /// 로그아웃 (서버 세션 삭제 후 로컬 정리)
         /// </summary>
-        public void Logout() {
-            httpClient.ClearAuthToken();
-            tokenStorage.ClearToken();  
+        public async Task LogoutAsync() {
+            // 서버에 로그아웃 요청 (세션 삭제)
+            var response = await httpClient.PostAsync(YisoApiEndpoints.Auth.Logout);
+            if (!response.IsSuccess) {
+                YisoLogger.Log($"[YisoSession] 서버 로그아웃 실패: {response.Error}");
+            }
+
+            httpClient.ClearSessionId();
+            sessionStorage.ClearSession();
             isLoggedIn = false;
             currentUsername = null;
 
@@ -111,13 +111,11 @@ namespace Network.Web.Features.Auth {
         }
 
         private void HandleAuthSuccess(YisoAuthResponse authResponse) {
-            var expiresAt = authResponse.GetExpiresAt();
+            // 세션 저장
+            sessionStorage.SaveSession(authResponse.sessionId, authResponse.username);
 
-            // 토큰 저장
-            tokenStorage.SaveToken(authResponse.token, authResponse.username, expiresAt);
-
-            // HTTP 클라이언트에 토큰 설정
-            httpClient.SetAuthToken(authResponse.token);
+            // HTTP 클라이언트에 세션 ID 설정
+            httpClient.SetSessionId(authResponse.sessionId);
 
             // 세션 상태 업데이트
             isLoggedIn = true;

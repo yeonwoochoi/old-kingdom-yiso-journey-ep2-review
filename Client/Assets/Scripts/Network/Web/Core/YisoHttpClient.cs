@@ -10,24 +10,24 @@ namespace Network.Web.Core {
     /// </summary>
     public class YisoHttpClient {
         private readonly string baseUrl;
-        private string authToken;
+        private string sessionId;
 
         public YisoHttpClient(string baseUrl) {
             this.baseUrl = baseUrl.TrimEnd('/');
         }
 
         /// <summary>
-        /// Authorization 헤더에 사용할 Bearer 토큰 설정
+        /// X-Session-Id 헤더에 사용할 세션 ID 설정
         /// </summary>
-        public void SetAuthToken(string token) {
-            authToken = token;
+        public void SetSessionId(string sessionId) {
+            this.sessionId = sessionId;
         }
 
         /// <summary>
-        /// Authorization 토큰 제거
+        /// 세션 ID 제거
         /// </summary>
-        public void ClearAuthToken() {
-            authToken = null;
+        public void ClearSessionId() {
+            sessionId = null;
         }
 
         /// <summary>
@@ -78,9 +78,22 @@ namespace Network.Web.Core {
             return await SendRequestAsync(request);
         }
 
+        /// <summary>
+        /// POST 요청 (바디 없음, 응답 데이터 없음)
+        /// </summary>
+        public async Task<YisoHttpResponse> PostAsync(string endpoint) {
+            var url = $"{baseUrl}/{endpoint.TrimStart('/')}";
+
+            using var request = new UnityWebRequest(url, "POST");
+            request.downloadHandler = new DownloadHandlerBuffer();
+            ConfigureRequest(request);
+
+            return await SendRequestAsync(request);
+        }
+
         private void ConfigureRequest(UnityWebRequest request) {
-            if (!string.IsNullOrEmpty(authToken)) {
-                request.SetRequestHeader("Authorization", $"Bearer {authToken}");
+            if (!string.IsNullOrEmpty(sessionId)) {
+                request.SetRequestHeader("X-Session-Id", sessionId);
             }
         }
 
