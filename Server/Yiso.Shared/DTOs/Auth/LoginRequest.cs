@@ -1,4 +1,4 @@
-namespace Yiso.Web.DTOs;
+namespace Yiso.Shared.DTOs.Auth;
 
 public class LoginRequest {
     public string Username { get; set; } = string.Empty;

@@ -171,7 +171,7 @@ namespace Editor.Network {
                 var response = await Session.RegisterAsync(username, password);
 
                 if (response.IsSuccess) {
-                    Log($"회원가입 성공!\n- 사용자: {response.Data.username}\n- 세션 ID: {response.Data.sessionId[..20]}...");
+                    Log($"회원가입 성공!\n- 사용자: {response.Data.Username}\n- 세션 ID: {response.Data.SessionId[..20]}...");
                 }
                 else {
                     Log($"회원가입 실패: {response.Error}\n(코드: {response.StatusCode})");
@@ -196,7 +196,7 @@ namespace Editor.Network {
                 var response = await Session.LoginAsync(username, password);
 
                 if (response.IsSuccess) {
-                    Log($"로그인 성공!\n- 사용자: {response.Data.username}\n- 세션 ID: {response.Data.sessionId[..20]}...");
+                    Log($"로그인 성공!\n- 사용자: {response.Data.Username}\n- 세션 ID: {response.Data.SessionId[..20]}...");
                 }
                 else {
                     Log($"로그인 실패: {response.Error}\n(코드: {response.StatusCode})");
@@ -265,7 +265,7 @@ namespace Editor.Network {
                 var response = await Session.GetCurrentUserAsync();
 
                 if (response.IsSuccess) {
-                    Log($"사용자 정보:\n- ID: {response.Data.id}\n- 이름: {response.Data.username}\n- 생성일: {response.Data.createdAt}\n- 마지막 접속: {response.Data.lastAccessedAt}");
+                    Log($"사용자 정보:\n- ID: {response.Data.UserId}\n- 이름: {response.Data.Username}\n- 생성일: {response.Data.CreatedAt}\n- 마지막 접속: {response.Data.LastAccessedAt}");
                 }
                 else {
                     Log($"조회 실패: {response.Error}");

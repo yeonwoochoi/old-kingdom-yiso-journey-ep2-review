@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Yiso.Shared.DTOs.Auth;
 using Yiso.Shared.Models;
 using Yiso.Web.DTOs;
 using Yiso.Web.Filters;

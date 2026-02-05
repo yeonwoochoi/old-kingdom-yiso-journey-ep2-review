@@ -1,7 +1,8 @@
 using System;
 using System.Text;
 using System.Threading.Tasks;
-using UnityEngine;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using UnityEngine.Networking;
 
 namespace Network.Web.Core {
@@ -11,6 +12,11 @@ namespace Network.Web.Core {
     public class YisoHttpClient {
         private readonly string baseUrl;
         private string sessionId;
+
+        // 서버와 동일한 camelCase 직렬화 설정
+        private static readonly JsonSerializerSettings JsonSettings = new() {
+            ContractResolver = new CamelCasePropertyNamesContractResolver()
+        };
 
         public YisoHttpClient(string baseUrl) {
             this.baseUrl = baseUrl.TrimEnd('/');
@@ -47,7 +53,7 @@ namespace Network.Web.Core {
         /// </summary>
         public async Task<YisoHttpResponse<T>> PostAsync<T>(string endpoint, object body) {
             var url = $"{baseUrl}/{endpoint.TrimStart('/')}";
-            var json = JsonUtility.ToJson(body);
+            var json = JsonConvert.SerializeObject(body, JsonSettings);
 
             // UnityWebRequest.Post()은 Key-Value 형식의 Form 데이터 보낼때 씀
             // 우리는 JSON으로 보낼거니까 UnityWebRequest.Post() 안 쓰고 완전 쌩 객체 만들어서 일일히 설정해주는거
@@ -66,7 +72,7 @@ namespace Network.Web.Core {
         /// </summary>
         public async Task<YisoHttpResponse> PostAsync(string endpoint, object body) {
             var url = $"{baseUrl}/{endpoint.TrimStart('/')}";
-            var json = JsonUtility.ToJson(body);
+            var json = JsonConvert.SerializeObject(body, JsonSettings);
 
             using var request = new UnityWebRequest(url, "POST");
             var bodyRaw = Encoding.UTF8.GetBytes(json);
@@ -113,7 +119,7 @@ namespace Network.Web.Core {
                 }
 
                 var responseText = request.downloadHandler.text;
-                var data = JsonUtility.FromJson<T>(responseText);
+                var data = JsonConvert.DeserializeObject<T>(responseText, JsonSettings);
                 return YisoHttpResponse<T>.Success(data, request.responseCode);
             }
             catch (Exception ex) {

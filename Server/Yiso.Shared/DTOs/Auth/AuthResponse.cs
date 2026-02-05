@@ -1,4 +1,6 @@
-namespace Yiso.Web.DTOs;
+using System;
+
+namespace Yiso.Shared.DTOs.Auth;
 
 public class AuthResponse {
     public string SessionId { get; set; } = string.Empty;

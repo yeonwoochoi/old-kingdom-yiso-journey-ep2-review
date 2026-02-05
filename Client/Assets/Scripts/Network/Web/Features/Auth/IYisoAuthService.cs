@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using Network.Web.Core;
 using Network.Web.Features.Auth.DTOs;
+using Yiso.Shared.DTOs.Auth;
 
 namespace Network.Web.Features.Auth {
     /// <summary>
@@ -10,12 +11,12 @@ namespace Network.Web.Features.Auth {
         /// <summary>
         /// 회원가입
         /// </summary>
-        Task<YisoHttpResponse<YisoAuthResponse>> RegisterAsync(string username, string password);
+        Task<YisoHttpResponse<AuthResponse>> RegisterAsync(string username, string password);
 
         /// <summary>
         /// 로그인
         /// </summary>
-        Task<YisoHttpResponse<YisoAuthResponse>> LoginAsync(string username, string password);
+        Task<YisoHttpResponse<AuthResponse>> LoginAsync(string username, string password);
 
         /// <summary>
         /// 현재 사용자 정보 조회 (세션 ID 필요)

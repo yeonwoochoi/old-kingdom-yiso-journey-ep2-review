@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Network.Web.Core;
 using Network.Web.Features.Auth.DTOs;
 using Utils;
+using Yiso.Shared.DTOs.Auth;
 
 namespace Network.Web.Features.Auth {
     /// <summary>
@@ -46,7 +47,7 @@ namespace Network.Web.Features.Auth {
 
             if (response.IsSuccess) {
                 isLoggedIn = true;
-                currentUsername = response.Data.username;
+                currentUsername = response.Data.Username;
                 YisoLogger.Log($"[YisoSession] 자동 로그인 성공: {currentUsername}");
                 OnLoginStateChanged?.Invoke(true);
                 return true;
@@ -61,7 +62,7 @@ namespace Network.Web.Features.Auth {
         /// <summary>
         /// 회원가입 후 자동 로그인
         /// </summary>
-        public async Task<YisoHttpResponse<YisoAuthResponse>> RegisterAsync(string username, string password) {
+        public async Task<YisoHttpResponse<AuthResponse>> RegisterAsync(string username, string password) {
             var response = await authService.RegisterAsync(username, password);
 
             if (response.IsSuccess) {
@@ -74,7 +75,7 @@ namespace Network.Web.Features.Auth {
         /// <summary>
         /// 로그인
         /// </summary>
-        public async Task<YisoHttpResponse<YisoAuthResponse>> LoginAsync(string username, string password) {
+        public async Task<YisoHttpResponse<AuthResponse>> LoginAsync(string username, string password) {
             var response = await authService.LoginAsync(username, password);
 
             if (response.IsSuccess) {
@@ -110,16 +111,16 @@ namespace Network.Web.Features.Auth {
             return await authService.GetCurrentUserAsync();
         }
 
-        private void HandleAuthSuccess(YisoAuthResponse authResponse) {
+        private void HandleAuthSuccess(AuthResponse authResponse) {
             // 세션 저장
-            sessionStorage.SaveSession(authResponse.sessionId, authResponse.username);
+            sessionStorage.SaveSession(authResponse.SessionId, authResponse.Username);
 
             // HTTP 클라이언트에 세션 ID 설정
-            httpClient.SetSessionId(authResponse.sessionId);
+            httpClient.SetSessionId(authResponse.SessionId);
 
             // 세션 상태 업데이트
             isLoggedIn = true;
-            currentUsername = authResponse.username;
+            currentUsername = authResponse.Username;
 
             YisoLogger.Log($"[YisoSession] 로그인 성공: {currentUsername}");
             OnLoginStateChanged?.Invoke(true);
