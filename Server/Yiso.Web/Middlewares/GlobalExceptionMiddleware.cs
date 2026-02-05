@@ -1,6 +1,6 @@
 using System.Text.Json;
+using Yiso.Shared.DTOs.Common;
 using Yiso.Web.Common;
-using Yiso.Web.DTOs;
 using Yiso.Web.Exceptions;
 
 namespace Yiso.Web.Middlewares;

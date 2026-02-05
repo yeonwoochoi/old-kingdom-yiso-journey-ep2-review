@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using Yiso.Web.DTOs;
+using Yiso.Shared.DTOs.Common;
 using Yiso.Web.Services.Interfaces;
 
 namespace Yiso.Web.Filters;
