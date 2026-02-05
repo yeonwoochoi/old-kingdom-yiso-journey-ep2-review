@@ -2,9 +2,9 @@ using System;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using UnityEngine.Networking;
+using Yiso.Shared.DTOs.Common;
 
 namespace Network.Web.Core {
     /// <summary>
@@ -21,34 +21,13 @@ namespace Network.Web.Core {
 
         /// <summary>
         /// 서버 에러 응답에서 메시지 추출
-        /// ASP.NET Core ProblemDetails 형식 또는 커스텀 에러 응답 지원
         /// </summary>
         private static string ParseErrorMessage(string responseText) {
             if (string.IsNullOrEmpty(responseText)) return null;
 
             try {
-                var json = JObject.Parse(responseText);
-
-                // ProblemDetails 형식: { "title": "...", "detail": "..." }
-                if (json.TryGetValue("detail", out var detail)) {
-                    return detail.ToString();
-                }
-
-                if (json.TryGetValue("title", out var title)) {
-                    return title.ToString();
-                }
-
-                // 커스텀 형식: { "message": "..." } 또는 { "error": "..." }
-                if (json.TryGetValue("message", out var message)) {
-                    return message.ToString();
-                }
-
-                if (json.TryGetValue("error", out var error)) {
-                    return error.ToString();
-                }
-
-                // 파싱은 됐지만 알려진 필드가 없으면 원본 반환
-                return responseText;
+                var errorResponse = JsonConvert.DeserializeObject<ErrorResponse>(responseText, JsonSettings);
+                return errorResponse?.Message ?? responseText;
             }
             catch {
                 // JSON 파싱 실패 시 원본 반환
