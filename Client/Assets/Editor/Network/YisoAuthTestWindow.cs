@@ -45,7 +45,9 @@ namespace Editor.Network {
         }
 
         private void OnLoginStateChanged(bool isLoggedIn) {
-            Log(isLoggedIn ? $"로그인됨: {Session.CurrentUsername}" : "로그아웃됨");
+            Log(isLoggedIn
+                ? $"[상태 변경] 로그인 -> {Session.CurrentUsername}"
+                : "[상태 변경] 로그아웃");
             Repaint();
         }
 
@@ -96,7 +98,8 @@ namespace Editor.Network {
 
                 if (GUILayout.Button("서버 URL 적용")) {
                     InitializeWebManager();
-                    Log("서버 URL 변경됨");
+                    Log($"[설정] 서버 URL 변경: {serverUrl}");
+                    Repaint();
                 }
             }
         }
@@ -149,14 +152,24 @@ namespace Editor.Network {
         private void DrawLogSection() {
             EditorGUILayout.LabelField("로그", EditorStyles.boldLabel);
 
-            using (new EditorGUILayout.VerticalScope(EditorStyles.helpBox, GUILayout.Height(120))) {
+            using (new EditorGUILayout.VerticalScope(EditorStyles.helpBox, GUILayout.Height(150))) {
                 scrollPos = EditorGUILayout.BeginScrollView(scrollPos);
-                EditorGUILayout.TextArea(logMessage, GUILayout.ExpandHeight(true));
+
+                // readonly 스타일로 로그 표시
+                var style = new GUIStyle(EditorStyles.textArea) {
+                    wordWrap = true,
+                    richText = false
+                };
+                GUI.enabled = false;
+                EditorGUILayout.TextArea(logMessage, style, GUILayout.ExpandHeight(true));
+                GUI.enabled = true;
+
                 EditorGUILayout.EndScrollView();
             }
 
             if (GUILayout.Button("로그 지우기")) {
                 logMessage = "";
+                Repaint();
             }
         }
 
@@ -164,21 +177,24 @@ namespace Editor.Network {
             if (Session == null) return;
 
             isProcessing = true;
-            Log("회원가입 중...");
+            Log($"[요청] POST /auth/register\n- username: {username}");
             Repaint();
 
             try {
                 var response = await Session.RegisterAsync(username, password);
 
                 if (response.IsSuccess) {
-                    Log($"회원가입 성공!\n- 사용자: {response.Data.Username}\n- 세션 ID: {response.Data.SessionId[..20]}...");
+                    var sessionPreview = response.Data.SessionId.Length > 20
+                        ? response.Data.SessionId[..20] + "..."
+                        : response.Data.SessionId;
+                    Log($"[응답] 회원가입 성공\n- 상태: {response.StatusCode}\n- 사용자: {response.Data.Username}\n- 세션 ID: {sessionPreview}");
                 }
                 else {
-                    Log($"회원가입 실패: {response.Error}\n(코드: {response.StatusCode})");
+                    Log($"[응답] 회원가입 실패\n- 상태: {response.StatusCode}\n- 에러: {response.Error}");
                 }
             }
             catch (Exception ex) {
-                Log($"에러: {ex.Message}");
+                Log($"[에러] {ex.Message}");
             }
 
             isProcessing = false;
@@ -189,21 +205,24 @@ namespace Editor.Network {
             if (Session == null) return;
 
             isProcessing = true;
-            Log("로그인 중...");
+            Log($"[요청] POST /auth/login\n- username: {username}");
             Repaint();
 
             try {
                 var response = await Session.LoginAsync(username, password);
 
                 if (response.IsSuccess) {
-                    Log($"로그인 성공!\n- 사용자: {response.Data.Username}\n- 세션 ID: {response.Data.SessionId[..20]}...");
+                    var sessionPreview = response.Data.SessionId.Length > 20
+                        ? response.Data.SessionId[..20] + "..."
+                        : response.Data.SessionId;
+                    Log($"[응답] 로그인 성공\n- 상태: {response.StatusCode}\n- 사용자: {response.Data.Username}\n- 세션 ID: {sessionPreview}");
                 }
                 else {
-                    Log($"로그인 실패: {response.Error}\n(코드: {response.StatusCode})");
+                    Log($"[응답] 로그인 실패\n- 상태: {response.StatusCode}\n- 에러: {response.Error}");
                 }
             }
             catch (Exception ex) {
-                Log($"에러: {ex.Message}");
+                Log($"[에러] {ex.Message}");
             }
 
             isProcessing = false;
@@ -214,14 +233,21 @@ namespace Editor.Network {
             if (Session == null) return;
 
             isProcessing = true;
-            Log("로그아웃 중...");
+            Log($"[요청] POST /auth/logout");
             Repaint();
 
             try {
-                await Session.LogoutAsync();
+                var response = await Session.LogoutAsync();
+
+                if (response.IsSuccess) {
+                    Log($"[응답] 로그아웃 성공\n- 상태: {response.StatusCode}");
+                }
+                else {
+                    Log($"[응답] 로그아웃 실패\n- 상태: {response.StatusCode}\n- 에러: {response.Error}");
+                }
             }
             catch (Exception ex) {
-                Log($"에러: {ex.Message}");
+                Log($"[에러] {ex.Message}");
             }
 
             isProcessing = false;
@@ -232,17 +258,21 @@ namespace Editor.Network {
             if (Session == null) return;
 
             isProcessing = true;
-            Log("자동 로그인 시도 중...");
+            Log("[요청] 자동 로그인 시도 (저장된 세션 확인)");
             Repaint();
 
             try {
                 var success = await Session.TryAutoLoginAsync();
-                Log(success
-                    ? $"자동 로그인 성공: {Session.CurrentUsername}"
-                    : "자동 로그인 실패 (저장된 세션 없거나 만료됨)");
+
+                if (success) {
+                    Log($"[응답] 자동 로그인 성공\n- 사용자: {Session.CurrentUsername}");
+                }
+                else {
+                    Log("[응답] 자동 로그인 실패\n- 사유: 저장된 세션 없음 또는 세션 만료");
+                }
             }
             catch (Exception ex) {
-                Log($"에러: {ex.Message}");
+                Log($"[에러] {ex.Message}");
             }
 
             isProcessing = false;
@@ -253,26 +283,26 @@ namespace Editor.Network {
             if (Session == null) return;
 
             if (!Session.IsLoggedIn) {
-                Log("로그인 필요");
+                Log("[오류] 로그인이 필요합니다");
                 return;
             }
 
             isProcessing = true;
-            Log("사용자 정보 조회 중...");
+            Log("[요청] GET /auth/me");
             Repaint();
 
             try {
                 var response = await Session.GetCurrentUserAsync();
 
                 if (response.IsSuccess) {
-                    Log($"사용자 정보:\n- ID: {response.Data.UserId}\n- 이름: {response.Data.Username}\n- 생성일: {response.Data.CreatedAt}\n- 마지막 접속: {response.Data.LastAccessedAt}");
+                    Log($"[응답] 사용자 정보 조회 성공\n- 상태: {response.StatusCode}\n- ID: {response.Data.UserId}\n- 이름: {response.Data.Username}\n- 생성일: {response.Data.CreatedAt}\n- 마지막 접속: {response.Data.LastAccessedAt}");
                 }
                 else {
-                    Log($"조회 실패: {response.Error}");
+                    Log($"[응답] 사용자 정보 조회 실패\n- 상태: {response.StatusCode}\n- 에러: {response.Error}");
                 }
             }
             catch (Exception ex) {
-                Log($"에러: {ex.Message}");
+                Log($"[에러] {ex.Message}");
             }
 
             isProcessing = false;

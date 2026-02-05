@@ -88,7 +88,8 @@ namespace Network.Web.Features.Auth {
         /// <summary>
         /// 로그아웃 (서버 세션 삭제 후 로컬 정리)
         /// </summary>
-        public async Task LogoutAsync() {
+        /// <returns>서버 로그아웃 요청 결과</returns>
+        public async Task<YisoHttpResponse> LogoutAsync() {
             // 서버에 로그아웃 요청 (세션 삭제)
             var response = await httpClient.PostAsync(YisoApiEndpoints.Auth.Logout);
             if (!response.IsSuccess) {
@@ -102,6 +103,8 @@ namespace Network.Web.Features.Auth {
 
             YisoLogger.Log("[YisoSession] 로그아웃됨");
             OnLoginStateChanged?.Invoke(false);
+
+            return response;
         }
 
         /// <summary>
