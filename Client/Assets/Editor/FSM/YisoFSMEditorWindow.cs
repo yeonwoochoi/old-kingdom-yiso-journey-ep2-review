@@ -20,7 +20,10 @@ namespace Editor.FSM {
         #region Constants
 
         private const float TOOLBAR_HEIGHT = 24f;
-        private const float INSPECTOR_WIDTH = 330f;
+        private const float INSPECTOR_DEFAULT_WIDTH = 330f;
+        private const float INSPECTOR_MIN_WIDTH = 200f;
+        private const float INSPECTOR_MAX_RATIO = 0.6f;
+        private const float DIVIDER_HANDLE_WIDTH = 6f;
         private const float NODE_WIDTH = 180f;
         private const float NODE_HEIGHT = 42f;
         private const float GRID_SMALL = 20f;
@@ -64,6 +67,7 @@ namespace Editor.FSM {
         private int _selectedStateIdx = -1;
         private int _selTransStateIdx = -1; // 선택된 전이가 속한 상태 인덱스
         private int _selTransIdx = -1;      // 상태 내 전이 인덱스
+        private int _selTransDstIdx = -1;   // 선택된 전이의 목적지 상태 인덱스
 
         // 팬/줌
         private Vector2 _panOffset;
@@ -87,8 +91,10 @@ namespace Editor.FSM {
         // 검색
         private string _searchQuery = "";
 
-        // 인스펙터 스크롤
+        // 인스펙터
         private Vector2 _inspScroll;
+        private float _inspectorWidth = INSPECTOR_DEFAULT_WIDTH;
+        private bool _isResizingInspector;
 
         // 에지 히트 테스트용 캐시
         private readonly List<EdgeData> _edgeCache = new();
@@ -107,7 +113,7 @@ namespace Editor.FSM {
         private static bool _reflectionCached;
 
         private struct EdgeData {
-            public int srcStateIdx, transIdx;
+            public int srcStateIdx, dstStateIdx, transIdx;
             public Vector2 p0, p1, t0, t1;
         }
 
@@ -162,6 +168,7 @@ namespace Editor.FSM {
             _selectedStateIdx = -1;
             _selTransStateIdx = -1;
             _selTransIdx = -1;
+            _selTransDstIdx = -1;
             _isCreatingTransition = false;
         }
 
@@ -176,7 +183,7 @@ namespace Editor.FSM {
         }
 
         private void CenterView() {
-            float gw = position.width - INSPECTOR_WIDTH;
+            float gw = position.width - _inspectorWidth;
             float gh = position.height - TOOLBAR_HEIGHT;
             if (_states == null || _states.Count == 0) {
                 _panOffset = new Vector2(gw / 2f, gh / 2f);
@@ -199,14 +206,48 @@ namespace Editor.FSM {
             }
             RefreshCache();
 
-            float inspW = Mathf.Min(INSPECTOR_WIDTH, position.width * 0.4f);
+            float maxInspW = position.width * INSPECTOR_MAX_RATIO;
+            float inspW = Mathf.Clamp(_inspectorWidth, INSPECTOR_MIN_WIDTH, maxInspW);
+            _inspectorWidth = inspW;
+
             Rect graphRect = new(0, TOOLBAR_HEIGHT, position.width - inspW, position.height - TOOLBAR_HEIGHT);
             Rect inspRect = new(position.width - inspW, TOOLBAR_HEIGHT, inspW, position.height - TOOLBAR_HEIGHT);
+
+            // 디바이더 드래그 핸들
+            Rect dividerRect = new(inspRect.x - DIVIDER_HANDLE_WIDTH / 2f, inspRect.y, DIVIDER_HANDLE_WIDTH, inspRect.height);
+            EditorGUIUtility.AddCursorRect(dividerRect, MouseCursor.ResizeHorizontal);
+            HandleInspectorResize(dividerRect);
 
             DrawToolbar(new Rect(0, 0, position.width, TOOLBAR_HEIGHT), graphRect);
             DrawGraphView(graphRect);
             EditorGUI.DrawRect(new Rect(inspRect.x - 1, inspRect.y, 2, inspRect.height), DIVIDER_COLOR);
             DrawInspector(inspRect);
+        }
+
+        private void HandleInspectorResize(Rect dividerRect) {
+            Event e = Event.current;
+            switch (e.type) {
+                case EventType.MouseDown:
+                    if (e.button == 0 && dividerRect.Contains(e.mousePosition)) {
+                        _isResizingInspector = true;
+                        e.Use();
+                    }
+                    break;
+                case EventType.MouseDrag:
+                    if (_isResizingInspector) {
+                        float maxW = position.width * INSPECTOR_MAX_RATIO;
+                        _inspectorWidth = Mathf.Clamp(position.width - e.mousePosition.x, INSPECTOR_MIN_WIDTH, maxW);
+                        e.Use();
+                        Repaint();
+                    }
+                    break;
+                case EventType.MouseUp:
+                    if (_isResizingInspector) {
+                        _isResizingInspector = false;
+                        e.Use();
+                    }
+                    break;
+            }
         }
 
         private void DrawNoSelection() {
@@ -393,7 +434,7 @@ namespace Editor.FSM {
                     var targets = GetTargetIndices(trans[ti]);
                     foreach (int targetIdx in targets) {
                         if (targetIdx < 0) continue;
-                        bool isSel = _selTransStateIdx == si && _selTransIdx == ti;
+                        bool isSel = _selTransStateIdx == si && _selTransIdx == ti && _selTransDstIdx == targetIdx;
                         Color col = isSel ? EDGE_SELECTED_COLOR : EDGE_COLOR;
                         float width = isSel ? 3.5f : 2f;
 
@@ -440,7 +481,7 @@ namespace Editor.FSM {
             // 에지 캐시 (히트 테스트용)
             if (Event.current.type == EventType.Repaint) {
                 _edgeCache.Add(new EdgeData {
-                    srcStateIdx = srcIdx, transIdx = transIdx,
+                    srcStateIdx = srcIdx, dstStateIdx = dstIdx, transIdx = transIdx,
                     p0 = p0, p1 = p3, t0 = t0, t1 = t1
                 });
             }
@@ -589,6 +630,7 @@ namespace Editor.FSM {
                     _selectedStateIdx = hitNode;
                     _selTransStateIdx = -1;
                     _selTransIdx = -1;
+                    _selTransDstIdx = -1;
                     _isDragging = true;
                     _dragIdx = hitNode;
                     _dragOffset = _states[hitNode].editorNodePosition - S2G(mp);
@@ -601,6 +643,7 @@ namespace Editor.FSM {
                 if (hitEdge.srcStateIdx >= 0) {
                     _selTransStateIdx = hitEdge.srcStateIdx;
                     _selTransIdx = hitEdge.transIdx;
+                    _selTransDstIdx = hitEdge.dstStateIdx;
                     _selectedStateIdx = -1;
                     e.Use();
                     return;
@@ -658,7 +701,7 @@ namespace Editor.FSM {
                 if (IsNearBezier(mp, ed.p0, ed.p1, ed.t0, ed.t1, EDGE_CLICK_THRESHOLD))
                     return ed;
             }
-            return new EdgeData { srcStateIdx = -1, transIdx = -1 };
+            return new EdgeData { srcStateIdx = -1, dstStateIdx = -1, transIdx = -1 };
         }
 
         #endregion
@@ -770,6 +813,8 @@ namespace Editor.FSM {
                     if (GUILayout.Toggle(sel, $"  -> {dest}", EditorStyles.toolbarButton)) {
                         _selTransStateIdx = idx;
                         _selTransIdx = i;
+                        var targets = GetTargetIndices(trans[i]);
+                        _selTransDstIdx = targets.Count > 0 ? targets[0] : -1;
                         _selectedStateIdx = -1;
                     }
                     if (GUILayout.Button("\u00d7", GUILayout.Width(22))) {
@@ -905,7 +950,7 @@ namespace Editor.FSM {
                 bool removed = DrawConditionNode(conditions[i], 0, conditions, i);
                 EditorGUILayout.EndVertical();
                 if (removed) break;
-                EditorGUILayout.Space(2);
+                EditorGUILayout.Space(4);
             }
 
             if (GUILayout.Button("+ Add Condition")) {
@@ -921,22 +966,17 @@ namespace Editor.FSM {
         private bool DrawConditionNode(TransitionCondition cond, int depth,
             List<TransitionCondition> parentList, int indexInParent) {
 
+            // 1행: [NOT 토글] [모드 드롭다운] [정보] [삭제]
             EditorGUILayout.BeginHorizontal();
 
-            // 들여쓰기
-            if (depth > 0) GUILayout.Space(depth * 18);
-
-            // NOT 토글
-            bool newInvert = EditorGUILayout.Toggle(cond.invertResult, GUILayout.Width(16));
+            bool newInvert = EditorGUILayout.ToggleLeft("NOT", cond.invertResult, GUILayout.Width(50));
             if (newInvert != cond.invertResult) {
                 RecordUndo("Toggle NOT");
                 cond.invertResult = newInvert;
                 MarkDirty();
             }
-            GUILayout.Label(cond.invertResult ? "NOT" : "   ", GUILayout.Width(28));
 
-            // 모드
-            var newMode = (LogicMode)EditorGUILayout.EnumPopup(cond.mode, GUILayout.Width(65));
+            var newMode = (LogicMode)EditorGUILayout.EnumPopup(cond.mode, GUILayout.MinWidth(80));
             if (newMode != cond.mode) {
                 RecordUndo("Change Condition Mode");
                 cond.mode = newMode;
@@ -945,21 +985,13 @@ namespace Editor.FSM {
                 MarkDirty();
             }
 
-            // Single 모드: Decision 필드
-            if (cond.mode == LogicMode.Single) {
-                var newDec = (YisoCharacterDecision)EditorGUILayout.ObjectField(
-                    cond.singleDecision, typeof(YisoCharacterDecision), true);
-                if (newDec != cond.singleDecision) {
-                    RecordUndo("Change Decision");
-                    cond.singleDecision = newDec;
-                    MarkDirty();
-                }
-            } else {
+            if (cond.mode != LogicMode.Single) {
                 int subCount = cond.subConditions?.Count ?? 0;
-                GUILayout.Label($"({subCount} conditions)", EditorStyles.miniLabel);
+                GUILayout.Label($"({subCount})", EditorStyles.miniLabel, GUILayout.Width(24));
             }
 
-            // 삭제 버튼
+            GUILayout.FlexibleSpace();
+
             if (GUILayout.Button("\u00d7", GUILayout.Width(22))) {
                 RecordUndo("Remove Condition");
                 parentList.RemoveAt(indexInParent);
@@ -970,29 +1002,50 @@ namespace Editor.FSM {
 
             EditorGUILayout.EndHorizontal();
 
-            // And/Or 그룹: 하위 조건 재귀
-            if (cond.mode != LogicMode.Single && cond.subConditions != null) {
-                EditorGUI.indentLevel++;
-                for (int i = 0; i < cond.subConditions.Count; i++) {
-                    bool removed = DrawConditionNode(cond.subConditions[i], depth + 1, cond.subConditions, i);
-                    if (removed) {
-                        EditorGUI.indentLevel--;
-                        return false; // 리스트 수정됨, 부모에서 다시 그려짐
-                    }
+            // 2행: Single 모드 Decision 필드
+            if (cond.mode == LogicMode.Single) {
+                var newDec = (YisoCharacterDecision)EditorGUILayout.ObjectField(
+                    "Decision", cond.singleDecision, typeof(YisoCharacterDecision), true);
+                if (newDec != cond.singleDecision) {
+                    RecordUndo("Change Decision");
+                    cond.singleDecision = newDec;
+                    MarkDirty();
                 }
 
-                EditorGUILayout.BeginHorizontal();
-                GUILayout.Space((depth + 1) * 18);
+                if (cond.singleDecision == null) {
+                    if (GUILayout.Button("Create New Decision", EditorStyles.miniButton)) {
+                        ShowAddComponentMenu<YisoCharacterDecision>(_decisionTypes, _decisionNames,
+                            comp => {
+                                RecordUndo("Assign Decision");
+                                cond.singleDecision = (YisoCharacterDecision)comp;
+                                MarkDirty();
+                            });
+                    }
+                }
+            }
+
+            // And/Or 그룹: helpBox로 구획, 재귀
+            if (cond.mode != LogicMode.Single && cond.subConditions != null) {
+                EditorGUILayout.BeginVertical(EditorStyles.helpBox);
+
+                for (int i = 0; i < cond.subConditions.Count; i++) {
+                    EditorGUILayout.BeginVertical(EditorStyles.helpBox);
+                    bool removed = DrawConditionNode(cond.subConditions[i], depth + 1, cond.subConditions, i);
+                    EditorGUILayout.EndVertical();
+                    if (removed) {
+                        EditorGUILayout.EndVertical();
+                        return false;
+                    }
+                    EditorGUILayout.Space(3);
+                }
+
+                EditorGUILayout.Space(4);
                 if (GUILayout.Button("+ Add Sub-Condition", EditorStyles.miniButton)) {
                     RecordUndo("Add Sub-Condition");
                     cond.subConditions.Add(new TransitionCondition { mode = LogicMode.Single });
                     MarkDirty();
                 }
-                EditorGUILayout.EndHorizontal();
-
-                // Decision 추가 (Single 모드에서 새 Decision 컴포넌트 생성)
-                EditorGUILayout.BeginHorizontal();
-                GUILayout.Space((depth + 1) * 18);
+                EditorGUILayout.Space(2);
                 if (GUILayout.Button("+ Create Decision Component", EditorStyles.miniButton)) {
                     ShowAddComponentMenu<YisoCharacterDecision>(_decisionTypes, _decisionNames,
                         comp => {
@@ -1005,24 +1058,8 @@ namespace Editor.FSM {
                             MarkDirty();
                         });
                 }
-                EditorGUILayout.EndHorizontal();
 
-                EditorGUI.indentLevel--;
-            }
-
-            // Single 모드에서 Decision이 없을 때 생성 버튼
-            if (cond.mode == LogicMode.Single && cond.singleDecision == null) {
-                EditorGUILayout.BeginHorizontal();
-                GUILayout.Space(depth * 18 + 110);
-                if (GUILayout.Button("Create New Decision", EditorStyles.miniButton)) {
-                    ShowAddComponentMenu<YisoCharacterDecision>(_decisionTypes, _decisionNames,
-                        comp => {
-                            RecordUndo("Assign Decision");
-                            cond.singleDecision = (YisoCharacterDecision)comp;
-                            MarkDirty();
-                        });
-                }
-                EditorGUILayout.EndHorizontal();
+                EditorGUILayout.EndVertical();
             }
 
             return false;
@@ -1160,6 +1197,7 @@ namespace Editor.FSM {
 
             _selTransStateIdx = fromIdx;
             _selTransIdx = trans.Count - 1;
+            _selTransDstIdx = toIdx;
             _selectedStateIdx = -1;
             MarkDirty();
         }
