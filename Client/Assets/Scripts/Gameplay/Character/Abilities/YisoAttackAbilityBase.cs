@@ -58,18 +58,28 @@ namespace Gameplay.Character.Abilities {
         /// <summary>
         /// 공격 중일 때만 IsAttacking 애니메이션 파라미터를 true로 설정합니다.
         /// 여러 공격 Ability(Melee, Projectile 등)가 공존할 때 서로의 값을 덮어쓰지 않도록,
-        /// false 설정은 공격 종료 시 StopAttackAnimation()으로 명시적으로 수행합니다.
+        /// false 설정은 공격 종료 시 StopAttackAnimation()에서 명시적으로 수행합니다.
         /// </summary>
         public override void UpdateAnimator() {
             base.UpdateAnimator();
-            if (Context != null) {
-                Context.PlayAnimation(YisoCharacterAnimationState.IsAttacking, _isAttacking);
+            if (Context == null) return;
+
+            // 공격 중일 때만 true로 설정 (다른 AttackAbility가 설정한 true를 false로 덮어쓰지 않음)
+            if (_isAttacking) {
+                Context.PlayAnimation(YisoCharacterAnimationState.IsAttacking, true);
 
                 if (_weaponModule != null) {
                     var attackSpeed = _weaponModule.GetCurrentWeaponData().attackSpeed;
                     Context.PlayAnimation(YisoCharacterAnimationState.AttackSpeed, attackSpeed);
                 }
             }
+        }
+
+        /// <summary>
+        /// 공격 종료 시 애니메이터 파라미터를 명시적으로 false로 설정합니다.
+        /// </summary>
+        protected void StopAttackAnimation() {
+            Context?.PlayAnimation(YisoCharacterAnimationState.IsAttacking, false);
         }
 
         /// <summary>

@@ -349,6 +349,7 @@ namespace Gameplay.Character.Abilities {
             {
                 // 콤보가 안 이어질 때만 공격 종료 처리
                 _isAttacking = false;
+                StopAttackAnimation();
             }
         }
 
@@ -359,6 +360,7 @@ namespace Gameplay.Character.Abilities {
 
             // 1. 공격 상태 강제 중단
             _isAttacking = false;
+            StopAttackAnimation();
             _safetyTimer = 0f;
 
             // 2. 입력 상태 리셋

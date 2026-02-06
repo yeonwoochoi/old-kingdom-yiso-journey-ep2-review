@@ -491,6 +491,7 @@ namespace Gameplay.Character.Abilities {
         private void HandleAttackEnd() {
             _safetyTimer = 0f;
             _isAttacking = false;
+            StopAttackAnimation();
             _pendingProjectiles = 0;
             _currentTarget = null;
 
@@ -510,6 +511,7 @@ namespace Gameplay.Character.Abilities {
             base.ResetAbility();
 
             _isAttacking = false;
+            StopAttackAnimation();
             _safetyTimer = 0f;
             _wasAttackPressedLastFrame = false;
             _pendingProjectiles = 0;
