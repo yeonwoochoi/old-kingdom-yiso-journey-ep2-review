@@ -135,16 +135,18 @@ namespace Gameplay.Character.StateMachine {
                 YisoLogger.LogWarning($"잘못된 타겟 인덱스 접근: {index}. Max: {maxTargetCount}");
                 return;
             }
-            
-            // 캐싱
+
             if (target != null) {
-                _targetContexts[index] = target.GetComponent<IYisoCharacterContext>();
+                // hitbox 등 자식 오브젝트가 감지된 경우, 부모 계층에서 캐릭터 Context 탐색
+                var context = target.GetComponentInParent<IYisoCharacterContext>();
+                _targetContexts[index] = context;
+                // Context가 있으면 캐릭터 루트 Transform 저장 (hitbox 위치가 아닌 캐릭터 위치 사용)
+                _targetSlots[index] = context != null ? context.Transform : target;
             }
             else {
                 _targetContexts[index] = null;
+                _targetSlots[index] = null;
             }
-
-            _targetSlots[index] = target;
         }
 
         /// <summary>
