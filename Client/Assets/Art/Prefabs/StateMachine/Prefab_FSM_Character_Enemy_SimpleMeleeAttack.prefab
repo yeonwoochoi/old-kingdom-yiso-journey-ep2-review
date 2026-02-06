@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 8129395035989398842}
   - component: {fileID: 5133254923230850878}
   m_Layer: 0
-  m_Name: '[Decision] Distance To Spawn (>8)'
+  m_Name: '[Decision] Distance To Spawn (>20)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -370,7 +370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comparison: 4
-  distance: 8
+  distance: 20
 --- !u!1 &5633172566053142662
 GameObject:
   m_ObjectHideFlags: 0
