@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsSkillCasting
+    m_ConditionEvent: IsSkillCast
     m_EventTreshold: 0
   - m_ConditionMode: 6
     m_ConditionEvent: SkillNumber
@@ -98,10 +98,10 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: IsAttacking
+    m_ConditionEvent: IsAttack
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: IsSkillCasting
+    m_ConditionEvent: IsSkillCast
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5107338489781507245}
@@ -258,7 +258,7 @@ AnimatorTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsSkillCasting
+    m_ConditionEvent: IsSkillCast
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6898593368793047641}
@@ -275,7 +275,7 @@ AnimatorTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsAttacking
+    m_ConditionEvent: IsAttack
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
@@ -344,10 +344,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsAttacking
+    m_ConditionEvent: IsAttack
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: IsSkillCasting
+    m_ConditionEvent: IsSkillCast
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 2150931112667943757}
   m_DstState: {fileID: 0}
@@ -372,7 +372,7 @@ AnimatorTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsSkillCasting
+    m_ConditionEvent: IsSkillCast
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 1125710281721455154}
   m_DstState: {fileID: 0}
@@ -613,7 +613,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsSpellCasting
+    m_ConditionEvent: IsSpellCast
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6898593368793047641}
@@ -731,7 +731,7 @@ AnimatorTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsAttacking
+    m_ConditionEvent: IsAttack
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6898593368793047641}
@@ -802,7 +802,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsAttacking
+    m_ConditionEvent: IsAttack
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
@@ -880,7 +880,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsSkillCasting
+    m_ConditionEvent: IsSkillCast
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
@@ -905,7 +905,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsSkillCasting
+    m_ConditionEvent: IsSkillCast
     m_EventTreshold: 0
   - m_ConditionMode: 6
     m_ConditionEvent: SkillNumber
@@ -936,7 +936,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsDeath
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: IsSpellCasting
+    m_ConditionEvent: IsSpellCast
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7510803369049466049}
@@ -961,7 +961,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsAttacking
+    m_ConditionEvent: IsAttack
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
@@ -1135,7 +1135,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsAttacking
+    m_ConditionEvent: IsAttack
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 2150931112667943757}
   m_DstState: {fileID: 0}
@@ -1191,7 +1191,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsAttacking
+    m_ConditionEvent: IsAttack
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
@@ -1348,7 +1348,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsSkillCasting
+    m_ConditionEvent: IsSkillCast
     m_EventTreshold: 0
   - m_ConditionMode: 6
     m_ConditionEvent: SkillNumber
@@ -1447,7 +1447,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: IsAttacking
+  - m_Name: IsAttack
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -1459,13 +1459,13 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: IsSpellCasting
+  - m_Name: IsSpellCast
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: IsSkillCasting
+  - m_Name: IsSkillCast
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -1611,7 +1611,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsAttacking
+    m_ConditionEvent: IsAttack
     m_EventTreshold: 0
   - m_ConditionMode: 4
     m_ConditionEvent: Combo
@@ -1639,7 +1639,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsSkillCasting
+    m_ConditionEvent: IsSkillCast
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
@@ -1754,7 +1754,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsSkillCasting
+    m_ConditionEvent: IsSkillCast
     m_EventTreshold: 0
   - m_ConditionMode: 6
     m_ConditionEvent: SkillNumber
@@ -2059,7 +2059,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsSkillCasting
+    m_ConditionEvent: IsSkillCast
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
@@ -2084,7 +2084,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsSkillCasting
+    m_ConditionEvent: IsSkillCast
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
@@ -2156,7 +2156,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsSkillCasting
+    m_ConditionEvent: IsSkillCast
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
@@ -2181,7 +2181,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsSkillCasting
+    m_ConditionEvent: IsSkillCast
     m_EventTreshold: 0
   - m_ConditionMode: 6
     m_ConditionEvent: SkillNumber
@@ -2234,7 +2234,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsAttacking
+    m_ConditionEvent: IsAttack
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
@@ -2479,7 +2479,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsSkillCasting
+    m_ConditionEvent: IsSkillCast
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
@@ -2504,7 +2504,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsAttacking
+    m_ConditionEvent: IsAttack
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
@@ -2529,7 +2529,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsSkillCasting
+    m_ConditionEvent: IsSkillCast
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 1125710281721455154}
   m_DstState: {fileID: 0}
@@ -2576,7 +2576,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsAttacking
+    m_ConditionEvent: IsAttack
     m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: Combo
@@ -2651,7 +2651,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsSkillCasting
+    m_ConditionEvent: IsSkillCast
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
@@ -2723,7 +2723,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsSkillCasting
+    m_ConditionEvent: IsSkillCast
     m_EventTreshold: 0
   - m_ConditionMode: 6
     m_ConditionEvent: SkillNumber
