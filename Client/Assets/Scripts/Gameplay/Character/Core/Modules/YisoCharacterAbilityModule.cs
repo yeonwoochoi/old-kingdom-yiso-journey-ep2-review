@@ -160,10 +160,20 @@ namespace Gameplay.Character.Core.Modules {
 
         /// <summary>
         /// 타입에 맞는 어빌리티 인스턴스를 반환.
+        /// 정확한 타입 매칭 우선, 없으면 T를 상속한 서브클래스를 탐색.
+        /// (예: GetAbility&lt;YisoAttackAbilityBase&gt;() → YisoMeleeAttackAbility 반환)
         /// </summary>
         public T GetAbility<T>() where T : class, IYisoCharacterAbility {
-            _abilities.TryGetValue(typeof(T), out var ability);
-            return ability as T;
+            // 1. 정확한 타입 매칭 (기존 동작)
+            if (_abilities.TryGetValue(typeof(T), out var ability))
+                return ability as T;
+
+            // 2. 베이스 타입으로 조회 시: 서브클래스 탐색
+            foreach (var ab in _abilityList) {
+                if (ab is T matched) return matched;
+            }
+
+            return null;
         }
 
         /// <summary>
