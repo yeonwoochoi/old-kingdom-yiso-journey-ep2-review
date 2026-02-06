@@ -38,7 +38,7 @@ namespace Gameplay.Character.StateMachine.Actions.Attack {
         [Indent]
         private float maxAttackInterval = 1.5f;
 
-        private YisoMeleeAttackAbility _attackAbility;
+        private YisoAttackAbilityBase _attackAbility;
         private float _nextAttackTime = 0f;
         private bool _hasAttacked = false; // 단일 공격 모드에서 공격 완료 여부
 
@@ -59,10 +59,10 @@ namespace Gameplay.Character.StateMachine.Actions.Attack {
 
             // Ability 캐싱
             var abilityModule = StateMachine?.GetAbilityModule();
-            _attackAbility = abilityModule?.GetAbility<YisoMeleeAttackAbility>();
+            _attackAbility = abilityModule?.GetAbility<YisoAttackAbilityBase>();
 
             if (_attackAbility == null) {
-                YisoLogger.LogWarning("YisoMeleeAttackAbility를 찾을 수 없습니다.");
+                YisoLogger.LogWarning("YisoAttackAbility를 찾을 수 없습니다.");
             }
 
             // 상태 초기화

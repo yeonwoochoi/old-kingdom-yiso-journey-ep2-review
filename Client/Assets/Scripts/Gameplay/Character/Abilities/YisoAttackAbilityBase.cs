@@ -79,6 +79,8 @@ namespace Gameplay.Character.Abilities {
             return _isAttacking;
         }
 
+        public virtual void TriggerAttack() { }
+
         /// <summary>
         /// 캐릭터의 방향 전환을 잠급니다 (공격 중).
         /// </summary>

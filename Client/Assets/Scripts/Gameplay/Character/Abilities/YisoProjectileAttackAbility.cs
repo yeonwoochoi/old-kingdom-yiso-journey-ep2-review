@@ -142,7 +142,8 @@ namespace Gameplay.Character.Abilities {
         /// <summary>
         /// 외부에서 공격을 트리거합니다. (AI 등에서 사용)
         /// </summary>
-        public void TriggerAttack() {
+        public override void TriggerAttack() {
+            base.TriggerAttack();
             TryAttack();
         }
 
