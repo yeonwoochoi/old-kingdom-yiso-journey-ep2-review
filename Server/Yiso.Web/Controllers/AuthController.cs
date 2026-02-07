@@ -1,9 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Yiso.Shared.DTOs.Auth;
-using Yiso.Shared.DTOs.Common;
-using Yiso.Shared.Models;
+using ServerShared.DTOs.Auth;
+using ServerShared.DTOs.Common;
+using ServerShared.Models;
 using Yiso.Web.Filters;
-using Yiso.Web.Models;
 using Yiso.Web.Services.Interfaces;
 
 namespace Yiso.Web.Controllers;

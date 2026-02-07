@@ -1,5 +1,4 @@
-using Yiso.Shared.Models;
-using Yiso.Web.Models;
+using ServerShared.Models;
 
 namespace Yiso.Web.Repositories.Interfaces;
 

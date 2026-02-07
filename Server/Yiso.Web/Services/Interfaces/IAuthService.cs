@@ -1,6 +1,5 @@
-using Yiso.Shared.DTOs.Auth;
-using Yiso.Shared.Models;
-using Yiso.Web.Models;
+using ServerShared.DTOs.Auth;
+using ServerShared.Models;
 
 namespace Yiso.Web.Services.Interfaces;
 

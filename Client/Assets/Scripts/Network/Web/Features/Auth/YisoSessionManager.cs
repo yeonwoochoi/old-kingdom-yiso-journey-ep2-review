@@ -2,8 +2,8 @@ using System;
 using System.Threading.Tasks;
 using Network.Web.Core;
 using Network.Web.Features.Auth.DTOs;
+using ServerShared.DTOs.Auth;
 using Utils;
-using Yiso.Shared.DTOs.Auth;
 
 namespace Network.Web.Features.Auth {
     /// <summary>

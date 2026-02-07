@@ -1,5 +1,5 @@
-using Yiso.Shared.DTOs.Auth;
-using Yiso.Shared.Models;
+using ServerShared.DTOs.Auth;
+using ServerShared.Models;
 using Yiso.Web.Exceptions;
 using Yiso.Web.Models;
 using Yiso.Web.Repositories.Interfaces;

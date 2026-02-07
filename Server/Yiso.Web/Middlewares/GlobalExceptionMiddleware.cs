@@ -1,5 +1,5 @@
 using System.Text.Json;
-using Yiso.Shared.DTOs.Common;
+using ServerShared.DTOs.Common;
 using Yiso.Web.Common;
 using Yiso.Web.Exceptions;
 

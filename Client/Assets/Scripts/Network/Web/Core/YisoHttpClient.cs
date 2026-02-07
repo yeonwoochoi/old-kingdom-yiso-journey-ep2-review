@@ -3,8 +3,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using ServerShared.DTOs.Common;
 using UnityEngine.Networking;
-using Yiso.Shared.DTOs.Common;
 
 namespace Network.Web.Core {
     /// <summary>

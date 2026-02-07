@@ -3,24 +3,14 @@
         <TargetFrameworks>netstandard2.1;net9.0</TargetFrameworks>
         <Nullable>enable</Nullable>
         <LangVersion>latest</LangVersion>
-        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="MemoryPack" Version="1.21.4" />
     </ItemGroup>
-    <Target Name="CopyToUnity" AfterTargets="Build" Condition="'$(TargetFramework)' == 'netstandard2.1'">
-        <PropertyGroup>
-            <UnityPluginsPath>$(MSBuildProjectDirectory)\..\..\Client\Assets\Plugins\Yiso.Shared</UnityPluginsPath>
-        </PropertyGroup>
-        <MakeDir Directories="$(UnityPluginsPath)" Condition="!Exists('$(UnityPluginsPath)')" />
-        <ItemGroup>
-            <SharedDlls Include="$(OutputPath)Yiso.Shared.dll" />
-            <SharedDlls Include="$(OutputPath)MemoryPack.Core.dll" />
-            <SharedDlls Include="$(OutputPath)System.Collections.Immutable.dll" />
-            <SharedDlls Include="$(OutputPath)System.Runtime.CompilerServices.Unsafe.dll" />
-            <SharedDlls Include="$(OutputPath)System.Memory.dll" />
-            <SharedDlls Include="$(OutputPath)System.Buffers.dll" />
-        </ItemGroup>
-        <Copy SourceFiles="@(SharedDlls)" DestinationFolder="$(UnityPluginsPath)" SkipUnchangedFiles="true" />
-    </Target>
-</Project>             
+    <ItemGroup>
+        <Compile Include="..\..\Client\Assets\Scripts\ServerShared\**\*.cs">
+            <Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
+        </Compile>
+    </ItemGroup>
+</Project>
