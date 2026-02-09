@@ -31,10 +31,12 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Conn
 // ----- Repositories -----
 builder.Services.AddScoped<IUserRepository, UserRepository>();       // MySQL
 builder.Services.AddSingleton<ISessionRepository, RedisSessionRepository>(); // Redis
+builder.Services.AddSingleton<IRankRepository, RedisRankRepository>();       // Redis
 
 // ----- Services -----
 builder.Services.AddSingleton<IPasswordService, PasswordService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddSingleton<IRankService, RankService>();
 
 
 // ===========================================

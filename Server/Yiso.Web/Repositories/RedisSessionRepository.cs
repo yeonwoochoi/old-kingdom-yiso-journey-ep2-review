@@ -1,7 +1,6 @@
 using MemoryPack;
+using ServerShared.Models;
 using StackExchange.Redis;
-using Yiso.Shared.Models;
-using Yiso.Web.Models;
 using Yiso.Web.Repositories.Interfaces;
 
 namespace Yiso.Web.Repositories;
@@ -16,7 +15,7 @@ public class RedisSessionRepository : ISessionRepository {
     private readonly IDatabase _db;
     private const string SessionKeyPrefix = "session:";
     private const string UserSessionsKeyPrefix = "user_sessions:";
-
+    
     public RedisSessionRepository(IConnectionMultiplexer redis) {
         _db = redis.GetDatabase();
     }
@@ -28,7 +27,7 @@ public class RedisSessionRepository : ISessionRepository {
         var sessionId = Guid.NewGuid().ToString();
         var sessionKey = GetSessionKey(sessionId);
         var userSessionsKey = GetUserSessionsKey(data.UserId);
-
+    
         var bytes = MemoryPackSerializer.Serialize(data);
 
         // 세션 데이터 저장 + user_sessions Set에 추가
@@ -114,6 +113,6 @@ public class RedisSessionRepository : ISessionRepository {
         return validSessions;
     }
 
-    private static string GetSessionKey(string sessionId) => $"{SessionKeyPrefix}{sessionId}";
-    private static string GetUserSessionsKey(string userId) => $"{UserSessionsKeyPrefix}{userId}";
+    public static string GetSessionKey(string sessionId) => $"{SessionKeyPrefix}{sessionId}";
+    public static string GetUserSessionsKey(string userId) => $"{UserSessionsKeyPrefix}{userId}";
 }

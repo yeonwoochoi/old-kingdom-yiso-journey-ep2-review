@@ -22,7 +22,6 @@ public class AuthService : IAuthService {
         _sessionExpiry = TimeSpan.FromMinutes(timeoutMinutes);
     }
 
-
     public async Task<AuthResponse> RegisterAsync(RegisterRequest request) {
         if (await _userRepository.ExistsAsync(request.Username)) {
             throw new ConflictException("이미 존재하는 사용자 이름입니다.");
