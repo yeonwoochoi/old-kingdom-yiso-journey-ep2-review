@@ -1,5 +1,6 @@
 using Network.Web.Core;
 using Network.Web.Features.Auth;
+using Network.Web.Features.Rank;
 
 namespace Network.Web {
     /// <summary>
@@ -15,16 +16,14 @@ namespace Network.Web {
 
         // 매니저(들)
         public YisoSessionManager Session { get; } // 인증 매니저
-
-        // 앞으로 추가될 매니저들..
-        // public YisoInventoryManager Inventory { get; }
-        // public YisoQuestManager Quest { get; }
+        public YisoRankService Rank { get; } // 랭킹 서비스
         
         #endregion
         
         public YisoWebManager(string serverUrl) {
             httpClient = new YisoHttpClient(serverUrl);
             Session = new YisoSessionManager(httpClient);
+            Rank = new YisoRankService(httpClient);
         }
     }
 }

@@ -14,15 +14,13 @@ namespace Network.Web.Core {
             public const string Logout = "api/auth/logout";
         }
 
-        // 향후 추가될 API들
-        // public static class User {
-        //     public const string Profile = "api/user/profile";
-        //     public const string Update = "api/user/update";
-        // }
-        //
-        // public static class Inventory {
-        //     public const string List = "api/inventory";
-        //     public const string Add = "api/inventory/add";
-        // }
+        /// <summary>
+        /// 랭킹 관련 API
+        /// </summary>
+        public static class Rank {
+            public const string Score = "api/rank/score";
+            public const string Top = "api/rank/top";
+            public const string Me = "api/rank/me";
+        }
     }
 }

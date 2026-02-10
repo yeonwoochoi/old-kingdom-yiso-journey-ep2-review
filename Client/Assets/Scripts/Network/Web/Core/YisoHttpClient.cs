@@ -102,6 +102,19 @@ namespace Network.Web.Core {
         }
 
         /// <summary>
+        /// DELETE 요청 (응답 데이터 없음)
+        /// </summary>
+        public async Task<YisoHttpResponse> DeleteAsync(string endpoint) {
+            var url = $"{baseUrl}/{endpoint.TrimStart('/')}";
+
+            using var request = new UnityWebRequest(url, "DELETE");
+            request.downloadHandler = new DownloadHandlerBuffer();
+            ConfigureRequest(request);
+
+            return await SendRequestAsync(request);
+        }
+
+        /// <summary>
         /// POST 요청 (바디 없음, 응답 데이터 없음)
         /// </summary>
         public async Task<YisoHttpResponse> PostAsync(string endpoint) {
