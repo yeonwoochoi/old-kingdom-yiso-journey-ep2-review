@@ -29,7 +29,7 @@ public class RankService : IRankService {
         return await _rankRepository.GetRankByUserIdAsync(userId);
     }
 
-    public async Task DeleteRankAsync(string userId) {
-        await _rankRepository.DeleteRankByUserIdAsync(userId);
+    public async Task<bool> DeleteRankAsync(string userId) {
+        return await _rankRepository.DeleteRankByUserIdAsync(userId);
     }
 }

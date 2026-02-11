@@ -66,7 +66,10 @@ public class RankController : ControllerBase {
     [SessionAuth]
     public async Task<ActionResult> DeleteMyRank() {
         var sessionData = HttpContext.Items[SessionAuthAttribute.SessionDataKey] as SessionData;
-        await _rankService.DeleteRankAsync(sessionData!.UserId);
+        var deleted = await _rankService.DeleteRankAsync(sessionData!.UserId);
+        if (!deleted) {
+            return NotFound(new { message = "삭제할 랭킹 데이터가 없습니다." });
+        }
         return Ok(new { message = "랭킹이 삭제되었습니다." });
     }
 }

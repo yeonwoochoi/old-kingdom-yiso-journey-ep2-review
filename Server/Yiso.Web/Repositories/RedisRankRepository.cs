@@ -73,8 +73,11 @@ public class RedisRankRepository : IRankRepository {
         };
     }
 
-    public async Task DeleteRankByUserIdAsync(string userId) {
-        await _db.SortedSetRemoveAsync(LeaderboardKey, userId);
-        await _db.HashDeleteAsync(UsernamesKey, userId);
+    public async Task<bool> DeleteRankByUserIdAsync(string userId) {
+        var removed = await _db.SortedSetRemoveAsync(LeaderboardKey, userId);
+        if (removed) {
+            await _db.HashDeleteAsync(UsernamesKey, userId);
+        }
+        return removed;
     }
 }

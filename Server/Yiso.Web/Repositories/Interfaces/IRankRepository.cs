@@ -6,5 +6,5 @@ public interface IRankRepository {
     Task RegisterScoreAsync(string userId, string username, int score);
     Task<RankListResponse> GetTopRanksAsync(int count);
     Task<RankResponse?> GetRankByUserIdAsync(string userId);
-    Task DeleteRankByUserIdAsync(string userId);
+    Task<bool> DeleteRankByUserIdAsync(string userId);
 }
