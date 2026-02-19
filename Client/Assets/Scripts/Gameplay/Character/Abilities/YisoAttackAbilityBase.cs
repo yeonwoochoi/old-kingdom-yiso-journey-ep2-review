@@ -1,5 +1,6 @@
 ﻿using Gameplay.Character.Core;
 using Gameplay.Character.Core.Modules;
+using Gameplay.Character.Data;
 using Utils;
 
 namespace Gameplay.Character.Abilities {
@@ -20,6 +21,7 @@ namespace Gameplay.Character.Abilities {
         /// 하위 클래스에서 구현하여 Settings에 따라 결정합니다.
         /// </summary>
         protected abstract bool CanMoveWhileAttacking { get; }
+        protected abstract YisoWeaponType RequiredWeaponType { get; }
 
         /// <summary>
         /// 공격 중에는 이동을 막습니다 (CanMoveWhileAttacking이 false인 경우).
@@ -30,6 +32,18 @@ namespace Gameplay.Character.Abilities {
         /// 공격 중에는 다른 공격을 막습니다.
         /// </summary>
         public override bool PreventsAttack => _isAttacking;
+
+        public override bool IsAbilityEnabled {
+            get {
+                if (!base.IsAbilityEnabled) return false;
+
+                // 장착된 무기 타입이 이 어빌리티의 요구 타입과 다르면 비활성화
+                if (_weaponModule == null || !_weaponModule.HasWeapon()) return false;
+                var weaponData = _weaponModule.GetCurrentWeaponData();
+                if (weaponData == null) return false;
+                return weaponData.weaponType == RequiredWeaponType;
+            }
+        }
 
         public override void Initialize(IYisoCharacterContext context) {
             base.Initialize(context);

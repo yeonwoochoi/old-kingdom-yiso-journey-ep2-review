@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Gameplay.Character.Abilities.Definitions;
 using Gameplay.Character.Core;
 using Gameplay.Character.Core.Modules;
+using Gameplay.Character.Data;
 using Gameplay.Character.Types;
 using Gameplay.Character.Weapon;
 using Gameplay.Health;
@@ -16,9 +17,6 @@ namespace Gameplay.Character.Abilities {
     /// </summary>
     public class YisoProjectileAttackAbility : YisoAttackAbilityBase {
         private readonly YisoProjectileAttackAbilitySO _settings;
-
-        private YisoCharacterWeaponModule _weaponModule;
-        private YisoCharacterInputModule _inputModule; // Player 전용
 
         private float _lastAttackTime = -999f;
 
@@ -36,6 +34,7 @@ namespace Gameplay.Character.Abilities {
 
         // YisoAttackAbilityBase 추상 속성 구현
         protected override bool CanMoveWhileAttacking => _settings.canMoveWhileAttacking;
+        protected override YisoWeaponType RequiredWeaponType => YisoWeaponType.Ranged;
 
         public YisoProjectileAttackAbility(YisoProjectileAttackAbilitySO settings) {
             _settings = settings;
@@ -110,6 +109,14 @@ namespace Gameplay.Character.Abilities {
             // 다중 발사 처리 (fireInterval > 0 일 때)
             if (_isAttacking && _pendingProjectiles > 0 && Time.time >= _nextFireTime) {
                 FireSingleProjectile();
+            }
+        }
+        
+        public override void UpdateAnimator() {
+            base.UpdateAnimator();
+
+            if (Context != null && _isAttacking) {
+                Context.PlayAnimation(YisoCharacterAnimationState.Combo, 0);
             }
         }
 

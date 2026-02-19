@@ -115,6 +115,51 @@ namespace Gameplay.Character.Core.Modules {
             return hash != 0 && _verifiedHashes.Contains(hash);
         }
 
+        #region Animator Controller Swap
+
+        /// <summary>
+        /// 캐릭터의 AnimatorController를 교체하고 모든 파라미터를 초기화한다.
+        /// 무기 교체 시 AOC 전환에 사용.
+        /// </summary>
+        public void SetAnimatorController(RuntimeAnimatorController controller) {
+            if (controller == null || _animator == null) return;
+
+            // 1. AnimatorController 교체
+            _animator.runtimeAnimatorController = controller;
+
+            // 2. 모든 파라미터를 기본값으로 초기화
+            ResetAllParameters();
+
+            // 3. 새 Controller에 맞게 파라미터 재검증
+            VerifyAnimatorParameters();
+        }
+
+        /// <summary>
+        /// Animator의 모든 파라미터를 기본값으로 초기화한다.
+        /// </summary>
+        private void ResetAllParameters() {
+            if (_animator == null) return;
+
+            foreach (var param in _animator.parameters) {
+                switch (param.type) {
+                    case AnimatorControllerParameterType.Bool:
+                        _animator.SetBool(param.nameHash, param.defaultBool);
+                        break;
+                    case AnimatorControllerParameterType.Float:
+                        _animator.SetFloat(param.nameHash, param.defaultFloat);
+                        break;
+                    case AnimatorControllerParameterType.Int:
+                        _animator.SetInteger(param.nameHash, param.defaultInt);
+                        break;
+                    case AnimatorControllerParameterType.Trigger:
+                        _animator.ResetTrigger(param.nameHash);
+                        break;
+                }
+            }
+        }
+
+        #endregion
+
         #region External Animator Registration
 
         /// <summary>
@@ -339,7 +384,9 @@ namespace Gameplay.Character.Core.Modules {
         }
 
         [Serializable]
-        public class Settings {}
+        public class Settings {
+            public RuntimeAnimatorController defaultAnimationController;
+        }
     }
 
     public static class CharacterAnimationStateHelper {

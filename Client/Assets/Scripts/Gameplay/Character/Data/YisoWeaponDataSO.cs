@@ -2,6 +2,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Gameplay.Character.Data {
+    public enum YisoWeaponType {
+        Melee,
+        Ranged
+    }
+
     /// <summary>
     /// 무기의 데이터를 정의하는 ScriptableObject.
     /// 무기의 프리팹, 데미지, 공격 속도, 콤보 설정 등의 정보를 포함.
@@ -9,13 +14,17 @@ namespace Gameplay.Character.Data {
     [CreateAssetMenu(fileName = "SO_Weapon_", menuName = "Yiso/Weapon/Weapon Data")]
     public class YisoWeaponDataSO : ScriptableObject {
         [Header("Basic Info")]
-        [Tooltip("무기의 이름")]
+        public YisoWeaponType weaponType = YisoWeaponType.Melee;
         public string weaponName = "New Weapon";
 
         [Tooltip("무기 프리팹 (Animator, YisoWeaponAim, YisoDamageOnTouch 컴포넌트 포함)")]
         public GameObject weaponPrefab;
 
-        [Header("Damage Settings")]
+        [Header("Character Animator")]
+        [Tooltip("이 무기 장착 시 캐릭터 모델에 적용할 AnimatorController (AOC 등)")]
+        public RuntimeAnimatorController characterAnimatorController;
+
+        [Header("Damage Settings")] 
         [Tooltip("기본 데미지")]
         public float baseDamage = 10f;
 

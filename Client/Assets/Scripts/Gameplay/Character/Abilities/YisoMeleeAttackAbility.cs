@@ -33,6 +33,7 @@ namespace Gameplay.Character.Abilities {
 
         // YisoAttackAbilityBase 추상 속성 구현
         protected override bool CanMoveWhileAttacking => _settings.canMoveWhileAttacking;
+        protected override YisoWeaponType RequiredWeaponType => YisoWeaponType.Melee;
 
         public YisoMeleeAttackAbility(YisoMeleeAttackAbilitySO settings) {
             _settings = settings;

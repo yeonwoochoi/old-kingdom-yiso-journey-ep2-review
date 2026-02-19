@@ -15,6 +15,7 @@ namespace Gameplay.Character.Core.Modules {
     public sealed class YisoCharacterInputModule : YisoCharacterModuleBase {
         private Settings _settings;
         private InputSystem_Actions _inputActions;
+        private YisoCharacterWeaponModule _weaponModule;
 
         /// <summary>
         /// 현재 프레임의 이동 입력 벡터 (WASD, 방향키 등)
@@ -33,6 +34,7 @@ namespace Gameplay.Character.Core.Modules {
         public override void Initialize() {
             base.Initialize();
             _inputActions = new InputSystem_Actions();
+            _weaponModule = Context.GetModule<YisoCharacterWeaponModule>();
         }
 
         public override void OnEnable() {
@@ -43,6 +45,7 @@ namespace Gameplay.Character.Core.Modules {
             _inputActions.Player.Move.canceled += OnMove;
             _inputActions.Player.Attack.performed += OnAttack;
             _inputActions.Player.Attack.canceled += OnAttack;
+            _inputActions.Player.ChangeWeapon.performed += OnChangeWeapon; 
         }
 
         public override void OnDisable() {
@@ -52,6 +55,7 @@ namespace Gameplay.Character.Core.Modules {
             _inputActions.Player.Move.canceled -= OnMove;
             _inputActions.Player.Attack.performed -= OnAttack;
             _inputActions.Player.Attack.canceled -= OnAttack;
+            _inputActions.Player.ChangeWeapon.performed -= OnChangeWeapon;
 
             _inputActions.Player.Disable();
         }
@@ -84,6 +88,13 @@ namespace Gameplay.Character.Core.Modules {
             }
             else if (context.canceled) {
                 AttackInput = false;
+            }
+        }
+        
+        private void OnChangeWeapon(InputAction.CallbackContext context)
+        {
+            if (context.performed) {
+                _weaponModule.ChangeWeapon();
             }
         }
         

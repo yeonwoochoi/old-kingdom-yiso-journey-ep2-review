@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27182e632effa6f4a9e66f5bf604598f, type: 3}
   m_Name: SO_Weapon_Player_Sword
   m_EditorClassIdentifier: 
+  weaponType: 0
   weaponName: Yiso_Sword
   weaponPrefab: {fileID: 2437791315141813589, guid: 4ef8a4e51dfe44243a11bc02749bfdf1, type: 3}
+  characterAnimatorController: {fileID: 22100000, guid: 4d4c98d9a8a0443418465f7256868cbc, type: 2}
   baseDamage: 10
   minDamage: 10
   maxDamage: 15

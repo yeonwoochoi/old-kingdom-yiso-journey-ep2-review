@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27182e632effa6f4a9e66f5bf604598f, type: 3}
   m_Name: SO_Weapon_Enemy_Bow
   m_EditorClassIdentifier: 
+  weaponType: 1
   weaponName: Enemy_Bow
   weaponPrefab: {fileID: 2437791315141813589, guid: 0359c6f9a137b6946b638714bd85d20a, type: 3}
+  characterAnimatorController: {fileID: 0}
   baseDamage: 10
   minDamage: 10
   maxDamage: 15

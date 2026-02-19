@@ -1053,6 +1053,8 @@ MonoBehaviour:
   characterID: Enemy
   characterModel: {fileID: 613678063}
   animator: {fileID: 613678064}
+  _animationSettings:
+    defaultAnimationController: {fileID: 0}
   _abilitySettings:
     abilities:
     - {fileID: 11400000, guid: a881ca7a00658ec4fa6666b1017fefaf, type: 2}
@@ -1066,6 +1068,7 @@ MonoBehaviour:
   _weaponSettings:
     weaponAttachPoint: {fileID: 96548311}
     initialWeapon: {fileID: 11400000, guid: d5d4128da89be9a4cbe43297ca8f6d5b, type: 2}
+    weaponList: []
 --- !u!114 &1362263426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1300,10 +1303,13 @@ MonoBehaviour:
   characterID: Yiso
   characterModel: {fileID: 1642988287}
   animator: {fileID: 1642988288}
+  _animationSettings:
+    defaultAnimationController: {fileID: 22100000, guid: 4d4c98d9a8a0443418465f7256868cbc, type: 2}
   _abilitySettings:
     abilities:
     - {fileID: 11400000, guid: a2ab50a37cb23f8469c7a97d6e53f777, type: 2}
     - {fileID: 11400000, guid: fc853e139b48bd440babe4d31836e6d4, type: 2}
+    - {fileID: 11400000, guid: b9a2b403727ae7e46818d9f814ca2747, type: 2}
     - {fileID: 11400000, guid: 96c4d4affeec0db4d88b1461b7f607a9, type: 2}
   _lifecycleSettings:
     characterEntityHealth: {fileID: 1497929015}
@@ -1312,7 +1318,10 @@ MonoBehaviour:
     parent: {fileID: 0}
   _weaponSettings:
     weaponAttachPoint: {fileID: 1333830990}
-    initialWeapon: {fileID: 11400000, guid: a2fb978da2b39f8488b42e154523b305, type: 2}
+    initialWeapon: {fileID: 11400000, guid: b45b7555524403c48895e0700a56daea, type: 2}
+    weaponList:
+    - {fileID: 11400000, guid: b45b7555524403c48895e0700a56daea, type: 2}
+    - {fileID: 11400000, guid: a2fb978da2b39f8488b42e154523b305, type: 2}
 --- !u!114 &1497929015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1415,7 +1424,7 @@ Animator:
   m_GameObject: {fileID: 1642988287}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: b2e28b04779ebde4d93f16f53b524847, type: 2}
+  m_Controller: {fileID: 22100000, guid: 4d4c98d9a8a0443418465f7256868cbc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

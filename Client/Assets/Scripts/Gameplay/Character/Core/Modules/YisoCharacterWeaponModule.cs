@@ -10,6 +10,7 @@ namespace Gameplay.Character.Core.Modules {
     /// </summary>
     public sealed class YisoCharacterWeaponModule : YisoCharacterModuleBase {
         private readonly Settings _settings;
+        private YisoCharacterAbilityModule _abilityModule;
 
         /// <summary>
         /// 현재 장착된 무기 인스턴스
@@ -20,6 +21,8 @@ namespace Gameplay.Character.Core.Modules {
         /// 무기가 부착될 Transform (캐릭터의 손 등)
         /// </summary>
         private Transform _weaponAttachPoint;
+
+        private int _currentWeaponIndex = 0;
 
         public YisoCharacterWeaponModule(IYisoCharacterContext context, Settings settings) : base(context) {
             _settings = settings;
@@ -37,6 +40,8 @@ namespace Gameplay.Character.Core.Modules {
                 _weaponAttachPoint = Context.Transform;
                 YisoLogger.LogWarning($"[YisoCharacterWeaponModule] WeaponAttachPoint가 설정되지 않아 캐릭터의 Transform을 사용합니다.");
             }
+            
+            _abilityModule = Context.GetModule<YisoCharacterAbilityModule>();
         }
 
         public override void LateInitialize() {
@@ -69,6 +74,11 @@ namespace Gameplay.Character.Core.Modules {
 
         #region Public API
 
+        public void ChangeWeapon() {
+            _currentWeaponIndex = (_currentWeaponIndex + 1) % _settings.weaponList.Length;
+            EquipWeapon(_settings.weaponList[_currentWeaponIndex]);
+        }
+        
         /// <summary>
         /// 새로운 무기를 장착합니다.
         /// 기존 무기가 있으면 파괴하고 새 무기를 생성합니다.
@@ -79,7 +89,10 @@ namespace Gameplay.Character.Core.Modules {
                 YisoLogger.LogWarning("[YisoCharacterWeaponModule] EquipWeapon: weaponData가 null입니다.");
                 return;
             }
-
+            
+            // 각 Ability 초기화
+            _abilityModule.ResetAbilities();
+            
             // 기존 무기 제거
             UnequipWeapon();
 
@@ -93,9 +106,15 @@ namespace Gameplay.Character.Core.Modules {
 
             CurrentWeapon.Activate();
 
-            // 무기 Animator를 AnimationModule에 등록 (Top-down Push 방식)
+            var animationModule = Context.GetModule<YisoCharacterAnimationModule>();
+
+            // 무기에 지정된 캐릭터 AnimatorController 적용 (AOC 전환 + 파라미터 초기화 + 재검증)
+            if (weaponData.characterAnimatorController != null) {
+                animationModule?.SetAnimatorController(weaponData.characterAnimatorController);
+            }
+
+            // 무기 Animator를 AnimationModule에 등록 → 동기화 (Top-down Push 방식)
             if (CurrentWeapon.WeaponAnimator != null) {
-                var animationModule = Context.GetModule<YisoCharacterAnimationModule>();
                 animationModule?.RegisterExternalAnimator(CurrentWeapon.WeaponAnimator);
             }
 
@@ -170,6 +189,9 @@ namespace Gameplay.Character.Core.Modules {
 
             [Tooltip("게임 시작 시 기본으로 장착할 무기")]
             public YisoWeaponDataSO initialWeapon;
+
+            [Tooltip("소유한 무기 (교체 가능)")]
+            public YisoWeaponDataSO[] weaponList;
         }
     }
 }
