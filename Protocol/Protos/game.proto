@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package yiso;
+
+option csharp_namespace = "Yiso.Protocol";
+
+import "common.proto";
+
+// C2S: Client → Server
+// S2C: Server → Client
+
+// 패킷 예시 — 실제 게임에 맞게 수정
+
+message C2S_Move {
+  Vector2 position = 1;
+  Vector2 direction = 2;
+}
+
+message S2C_Move {
+  int32 player_id = 1;
+  Vector2 position = 2;
+  Vector2 direction = 3;
+}
