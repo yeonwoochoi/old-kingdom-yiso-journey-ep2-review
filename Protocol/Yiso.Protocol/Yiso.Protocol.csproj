@@ -8,11 +8,11 @@
 
     <ItemGroup>
         <PackageReference Include="Google.Protobuf" Version="3.29.3" />
-        <PackageReference Include="Grpc.Tools" Version="2.70.0" PrivateAssets="All" />
     </ItemGroup>
 
+    <!-- generate.ps1 실행 후 생성된 C# 파일을 컴파일 -->
     <ItemGroup>
-        <Protobuf Include="../Protos/**/*.proto" ProtoRoot="../Protos" CompileOutputs="true" GrpcServices="None" />
+        <Compile Include="Generated\*.cs" />
     </ItemGroup>
 
 </Project>
