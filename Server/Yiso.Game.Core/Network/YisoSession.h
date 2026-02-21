@@ -1,0 +1,44 @@
+#pragma once
+#include "PacketHeader.h"
+#include <boost/asio.hpp>
+#include <deque>
+#include <functional>
+#include <memory>
+#include <vector>
+#include <cstdint>
+
+namespace Yiso::Network
+{
+    class YisoSession : public std::enable_shared_from_this<YisoSession>
+    {
+    public:
+        using SessionId = uint32_t;
+        using Socket = boost::asio::ip::tcp::socket;
+        using OnRecv = std::function<void(SessionId, PacketType, const uint8_t*, uint32_t)>; // 패킷 수신 콜백: (세션ID, 패킷타입, 페이로드 포인터, 페이로드 크기)
+        using OnDisconnect = std::function<void(SessionId)>; // 연결 해제 콜백: (세션ID)
+
+        YisoSession(SessionId id, Socket socket, OnRecv onRecv, OnDisconnect onDisconnect);
+
+        void Start();
+        void Send(std::vector<uint8_t> frame);
+
+        SessionId GetId() const { return id_; }
+
+    private:
+        void DoReadHeader();
+        void DoReadBody();
+        void DoWrite();
+
+        SessionId id_;
+        Socket socket_;
+
+        PacketHeader header_buf_{};
+        std::vector<uint8_t> body_buf_;
+
+        std::deque<std::vector<uint8_t>> send_queue_;
+        bool writing_ = false;
+
+        OnRecv on_recv_;
+        OnDisconnect on_disconnect_;
+    };
+}
