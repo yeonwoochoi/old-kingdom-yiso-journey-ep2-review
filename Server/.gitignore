@@ -6,6 +6,14 @@
 [Bb]in/
 [Oo]bj/
 
+# C++ 빌드 아티팩트
+x64/
+x86/
+*.pdb
+*.idb
+*.ilk
+*.exp
+
 # User-specific files
 *.rsuser
 *.user
