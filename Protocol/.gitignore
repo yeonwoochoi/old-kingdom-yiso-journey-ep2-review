@@ -1,0 +1,9 @@
+# 자동 생성 파일 (generate.bat / generate.sh 실행 시 재생성됨)
+Generated/
+
+# .NET 빌드 아티팩트
+**/obj/
+**/bin/
+
+# JetBrains Rider IDE
+.idea/

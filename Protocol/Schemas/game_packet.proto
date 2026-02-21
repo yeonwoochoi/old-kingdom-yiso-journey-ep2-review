@@ -1,0 +1,19 @@
+syntax = "proto3";
+package yiso.game;
+
+import "common.proto";
+import "game_enum.proto";
+
+message C2S_Move {
+  yiso.common.Vector3 position = 1;
+  yiso.common.Vector3 direction = 2;
+}
+
+message C2S_Chat {
+  string message = 1;
+}
+
+message S2C_Chat {
+  uint32 session_id = 1;
+  string message = 2;
+}
