@@ -42,5 +42,7 @@ namespace Yiso::Network
 
         OnRecv on_recv_;
         OnDisconnect on_disconnect_;
+
+        static constexpr size_t MAX_SEND_QUEUE_SIZE = 256;
     };
 }

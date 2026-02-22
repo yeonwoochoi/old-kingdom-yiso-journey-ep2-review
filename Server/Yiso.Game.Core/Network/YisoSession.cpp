@@ -16,23 +16,23 @@ namespace Yiso::Network
         DoReadHeader();
     }
 
-    // Send 함수는 어디서든 호출 될 수 있음
-    // 예를 들면 Broadcast에서 여러 세션에 전송..
-    // 그런데 wirting_ 플래그와 send_queue_에 대한 동기화가 없음
-    // Send를 상항 io_conext 스레드에서 실행되도록 post 로 감싼다
-    // 이렇게하면 Send, DoWrite, DoReadHeader, DoReadBody 함수가 모두 같은 io_context 스레드에서 실행되므로 동기화 문제를 피할 수 있음
-    // 추후 멀티 스레드 io_context를 사용할 경우, boost::asio::strand 도입
+    // post로 감싸 항상 io_context 스레드에서 실행 → writing_, send_queue_ 접근이 단일 스레드로 보장
+    // 추후 멀티 스레드 io_context 전환 시 strand로 교체
     void YisoSession::Send(std::vector<uint8_t> frame)
     {
-        send_queue_.push_back(std::move(frame));
-        // 제한 없이 계속 쌓임
-        // 클라이언트가 데이터를 느리게 수신하거나 아예 수신하지 않으면?
-        //  - 서버는 계속 Broadcast 메시지를 send_queue_에 넣음
-        //  - async_write는 소켓 버퍼가 꽉차서 완료되지 않음
-        //  - send_queue_에 메시지가 무한히 쌓인다 -> 서버 메모리 고갈
-        // 해결 필요
-        if (!writing_)
-            DoWrite();
+        boost::asio::post(socket_.get_executor(),
+            [this, self = shared_from_this(), frame = std::move(frame)]() mutable
+            {
+                if (send_queue_.size() >= MAX_SEND_QUEUE_SIZE)
+                {
+                    spdlog::warn("[Session:{}] send_queue_ 한도 초과 ({}개), 연결 종료", id_, send_queue_.size());
+                    Disconnect();
+                    return;
+                }
+                send_queue_.push_back(std::move(frame));
+                if (!writing_)
+                    DoWrite();
+            });
     }
 
     void YisoSession::DoReadHeader()
