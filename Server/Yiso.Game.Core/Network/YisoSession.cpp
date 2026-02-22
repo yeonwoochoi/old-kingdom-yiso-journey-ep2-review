@@ -32,7 +32,7 @@ namespace Yiso::Network
             {
                 if (ec)
                 {
-                    on_disconnect_(id_);
+                    Disconnect(ec);
                     return;
                 }
                 DoReadBody();
@@ -51,7 +51,7 @@ namespace Yiso::Network
             {
                 if (ec)
                 {
-                    on_disconnect_(id_);
+                    Disconnect(ec);
                     return;
                 }
                 on_recv_(id_, static_cast<PacketType>(header_buf_.type), body_buf_.data(), static_cast<uint32_t>(body_buf_.size()));
@@ -71,7 +71,7 @@ namespace Yiso::Network
             {
                 if (ec)
                 {
-                    on_disconnect_(id_);
+                    Disconnect(ec);
                     return;
                 }
                 send_queue_.pop_front();
@@ -82,4 +82,15 @@ namespace Yiso::Network
             }
         );
     }
+
+    void YisoSession::Disconnect(boost::system::error_code ec = {})
+    {
+        if (disconnected_) return;
+        disconnected_ = true;
+
+        socket_.shutdown(boost::asio::ip::tcp::socket::shutdown_both, ec);
+        socket_.close(ec);
+        on_disconnect_(id_);
+    }
+
 }

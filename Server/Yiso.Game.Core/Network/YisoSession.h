@@ -21,6 +21,7 @@ namespace Yiso::Network
 
         void Start();
         void Send(std::vector<uint8_t> frame);
+        void Disconnect(boost::system::error_code ec={});
 
         SessionId GetId() const { return id_; }
 
@@ -37,6 +38,7 @@ namespace Yiso::Network
 
         std::deque<std::vector<uint8_t>> send_queue_;
         bool writing_ = false;
+        bool disconnected_ = false;
 
         OnRecv on_recv_;
         OnDisconnect on_disconnect_;
