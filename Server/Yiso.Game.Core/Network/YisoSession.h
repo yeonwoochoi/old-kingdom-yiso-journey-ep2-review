@@ -29,9 +29,11 @@ namespace Yiso::Network
         void DoReadHeader();
         void DoReadBody();
         void DoWrite();
+        void ResetTimer();
 
         SessionId id_;
         Socket socket_;
+        boost::asio::steady_timer timer_; // socket_ 이후 선언하기 (초기화 순서 보장)
 
         PacketHeader header_buf_{};
         std::vector<uint8_t> body_buf_;
@@ -44,5 +46,6 @@ namespace Yiso::Network
         OnDisconnect on_disconnect_;
 
         static constexpr size_t MAX_SEND_QUEUE_SIZE = 256;
+        static constexpr int TIMEOUT_SEC = 30;
     };
 }

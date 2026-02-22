@@ -6,6 +6,7 @@ namespace Yiso::Network
     YisoSession::YisoSession(SessionId id, Socket socket, OnRecv onRecv, OnDisconnect onDisconnect)
         : id_(id),
           socket_(std::move(socket)),
+          timer_(socket_.get_executor()),
           on_recv_(onRecv),
           on_disconnect_(onDisconnect)
     {
@@ -13,7 +14,19 @@ namespace Yiso::Network
 
     void YisoSession::Start()
     {
+        ResetTimer();
         DoReadHeader();
+    }
+
+    void YisoSession::ResetTimer()
+    {
+        timer_.expires_after(std::chrono::seconds(TIMEOUT_SEC));
+        timer_.async_wait([this, self = shared_from_this()](boost::system::error_code ec)
+        {
+            if (ec == boost::asio::error::operation_aborted) return; // Disconnect()에서 cancel됨
+            spdlog::warn("[Session:{}] {}초 타임아웃, 연결 종료", id_, TIMEOUT_SEC);
+            Disconnect();
+        });
     }
 
     // post로 감싸 항상 io_context 스레드에서 실행 → writing_, send_queue_ 접근이 단일 스레드로 보장
@@ -97,6 +110,7 @@ namespace Yiso::Network
                     Disconnect();
                     return;
                 }
+                ResetTimer(); // 완전한 패킷 수신 시마다 타임아웃 리셋
                 on_recv_(id_, static_cast<PacketType>(header_buf_.type), body_buf_.data(), static_cast<uint32_t>(body_buf_.size()));
                 DoReadHeader(); // 이렇게 계속 다음 패킷 올떄까지 대기 -> 처리 반복
             }
@@ -131,6 +145,8 @@ namespace Yiso::Network
     {
         if (disconnected_) return;
         disconnected_ = true;
+
+        timer_.cancel(); // 타임아웃 타이머 취소 (operation_aborted로 콜백 완료됨)
 
         // ec가 없거나 EOF면 정상 종료, 그 외는 비정상
         if (!ec || ec == boost::asio::error::eof)
