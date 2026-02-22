@@ -8,10 +8,17 @@ int main(int argc, char* argv[])
 {
     Yiso::InitLogger();
 
-    // 포트 범위 검증 없음
     uint16_t port = 7777;
     if (argc > 1)
-        port = static_cast<uint16_t>(std::stoi(argv[1]));
+    {
+        int raw = std::stoi(argv[1]);
+        if (raw < 1024 || raw > 65535)
+        {
+            spdlog::critical("[Server] 포트 범위 오류: {} (유효 범위: 1024~65535)", raw);
+            return 1;
+        }
+        port = static_cast<uint16_t>(raw);
+    }
 
     try
     {
