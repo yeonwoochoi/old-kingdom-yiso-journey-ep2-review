@@ -51,4 +51,12 @@ namespace Yiso::Network
         // shard_ptr을 복사했으므로 전송 도중 세션이 map에서 제거되더라도 객체는 안전하게 유지 된다.
         
     }
+
+    void YisoSessionManager::DisconnectAll()
+    {
+        for (auto& [id, session] : sessions_)
+        {
+            session->Disconnect();
+        }
+    }
 }

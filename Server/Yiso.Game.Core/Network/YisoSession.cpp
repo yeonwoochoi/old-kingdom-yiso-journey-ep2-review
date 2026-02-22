@@ -44,7 +44,7 @@ namespace Yiso::Network
             {
                 if (ec)
                 {
-                    on_disconnect_(id_); // 콜백 호출
+                    Disconnect(ec);
                     return; // 소켓은 열린 상태로 방치
                     // 왜 문제인가?
                     // shard_ptr의 참조 카운트가 0이 되면 소켓이 닫히긴 하지만, 비동기 콜백에서 shared_from_this로 참조를 잡고 있어서 소켓이 바로 닫히지 않을 수 있음
@@ -107,7 +107,7 @@ namespace Yiso::Network
             {
                 if (ec)
                 {
-                    on_disconnect_(id_);
+                    Disconnect(ec);
                     return;
                 }
                 // PacketType 검증 없음
@@ -137,7 +137,7 @@ namespace Yiso::Network
                     // 클라이언트가 정상 종료 한건지 eof
                     // 네트워크가 끊긴건지, connection_reset
                     // 서버쪽 문제인지 등등..
-                    on_disconnect_(id_);
+                    Disconnect(ec);
                     return;
                 }
                 send_queue_.pop_front();
@@ -148,4 +148,15 @@ namespace Yiso::Network
             }
         );
     }
+
+    void YisoSession::Disconnect(boost::system::error_code ec = {})
+    {
+        if (disconnected_) return;
+        disconnected_ = true;
+
+        socket_.shutdown(boost::asio::ip::tcp::socket::shutdown_both, ec);
+        socket_.close(ec);
+        on_disconnect_(id_);
+    }
+
 }
