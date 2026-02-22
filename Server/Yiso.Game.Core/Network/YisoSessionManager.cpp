@@ -28,4 +28,12 @@ namespace Yiso::Network
         if (it != sessions_.end())
             it->second->Send(std::move(frame));
     }
+
+    void YisoSessionManager::DisconnectAll()
+    {
+        for (auto& [id, session] : sessions_)
+        {
+            session->Disconnect();
+        }
+    }
 }
