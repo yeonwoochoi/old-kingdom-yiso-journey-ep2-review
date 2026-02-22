@@ -22,6 +22,7 @@ namespace Yiso::Network
             OnDisconnect onDisconnect);
 
         YisoSessionManager& GetSessionManager() { return session_manager_; };
+        void Stop();
 
     private:
         void DoAccept();
