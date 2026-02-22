@@ -1,10 +1,13 @@
 #include "Chat/ChatHandler.h"
+#include "Network/Logger.h"
 #include "Network/YisoServer.h"
 #include <boost/asio.hpp>
-#include <iostream>
+#include <spdlog/spdlog.h>
 
 int main(int argc, char* argv[])
 {
+    Yiso::InitLogger();
+
     // 포트 범위 검증 없음
     uint16_t port = 7777;
     if (argc > 1)
@@ -29,9 +32,9 @@ int main(int argc, char* argv[])
         // io.run() 전에 초기화하므로 콜백 호출 전 보장됨
         chat = std::make_unique<Yiso::Game::ChatHandler>(server.GetSessionManager());
 
-        std::cout << "[Server] Listening on port " << port << "\n";
+        spdlog::info("[Server] 포트 {} 에서 수신 대기 중", port);
         io.run();
-        
+
         // Graceful Shutdown
         // 현재 서버를 종료하려면 프로세스를 강제 종료해야 된다.
         // 진행중인 비동기 I/O가 정리 없이 중단된다.
@@ -41,7 +44,7 @@ int main(int argc, char* argv[])
     }
     catch (std::exception& e)
     {
-        std::cerr << "[Server] Exception: " << e.what() << "\n";
+        spdlog::critical("[Server] 예외 발생: {}", e.what());
         return 1;
     }
 
