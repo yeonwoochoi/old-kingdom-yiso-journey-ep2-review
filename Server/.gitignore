@@ -26,3 +26,6 @@ appsettings.Production.json
 
 # .NET HTTP Client private env
 **/http-client.private.env.json
+
+# vcpkg manifest mode 설치 디렉토리 (빌드 시 자동 생성)
+vcpkg_installed/
