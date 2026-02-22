@@ -110,11 +110,12 @@ namespace Yiso::Network
                     Disconnect(ec);
                     return;
                 }
-                // PacketType 검증 없음
-                // 클라이언트가 type = 9999를 보내면, 유효하지 않은 enum값이 됨
-                // 추후 핸들러가 늘어나면 잘못된 PacketTpye이 예상치 못한 핸들러로 전달 될 수 있음
-                // switch 문 에서 처리되지 않는 값이 들어오면서 정의되지 않은 동작을 할 수 있음
-                // 서버측에서 유효하지 않은 패킷을 보내는 클라이언트를 감지할 수 없음
+                if (!IsValidPacketType(header_buf_.type))
+                {
+                    spdlog::warn("[Session:{}] 유효하지 않은 패킷 타입={}, 연결 종료", id_, header_buf_.type);
+                    Disconnect();
+                    return;
+                }
                 on_recv_(id_, static_cast<PacketType>(header_buf_.type), body_buf_.data(), static_cast<uint32_t>(body_buf_.size()));
                 DoReadHeader(); // 이렇게 계속 다음 패킷 올떄까지 대기 -> 처리 반복
             }
