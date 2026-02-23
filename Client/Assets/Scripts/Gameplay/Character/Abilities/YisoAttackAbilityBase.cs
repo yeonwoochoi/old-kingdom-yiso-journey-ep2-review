@@ -126,6 +126,8 @@ namespace Gameplay.Character.Abilities {
             if (_isAttacking) {
                 UnlockOrientation();
             }
+            
+            _weaponModule.CurrentWeapon?.Deactivate();
         }
 
         public override void OnRevive() {
@@ -133,6 +135,8 @@ namespace Gameplay.Character.Abilities {
 
             // 부활 시 방향 잠금 해제 (안전장치)
             UnlockOrientation();
+            
+            _weaponModule.CurrentWeapon?.Activate();
         }
     }
 }
