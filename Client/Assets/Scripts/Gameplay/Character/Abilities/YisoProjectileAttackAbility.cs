@@ -282,8 +282,13 @@ namespace Gameplay.Character.Abilities {
         private bool TryAttack() {
             if (!Context.IsAttackAllowed(this)) return false;
 
+            var currentWeapon = _weaponModule.GetCurrentWeaponData();
+            if (currentWeapon == null) {
+                return false;
+            }
+            
             // 쿨타임 체크
-            if (Time.time - _lastAttackTime < _weaponModule.GetCurrentWeaponData().GetAttackCooldown()) {
+            if (Time.time - _lastAttackTime < currentWeapon.GetAttackCooldown()) {
                 return false;
             }
 
