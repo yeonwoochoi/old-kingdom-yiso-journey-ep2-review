@@ -319,7 +319,7 @@ MonoBehaviour:
   targetLayers:
     serializedVersion: 2
     m_Bits: 5120
-  canHitMultipleTimes: 1
+  canHitMultipleTargets: 1
 --- !u!1 &6310621251112110773
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,7 +414,7 @@ MonoBehaviour:
   targetLayers:
     serializedVersion: 2
     m_Bits: 5120
-  canHitMultipleTimes: 1
+  canHitMultipleTargets: 1
 --- !u!1 &6498625783107249977
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,7 +509,7 @@ MonoBehaviour:
   targetLayers:
     serializedVersion: 2
     m_Bits: 5120
-  canHitMultipleTimes: 1
+  canHitMultipleTargets: 1
 --- !u!1 &8780942134852610237
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,4 +657,4 @@ MonoBehaviour:
   targetLayers:
     serializedVersion: 2
     m_Bits: 5120
-  canHitMultipleTimes: 1
+  canHitMultipleTargets: 1
