@@ -135,24 +135,32 @@ namespace Gameplay.Character.Core.Modules {
         }
 
         /// <summary>
-        /// Animator의 모든 파라미터를 기본값으로 초기화한다.
+        /// 캐릭터 Animator와 등록된 외부 Animator(무기 등)의 모든 파라미터를 기본값으로 초기화한다.
         /// </summary>
         private void ResetAllParameters() {
-            if (_animator == null) return;
+            ResetAnimatorParameters(_animator);
 
-            foreach (var param in _animator.parameters) {
+            foreach (var externalAnimator in _externalAnimators) {
+                ResetAnimatorParameters(externalAnimator);
+            }
+        }
+
+        private static void ResetAnimatorParameters(Animator animator) {
+            if (animator == null) return;
+
+            foreach (var param in animator.parameters) {
                 switch (param.type) {
                     case AnimatorControllerParameterType.Bool:
-                        _animator.SetBool(param.nameHash, param.defaultBool);
+                        animator.SetBool(param.nameHash, param.defaultBool);
                         break;
                     case AnimatorControllerParameterType.Float:
-                        _animator.SetFloat(param.nameHash, param.defaultFloat);
+                        animator.SetFloat(param.nameHash, param.defaultFloat);
                         break;
                     case AnimatorControllerParameterType.Int:
-                        _animator.SetInteger(param.nameHash, param.defaultInt);
+                        animator.SetInteger(param.nameHash, param.defaultInt);
                         break;
                     case AnimatorControllerParameterType.Trigger:
-                        _animator.ResetTrigger(param.nameHash);
+                        animator.ResetTrigger(param.nameHash);
                         break;
                 }
             }
