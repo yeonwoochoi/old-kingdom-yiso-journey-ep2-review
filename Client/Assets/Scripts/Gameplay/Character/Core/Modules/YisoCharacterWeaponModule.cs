@@ -23,6 +23,7 @@ namespace Gameplay.Character.Core.Modules {
         private Transform _weaponAttachPoint;
 
         private int _currentWeaponIndex = 0;
+        private float _lastWeaponChangeTime = float.MinValue;
 
         public YisoCharacterWeaponModule(IYisoCharacterContext context, Settings settings) : base(context) {
             _settings = settings;
@@ -46,11 +47,9 @@ namespace Gameplay.Character.Core.Modules {
 
         public override void LateInitialize() {
             base.LateInitialize();
-
-            // 초기 무기 장착
-
             YisoLogger.Log($"[WeaponModule] LateInitialize 실행됨: {Context.GameObject.name}", Context.GameObject);
 
+            _lastWeaponChangeTime = float.MinValue;
             if (_settings.initialWeapon != null)
             {
                 EquipWeapon(_settings.initialWeapon);
@@ -89,6 +88,12 @@ namespace Gameplay.Character.Core.Modules {
                 YisoLogger.LogWarning("[YisoCharacterWeaponModule] EquipWeapon: weaponData가 null입니다.");
                 return;
             }
+
+            if (Time.time - _lastWeaponChangeTime < _settings.weaponChangeCoolTime) {
+                return;
+            }
+            
+            _lastWeaponChangeTime = Time.time;
             
             // 각 Ability 초기화
             _abilityModule.ResetAbilities();
@@ -131,7 +136,6 @@ namespace Gameplay.Character.Core.Modules {
                     var animationModule = Context.GetModule<YisoCharacterAnimationModule>();
                     animationModule?.UnregisterExternalAnimator(CurrentWeapon.WeaponAnimator);
                 }
-
                 CurrentWeapon.Destroy();
                 CurrentWeapon = null;
             }
@@ -192,6 +196,9 @@ namespace Gameplay.Character.Core.Modules {
 
             [Tooltip("소유한 무기 (교체 가능)")]
             public YisoWeaponDataSO[] weaponList;
+
+            [Tooltip("무기 교체 쿨타임")]
+            public float weaponChangeCoolTime = 1f;
         }
     }
 }
