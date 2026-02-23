@@ -120,7 +120,8 @@ namespace Gameplay.Character.Weapon {
                 IsCritical = false
             };
 
-            var health = target.GetComponent<YisoEntityHealth>();
+            // Hurtbox가 자식에 있는 경우를 위해 GetComponentInParent 사용
+            var health = target.GetComponentInParent<YisoEntityHealth>();
             if (health != null && !health.IsDead) {
                 health.TakeDamage(damageInfo);
             }

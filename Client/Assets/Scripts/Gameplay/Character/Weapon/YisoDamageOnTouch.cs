@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Core.Behaviour;
 using Gameplay.Health;
 using UnityEngine;
+using Utils;
 
 namespace Gameplay.Character.Weapon {
     /// <summary>
@@ -16,8 +18,8 @@ namespace Gameplay.Character.Weapon {
         [Tooltip("데미지를 입힐 대상 레이어")]
         [SerializeField] private LayerMask targetLayers = -1;
 
-        [Tooltip("한 번 활성화 시 같은 대상을 여러 번 공격할지 여부")]
-        [SerializeField] private bool canHitMultipleTimes = false;
+        [Tooltip("한 번 활성화 시 여러 대상을 공격할지 여부")]
+        [SerializeField] private bool canHitMultipleTargets = false;
 
         /// <summary>
         /// 충돌 발생 시 호출되는 이벤트. (히트된 GameObject, 히트 포인트)
@@ -41,9 +43,7 @@ namespace Gameplay.Character.Weapon {
         }
 
         private void OnTriggerStay2D(Collider2D other) {
-            if (canHitMultipleTimes) {
-                ProcessCollision(other);
-            }
+            ProcessCollision(other);
         }
 
         private void ProcessCollision(Collider2D other) {
@@ -57,14 +57,19 @@ namespace Gameplay.Character.Weapon {
                 return;
             }
 
-            // 이미 맞은 대상은 다시 공격하지 않음 (canHitMultipleTimes가 false일 때)
-            if (!canHitMultipleTimes && _hitTargets.Contains(other.gameObject)) {
+            // 최초로 맞은 대상만 공격
+            if (!canHitMultipleTargets && _hitTargets.Count > 0)
                 return;
-            }
 
             // Health 컴포넌트 확인 (Hurtbox 우선, 없으면 직접 찾기)
             var health = FindHealth(other);
             if (health == null || health.IsDead) {
+                return;
+            }
+            
+            // health.gameObject 기준으로 추적 -> 적에 콜라이더가 여러 개여도 한 번만 맞음
+            var healthOwner = health.gameObject;
+            if (_hitTargets.Contains(healthOwner)) {
                 return;
             }
 
@@ -74,13 +79,13 @@ namespace Gameplay.Character.Weapon {
             // OnHit 이벤트 발생 (WeaponInstance에서 데미지 계산)
             OnHit?.Invoke(other.gameObject, hitPoint);
 
-            // 히트 대상 기록
-            _hitTargets.Add(other.gameObject);
+            // 히트 대상 기록 (health 오너 기준)
+            _hitTargets.Add(healthOwner);
         }
 
         /// <summary>
-        /// Collider에서 YisoEntityHealth를 찾습니다.
-        /// YisoHurtbox가 있으면 우선 사용하고, 없으면 직접 GetComponent로 찾습니다.
+        /// Collider에서 YisoEntityHealth를 찾음
+        /// YisoHurtbox가 있으면 우선 사용하고, 없으면 직접 GetComponent로 찾음
         /// </summary>
         private YisoEntityHealth FindHealth(Collider2D collider) {
             // 1. Hurtbox 컴포넌트 확인 (피격 판정 영역 분리된 경우)
@@ -92,10 +97,7 @@ namespace Gameplay.Character.Weapon {
             // 2. 직접 Health 컴포넌트 확인 (기존 방식, 하위 호환)
             return collider.GetComponent<YisoEntityHealth>();
         }
-
-        /// <summary>
-        /// target이 owner의 자식인지 확인 (자해 방지).
-        /// </summary>
+        
         private bool IsChildOf(GameObject target, GameObject owner) {
             if (target == owner) return true;
 
@@ -111,19 +113,13 @@ namespace Gameplay.Character.Weapon {
         }
 
         #region Public API
-
-        /// <summary>
-        /// 데미지를 활성화합니다. (Collider ON)
-        /// </summary>
+        
         public void EnableDamage() {
             if (_collider != null) {
                 _collider.enabled = true;
             }
         }
-
-        /// <summary>
-        /// 데미지를 비활성화합니다. (Collider OFF)
-        /// </summary>
+        
         public void DisableDamage() {
             if (_collider != null) {
                 _collider.enabled = false;
@@ -132,9 +128,6 @@ namespace Gameplay.Character.Weapon {
             _hitTargets.Clear();
         }
 
-        /// <summary>
-        /// 무기 소유자를 설정합니다.
-        /// </summary>
         public void SetOwner(GameObject owner) {
             _owner = owner;
         }
@@ -150,12 +143,9 @@ namespace Gameplay.Character.Weapon {
             if (_collider == null) return;
 
             var isActive = _collider.enabled;
-            // 활성화 상태: 반투명 빨간색 채우기 + 빨간색 테두리
-            // 비활성화 상태: 투명 채우기 + 빨간색 테두리만
             var fillColor = isActive ? new Color(1f, 0f, 0f, 0.3f) : new Color(1f, 0f, 0f, 0f);
             var wireColor = Color.red;
-
-            // 유틸리티 클래스를 통해 Collider2D 그리기
+            
             Utils.YisoDebugUtils.DrawGizmoCollider2D(_collider, fillColor, wireColor);
         }
 #endif
