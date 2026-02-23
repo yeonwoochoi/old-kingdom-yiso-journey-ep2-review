@@ -119,24 +119,32 @@ namespace Gameplay.Character.Abilities {
             _orientationAbility?.UnlockOrientation();
         }
 
+        /// <summary>
+        /// 공통 공격 상태 초기화. 서브클래스는 base.ResetAbility() 호출 후 자신의 상태만 추가로 초기화.
+        /// </summary>
+        public override void ResetAbility() {
+            base.ResetAbility();
+
+            _isAttacking = false;
+            StopAttackAnimation();
+            UnlockOrientation();
+
+            var currentWeapon = _weaponModule?.CurrentWeapon;
+            if (currentWeapon?.WeaponAim != null) {
+                currentWeapon.WeaponAim.UnlockAim();
+            }
+        }
+
         public override void OnDeath() {
             base.OnDeath();
-
-            // 공격 중이었다면 방향 잠금 해제
-            if (_isAttacking) {
-                UnlockOrientation();
-            }
-            
-            _weaponModule.CurrentWeapon?.Deactivate();
+            // 사망 시 무기 즉시 숨기기 (UnlockOrientation은 subclass의 ResetAbility에서 처리)
+            _weaponModule?.CurrentWeapon?.Deactivate();
         }
 
         public override void OnRevive() {
             base.OnRevive();
-
-            // 부활 시 방향 잠금 해제 (안전장치)
-            UnlockOrientation();
-            
-            _weaponModule.CurrentWeapon?.Activate();
+            // 부활 시 무기 복원
+            _weaponModule?.CurrentWeapon?.Activate();
         }
     }
 }

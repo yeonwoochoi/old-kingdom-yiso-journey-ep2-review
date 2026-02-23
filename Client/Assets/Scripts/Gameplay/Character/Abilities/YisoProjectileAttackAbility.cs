@@ -520,21 +520,13 @@ namespace Gameplay.Character.Abilities {
         #endregion
 
         public override void ResetAbility() {
+            // base: _isAttacking=false, StopAttackAnimation, UnlockOrientation, UnlockAim
             base.ResetAbility();
 
-            _isAttacking = false;
-            StopAttackAnimation();
             _safetyTimer = 0f;
             _wasAttackPressedLastFrame = false;
             _pendingProjectiles = 0;
             _currentTarget = null;
-
-            UnlockOrientation();
-
-            var currentWeapon = _weaponModule?.CurrentWeapon;
-            if (currentWeapon != null && currentWeapon.WeaponAim != null) {
-                currentWeapon.WeaponAim.UnlockAim();
-            }
         }
 
         public override void OnDeath() {

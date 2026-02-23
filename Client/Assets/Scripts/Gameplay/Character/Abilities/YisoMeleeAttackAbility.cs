@@ -359,28 +359,12 @@ namespace Gameplay.Character.Abilities {
         public override void ResetAbility() {
             base.ResetAbility();
 
-            // 1. 공격 상태 강제 중단
-            _isAttacking = false;
-            StopAttackAnimation();
             _safetyTimer = 0f;
-
-            // 2. 입력 상태 리셋
             _wasAttackPressedLastFrame = false;
             _nextAttackQueued = false;
 
-            // 3. 콤보 리셋
             ResetCombo();
-
-            // 4. 무기 데미지 비활성화
             HandleDisableDamage();
-
-            // 5. Orientation & WeaponAim 잠금 해제
-            UnlockOrientation();
-
-            var currentWeapon = _weaponModule?.CurrentWeapon;
-            if (currentWeapon != null && currentWeapon.WeaponAim != null) {
-                currentWeapon.WeaponAim.UnlockAim();
-            }
         }
 
         public override void OnDeath() {
