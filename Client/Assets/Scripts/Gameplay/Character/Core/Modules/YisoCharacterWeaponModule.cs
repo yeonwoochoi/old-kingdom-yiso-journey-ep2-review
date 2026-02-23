@@ -136,6 +136,8 @@ namespace Gameplay.Character.Core.Modules {
                     var animationModule = Context.GetModule<YisoCharacterAnimationModule>();
                     animationModule?.UnregisterExternalAnimator(CurrentWeapon.WeaponAnimator);
                 }
+                // SafeDestroy는 프레임 끝에 실제 파괴됨 -> 즉시 숨겨야 구 무기가 새 무기와 겹쳐 보이지 않음
+                CurrentWeapon.Deactivate();
                 CurrentWeapon.Destroy();
                 CurrentWeapon = null;
             }

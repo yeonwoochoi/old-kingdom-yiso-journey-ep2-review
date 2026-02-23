@@ -127,10 +127,16 @@ namespace Gameplay.Character.Core.Modules {
             // 1. AnimatorController 교체
             _animator.runtimeAnimatorController = controller;
 
-            // 2. 모든 파라미터를 기본값으로 초기화
+            // 2. State Machine을 Entry State로 강제 초기화
+            // AOC 교체 시 파라미터만 리셋해도 현재 재생 중인 State(예: Attack)는 유지되는 문제가 있음.
+            // Rebind()는 State Machine을 Entry로 돌리고, Update(0f)는 즉시 적용.
+            _animator.Rebind();
+            _animator.Update(0f);
+
+            // 3. 모든 파라미터를 기본값으로 초기화 (Rebind로 이미 리셋되지만 명시적으로 보장)
             ResetAllParameters();
 
-            // 3. 새 Controller에 맞게 파라미터 재검증
+            // 4. 새 Controller에 맞게 파라미터 재검증
             VerifyAnimatorParameters();
         }
 
