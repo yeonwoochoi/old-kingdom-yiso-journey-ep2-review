@@ -8,11 +8,22 @@ namespace Yiso::Network
         UNKNOWN = 0,
 
         // Client -> Server
-        C2S_MOVE = 1,
-        C2S_CHAT = 2,
+        C2S_CHAT = 1,
+        C2S_WHISPER = 2,
+        C2S_CREATE_ROOM = 3,
+        C2S_DELETE_ROOM = 4,
+        C2S_JOIN_ROOM = 5,
+        C2S_LEAVE_ROOM = 6,
+        C2S_ROOM_CHAT = 7,
 
         // Server -> Client
-        S2C_CHAT = 100,
+        S2C_CHAT = 1001,
+        S2C_WHISPER = 1002,
+        S2C_CREATE_ROOM = 1003,
+        S2C_DELETE_ROOM = 1004,
+        S2C_JOIN_ROOM = 1005,
+        S2C_LEAVE_ROOM = 1006,
+        S2C_ROOM_CHAT = 1007,
     };
 
     // 패킷 프레임 포맷:
@@ -29,11 +40,16 @@ namespace Yiso::Network
     {
         switch (static_cast<PacketType>(type))
         {
-            case PacketType::C2S_MOVE:
-            case PacketType::C2S_CHAT:
-                return true;
-            default:
-                return false;
+        case PacketType::C2S_CHAT:
+        case PacketType::C2S_CREATE_ROOM:
+        case PacketType::C2S_DELETE_ROOM:
+        case PacketType::C2S_JOIN_ROOM:
+        case PacketType::C2S_LEAVE_ROOM:
+        case PacketType::C2S_ROOM_CHAT:
+        case PacketType::C2S_WHISPER:
+            return true;
+        default:
+            return false;
         }
     }
 

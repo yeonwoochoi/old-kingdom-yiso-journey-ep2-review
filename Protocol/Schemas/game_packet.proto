@@ -4,11 +4,6 @@ package yiso.game;
 import "common.proto";
 import "game_enum.proto";
 
-message C2S_Move {
-  yiso.common.Vector3 position = 1;
-  yiso.common.Vector3 direction = 2;
-}
-
 message C2S_Chat {
   string message = 1;
 }
@@ -16,4 +11,62 @@ message C2S_Chat {
 message S2C_Chat {
   uint32 session_id = 1;
   string message = 2;
+}
+
+// 귓속말
+message C2S_Whisper {
+  uint32 target_session_id = 1;
+  string message = 2;
+}
+message S2C_Whisper {
+  uint32 from_session_id = 1;
+  string message = 2;
+}
+
+// 채팅방
+message C2S_CreateRoom {
+  string room_name = 1;
+}
+message S2C_CreateRoom {
+  uint32 room_id = 1;
+  string room_name = 2;
+  bool   success = 3;
+  string error = 4;
+}
+message C2S_DeleteRoom {
+  uint32 room_id = 1;
+}
+message S2C_DeleteRoom {
+  uint32 room_id = 1;
+  string room_name = 2;
+  bool   success = 3;
+  string error = 4;
+}
+
+message C2S_JoinRoom {
+  uint32 room_id = 1;
+}
+message S2C_JoinRoom {
+  uint32 room_id = 1;
+  uint32 joined_session = 2;
+  bool   success = 3;
+  string error = 4;
+}
+
+message C2S_LeaveRoom {
+  uint32 room_id = 1;
+}
+message S2C_LeaveRoom {
+  uint32 room_id = 1;
+  uint32 left_session = 2;
+}
+
+message C2S_RoomChat {
+  uint32 room_id = 1;
+  string message = 2;
+}
+message S2C_RoomChat {
+  uint32 room_id = 1;
+  uint32 from_session_id = 2;
+  string message = 3;
 }
