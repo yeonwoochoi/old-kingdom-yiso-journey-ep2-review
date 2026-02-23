@@ -4,9 +4,10 @@ using UnityEngine.InputSystem;
 
 namespace Gameplay.Character.Core.Modules {
     public enum ActionMapType {
-        Player, UI
+        Player,
+        UI
     }
-    
+
     // TODO: 추가 action 구현하셈 (지금은 OnMove, OnAttack만 구현됨)
     /// <summary>
     /// InputModule은 InputSystem의 이벤트를 받아 입력 데이터를 갱신하는 역할만 수행합니다.
@@ -16,6 +17,7 @@ namespace Gameplay.Character.Core.Modules {
         private Settings _settings;
         private InputSystem_Actions _inputActions;
         private YisoCharacterWeaponModule _weaponModule;
+        private YisoCharacterLifecycleModule _lifecycleModule;
 
         /// <summary>
         /// 현재 프레임의 이동 입력 벡터 (WASD, 방향키 등)
@@ -35,6 +37,7 @@ namespace Gameplay.Character.Core.Modules {
             base.Initialize();
             _inputActions = new InputSystem_Actions();
             _weaponModule = Context.GetModule<YisoCharacterWeaponModule>();
+            _lifecycleModule = Context.GetModule<YisoCharacterLifecycleModule>();
         }
 
         public override void OnEnable() {
@@ -45,7 +48,8 @@ namespace Gameplay.Character.Core.Modules {
             _inputActions.Player.Move.canceled += OnMove;
             _inputActions.Player.Attack.performed += OnAttack;
             _inputActions.Player.Attack.canceled += OnAttack;
-            _inputActions.Player.ChangeWeapon.performed += OnChangeWeapon; 
+            _inputActions.Player.ChangeWeapon.performed += OnChangeWeapon;
+            _inputActions.Player.Revive.performed += OnRevive;
         }
 
         public override void OnDisable() {
@@ -56,6 +60,7 @@ namespace Gameplay.Character.Core.Modules {
             _inputActions.Player.Attack.performed -= OnAttack;
             _inputActions.Player.Attack.canceled -= OnAttack;
             _inputActions.Player.ChangeWeapon.performed -= OnChangeWeapon;
+            _inputActions.Player.Revive.performed -= OnRevive;
 
             _inputActions.Player.Disable();
         }
@@ -90,15 +95,21 @@ namespace Gameplay.Character.Core.Modules {
                 AttackInput = false;
             }
         }
-        
-        private void OnChangeWeapon(InputAction.CallbackContext context)
-        {
+
+        private void OnChangeWeapon(InputAction.CallbackContext context) {
             if (context.performed) {
                 _weaponModule.ChangeWeapon();
             }
         }
-        
-        [Serializable] 
-        public class Settings {}
+
+        private void OnRevive(InputAction.CallbackContext context) {
+            if (context.performed) {
+                _lifecycleModule?.Revive();
+            }
+        }
+
+        [Serializable]
+        public class Settings {
+        }
     }
 }

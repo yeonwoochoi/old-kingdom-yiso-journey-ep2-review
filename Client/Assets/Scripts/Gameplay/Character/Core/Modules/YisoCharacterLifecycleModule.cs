@@ -45,6 +45,11 @@ namespace Gameplay.Character.Core.Modules {
             _entityHealth.TakeDamage(damageInfo);
         }
 
+        public void Revive() {
+            if (_entityHealth == null || !_entityHealth.IsDead) return;
+            _entityHealth.Revive();
+        }
+
         private void OnCharacterDied() {
             YisoLogger.Log($"[{Context.GameObject.name}] 사망 처리 시작.");
 
