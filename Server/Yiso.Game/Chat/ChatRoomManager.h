@@ -15,13 +15,19 @@ namespace Yiso::Game
         using RoomId = uint32_t;
         using SessionId = Network::YisoSession::SessionId;
 
+        struct RoomOpResult
+        {
+            bool success;
+            std::string error;
+            std::vector<SessionId> members;
+        };
+
         RoomId CreateRoom(SessionId creator, const std::string& name);
-        bool RemoveRoom(RoomId id);
-        bool JoinRoom(RoomId id, SessionId session);
-        bool LeaveRoom(RoomId id, SessionId session);
+        RoomOpResult TryRemoveRoom(RoomId id, SessionId requester);
+        RoomOpResult TryJoinRoom(RoomId id, SessionId session);
+        RoomOpResult TryLeaveRoom(RoomId id, SessionId session);
         void RemoveSession(SessionId session); // disconnect 시 모든 방에서 제거 (강제 종료된 경우엔 유령 유저 생기니까)
         std::vector<SessionId> GetMembers(RoomId id) const;
-        bool IsCreator(RoomId id, SessionId session) const;
 
     private:
         struct Room

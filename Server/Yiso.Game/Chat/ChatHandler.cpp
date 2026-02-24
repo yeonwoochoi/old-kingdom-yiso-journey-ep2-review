@@ -60,8 +60,6 @@ namespace Yiso::Game
         }
     }
 
-    // ── private 핸들러 ────────────────────────────────────────────
-
     void ChatHandler::HandleChat(Network::YisoSession::SessionId id, const uint8_t* data, uint32_t size)
     {
         yiso::game::C2S_Chat req;
@@ -124,20 +122,17 @@ namespace Yiso::Game
         }
 
         ChatRoomManager::RoomId roomId = req.room_id();
+        auto result = room_manager_.TryRemoveRoom(roomId, id);
 
-        if (!room_manager_.IsCreator(roomId, id))
+        if (!result.success)
         {
             yiso::game::S2C_DeleteRoom resp;
             resp.set_room_id(roomId);
             resp.set_success(false);
-            resp.set_error("권한이 없습니다.");
+            resp.set_error(result.error);
             session_manager_.Send(id, Network::PacketCodec::Encode(Network::PacketType::S2C_DELETE_ROOM, resp));
             return;
         }
-
-        // 삭제 전에 멤버 목록 확보
-        auto members = room_manager_.GetMembers(roomId);
-        room_manager_.RemoveRoom(roomId);
 
         spdlog::info("[Chat] Room {} deleted by session {}", roomId, id);
 
@@ -145,7 +140,7 @@ namespace Yiso::Game
         resp.set_room_id(roomId);
         resp.set_success(true);
         auto frame = Network::PacketCodec::Encode(Network::PacketType::S2C_DELETE_ROOM, resp);
-        for (auto memberId : members)
+        for (auto memberId : result.members)
             session_manager_.Send(memberId, frame);
     }
 
@@ -159,28 +154,26 @@ namespace Yiso::Game
         }
 
         ChatRoomManager::RoomId roomId = req.room_id();
+        auto result = room_manager_.TryJoinRoom(roomId, id);
 
-        if (!room_manager_.JoinRoom(roomId, id))
+        if (!result.success)
         {
             yiso::game::S2C_JoinRoom resp;
             resp.set_room_id(roomId);
             resp.set_success(false);
-            resp.set_error("입장할 수 없습니다.");
+            resp.set_error(result.error);
             session_manager_.Send(id, Network::PacketCodec::Encode(Network::PacketType::S2C_JOIN_ROOM, resp));
             return;
         }
 
         spdlog::info("[Chat] Session {} joined room {}", id, roomId);
 
-        // 입장 후 멤버 목록 (입장한 세션 포함) 전체에 알림
-        auto members = room_manager_.GetMembers(roomId);
-
         yiso::game::S2C_JoinRoom resp;
         resp.set_room_id(roomId);
         resp.set_joined_session(id);
         resp.set_success(true);
         auto frame = Network::PacketCodec::Encode(Network::PacketType::S2C_JOIN_ROOM, resp);
-        for (auto memberId : members)
+        for (auto memberId : result.members)
             session_manager_.Send(memberId, frame);
     }
 
@@ -194,13 +187,11 @@ namespace Yiso::Game
         }
 
         ChatRoomManager::RoomId roomId = req.room_id();
+        auto result = room_manager_.TryLeaveRoom(roomId, id);
 
-        // 퇴장 전 멤버 목록 확보 (퇴장자 포함 -> 퇴장자에게도 확인 전송)
-        auto members = room_manager_.GetMembers(roomId);
-
-        if (!room_manager_.LeaveRoom(roomId, id))
+        if (!result.success)
         {
-            spdlog::warn("[Chat] Session {} failed to leave room {}", id, roomId);
+            spdlog::warn("[Chat] Session {} failed to leave room {}: {}", id, roomId, result.error);
             return;
         }
 
@@ -210,7 +201,7 @@ namespace Yiso::Game
         resp.set_room_id(roomId);
         resp.set_left_session(id);
         auto frame = Network::PacketCodec::Encode(Network::PacketType::S2C_LEAVE_ROOM, resp);
-        for (auto memberId : members)
+        for (auto memberId : result.members)
             session_manager_.Send(memberId, frame);
     }
 

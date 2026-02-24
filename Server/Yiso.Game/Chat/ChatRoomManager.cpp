@@ -31,32 +31,55 @@ namespace Yiso::Game
         return id;
     }
 
-    bool ChatRoomManager::RemoveRoom(RoomId id)
+    ChatRoomManager::RoomOpResult ChatRoomManager::TryRemoveRoom(RoomId id, SessionId requester)
     {
         std::lock_guard lock(mutex_);
-        return rooms_.erase(id) > 0;
+
+        const Room* room = FindRoom(id);
+        if (!room)
+            return { false, "존재하지 않는 방입니다." };
+
+        if (room->creator != requester)
+            return { false, "권한이 없습니다." };
+
+        std::vector<SessionId> members(room->members.begin(), room->members.end());
+        rooms_.erase(id);
+
+        return { true, {}, std::move(members) };
     }
 
-    bool ChatRoomManager::JoinRoom(RoomId id, SessionId session)
+    ChatRoomManager::RoomOpResult ChatRoomManager::TryJoinRoom(RoomId id, SessionId session)
     {
         std::lock_guard lock(mutex_);
 
         Room* room = FindRoom(id);
-        if (!room) return false;
-        if (room->members.count(session) > 0) return false;
+        if (!room)
+            return { false, "존재하지 않는 방입니다." };
+        if (room->members.count(session) > 0)
+            return { false, "이미 입장한 방입니다." };
 
         room->members.insert(session);
-        return true;
+
+        // 입장 후 멤버 목록 (입장자 포함)
+        std::vector<SessionId> members(room->members.begin(), room->members.end());
+        return { true, {}, std::move(members) };
     }
 
-    bool ChatRoomManager::LeaveRoom(RoomId id, SessionId session)
+    ChatRoomManager::RoomOpResult ChatRoomManager::TryLeaveRoom(RoomId id, SessionId session)
     {
         std::lock_guard lock(mutex_);
 
         Room* room = FindRoom(id);
-        if (!room) return false;
+        if (!room)
+            return { false, "존재하지 않는 방입니다." };
+        if (room->members.count(session) == 0)
+            return { false, "해당 방의 멤버가 아닙니다." };
 
-        return room->members.erase(session) > 0;
+        // 퇴장 전 멤버 목록 (퇴장자 포함 -> 퇴장자에게도 알림)
+        std::vector<SessionId> members(room->members.begin(), room->members.end());
+        room->members.erase(session);
+
+        return { true, {}, std::move(members) };
     }
 
     void ChatRoomManager::RemoveSession(SessionId session)
@@ -76,10 +99,4 @@ namespace Yiso::Game
         return std::vector<SessionId>(room->members.begin(), room->members.end());
     }
 
-    bool ChatRoomManager::IsCreator(RoomId id, SessionId session) const
-    {
-        std::lock_guard lock(mutex_);
-        const Room* room = FindRoom(id);
-        return room && room->creator == session;
-    }
 }
