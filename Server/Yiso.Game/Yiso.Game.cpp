@@ -3,9 +3,12 @@
 #include "Network/YisoServer.h"
 #include <boost/asio.hpp>
 #include <spdlog/spdlog.h>
+#include <windows.h>
 
 int main(int argc, char* argv[])
 {
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
     Yiso::InitLogger();
 
     uint16_t port = 7777;
