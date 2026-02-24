@@ -46,6 +46,6 @@ namespace Yiso::Network
         OnDisconnect on_disconnect_;
 
         static constexpr size_t MAX_SEND_QUEUE_SIZE = 256;
-        static constexpr int TIMEOUT_SEC = 30;
+        static constexpr int TIMEOUT_SEC = 300;
     };
 }
