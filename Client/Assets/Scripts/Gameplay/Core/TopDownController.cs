@@ -63,7 +63,7 @@ namespace Gameplay.Core {
 
             // 넉백이 충분히 크면(Threshold 이상) 움직이지 못하게끔. (넉백이 상쇄되지 않게)
             // 미미한 넉백(Threshold 이하)은 무시하고 이동 허용
-            if (!FreeMovement || _impactForce.magnitude > ImpactThreshold) return;
+            if (!FreeMovement) return;
 
             if (_friction > 1f) {
                 currentMovement /= _friction;

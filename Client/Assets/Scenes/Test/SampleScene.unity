@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeKnockedBack: 1
-  knockbackMultiplier: 1
+  knockbackMultiplier: 20
   disableCollisionsOnDeath: 1
   disableMovementOnDeath: 1
   changeLayerOnDeath: 1
@@ -1069,6 +1069,7 @@ MonoBehaviour:
     weaponAttachPoint: {fileID: 96548311}
     initialWeapon: {fileID: 11400000, guid: d5d4128da89be9a4cbe43297ca8f6d5b, type: 2}
     weaponList: []
+    weaponChangeCoolTime: 1
 --- !u!114 &1362263426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1322,6 +1323,7 @@ MonoBehaviour:
     weaponList:
     - {fileID: 11400000, guid: b45b7555524403c48895e0700a56daea, type: 2}
     - {fileID: 11400000, guid: a2fb978da2b39f8488b42e154523b305, type: 2}
+    weaponChangeCoolTime: 1
 --- !u!114 &1497929015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1612,7 +1614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeKnockedBack: 1
-  knockbackMultiplier: 1
+  knockbackMultiplier: 20
   disableCollisionsOnDeath: 1
   disableMovementOnDeath: 1
   changeLayerOnDeath: 1
