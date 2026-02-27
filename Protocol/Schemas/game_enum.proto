@@ -1,2 +1,26 @@
 syntax = "proto3";
 package yiso.game;
+
+// 패킷 타입 (TCP 헤더의 packet_type 필드와 동일한 값)
+// C2S: 1~999, S2C: 1000~
+enum PacketType {
+    UNKNOWN = 0;
+
+    // Client -> Server
+    C2S_CHAT = 1;
+    C2S_WHISPER = 2;
+    C2S_CREATE_ROOM = 3;
+    C2S_DELETE_ROOM = 4;
+    C2S_JOIN_ROOM = 5;
+    C2S_LEAVE_ROOM = 6;
+    C2S_ROOM_CHAT = 7;
+
+    // Server -> Client
+    S2C_CHAT = 1001;
+    S2C_WHISPER = 1002;
+    S2C_CREATE_ROOM = 1003;
+    S2C_DELETE_ROOM = 1004;
+    S2C_JOIN_ROOM = 1005;
+    S2C_LEAVE_ROOM = 1006;
+    S2C_ROOM_CHAT = 1007;
+}
