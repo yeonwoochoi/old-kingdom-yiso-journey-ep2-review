@@ -1,5 +1,5 @@
 using Network.Config;
-using Network.Socket;
+using Network.Game;
 using Network.Web;
 using UnityEngine;
 using Utils;
@@ -16,8 +16,8 @@ namespace Network {
         private static YisoNetworkManager instance;
         public static YisoNetworkManager Instance => instance;
         
-        public YisoWebManager Web { get; private set; }
-        public YisoSocketManager Socket { get; private set; }
+        public YisoWebServerManager WebServer { get; private set; }
+        public YisoGameServerManager GameServer { get; private set; }
 
         private void Awake() {
             if (instance != null && instance != this) {
@@ -34,7 +34,7 @@ namespace Network {
 
         private async void Start() {
             if (config.AutoLoginOnStart) {
-                var success = await Web.Session.TryAutoLoginAsync();
+                var success = await WebServer.Session.TryAutoLoginAsync();
                 YisoLogger.Log($"[NetworkManager] 자동 로그인 결과: {success}");
             }
         }
@@ -46,8 +46,8 @@ namespace Network {
         }
 
         private void InitializeManagers() {
-            Web = new YisoWebManager(config.WebServerUrl);
-            Socket = new YisoSocketManager(config.SocketServerUrl);
+            WebServer = new YisoWebServerManager(config.WebServerUrl);
+            GameServer = new YisoGameServerManager(config.GameServerUrl);
         }
     }
 }

@@ -7,7 +7,7 @@ namespace Network.Web {
     /// 웹 서버 통신 총괄
     /// HTTP 통신 관련해서 단일 진입점
     /// </summary>
-    public class YisoWebManager {
+    public class YisoWebServerManager {
         private readonly YisoHttpClient httpClient; // HttpClient 인스턴스를 하나 생성해 하위 매니저들에게 주입
         
         public YisoHttpClient HttpClient => httpClient;
@@ -20,7 +20,7 @@ namespace Network.Web {
         
         #endregion
         
-        public YisoWebManager(string serverUrl) {
+        public YisoWebServerManager(string serverUrl) {
             httpClient = new YisoHttpClient(serverUrl);
             Session = new YisoSessionManager(httpClient);
             Rank = new YisoRankService(httpClient);
