@@ -19,9 +19,9 @@ namespace Editor.Network {
         private int scoreToRegister = 1000;
         private int topCount = 10;
 
-        private YisoWebManager webManager;
-        private YisoSessionManager Session => webManager?.Session;
-        private YisoRankService Rank => webManager?.Rank;
+        private YisoWebServerManager _webServerManager;
+        private YisoSessionManager Session => _webServerManager?.Session;
+        private YisoRankService Rank => _webServerManager?.Rank;
 
         private string logMessage = "";
         private Vector2 scrollPos;
@@ -38,7 +38,7 @@ namespace Editor.Network {
         }
 
         private void InitializeWebManager() {
-            webManager = new YisoWebManager(serverUrl);
+            _webServerManager = new YisoWebServerManager(serverUrl);
             if (Session != null) {
                 Session.OnLoginStateChanged += OnLoginStateChanged;
             }

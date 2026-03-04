@@ -14,8 +14,8 @@ namespace Editor.Network {
         private string username = "testuser";
         private string password = "testpass123";
 
-        private YisoWebManager webManager;
-        private YisoSessionManager Session => webManager?.Session;
+        private YisoWebServerManager _webServerManager;
+        private YisoSessionManager Session => _webServerManager?.Session;
 
         private string logMessage = "";
         private Vector2 scrollPos;
@@ -32,7 +32,7 @@ namespace Editor.Network {
         }
 
         private void InitializeWebManager() {
-            webManager = new YisoWebManager(serverUrl);
+            _webServerManager = new YisoWebServerManager(serverUrl);
             if (Session != null) {
                 Session.OnLoginStateChanged += OnLoginStateChanged;
             }
