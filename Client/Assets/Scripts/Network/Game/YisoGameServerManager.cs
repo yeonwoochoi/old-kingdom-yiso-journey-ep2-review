@@ -14,7 +14,9 @@ namespace Network.Game {
             isConnected = false;
 
             _tcpHandler = new YisoTcpHandler();
-            _dispatcher = new YisoPacketDispatcher(null);
+            _dispatcher = new YisoPacketDispatcher();
+            
+            // TODO: 여기서 _dispatcher.RegisterHandlerSource 해줘야함.
             
             _tcpHandler.OnRecv += _dispatcher.OnRecv;
             _tcpHandler.OnConnected += _dispatcher.OnConnected;

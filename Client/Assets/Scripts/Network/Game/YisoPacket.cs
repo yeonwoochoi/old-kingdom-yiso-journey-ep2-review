@@ -29,12 +29,6 @@ namespace Network.Game {
             return frame;
         }
 
-        public static T Decode<T>(this byte[] payload) where T : IMessage<T> {
-            return (T)typeof(T).GetProperty("Parser")!.GetValue(null) is MessageParser<T> parser 
-                ? parser.ParseFrom(payload)
-                : throw new InvalidOperationException();
-        }
-
         public static bool TryDecode(ref ArraySegment<byte> data, out YisoPacket packet) {
             packet = null;
             if (data.Count < HEADER_SIZE) {
