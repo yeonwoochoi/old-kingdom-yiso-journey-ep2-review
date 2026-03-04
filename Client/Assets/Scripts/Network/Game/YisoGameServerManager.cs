@@ -6,10 +6,19 @@ namespace Network.Game {
     public class YisoGameServerManager {
         private readonly string serverUrl;
         private bool isConnected;
+        private YisoPacketDispatcher _dispatcher;
+        private YisoTcpHandler _tcpHandler;
         
         public YisoGameServerManager(string serverUrl) {
             this.serverUrl = serverUrl;
             isConnected = false;
+
+            _tcpHandler = new YisoTcpHandler();
+            _dispatcher = new YisoPacketDispatcher(null);
+            
+            _tcpHandler.OnRecv += _dispatcher.OnRecv;
+            _tcpHandler.OnConnected += _dispatcher.OnConnected;
+            _tcpHandler.OnDisconnected += _dispatcher.OnDisconnected;
         }
     }
 }

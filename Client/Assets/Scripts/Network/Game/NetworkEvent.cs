@@ -1,8 +1,10 @@
+using System;
+
 namespace Network.Game {
     public abstract class NetworkEvent { }
 
     public sealed class PacketEvent : NetworkEvent {
-        public YisoPacket Packet;
+        public ArraySegment<byte> segment;
     }
 
     public sealed class ConnectedEvent : NetworkEvent { }

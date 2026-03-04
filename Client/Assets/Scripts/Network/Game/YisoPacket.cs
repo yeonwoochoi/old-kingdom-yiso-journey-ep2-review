@@ -9,6 +9,10 @@ namespace Network.Game {
         public uint size;
         public ushort type;
         public byte[] payload;
+
+        public int GetSize() {
+            return YisoPacketParser.HEADER_SIZE + (int)size;
+        }
     }
 
     public static class YisoPacketParser {
@@ -23,6 +27,12 @@ namespace Network.Game {
             Buffer.BlockCopy(payload, 0, frame, HEADER_SIZE, payload.Length);
             
             return frame;
+        }
+
+        public static T Decode<T>(this byte[] payload) where T : IMessage<T> {
+            return (T)typeof(T).GetProperty("Parser")!.GetValue(null) is MessageParser<T> parser 
+                ? parser.ParseFrom(payload)
+                : throw new InvalidOperationException();
         }
 
         public static bool TryDecode(ref ArraySegment<byte> data, out YisoPacket packet) {

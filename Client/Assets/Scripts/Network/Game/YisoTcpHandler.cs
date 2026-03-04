@@ -19,6 +19,8 @@ namespace Network.Game {
         private const int MAX_PACKET_SIZE = 64 * 1024; // 64KB (서버랑 맞춤)
 
         public event Func<ArraySegment<byte>, int> OnRecv;
+        public event Action OnConnected;
+        public event Action OnDisconnected;
         public NetworkStatus Status => _status;
         
         private RecvBuffer _recvBuffer;
@@ -37,6 +39,7 @@ namespace Network.Game {
                 _status = NetworkStatus.Connecting;
                 await _socket.ConnectAsync(endPoint);
                 YisoLogger.Log("[TcpHandler] 서버 연결 성공");
+                OnConnected?.Invoke();
                 _status = NetworkStatus.Connected;
                 _ = RecvLoop();
             }
@@ -52,6 +55,7 @@ namespace Network.Game {
                 YisoLogger.LogWarning("[TcpHandler] 연결 해제 실패: 연결 상태가 아닙니다");
                 return;
             }
+            OnDisconnected?.Invoke();
             _status =  NetworkStatus.Disconnecting;
             _socket.Shutdown(SocketShutdown.Both);
             _socket.Close();
