@@ -17,6 +17,7 @@ namespace Network.Game {
             _dispatcher = new YisoPacketDispatcher();
             
             // TODO: 여기서 _dispatcher.RegisterHandlerSource 해줘야함.
+            // _dispatcher.RegisterHandlerSource(WorldManager.Instance);
             
             _tcpHandler.OnRecv += _dispatcher.OnRecv;
             _tcpHandler.OnConnected += _dispatcher.OnConnected;
