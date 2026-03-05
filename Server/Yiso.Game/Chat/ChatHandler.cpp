@@ -24,7 +24,17 @@ namespace Yiso::Game
     {
         spdlog::info("[Chat] Session {} disconnected", id);
 
-        room_manager_.RemoveSession(id);
+        auto changes = room_manager_.RemoveSession(id);
+        for (auto& change : changes)
+        {
+            yiso::game::S2C_LeaveRoom resp;
+            resp.set_room_id(change.room_id);
+            resp.set_left_session(id);
+            resp.set_new_owner(change.new_owner);
+            auto frame = Network::PacketCodec::Encode(Network::PacketType::S2C_LEAVE_ROOM, resp);
+            for (auto memberId : change.members)
+                session_manager_.Send(memberId, frame);
+        }
 
         yiso::game::S2C_Chat msg;
         msg.set_session_id(0);
@@ -88,7 +98,16 @@ namespace Yiso::Game
 
         yiso::game::S2C_Whisper resp;
         resp.set_from_session_id(id);
-        resp.set_message(req.message());
+
+        if (!session_manager_.HasSession(req.target_session_id()))
+        {
+            spdlog::warn("[Chat] target session={} is not found", req.target_session_id());
+            resp.set_message("해당 유저가 없습니다.");
+            session_manager_.Send(id, Network::PacketCodec::Encode(Network::PacketType::S2C_WHISPER, resp));
+            return;
+        }
+        
+        resp.set_message(req.message());   
         session_manager_.Send(req.target_session_id(), Network::PacketCodec::Encode(Network::PacketType::S2C_WHISPER, resp));
     }
 
@@ -200,6 +219,7 @@ namespace Yiso::Game
         yiso::game::S2C_LeaveRoom resp;
         resp.set_room_id(roomId);
         resp.set_left_session(id);
+        resp.set_new_owner(result.new_owner);
         auto frame = Network::PacketCodec::Encode(Network::PacketType::S2C_LEAVE_ROOM, resp);
         for (auto memberId : result.members)
             session_manager_.Send(memberId, frame);
@@ -220,6 +240,12 @@ namespace Yiso::Game
         if (members.empty())
         {
             spdlog::warn("[Chat] Session {} sent chat to non-existent room {}", id, roomId);
+            return;
+        }
+
+        if (std::find(members.begin(), members.end(), id) == members.end())
+        {
+            spdlog::warn("[Chat] Session {} is not a member of room {}", id, roomId);
             return;
         }
 

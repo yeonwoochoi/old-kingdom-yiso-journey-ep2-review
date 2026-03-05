@@ -38,11 +38,12 @@ namespace Yiso.Game {
             "IAEoCSIfCgxDMlNfSm9pblJvb20SDwoHcm9vbV9pZBgBIAEoDSJXCgxTMkNf",
             "Sm9pblJvb20SDwoHcm9vbV9pZBgBIAEoDRIWCg5qb2luZWRfc2Vzc2lvbhgC",
             "IAEoDRIPCgdzdWNjZXNzGAMgASgIEg0KBWVycm9yGAQgASgJIiAKDUMyU19M",
-            "ZWF2ZVJvb20SDwoHcm9vbV9pZBgBIAEoDSI2Cg1TMkNfTGVhdmVSb29tEg8K",
-            "B3Jvb21faWQYASABKA0SFAoMbGVmdF9zZXNzaW9uGAIgASgNIjAKDEMyU19S",
-            "b29tQ2hhdBIPCgdyb29tX2lkGAEgASgNEg8KB21lc3NhZ2UYAiABKAkiSQoM",
-            "UzJDX1Jvb21DaGF0Eg8KB3Jvb21faWQYASABKA0SFwoPZnJvbV9zZXNzaW9u",
-            "X2lkGAIgASgNEg8KB21lc3NhZ2UYAyABKAliBnByb3RvMw=="));
+            "ZWF2ZVJvb20SDwoHcm9vbV9pZBgBIAEoDSJJCg1TMkNfTGVhdmVSb29tEg8K",
+            "B3Jvb21faWQYASABKA0SFAoMbGVmdF9zZXNzaW9uGAIgASgNEhEKCW5ld19v",
+            "d25lchgDIAEoDSIwCgxDMlNfUm9vbUNoYXQSDwoHcm9vbV9pZBgBIAEoDRIP",
+            "CgdtZXNzYWdlGAIgASgJIkkKDFMyQ19Sb29tQ2hhdBIPCgdyb29tX2lkGAEg",
+            "ASgNEhcKD2Zyb21fc2Vzc2lvbl9pZBgCIAEoDRIPCgdtZXNzYWdlGAMgASgJ",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Yiso.Common.CommonReflection.Descriptor, global::Yiso.Game.GameEnumReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -57,7 +58,7 @@ namespace Yiso.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Yiso.Game.C2S_JoinRoom), global::Yiso.Game.C2S_JoinRoom.Parser, new[]{ "RoomId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Yiso.Game.S2C_JoinRoom), global::Yiso.Game.S2C_JoinRoom.Parser, new[]{ "RoomId", "JoinedSession", "Success", "Error" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Yiso.Game.C2S_LeaveRoom), global::Yiso.Game.C2S_LeaveRoom.Parser, new[]{ "RoomId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Yiso.Game.S2C_LeaveRoom), global::Yiso.Game.S2C_LeaveRoom.Parser, new[]{ "RoomId", "LeftSession" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Yiso.Game.S2C_LeaveRoom), global::Yiso.Game.S2C_LeaveRoom.Parser, new[]{ "RoomId", "LeftSession", "NewOwner" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Yiso.Game.C2S_RoomChat), global::Yiso.Game.C2S_RoomChat.Parser, new[]{ "RoomId", "Message" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Yiso.Game.S2C_RoomChat), global::Yiso.Game.S2C_RoomChat.Parser, new[]{ "RoomId", "FromSessionId", "Message" }, null, null, null, null)
           }));
@@ -2731,6 +2732,7 @@ namespace Yiso.Game {
     public S2C_LeaveRoom(S2C_LeaveRoom other) : this() {
       roomId_ = other.roomId_;
       leftSession_ = other.leftSession_;
+      newOwner_ = other.newOwner_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2764,6 +2766,18 @@ namespace Yiso.Game {
       }
     }
 
+    /// <summary>Field number for the "new_owner" field.</summary>
+    public const int NewOwnerFieldNumber = 3;
+    private uint newOwner_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint NewOwner {
+      get { return newOwner_; }
+      set {
+        newOwner_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2781,6 +2795,7 @@ namespace Yiso.Game {
       }
       if (RoomId != other.RoomId) return false;
       if (LeftSession != other.LeftSession) return false;
+      if (NewOwner != other.NewOwner) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2790,6 +2805,7 @@ namespace Yiso.Game {
       int hash = 1;
       if (RoomId != 0) hash ^= RoomId.GetHashCode();
       if (LeftSession != 0) hash ^= LeftSession.GetHashCode();
+      if (NewOwner != 0) hash ^= NewOwner.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2816,6 +2832,10 @@ namespace Yiso.Game {
         output.WriteRawTag(16);
         output.WriteUInt32(LeftSession);
       }
+      if (NewOwner != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(NewOwner);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2834,6 +2854,10 @@ namespace Yiso.Game {
         output.WriteRawTag(16);
         output.WriteUInt32(LeftSession);
       }
+      if (NewOwner != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(NewOwner);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2849,6 +2873,9 @@ namespace Yiso.Game {
       }
       if (LeftSession != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LeftSession);
+      }
+      if (NewOwner != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NewOwner);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2867,6 +2894,9 @@ namespace Yiso.Game {
       }
       if (other.LeftSession != 0) {
         LeftSession = other.LeftSession;
+      }
+      if (other.NewOwner != 0) {
+        NewOwner = other.NewOwner;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2895,6 +2925,10 @@ namespace Yiso.Game {
             LeftSession = input.ReadUInt32();
             break;
           }
+          case 24: {
+            NewOwner = input.ReadUInt32();
+            break;
+          }
         }
       }
     #endif
@@ -2920,6 +2954,10 @@ namespace Yiso.Game {
           }
           case 16: {
             LeftSession = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            NewOwner = input.ReadUInt32();
             break;
           }
         }

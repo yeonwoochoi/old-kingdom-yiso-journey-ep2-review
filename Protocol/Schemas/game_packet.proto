@@ -59,6 +59,7 @@ message C2S_LeaveRoom {
 message S2C_LeaveRoom {
   uint32 room_id = 1;
   uint32 left_session = 2;
+  uint32 new_owner = 3;
 }
 
 message C2S_RoomChat {

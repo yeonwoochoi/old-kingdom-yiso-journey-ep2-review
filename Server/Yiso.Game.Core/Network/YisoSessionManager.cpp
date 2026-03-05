@@ -58,4 +58,10 @@ namespace Yiso::Network
         for (auto& session : snapshot)
             session->Disconnect();
     }
+
+    bool YisoSessionManager::HasSession(SessionId id)
+    {
+        std::lock_guard lock(mutex_);
+        return sessions_.find(id) != sessions_.end();
+    }
 }
