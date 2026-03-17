@@ -1,440 +1,374 @@
-# API Reference
+# API 레퍼런스
 
-This document provides API reference for developing FSM Actions, Decisions, and Abilities.
+시스템 간 인터페이스 계약 및 주요 API 정의.
+현재 구현된 API와 설계 중인 API를 함께 기술한다.
 
-## Table of Contents
-- [IYisoCharacterContext API](#iyisocharactercontext-api)
-- [Core Interfaces](#core-interfaces)
-- [Module APIs](#module-apis)
-
----
-
-## IYisoCharacterContext API
-
-The `IYisoCharacterContext` interface provides the core API for FSM Actions and Abilities to interact with characters.
-
-**Implementation**: `Assets/Scripts/Gameplay/Character/Core/YisoCharacter.cs` (lines 216-235)
-
-### Movement & Direction Control
-
-```csharp
-void Move(Vector2 finalMovementVector);
-```
-Set character movement vector. This will be processed by the TopDownController.
-
-**Parameters**:
-- `finalMovementVector` - Normalized direction vector multiplied by desired speed
-
-**Usage**:
-```csharp
-// In FSM Action or Ability
-context.Move(direction.normalized * speed);
-```
+> **구현 상태 표기**
+> - ✅ 구현 완료
+> - 🔧 기존 코드 있음 (새 시스템에 맞게 통합 예정)
+> - 📐 설계 중 (미구현)
 
 ---
 
-```csharp
-void Face(FacingDirections direction);
-```
-Face a cardinal direction (North, South, East, West, NorthEast, NorthWest, SouthEast, SouthWest).
+## 1. Core 시스템 API
 
-**Parameters**:
-- `direction` - Target cardinal direction enum
-
-**Usage**:
-```csharp
-// Face east
-context.Face(FacingDirections.East);
-```
-
----
+### EventSystem 📐
 
 ```csharp
-void Face(Vector2 directionVector);
-```
-Face a direction vector (auto-converts to nearest cardinal direction).
+public interface IEventSystem
+{
+    void Publish<T>(T evt) where T : struct;
+    void Subscribe<T>(Action<T> handler) where T : struct;
+    void Unsubscribe<T>(Action<T> handler) where T : struct;
+}
 
-**Parameters**:
-- `directionVector` - Target direction as Vector2
-
-**Usage**:
-```csharp
-// Face toward target
-Vector2 direction = (target.position - transform.position).normalized;
-context.Face(direction);
+// 주요 이벤트 타입 (설계 예정)
+public struct EnemyDefeatedEvent   { public Entity Enemy; public Entity Killer; }
+public struct QuestUpdatedEvent    { public int QuestId; public QuestStatus Status; }
+public struct ItemAcquiredEvent    { public ItemData Item; public int Amount; }
+public struct PlayerLevelUpEvent   { public int NewLevel; }
+public struct ChapterClearedEvent  { public int ChapterId; }
+public struct RetreatRequestedEvent { }
 ```
 
----
+### SaveSystem 📐
 
-### State & Animation
+이원화 저장 로직의 핵심 API.
 
 ```csharp
-void PlayAnimation(YisoCharacterAnimationState state, bool value);
-void PlayAnimation(YisoCharacterAnimationState state, float value);
-void PlayAnimation(YisoCharacterAnimationState state, int value);
-```
-Update animator parameters.
+public interface ISaveSystem
+{
+    // 일반 저장 — 모든 상태 포함
+    Task SaveAllAsync();
 
-**Parameters**:
-- `state` - Animation state enum (e.g., YisoCharacterAnimationState.Idle, Attack, Walking)
-- `value` - Parameter value (bool, float, or int depending on animator parameter type)
+    // 후퇴 저장 — 챕터 진행도 제외
+    // 레벨, 장비, 골드, 스킬만 보존. 챕터 퀘스트/위치 파기.
+    Task SaveForRetreatAsync();
 
-**Usage**:
-```csharp
-// Set walking animation
-context.PlayAnimation(YisoCharacterAnimationState.Walking, true);
-
-// Set speed parameter
-context.PlayAnimation(YisoCharacterAnimationState.Speed, 5.0f);
+    // 로드
+    Task<SaveData> LoadAsync();
+}
 ```
 
----
+### SceneSystem 📐
 
 ```csharp
-void OnAnimationEvent(string eventName);
-```
-Routes animation events to the AbilityModule. Used by Unity Animation Events.
+public interface ISceneSystem
+{
+    Task LoadSceneAsync(SceneType scene, LoadingScreenType loading = LoadingScreenType.Default);
+    Task UnloadCurrentSceneAsync();
+    SceneType CurrentScene { get; }
+}
 
-**Parameters**:
-- `eventName` - Event identifier string
-
-**Usage**:
-```csharp
-// Called from Unity Animation Event
-context.OnAnimationEvent("AttackHit");
-```
-
----
-
-### Health & Lifecycle
-
-```csharp
-float GetCurrentHealth();
-```
-Get character's current health value.
-
-**Returns**: Current health as float
-
----
-
-```csharp
-bool IsDead();
-```
-Check if character is dead.
-
-**Returns**: True if dead, false otherwise
-
----
-
-```csharp
-void TakeDamage(DamageInfo damage);
-```
-Apply damage to character. Handles health reduction, death check, and damage events.
-
-**Parameters**:
-- `damage` - DamageInfo struct containing damage amount, type, source, etc.
-
-**Usage**:
-```csharp
-var damageInfo = new DamageInfo {
-    damage = 50f,
-    damageType = DamageType.Physical,
-    source = attackerGameObject
-};
-context.TakeDamage(damageInfo);
-```
-
----
-
-### Permissions
-
-```csharp
-bool IsMovementAllowed { get; }
-```
-Check if movement is currently allowed. Checks death state and ability blocks.
-
-**Returns**: True if movement is allowed, false otherwise
-
-**Usage**:
-```csharp
-if (context.IsMovementAllowed) {
-    context.Move(movementVector);
+public enum SceneType
+{
+    Bootstrap, Login, BaseCamp, Chapter, InfiniteDojo
 }
 ```
 
 ---
 
+## 2. World 시스템 API
+
+### MapSystem 📐
+
 ```csharp
-bool IsAttackAllowed { get; }
+public interface IMapSystem
+{
+    // 현재 맵 정보
+    MapData CurrentMap { get; }
+    bool IsInSafeZone { get; }  // 마을 판별
+
+    // 필드 해금
+    void UnlockField(int fieldId);
+    bool IsFieldUnlocked(int fieldId);
+
+    // 미니맵/월드맵에 데이터 제공
+    MapNodeData[] GetAllNodes();
+    Vector3 GetPlayerPosition();
+}
 ```
-Check if attack is currently allowed. Checks death state and ability blocks.
 
-**Returns**: True if attack is allowed, false otherwise
+### SpawnSystem 📐
 
-**Usage**:
 ```csharp
-if (context.IsAttackAllowed) {
-    // Perform attack logic
+public interface ISpawnSystem
+{
+    Entity SpawnEnemy(EnemyData data, Vector3 position);
+    Entity SpawnNPC(NpcData data, Vector3 position);
+    void SpawnPortal(PortalData data, Vector3 position);
+
+    // 무한 도장 특수 스폰
+    Entity SpawnDojoTarget(DojoMissionData mission);
 }
 ```
 
 ---
 
-### Properties
+## 3. Combat 시스템 API
+
+### DamageSystem 📐
 
 ```csharp
-Vector2 MovementVector { get; }
-```
-Get current input/AI movement direction (normalized).
+public interface IDamageSystem
+{
+    DamageResult CalculateDamage(DamageContext ctx);
+    void ApplyDamage(Entity target, DamageResult result);
+}
 
-**Returns**: Movement vector as Vector2
+public struct DamageContext
+{
+    public Entity Attacker;
+    public Entity Defender;
+    public float BaseDamage;
+    public DamageType Type;        // Physical, Skill, ...
+    public bool IgnoreDefense;
+}
 
----
-
-```csharp
-FacingDirections FacingDirection { get; }
-```
-Get current facing direction (from OrientationAbility).
-
-**Returns**: Current facing direction enum
-
----
-
-```csharp
-Vector2 FacingDirectionVector { get; }
-```
-Get current facing direction as Vector2.
-
-**Returns**: Facing direction as normalized Vector2
-
----
-
-## Core Interfaces
-
-### IYisoCharacterModule
-
-Base interface for all character modules.
-
-**Location**: `Assets/Scripts/Gameplay/Character/Core/IYisoCharacterModule.cs`
-
-```csharp
-public interface IYisoCharacterModule {
-    void Initialize(IYisoCharacterContext context);
-    void LateInitialize();
-    void OnEnable();
-    void OnUpdate();
-    void OnDisable();
-    void OnDestroy();
+public struct DamageResult
+{
+    public float FinalDamage;
+    public bool IsCritical;
+    public bool IsKill;
 }
 ```
 
-**Key Methods**:
-- `Initialize()` - First initialization phase, receives character context
-- `LateInitialize()` - Second initialization phase, after all modules are initialized
-- `OnUpdate()` - Called every frame by RunIUpdateManager
-
----
-
-### IYisoCharacterAbility
-
-Base interface for all abilities.
-
-**Location**: `Assets/Scripts/Gameplay/Character/Abilities/IYisoCharacterAbility.cs`
+### StatSystem 📐
 
 ```csharp
-public interface IYisoCharacterAbility {
-    void PreProcessAbility();
-    void ProcessAbility();
-    void PostProcessAbility();
-    void UpdateAnimator();
-    void ResetAbility();
+public interface IStatSystem
+{
+    // 스탯 조회
+    float GetStat(Entity entity, StatType type);
+
+    // 경험치 / 레벨
+    void AddExp(Entity entity, int amount);
+    int GetLevel(Entity entity);
+
+    // 레벨업 테이블 기반 자동 상승 (유저 직접 분배 없음)
+    StatSnapshot GetBaseStats(int level);
+
+    // 장비 강화 수치 포함 최종 합산
+    StatSnapshot GetFinalStats(Entity entity);
+}
+
+public enum StatType
+{
+    MaxHP, Attack, Defense, Speed, CriticalRate, CriticalDamage
 }
 ```
 
-**Key Methods**:
-- `PreProcessAbility()` - Setup, read input, check permissions
-- `ProcessAbility()` - Core ability logic
-- `PostProcessAbility()` - Apply results, trigger events
-- `UpdateAnimator()` - Sync animation parameters
-
----
-
-### IPhysicsControllable
-
-Interface for physics/movement control.
-
-**Location**: `Assets/Scripts/Gameplay/Core/IPhysicsControllable.cs`
+### SkillSystem 📐
 
 ```csharp
-public interface IPhysicsControllable {
-    void SetMovement(Vector2 movement);
-    void AddForce(Vector2 force);
-    Vector2 GetVelocity();
-}
-```
+public interface ISkillSystem
+{
+    // 스킬 해금 (보스 처치 시 호출)
+    void UnlockSkill(int skillId);
+    bool IsSkillUnlocked(int skillId);
 
-Used by TopDownController for movement control.
+    // 장착
+    void EquipSkill(int skillId, int slotIndex);
 
----
+    // 실행
+    void ExecuteSkill(Entity caster, int slotIndex);
 
-## Module APIs
-
-### StateModule API
-
-**Location**: `Assets/Scripts/Gameplay/Character/Core/Modules/YisoCharacterStateModule.cs`
-
-```csharp
-// Change FSM state
-void ChangeState(string stateName);
-
-// Get current state
-YisoCharacterState GetCurrentState();
-
-// Get target
-GameObject GetTarget();
-
-// Set target
-void SetTarget(GameObject target);
-```
-
----
-
-### AbilityModule API
-
-**Location**: `Assets/Scripts/Gameplay/Character/Core/Modules/YisoCharacterAbilityModule.cs`
-
-```csharp
-// Register ability
-void RegisterAbility(IYisoCharacterAbility ability);
-
-// Unregister ability
-void UnregisterAbility(IYisoCharacterAbility ability);
-
-// Get ability by type
-T GetAbility<T>() where T : IYisoCharacterAbility;
-
-// Block/unblock abilities
-void BlockAbilities();
-void UnblockAbilities();
-```
-
----
-
-### WeaponModule API
-
-**Location**: `Assets/Scripts/Gameplay/Character/Core/Modules/YisoCharacterWeaponModule.cs`
-
-```csharp
-// Get current weapon
-YisoWeaponInstance CurrentWeapon { get; }
-
-// Equip weapon
-void EquipWeapon(YisoWeaponDataSO weaponData);
-
-// Unequip weapon
-void UnequipWeapon();
-
-// Activate weapon (start attack)
-void ActivateWeapon();
-
-// Deactivate weapon (end attack)
-void DeactivateWeapon();
-```
-
----
-
-## Example Usage
-
-### Creating a Custom FSM Action
-
-```csharp
-using UnityEngine;
-using Character.StateMachine;
-
-public class MyCustomAction : YisoCharacterAction {
-    public float moveSpeed = 5f;
-
-    public override void PerformAction(IYisoCharacterContext context) {
-        if (!context.IsMovementAllowed) return;
-
-        // Get target from StateModule
-        var target = context.GetTarget();
-        if (target == null) return;
-
-        // Calculate direction
-        Vector2 direction = (target.transform.position - context.transform.position).normalized;
-
-        // Move toward target
-        context.Move(direction * moveSpeed);
-
-        // Face target
-        context.Face(direction);
-    }
+    // 쿨타임
+    float GetCooldownRemaining(int slotIndex);
 }
 ```
 
 ---
 
-### Creating a Custom FSM Decision
+## 4. Player 시스템 API
+
+### QuestSystem 📐
 
 ```csharp
-using UnityEngine;
-using Character.StateMachine;
+public interface IQuestSystem
+{
+    // 수주 / 완료 / 보상
+    void AcceptQuest(int questId);
+    void UpdateQuestProgress(int questId, int objectiveIndex, int amount);
+    void CompleteQuest(int questId);
 
-public class MyCustomDecision : YisoCharacterDecision {
-    public float detectionRange = 10f;
+    // 후퇴 시 챕터 퀘스트 롤백
+    void RollbackChapterQuests(int chapterId);
 
-    public override bool Decide(IYisoCharacterContext context) {
-        var target = context.GetTarget();
-        if (target == null) return false;
+    // 무한 도장 세션 퀘스트 발동
+    void StartDojoQuest(DojoMissionData mission);
 
-        float distance = Vector2.Distance(
-            context.transform.position,
-            target.transform.position
-        );
+    QuestStatus GetStatus(int questId);
+}
+```
 
-        return distance <= detectionRange;
-    }
+### InventorySystem 📐
+
+```csharp
+public interface IInventorySystem
+{
+    // 아이템
+    void AddItem(int itemId, int amount = 1);
+    void RemoveItem(int itemId, int amount = 1);
+    bool HasItem(int itemId, int amount = 1);
+
+    // 장비
+    void EquipItem(int itemId, EquipSlot slot);
+    void UnequipItem(EquipSlot slot);
+
+    // 골드
+    int Gold { get; }
+    bool SpendGold(int amount);
+    void AddGold(int amount);
+
+    // 아이템 사용 (귀환 주문서 등)
+    void UseItem(int itemId);
 }
 ```
 
 ---
 
-### Creating a Custom Ability
+## 5. Economy 시스템 API
+
+### EnhancementSystem 📐
 
 ```csharp
-using UnityEngine;
-using Character.Abilities;
+public interface IEnhancementSystem
+{
+    // 강화 비용 조회 (장비 현재 레벨 기반)
+    int GetEnhanceCost(int itemId);
 
-public class MyCustomAbility : IYisoCharacterAbility {
-    private IYisoCharacterContext context;
+    // 강화 성공률 조회
+    float GetSuccessRate(int itemId);
 
-    public void Initialize(IYisoCharacterContext ctx) {
-        context = ctx;
-    }
+    // 강화 실행 — 골드만 소모
+    EnhanceResult TryEnhance(int itemId);
+}
 
-    public void PreProcessAbility() {
-        // Read input, check permissions
-    }
-
-    public void ProcessAbility() {
-        // Core ability logic
-        if (context.IsMovementAllowed) {
-            // Do something
-        }
-    }
-
-    public void PostProcessAbility() {
-        // Apply results, trigger events
-    }
-
-    public void UpdateAnimator() {
-        // Sync animation parameters
-        context.PlayAnimation(YisoCharacterAnimationState.Custom, true);
-    }
-
-    public void ResetAbility() {
-        // Reset state
-    }
+public struct EnhanceResult
+{
+    public bool Success;
+    public int GoldSpent;
+    public StatDelta StatIncrease;  // 성공 시 상승한 수치
 }
 ```
+
+---
+
+## 6. Character Component API (기존 코드 통합)
+
+> 🔧 기존 `YisoCharacter` + 9개 모듈 구조를 새 시스템과 연동하며 통합 예정.
+> 아래 API는 현재 구현된 인터페이스 기준.
+
+### IYisoCharacterContext
+
+FSM Actions/Decisions가 Character를 제어하는 인터페이스.
+
+```csharp
+public interface IYisoCharacterContext
+{
+    // 이동
+    void Move(Vector2 direction);
+    void StopMovement();
+
+    // 방향
+    void Face(FacingDirections direction);
+    void Face(Vector2 direction);       // YisoOrientationAbility.ForceFace()로 위임
+
+    // 공격
+    void Attack();
+    void ChangeWeapon(YisoWeaponDataSO weaponData);
+
+    // 상태 조회
+    bool IsAttacking    { get; }
+    bool IsDead         { get; }
+    Transform TargetTransform { get; }
+    Vector3 SpawnPosition     { get; }
+}
+
+public enum FacingDirections { North, South, East, West }
+```
+
+### FSM Action 구조 🔧
+
+```csharp
+// Assets/Scripts/Gameplay/Character/StateMachine/Actions/
+public abstract class YisoCharacterAction
+{
+    public virtual void OnEnter(IYisoCharacterContext ctx)  { }
+    public virtual void OnUpdate(IYisoCharacterContext ctx) { }
+    public virtual void OnExit(IYisoCharacterContext ctx)   { }
+}
+```
+
+**구현된 Actions:**
+
+| 분류 | 클래스 |
+|------|--------|
+| 이동 | MoveTowardTarget, MoveRandomly, Patrol, ReturnToSpawn, StopMovement |
+| 공격 | Attack, ChangeWeapon |
+| 방향 | ConeOfVision, FaceTowardTarget |
+| 기타 | DoNothing, SetAnimator |
+
+### FSM Decision 구조 🔧
+
+```csharp
+public abstract class YisoCharacterDecision
+{
+    public abstract bool Decide(IYisoCharacterContext ctx);
+}
+```
+
+**구현된 Decisions:**
+
+| 클래스 | 조건 |
+|--------|------|
+| DetectTargetInRadius | 반경 내 타겟 감지 |
+| DetectTargetConeOfVision | 시야 콘 내 타겟 감지 |
+| DistanceToTarget / DistanceToSpawn | 거리 비교 |
+| TargetIsAlive / TargetIsNull | 타겟 상태 |
+| IsNotAttacking | 공격 중 여부 |
+| TimeInState | 현재 상태 체류 시간 |
+
+### Ability 시스템 🔧
+
+```csharp
+// 데이터 레이어 (ScriptableObject)
+public abstract class YisoAbilitySO : ScriptableObject
+{
+    public abstract YisoCharacterAbilityBase CreateAbility();
+}
+
+// 로직 레이어
+public abstract class YisoCharacterAbilityBase
+{
+    public abstract void Initialize(YisoCharacter character);
+    public abstract void Execute();
+    public abstract void Terminate();
+}
+```
+
+**구현된 Abilities:**
+
+| SO | Ability |
+|----|---------|
+| YisoMovementAbilitySO | YisoMovementAbility |
+| YisoOrientationAbilitySO | YisoOrientationAbility (ForceFace 포함) |
+| YisoMeleeAttackAbilitySO | YisoMeleeAttackAbility |
+| YisoProjectileAttackAbilitySO | YisoProjectileAttackAbility |
+
+> **통합 계획:** 보스 해금 스킬도 Ability 구조 위에 구현하여 SkillSystem과 연동할 예정.
+
+---
+
+## 7. 네이밍 컨벤션
+
+| 규칙 | 예시 |
+|------|------|
+| 모든 게임 클래스 `Yiso` 접두사 | `YisoCharacter`, `YisoMapSystem` |
+| ScriptableObject `SO` 접미사 | `YisoAbilitySO`, `YisoWeaponDataSO` |
+| 인터페이스 `I` 접두사 | `IEventSystem`, `ISaveSystem` |
+| 시스템 클래스 `System` 접미사 | `YisoQuestSystem`, `YisoStatSystem` |
+| FSM Action | `YisoCharacterAction[행동]` |
+| FSM Decision | `YisoCharacterDecision[조건]` |
+| 한국어 주석 | 팀 내부 코드 주석은 한국어 사용 |

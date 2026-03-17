@@ -1,5 +1,10 @@
-﻿syntax = "proto3";
+syntax = "proto3";
 package yiso.common;
+
+message Vector2 {
+  float x = 1;
+  float y = 2;
+}
 
 message Vector3 {
   float x = 1;

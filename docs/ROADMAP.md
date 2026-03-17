@@ -1,781 +1,207 @@
-# Game Design Roadmap
+# 개발 로드맵
 
-This document contains the game design specification for Old Kingdom Yiso Journey Episode 2. These systems are planned but not yet fully implemented.
-
-## Table of Contents
-- [Game Overview](#game-overview)
-- [World Structure](#world-structure)
-- [Character Progression](#character-progression)
-- [Quest System](#quest-system)
-- [Save/Load System](#saveload-system)
-- [Economy System](#economy-system)
-- [NPC System](#npc-system)
-- [Infinite Dojo System](#infinite-dojo-system)
-- [Portal/Teleport System](#portalteleport-system)
-- [Map/UI System](#mapui-system)
-- [Stage Progression](#stage-progression)
+게임 루프를 최대한 빨리 플레이 가능한 상태로 만들고, 레이어별 의존성 순서를 지키는 것을 기준으로 한다.
 
 ---
 
-## Game Overview
-
-**Old Kingdom Yiso Journey Episode 2** is a 2D top-down stage-based story RPG. The game flow follows:
+## 개발 순서 요약
 
 ```
-Base Camp (중간 맵)
-  ↓
-Chapter Selection
-  ↓
-Chapter World (스테이지)
-  ├─ Central Town (중심 마을)
-  └─ Radial Fields (방사형 필드)
-      ├─ Combat Fields
-      ├─ Dungeons
-      └─ Boss Area
-  ↓
-Complete Chapter
-  ↓
-Return to Base Camp
-  ↓
-Repeat (Next Chapter)
-```
-
-Users progress through the story by completing chapters, returning to base camp to enhance equipment and level up between stages.
-
----
-
-## World Structure
-
-### Base Camp (중간 맵/거점)
-
-The permanent hub space connecting all chapters.
-
-**Role**:
-- Equipment enhancement
-- Stat upgrades
-- Stage selection
-- Permanent progress storage
-
-**Features**:
-- No enemies (safe zone)
-- All functional NPCs located here
-- Data preserved across sessions
-- Access to Infinite Dojo
-
-**Key NPCs**:
-- Blacksmith (equipment enhancement)
-- Weapon Shop (buy/sell weapons)
-- Armor Shop (buy/sell armor)
-- General Store (consumables, teleport scrolls)
-- Storage (inventory management)
-
----
-
-### Chapter (스테이지/Chapter)
-
-Independent instance world where one story episode takes place.
-
-**Structure**:
-- **Central Town (중심 마을)**: Quest NPCs, general shop, no monsters
-- **Radial Fields (방사형 필드)**: Combat areas branching out from town
-  - Regular fields (monster hunting)
-  - Dungeons (higher difficulty)
-  - Boss area (chapter finale)
-
-**Progression Flow**:
-```
-1. Receive quests in Central Town
-2. Travel to fields and hunt monsters
-3. Return to town to report quests
-4. Unlock next field/dungeon
-5. Defeat final boss
-6. Unlock portal to next chapter or base camp
-```
-
-**Reset Rules**:
-- Chapter progress resets when returning to base camp voluntarily
-- Quest progress is lost, but EXP/items/gold are kept
-- Allows strategic retreat for power leveling
-
----
-
-## Character Progression
-
-### Level & Stats System
-
-**Experience Growth**:
-- Gain EXP from monster kills and quest completion
-- Level up automatically when EXP threshold reached
-
-**Automatic Stat Growth**:
-- Stats increase by predetermined values on level up
-- No manual stat point allocation
-- Stats: HP, Attack, Defense, Speed, Crit Rate, Crit Damage
-
-**Growth Calculation**:
-```
-Base Stats + (Level * Growth Rate) + Equipment Bonuses
-```
-
-**Power Sources**:
-1. Base level growth
-2. Equipment quality
-3. Equipment enhancement
-
----
-
-### Skill System
-
-**Acquisition Method (Boss Unlock)**:
-- Defeat chapter boss to unlock their signature skill
-- Example:
-  - Chapter 1 Boss → Unlock "Charge" skill
-  - Chapter 2 Boss → Unlock "Assassination" skill
-  - Chapter 3 Boss → Unlock "Whirlwind" skill
-
-**Usage**:
-- Unlocked skills are immediately usable
-- Equip skills to hotbar
-- Cooldown-based activation
-
-**Future Considerations** (not in current design):
-- Skill points for upgrades
-- Skill level progression
-- Skill customization/modifiers
-
----
-
-### Equipment Enhancement System
-
-**Location**: Only available at **Blacksmith NPC** in **Base Camp**.
-
-**Materials**: Only requires **Gold** (in-game currency).
-- No complex materials (enhancement stones, ores, etc.)
-- Reduces farming stress and increases gold value
-
-**Enhancement Structure**:
-```
-Equipment + Gold → Success → Stat Increase
-                → Failure → No penalty (gold consumed)
-```
-
-**Success Rate**:
-- Decreases as enhancement level increases
-- +0 to +5: High success rate (80-90%)
-- +6 to +10: Medium success rate (50-70%)
-- +11 to +15: Low success rate (20-40%)
-
-**Stat Bonuses**:
-- Each enhancement level adds % bonus to base stats
-- Example: +1 = +5%, +5 = +25%, +10 = +50%
-
----
-
-## Quest System
-
-### Quest Types
-
-#### Main Quests (메인 퀘스트)
-- Story-driven progression
-- Required to unlock next area/boss
-- Higher rewards (EXP, gold, items)
-- Linear progression
-
-#### Sub Quests (서브 퀘스트)
-- Optional side missions
-- Additional EXP/gold/items
-- Can be completed in any order
-- Provide lore and world-building
-
-### Quest Structure
-
-**Quest Data**:
-```csharp
-public class QuestData {
-    public string questID;
-    public string questName;
-    public string description;
-    public QuestType type; // Main, Sub
-    public QuestObjective[] objectives;
-    public QuestReward reward;
-}
-```
-
-**Objective Types**:
-- Kill: "Defeat X monsters"
-- Collect: "Gather X items"
-- Explore: "Discover location Y"
-- Talk: "Speak with NPC Z"
-- Escort: "Protect NPC to destination"
-
-**Quest States**:
-- NotStarted
-- InProgress
-- Completed
-- Claimed (rewards received)
-
-### Quest Flow
-
-```
-1. Receive quest from NPC in Central Town
-2. Quest added to quest log
-3. Complete objectives in fields
-4. Return to quest NPC
-5. Report completion
-6. Receive rewards
-7. Unlock next quest/area
-```
-
-**Quest Tracking**:
-- Active quest marker on map
-- Objective progress in HUD
-- Quest log menu
-
----
-
-## Save/Load System
-
-Complex save system with different rules based on context.
-
-### Basic Save Rules (Within Chapter)
-
-**Real-time Save**: All data saved continuously while playing in a chapter.
-
-**Saved Data**:
-- Character position
-- Experience points and level
-- Inventory (items, equipment, gold)
-- Quest progress (main and sub)
-- Map exploration state
-
-**Resume Support**:
-- Close game and reopen → Continue from last position
-- All quest progress preserved
-- All collected items preserved
-
----
-
-### Reset on Base Camp Return (Strategic Retreat)
-
-When player voluntarily returns to base camp mid-chapter:
-
-**Preserved Data** (100% kept):
-- Experience points and level
-- Gold
-- Items and equipment
-- Boss skills unlocked from previous chapters
-
-**Reset Data**:
-- Chapter quest progress (main and sub)
-- Chapter map exploration
-- Chapter spawn position
-
-**Purpose**:
-- Allows power leveling when underleveled
-- Use Infinite Dojo to farm gold/EXP
-- Enhance equipment at blacksmith
-- Return to chapter and restart from beginning with better stats
-
-**Warning Prompt**:
-```
-"Returning to Base Camp will reset all quest progress in this chapter.
-Experience, gold, and items will be preserved.
-Continue?"
-[Yes] [No]
+Phase 1   Core 프레임워크       → 씬 전환, 기본 UI
+Phase 2   플레이어 이동          → 첫 플레이어블
+Phase 3   Infra & SaveSystem    → 저장 구조 확정 (이후 변경 최소화)
+Phase 4   전투 루프              → 공격/피해/사망
+Phase 5   월드 구성              → 맵 위에서 전투
+Phase 6   플레이어 진행          → 퀘스트/드랍 루프
+Phase 7   스킬 & 보스            → 챕터 클리어 루프
+Phase 8   경제 & 거점            → 전체 게임 루프 완성
+Phase 9   연출 & 서버            → 퀄리티업
+Phase 10  콘텐츠 & 밸런싱        → 출시 준비
 ```
 
 ---
 
-### Save File Structure
+## Phase 1 — Core 프레임워크
 
-```csharp
-public class SaveData {
-    // Persistent Data
-    public int playerLevel;
-    public float currentEXP;
-    public int gold;
-    public List<ItemData> inventory;
-    public List<EquipmentData> equippedItems;
-    public List<string> unlockedSkills;
-    public List<string> completedChapters;
+**목표:** 씬 전환이 되고 화면에 뭔가 보이는 상태
 
-    // Chapter-Specific Data (reset on retreat)
-    public string currentChapter;
-    public Vector2 playerPosition;
-    public List<QuestProgress> chapterQuests;
-    public List<string> exploredAreas;
-}
+| 시스템 | 비고 |
+|--------|------|
+| BootStrapper | 초기화 순서 오케스트레이터 |
+| LogSystem | 첫 줄부터 필요 |
+| EventSystem | 전 시스템 통신 기반 — 최우선 |
+| SceneSystem | 씬 전환 없으면 아무것도 진행 불가 |
+| TimeSystem | DeltaTime, 타이머 |
+| InputSystem | 플레이어 조작 기반 |
+| UISystem + UIManager + HUDManager | 팝업 스택, HUD 틀 |
+| CameraSystem | 기본 추적만 |
+| PoolingSystem | 이후 전투에서 바로 필요 |
+| ConfigSystem / SoundSystem | 간단한 기본 틀만 |
+
+**마일스톤:** 씬 전환 → 카메라 움직임 → 기본 UI 출력
+
+---
+
+## Phase 2 — 플레이어 이동 (첫 플레이어블)
+
+**목표:** 캐릭터가 화면에서 조작 가능한 상태
+
+| 시스템 | 비고 |
+|--------|------|
+| EntityBase + Player | |
+| PlayerSystem | Entity 생성/관리 |
+| MovementModule + AnimationModule + PhysicModule | 기존 YisoCharacter 코드 통합 |
+
+**마일스톤:** 캐릭터 조작 가능, 카메라 추적
+
+---
+
+## Phase 3 — Infra & 저장 구조 확정
+
+**목표:** 로그인 → 데이터 로드/저장 흐름 완성
+
+> **Phase 3을 앞에 두는 이유:**
+> 플레이어블 루프가 커지기 전에 SaveData 스키마를 확정해야 한다.
+> QuestSystem, InventorySystem 구현 전에 저장 구조가 없으면
+> Phase 6~8에서 전부 뜯어야 할 가능성이 높다.
+
+| 시스템 | 비고 |
+|--------|------|
+| AuthSystem | 초기엔 게스트 로그인 스텁으로 |
+| SaveSystem | **이원화 저장 로직 핵심 — 여기서 SaveData 구조 확정** |
+| ResourceSystem | 기본 에셋 로딩 (Addressables 고도화는 Phase 9) |
+
+**마일스톤:** 로그인 → 게임 씬 진입 → 저장/로드 동작
+
+---
+
+## Phase 4 — 전투 루프
+
+**목표:** 플레이어가 몬스터를 공격하고 몬스터가 반격하는 상태
+
+| 시스템 | 비고 |
+|--------|------|
+| StatSystem | 스탯 테이블 — DamageSystem이 의존 |
+| DamageSystem | EntityHealth 포함 |
+| Enemy Entity | FSMModule + NavigationModule |
+| CombatSystem | 어그로, 타겟팅 |
+| EffectSystem | 타격 이펙트 (PoolingSystem 연동) |
+
+**마일스톤:** 기본 전투 루프 동작 (공격 → 피해 → 사망)
+
+---
+
+## Phase 5 — 월드 구성
+
+**목표:** 실제 맵 위에서 전투 가능한 상태
+
+| 시스템 | 비고 |
+|--------|------|
+| MapSystem | 맵 노드 구조, Boundary → CameraSystem 연동 |
+| SpawnSystem | 몬스터/NPC 스폰 |
+| TriggerSystem | 보스방 진입, 구역 트리거 |
+| EnvironmentSystem | 조명, 날씨 (아트 작업에 맞춰서) |
+| **ScriptingSystem Core** | **Lexer / Parser / Runner / Context + EditorWindow 기본 틀** |
+| **@trigger / @wave ScriptAPI** | **TriggerSystem·SpawnSystem 연동** |
+
+**마일스톤:** 챕터 맵에서 전투 가능
+
+---
+
+## Phase 6 — 플레이어 진행 시스템
+
+**목표:** 퀘스트 받고 → 사냥 → 보상 → 완료 루프 동작
+
+| 시스템 | 비고 |
+|--------|------|
+| ItemSystem | 아이템 정적 데이터 테이블 |
+| InventorySystem + DropSystem | 드랍 → 인벤토리 |
+| InteractionSystem | NPC 대화 트리거, 루팅 |
+| QuestSystem | **후퇴 시 챕터 퀘스트 롤백 로직 포함** |
+| **@dialogue / @quest ScriptAPI** | **InteractionSystem·QuestSystem 연동 — 기획자 대화/퀘스트 스크립팅** |
+
+**마일스톤:** 퀘스트 수주 → 처치 → 보상 → 저장
+
+---
+
+## Phase 7 — 스킬 & 보스
+
+**목표:** 보스 처치 → 스킬 해금 루프 동작
+
+| 시스템 | 비고 |
+|--------|------|
+| SkillSystem | 기존 Ability 구조 위에 구현 |
+| BuffSystem | 상태 이상 |
+| 보스 Enemy | 페이즈, 고유 패턴 |
+
+**마일스톤:** 챕터 1 보스 클리어 → 스킬 획득 → 포탈 생성
+
+---
+
+## Phase 8 — 경제 & 거점 콘텐츠
+
+**목표:** 중간 맵 콘텐츠 완성 (강화, 상점, 무한 도장)
+
+| 시스템 | 비고 |
+|--------|------|
+| ShopSystem | NPC 상점 |
+| EnhancementSystem | 골드 기반 강화 |
+| AchievementSystem | 계정 단위 기록 |
+| 무한 도장 세션 | QuestSystem + SpawnSystem 조합 |
+
+**마일스톤:** 중간 맵 → 강화/상점 → 챕터 재도전 루프 완성
+
+---
+
+## Phase 9 — 연출 & 서버
+
+**목표:** 컷씬, 서버 연동, 리소스 최적화
+
+| 시스템 | 비고 |
+|--------|------|
+| CutsceneSystem | 보스 인트로, 챕터 엔딩 |
+| **@cutscene ScriptAPI** | **CutsceneSystem 연동 — 기획자 컷씬 스크립팅** |
+| SoundSystem 고도화 | BGM 씬별 전환, SFX 전체 |
+| NetworkSystem | 리더보드, 클라우드 동기화 |
+| LocalizationSystem | 다국어 필요 시 |
+| ResourceSystem 고도화 | Addressables 챕터별 분리 |
+| CashShopSystem | IAP |
+
+---
+
+## Phase 10 — 콘텐츠 & 밸런싱
+
+- 챕터 2~N 제작
+- 스탯 성장 테이블 조정
+- 드랍률 / 강화 비용 밸런싱
+- 무한 도장 미션 유형 추가
+
+---
+
+## 핵심 게임 루프
+
+```
+[중간 맵]
+ ├── 무한 도장 → 파밍(골드/경험치) → 귀환
+ ├── 대장장이 → 장비 강화 (골드 소비)
+ └── 챕터 선택
+          │ 스펙 체크
+          ▼
+     [챕터 입장]
+          │
+          ├── 마을 ↔ 필드 (퀘스트 수행, 사냥)
+          │
+          ├── [클리어 불가 → 중간 맵 후퇴]
+          │        레벨/장비/골드 유지
+          │        퀘스트/위치 리셋
+          │
+          └── [보스 처치 + 메인 퀘스트 완료]
+                   스킬 해금 + 포탈 생성
+                   다음 챕터 or 중간 맵
 ```
 
 ---
 
-## Economy System
+## 구현 현황
 
-### Gold Currency
-
-**Sources**:
-- Monster kills
-- Quest rewards
-- Item sales
-- Infinite Dojo completion
-
-**Uses**:
-- Equipment enhancement (primary gold sink)
-- Shop purchases (weapons, armor, consumables)
-- Teleport scrolls
-
-**Balance Goal**: Make gold valuable by limiting sources and creating meaningful sinks.
-
----
-
-### Equipment Enhancement
-
-**Location**: Blacksmith NPC (Base Camp only)
-
-**Cost Structure**:
-```
-Enhancement Level | Gold Cost
-+0 → +1          | 100
-+1 → +2          | 200
-+2 → +3          | 400
-+3 → +4          | 800
-+4 → +5          | 1600
-... (exponential growth)
-```
-
-**No Material Requirements**: Only gold needed.
-
----
-
-### Shop System
-
-#### Weapon/Armor Shop
-**Location**: Base Camp
-
-**Functionality**:
-- Buy basic equipment with gold
-- Sell unwanted equipment for gold
-- Equipment has rarity tiers (Common, Rare, Epic, Legendary)
-
-**Price Calculation**:
-```
-Buy Price = Base Value * Rarity Multiplier
-Sell Price = Buy Price * 0.5 (50% of buy price)
-```
-
----
-
-#### General Store
-**Location**: Central Town (each chapter) + Base Camp
-
-**Sells**:
-- Town Return Scrolls (teleport to town)
-- Health Potions
-- Mana Potions
-- Buff consumables
-
-**Price**: Fixed prices, no bargaining
-
----
-
-## NPC System
-
-### NPC Types
-
-#### Functional NPCs (Base Camp)
-- **Blacksmith**: Equipment enhancement
-- **Weapon Merchant**: Buy/sell weapons
-- **Armor Merchant**: Buy/sell armor
-- **General Merchant**: Consumables and scrolls
-- **Storage Keeper**: Inventory management
-
-#### Quest NPCs (Chapter Towns)
-- **Main Quest Giver**: Story progression
-- **Sub Quest Givers**: Side missions
-- **General Merchant**: Consumables
-
-#### Story NPCs
-- **Dialogue-only**: World-building and lore
-- **Scripted Events**: Cutscene triggers
-
----
-
-### NPC Interaction
-
-**Interaction Trigger**:
-- Press Interact key when near NPC
-- Dialogue window opens
-
-**Dialogue System**:
-- Text-based dialogue
-- Branching conversations (for quest choices)
-- Quest acceptance/completion prompts
-
-**Quest Markers**:
-- Yellow "!" - Available quest
-- Blue "?" - Optional dialogue
-- Yellow "?" - Quest in progress
-- Yellow checkmark - Quest ready to complete
-
----
-
-## Infinite Dojo System
-
-**Location**: Base Camp
-
-Session-based farming content for gold and EXP when chapter progress is blocked.
-
-### Structure
-
-**Entry**:
-- Enter from Base Camp portal
-- Separate instance map
-- Spawns at designated start position
-
-**Session**:
-- One special quest/objective assigned on entry
-- Complete objective → Session ends → Return to base camp
-- Receive rewards upon completion
-
----
-
-### Mission Types
-
-#### Elimination Mission
-**Objective**: Find and defeat the target boss within time limit
-
-**Details**:
-- Target spawns in random location on map
-- Must search map while fighting regular enemies
-- Time limit: 5-10 minutes
-- Failure: No rewards, return to base camp
-
----
-
-#### Survival Mission
-**Objective**: Survive waves of enemies for time duration
-
-**Details**:
-- Continuous enemy spawns
-- Increasing difficulty over time
-- Time limit: 3-5 minutes
-- Failure: Death → Return with partial rewards
-
----
-
-#### Collection Mission
-**Objective**: Collect specific items within time limit
-
-**Details**:
-- Items scattered across map
-- Enemies guard item locations
-- Time limit: 5-8 minutes
-- Failure: Incomplete collection → Partial rewards
-
----
-
-### Rewards
-
-**Completion Rewards**:
-- Large gold payout (2-3x normal field)
-- Large EXP payout (2-3x normal field)
-- Guaranteed rare item drop
-
-**Drop Rate Bonuses**:
-- Monster drops have 2x drop rate
-- Higher gold per monster kill
-- Rare material drops
-
-**Efficiency**:
-- Faster leveling than chapter fields
-- Higher gold farming efficiency
-- Trade-off: More challenging, time-limited
-
----
-
-## Portal/Teleport System
-
-### Town Return Scroll (마을 귀환 주문서)
-
-**Function**: Instant teleport to chapter's Central Town
-
-**Acquisition**:
-- Purchase from General Store
-- Random drop from monsters
-
-**Usage**:
-- Use from inventory during field exploration
-- Teleports to town immediately
-- Consumable (one-time use)
-
-**Purpose**:
-- Quick return to town for quest turn-in
-- Emergency escape from dangerous areas
-- Shortcut for inventory management
-
----
-
-### Chapter Portals
-
-**Location**: Appear after chapter completion
-
-**Spawn Trigger**:
-- Defeat final boss
-- Complete main quest line
-
-**Destination Options**:
-- Next Chapter
-- Base Camp
-
-**Alert System**:
-```
-If incomplete sub-quests exist:
-  "You have X sub-quests remaining. Continue to next chapter?"
-  [Continue] [Cancel]
-```
-
----
-
-### Base Camp Return (메뉴 옵션)
-
-**Location**: Menu → "Return to Base Camp"
-
-**Warning Prompt**:
-```
-"Returning to Base Camp will reset quest progress.
-EXP, items, and gold will be preserved.
-Continue?"
-[Yes] [No]
-```
-
-**Purpose**: Strategic retreat for power leveling
-
----
-
-## Map/UI System
-
-### Minimap (HUD)
-
-**Location**: Screen corner (default: top-right)
-
-**Display**:
-- Current map terrain
-- Player position (icon)
-- Nearby monsters (red dots)
-- Nearby NPCs (yellow dots)
-- Quest objectives (yellow markers)
-
-**Features**:
-- Rotates with camera (optional)
-- Zoom in/out
-- Toggle visibility
-
----
-
-### World Map (Menu)
-
-**Access**: Menu → "Map"
-
-**Display**:
-- Full chapter structure (radial layout)
-- Central Town (hub)
-- Connected fields (nodes)
-- Current position (highlighted)
-- Quest locations (markers)
-
-**Features**:
-- Fog of war (unexplored areas hidden)
-- Fast travel to discovered locations (future feature)
-- Area names and level recommendations
-
-**Map Legend**:
-- Red marker: Boss area
-- Yellow marker: Quest objective
-- Blue marker: Discovery point
-- Green marker: Town/safe zone
-
----
-
-## Stage Progression
-
-### Chapter Entry (Power Level Check)
-
-When entering a chapter from Base Camp:
-
-**Power Level Check**:
-```
-Calculate player combat power:
-  Combat Power = (Attack + Defense) * Level + Equipment Score
-
-If Combat Power < Recommended Power:
-  Show warning popup
-```
-
-**Warning Popup**:
-```
-"Your current equipment may not be sufficient for this chapter.
-Recommended Combat Power: XXXX
-Your Combat Power: XXXX
-Enter anyway?"
-[Enter] [Cancel]
-```
-
-**Purpose**: Inform player of difficulty, but allow challenge attempts
-
----
-
-### Within Chapter
-
-**Normal Flow**:
-```
-1. Complete quests in Central Town
-2. Travel to fields via connected paths
-3. Use Town Return Scrolls for quick return
-4. Progress through field unlocks
-5. Defeat chapter boss
-6. Portal appears
-```
-
-**Strategic Retreat**:
-```
-If struggling:
-  Menu → "Return to Base Camp"
-    → Warning prompt
-    → Confirm
-    → Return with EXP/items/gold
-    → Farm Infinite Dojo
-    → Enhance equipment
-    → Return to chapter (reset)
-```
-
----
-
-### Chapter Completion
-
-**Victory Conditions**:
-- Defeat final boss
-- Complete main quest line
-
-**Completion Sequence**:
-```
-1. Boss dies
-2. Victory screen (rewards)
-3. Boss skill unlocked
-4. Portal spawns in Central Town
-5. If sub-quests remaining:
-     Show alert → "X sub-quests incomplete. Continue?"
-6. Enter portal:
-     → Base Camp (save progress, rest)
-     → Next Chapter (continue story)
-```
-
-**Completion Rewards**:
-- Large gold payout
-- Large EXP payout
-- Guaranteed rare equipment
-- Boss skill unlock
-
-**Progress Save**:
-- Chapter marked as completed
-- Next chapter unlocked
-- Boss skill permanently unlocked
-- All chapter loot preserved
-
----
-
-## Implementation Priorities
-
-### Phase 1: Core Systems (Current)
-- ✅ Character System
-- ✅ FSM System
-- ✅ Combat System
-- ✅ Movement System
-
-### Phase 2: Gameplay Loop (Next)
-- Quest System
-- NPC System
-- Save/Load System
-- Portal/Teleport System
-
-### Phase 3: Progression Systems
-- Level/EXP System
-- Equipment System
-- Enhancement System
-- Economy System
-
-### Phase 4: Content Systems
-- Infinite Dojo
-- Map/UI System
-- Boss Skill System
-- Chapter Progression
-
-### Phase 5: Polish
-- Tutorial System
-- Settings Menu
-- Sound/Music
-- Visual Effects
-- Localization
-
----
-
-## Technical Considerations
-
-### Quest System Architecture
-
-**Recommended Pattern**:
-- ScriptableObject for quest definitions
-- QuestManager singleton for runtime state
-- Event-driven quest progress tracking
-
-**Example**:
-```csharp
-public class QuestSO : ScriptableObject {
-    public string questID;
-    public QuestType type;
-    public QuestObjective[] objectives;
-}
-
-public class QuestManager : MonoBehaviour {
-    private Dictionary<string, QuestProgress> activeQuests;
-
-    public void StartQuest(QuestSO quest);
-    public void UpdateObjective(string questID, int objectiveIndex);
-    public void CompleteQuest(string questID);
-}
-```
-
----
-
-### Save System Architecture
-
-**Recommended Pattern**:
-- JSON serialization for save files
-- Async save/load to prevent frame drops
-- Cloud save support (future)
-
-**Example**:
-```csharp
-public class SaveManager : MonoBehaviour {
-    public async Task SaveGame(SaveData data);
-    public async Task<SaveData> LoadGame();
-    public void DeleteSave();
-}
-```
-
----
-
-### Portal System Architecture
-
-**Recommended Pattern**:
-- SceneManager for chapter loading
-- Persistent singleton for cross-scene data
-- Loading screen with async scene loading
-
-**Example**:
-```csharp
-public class PortalManager : MonoBehaviour {
-    public async Task LoadChapter(string chapterID);
-    public async Task ReturnToBaseCamp();
-    public void ShowLoadingScreen();
-}
-```
+→ [IMPLEMENTED.md](IMPLEMENTED.md) 참조

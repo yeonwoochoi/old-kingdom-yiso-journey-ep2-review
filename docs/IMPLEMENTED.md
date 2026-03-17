@@ -1,578 +1,199 @@
-# Implemented Systems
+# 구현 현황
 
-This document describes currently implemented game systems in the prototype. This is a snapshot of working features.
+새 시스템 설계를 기준으로 기존 코드의 통합 상태를 정리한다.
 
-## Table of Contents
-- [Weapon System](#weapon-system)
-- [Combat System](#combat-system)
-- [Field of View System](#field-of-view-system)
-- [Movement System](#movement-system)
-- [Input System](#input-system)
-- [Animation System](#animation-system)
+> **상태 표기**
+> - ✅ 완료 — 새 시스템에 맞게 통합됨 (또는 그대로 사용 가능)
+> - 🔧 통합 예정 — 코드 존재, 새 시스템과 연동 작업 필요
+> - 📐 미구현 — 새로 구현해야 함
+> - ❌ 제외 — 새 설계에서 제거 또는 대체됨
 
 ---
 
-## Weapon System
+## Core 시스템
 
-**Location**: `Assets/Scripts/Gameplay/Character/Weapon/`
-
-The weapon system provides melee/ranged combat functionality integrated with the character module architecture.
-
-### Key Components
-
-#### YisoCharacterWeaponModule (Module #9)
-**File**: `Assets/Scripts/Gameplay/Character/Core/Modules/YisoCharacterWeaponModule.cs`
-
-Manages weapon lifecycle (creation, equipping, destruction).
-
-**Key Methods**:
-```csharp
-void EquipWeapon(YisoWeaponDataSO weaponData);
-void UnequipWeapon();
-void ActivateWeapon();   // Start attack
-void DeactivateWeapon(); // End attack
-YisoWeaponInstance CurrentWeapon { get; }
-```
-
-**Lifecycle**:
-1. EquipWeapon() creates weapon instance from SO data
-2. ActivateWeapon() called from ability/animation event
-3. Weapon deals damage while active
-4. DeactivateWeapon() stops damage detection
-5. UnequipWeapon() destroys weapon instance
+| 시스템 | 상태 | 비고 |
+|--------|------|------|
+| GameSystem | 📐 | 미구현 |
+| ConfigSystem | 📐 | 미구현 |
+| PoolingSystem | 📐 | 미구현 |
+| EventSystem | 🔧 | `YisoEventManager` 기존 구현 → 글로벌 버스로 확장 필요 |
+| TimeSystem | 📐 | 미구현 |
+| InputSystem | 📐 | 미구현 (현재 Character 내부에서 처리 중 → 분리 필요) |
+| SoundSystem | 📐 | 미구현 |
+| UISystem | 📐 | 미구현 |
+| SceneSystem | 📐 | 미구현 |
 
 ---
 
-#### YisoWeaponInstance
-**File**: `Assets/Scripts/Gameplay/Character/Weapon/YisoWeaponInstance.cs`
+## Infra 시스템
 
-Runtime weapon instance with active/inactive states.
-
-**Key Properties**:
-```csharp
-bool IsActive { get; }
-YisoWeaponAim WeaponAim { get; }
-YisoDamageOnTouch DamageOnTouch { get; }
-```
-
-**States**:
-- Inactive: Weapon equipped but not attacking
-- Active: Weapon dealing damage (collider enabled)
+| 시스템 | 상태 | 비고 |
+|--------|------|------|
+| AuthSystem | 🔧 | `YisoAuthService`, `YisoSessionManager` 기존 구현 있음 |
+| NetworkSystem | 🔧 | TCP 핸들러 + Web HTTP 클라이언트 기존 구현 있음 |
+| SaveSystem | 📐 | 미구현. 이원화 저장 로직 설계 필요 |
+| ResourceSystem | 📐 | 미구현 |
+| AddressableLoader | 📐 | 미구현 |
 
 ---
 
-#### YisoWeaponAim
-**File**: `Assets/Scripts/Gameplay/Character/Weapon/YisoWeaponAim.cs`
+## World 시스템
 
-Aiming logic for directional attacks. Integrates with YisoOrientationAbility.
-
-**Key Methods**:
-```csharp
-void SetAimDirection(Vector2 direction);
-Vector2 GetCurrentAim();
-```
-
-**Integration**:
-- YisoOrientationAbility reads from WeaponAim
-- Weapon rotation follows aim direction
-- Supports both mouse and gamepad aiming
+| 시스템 | 상태 | 비고 |
+|--------|------|------|
+| MapSystem | 🔧 | `YisoMapController` 기본 틀 추가 (commit f02274a) — 상세 구현 필요 |
+| SpawnSystem | 📐 | 미구현 |
+| TriggerSystem | 📐 | 미구현 |
+| InteractionSystem | 📐 | 미구현 |
+| EnvironmentSystem | 📐 | 미구현 |
+| CutsceneSystem | 📐 | 미구현 |
 
 ---
 
-#### YisoDamageOnTouch
-**File**: `Assets/Scripts/Gameplay/Character/Weapon/YisoDamageOnTouch.cs`
+## Entity & Character Components
 
-Collision-based damage detection and application.
+### Entity 계층
 
-**Key Features**:
-- Collider2D-based damage detection
-- Damage cooldown per target (prevents multi-hit)
-- Layer mask filtering (only damages valid targets)
-- Integration with Health system
+| 항목 | 상태 | 비고 |
+|------|------|------|
+| Entity Base 클래스 | 📐 | 미구현. 새로 정의 필요 |
+| Player | 🔧 | `YisoCharacter` 기존 구현 → Entity 계층 아래로 재편 |
+| Enemy | 🔧 | `YisoCharacter` 기반으로 구현됨 → 분리 및 재편 예정 |
+| NPC | 📐 | 미구현 |
 
-**Configuration**:
-```csharp
-float damageAmount;
-float damageCooldown;      // Per-target cooldown
-LayerMask targetLayers;
-```
+### Character Components (기존 구현 — 통합 예정)
 
----
+| 컴포넌트 | 기존 클래스 | 상태 | 통합 계획 |
+|---------|------------|------|-----------|
+| MovementComponent | `YisoMovementAbility` | 🔧 | Ability → Component로 재배치 |
+| AnimationComponent | `YisoCharacterAnimationModule` | 🔧 | 모듈 → Component로 재배치 |
+| PhysicsComponent | `YisoHurtbox`, `PhysicsModule` | 🔧 | Hurtbox/Hitbox 로직 통합 |
+| AbilityComponent | `YisoCharacterAbilityModule` | 🔧 | SkillSystem 연동 후 통합 |
+| FSMComponent | `YisoCharacterStateMachine` | 🔧 | Enemy에 그대로 적용, Player 분리 검토 |
 
-#### YisoWeaponDataSO
-**File**: `Assets/Scripts/Gameplay/Character/Weapon/YisoWeaponDataSO.cs`
+#### YisoCharacter 모듈 현황
 
-ScriptableObject defining weapon stats and behavior.
-
-**Properties**:
-```csharp
-string weaponName;
-float damage;
-float attackSpeed;
-float range;
-GameObject weaponPrefab;  // Visual representation
-```
-
----
-
-### Integration Points
-
-#### WeaponModule Initialization
-**Location**: `YisoCharacter.cs` (line 172)
-
-```csharp
-weaponModule = new YisoCharacterWeaponModule();
-weaponModule.Initialize(this);
-```
+| 모듈 | 파일 | 상태 |
+|------|------|------|
+| CoreModule | YisoCharacterCoreModule.cs | 🔧 |
+| InputModule | YisoCharacterInputModule.cs | 🔧 → InputSystem으로 분리 예정 |
+| AnimationModule | YisoCharacterAnimationModule.cs | 🔧 |
+| AbilityModule | YisoCharacterAbilityModule.cs | 🔧 |
+| StateModule | YisoCharacterStateModule.cs | 🔧 |
+| LifecycleModule | YisoCharacterLifecycleModule.cs | 🔧 |
+| SaveModule | YisoCharacterSaveModule.cs | 🔧 → SaveSystem으로 통합 예정 |
+| WeaponModule | YisoCharacterWeaponModule.cs | 🔧 |
 
 ---
 
-#### YisoOrientationAbility Integration
-**Location**: `YisoOrientationAbility.cs`
+## Combat 시스템
 
-Reads from WeaponAim for aim-based direction control:
-```csharp
-if (weaponModule?.CurrentWeapon != null) {
-    Vector2 aimDirection = weaponModule.CurrentWeapon.WeaponAim.GetCurrentAim();
-    ForceFace(aimDirection);
-}
-```
+| 시스템 | 상태 | 비고 |
+|--------|------|------|
+| DamageSystem | 🔧 | `YisoDamageProcessor`, `YisoEntityHealth` 기존 구현 — DamageSystem으로 통합 |
+| StatSystem | 📐 | 미구현. 레벨업 테이블 및 스탯 합산 로직 |
+| SkillSystem | 📐 | 미구현. 기존 Ability 구조 위에 구현 예정 |
+| BuffSystem | 📐 | 미구현 |
+| CombatSystem | 📐 | 미구현. 어그로, 타겟팅 |
+| EffectSystem | 📐 | 미구현. 기존 HealthFeedback 참고 가능 |
 
-Priority: WeaponAim > Input > Current Facing
+#### Health / Damage 기존 구현
 
----
-
-#### YisoMeleeAttackAbility Integration
-**Location**: `YisoMeleeAttackAbility.cs`
-
-Triggers weapon activation via animation events:
-```csharp
-public void OnAnimationEvent(string eventName) {
-    if (eventName == "AttackStart") {
-        context.WeaponModule.ActivateWeapon();
-    } else if (eventName == "AttackEnd") {
-        context.WeaponModule.DeactivateWeapon();
-    }
-}
-```
+| 클래스 | 새 시스템 내 위치 |
+|--------|----------------|
+| YisoEntityHealth | DamageSystem / Entity |
+| YisoDamageProcessor | DamageSystem |
+| YisoHealthAnimator | AnimationComponent |
+| YisoHealthFeedback | EffectSystem |
+| YisoHealthPhysicsHandler | PhysicsComponent |
+| YisoHealthUIController | UISystem / HUDSystem |
+| YisoDeathLogicHandler | SpawnSystem / QuestSystem / DropSystem |
+| YisoHurtbox | PhysicsComponent |
+| YisoDamageOnTouch | PhysicsComponent |
+| YisoFloatingText | EffectSystem (풀링) |
+| YisoProgressBar | HUDSystem |
 
 ---
 
-## Combat System
+## FSM (기존 구현 — 통합 예정)
 
-### Health/Damage System
-
-**Location**: `Assets/Scripts/Gameplay/Health/`
-
-#### YisoHealth
-**File**: `Assets/Scripts/Gameplay/Health/YisoHealth.cs`
-
-Character health management component.
-
-**Key Methods**:
-```csharp
-void TakeDamage(float damage);
-void Heal(float amount);
-void Die();
-bool IsDead { get; }
-float CurrentHealth { get; }
-float MaxHealth { get; }
-```
-
-**Features**:
-- Damage reduction calculation
-- Invincibility frames
-- Death event triggering
-- Health bar integration
+| 항목 | 상태 |
+|------|------|
+| YisoCharacterStateMachine | 🔧 Enemy FSMComponent로 그대로 활용 |
+| YisoCharacterAction (Actions) | 🔧 FSMComponent 하위로 재배치 |
+| YisoCharacterDecision (Decisions) | 🔧 FSMComponent 하위로 재배치 |
 
 ---
 
-#### DamageInfo Struct
-**File**: `Assets/Scripts/Gameplay/Health/DamageInfo.cs`
+## Ability 시스템 (기존 구현 — SkillSystem과 연동 예정)
 
-Struct containing damage information.
-
-```csharp
-public struct DamageInfo {
-    public float damage;
-    public DamageType damageType;
-    public GameObject source;
-    public Vector2 impactForce;
-}
-```
-
-**DamageType Enum**:
-- Physical
-- Magical
-- True (ignores defense)
+| 항목 | 상태 |
+|------|------|
+| YisoAbilitySO / YisoCharacterAbilityBase | 🔧 SkillSystem 연동 예정 |
+| YisoMovementAbility | 🔧 MovementComponent로 이관 |
+| YisoOrientationAbility | 🔧 유지 (ForceFace API 활용) |
+| YisoMeleeAttackAbility | 🔧 AbilityComponent + SkillSystem 연동 |
+| YisoProjectileAttackAbility | 🔧 AbilityComponent + SkillSystem 연동 |
 
 ---
 
-### YisoMeleeAttackAbility
+## Weapon 시스템 (기존 구현 — 통합 예정)
 
-**Location**: `Assets/Scripts/Gameplay/Character/Abilities/YisoMeleeAttackAbility.cs`
-
-Melee combat ability with input buffering and animation events.
-
-**Key Features**:
-- Input buffering (press attack before animation finishes)
-- Animation event integration
-- Combo system support (future)
-- Attack cooldown management
-
-**Input Buffering**:
-```csharp
-// If attack pressed during attack animation, buffer it
-if (attackPressed && isAttacking) {
-    bufferedAttack = true;
-}
-
-// Execute buffered attack when animation finishes
-if (bufferedAttack && !isAttacking) {
-    ExecuteAttack();
-    bufferedAttack = false;
-}
-```
-
-**Animation Events**:
-- "AttackStart" - Activate weapon damage
-- "AttackHit" - Impact timing for VFX/SFX
-- "AttackEnd" - Deactivate weapon damage
+| 클래스 | 새 시스템 내 위치 |
+|--------|----------------|
+| YisoWeaponInstance | AbilityComponent / CombatSystem |
+| YisoWeaponAim | AbilityComponent (OrientationAbility 연동 유지) |
+| YisoMeleeHitboxController | PhysicsComponent |
+| YisoProjectile | PoolingSystem + PhysicsComponent |
+| YisoWeaponDataSO | 그대로 유지 (정적 데이터 SO) |
 
 ---
 
-## Field of View System
+## Player 시스템
 
-**Commits**: `4e569af` (FOV feature), `273592e` (Cone of Vision decision)
-
-**Location**: `Assets/Scripts/Gameplay/Tools/Visual/YisoFieldOfViewRenderer.cs`
-
-Mesh-based field of view visualization with raycasting for AI enemy detection.
-
-### YisoFieldOfViewRenderer
-
-Renders FOV mesh using configurable angle and range.
-
-**Key Configuration**:
-```csharp
-float viewAngle = 90f;        // FOV angle in degrees
-float viewRange = 10f;         // Detection range
-int rayCount = 50;             // Mesh resolution
-LayerMask obstacleLayer;       // What blocks vision
-```
-
-**Features**:
-- Real-time mesh generation
-- Raycast-based occlusion detection
-- Visual debugging (Editor only)
-- Performance optimized (mesh pooling)
+| 시스템 | 상태 |
+|--------|------|
+| QuestSystem | 📐 |
+| InventorySystem | 📐 |
+| AchievementSystem | 📐 |
 
 ---
 
-### FSM Integration
+## Economy 시스템
 
-#### YisoCharacterActionConeOfVision
-**Location**: `Assets/Scripts/Gameplay/Character/StateMachine/Actions/YisoCharacterActionConeOfVision.cs`
-
-FSM Action that updates FOV direction.
-
-**Usage**:
-```csharp
-public override void PerformAction(IYisoCharacterContext context) {
-    // Update FOV to face target
-    if (target != null) {
-        Vector2 direction = (target.position - transform.position).normalized;
-        fovRenderer.SetDirection(direction);
-    }
-}
-```
+| 시스템 | 상태 |
+|--------|------|
+| ItemSystem | 📐 |
+| DropSystem | 📐 |
+| ShopSystem | 📐 |
+| EnhancementSystem | 📐 |
+| CashShopSystem | 📐 |
+| CraftSystem | ❌ 기획 방침상 스펙 아웃 권장 |
 
 ---
 
-#### YisoCharacterDecisionDetectTargetConeOfVision
-**Location**: `Assets/Scripts/Gameplay/Character/StateMachine/Decisions/YisoCharacterDecisionDetectTargetConeOfVision.cs`
+## Network (기존 구현 — 통합 예정)
 
-FSM Decision detecting enemies within FOV cone.
-
-**Logic**:
-```csharp
-public override bool Decide(IYisoCharacterContext context) {
-    // Check if target is in FOV angle
-    bool inFOV = fovRenderer.IsTargetInFOV(target);
-
-    // Check if line of sight is clear (raycasting)
-    bool lineOfSight = !Physics2D.Raycast(origin, direction, distance, obstacleLayer);
-
-    return inFOV && lineOfSight;
-}
-```
+| 항목 | 상태 | 비고 |
+|------|------|------|
+| YisoHttpClient / YisoApiEndpoints | 🔧 NetworkSystem/AuthSystem에 통합 |
+| YisoAuthService, YisoSessionManager | 🔧 AuthSystem에 통합 |
+| YisoRankService | 🔧 NetworkSystem 하위 |
+| YisoTcpHandler / PacketDispatcher | 🔧 NetworkSystem (Game Server) |
+| ServerShared DTOs | ✅ 그대로 유지 |
 
 ---
 
-### Usage in AI FSM
+## Tools / 유틸리티 (기존 구현)
 
-```
-Idle State
-  ↓ Transition (DetectTargetConeOfVision = true)
-Chase State
-  ↓ Action (ConeOfVision) - Update FOV direction toward player
-  ↓ Action (MoveTowardTarget) - Move to player
-```
-
----
-
-## Movement System
-
-### YisoMovementAbility
-
-**Location**: `Assets/Scripts/Gameplay/Character/Abilities/YisoMovementAbility.cs`
-
-Interpolated movement with acceleration/deceleration curves and speed multipliers.
-
-**Key Features**:
-- Smooth acceleration/deceleration
-- Speed multipliers (running, walking, crouching)
-- Animation parameter syncing
-- State-based movement blocking
-
-**Configuration**:
-```csharp
-float baseSpeed = 5f;
-AnimationCurve accelerationCurve;
-AnimationCurve decelerationCurve;
-float accelerationTime = 0.2f;
-float decelerationTime = 0.3f;
-```
-
-**Speed Multipliers**:
-```csharp
-enum MovementState {
-    Walking,   // 1.0x
-    Running,   // 1.5x
-    Crouching  // 0.5x
-}
-```
-
-**Ability Lifecycle**:
-1. **PreProcessAbility()** - Read input, check permissions
-2. **ProcessAbility()** - Calculate movement with interpolation
-3. **PostProcessAbility()** - Apply to TopDownController
-4. **UpdateAnimator()** - Sync speed parameter
-
----
-
-### YisoOrientationAbility
-
-**Location**: `Assets/Scripts/Gameplay/Character/Abilities/YisoOrientationAbility.cs`
-
-Character facing direction control (always-enabled ability).
-
-**Key Features**:
-- Automatic facing based on movement
-- Weapon aim integration
-- Manual facing control via `ForceFace()`
-- Cardinal direction conversion
-
-**Priority System**:
-1. Weapon Aim (if weapon equipped and aiming)
-2. Input/Movement Direction
-3. Current Facing (maintain if no input)
-
-**ForceFace() Method**:
-```csharp
-public void ForceFace(Vector2 direction) {
-    FacingDirections cardinalDir = ConvertToCardinal(direction);
-    currentFacing = cardinalDir;
-    UpdateAnimator();
-}
-```
-
----
-
-### TopDownController
-
-**Location**: `Assets/Scripts/Gameplay/Core/TopDownController.cs`
-
-Rigidbody2D-based physics controller.
-
-**Key Features**:
-- Interpolated movement
-- Acceleration/deceleration curves
-- Knockback/impact system
-- Collision handling
-
-**Configuration**:
-```csharp
-float maxSpeed = 10f;
-AnimationCurve accelerationCurve;
-AnimationCurve decelerationCurve;
-float impactFalloffCurve;  // Knockback decay
-```
-
-**Impact System**:
-```csharp
-public void AddImpact(Vector2 force) {
-    currentImpact += force;
-    // Decays over time using falloff curve
-}
-```
-
----
-
-## Input System
-
-**Location**: `Assets/Scripts/Gameplay/Character/Core/Modules/YisoCharacterInputModule.cs`
-
-Unity's new Input System integration for player characters.
-
-### Action Maps
-
-#### Player Action Map
-- Move (Vector2)
-- Attack (Button)
-- Dash (Button)
-- Interact (Button)
-
-#### UI Action Map
-- Navigate (Vector2)
-- Submit (Button)
-- Cancel (Button)
-
-**Configuration File**: `Assets/Settings/InputSystem/InputSystem_Actions.inputactions`
-
----
-
-### InputModule Features
-
-**Input Reading**:
-```csharp
-public Vector2 MovementInput { get; private set; }
-public bool AttackPressed { get; private set; }
-public bool AttackHeld { get; private set; }
-```
-
-**Runtime Action Map Switching**:
-```csharp
-public void SwitchToUIActionMap() {
-    playerActionMap.Disable();
-    uiActionMap.Enable();
-}
-
-public void SwitchToPlayerActionMap() {
-    uiActionMap.Disable();
-    playerActionMap.Enable();
-}
-```
-
-**Input Buffering**:
-- Attack input buffered during animations
-- Configurable buffer window (default: 0.2s)
-
----
-
-## Animation System
-
-**Location**: `Assets/Scripts/Gameplay/Character/Core/Modules/YisoCharacterAnimationModule.cs`
-
-### YisoCharacterAnimationModule
-
-Integrates with Unity Animator for character animations.
-
-**Key Features**:
-- Centralized animation parameter management
-- Animation event routing to AbilityModule
-- State-based animation control
-
-**Animation Parameters**:
-```csharp
-// Bool parameters
-"IsWalking"
-"IsAttacking"
-"IsDead"
-
-// Float parameters
-"Speed"
-"AttackSpeed"
-
-// Triggers
-"Attack"
-"Hit"
-"Die"
-```
-
-**Animation Event Routing**:
-```csharp
-// Called from Unity Animation Event
-public void OnAnimationEvent(string eventName) {
-    // Routes to AbilityModule
-    context.OnAnimationEvent(eventName);
-}
-```
-
-**Common Animation Events**:
-- "AttackStart" - Begin damage detection
-- "AttackHit" - Impact timing (VFX/SFX)
-- "AttackEnd" - End damage detection
-- "FootstepLeft" / "FootstepRight" - Footstep sounds
-
----
-
-## Integration Summary
-
-### Character Update Flow (Implemented)
-
-```
-YisoCharacter
-  ↓
-RunIUpdateManager.OnUpdate()
-  ↓
-InputModule (read player input)
-  ↓
-StateModule (evaluate FSM transitions)
-  ↓
-AbilityModule (process abilities)
-  ├─ MovementAbility → calculate movement
-  ├─ OrientationAbility → calculate facing
-  └─ MeleeAttackAbility → process attacks
-  ↓
-AnimationModule (update animator)
-  ↓
-WeaponModule (weapon state update)
-```
-
-### Combat Flow (Implemented)
-
-```
-Player Input (Attack)
-  ↓
-MeleeAttackAbility.PreProcessAbility() (check can attack)
-  ↓
-MeleeAttackAbility.ProcessAbility() (start attack animation)
-  ↓
-Animation Event "AttackStart"
-  ↓
-WeaponModule.ActivateWeapon()
-  ↓
-YisoDamageOnTouch detects collision
-  ↓
-Target.YisoHealth.TakeDamage()
-  ↓
-Animation Event "AttackEnd"
-  ↓
-WeaponModule.DeactivateWeapon()
-```
-
-### AI Detection Flow (Implemented)
-
-```
-Enemy Idle State
-  ↓
-ConeOfVision Action (update FOV direction)
-  ↓
-DetectTargetConeOfVision Decision
-  ├─ Check angle (IsTargetInFOV)
-  ├─ Check line of sight (Raycast)
-  └─ Returns true/false
-  ↓ (true)
-Transition to Chase State
-```
+| 도구 | 상태 | 비고 |
+|------|------|------|
+| YisoStateMachine (범용 FSM) | ✅ 그대로 사용 |
+| YisoFieldOfViewRenderer | ✅ 그대로 사용 |
+| ArcCollider2D | ✅ 그대로 사용 |
+| YisoFollowTarget | ✅ 그대로 사용 |
+| YisoSurfaceModifierZone | ✅ 그대로 사용 |
+| YisoEventManager | 🔧 EventSystem으로 흡수 |
+| GridGenerator 시리즈 | ✅ 프로시저럴 맵 생성에 활용 |
+| TilemapGenerator 시리즈 | ✅ 맵 생성에 활용 |

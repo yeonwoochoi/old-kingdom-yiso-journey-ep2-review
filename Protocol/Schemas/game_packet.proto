@@ -4,62 +4,64 @@ package yiso.game;
 import "common.proto";
 import "game_enum.proto";
 
+// ============================================================================
+// 채팅
+// ============================================================================
+
 message C2S_Chat {
   string message = 1;
 }
-
 message S2C_Chat {
   uint32 session_id = 1;
-  string message = 2;
+  string message    = 2;
 }
 
-// 귓속말
 message C2S_Whisper {
   uint32 target_session_id = 1;
-  string message = 2;
+  string message           = 2;
 }
 message S2C_Whisper {
   uint32 from_session_id = 1;
-  string message = 2;
+  string message         = 2;
 }
 
-// 채팅방
 message C2S_CreateRoom {
   string room_name = 1;
 }
 message S2C_CreateRoom {
-  uint32 room_id = 1;
+  uint32 room_id   = 1;
   string room_name = 2;
-  bool   success = 3;
-  string error = 4;
+  bool   success   = 3;
+  string error     = 4;
 }
+
 message C2S_DeleteRoom {
   uint32 room_id = 1;
 }
 message S2C_DeleteRoom {
-  uint32 room_id = 1;
+  uint32 room_id   = 1;
   string room_name = 2;
-  bool   success = 3;
-  string error = 4;
+  bool   success   = 3;
+  string error     = 4;
 }
 
 message C2S_JoinRoom {
   uint32 room_id = 1;
 }
 message S2C_JoinRoom {
-  uint32 room_id = 1;
-  uint32 joined_session = 2;
-  bool   success = 3;
-  string error = 4;
+  uint32 room_id         = 1;
+  uint32 joined_session  = 2;
+  bool   success         = 3;
+  string error           = 4;
 }
 
 message C2S_LeaveRoom {
   uint32 room_id = 1;
 }
 message S2C_LeaveRoom {
-  uint32 room_id = 1;
+  uint32 room_id    = 1;
   uint32 left_session = 2;
-  uint32 new_owner = 3;
+  uint32 new_owner  = 3;
 }
 
 message C2S_RoomChat {
@@ -67,7 +69,127 @@ message C2S_RoomChat {
   string message = 2;
 }
 message S2C_RoomChat {
-  uint32 room_id = 1;
+  uint32 room_id         = 1;
   uint32 from_session_id = 2;
-  string message = 3;
+  string message         = 3;
 }
+
+// ============================================================================
+// 초기 데이터
+// ============================================================================
+
+// 게임 시작 시 초기 플레이어 데이터 요청
+message C2S_RequestPlayerData {}
+
+// 서버 응답: 플레이어 현재 위치/챕터 정보 (간략)
+// 이후 클라이언트가 C2S_RequestMapData로 상세 맵 데이터를 요청한다.
+message S2C_PlayerData {
+  uint32               player_id  = 1;
+  uint32               chapter_id = 2;
+  uint32               map_id     = 3;
+  yiso.common.Vector2  position   = 4; // 마지막 저장 위치
+}
+
+// ============================================================================
+// 맵 오브젝트 데이터 (서버가 플레이어 상태에 맞게 결정하여 내려줌)
+// ============================================================================
+
+message NpcObjectData {
+  uint32              npc_id       = 1;
+  string              template_key = 2; // Addressable key (template prefab)
+  yiso.common.Vector2 position     = 3;
+  bool                active       = 4; // 퀘스트 진행도에 따라 서버가 결정
+}
+
+message ReactorObjectData {
+  uint32              object_id    = 1;
+  uint32              reactor_id   = 2;
+  string              template_key = 3; // Addressable key (reactor prefab)
+  yiso.common.Vector2 position     = 4;
+  bool                active       = 5;
+}
+
+message EnemyObjectData {
+  uint32              enemy_id     = 1;
+  string              template_key = 2; // Addressable key (template prefab)
+  yiso.common.Vector2 position     = 3;
+  bool                active       = 4; // 보스/퀘스트 Enemy - 처치 여부에 따라 결정
+}
+
+message EnemySpawnerData {
+  uint32              spawner_id   = 1;
+  string              template_key = 2; // Addressable key (spawner prefab)
+  yiso.common.Vector2 position     = 3;
+  bool                active       = 4;
+  repeated uint32     enemy_ids    = 5; // 이 스포너가 생성할 Enemy ID 목록
+}
+
+message PortalObjectData {
+  uint32              connect_map_id = 1; // 연결된 맵 ID (맵 내 유일 식별자)
+  string              template_key   = 2; // Addressable key (portal prefab)
+  yiso.common.Vector2 position       = 3;
+  PortalState         state          = 4; // Locked / Active
+}
+
+// ============================================================================
+// 맵 데이터
+// ============================================================================
+
+// 프리로드 전용 맵 데이터 요청 (전환 없이 데이터만 받는다)
+message C2S_RequestMapData {
+  uint32 map_id = 1;
+}
+
+// 맵 이동 전환 요청 (서버가 유효성 검사 + 플레이어 위치 저장)
+message C2S_ChangeMap {
+  uint32            map_id          = 1;
+  MapTransitionType transition_type = 2;
+}
+
+// 맵 데이터 응답 (전환 / 프리로드 / 후퇴 / 도장 진입 모두 동일 메시지 사용)
+// PacketType(S2C_MAP_DATA)으로 구분된다.
+message S2C_MapData {
+  uint32              map_id          = 1;
+  string              addressable_key = 2; // 맵 배경 프리팹 Addressable key
+  MapType             map_type        = 3;
+  yiso.common.Vector2 spawn_position  = 4; // 서버가 결정한 기본 스폰 위치
+
+  repeated NpcObjectData      npcs     = 5;
+  repeated ReactorObjectData  reactors = 6;
+  repeated EnemySpawnerData   spawners = 7;
+  repeated EnemyObjectData    enemies  = 8; // 보스, 퀘스트 개별 Enemy
+  repeated PortalObjectData   portals  = 9;
+}
+
+// ============================================================================
+// 챕터
+// ============================================================================
+
+// 챕터 진입 요청 (서버가 챕터 초기화 + TownMap 데이터 응답)
+message C2S_EnterChapter {
+  uint32 chapter_id = 1;
+}
+
+// 챕터 메타 데이터 응답
+message S2C_ChapterInfo {
+  uint32          chapter_id          = 1;
+  string          chapter_name        = 2;
+  uint32          recommended_stat    = 3; // 권장 전투력
+  uint32          town_map_id         = 4;
+  repeated uint32 field_map_ids       = 5;
+  uint32          boss_area_map_id    = 6;
+  uint32          boss_reward_skill_id = 7; // 보스 처치 시 획득할 스킬 ID
+}
+
+// ============================================================================
+// 거점 후퇴 / 무한 도장
+// ============================================================================
+
+// 거점 후퇴 요청 (서버가 챕터 퀘스트 리셋 + BaseCamp 맵 데이터 응답)
+message C2S_RetreatToBaseCamp {}
+
+// 무한 도장 진입 (서버가 세션 생성 + Dojo 맵 데이터 응답)
+message C2S_EnterDojo {}
+
+// 무한 도장 탈출 (서버가 세션 종료 + BaseCamp 맵 데이터 응답)
+message C2S_ExitDojo {}

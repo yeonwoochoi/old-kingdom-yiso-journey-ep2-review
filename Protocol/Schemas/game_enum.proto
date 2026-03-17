@@ -6,21 +6,63 @@ package yiso.game;
 enum PacketType {
     UNKNOWN = 0;
 
-    // Client -> Server
-    C2S_CHAT = 1;
-    C2S_WHISPER = 2;
-    C2S_CREATE_ROOM = 3;
-    C2S_DELETE_ROOM = 4;
-    C2S_JOIN_ROOM = 5;
-    C2S_LEAVE_ROOM = 6;
-    C2S_ROOM_CHAT = 7;
+    // ── Client -> Server ────────────────────────────────────────────────
 
-    // Server -> Client
-    S2C_CHAT = 1001;
-    S2C_WHISPER = 1002;
+    // 채팅
+    C2S_CHAT          = 1;
+    C2S_WHISPER       = 2;
+    C2S_CREATE_ROOM   = 3;
+    C2S_DELETE_ROOM   = 4;
+    C2S_JOIN_ROOM     = 5;
+    C2S_LEAVE_ROOM    = 6;
+    C2S_ROOM_CHAT     = 7;
+
+    // 맵/챕터
+    C2S_PLAYER_INFO         = 8;   // 게임 시작 시 초기 데이터 요청
+    C2S_CHANGE_MAP          = 9;   // 맵 이동 전환 요청 (서버가 저장 + 응답)
+    C2S_ENTER_CHAPTER       = 10;  // 챕터 진입 요청
+    C2S_REQUEST_MAP_DATA    = 11;  // 프리로드 전용 맵 데이터 요청 (전환 없음)
+    C2S_RETREAT_TO_BASE_CAMP = 12; // 거점 후퇴 요청 (챕터 퀘스트 리셋)
+    C2S_ENTER_DOJO          = 13;  // 무한 도장 진입
+    C2S_EXIT_DOJO           = 14;  // 무한 도장 탈출
+
+    // ── Server -> Client ────────────────────────────────────────────────
+
+    // 채팅
+    S2C_CHAT        = 1001;
+    S2C_WHISPER     = 1002;
     S2C_CREATE_ROOM = 1003;
     S2C_DELETE_ROOM = 1004;
-    S2C_JOIN_ROOM = 1005;
-    S2C_LEAVE_ROOM = 1006;
-    S2C_ROOM_CHAT = 1007;
+    S2C_JOIN_ROOM   = 1005;
+    S2C_LEAVE_ROOM  = 1006;
+    S2C_ROOM_CHAT   = 1007;
+
+    // 맵/챕터
+    S2C_PLAYER_INFO  = 1008; // 초기 플레이어 데이터 응답
+    S2C_MAP_DATA     = 1009; // 맵 데이터 응답 (전환/프리로드/후퇴/도장 모두 공용)
+    S2C_CHAPTER_INFO = 1010; // 챕터 데이터 응답
+}
+
+// 맵 종류
+enum MapType {
+    MAP_TYPE_BASE_CAMP         = 0;
+    MAP_TYPE_CHAPTER_TOWN      = 1;
+    MAP_TYPE_CHAPTER_FIELD     = 2;
+    MAP_TYPE_CHAPTER_DUNGEON   = 3;
+    MAP_TYPE_CHAPTER_BOSS_AREA = 4;
+    MAP_TYPE_INFINITE_DOJO     = 5;
+}
+
+// 맵 이동 방식
+enum MapTransitionType {
+    MAP_TRANSITION_WALK   = 0; // 도보 (경계 트리거)
+    MAP_TRANSITION_PORTAL = 1; // 포탈
+    MAP_TRANSITION_SCROLL = 2; // 마을 귀환 주문서
+    MAP_TRANSITION_MENU   = 3; // 메뉴 → 거점 후퇴
+}
+
+// 포탈 상태
+enum PortalState {
+    PORTAL_STATE_LOCKED = 0; // 잠금 (챕터 완료 전)
+    PORTAL_STATE_ACTIVE = 1; // 활성화
 }

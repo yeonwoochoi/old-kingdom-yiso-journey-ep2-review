@@ -1,366 +1,265 @@
-# Architecture Documentation
+# 시스템 아키텍처
 
-This document describes the core architecture and design patterns used in Old Kingdom Yiso Journey Episode 2.
+## 1. 전체 레이어 구조
 
-## Table of Contents
-- [Modular Character System](#modular-character-system)
-- [C# Class-Based FSM (Ver2)](#c-class-based-fsm-ver2)
-- [Ability System](#ability-system)
-- [Core Infrastructure](#core-infrastructure)
-- [Design Patterns](#design-patterns)
-- [Naming Conventions](#naming-conventions)
-- [Interface-First Design](#interface-first-design)
-- [System Interaction Flows](#system-interaction-flows)
-- [Project Structure](#project-structure)
+```
+┌──────────────────────────────────────────────────────────────────┐
+│  Layer 1: 최초 진입점                                             │
+│  BootStrapper (= GameSystem)                                     │
+│  └── Core 시스템을 순서대로 초기화 → Login Scene 로드             │
+└────────────────────────────┬─────────────────────────────────────┘
+                             │
+                             ▼
+┌──────────────────────────────────────────────────────────────────┐
+│  Layer 2: Core 구축  (DontDestroyOnLoad — 모든 씬에서 유지)       │
+│                                                                  │
+│  초기화 순서:                                                     │
+│  LogSystem → ConfigSystem → PoolingSystem → EventSystem          │
+│      → TimeSystem → InputSystem → SoundSystem                    │
+│      → UISystem ─┬─ UIManager                                    │
+│                  └─ HUDManager                                   │
+│      → SceneSystem → LocalizationSystem → CameraSystem           │
+│                                                                  │
+└────────────────────────────┬─────────────────────────────────────┘
+                             │ Login Scene 로드
+                             ▼
+┌──────────────────────────────────────────────────────────────────┐
+│  Layer 3: Infra 구축  (Login Scene)                              │
+│                                                                  │
+│  NetworkSystem → AuthSystem ──(로그인 성공)──► SaveSystem         │
+│                                               └── ResourceSystem │
+│                                                     ├── AddressableLoader  │
+│                                                     └── (Built-in Loader)  │
+└────────────────────────────┬─────────────────────────────────────┘
+                             │ 캐릭터 선택 → Game Scene 진입
+                             ▼
+┌──────────────────────────────────────────────────────────────────┐
+│  Layer 4: World 환경 구성  (Game Scene)                          │
+│                                                                  │
+│  MapSystem ──────────────────────────────────────────────────►  │
+│   ├── EnvironmentSystem                                          │
+│   ├── SpawnSystem                                                │
+│   ├── TriggerSystem                                              │
+│   └── InteractionSystem                                          │
+│                                                                  │
+│  PlayerSystem (MapSystem 다음 초기화)                            │
+│   ├── EntityBase ──► Player / Enemy / NPC                        │
+│   └── Component  ──► AnimationModule / MovementModule /          │
+│                       PhysicModule / FSMModule / NavigationModule │
+│                                                                  │
+│  ── [Player State 프레임 (의미적 그룹, 독립 시스템)] ───           │
+│   QuestSystem · InventorySystem · AchievementSystem              │
+│                          │                                       │
+│                          ▼                                       │
+│  ── [Character State 프레임] ───────────────────────────────     │
+│   SkillSystem · BuffSystem · CombatSystem                        │
+│   StatSystem  · EffectSystem · DamageSystem                      │
+│                          │                                       │
+│                          ▼                                       │
+│  ── [Economy 프레임] ───────────────────────────────────────     │
+│   ItemSystem · ShopSystem · EnhancementSystem                    │
+│   DropSystem · CashShopSystem                                    │
+│                          │ (데이터 기반 UI 바인딩/갱신)            │
+│                          ▼                                       │
+│   UIManager (Binding/Update) ──► CutsceneSystem                  │
+│                                                                  │
+│  ScriptingSystem (독립 — MapSystem 이후 초기화)                   │
+│   ├── Core  (Lexer / Parser / Runner / Context)                  │
+│   ├── AST   (블록 노드 타입)                                      │
+│   └── API   (IScriptAPI → 각 시스템 브릿지)                      │
+│                                                                  │
+└──────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
-## Modular Character System
+## 2. Layer별 상세 설명
 
-The character system is the heart of the game architecture. **YisoCharacter** acts as a central facade coordinating independent modules through the **IYisoCharacterContext** interface.
+### Layer 1 — BootStrapper (= GameSystem)
 
-### Key Files
-- `Assets/Scripts/Gameplay/Character/Core/YisoCharacter.cs` - Central character hub
-- `Assets/Scripts/Gameplay/Character/Core/Modules/` - All character modules
+단순 진입점. 별도 GameSystem 없이 BootStrapper가 역할 통합.
 
-### Character Modules (9 total)
+- Core 시스템을 정해진 순서대로 초기화
+- 완료 후 Login Scene 로드
 
-1. **CoreModule** - Basic functionality
-2. **AbilityModule** - Manages character abilities lifecycle
-3. **AnimationModule** - Animation control
-4. **StateModule** - FSM state management
-5. **InputModule** - Player input (Player type only)
-6. **AIModule** - AI pathfinding (AI types only)
-7. **LifecycleModule** - Health/death management
-8. **SaveModule** - Save/load functionality
-9. **WeaponModule** - Weapon creation, equipping, and management
+### Layer 2 — Core 구축
 
-### Module Initialization (Two-Phase Process)
-
-1. **Initialize()** - Each module sets up independently
-2. **LateInitialize()** - Modules link to each other after all are initialized
-
-This ensures dependencies are resolved in the correct order.
-
-### Module Lifecycle
+**초기화 체인 (좌→우):**
 
 ```
-OnEnable → OnUpdate (via RunIUpdateManager) → OnDisable → OnDestroy
+LogSystem → ConfigSystem → PoolingSystem → EventSystem
+    → TimeSystem → InputSystem → SoundSystem
+    → UISystem → SceneSystem → LocalizationSystem → CameraSystem
 ```
 
-All modules follow this lifecycle pattern for consistent behavior with object pooling.
+UISystem이 초기화되면 UIManager / HUDManager를 하위에 생성.
 
-### Character Types
+| 시스템 | 역할 요약 |
+|--------|-----------|
+| LogSystem | 콘솔 로그, 에러 트래킹, 애널리틱스 |
+| ConfigSystem | 볼륨/해상도/키맵 로컬 저장 |
+| PoolingSystem | 몬스터/투사체/이펙트/드랍 아이템 오브젝트 풀 |
+| EventSystem | 글로벌 이벤트 버스 (Pub/Sub) |
+| TimeSystem | DeltaTime, TimeScale, 타이머 |
+| InputSystem | 키/마우스/터치 → 게임 명령 변환 |
+| SoundSystem | BGM 전환, SFX 재생, 오디오 풀링 |
+| UISystem | 팝업 스택, Z-Order, UIManager/HUDManager 생성 |
+| SceneSystem | 씬 비동기 로딩, 로딩 스크린, 메모리 해제 |
+| LocalizationSystem | 언어별 텍스트 데이터 관리. UISystem 이후 초기화. |
+| CameraSystem | 플레이어 추적, 컷씬 이동, 흔들림, Boundary, Zoom. EventSystem으로 씬 전환 이벤트 수신 후 씬 타입에 맞게 동작. 하위 레이어에 Public API 제공. |
 
-Characters are differentiated by which modules are active:
-- **Player**: CoreModule + AbilityModule + AnimationModule + StateModule + InputModule + LifecycleModule + WeaponModule
-- **Enemy**: CoreModule + AbilityModule + AnimationModule + StateModule + AIModule + LifecycleModule + WeaponModule
-- **NPC**: CoreModule + AnimationModule (minimal setup)
-- **Pet/Ally**: Similar to Enemy but with friendly targeting
+### Layer 3 — Infra 구축 (Login Scene)
+
+```
+NetworkSystem → AuthSystem ──(로그인 성공)──► SaveSystem ──► ResourceSystem
+                                                               ├── AddressableLoader
+                                                               └── Built-in Loader
+```
+
+- **NetworkSystem → AuthSystem:** 게스트/플랫폼 로그인 처리
+- **AuthSystem → SaveSystem:** 로그인 성공 후 유저 데이터 로드
+- **SaveSystem → ResourceSystem:** 데이터 로드 완료 후 에셋 로딩 준비
+- **ResourceSystem:** Addressables(챕터별 대형 에셋) + Built-in(Login/Loading Scene 에셋). DontDestroyOnLoad로 전역 접근.
+
+### Layer 4 — World 환경 구성 (Game Scene)
+
+**초기화 순서 (다이어그램 기준):**
+
+```
+MapSystem → PlayerSystem → [Player State] → [Character State] → [Economy] → UIManager Binding
+    │
+    └── EnvironmentSystem / SpawnSystem / TriggerSystem / InteractionSystem
+```
+
+**프레임(Frame) 표기의 의미:**
+- `Player State`, `Character State`, `Economy`는 **UML 프레임으로 표기된 의미적 그룹**이다.
+- 각 시스템은 독립적으로 초기화되는 별개 시스템이며, 소유/부모 관계가 아니다.
+- 초기화 순서 보장을 위해 화살표로 연결되어 있다.
+
+**UIManager Binding 표기의 의미:**
+- Layer 4 끝에 있는 "UI System (Binding/Update)"는 별도 시스템이 아니다.
+- Economy 시스템(ItemSystem 등)이 초기화 완료되면, 기존 UIManager가 데이터 바인딩 가능해지는 시점을 나타낸다. (예: InventoryUI의 슬롯에 아이템 이미지 바인딩)
 
 ---
 
-## C# Class-Based FSM (Ver2)
+## 3. 시스템 간 통신 규칙
 
-The FSM system uses C# classes for states, actions, and decisions. Ver1 (ScriptableObject-based FSM) was completely removed in commit `8fa6bcf`.
+| 방법 | 사용 상황 |
+|------|-----------|
+| **EventSystem (Pub/Sub)** | 시스템 간 결합이 없어야 할 때 (몬스터 처치 → 퀘스트 업데이트) |
+| **직접 참조** | 명확한 소유 관계 또는 강한 의존 관계 (PlayerSystem → EntityBase) |
+| **CameraSystem Public API** | 하위 레이어(컷씬, 트리거 등)가 카메라 제어가 필요할 때 |
+| **인터페이스** | 구현체 교체 가능성이 있을 때 |
 
-### Key Files
-- `Assets/Scripts/Gameplay/Character/StateMachine/YisoCharacterStateMachine.cs` - FSM runtime manager (MonoBehaviour)
-- `Assets/Scripts/Gameplay/Character/StateMachine/YisoCharacterState.cs` - Serializable state class
-- `Assets/Scripts/Gameplay/Character/StateMachine/YisoCharacterTransition.cs` - Transition logic
-- `Assets/Scripts/Gameplay/Character/StateMachine/YisoCharacterAction.cs` - Abstract action base class
-- `Assets/Scripts/Gameplay/Character/StateMachine/YisoCharacterDecision.cs` - Decision base class
+### 의존성 방향
 
-### FSM Structure
+```
+UI Layer
+   ↑
+Economy
+   ↑
+Combat / Player State
+   ↑
+Entity & Components
+   ↑
+World (Map, Spawn, ...)
+   ↑
+Core & Infra
+```
 
-#### States
-Serializable classes with OnEnter/OnUpdate/OnExit actions and child states. States can be nested to create hierarchical state machines.
-
-#### Transitions
-Decision-based routing between states (true/false evaluation). Transitions are evaluated in order, and the first matching decision triggers the state change.
-
-#### Actions (11 implementations)
-- **Move**: MoveTowardTarget, MoveRandomly, Patrol, StopMovement, ReturnToSpawn
-- **Attack**: Attack, ChangeWeapon
-- **Orientation**: FaceTowardTarget, ConeOfVision
-- **General**: DoNothing, SetAnimator
-
-#### Decisions (6 implementations)
-- DetectTargetConeOfVision
-- DetectTargetInRadius
-- DistanceToTarget
-- DistanceToSpawn
-- TargetIsNull
-- TimeInState
-
-### Action/Decision Locations
-- Actions: `Assets/Scripts/Gameplay/Character/StateMachine/Actions/`
-- Decisions: `Assets/Scripts/Gameplay/Character/StateMachine/Decisions/`
-
-### Frequency-Based Updates
-
-Actions can have configurable update frequency via:
-- `actionFrequency` - Fixed update interval
-- `actionFrequencyRange` - Random update interval between min/max
-
-This reduces performance overhead for expensive operations.
-
-### Target System
-
-Multi-target support with `maxTargetCount` slots. FSM Actions and Decisions can query and manipulate multiple targets simultaneously.
+하위 레이어는 상위 레이어를 직접 참조하지 않고 EventSystem으로 통지한다.
 
 ---
 
-## Ability System
-
-Abilities follow a **separation of data and logic** pattern for flexibility and testability.
-
-### Architecture
-
-- **ScriptableObject Definitions (Data)**: `YisoAbilitySO` subclasses define settings/configuration
-- **Pure C# Classes (Logic)**: `IYisoCharacterAbility` implementations contain runtime behavior
-- **Factory Pattern**: Each SO creates its corresponding ability instance via `CreateAbility()`
-
-### Ability Lifecycle
+## 4. Entity 계층
 
 ```
-PreProcessAbility() → ProcessAbility() → PostProcessAbility() → UpdateAnimator()
+Entity (최상위 — ID, Transform, HP, 상태)
+ ├── Character (공통 베이스 — 이동/애니메이션/물리 공유)
+ │    ├── Player   — InputSystem 연결, InventorySystem 연결
+ │    ├── Enemy    — FSMModule, NavigationModule, 어그로 타겟팅
+ │    └── NPC      — Character 상속 (이동/애니메이션 공유), 상점 DB 연결, 퀘스트 마커
+ ```
+
+> NPC도 Character를 상속한다. 비적대적이지만 이동/애니메이션 모듈을 재사용.
+
+### Character Component 구성
+
 ```
-
-1. **PreProcessAbility()** - Setup, read input, check permissions
-2. **ProcessAbility()** - Core logic (e.g., movement calculation, attack detection)
-3. **PostProcessAbility()** - Apply results, trigger events, update state
-4. **UpdateAnimator()** - Sync animation parameters with Animator
-
-### Key Files
-- `Assets/Scripts/Gameplay/Character/Abilities/` - Ability implementations
-- `Assets/Scripts/Gameplay/Character/Abilities/Definitions/` - SO definitions
-
-### Example Abilities
-
-- **YisoMovementAbility**: Interpolated movement with acceleration/deceleration, speed multipliers
-- **YisoOrientationAbility**: Character facing direction control (always-enabled ability)
-- **YisoMeleeAttackAbility**: Melee combat with input buffering and animation events
+Character
+ ├── AnimationModule   — 애니메이터 상태 관리, 이벤트 타이밍
+ ├── MovementModule    — 2D 탑다운 이동, 대쉬, 넉백
+ ├── PhysicModule      — Hitbox / Hurtbox
+ ├── FSMModule         — AI 상태기 (Enemy/NPC용)
+ └── NavigationModule  — 경로 탐색 A* (Enemy FSM 이동에 사용)
+```
 
 ---
 
-## Core Infrastructure
+## 5. CameraSystem 상세
 
-### Update Loop Optimization
+**초기화 위치:** Layer 2, SceneSystem 이후
 
-The project uses a custom update manager to reduce MonoBehaviour update overhead.
+**역할:**
+- 플레이어 Transform 추적 (데드존, 스무딩)
+- SceneSystem의 씬 전환 이벤트 수신 → 씬 타입에 맞게 동작 전환
+- 컷씬 플로우에 따른 카메라 이동
+- 카메라 흔들림 (Camera Shake)
+- 영역(Area) 기반 Boundary 제한
+- Orthographic Size 조절 (Area Trigger → Zoom In/Out)
 
-**Key File**: `Assets/Scripts/Core/Manager/RunIUpdateManager.cs`
+**Public API (하위 레이어 사용):**
 
-**Pattern**: All game components inherit from `RunIBehaviour` (not MonoBehaviour directly) and register with `RunIUpdateManager` for centralized update management:
-- OnUpdate (Update)
-- OnFixedUpdate (FixedUpdate)
-- OnLateUpdate (LateUpdate)
-
-This reduces Unity's native update loop overhead by 60-70% in high entity count scenarios.
-
-### Event System
-
-Type-safe event system using generics and struct-based events for performance.
-
-**Key File**: `Assets/Scripts/Gameplay/Tools/Event/YisoEventManager.cs`
-
-**Usage**: Extension methods provide easy subscribe/unsubscribe pattern for decoupled communication:
 ```csharp
-this.YisoEventStartListening<PlayerDiedEvent>(OnPlayerDied);
-this.YisoEventStopListening<PlayerDiedEvent>(OnPlayerDied);
-YisoEventManager.TriggerEvent(new PlayerDiedEvent { player = this });
+public interface ICameraSystem
+{
+    // 추적 대상 설정 (PlayerSystem이 호출)
+    void SetTarget(Transform target);
+
+    // 컷씬 제어
+    void MoveToPosition(Vector3 position, float duration);
+    void ReleaseControl();          // 컷씬 종료 후 추적 복귀
+
+    // 효과
+    void Shake(float intensity, float duration);
+    void ZoomTo(float orthographicSize, float duration);
+
+    // Boundary
+    void SetBoundary(Bounds boundary);
+    void ClearBoundary();
+}
 ```
 
-### Physics & Movement
+**씬 타입별 기본 동작:**
 
-**TopDownController** (`Assets/Scripts/Gameplay/Core/TopDownController.cs`) handles Rigidbody2D-based movement:
-- Interpolated movement with acceleration/deceleration curves
-- Impact/knockback system with falloff curves for physics-based reactions
-- Collision detection and response
+| SceneType | 기본 동작 |
+|-----------|-----------|
+| BaseCamp | 플레이어 추적, Boundary 없음 |
+| Chapter | 플레이어 추적, 필드/맵 경계 Boundary |
+| InfiniteDojo | 플레이어 추적, 인스턴스 맵 Boundary |
+| Login | 고정 or 설정된 기본 위치 |
 
 ---
 
-## Design Patterns
+## 6. 씬 구성
 
-### Module Pattern
-Character decomposed into independent, reusable modules. Each module has a single responsibility and can be composed as needed.
-
-### Facade Pattern
-YisoCharacter provides simple API hiding module complexity. External systems only interact with the facade, not individual modules.
-
-### Factory Pattern
-AbilitySO creates ability instances. This separates configuration (SO) from runtime behavior (C# class).
-
-### Observer Pattern
-Event system for decoupled communication. Systems can react to events without direct references.
-
-### Strategy Pattern
-Abilities as interchangeable behaviors. Character behavior changes by swapping ability configurations.
-
-### State Pattern
-FSM with C# classes (Ver2). States encapsulate behavior and transitions.
+| 씬 | 역할 |
+|----|------|
+| Bootstrap Scene | Core 시스템 초기화. 이후 Login Scene 전환 |
+| Login Scene | Infra(Auth/Save/Resource) 초기화, 캐릭터 선택 |
+| Base Camp Scene | 중간 맵 — 강화, 무한 도장, 스테이지 선택 |
+| Chapter Scene | 챕터 — 중심 마을 + 방사형 필드 |
+| Infinite Dojo Scene | 무한 도장 인스턴스 (세션 단위) |
 
 ---
 
-## Naming Conventions
+## 7. 기존 코드 통합 방향
 
-### "Yiso" Prefix
-All game-specific classes use the "Yiso" prefix:
-- `YisoCharacter`
-- `YisoMovementAbility`
-- `YisoCharacterStateMachine`
-
-This distinguishes game code from Unity/framework code and avoids naming collisions.
-
-### "SO" Suffix
-ScriptableObjects for data definitions use the "SO" suffix:
-- `YisoAbilitySO`
-- `YisoWeaponDataSO`
-
-**Note**: FSM no longer uses ScriptableObjects (Ver2 uses C# classes).
-
-### Module Naming
-Character modules follow the pattern: `YisoCharacter[Function]Module`
-- `YisoCharacterInputModule`
-- `YisoCharacterWeaponModule`
-- `YisoCharacterAbilityModule`
-
----
-
-## Interface-First Design
-
-Key interfaces define contracts between systems. This enables loose coupling and testability.
-
-### Core Interfaces
-
-- **IYisoCharacterContext** - Character hub interface for modules
-  - Provides facade API for FSM Actions and Abilities
-  - See [API.md](API.md) for full documentation
-
-- **IYisoCharacterModule** - Base interface for all character modules
-  - Defines lifecycle methods (Initialize, LateInitialize, OnEnable, OnUpdate, OnDisable, OnDestroy)
-
-- **IYisoCharacterAbility** - Base interface for all abilities
-  - Defines ability lifecycle (PreProcess, Process, PostProcess, UpdateAnimator)
-
-- **IPhysicsControllable** - Physics/movement interface
-  - Used by TopDownController for movement control
-
----
-
-## System Interaction Flows
-
-### Character Update Flow
-
-```
-YisoCharacter (MonoBehaviour)
-  ↓ registers with
-RunIUpdateManager
-  ↓ calls OnUpdate()
-YisoCharacter.OnUpdate()
-  ↓ delegates to
-Modules (StateModule, InputModule/AIModule, AbilityModule, AnimationModule)
-  ↓
-StateModule evaluates FSM transitions
-AbilityModule processes abilities (Pre → Process → Post → UpdateAnimator)
-AnimationModule updates Animator parameters
-```
-
-### FSM Evaluation Flow
-
-```
-StateModule.OnUpdate()
-  ↓
-Evaluate Transitions (in order)
-  ↓
-Execute Decision.Decide()
-  ↓ returns true/false
-Transition to corresponding state
-  ↓
-Current State OnExit() → New State OnEnter()
-  ↓
-New State OnUpdate() → Execute Actions
-```
-
-### Ability Processing Flow
-
-```
-AbilityModule.ProcessAbilities()
-  ↓ for each ability
-PreProcessAbility()    // Setup, read input
-  ↓
-ProcessAbility()       // Core logic (e.g., movement calculation)
-  ↓
-PostProcessAbility()   // Apply results, trigger events
-  ↓
-UpdateAnimator()       // Sync animation parameters
-```
-
----
-
-## Project Structure
-
-```
-Assets/
-├── Scripts/
-│   ├── Core/
-│   │   ├── Behaviour/              # RunIBehaviour base class
-│   │   └── Manager/                # RunIUpdateManager (centralized updates)
-│   ├── Gameplay/
-│   │   ├── Character/              # ** MAIN CHARACTER SYSTEM **
-│   │   │   ├── Core/              # YisoCharacter + 9 Modules
-│   │   │   ├── Abilities/         # Ability implementations (C# classes)
-│   │   │   ├── StateMachine/      # FSM Actions, Decisions, States (C# classes)
-│   │   │   ├── Weapon/            # Weapon system (instance, aim, damage)
-│   │   │   ├── Types/             # Enums and constants
-│   │   │   └── Data/              # Character data definitions
-│   │   ├── Core/                  # TopDownController (physics)
-│   │   ├── Health/                # Health/damage system
-│   │   └── Tools/                 # Utility systems
-│   │       ├── Event/             # YisoEventManager
-│   │       ├── Movement/          # Movement utilities
-│   │       ├── StateMachine/      # Generic FSM base classes
-│   │       ├── Visual/            # Field of View renderer
-│   │       └── ...
-│   ├── Managers/                  # Game-level managers
-│   ├── Settings/                  # Game settings
-│   ├── UI/                        # UI systems
-│   └── Utils/                     # Math, Color utilities
-├── Data/ScriptableObjects/        # ** DATA ASSETS **
-│   ├── Ability/                   # Ability SO instances
-│   └── Weapon/                    # Weapon data SO instances
-├── Editor/Tests/                  # ** UNIT TESTS **
-│   └── Utils/                     # TestUtils (reflection helpers)
-└── Plugins/
-    ├── Sirenix/                   # Odin Inspector
-    └── Demigiant/                 # DOTween
-```
-
----
-
-## Important Notes
-
-### When Modifying Characters
-
-1. **Module changes**: Ensure two-phase initialization is maintained (Initialize → LateInitialize)
-2. **FSM changes**: Modify C# classes in `Assets/Scripts/Gameplay/Character/StateMachine/`
-3. **Ability changes**: Separate SO settings from C# logic; use factory pattern
-4. **State permissions**: Check state constraints before executing abilities
-5. **Object pooling**: Properly implement OnEnable/OnDisable for module lifecycle support
-
-### When Adding New Features
-
-1. **New abilities**: Create `YisoAbilitySO` subclass + `IYisoCharacterAbility` implementation
-2. **New FSM Actions**: Extend `YisoCharacterAction` base class, implement `PerformAction()`
-3. **New FSM Decisions**: Extend `YisoCharacterDecision` base class, implement `Decide()`
-4. **Module communication**: Use `IYisoCharacterContext` interface, not direct module references
-5. **Events**: Use `YisoEventManager` for decoupled communication between systems
-
----
-
-## Code Language
-
-Korean comments are prevalent throughout the codebase. When adding comments, follow existing patterns:
-- **Korean** for team members and internal logic explanations
-- **English** for public APIs and documentation
+| 기존 코드 | 새 시스템 내 위치 | 방향 |
+|-----------|-----------------|------|
+| YisoCharacter + 9모듈 | Entity/Character + Components | 모듈 → Component 재편 |
+| YisoCharacterStateMachine | FSMModule | Enemy에 그대로 활용 |
+| Ability 시스템 (SO 기반) | Component + SkillSystem 연동 | SkillSystem이 Ability 실행 |
+| Health / Damage 시스템 | DamageSystem + Entity | DamageSystem이 EntityHealth 통해 HP 차감 |
+| Weapon 시스템 | PhysicModule + SkillSystem | Ability 실행 결과로 Hitbox 활성화 |
+| YisoEventManager | EventSystem | 글로벌 EventSystem으로 통합 |
