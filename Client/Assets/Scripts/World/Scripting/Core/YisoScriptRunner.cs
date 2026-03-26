@@ -17,16 +17,12 @@ namespace World.Scripting.Core {
     /// </summary>
     public class YisoScriptRunner : YisoBehaviour {
         private readonly Dictionary<string, Func<string[], IEnumerator>> _handlers = new();
-
-        // ─── 커맨드 등록 ─────────────────────────────────────────────
-
+        
         public void RegisterCommand(string name, Func<string[], IEnumerator> handler) {
             if (_handlers.ContainsKey(name))
                 YisoLogger.Warn($"[ScriptRunner] 커맨드 재등록: {name}");
             _handlers[name] = handler;
         }
-
-        // ─── 실행 진입점 ─────────────────────────────────────────────
 
         public void Run(YisoScriptBlockNode block, YisoScriptContext context) {
             StartCoroutine(ExecuteBlock(block.Body, context));
@@ -39,8 +35,6 @@ namespace World.Scripting.Core {
         public IEnumerator RunBlock(List<YisoScriptNode> nodes, YisoScriptContext context) {
             return ExecuteBlock(nodes, context);
         }
-
-        // ─── 노드 순회 ────────────────────────────────────────────────
 
         private IEnumerator ExecuteBlock(List<YisoScriptNode> nodes, YisoScriptContext context) {
             foreach (var node in nodes)
@@ -82,8 +76,6 @@ namespace World.Scripting.Core {
             }
         }
 
-        // ─── 개별 노드 실행 ───────────────────────────────────────────
-
         private IEnumerator ExecuteDialogue(YisoDialogueLineNode node, YisoScriptContext context) {
             if (!_handlers.TryGetValue("DIALOGUE", out var handler)) {
                 YisoLogger.Warn("[ScriptRunner] DIALOGUE 핸들러 미등록");
@@ -113,14 +105,14 @@ namespace World.Scripting.Core {
         private IEnumerator ExecuteWave(YisoWaveNode node) {
             foreach (var spawn in node.Spawns) {
                 if (_handlers.TryGetValue("SPAWN", out var spawnHandler)) {
+                    // interval: SpawnSystem이 count개를 interval 간격으로 순차 스폰하는 책임을 가짐
+                    // Runner는 SPAWN 완료(모든 count 스폰 끝)까지 yield return으로 대기
                     yield return StartCoroutine(spawnHandler(new[] {
                         spawn.EntityId,
                         spawn.Count.ToString(),
                         spawn.Interval.ToString(System.Globalization.CultureInfo.InvariantCulture)
                     }));
                 }
-                if (spawn.Interval > 0f)
-                    yield return new WaitForSeconds(spawn.Interval);
             }
             // 웨이브 클리어 대기 — SpawnScriptAPI가 등록
             if (_handlers.TryGetValue("WAVE_WAIT", out var waitHandler))

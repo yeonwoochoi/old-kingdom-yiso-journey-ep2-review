@@ -16,7 +16,7 @@ namespace World.Scripting.API {
         }
 
         public void Register(YisoScriptRunner runner) {
-            runner.RegisterCommand("INPUT.Enable",  OnEnable);
+            runner.RegisterCommand("INPUT.Enable", OnEnable);
             runner.RegisterCommand("INPUT.Disable", OnDisable);
         }
 

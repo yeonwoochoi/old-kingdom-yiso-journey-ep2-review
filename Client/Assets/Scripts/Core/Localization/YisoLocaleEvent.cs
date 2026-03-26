@@ -10,7 +10,7 @@ namespace Core.Localization {
                 prevType = prevType,
                 newType = newType
             };
-            YisoEventSystem.TriggerEvent(args);
+            YisoEventManager.TriggerEvent(args);
         }
     }
 }

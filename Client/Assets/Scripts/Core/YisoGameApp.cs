@@ -1,51 +1,45 @@
-using System.Collections.Generic;
 using Core.Config;
 using Core.Input;
-using Core.Localization;
-using Core.Pooling;
 using Core.Scene;
 using Core.Sound;
 using Core.Time;
 using Core.UI;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 namespace Core {
     /// <summary>
     /// Layer 1 — BootStrapper
-    /// Awake: 모든 인스턴스 생성 (의존성 참조 없음)
-    /// Start: 의존성 순서대로 Initialize() 호출
+    /// [구조]
+    ///   - YisoResourceManager: 직속 자식 프리팹 (씬에 미리 배치)
+    ///   - 나머지 매니저: Addressable 키로 동적 로드 → 자식으로 등록
+    /// [키 규칙] nameof(YisoXxxManager) — Addressable 그룹에서 동일한 이름으로 등록
     /// </summary>
     public class YisoGameApp : YisoBehaviour {
-        private readonly List<IYisoSystem> _systems = new();
+        // Addressable로 로드할 매니저 키 목록 (의존성 순서 유지)
+        private static readonly string[] ManagerKeys = {
+            nameof(YisoConfigManager),
+            nameof(YisoSceneManager),
+            nameof(YisoCameraManager),
+            nameof(YisoSoundManager),
+            nameof(YisoInputManager),
+            nameof(YisoUIManager),
+            nameof(YisoTimeManager),
+        };
 
         private void Awake() {
             DontDestroyOnLoad(gameObject);
-
-            _systems.Add(CreateSystem<YisoConfigSystem>());    // 설정값 제공
-            _systems.Add(YisoPoolingSystem.Instance);          // 오브젝트 풀
-            _systems.Add(CreateSystem<YisoTimeSystem>());      // 시간 제어
-            _systems.Add(CreateSystem<YisoInputSystem>());     // 입력
-            _systems.Add(CreateSystem<YisoSoundSystem>());    // 사운드
-            _systems.Add(CreateSystem<YisoUISystem>());        // UI 프레임워크
-            _systems.Add(CreateSystem<YisoSceneSystem>());     // 씬 전환
-            _systems.Add(YisoLocalizationSystem.Instance);     // 다국어
-            _systems.Add(CreateSystem<YisoCameraSystem>());    // 카메라
         }
 
-        private void Start() {
-            foreach (var system in _systems)
-                system.Initialize();
+        private async void Start() {
+            // ResourceManager는 직속 자식으로 이미 존재 — Awake 완료 상태
+            foreach (var key in ManagerKeys) {
+                var handle = Addressables.LoadAssetAsync<GameObject>(key);
+                var prefab = await handle.Task;
+                Instantiate(prefab, transform);
+            }
 
-            YisoSceneSystem.Instance.LoadScene(YisoSceneType.Login);
-        }
-
-        private void Update() {
-            // NetworkSystem (s) — Phase 3 Infra 초기화 이후 활성화
-            // YisoNetworkSystem.Instance.Tick();
-        }
-
-        private T CreateSystem<T>() where T : Component, IYisoSystem {
-            return gameObject.AddComponent<T>();
+            YisoSceneManager.Instance.LoadScene(YisoSceneType.Login);
         }
     }
 }

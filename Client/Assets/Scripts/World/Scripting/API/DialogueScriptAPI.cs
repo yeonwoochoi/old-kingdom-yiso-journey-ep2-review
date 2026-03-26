@@ -13,7 +13,7 @@ namespace World.Scripting.API {
     /// </summary>
     public class DialogueScriptAPI : IYisoScriptAPI {
         public void Register(YisoScriptRunner runner) {
-            runner.RegisterCommand("DIALOGUE",   OnDialogue);
+            runner.RegisterCommand("DIALOGUE", OnDialogue);
             runner.RegisterCommand("GIVE_QUEST", OnGiveQuest);
         }
 

@@ -289,15 +289,66 @@ public interface IYisoCharacterContext
 public enum FacingDirections { North, South, East, West }
 ```
 
-### FSM Action 구조 🔧
+### YisoCharacterStateMachine 🔧
+
+FSM 컨트롤러. FSM 프리팹의 루트에 붙는 MonoBehaviour.
 
 ```csharp
-// Assets/Scripts/Gameplay/Character/StateMachine/Actions/
-public abstract class YisoCharacterAction
-{
-    public virtual void OnEnter(IYisoCharacterContext ctx)  { }
-    public virtual void OnUpdate(IYisoCharacterContext ctx) { }
-    public virtual void OnExit(IYisoCharacterContext ctx)   { }
+public class YisoCharacterStateMachine : RunIBehaviour {
+    // Inspector 설정
+    string initialState;
+    bool randomizeFrequencies;
+    Vector2 actionFrequencyRange;   // 랜덤 주기 범위
+    float actionFrequency;          // 고정 주기
+    int maxTargetCount;             // 타겟 슬롯 수 (기본 10)
+    List<YisoCharacterState> states;
+
+    // 프로퍼티
+    YisoCharacterState CurrentState { get; }
+    IYisoCharacterContext Owner { get; }
+    float TimeInCurrentState { get; }
+    Vector3 SpawnPosition { get; }
+
+    // 초기화 (MobController가 순서대로 호출)
+    void PreInitialize(IYisoCharacterContext owner);  // Owner 연결, 상태 맵 구축
+    void Initialize();                                // initialState로 최초 진입
+
+    // 상태 전환
+    void ChangeState(string newStateName, bool force = false);
+
+    // 타겟 슬롯 API (index 0 = Main Target)
+    void SetTarget(int index, Transform target);
+    Transform GetTarget(int index);
+    IYisoCharacterContext GetTargetContext(int index);
+    void ClearTarget(int index);
+    void ClearAllTargets();
+    bool HasValidTarget(int index);
+
+    // Action 유틸리티
+    Vector2 GetCurrentPosition();
+    Vector2 GetDirectionToTarget(int index = 0);
+    float GetDistanceToTarget(int index = 0);
+    Vector2 GetDirectionToSpawn();
+    float GetDistanceToSpawn();
+}
+```
+
+**전환 체크 흐름 (OnUpdate):**
+```
+매 프레임: CurrentState.PlayUpdateActions()
+타이머 >= frequency: CurrentState.CheckTransitions() → ChangeState()
+frequency = randomize ? Random(min, max) : fixed
+```
+
+### FSM Action 구조 🔧
+
+Action은 **MonoBehaviour 컴포넌트**. FSM 프리팹에 직접 붙여서 Inspector에서 파라미터 설정.
+
+```csharp
+public abstract class YisoCharacterAction : MonoBehaviour {
+    public virtual void OnEnter(YisoCharacterStateMachine fsm)  { }
+    public virtual void OnUpdate(YisoCharacterStateMachine fsm) { }
+    public virtual void OnExit(YisoCharacterStateMachine fsm)   { }
 }
 ```
 
@@ -312,10 +363,11 @@ public abstract class YisoCharacterAction
 
 ### FSM Decision 구조 🔧
 
+Decision도 **MonoBehaviour 컴포넌트**. FSM 프리팹에 붙여서 State가 참조.
+
 ```csharp
-public abstract class YisoCharacterDecision
-{
-    public abstract bool Decide(IYisoCharacterContext ctx);
+public abstract class YisoCharacterDecision : MonoBehaviour {
+    public abstract bool Decide(YisoCharacterStateMachine fsm);
 }
 ```
 
@@ -329,6 +381,21 @@ public abstract class YisoCharacterDecision
 | TargetIsAlive / TargetIsNull | 타겟 상태 |
 | IsNotAttacking | 공격 중 여부 |
 | TimeInState | 현재 상태 체류 시간 |
+
+**FSM 프리팹 구성 예시 (Inspector):**
+```
+FSM_Patrol.prefab
+├── YisoCharacterStateMachine   [initialState="Patrol", randomizeFreq=true, range=(0.1, 0.2)]
+├── YisoCharacterState          [stateName="Idle",   actions=[DoNothing], transitions=[...]]
+├── YisoCharacterState          [stateName="Patrol", actions=[Patrol, FaceTowardTarget], ...]
+├── YisoCharacterState          [stateName="Chase",  actions=[MoveTowardTarget], ...]
+├── YisoCharacterState          [stateName="Attack", actions=[Attack], ...]
+├── PatrolAction                [patrolRadius=3, speed=2]
+├── MoveTowardTargetAction      [speed=4]
+├── AttackAction                [...]
+├── DetectTargetInRadiusDecision [range=5]
+└── DistanceToTargetDecision    [threshold=1.5]
+```
 
 ### Ability 시스템 🔧
 

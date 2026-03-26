@@ -55,6 +55,7 @@ namespace World.Scripting.API {
                 YisoLogger.Warn("[SoundScriptAPI] 사운드 ID 인자 없음");
                 return false;
             }
+
             if (Enum.TryParse(args[idx], out id)) return true;
             YisoLogger.Warn($"[SoundScriptAPI] 알 수 없는 사운드 ID: {args[idx]}");
             return false;

@@ -129,10 +129,10 @@ NPC 대화 트리. InteractionSystem이 실행 요청 → ScriptRunner가 UIMana
 
 ### @wave — 웨이브 스크립트
 
-무한 도장 또는 보스방 몬스터 소환 패턴. SpawnSystem이 읽어 실행.
+보스방 또는 특정 구역의 몬스터 소환 패턴. SpawnSystem이 읽어 실행. (외전 미션은 @quest로 처리)
 
 ```
-@wave dojo_session_1
+@wave boss_room_1
 
   WAVE(1)
     SPAWN "goblin"  count(5) interval(1.0)

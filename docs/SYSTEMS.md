@@ -123,26 +123,102 @@ Login Scene에서 초기화. 인증 및 데이터 기반.
 
 Game Scene에서 로드.
 
+### WorldManager
+- **역할:** 씬 내 모든 동적 오브젝트 생성·관리·제거 총괄. 서버 소켓 Handler 진입점.
+- **초기화 흐름:**
+  1. 서버로부터 `mapId` + 캐릭터 위치 수신
+  2. Addressable로 `MapDataSO` 동적 로드 (address = mapId)
+  3. `MapDataSO` → `MapData` 변환 (Instance Layer)
+  4. WorldManager에 `MapData` 등록
+  5. 각 Pool을 통해 동적 오브젝트 생성 (Mob, Npc, Portal, Reactor …)
+- **관리 오브젝트 타입:** User, Npc, Mob, Drop, Effect, DamageFont, Portal, Reactor
+- **씬 구성:** 각 타입별 부모 오브젝트를 Scene Root에 생성하고, 해당 타입의 인스턴스를 그 하위에 배치
+
+### Data Layer (SO / Instance)
+
+#### SO Layer (ScriptableObject — Addressable 등록)
+- `MapDataSO`: 맵 전체 배치 정보 (타일 배치, 오브젝트 위치, 몬스터/NPC/포탈 등)
+- `MobSO`: 몬스터 스펙 데이터 + 애니메이션 클립 목록
+- `NpcSO`: NPC 스펙 데이터 + 애니메이션 클립 목록
+- `PortalSO`: 포탈 목적지·조건 데이터
+- `ReactorSO`: 반응 오브젝트 데이터
+
+**MapDataSO 내 정적 오브젝트 데이터 구조:**
+
+```csharp
+// Tilemap 레이어 데이터
+class TilemapLayerData {
+    int layer;              // 0~10
+    bool hasCollider;       // true → 런타임에 TilemapCollider2D + CompositeCollider2D 부착
+    List<TilePlacement> tiles;
+}
+class TilePlacement {
+    string tileId;          // Addressable address (TileBase)
+    Vector3Int position;
+}
+
+// 정적 MapObject 데이터
+class MapObjectData {
+    string objectId;
+    string spriteAddress;   // Addressable address (SpriteAtlas 권장)
+    Vector3 position;
+    bool hasCollider;
+    int layer;              // 0~10
+    int sortingOrder;
+}
+```
+
+**씬 레이어 구조 (Layer0~10, 캐릭터 = Layer5):**
+
+| 레이어 | 위치 | 용도 |
+|--------|------|------|
+| Layer0~4 | 동적 오브젝트 아래 | 바닥 타일, 지형 배경 |
+| Layer5 | 동적 오브젝트와 동일 | 캐릭터 depth의 정적 요소 |
+| Layer6~10 | 동적 오브젝트 위 | 지붕, 안개, 오버레이 |
+
+**애니메이션 데이터 (커스텀 SpriteAnimator — Animator 미사용):**
+
+```csharp
+class AnimationClip {
+    AnimationState state;   // Idle_N/S/E/W, Walk_N/S/E/W, Attack_N/S/E/W, Die
+    int startIndex;         // Texture2D 슬라이스 시작 인덱스
+    int frameCount;         // 프레임 수
+    float fps;
+    bool loop;
+}
+```
+
+인덱스는 `startIndex + frameCount` 방식으로 저장. 특정 상태 프레임 수 변경 시 다른 상태에 영향 없음.
+
+#### Instance Layer (런타임 데이터 객체)
+- SO를 기반으로 생성되는 C# 클래스 인스턴스
+- 인게임 상태(HP, 현재 위치, 쿨타임 등) 보유
+- `MapData`, `Mob`, `Npc`, `Portal`, `Reactor` 등
+
+### Pool Layer (Singleton)
+- **역할:** Instance 데이터 + Addressable 프리팹을 결합해 GameObject 풀링 관리
+- **원칙:** 동적 오브젝트 타입당 **프리팹 1개** (Mob.prefab, Npc.prefab, Drop.prefab 등). 정적 오브젝트는 `MapObject.prefab` 단일 프리팹 + Sprite 교체.
+- **구성:** `UserPool`, `NpcPool`, `MobPool`, `DropPool`, `EffectPool`, `DamageFontPool`, `PortalPool`, `ReactorPool`
+
 ### MapSystem
-- **역할:** 전체 맵 구조 및 네비게이션 관리
+- **역할:** 맵 노드 구조, 챕터/필드 연결, 씬 전환 요청
 - **책임:**
   - 중심 마을과 방사형 필드 연결 노드 관리
   - 미니맵/월드맵 UI에 지형/위치 데이터 제공
   - 안전지대(마을) 판별
   - CameraSystem에 맵 Boundary 설정
-- **하위 시스템 (MapSystem 초기화 후 로드):**
 
-#### EnvironmentSystem
+#### MapEnvironment (MapSystem 하위)
 - 챕터 컨셉 조명 설정, 날씨(비/눈) 파티클, 환경음(새소리/바람소리)
 
-#### SpawnSystem
+#### MapSpawner (MapSystem 하위)
 - 필드 몬스터 리스폰, NPC 스폰, 보스 처치 후 포탈 생성, 무한 도장 특수 목표 스폰
 
-#### TriggerSystem
+#### MapTrigger (MapSystem 하위)
 - 보스방 진입 감지(문 닫힘), 함정, 특정 지역 도달 시 퀘스트 업데이트
 - Area 기반 CameraSystem Zoom/Boundary 변경 요청
 
-#### InteractionSystem
+#### MapInteraction (MapSystem 하위)
 - NPC 대화 트리거 (대화 데이터를 UIManager에 전달하여 Dialogue UI 출력)
 - 포탈 입장, 드랍 아이템 루팅
 
@@ -156,7 +232,7 @@ Game Scene에서 로드.
 
 #### NavigationModule
 - Enemy FSM의 이동 명령에 A* 경로 탐색 제공
-- TriggerSystem의 장애물 정보를 기반으로 경로 갱신
+- MapTrigger의 장애물 정보를 기반으로 경로 갱신
 
 ---
 
@@ -266,6 +342,79 @@ QuestSystem, InventorySystem, AchievementSystem은 PlayerSystem의 하위가 아
 - **역할:** 연출 및 시네마틱 재생
 - **책임:** 보스 조우 인트로, 챕터 엔딩 연출, 컷씬 재생 중 InputSystem 차단
 - **카메라 제어:** CameraSystem Public API(`MoveToPosition`, `ZoomTo`, `ReleaseControl`) 직접 호출
+
+---
+
+## FSM 시스템
+
+`YisoCharacterStateMachine` 기반 컴포넌트 방식 FSM. Mob/NPC 프리팹과 **완전 분리**된 별도 FSM 프리팹으로 운영.
+
+### 구조
+
+```
+Mob_Goblin.prefab (Prefab Variant)
+├── MobController (비주얼, 물리, 스탯)
+└── FSM child ← 런타임에 FSM 프리팹을 Instantiate하여 child로 배치
+```
+
+### FSM 프리팹
+
+| 프리팹 | 용도 |
+|--------|------|
+| `FSM_Passive.prefab` | 비전투 NPC |
+| `FSM_Patrol.prefab` | 일반 몬스터 (순찰 → 추격 → 공격) |
+| `FSM_Aggressive.prefab` | 항상 추격형 |
+| `FSM_Boss.prefab` | 페이즈 기반 보스 패턴 |
+
+### 컴포넌트 구성
+
+- **YisoCharacterStateMachine** — FSM 컨트롤러. 상태 전환, 타겟 슬롯(최대 N개), 전환 체크 주기(랜덤/고정) 관리.
+- **YisoCharacterState** — 상태 단위. Enter/Update/Exit Actions 목록 + Transition 조건 보유.
+- **Action (MonoBehaviour)** — 상태 내 행동 컴포넌트. Inspector에서 파라미터 설정.
+- **Decision (MonoBehaviour)** — 전환 조건 컴포넌트. `Decide()` 반환값으로 다음 상태 결정.
+
+### 비주얼 에디터 미사용 이유
+
+노드 기반 FSM 에디터는 구축 공수 대비 이 프로젝트 규모에서 불필요. 상태·전환 조건 모두 Inspector에서 컴포넌트로 조립. 파라미터(감지 범위, 공격 범위 등)는 Inspector에서 직접 조정.
+
+---
+
+## 데이터 워크플로우 (기획자 도구)
+
+데이터 성격에 따라 입력 도구가 다르다.
+
+### 수치 데이터 — CSV → SO 자동 변환
+
+기획자는 Google Sheets / Excel에서 작성 후 CSV 내보내기. 에디터 툴(`ConvertCsv*.cs`)이 SO를 자동 생성·갱신.
+
+```
+기획자: Google Sheets 작성 (몬스터 HP, ATK, 이동속도 등)
+  → CSV 내보내기
+  → Unity Editor: Tools > Import Mob Data
+  → MobSO 자동 생성/갱신 (Addressable 등록 포함)
+```
+
+| 데이터 | 도구 |
+|--------|------|
+| 몬스터 스탯 | CSV → `ConvertCsvToMobSO` |
+| NPC 스탯 | CSV → `ConvertCsvToNpcSO` |
+| 아이템 데이터 | CSV → `ConvertCsvToItemSO` |
+| 스킬 데이터 | CSV → `ConvertCsvToSkillSO` |
+| 드랍 테이블 | CSV → `ConvertCsvToDropSO` |
+| 다국어 텍스트 | CSV → `ConvertCsvToStringTable` (기존 구현) |
+
+### 맵 배치 데이터 — MapEditorWindow
+
+좌표 기반 데이터는 스프레드시트 입력이 현실적으로 불가능. `MapEditorWindow`(기존 구현)에서 시각적으로 배치.
+
+```
+레벨 디자이너: MapEditorWindow에서 타일/오브젝트 클릭 배치
+  → MapDataSO 자동 저장 (Addressable 등록 포함)
+```
+
+### FSM 파라미터 — Prefab Variant Inspector
+
+FSM 행동 파라미터(범위, 속도 등)는 기획자/레벨 디자이너가 FSM 프리팹 또는 Mob Prefab Variant의 Inspector에서 직접 조정. 별도 도구 불필요.
 
 ---
 

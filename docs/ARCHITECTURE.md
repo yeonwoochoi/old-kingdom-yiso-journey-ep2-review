@@ -251,9 +251,280 @@ public interface ICameraSystem
 | Chapter Scene | 챕터 — 중심 마을 + 방사형 필드 |
 | Infinite Dojo Scene | 무한 도장 인스턴스 (세션 단위) |
 
+### 씬 내 오브젝트 구성 (극도로 미니멀)
+
+각 씬(Login, GameMap 계열)의 Hierarchy에는 오브젝트가 3개뿐이다.
+
+```
+[Scene Root]
+├── MainCamera
+├── Global Light 2D
+└── SceneLogin   (또는 SceneField, SceneBaseCamp 등 — SceneBase 서브클래스)
+```
+
+모든 나머지 오브젝트는 SceneBase 서브클래스가 Awake/Start에서 동적으로 생성한다.
+
 ---
 
-## 7. 기존 코드 통합 방향
+## 7. GameApp — DontDestroyOnLoad 구조
+
+```
+GameApp  (DontDestroyOnLoad)
+ ├── LogSystem
+ ├── ConfigSystem
+ ├── PoolingSystem
+ ├── EventSystem
+ ├── TimeSystem
+ ├── InputSystem
+ ├── SoundSystem
+ ├── UISystem
+ ├── SceneSystem
+ ├── LocalizationSystem
+ ├── CameraSystem
+ ├── PlatformSystem
+ │
+ ├── NetworkSystem   ┐
+ ├── AuthSystem      │  Infra (Login Scene 이후 초기화)
+ ├── SaveSystem      │
+ └── ResourceSystem  ┘
+```
+
+- 각 시스템은 **개별 Addressable 프리팹**으로 등록된다.
+- GameApp이 부팅 시 Addressable을 통해 각 프리팹을 로드하고, 자신의 하위 오브젝트로 Instantiate한 뒤 순서대로 초기화한다.
+- 이후 씬이 바뀌어도 GameApp과 그 하위 시스템은 유지된다.
+
+---
+
+## 8. World 구조 — 데이터·풀·오브젝트 계층
+
+Layer 4(Game Scene)의 동적 오브젝트 생성 구조.
+
+### 8-1. 세 계층
+
+```
+┌─────────────────────────────────────────────────────┐
+│  SO Layer  (Addressable 등록 — 정적 데이터)           │
+│  MapDataSO, NpcSO, MobSO, PortalSO, ReactorSO ...   │
+└──────────────────────┬──────────────────────────────┘
+                       │  SO → Instance 변환
+                       ▼
+┌─────────────────────────────────────────────────────┐
+│  Instance Layer  (런타임 데이터 객체)                  │
+│  MapData, Npc, Mob, Portal, Reactor ...              │
+└──────────────────────┬──────────────────────────────┘
+                       │  Instance + Prefab → GameObject
+                       ▼
+┌─────────────────────────────────────────────────────┐
+│  Pool Layer  (Singleton — 오브젝트 풀 관리)            │
+│  UserPool, NpcPool, MobPool, DropPool,               │
+│  EffectPool, DamageFontPool, PortalPool, ReactorPool │
+└─────────────────────────────────────────────────────┘
+```
+
+- **SO Layer:** Addressable로 등록된 ScriptableObject. 맵·몬스터·NPC 등 정적 스펙 정의.
+- **Instance Layer:** SO를 기반으로 생성된 런타임 데이터 객체. 인게임 상태(HP, 위치 등) 보유.
+- **Pool Layer:** 싱글턴. Instance 데이터 + Addressable 프리팹(오브젝트 타입당 1개)을 결합해 GameObject를 Instantiate하고 풀링 관리.
+
+### 8-2. 프리팹 규칙
+
+동적 오브젝트는 **타입당 프리팹 1개** 원칙을 따른다. 모두 Addressable에 등록.
+
+| 프리팹 | 설명 |
+|--------|------|
+| `User.prefab` | 플레이어 캐릭터 |
+| `Mob.prefab` | 모든 몬스터 공통 프리팹 |
+| `Npc.prefab` | 모든 NPC 공통 프리팹 |
+| `Drop.prefab` | 드랍 아이템 |
+| `Effect.prefab` | 이펙트 |
+| `DamageFont.prefab` | 데미지 플로팅 텍스트 |
+| `Portal.prefab` | 포탈 |
+| `Reactor.prefab` | 반응 오브젝트 (함정, 스위치 등) |
+
+### 8-3. Prefab 구조 — Mob / Npc / User
+
+동적 오브젝트 프리팹은 **Base 프리팹 1개 + Prefab Variant** 방식.
+
+```
+Mob.prefab (Base)
+├── MobController       ← 비주얼, 물리, 스탯
+│   ├── SpriteRenderer
+│   ├── SpriteAnimator
+│   ├── Collider2D
+│   └── MobStats
+└── FSM (child)         ← 별도 FSM 프리팹을 Instantiate하여 child로 배치
+
+Mob_Goblin.prefab  (Prefab Variant — Inspector에서 값 오버라이드)
+Mob_Orc.prefab     (Prefab Variant)
+Mob_Boss.prefab    (Prefab Variant — 추가 컴포넌트 가능)
+```
+
+**FSM 프리팹** (MobController가 참조, 런타임에 child로 Instantiate):
+
+```
+FSM_Patrol.prefab
+├── YisoCharacterStateMachine    ← FSM 컨트롤러
+├── [States]  YisoCharacterState 컴포넌트들
+├── [Actions] MonoBehaviour 컴포넌트 (MoveTowardTarget, Attack, Patrol ...)
+└── [Decisions] MonoBehaviour 컴포넌트 (DetectTargetInRadius, DistanceToTarget ...)
+```
+
+FSM 프리팹 종류:
+
+| 프리팹 | 용도 |
+|--------|------|
+| `FSM_Passive.prefab` | 비전투 NPC |
+| `FSM_Patrol.prefab` | 일반 몬스터 (순찰 → 추격 → 공격) |
+| `FSM_Aggressive.prefab` | 항상 추격형 |
+| `FSM_Boss.prefab` | 페이즈 기반 보스 패턴 |
+
+**결합도 분리 효과:**
+- FSM 로직 변경 → FSM 프리팹만 수정, Mob 프리팹 무관
+- 동일 FSM을 여러 몹이 공유 가능
+- 기획자가 Inspector에서 파라미터(감지 범위, 공격 범위 등) 직접 조정
+
+### 8-4. WorldManager
+
+- **역할:** 씬 내 모든 동적 오브젝트의 생성·관리·제거 총괄. 서버 소켓 통신의 Handler 진입점.
+- **초기화 흐름:**
+
+```
+서버로부터 mapId + 캐릭터 위치 수신
+       │
+       ▼
+Addressable로 MapDataSO 동적 로드 (address = mapId)
+       │
+       ▼
+MapDataSO → MapData 변환 (Instance Layer)
+       │
+       ▼
+WorldManager에 MapData 등록
+       │
+       ▼
+각 Pool을 통해 동적 오브젝트 생성 (Mob, Npc, Portal, Reactor ...)
+```
+
+- **씬 내 동적 오브젝트 계층 (WorldManager가 생성):**
+
+```
+[Scene Root]
+├── User       ← UserPool이 관리하는 플레이어 인스턴스
+├── Npc        ← NpcPool이 관리하는 NPC 인스턴스들
+├── Mob        ← MobPool이 관리하는 몬스터 인스턴스들
+├── Drop       ← DropPool
+├── Effect     ← EffectPool
+├── DamageFont ← DamageFontPool
+├── Portal     ← PortalPool
+└── Reactor    ← ReactorPool
+```
+
+각 부모 오브젝트(User, Mob 등) 하위에 해당 타입의 인스턴스들이 Instantiate된다.
+
+### 8-4. SceneField 정적 오브젝트 계층 (레이어 구조)
+
+SceneField(또는 SceneLogin) 하위에 **11개의 레이어 오브젝트 (Layer0~Layer10)** 가 있다. 각 레이어는 SortingGroup을 가진다.
+**동적 오브젝트(캐릭터 등)와 같은 Sorting Layer는 Layer5** 로 고정한다.
+
+```
+SceneField
+├── Layer0   (SortingGroup)   ┐
+├── Layer1   (SortingGroup)   │  동적 오브젝트보다 아래 (배경)
+├── Layer2   (SortingGroup)   │
+├── Layer3   (SortingGroup)   │
+├── Layer4   (SortingGroup)   ┘
+│
+├── Layer5   (SortingGroup)   ← 동적 오브젝트와 같은 Sorting Layer (캐릭터 depth)
+│
+├── Layer6   (SortingGroup)   ┐
+├── Layer7   (SortingGroup)   │  동적 오브젝트보다 위 (오버레이)
+├── Layer8   (SortingGroup)   │
+├── Layer9   (SortingGroup)   │
+└── Layer10  (SortingGroup)   ┘
+```
+
+각 레이어 하위 구조:
+
+```
+LayerN  (SortingGroup)
+├── Tile  (Tilemap — 정적 타일. 필요 시 TilemapCollider2D 포함)
+└── Obj   (정적 MapObject 인스턴스들)
+```
+
+| 레이어 | Sorting 위치 | 용도 예시 |
+|--------|-------------|---------|
+| Layer0~4 | 동적 오브젝트 **아래** | 바닥 타일, 지형 배경, 그림자 |
+| Layer5 | 동적 오브젝트와 **동일** | 캐릭터와 같은 depth의 정적 요소 (바위, 나무 등) |
+| Layer6~10 | 동적 오브젝트 **위** | 지붕, 나뭇가지, 안개, UI 오버레이 |
+
+---
+
+## 9. 정적 오브젝트 데이터화
+
+### 9-1. Tile 데이터화
+
+타일은 **Tilemap 유지. 런타임 `SetTile()` 동적 그리기** 방식.
+TileBase 에셋은 Addressable에 등록(address = tileId), 맵 데이터에는 레이어·위치·tileId만 저장.
+
+```csharp
+public class TilemapLayerData {
+    public int layer;              // 0~10
+    public bool hasCollider;       // true면 런타임에 TilemapCollider2D AddComponent
+    public List<TilePlacement> tiles;
+}
+
+public class TilePlacement {
+    public string tileId;          // Addressable address
+    public Vector3Int position;
+}
+```
+
+- Collider 여부는 **타일 단위가 아닌 Tilemap 레이어 단위** 로 관리
+- `hasCollider = true` 인 레이어는 런타임에 `TilemapCollider2D` + `CompositeCollider2D` 자동 부착
+
+### 9-2. MapObject 데이터화
+
+정적 오브젝트는 **`MapObject.prefab` 단일 프리팹 + Sprite 교체** 방식. Addressable 등록.
+
+```csharp
+public class MapObjectData {
+    public string objectId;
+    public string spriteAddress;   // Addressable address (SpriteAtlas 사용 권장)
+    public Vector3 position;
+    public bool hasCollider;
+    public int layer;              // 0~10
+    public int sortingOrder;
+}
+```
+
+- SpriteAtlas로 묶어 DrawCall Batching 보장
+
+### 9-3. 애니메이션 데이터화 (커스텀 SpriteAnimator)
+
+Animator/AnimationController 미사용. Texture2D(Multiple 모드) + 인덱스 방식.
+
+```csharp
+public enum AnimationState {
+    Idle_N, Idle_S, Idle_E, Idle_W,
+    Walk_N, Walk_S, Walk_E, Walk_W,
+    Attack_N, Attack_S, Attack_E, Attack_W,
+    Die
+}
+
+public class AnimationClip {
+    public AnimationState state;
+    public int startIndex;   // Texture2D 슬라이스 시작 인덱스
+    public int frameCount;   // 프레임 수
+    public float fps;
+    public bool loop;
+}
+```
+
+- **인덱스 범위가 아닌 `startIndex + frameCount`** 로 저장 — 특정 상태 프레임 수 변경 시 다른 상태에 영향 없음
+- 런타임: `SpriteAnimator` 컴포넌트가 Update에서 `sprites[startIndex + currentFrame]` 교체
+- `loop = false` + 완료 콜백으로 Attack 등 단발 애니메이션 처리
+
+---
+
+## 10. 기존 코드 통합 방향
 
 | 기존 코드 | 새 시스템 내 위치 | 방향 |
 |-----------|-----------------|------|

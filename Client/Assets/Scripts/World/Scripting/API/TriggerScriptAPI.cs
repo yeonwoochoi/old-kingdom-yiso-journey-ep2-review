@@ -11,7 +11,7 @@ namespace World.Scripting.API {
     /// </summary>
     public class TriggerScriptAPI : IYisoScriptAPI {
         public void Register(YisoScriptRunner runner) {
-            runner.RegisterCommand("LOCK_DOOR",   OnLockDoor);
+            runner.RegisterCommand("LOCK_DOOR", OnLockDoor);
             runner.RegisterCommand("UNLOCK_DOOR", OnUnlockDoor);
         }
 

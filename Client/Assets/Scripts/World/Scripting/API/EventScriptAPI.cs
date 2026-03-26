@@ -1,4 +1,5 @@
 using System.Collections;
+using Core.Event;
 using Core.Log;
 using World.Scripting.Core;
 
@@ -21,7 +22,7 @@ namespace World.Scripting.API {
 
             var eventId = args[0];
             // YisoScriptEvent로 발행 — 구독자는 OnEvent(YisoScriptEvent)로 수신
-            Core.Event.YisoEventManager.TriggerEvent(new YisoScriptEvent { EventId = eventId });
+            YisoEventManager.TriggerEvent(new YisoScriptEvent {EventId = eventId});
             YisoLogger.Debug($"[EventScriptAPI] 이벤트 발행: {eventId}");
             yield break;
         }

@@ -1,7 +1,9 @@
 using System.Collections;
 using Core;
+using Core.Input;
 using Core.Log;
 using Core.Singleton;
+using Core.Sound;
 using UnityEngine;
 using World.Scripting.API;
 using World.Scripting.AST;
@@ -19,13 +21,13 @@ namespace World.Scripting {
     /// </summary>
     public class YisoScriptingManager : YisoMonoSingleton<YisoScriptingManager> {
         private YisoScriptRunner _runner;
-        private YisoScriptAsset  _asset;
+        private YisoScriptAsset _asset;
 
         protected override void Awake() {
             base.Awake();
 
             _runner = GetOrAddComponent<YisoScriptRunner>();
-            _asset  = new YisoScriptAsset();
+            _asset = new YisoScriptAsset();
             _asset.LoadAll();
 
             RegisterBuiltinCommands();
@@ -34,7 +36,7 @@ namespace World.Scripting {
             YisoLogger.Info("[ScriptingManager] 초기화 완료");
         }
 
-        // ─── 외부 API ─────────────────────────────────────────────────
+        #region Public API
 
         /// <summary>
         /// blockId에 해당하는 .yiso 블록을 실행한다.
@@ -45,6 +47,7 @@ namespace World.Scripting {
                 YisoLogger.Error($"[ScriptingManager] 블록 없음: {blockId}");
                 return;
             }
+
             var context = CreateContext();
             _runner.Run(block, context);
         }
@@ -58,24 +61,29 @@ namespace World.Scripting {
                 YisoLogger.Error($"[ScriptingManager] 블록 없음: {blockId}");
                 yield break;
             }
+
             var context = CreateContext();
             yield return StartCoroutine(_runner.RunBlock(block.Body, context));
         }
 
-        // ─── 컨텍스트 생성 ────────────────────────────────────────────
+        #endregion
+
+        #region Context 생성
 
         private YisoScriptContext CreateContext() {
             return new YisoScriptContext {
                 // Phase 3: SaveSystem 연결 시 HasFlagQuery 교체
-                HasFlagQuery  = _ => false,
+                HasFlagQuery = _ => false,
                 // Phase 6: QuestSystem 연결 시 HasQuestQuery 교체
                 HasQuestQuery = _ => false,
                 // Phase 6: InventorySystem 연결 시 HasItemQuery 교체
-                HasItemQuery  = _ => false,
+                HasItemQuery = _ => false,
             };
         }
 
-        // ─── 내장 커맨드 등록 ─────────────────────────────────────────
+        #endregion
+
+        #region 내장 커맨드 등록
 
         private void RegisterBuiltinCommands() {
             // WAIT(seconds)
@@ -105,7 +113,9 @@ namespace World.Scripting {
             yield break;
         }
 
-        // ─── API 등록 ─────────────────────────────────────────────────
+        #endregion
+
+        #region API 등록
 
         private void RegisterAPIs() {
             // 즉시 연결 가능한 API
@@ -115,10 +125,12 @@ namespace World.Scripting {
             new EventScriptAPI().Register(_runner);
 
             // Stub API (각 시스템 구현 시 교체)
-            new DialogueScriptAPI().Register(_runner);   // Phase 6
-            new QuestScriptAPI().Register(_runner);      // Phase 6
-            new SpawnScriptAPI().Register(_runner);      // Phase 5
-            new TriggerScriptAPI().Register(_runner);    // Phase 5
+            new DialogueScriptAPI().Register(_runner); // Phase 6
+            new QuestScriptAPI().Register(_runner); // Phase 6
+            new SpawnScriptAPI().Register(_runner); // Phase 5
+            new TriggerScriptAPI().Register(_runner); // Phase 5
         }
+
+        #endregion
     }
 }

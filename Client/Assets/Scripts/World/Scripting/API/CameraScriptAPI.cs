@@ -16,9 +16,9 @@ namespace World.Scripting.API {
         }
 
         public void Register(YisoScriptRunner runner) {
-            runner.RegisterCommand("CAMERA.MoveTo",  OnMoveTo);
-            runner.RegisterCommand("CAMERA.Shake",   OnShake);
-            runner.RegisterCommand("CAMERA.ZoomTo",  OnZoomTo);
+            runner.RegisterCommand("CAMERA.MoveTo", OnMoveTo);
+            runner.RegisterCommand("CAMERA.Shake", OnShake);
+            runner.RegisterCommand("CAMERA.ZoomTo", OnZoomTo);
             runner.RegisterCommand("CAMERA.Release", OnRelease);
         }
 
@@ -30,8 +30,8 @@ namespace World.Scripting.API {
                 yield break;
             }
 
-            var x        = float.Parse(args[0], System.Globalization.CultureInfo.InvariantCulture);
-            var y        = float.Parse(args[1], System.Globalization.CultureInfo.InvariantCulture);
+            var x = float.Parse(args[0], System.Globalization.CultureInfo.InvariantCulture);
+            var y = float.Parse(args[1], System.Globalization.CultureInfo.InvariantCulture);
             var duration = float.Parse(args[2], System.Globalization.CultureInfo.InvariantCulture);
 
             _camera?.MoveToPosition(new Vector3(x, y, -10f));
@@ -47,7 +47,7 @@ namespace World.Scripting.API {
 
             var amplitude = float.Parse(args[0], System.Globalization.CultureInfo.InvariantCulture);
             var frequency = float.Parse(args[1], System.Globalization.CultureInfo.InvariantCulture);
-            var duration  = float.Parse(args[2], System.Globalization.CultureInfo.InvariantCulture);
+            var duration = float.Parse(args[2], System.Globalization.CultureInfo.InvariantCulture);
 
             _camera?.Shake(amplitude, frequency, duration);
             yield return new WaitForSeconds(duration);
@@ -60,7 +60,7 @@ namespace World.Scripting.API {
                 yield break;
             }
 
-            var size  = float.Parse(args[0], System.Globalization.CultureInfo.InvariantCulture);
+            var size = float.Parse(args[0], System.Globalization.CultureInfo.InvariantCulture);
             var speed = float.Parse(args[1], System.Globalization.CultureInfo.InvariantCulture);
 
             _camera?.ZoomTo(size, speed);

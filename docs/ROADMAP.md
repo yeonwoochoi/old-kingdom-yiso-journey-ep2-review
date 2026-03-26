@@ -147,7 +147,7 @@ Phase 10  콘텐츠 & 밸런싱        → 출시 준비
 | ShopSystem | NPC 상점 |
 | EnhancementSystem | 골드 기반 강화 |
 | AchievementSystem | 계정 단위 기록 |
-| 무한 도장 세션 | QuestSystem + SpawnSystem 조합 |
+| 외전 세션 | QuestSystem + SpawnSystem + ScriptingSystem(@quest) 조합 |
 
 **마일스톤:** 중간 맵 → 강화/상점 → 챕터 재도전 루프 완성
 
@@ -182,7 +182,7 @@ Phase 10  콘텐츠 & 밸런싱        → 출시 준비
 
 ```
 [중간 맵]
- ├── 무한 도장 → 파밍(골드/경험치) → 귀환
+ ├── 외전 → 파밍(골드/경험치) + 곁줄기 스토리 → 귀환
  ├── 대장장이 → 장비 강화 (골드 소비)
  └── 챕터 선택
           │ 스펙 체크

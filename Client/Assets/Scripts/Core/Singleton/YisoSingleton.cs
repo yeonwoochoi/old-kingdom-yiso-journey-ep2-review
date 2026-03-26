@@ -13,13 +13,6 @@ namespace Core.Singleton {
             get {
                 if (_instance != null) return _instance;
                 _instance = FindFirstObjectByType<T>();
-
-                if (_instance == null) {
-                    var obj = new GameObject($"{typeof(T)}_AutoCreated");
-                    _instance = obj.AddComponent<T>();
-                    DontDestroyOnLoad(obj);
-                }
-                
                 return _instance;
             }
         }

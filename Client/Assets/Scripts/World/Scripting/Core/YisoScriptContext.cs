@@ -12,21 +12,19 @@ namespace World.Scripting.Core {
     /// </summary>
     public class YisoScriptContext {
         private readonly Dictionary<string, string> _flags = new();
-
-        // 외부 게임 시스템 쿼리 — ScriptingManager가 주입
+        
+        // 외부 게임 시스템 쿼리 - ScriptingManager가 주입
         // Phase 3 (SaveSystem), Phase 6 (QuestSystem, InventorySystem) 구현 시 실제 연결
         public Func<string, bool> HasQuestQuery { get; set; }
-        public Func<string, bool> HasFlagQuery  { get; set; }
-        public Func<string, bool> HasItemQuery  { get; set; }
-
-        // ─── 로컬 플래그 ─────────────────────────────────────────────
+        public Func<string, bool> HasFlagQuery { get; set; }
+        public Func<string, bool> HasItemQuery { get; set; }
 
         public void SetFlag(string key, string value) {
             _flags[key] = value;
         }
 
         public string GetFlag(string key) {
-            return _flags.TryGetValue(key, out var v) ? v : null;
+            return _flags.GetValueOrDefault(key);
         }
 
         public bool GetFlagBool(string key) {
@@ -34,18 +32,15 @@ namespace World.Scripting.Core {
             return v != null && (v == "true" || v == "1");
         }
 
-        // ─── 분기 조건 평가 ───────────────────────────────────────────
-
         public bool Evaluate(YisoBranchCondition condition) {
             if (condition.IsDefault) return true;
 
             return condition.FuncName switch {
                 "HasQuest" => HasQuestQuery?.Invoke(condition.Argument) ?? false,
-                "HasFlag"  => HasFlagQuery?.Invoke(condition.Argument)  ?? false,
-                "HasItem"  => HasItemQuery?.Invoke(condition.Argument)  ?? false,
+                "HasFlag" => HasFlagQuery?.Invoke(condition.Argument) ?? false,
+                "HasItem" => HasItemQuery?.Invoke(condition.Argument) ?? false,
                 // 로컬 플래그 직접 참조: GET flag.key
-                _ when condition.FuncName.StartsWith("flag.") =>
-                    GetFlagBool(condition.FuncName),
+                _ when condition.FuncName.StartsWith("flag.") => GetFlagBool(condition.FuncName),
                 _ => false,
             };
         }
